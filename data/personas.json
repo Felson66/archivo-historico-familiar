@@ -1,0 +1,1686 @@
+[
+  {
+    "datos_resumen": "Bisabuelo paterno",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0005",
+      "P0036",
+      "P0037"
+    ],
+    "estado": "hipotesis",
+    "conyuges": [
+      "P0002"
+    ],
+    "hechos": [
+      {
+        "tipo": "hipotesis",
+        "texto": "Lectura probable del nombre en la partida de nacimiento de Manuel María."
+      }
+    ],
+    "nombre": "Francisco de la Dehesa Baladrón",
+    "id_legacy": "p1",
+    "id": "P0001",
+    "rol": "",
+    "padres": [],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Bisabuela paterna",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0005",
+      "P0036",
+      "P0037"
+    ],
+    "estado": "hipotesis",
+    "conyuges": [
+      "P0001"
+    ],
+    "hechos": [
+      {
+        "tipo": "hipotesis",
+        "texto": "El apellido Martín es una lectura probable."
+      },
+      {
+        "tipo": "hipotesis",
+        "texto": "Puede estar relacionado con el recuerdo familiar «San Martín»."
+      }
+    ],
+    "nombre": "Josefa Martín Calles",
+    "id_legacy": "p2",
+    "id": "P0002",
+    "rol": "",
+    "padres": [],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Bautizado el 2 oct 1856 · Irún",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0053",
+      "P0046",
+      "P0047",
+      "P0048",
+      "P0049",
+      "P0050",
+      "P0051",
+      "P0006",
+      "P0052"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0004"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Bautizado el 2 de octubre de 1856 en la parroquia de Nuestra Señora del Juncal, Irún."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Contrajo matrimonio con Dolores Ybarburu Lasalde el 29 de septiembre de 1885 en la parroquia de Nuestra Señora del Juncal, Irún."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "En el índice de su bautismo figura la observación «Hijo natural»."
+      }
+    ],
+    "nombre": "José María Múgica Galarza",
+    "id_legacy": "p3",
+    "id": "P0003",
+    "rol": "",
+    "padres": [
+      "P0042",
+      "P0043"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Bautizada el 25 abr 1862 · Irún",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0053",
+      "P0046",
+      "P0047",
+      "P0048",
+      "P0049",
+      "P0050",
+      "P0051",
+      "P0006",
+      "P0052"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0003"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Bautizada el 25 de abril de 1862 en la parroquia de Nuestra Señora del Juncal, Irún."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Contrajo matrimonio con José María Múgica Galarza el 29 de septiembre de 1885 en la parroquia de Nuestra Señora del Juncal, Irún."
+      },
+      {
+        "tipo": "nota_documental",
+        "texto": "En el índice bautismal de su hija Manuela figura como «Dolores Ybarburu Arbide»; el bautismo y el matrimonio de Dolores documentan el apellido Lasalde."
+      }
+    ],
+    "nombre": "María Dolores Ybarburu Lasalde",
+    "id_legacy": "p4",
+    "id": "P0004",
+    "rol": "",
+    "padres": [
+      "P0044",
+      "P0045"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "c. 1896 · Algeciras",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0007"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0006"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Natural de Algeciras, de 27 años y carabinero cuando nació su hijo en 1923."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "La familia recuerda que conoció a Manuela mientras prestaba servicio en la frontera."
+      },
+      {
+        "tipo": "hipotesis",
+        "texto": "Endarlaza es un posible destino todavía sin confirmar."
+      }
+    ],
+    "nombre": "Manuel de la Dehesa Martín",
+    "id_legacy": "p5",
+    "id": "P0005",
+    "rol": "Carabinero",
+    "padres": [
+      "P0001",
+      "P0002"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Bautizada el 2 abr 1898 · Irún",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0007"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0005"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Bautizada el 2 de abril de 1898 en la parroquia de Nuestra Señora del Juncal, Irún."
+      },
+      {
+        "tipo": "nota_documental",
+        "texto": "En otros documentos y en la memoria familiar aparece como Manuela Múgica Ibarburu."
+      }
+    ],
+    "nombre": "Manuela Josefa Múgica Ybarburu",
+    "id_legacy": "p6",
+    "id": "P0006",
+    "rol": "",
+    "padres": [
+      "P0003",
+      "P0004"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "15 ago 1923 · Zarautz · † 22 jun 2007",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0012",
+      "P0013",
+      "P0014",
+      "P0015",
+      "P0016"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0010"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Nació en Zarautz el 15 de agosto de 1923 a las 23:00. Falleció el 22 de junio de 2007."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Fue hijo único."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Ejerció como capitán de la Marina Mercante."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Tras su cremación, las cenizas de Manuel y Mercedes fueron esparcidas en el Peine del Viento (San Sebastián), cumpliendo su deseo."
+      }
+    ],
+    "nombre": "Manuel María de la Dehesa Múgica",
+    "id_legacy": "p7",
+    "id": "P0007",
+    "rol": "Capitán de la Marina Mercante",
+    "padres": [
+      "P0005",
+      "P0006"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Abuelo materno",
+    "lugar_descanso": {
+      "cemetery": "Cementerio Municipal de Bilbao (Derio)",
+      "location": "Zona Única · Manzana 29 · Unidad/Nicho 0050",
+      "note": "Sepultura compartida por Francisco Liz Rivera, Carmen Gómez López y Concepción Liz Gómez.",
+      "nota_fotos": "La localización es compartida. Las fotografías individuales de cada lápida se incorporarán por separado cuando estén disponibles."
+    },
+    "hijos": [
+      "P0010",
+      "P0011"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0009"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Compró el 7 de junio de 1957 la vivienda de Iparraguirre 56, 1.º centro, Bilbao."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "La escritura indica que ya era inquilino antes de la compra."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "El taller de sastrería estaba dentro de la vivienda familiar."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "El despacho tenía una línea telefónica independiente."
+      }
+    ],
+    "nombre": "Francisco Liz Rivera",
+    "id_legacy": "p8",
+    "id": "P0008",
+    "rol": "Sastre",
+    "padres": [],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Abuela materna",
+    "lugar_descanso": {
+      "cemetery": "Cementerio Municipal de Bilbao (Derio)",
+      "location": "Zona Única · Manzana 29 · Unidad/Nicho 0050",
+      "note": "Sepultura compartida por Francisco Liz Rivera, Carmen Gómez López y Concepción Liz Gómez.",
+      "nota_fotos": "La localización es compartida. Las fotografías individuales de cada lápida se incorporarán por separado cuando estén disponibles."
+    },
+    "hijos": [
+      "P0010",
+      "P0011"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0008"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Esposa de Francisco Liz Rivera y madre de Mercedes y Concepción."
+      }
+    ],
+    "nombre": "Carmen Gómez López",
+    "id_legacy": "p9",
+    "id": "P0009",
+    "rol": "",
+    "padres": [],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "† 28 abr 2009",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0012",
+      "P0013",
+      "P0014",
+      "P0015",
+      "P0016"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0007"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Falleció el 28 de abril de 2009."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Su funeral se celebró en Nuestra Señora del Carmen de Indautxu."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Fue madre de cinco hijos."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Tras su cremación, las cenizas de Manuel y Mercedes fueron esparcidas en el Peine del Viento (San Sebastián), cumpliendo su deseo."
+      }
+    ],
+    "nombre": "Mercedes Liz Gómez",
+    "id_legacy": "p10",
+    "id": "P0010",
+    "rol": "",
+    "padres": [
+      "P0008",
+      "P0009"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "† abr 2010",
+    "lugar_descanso": {
+      "cemetery": "Cementerio Municipal de Bilbao (Derio)",
+      "location": "Zona Única · Manzana 29 · Unidad/Nicho 0050",
+      "note": "Sepultura compartida por Francisco Liz Rivera, Carmen Gómez López y Concepción Liz Gómez.",
+      "nota_fotos": "La localización es compartida. Las fotografías individuales de cada lápida se incorporarán por separado cuando estén disponibles."
+    },
+    "hijos": [],
+    "estado": "memoria_familiar",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Trabajó en la Escuela de Ingenieros de Bilbao."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Permaneció soltera y no tuvo hijos."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Vivió toda su vida en Iparraguirre 56."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Falleció en abril de 2010."
+      }
+    ],
+    "nombre": "Concepción Liz Gómez",
+    "id_legacy": "p11",
+    "id": "P0011",
+    "rol": "Jefe de Negociado",
+    "padres": [
+      "P0008",
+      "P0009"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "27 abr 1959",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0018"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0017"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Hijo mayor de Manuel María y Mercedes."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Se casó con Blanca González y posteriormente se separaron."
+      }
+    ],
+    "nombre": "Manuel de la Dehesa Liz",
+    "id_legacy": "p12",
+    "id": "P0012",
+    "rol": "",
+    "padres": [
+      "P0007",
+      "P0010"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "12 feb 1963",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0020",
+      "P0021"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0019"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Hija de Manuel María y Mercedes."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Se casó con Federico Hoya Gómez y posteriormente se separaron."
+      }
+    ],
+    "nombre": "Mercedes de la Dehesa Liz",
+    "id_legacy": "p13",
+    "id": "P0013",
+    "rol": "",
+    "padres": [
+      "P0007",
+      "P0010"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "9 jul 1964",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0025",
+      "P0026"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0024"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Hija de Manuel María y Mercedes."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Está casada con Ferdinando Rigardo."
+      }
+    ],
+    "nombre": "Lourdes de la Dehesa Liz",
+    "id_legacy": "p14",
+    "id": "P0014",
+    "rol": "",
+    "padres": [
+      "P0007",
+      "P0010"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "2 oct 1966 · Bilbao",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "documentado",
+    "conyuges": [
+      "P0027"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Nació en Bilbao el 2 de octubre de 1966."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Se casó con Esther García Reizabal el 8 de junio de 2012."
+      },
+      {
+        "tipo": "familia_reconstituida",
+        "texto": "No tienen hijos en común; Amets es hijo de Esther de una relación anterior."
+      }
+    ],
+    "nombre": "Eduardo de la Dehesa Liz",
+    "id_legacy": "p15",
+    "id": "P0015",
+    "rol": "",
+    "padres": [
+      "P0007",
+      "P0010"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "11 may 1971",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0030",
+      "P0031"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0029"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Hija menor de Manuel María y Mercedes."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Se casó con Eneko Quintana y posteriormente se separaron."
+      }
+    ],
+    "nombre": "Elena de la Dehesa Liz",
+    "id_legacy": "p16",
+    "id": "P0016",
+    "rol": "",
+    "padres": [
+      "P0007",
+      "P0010"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Excónyuge de Manuel",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0018"
+    ],
+    "estado": "memoria_familiar",
+    "conyuges": [
+      "P0012"
+    ],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Se casó con Manuel de la Dehesa Martín Liz y posteriormente se separaron."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Madre de Eduardo de la Dehesa González."
+      }
+    ],
+    "nombre": "Blanca González",
+    "id_legacy": "p17",
+    "id": "P0017",
+    "rol": "",
+    "padres": [],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "28 sep 2000",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "memoria_familiar",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Hijo de Manuel de la Dehesa Martín Liz y Blanca González."
+      }
+    ],
+    "nombre": "Eduardo de la Dehesa González",
+    "id_legacy": "p18",
+    "id": "P0018",
+    "rol": "",
+    "padres": [
+      "P0012",
+      "P0017"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Excónyuge de Mercedes",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0020",
+      "P0021"
+    ],
+    "estado": "memoria_familiar",
+    "conyuges": [
+      "P0013"
+    ],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Se casó con Mercedes de la Dehesa Liz y posteriormente se separaron."
+      }
+    ],
+    "nombre": "Federico Hoya Gómez",
+    "id_legacy": "p19",
+    "id": "P0019",
+    "rol": "",
+    "padres": [],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "20 jun 1984",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0023",
+      "P0032"
+    ],
+    "estado": "memoria_familiar",
+    "conyuges": [
+      "P0022"
+    ],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Hija de Mercedes de la Dehesa Liz y Federico Hoya Gómez."
+      },
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Se casó con Nicolás Soengas el 23 de septiembre de 2017."
+      }
+    ],
+    "nombre": "Raquel Hoya de la Dehesa",
+    "id_legacy": "p20",
+    "id": "P0020",
+    "rol": "",
+    "padres": [
+      "P0013",
+      "P0019"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "10 ene 1989",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "memoria_familiar",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Hijo de Mercedes de la Dehesa Liz y Federico Hoya Gómez."
+      }
+    ],
+    "nombre": "Daniel Hoya de la Dehesa",
+    "id_legacy": "p21",
+    "id": "P0021",
+    "rol": "",
+    "padres": [
+      "P0013",
+      "P0019"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Cónyuge de Raquel",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0023",
+      "P0032"
+    ],
+    "estado": "memoria_familiar",
+    "conyuges": [
+      "P0020"
+    ],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Se casó con Raquel Hoya de la Dehesa el 23 de septiembre de 2017."
+      }
+    ],
+    "nombre": "Nicolás Soengas",
+    "id_legacy": "p22",
+    "id": "P0022",
+    "rol": "",
+    "padres": [],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Fecha pendiente",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "hipotesis",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Hija de Raquel y Nicolás."
+      },
+      {
+        "tipo": "hipotesis",
+        "texto": "Fecha y apellidos completos pendientes de confirmación."
+      }
+    ],
+    "nombre": "Arianne Soengas Hoya",
+    "id_legacy": "p23",
+    "id": "P0023",
+    "rol": "",
+    "padres": [
+      "P0020",
+      "P0022"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Cónyuge de Lourdes",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0025",
+      "P0026"
+    ],
+    "estado": "memoria_familiar",
+    "conyuges": [
+      "P0014"
+    ],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Está casado con Lourdes de la Dehesa Liz."
+      }
+    ],
+    "nombre": "Ferdinando Rigardo",
+    "id_legacy": "p24",
+    "id": "P0024",
+    "rol": "",
+    "padres": [],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "15 ene · año pendiente",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "hipotesis",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Hijo de Lourdes y Ferdinando."
+      },
+      {
+        "tipo": "hipotesis",
+        "texto": "Año de nacimiento pendiente."
+      }
+    ],
+    "nombre": "Adrián Rigardo de la Dehesa",
+    "id_legacy": "p25",
+    "id": "P0025",
+    "rol": "",
+    "padres": [
+      "P0014",
+      "P0024"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "28 jul 1998",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "memoria_familiar",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Hija de Lourdes y Ferdinando."
+      }
+    ],
+    "nombre": "Alessandra Rigardo de la Dehesa",
+    "id_legacy": "p26",
+    "id": "P0026",
+    "rol": "",
+    "padres": [
+      "P0014",
+      "P0024"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "4 mar 1971",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0028"
+    ],
+    "estado": "memoria_familiar",
+    "conyuges": [
+      "P0015"
+    ],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Se casó con Eduardo de la Dehesa Liz el 8 de junio de 2012."
+      },
+      {
+        "tipo": "familia_reconstituida",
+        "texto": "Tiene un hijo de una relación anterior: Amets Otaegi García."
+      }
+    ],
+    "nombre": "Esther García Reizabal",
+    "id_legacy": "p27",
+    "id": "P0027",
+    "rol": "",
+    "padres": [],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "19 sep 2000",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "familia_reconstituida",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Hijo de Esther García Reizabal de una relación anterior."
+      },
+      {
+        "tipo": "familia_reconstituida",
+        "texto": "Eduardo de la Dehesa Liz es su padrastro."
+      }
+    ],
+    "nombre": "Amets Otaegi García",
+    "id_legacy": "p28",
+    "id": "P0028",
+    "rol": "",
+    "padres": [
+      "P0027"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Excónyuge de Elena",
+    "lugar_descanso": null,
+    "hijos": [
+      "P0030",
+      "P0031"
+    ],
+    "estado": "memoria_familiar",
+    "conyuges": [
+      "P0016"
+    ],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Se casó con Elena de la Dehesa Liz y posteriormente se separaron."
+      }
+    ],
+    "nombre": "Eneko Quintana",
+    "id_legacy": "p29",
+    "id": "P0029",
+    "rol": "",
+    "padres": [],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "15 jul 2000",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "memoria_familiar",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Hijo de Elena y Eneko."
+      }
+    ],
+    "nombre": "Eder Quintana de la Dehesa",
+    "id_legacy": "p30",
+    "id": "P0030",
+    "rol": "",
+    "padres": [
+      "P0016",
+      "P0029"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "26 jun · año pendiente",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "hipotesis",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Hijo de Elena y Eneko."
+      },
+      {
+        "tipo": "hipotesis",
+        "texto": "Año de nacimiento pendiente."
+      }
+    ],
+    "nombre": "Peio Quintana de la Dehesa",
+    "id_legacy": "p31",
+    "id": "P0031",
+    "rol": "",
+    "padres": [
+      "P0016",
+      "P0029"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Fecha pendiente",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "hipotesis",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "memoria_familiar",
+        "texto": "Hijo de Raquel y Nicolás."
+      },
+      {
+        "tipo": "hipotesis",
+        "texto": "Fecha y apellidos completos pendientes de confirmación."
+      }
+    ],
+    "nombre": "Noah Soengas Hoya",
+    "id_legacy": "p32",
+    "id": "P0032",
+    "rol": "",
+    "padres": [
+      "P0020",
+      "P0022"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Azpeitia y Riego del Camino · siglo XX",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "documented",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Carabinero destinado en Azpeitia en 1936."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "En noviembre de 1955 figura expresamente como alcalde de Riego del Camino."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "El 12 de julio de 1960 Herminio Gallego Gómez tomó posesión como alcalde en sustitución de Cayetano de la Dehesa."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "En 1980 figura como titular de dos parcelas en Riego del Camino en un expediente oficial de expropiación."
+      },
+      {
+        "tipo": "hipotesis",
+        "texto": "Posible hermano de Manuel y Andrés de la Dehesa Martín; parentesco pendiente de prueba directa."
+      }
+    ],
+    "nombre": "Cayetano de la Dehesa Martín",
+    "id_legacy": null,
+    "id": "P0036",
+    "rol": "Carabinero y alcalde",
+    "padres": [
+      "P0001",
+      "P0002"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Riego del Camino · † marzo de 1938",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "documented",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Hijo de Francisco de la Dehesa Baladrón y Josefa Martín Calles."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Resultó herido en una reyerta familiar publicada el 8 de enero de 1934."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "El 27 de septiembre de 1935 se anunció su procesamiento y juicio por estupro."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "El 11 de noviembre de 1935 se publicó la condena, que incluyó multa de 2.500 pesetas, costas e indemnización civil."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "El 18 de agosto de 1936 figura entre los soldados y clases ascendidos por acciones distinguidas."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "El 4 de marzo de 1938 se informó del traslado a Riego del Camino de sus restos, como suboficial del Regimiento Toledo."
+      },
+      {
+        "tipo": "documentado",
+        "texto": "En 1942 se reconoció una pensión a sus padres, Francisco de la Dehesa Baladrón y Josefa Martín Calles, con efectos de 13 de marzo de 1938."
+      },
+      {
+        "tipo": "hipotesis",
+        "texto": "Posible hermano de Manuel y Cayetano de la Dehesa Martín; parentesco pendiente de prueba directa."
+      }
+    ],
+    "nombre": "Andrés de la Dehesa Martín",
+    "id_legacy": null,
+    "id": "P0037",
+    "rol": "Militar",
+    "padres": [
+      "P0001",
+      "P0002"
+    ],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Coomonte · 1915",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "documented",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documented",
+        "texto": "Figura como maestra de Coomonte en una relación de ascensos publicada en 1915."
+      },
+      {
+        "tipo": "hypothesis",
+        "texto": "Posible hermana de Francisco de la Dehesa Baladrón; parentesco pendiente de confirmación documental."
+      }
+    ],
+    "nombre": "María Juana de la Dehesa Baladrón",
+    "id_legacy": null,
+    "id": "P0038",
+    "rol": "Maestra",
+    "padres": [],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Riego del Camino · 1914",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "documented",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documented",
+        "texto": "Vecino de Riego del Camino documentado en prensa en 1914."
+      },
+      {
+        "tipo": "hypothesis",
+        "texto": "Posible hermano de Francisco de la Dehesa Baladrón; parentesco pendiente de confirmación documental."
+      }
+    ],
+    "nombre": "Antonio de la Dehesa Baladrón",
+    "id_legacy": null,
+    "id": "P0039",
+    "rol": "",
+    "padres": [],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "hypothesis",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "hypothesis",
+        "texto": "Persona localizada durante la investigación; identidad y relación con la familia pendientes de demostración."
+      },
+      {
+        "tipo": "hypothesis",
+        "texto": "Se estudia como posible descendiente de un hermano de Francisco de la Dehesa Baladrón."
+      }
+    ],
+    "nombre": "Manuel de la Dehesa Nogueras",
+    "id_legacy": null,
+    "id": "P0040",
+    "rol": "",
+    "padres": [],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "",
+    "lugar_descanso": null,
+    "hijos": [],
+    "estado": "hypothesis",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "hypothesis",
+        "texto": "Persona localizada durante la investigación; identidad y relación con la familia pendientes de demostración."
+      },
+      {
+        "tipo": "hypothesis",
+        "texto": "Se estudia como posible descendiente de un hermano de Francisco de la Dehesa Baladrón."
+      }
+    ],
+    "nombre": "Antonio de la Dehesa Nogueras",
+    "id_legacy": null,
+    "id": "P0041",
+    "rol": "",
+    "padres": [],
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Padre de José María Múgica Galarza",
+    "hijos": [
+      "P0003"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0043"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Padre de José María Múgica Galarza, según el índice de bautismo de 1856."
+      }
+    ],
+    "nombre": "Francisco Múgica Galarza",
+    "id": "P0042",
+    "padres": [],
+    "rol": "",
+    "lugar_descanso": "",
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Madre de José María Múgica Galarza",
+    "hijos": [
+      "P0003"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0042"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Madre de José María Múgica Galarza, según el índice de bautismo de 1856."
+      }
+    ],
+    "nombre": "Josefa Galarza Saralegui",
+    "id": "P0043",
+    "padres": [],
+    "rol": "",
+    "lugar_descanso": "",
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Padre de María Dolores Ybarburu Lasalde",
+    "hijos": [
+      "P0004"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0045"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Padre de María Dolores Ybarburu Lasalde, según el índice de bautismo de 1862."
+      }
+    ],
+    "nombre": "Joaquín Ybarburu Arbide",
+    "id": "P0044",
+    "padres": [],
+    "rol": "",
+    "lugar_descanso": "",
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Madre de María Dolores Ybarburu Lasalde",
+    "hijos": [
+      "P0004"
+    ],
+    "estado": "documentado",
+    "conyuges": [
+      "P0044"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Madre de María Dolores Ybarburu Lasalde, según el índice de bautismo de 1862."
+      }
+    ],
+    "nombre": "Francisca Lasalde Echeluce",
+    "id": "P0045",
+    "padres": [],
+    "rol": "",
+    "lugar_descanso": "",
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Bautizada el 23 nov 1887 · Irún",
+    "hijos": [],
+    "estado": "documentado",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Bautizada el 23 de noviembre de 1887 en Irún."
+      }
+    ],
+    "nombre": "María Joaquina Josefa Múgica Ybarburu",
+    "id": "P0046",
+    "padres": [
+      "P0003",
+      "P0004"
+    ],
+    "rol": "",
+    "lugar_descanso": "",
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Bautizada el 30 may 1889 · Irún",
+    "hijos": [],
+    "estado": "documentado",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Bautizada el 30 de mayo de 1889 en Irún."
+      }
+    ],
+    "nombre": "Escolástica Salvadora Múgica Ybarburu",
+    "id": "P0047",
+    "padres": [
+      "P0003",
+      "P0004"
+    ],
+    "rol": "",
+    "lugar_descanso": "",
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Bautizado el 17 feb 1891 · Irún",
+    "hijos": [],
+    "estado": "documentado",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Bautizado el 17 de febrero de 1891 en Irún."
+      }
+    ],
+    "nombre": "Francisco Múgica Ybarburu",
+    "id": "P0048",
+    "padres": [
+      "P0003",
+      "P0004"
+    ],
+    "rol": "",
+    "lugar_descanso": "",
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Bautizada el 9 nov 1892 · Irún",
+    "hijos": [],
+    "estado": "documentado",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Bautizada el 9 de noviembre de 1892 en Irún."
+      }
+    ],
+    "nombre": "Joaquina Rafaela Múgica Ybarburu",
+    "id": "P0049",
+    "padres": [
+      "P0003",
+      "P0004"
+    ],
+    "rol": "",
+    "lugar_descanso": "",
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Bautizado el 10 mar 1894 · Irún",
+    "hijos": [],
+    "estado": "documentado",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Bautizado el 10 de marzo de 1894 en Irún."
+      }
+    ],
+    "nombre": "Francisco María Múgica Ybarburu",
+    "id": "P0050",
+    "padres": [
+      "P0003",
+      "P0004"
+    ],
+    "rol": "",
+    "lugar_descanso": "",
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Bautizada el 8 ene 1896 · Irún",
+    "hijos": [],
+    "estado": "documentado",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Bautizada el 8 de enero de 1896 en Irún."
+      }
+    ],
+    "nombre": "Micaela Múgica Ybarburu",
+    "id": "P0051",
+    "padres": [
+      "P0003",
+      "P0004"
+    ],
+    "rol": "",
+    "lugar_descanso": "",
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Bautizado el 25 jul 1900 · Irún",
+    "hijos": [],
+    "estado": "documentado",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Bautizado el 25 de julio de 1900 en Irún."
+      }
+    ],
+    "nombre": "Santiago Múgica Ybarburu",
+    "id": "P0052",
+    "padres": [
+      "P0003",
+      "P0004"
+    ],
+    "rol": "",
+    "lugar_descanso": "",
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  },
+  {
+    "datos_resumen": "Bautizado el 28 jun 1886 · Irún",
+    "hijos": [],
+    "estado": "documentado",
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Bautizado el 28 de junio de 1886 en Irún."
+      }
+    ],
+    "nombre": "Pedro Múgica Ybarburu",
+    "id": "P0053",
+    "padres": [
+      "P0003",
+      "P0004"
+    ],
+    "rol": "",
+    "lugar_descanso": "",
+    "biografia": "",
+    "fotografia_principal": "",
+    "fotografias": [],
+    "documentos": [],
+    "cronologia": [],
+    "lugares": [],
+    "notas": []
+  }
+]
