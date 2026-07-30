@@ -1,20 +1,21 @@
-# Archivo Histórico Familiar — v3.0.2
+# Archivo Histórico Familiar — v3.0.3
 
-Primera integración fotográfica completa.
+Corrección de carga de la galería fotográfica.
 
-## Novedades
+## Qué ocurría
 
-- Esther incorpora fotografía principal.
-- Tres fotografías optimizadas y organizadas en su carpeta personal.
-- Miniatura fotográfica en las tarjetas.
-- Galería dentro de la ficha.
-- Visor a pantalla completa con navegación anterior/siguiente.
-- Metadatos básicos preparados para fecha, lugar y descripción.
-- Las imágenes se cargan como archivos independientes y no se incrustan en el HTML.
+La galería ya estaba incluida en la v3.0.2, pero el navegador seguía utilizando una copia anterior de `app.js` guardada en caché. Por eso aparecía el texto «3 fotografías asociadas» en lugar de las miniaturas.
+
+## Corrección
+
+- Se fuerza la carga de la versión nueva de `app.js`.
+- Se fuerza la carga de la versión nueva de `style.css`.
+- Se mantienen la foto principal, las tres miniaturas y el visor a pantalla completa.
+- No es necesario borrar manualmente la caché.
 
 ## Actualización
 
-Copia el contenido de esta carpeta sobre tu repositorio local, confirma la sustitución de archivos y publica mediante GitHub Desktop:
+Copia todo el contenido sobre el repositorio local, acepta sustituir los archivos y publica con GitHub Desktop:
 
 1. Commit to main
 2. Push origin
