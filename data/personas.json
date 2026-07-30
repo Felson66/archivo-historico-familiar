@@ -979,8 +979,30 @@
     "rol": "",
     "padres": [],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0027/esther-principal.jpg",
+    "fotografias": [
+      {
+        "src": "assets/fotos/P0027/esther-principal.jpg",
+        "titulo": "Retrato en Bilbao",
+        "descripcion": "Fotografía principal de la ficha.",
+        "lugar": "Bilbao",
+        "fecha": "2026"
+      },
+      {
+        "src": "assets/fotos/P0027/esther-tren.jpg",
+        "titulo": "En el tren",
+        "descripcion": "Retrato durante un trayecto.",
+        "lugar": "",
+        "fecha": "2026"
+      },
+      {
+        "src": "assets/fotos/P0027/esther-casa.jpg",
+        "titulo": "En casa",
+        "descripcion": "Retrato de cuerpo entero en casa, con Homer al fondo.",
+        "lugar": "Bilbao",
+        "fecha": "2026"
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],

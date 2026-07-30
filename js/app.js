@@ -18,10 +18,16 @@ function stateLabel(state){
 }
 
 function card(person){
+  const thumb = person.fotografia_principal
+    ? `<img class="card-photo" src="${esc(person.fotografia_principal)}" alt="${esc(person.nombre)}" loading="lazy">`
+    : `<div class="card-monogram">${esc(initials(person.nombre))}</div>`;
   return `<button class="card" data-person="${esc(person.id)}">
-    <span class="tag">${esc(stateLabel(person.estado))}</span>
-    <h4>${esc(person.nombre)}</h4>
-    <p>${esc(person.datos_resumen || person.rol || "Información en elaboración")}</p>
+    <div class="card-media">${thumb}</div>
+    <div class="card-body">
+      <span class="tag">${esc(stateLabel(person.estado))}</span>
+      <h4>${esc(person.nombre)}</h4>
+      <p>${esc(person.datos_resumen || person.rol || "Información en elaboración")}</p>
+    </div>
   </button>`;
 }
 
@@ -39,6 +45,11 @@ async function init(){
     resetTree();
 
     document.addEventListener("click", event => {
+      const galleryButton = event.target.closest("[data-gallery-person]");
+      if(galleryButton){
+        openLightbox(galleryButton.dataset.galleryPerson, galleryButton.dataset.galleryIndex);
+        return;
+      }
       const personButton = event.target.closest("[data-person]");
       if(personButton) openPerson(personButton.dataset.person);
     });
@@ -104,6 +115,16 @@ function renderFacts(person){
   </div>`).join("");
 }
 
+function renderGallery(person){
+  const photos = person.fotografias || [];
+  if(!photos.length) return `<div class="placeholder">Todavía no hay fotografías asociadas.</div>`;
+  return `<div class="photo-grid">${photos.map((photo,index) => `
+    <button class="photo-thumb" data-gallery-person="${esc(person.id)}" data-gallery-index="${index}">
+      <img src="${esc(photo.src)}" alt="${esc(photo.titulo || person.nombre)}" loading="lazy">
+      <span>${esc(photo.titulo || `Fotografía ${index+1}`)}</span>
+    </button>`).join("")}</div>`;
+}
+
 function renderTimeline(person){
   const events = person.cronologia || [];
   if(events.length){
@@ -157,10 +178,11 @@ function openPerson(id){
         </section>
 
         <section class="profile-section">
-          <h3>Fotografías</h3>
-          ${(person.fotografias || []).length
-            ? `<div class="placeholder">${person.fotografias.length} fotografías asociadas.</div>`
-            : `<div class="placeholder">Todavía no hay fotografías asociadas.</div>`}
+          <div class="section-heading-row">
+            <h3>Fotografías</h3>
+            ${(person.fotografias || []).length ? `<span>${person.fotografias.length}</span>` : ""}
+          </div>
+          ${renderGallery(person)}
         </section>
       </div>
 
@@ -196,6 +218,47 @@ function openPerson(id){
   $("personDrawer").setAttribute("aria-hidden","false");
   document.body.classList.add("drawer-open");
   history.replaceState(null,"",`#persona=${encodeURIComponent(id)}`);
+}
+
+function openLightbox(personId, index){
+  const person = byId[personId];
+  const photos = person?.fotografias || [];
+  if(!photos.length) return;
+  let current = Number(index) || 0;
+
+  const lightbox = document.getElementById("photoLightbox");
+  const image = document.getElementById("lightboxImage");
+  const title = document.getElementById("lightboxTitle");
+  const meta = document.getElementById("lightboxMeta");
+  const counter = document.getElementById("lightboxCounter");
+
+  function show(){
+    const photo = photos[current];
+    image.src = photo.src;
+    image.alt = photo.titulo || person.nombre;
+    title.textContent = photo.titulo || person.nombre;
+    meta.textContent = [photo.fecha, photo.lugar, photo.descripcion].filter(Boolean).join(" · ");
+    counter.textContent = `${current + 1} / ${photos.length}`;
+  }
+
+  document.getElementById("lightboxPrev").onclick = () => {
+    current = (current - 1 + photos.length) % photos.length;
+    show();
+  };
+  document.getElementById("lightboxNext").onclick = () => {
+    current = (current + 1) % photos.length;
+    show();
+  };
+
+  show();
+  lightbox.classList.add("open");
+  lightbox.setAttribute("aria-hidden","false");
+}
+
+function closeLightbox(){
+  const lightbox = document.getElementById("photoLightbox");
+  lightbox.classList.remove("open");
+  lightbox.setAttribute("aria-hidden","true");
 }
 
 function closeDrawer(){
@@ -296,7 +359,14 @@ function wireEvents(){
   $("clearSearch").addEventListener("click",() => { $("peopleSearch").value=""; renderPeople(); });
   $("drawerClose").addEventListener("click",closeDrawer);
   $("drawerBackdrop").addEventListener("click",closeDrawer);
-  document.addEventListener("keydown",event => { if(event.key === "Escape") closeDrawer(); });
+  $("lightboxClose").addEventListener("click",closeLightbox);
+  $("photoLightbox").addEventListener("click",event => { if(event.target.id === "photoLightbox") closeLightbox(); });
+  document.addEventListener("keydown",event => {
+    if(event.key === "Escape"){
+      closeLightbox();
+      closeDrawer();
+    }
+  });
   $("resetTree").addEventListener("click",resetTree);
   $("zoomIn").addEventListener("click",() => zoomTree(1.22));
   $("zoomOut").addEventListener("click",() => zoomTree(.82));

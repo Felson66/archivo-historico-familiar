@@ -98,6 +98,21 @@
   <div id="drawerContent"></div>
 </aside>
 
+
+<div class="photo-lightbox" id="photoLightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar fotografía">×</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Fotografía anterior">‹</button>
+  <figure>
+    <img id="lightboxImage" alt="">
+    <figcaption>
+      <strong id="lightboxTitle"></strong>
+      <span id="lightboxMeta"></span>
+      <small id="lightboxCounter"></small>
+    </figcaption>
+  </figure>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Fotografía siguiente">›</button>
+</div>
+
 <div class="loading" id="loading">Cargando archivo…</div>
 <script src="js/app.js"></script>
 </body>
