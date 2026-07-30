@@ -1,245 +1,104 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#183c35">
-<title>Archivo Histórico Familiar 3.0</title>
-<style>
-:root{
-  --ink:#17312c;--green:#183c35;--green2:#2d6558;--cream:#f4efe5;
-  --paper:#fffdf8;--line:#cad7d1;--gold:#b7934a;--muted:#6d7975;
-  --shadow:0 12px 34px rgba(20,52,45,.12)
-}
-*{box-sizing:border-box}
-html,body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-button,input{font:inherit}
-button{cursor:pointer}
-.app{min-height:100dvh;padding-bottom:78px}
-header{
-  position:sticky;top:0;z-index:30;padding:calc(12px + env(safe-area-inset-top)) 18px 12px;
-  color:white;background:linear-gradient(135deg,#14372f,#285c50);box-shadow:0 3px 18px rgba(0,0,0,.18)
-}
-.brand{display:flex;align-items:center;gap:12px;max-width:1280px;margin:auto}
-.seal{width:42px;height:42px;border:1px solid rgba(255,255,255,.45);border-radius:50%;display:grid;place-items:center;font-family:Georgia,serif;font-size:22px}
-.brand h1{font:700 20px/1.1 Georgia,serif;margin:0}.brand small{opacity:.78}
-main{max-width:1280px;margin:auto;padding:20px}
-.hero{background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(248,244,234,.94));border:1px solid #ded8ca;border-radius:22px;padding:28px;box-shadow:var(--shadow);overflow:hidden;position:relative}
-.hero:after{content:"";position:absolute;width:220px;height:220px;border:36px solid rgba(183,147,74,.08);border-radius:50%;right:-80px;top:-95px}
-.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--gold);font-weight:800}
-.hero h2{font:700 clamp(30px,5vw,56px)/1.02 Georgia,serif;margin:9px 0 12px;max-width:800px}
-.hero p{max-width:760px;line-height:1.6;color:#50605b}
-.search{display:flex;gap:10px;margin-top:22px;max-width:650px}
-.search input{width:100%;border:1px solid #cbd4cf;background:white;border-radius:14px;padding:14px 16px;outline:none}
-.search input:focus{border-color:var(--green2);box-shadow:0 0 0 3px rgba(45,101,88,.12)}
-.primary{border:0;border-radius:14px;padding:12px 18px;background:var(--green);color:white;font-weight:750}
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
-.stat{background:rgba(255,255,255,.72);border:1px solid #ddd8cc;border-radius:16px;padding:16px}
-.stat strong{display:block;font:700 26px Georgia,serif}.stat span{font-size:13px;color:var(--muted)}
-.section-title{display:flex;justify-content:space-between;align-items:end;margin:28px 2px 13px}
-.section-title h3{font:700 25px Georgia,serif;margin:0}.section-title span{color:var(--muted);font-size:13px}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(245px,1fr));gap:14px}
-.card{border:1px solid #d8ddd8;border-radius:17px;background:var(--paper);padding:17px;text-align:left;box-shadow:0 5px 17px rgba(20,50,43,.06);transition:.18s}
-.card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
-.card .tag{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--green2);font-weight:800}
-.card h4{font:700 19px/1.15 Georgia,serif;margin:7px 0}.card p{font-size:13px;color:var(--muted);margin:0;line-height:1.4}
-.view{display:none}.view.active{display:block}
-.toolbar{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
-.toolbar input{flex:1;min-width:190px;border:1px solid #ccd5d0;border-radius:12px;padding:11px 13px}
-.soft{border:1px solid #cbd5d0;background:white;color:var(--ink);border-radius:12px;padding:10px 13px}
-.tree-shell{height:70dvh;min-height:520px;border:1px solid #ccd5cf;border-radius:20px;background-color:#edf1ec;background-image:radial-gradient(#c5d0ca 1px,transparent 1px);background-size:22px 22px;overflow:hidden;position:relative;touch-action:none}
-.tree-stage{position:absolute;transform-origin:0 0;width:3400px;height:1850px}
-.tree-stage svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.person-node{position:absolute;width:190px;min-height:91px;background:#fffefb;border:1px solid #bfcfc7;border-radius:14px;padding:12px;box-shadow:0 7px 19px rgba(27,61,52,.12);text-align:left}
-.person-node.documentado,.person-node.documented{border-top:5px solid #3f816f}
-.person-node.hipotesis,.person-node.hypothesis{border-top:5px solid #d1a442}
-.person-node h5{font:700 15px/1.15 Georgia,serif;margin:0 0 5px}.person-node p{font-size:11px;color:#687570;margin:0}
-.tree-hint{position:absolute;left:12px;bottom:12px;background:rgba(20,55,47,.9);color:#fff;padding:9px 11px;border-radius:11px;font-size:12px;z-index:4}
-.detail-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:18px}
-.panel{background:var(--paper);border:1px solid #d8ddd8;border-radius:20px;padding:22px;box-shadow:var(--shadow)}
-.profile-head{display:flex;gap:16px;align-items:flex-start}
-.avatar{width:74px;height:74px;border-radius:50%;display:grid;place-items:center;background:#dce8e2;color:var(--green);font:700 26px Georgia,serif;flex:0 0 auto}
-.profile-head h2{font:700 clamp(27px,4vw,42px)/1.05 Georgia,serif;margin:3px 0 7px}
-.badge{display:inline-block;padding:5px 9px;border-radius:999px;background:#e3eee9;color:#28604f;font-size:11px;font-weight:800;text-transform:uppercase}
-.fact{padding:13px 0;border-top:1px solid #e3e6e2;line-height:1.55}.fact:first-child{border-top:0}
-.relations button{display:block;width:100%;border:0;border-bottom:1px solid #e1e5e1;background:transparent;padding:12px 0;text-align:left;color:var(--green2);font-weight:700}
-.empty{padding:40px;text-align:center;color:var(--muted)}
-.bottom-nav{position:fixed;z-index:40;left:0;right:0;bottom:0;padding:7px 8px calc(7px + env(safe-area-inset-bottom));display:flex;justify-content:center;gap:4px;background:rgba(255,253,248,.94);backdrop-filter:blur(14px);border-top:1px solid #d8ddd8}
-.bottom-nav button{width:min(25%,150px);border:0;background:transparent;border-radius:12px;padding:8px 5px;color:#65726d;font-size:11px;font-weight:700}
-.bottom-nav button b{display:block;font-size:20px;line-height:1.1}.bottom-nav button.active{background:#dfeae5;color:var(--green)}
-@media(max-width:700px){
- main{padding:14px}.hero{padding:22px 18px}.search{display:block}.search button{width:100%;margin-top:9px}
- .stats{grid-template-columns:1fr 1fr}.stats .stat:last-child{grid-column:1/-1}
- .detail-grid{grid-template-columns:1fr}.tree-shell{height:68dvh;min-height:470px}
- .brand h1{font-size:17px}.brand small{font-size:11px}
-}
-
-.preview-note{margin:16px 0 0;padding:12px 14px;border-radius:14px;background:#fff8dc;border:1px solid #dccb84;color:#5c522e;font-size:13px;line-height:1.45}
-
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#183c35">
+  <title>Archivo Histórico Familiar</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="app">
-<header><div class="brand"><div class="seal">AH</div><div><h1>Archivo Histórico Familiar</h1><small>Familias De la Dehesa · Liz · Múgica · Gómez · Ybarburu</small></div></div></header>
-<main>
-<section id="home" class="view active">
- <div class="hero">
-  <div class="eyebrow">Prototipo 1 · Versión 3.0</div>
-  <h2>La historia familiar, organizada para perdurar.</h2>
-  <p>Primera base real de la nueva aplicación: adaptable al iPhone, con buscador, fichas enlazadas y un árbol generado desde los datos familiares.</p>
-  <div class="search"><input id="homeSearch" placeholder="Buscar una persona…"><button class="primary" onclick="searchFromHome()">Buscar</button></div>
- </div>
- 
-<div class="preview-note">
- <strong>Vista de consulta:</strong> los datos ya están incluidos. Para usar el buscador,
- abrir fichas y mover el árbol, la página debe abrirse en Safari mediante un enlace web,
- no dentro de la vista previa de Google Drive.
+  <header class="topbar">
+    <div class="brand">
+      <div class="seal" aria-hidden="true">AH</div>
+      <div>
+        <h1>Archivo Histórico Familiar</h1>
+        <small>Familias De la Dehesa · Liz · Múgica · Gómez · Ybarburu</small>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="view active">
+      <div class="hero">
+        <div class="eyebrow">Archivo familiar</div>
+        <h2>La historia familiar, organizada para perdurar.</h2>
+        <p>Consulta personas, relaciones, hechos documentados y el árbol familiar desde cualquier dispositivo.</p>
+        <div class="search">
+          <input id="homeSearch" type="search" placeholder="Buscar una persona…" autocomplete="off">
+          <button class="primary" id="homeSearchButton">Buscar</button>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><strong id="statPeople">—</strong><span>personas incorporadas</span></div>
+        <div class="stat"><strong id="statDocumented">—</strong><span>registros documentados</span></div>
+        <div class="stat"><strong id="statFamilies">—</strong><span>uniones familiares</span></div>
+      </div>
+
+      <div class="section-title">
+        <h3>Personas destacadas</h3>
+        <span>Pulsa para abrir la ficha</span>
+      </div>
+      <div id="featured" class="cards"></div>
+    </section>
+
+    <section id="people" class="view">
+      <div class="section-title">
+        <h3>Personas</h3>
+        <span id="peopleCount"></span>
+      </div>
+      <div class="toolbar">
+        <input id="peopleSearch" type="search" placeholder="Nombre, lugar, profesión…" autocomplete="off">
+        <button class="soft" id="clearSearch">Limpiar</button>
+      </div>
+      <div id="peopleGrid" class="cards"></div>
+    </section>
+
+    <section id="tree" class="view">
+      <div class="section-title">
+        <h3>Árbol familiar</h3>
+        <span>Vista provisional</span>
+      </div>
+      <div class="toolbar">
+        <button class="soft" id="zoomOut">−</button>
+        <button class="soft" id="resetTree">Centrar</button>
+        <button class="soft" id="zoomIn">+</button>
+      </div>
+      <div class="tree-shell" id="treeShell">
+        <div class="tree-stage" id="treeStage">
+          <svg id="treeSvg" aria-hidden="true"></svg>
+        </div>
+        <div class="tree-hint">Arrastra para moverte · pellizca o usa los botones para ampliar</div>
+      </div>
+    </section>
+
+    <section id="about" class="view">
+      <article class="panel">
+        <h2>Sobre el archivo</h2>
+        <p>Este archivo reúne información genealógica, fotografías, documentos y hallazgos de investigación familiar.</p>
+        <p>La estructura está preparada para incorporar progresivamente cronologías, galerías y documentos asociados a cada persona.</p>
+      </article>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Navegación principal">
+    <button class="active" data-view="home"><b>⌂</b>Inicio</button>
+    <button data-view="people"><b>👤</b>Personas</button>
+    <button data-view="tree"><b>🌳</b>Árbol</button>
+    <button data-view="about"><b>ⓘ</b>Archivo</button>
+  </nav>
 </div>
-<div class="stats"><div class="stat"><strong id="statPeople">50</strong><span>personas incorporadas</span></div><div class="stat"><strong id="statDocumented">29</strong><span>registros documentados</span></div><div class="stat"><strong id="statFamilies">13</strong><span>uniones familiares</span></div></div>
- <div class="section-title"><h3>Personas destacadas</h3><span>Pulsa para abrir la ficha</span></div>
- <div id="featured" class="cards"><button class="card" onclick="openPerson('P0003')"><span class="tag">Documentado</span><h4>José María Múgica Galarza</h4><p>Bautizado el 2 oct 1856 · Irún</p></button><button class="card" onclick="openPerson('P0004')"><span class="tag">Documentado</span><h4>María Dolores Ybarburu Lasalde</h4><p>Bautizada el 25 abr 1862 · Irún</p></button><button class="card" onclick="openPerson('P0006')"><span class="tag">Documentado</span><h4>Manuela Josefa Múgica Ybarburu</h4><p>Bautizada el 2 abr 1898 · Irún</p></button><button class="card" onclick="openPerson('P0005')"><span class="tag">Documentado</span><h4>Manuel de la Dehesa Martín</h4><p>c. 1896 · Algeciras</p></button><button class="card" onclick="openPerson('P0007')"><span class="tag">Documentado</span><h4>Manuel María de la Dehesa Múgica</h4><p>15 ago 1923 · Zarautz · † 22 jun 2007</p></button><button class="card" onclick="openPerson('P0010')"><span class="tag">Documentado</span><h4>Mercedes Liz Gómez</h4><p>† 28 abr 2009</p></button></div>
-</section>
 
-<section id="people" class="view">
- <div class="section-title"><h3>Personas</h3><span id="peopleCount">50 personas</span></div>
- <div class="toolbar"><input id="peopleSearch" placeholder="Nombre, lugar, profesión…" oninput="renderPeople()"><button class="soft" onclick="document.getElementById('peopleSearch').value='';renderPeople()">Limpiar</button></div>
- <div id="peopleGrid" class="cards"><button class="card person-static" data-search="adrián rigardo de la dehesa 15 ene · año pendiente " onclick="openPerson('P0025')"><span class="tag">Hipótesis</span><h4>Adrián Rigardo de la Dehesa</h4><p>15 ene · año pendiente</p></button><button class="card person-static" data-search="alessandra rigardo de la dehesa 28 jul 1998 " onclick="openPerson('P0026')"><span class="tag">Memoria familiar</span><h4>Alessandra Rigardo de la Dehesa</h4><p>28 jul 1998</p></button><button class="card person-static" data-search="amets otaegi garcía 19 sep 2000 " onclick="openPerson('P0028')"><span class="tag">Familia reconstituida</span><h4>Amets Otaegi García</h4><p>19 sep 2000</p></button><button class="card person-static" data-search="andrés de la dehesa martín riego del camino · † marzo de 1938 militar" onclick="openPerson('P0037')"><span class="tag">Documentado</span><h4>Andrés de la Dehesa Martín</h4><p>Riego del Camino · † marzo de 1938</p></button><button class="card person-static" data-search="antonio de la dehesa baladrón riego del camino · 1914 " onclick="openPerson('P0039')"><span class="tag">Documentado</span><h4>Antonio de la Dehesa Baladrón</h4><p>Riego del Camino · 1914</p></button><button class="card person-static" data-search="antonio de la dehesa nogueras  " onclick="openPerson('P0041')"><span class="tag">Pendiente</span><h4>Antonio de la Dehesa Nogueras</h4><p>Información en elaboración</p></button><button class="card person-static" data-search="arianne soengas hoya fecha pendiente " onclick="openPerson('P0023')"><span class="tag">Hipótesis</span><h4>Arianne Soengas Hoya</h4><p>Fecha pendiente</p></button><button class="card person-static" data-search="blanca gonzález excónyuge de manuel " onclick="openPerson('P0017')"><span class="tag">Memoria familiar</span><h4>Blanca González</h4><p>Excónyuge de Manuel</p></button><button class="card person-static" data-search="carmen gómez lópez abuela materna " onclick="openPerson('P0009')"><span class="tag">Documentado</span><h4>Carmen Gómez López</h4><p>Abuela materna</p></button><button class="card person-static" data-search="cayetano de la dehesa martín azpeitia y riego del camino · siglo xx carabinero y alcalde" onclick="openPerson('P0036')"><span class="tag">Documentado</span><h4>Cayetano de la Dehesa Martín</h4><p>Azpeitia y Riego del Camino · siglo XX</p></button><button class="card person-static" data-search="concepción liz gómez † abr 2010 jefe de negociado" onclick="openPerson('P0011')"><span class="tag">Memoria familiar</span><h4>Concepción Liz Gómez</h4><p>† abr 2010</p></button><button class="card person-static" data-search="daniel hoya de la dehesa 10 ene 1989 " onclick="openPerson('P0021')"><span class="tag">Memoria familiar</span><h4>Daniel Hoya de la Dehesa</h4><p>10 ene 1989</p></button><button class="card person-static" data-search="eder quintana de la dehesa 15 jul 2000 " onclick="openPerson('P0030')"><span class="tag">Memoria familiar</span><h4>Eder Quintana de la Dehesa</h4><p>15 jul 2000</p></button><button class="card person-static" data-search="eduardo de la dehesa gonzález 28 sep 2000 " onclick="openPerson('P0018')"><span class="tag">Memoria familiar</span><h4>Eduardo de la Dehesa González</h4><p>28 sep 2000</p></button><button class="card person-static" data-search="eduardo de la dehesa liz 2 oct 1966 · bilbao " onclick="openPerson('P0015')"><span class="tag">Documentado</span><h4>Eduardo de la Dehesa Liz</h4><p>2 oct 1966 · Bilbao</p></button><button class="card person-static" data-search="elena de la dehesa liz 11 may 1971 " onclick="openPerson('P0016')"><span class="tag">Documentado</span><h4>Elena de la Dehesa Liz</h4><p>11 may 1971</p></button><button class="card person-static" data-search="eneko quintana excónyuge de elena " onclick="openPerson('P0029')"><span class="tag">Memoria familiar</span><h4>Eneko Quintana</h4><p>Excónyuge de Elena</p></button><button class="card person-static" data-search="escolástica salvadora múgica ybarburu bautizada el 30 may 1889 · irún " onclick="openPerson('P0047')"><span class="tag">Documentado</span><h4>Escolástica Salvadora Múgica Ybarburu</h4><p>Bautizada el 30 may 1889 · Irún</p></button><button class="card person-static" data-search="esther garcía reizabal 4 mar 1971 " onclick="openPerson('P0027')"><span class="tag">Memoria familiar</span><h4>Esther García Reizabal</h4><p>4 mar 1971</p></button><button class="card person-static" data-search="federico hoya gómez excónyuge de mercedes " onclick="openPerson('P0019')"><span class="tag">Memoria familiar</span><h4>Federico Hoya Gómez</h4><p>Excónyuge de Mercedes</p></button><button class="card person-static" data-search="ferdinando rigardo cónyuge de lourdes " onclick="openPerson('P0024')"><span class="tag">Memoria familiar</span><h4>Ferdinando Rigardo</h4><p>Cónyuge de Lourdes</p></button><button class="card person-static" data-search="francisca lasalde echeluce madre de maría dolores ybarburu lasalde " onclick="openPerson('P0045')"><span class="tag">Documentado</span><h4>Francisca Lasalde Echeluce</h4><p>Madre de María Dolores Ybarburu Lasalde</p></button><button class="card person-static" data-search="francisco liz rivera abuelo materno sastre" onclick="openPerson('P0008')"><span class="tag">Documentado</span><h4>Francisco Liz Rivera</h4><p>Abuelo materno</p></button><button class="card person-static" data-search="francisco maría múgica ybarburu bautizado el 10 mar 1894 · irún " onclick="openPerson('P0050')"><span class="tag">Documentado</span><h4>Francisco María Múgica Ybarburu</h4><p>Bautizado el 10 mar 1894 · Irún</p></button><button class="card person-static" data-search="francisco múgica galarza padre de josé maría múgica galarza " onclick="openPerson('P0042')"><span class="tag">Documentado</span><h4>Francisco Múgica Galarza</h4><p>Padre de José María Múgica Galarza</p></button><button class="card person-static" data-search="francisco múgica ybarburu bautizado el 17 feb 1891 · irún " onclick="openPerson('P0048')"><span class="tag">Documentado</span><h4>Francisco Múgica Ybarburu</h4><p>Bautizado el 17 feb 1891 · Irún</p></button><button class="card person-static" data-search="francisco de la dehesa baladrón bisabuelo paterno " onclick="openPerson('P0001')"><span class="tag">Hipótesis</span><h4>Francisco de la Dehesa Baladrón</h4><p>Bisabuelo paterno</p></button><button class="card person-static" data-search="joaquina rafaela múgica ybarburu bautizada el 9 nov 1892 · irún " onclick="openPerson('P0049')"><span class="tag">Documentado</span><h4>Joaquina Rafaela Múgica Ybarburu</h4><p>Bautizada el 9 nov 1892 · Irún</p></button><button class="card person-static" data-search="joaquín ybarburu arbide padre de maría dolores ybarburu lasalde " onclick="openPerson('P0044')"><span class="tag">Documentado</span><h4>Joaquín Ybarburu Arbide</h4><p>Padre de María Dolores Ybarburu Lasalde</p></button><button class="card person-static" data-search="josefa galarza saralegui madre de josé maría múgica galarza " onclick="openPerson('P0043')"><span class="tag">Documentado</span><h4>Josefa Galarza Saralegui</h4><p>Madre de José María Múgica Galarza</p></button><button class="card person-static" data-search="josefa martín calles bisabuela paterna " onclick="openPerson('P0002')"><span class="tag">Hipótesis</span><h4>Josefa Martín Calles</h4><p>Bisabuela paterna</p></button><button class="card person-static" data-search="josé maría múgica galarza bautizado el 2 oct 1856 · irún " onclick="openPerson('P0003')"><span class="tag">Documentado</span><h4>José María Múgica Galarza</h4><p>Bautizado el 2 oct 1856 · Irún</p></button><button class="card person-static" data-search="lourdes de la dehesa liz 9 jul 1964 " onclick="openPerson('P0014')"><span class="tag">Documentado</span><h4>Lourdes de la Dehesa Liz</h4><p>9 jul 1964</p></button><button class="card person-static" data-search="manuel maría de la dehesa múgica 15 ago 1923 · zarautz · † 22 jun 2007 capitán de la marina mercante" onclick="openPerson('P0007')"><span class="tag">Documentado</span><h4>Manuel María de la Dehesa Múgica</h4><p>15 ago 1923 · Zarautz · † 22 jun 2007</p></button><button class="card person-static" data-search="manuel de la dehesa liz 27 abr 1959 " onclick="openPerson('P0012')"><span class="tag">Documentado</span><h4>Manuel de la Dehesa Liz</h4><p>27 abr 1959</p></button><button class="card person-static" data-search="manuel de la dehesa martín c. 1896 · algeciras carabinero" onclick="openPerson('P0005')"><span class="tag">Documentado</span><h4>Manuel de la Dehesa Martín</h4><p>c. 1896 · Algeciras</p></button><button class="card person-static" data-search="manuel de la dehesa nogueras  " onclick="openPerson('P0040')"><span class="tag">Pendiente</span><h4>Manuel de la Dehesa Nogueras</h4><p>Información en elaboración</p></button><button class="card person-static" data-search="manuela josefa múgica ybarburu bautizada el 2 abr 1898 · irún " onclick="openPerson('P0006')"><span class="tag">Documentado</span><h4>Manuela Josefa Múgica Ybarburu</h4><p>Bautizada el 2 abr 1898 · Irún</p></button><button class="card person-static" data-search="maría dolores ybarburu lasalde bautizada el 25 abr 1862 · irún " onclick="openPerson('P0004')"><span class="tag">Documentado</span><h4>María Dolores Ybarburu Lasalde</h4><p>Bautizada el 25 abr 1862 · Irún</p></button><button class="card person-static" data-search="maría joaquina josefa múgica ybarburu bautizada el 23 nov 1887 · irún " onclick="openPerson('P0046')"><span class="tag">Documentado</span><h4>María Joaquina Josefa Múgica Ybarburu</h4><p>Bautizada el 23 nov 1887 · Irún</p></button><button class="card person-static" data-search="maría juana de la dehesa baladrón coomonte · 1915 maestra" onclick="openPerson('P0038')"><span class="tag">Documentado</span><h4>María Juana de la Dehesa Baladrón</h4><p>Coomonte · 1915</p></button><button class="card person-static" data-search="mercedes liz gómez † 28 abr 2009 " onclick="openPerson('P0010')"><span class="tag">Documentado</span><h4>Mercedes Liz Gómez</h4><p>† 28 abr 2009</p></button><button class="card person-static" data-search="mercedes de la dehesa liz 12 feb 1963 " onclick="openPerson('P0013')"><span class="tag">Documentado</span><h4>Mercedes de la Dehesa Liz</h4><p>12 feb 1963</p></button><button class="card person-static" data-search="micaela múgica ybarburu bautizada el 8 ene 1896 · irún " onclick="openPerson('P0051')"><span class="tag">Documentado</span><h4>Micaela Múgica Ybarburu</h4><p>Bautizada el 8 ene 1896 · Irún</p></button><button class="card person-static" data-search="nicolás soengas cónyuge de raquel " onclick="openPerson('P0022')"><span class="tag">Memoria familiar</span><h4>Nicolás Soengas</h4><p>Cónyuge de Raquel</p></button><button class="card person-static" data-search="noah soengas hoya fecha pendiente " onclick="openPerson('P0032')"><span class="tag">Hipótesis</span><h4>Noah Soengas Hoya</h4><p>Fecha pendiente</p></button><button class="card person-static" data-search="pedro múgica ybarburu bautizado el 28 jun 1886 · irún " onclick="openPerson('P0053')"><span class="tag">Documentado</span><h4>Pedro Múgica Ybarburu</h4><p>Bautizado el 28 jun 1886 · Irún</p></button><button class="card person-static" data-search="peio quintana de la dehesa 26 jun · año pendiente " onclick="openPerson('P0031')"><span class="tag">Hipótesis</span><h4>Peio Quintana de la Dehesa</h4><p>26 jun · año pendiente</p></button><button class="card person-static" data-search="raquel hoya de la dehesa 20 jun 1984 " onclick="openPerson('P0020')"><span class="tag">Memoria familiar</span><h4>Raquel Hoya de la Dehesa</h4><p>20 jun 1984</p></button><button class="card person-static" data-search="santiago múgica ybarburu bautizado el 25 jul 1900 · irún " onclick="openPerson('P0052')"><span class="tag">Documentado</span><h4>Santiago Múgica Ybarburu</h4><p>Bautizado el 25 jul 1900 · Irún</p></button></div>
-</section>
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<aside class="person-drawer" id="personDrawer" aria-hidden="true" aria-label="Ficha de persona">
+  <div class="drawer-handle"></div>
+  <button class="drawer-close" id="drawerClose" aria-label="Cerrar ficha">×</button>
+  <div id="drawerContent"></div>
+</aside>
 
-<section id="tree" class="view">
- <div class="section-title"><h3>Árbol interactivo</h3><span>Rama Múgica–De la Dehesa–Liz</span></div>
- <div class="toolbar"><button class="soft" onclick="resetTree()">Centrar árbol</button><button class="soft" onclick="zoomTree(1.18)">Ampliar</button><button class="soft" onclick="zoomTree(.84)">Reducir</button></div>
- <div id="treeShell" class="tree-shell"><div id="treeStage" class="tree-stage"><svg id="treeSvg"></svg></div><div class="tree-hint">Arrastra para moverte · pellizca para ampliar</div></div>
-</section>
-
-<section id="detail" class="view"><div id="detailContent"></div></section>
-</main>
-
-<nav class="bottom-nav">
- <button data-view="home" class="active" onclick="showView('home',this)"><b>⌂</b>Inicio</button>
- <button data-view="tree" onclick="showView('tree',this)"><b>🌳</b>Árbol</button>
- <button data-view="people" onclick="showView('people',this)"><b>👤</b>Personas</button>
- <button data-view="detail" onclick="openPerson('P0006',this)"><b>▤</b>Ficha</button>
-</nav>
-</div>
-<script>
-const PEOPLE=[{"datos_resumen":"Bisabuelo paterno","lugar_descanso":null,"hijos":["P0005","P0036","P0037"],"estado":"hipotesis","conyuges":["P0002"],"hechos":[{"tipo":"hipotesis","texto":"Lectura probable del nombre en la partida de nacimiento de Manuel María."}],"nombre":"Francisco de la Dehesa Baladrón","id_legacy":"p1","id":"P0001","rol":"","padres":[]},{"datos_resumen":"Bisabuela paterna","lugar_descanso":null,"hijos":["P0005","P0036","P0037"],"estado":"hipotesis","conyuges":["P0001"],"hechos":[{"tipo":"hipotesis","texto":"El apellido Martín es una lectura probable."},{"tipo":"hipotesis","texto":"Puede estar relacionado con el recuerdo familiar «San Martín»."}],"nombre":"Josefa Martín Calles","id_legacy":"p2","id":"P0002","rol":"","padres":[]},{"datos_resumen":"Bautizado el 2 oct 1856 · Irún","lugar_descanso":null,"hijos":["P0053","P0046","P0047","P0048","P0049","P0050","P0051","P0006","P0052"],"estado":"documentado","conyuges":["P0004"],"hechos":[{"tipo":"documentado","texto":"Bautizado el 2 de octubre de 1856 en la parroquia de Nuestra Señora del Juncal, Irún."},{"tipo":"documentado","texto":"Contrajo matrimonio con Dolores Ybarburu Lasalde el 29 de septiembre de 1885 en la parroquia de Nuestra Señora del Juncal, Irún."},{"tipo":"documentado","texto":"En el índice de su bautismo figura la observación «Hijo natural»."}],"nombre":"José María Múgica Galarza","id_legacy":"p3","id":"P0003","rol":"","padres":["P0042","P0043"]},{"datos_resumen":"Bautizada el 25 abr 1862 · Irún","lugar_descanso":null,"hijos":["P0053","P0046","P0047","P0048","P0049","P0050","P0051","P0006","P0052"],"estado":"documentado","conyuges":["P0003"],"hechos":[{"tipo":"documentado","texto":"Bautizada el 25 de abril de 1862 en la parroquia de Nuestra Señora del Juncal, Irún."},{"tipo":"documentado","texto":"Contrajo matrimonio con José María Múgica Galarza el 29 de septiembre de 1885 en la parroquia de Nuestra Señora del Juncal, Irún."},{"tipo":"nota_documental","texto":"En el índice bautismal de su hija Manuela figura como «Dolores Ybarburu Arbide»; el bautismo y el matrimonio de Dolores documentan el apellido Lasalde."}],"nombre":"María Dolores Ybarburu Lasalde","id_legacy":"p4","id":"P0004","rol":"","padres":["P0044","P0045"]},{"datos_resumen":"c. 1896 · Algeciras","lugar_descanso":null,"hijos":["P0007"],"estado":"documentado","conyuges":["P0006"],"hechos":[{"tipo":"documentado","texto":"Natural de Algeciras, de 27 años y carabinero cuando nació su hijo en 1923."},{"tipo":"memoria_familiar","texto":"La familia recuerda que conoció a Manuela mientras prestaba servicio en la frontera."},{"tipo":"hipotesis","texto":"Endarlaza es un posible destino todavía sin confirmar."}],"nombre":"Manuel de la Dehesa Martín","id_legacy":"p5","id":"P0005","rol":"Carabinero","padres":["P0001","P0002"]},{"datos_resumen":"Bautizada el 2 abr 1898 · Irún","lugar_descanso":null,"hijos":["P0007"],"estado":"documentado","conyuges":["P0005"],"hechos":[{"tipo":"documentado","texto":"Bautizada el 2 de abril de 1898 en la parroquia de Nuestra Señora del Juncal, Irún."},{"tipo":"nota_documental","texto":"En otros documentos y en la memoria familiar aparece como Manuela Múgica Ibarburu."}],"nombre":"Manuela Josefa Múgica Ybarburu","id_legacy":"p6","id":"P0006","rol":"","padres":["P0003","P0004"]},{"datos_resumen":"15 ago 1923 · Zarautz · † 22 jun 2007","lugar_descanso":null,"hijos":["P0012","P0013","P0014","P0015","P0016"],"estado":"documentado","conyuges":["P0010"],"hechos":[{"tipo":"documentado","texto":"Nació en Zarautz el 15 de agosto de 1923 a las 23:00. Falleció el 22 de junio de 2007."},{"tipo":"memoria_familiar","texto":"Fue hijo único."},{"tipo":"memoria_familiar","texto":"Ejerció como capitán de la Marina Mercante."},{"tipo":"memoria_familiar","texto":"Tras su cremación, las cenizas de Manuel y Mercedes fueron esparcidas en el Peine del Viento (San Sebastián), cumpliendo su deseo."}],"nombre":"Manuel María de la Dehesa Múgica","id_legacy":"p7","id":"P0007","rol":"Capitán de la Marina Mercante","padres":["P0005","P0006"]},{"datos_resumen":"Abuelo materno","lugar_descanso":{"cemetery":"Cementerio Municipal de Bilbao (Derio)","location":"Zona Única · Manzana 29 · Unidad/Nicho 0050","note":"Sepultura compartida por Francisco Liz Rivera, Carmen Gómez López y Concepción Liz Gómez.","nota_fotos":"La localización es compartida. Las fotografías individuales de cada lápida se incorporarán por separado cuando estén disponibles."},"hijos":["P0010","P0011"],"estado":"documentado","conyuges":["P0009"],"hechos":[{"tipo":"documentado","texto":"Compró el 7 de junio de 1957 la vivienda de Iparraguirre 56, 1.º centro, Bilbao."},{"tipo":"documentado","texto":"La escritura indica que ya era inquilino antes de la compra."},{"tipo":"memoria_familiar","texto":"El taller de sastrería estaba dentro de la vivienda familiar."},{"tipo":"memoria_familiar","texto":"El despacho tenía una línea telefónica independiente."}],"nombre":"Francisco Liz Rivera","id_legacy":"p8","id":"P0008","rol":"Sastre","padres":[]},{"datos_resumen":"Abuela materna","lugar_descanso":{"cemetery":"Cementerio Municipal de Bilbao (Derio)","location":"Zona Única · Manzana 29 · Unidad/Nicho 0050","note":"Sepultura compartida por Francisco Liz Rivera, Carmen Gómez López y Concepción Liz Gómez.","nota_fotos":"La localización es compartida. Las fotografías individuales de cada lápida se incorporarán por separado cuando estén disponibles."},"hijos":["P0010","P0011"],"estado":"documentado","conyuges":["P0008"],"hechos":[{"tipo":"documentado","texto":"Esposa de Francisco Liz Rivera y madre de Mercedes y Concepción."}],"nombre":"Carmen Gómez López","id_legacy":"p9","id":"P0009","rol":"","padres":[]},{"datos_resumen":"† 28 abr 2009","lugar_descanso":null,"hijos":["P0012","P0013","P0014","P0015","P0016"],"estado":"documentado","conyuges":["P0007"],"hechos":[{"tipo":"documentado","texto":"Falleció el 28 de abril de 2009."},{"tipo":"documentado","texto":"Su funeral se celebró en Nuestra Señora del Carmen de Indautxu."},{"tipo":"documentado","texto":"Fue madre de cinco hijos."},{"tipo":"memoria_familiar","texto":"Tras su cremación, las cenizas de Manuel y Mercedes fueron esparcidas en el Peine del Viento (San Sebastián), cumpliendo su deseo."}],"nombre":"Mercedes Liz Gómez","id_legacy":"p10","id":"P0010","rol":"","padres":["P0008","P0009"]},{"datos_resumen":"† abr 2010","lugar_descanso":{"cemetery":"Cementerio Municipal de Bilbao (Derio)","location":"Zona Única · Manzana 29 · Unidad/Nicho 0050","note":"Sepultura compartida por Francisco Liz Rivera, Carmen Gómez López y Concepción Liz Gómez.","nota_fotos":"La localización es compartida. Las fotografías individuales de cada lápida se incorporarán por separado cuando estén disponibles."},"hijos":[],"estado":"memoria_familiar","conyuges":[],"hechos":[{"tipo":"memoria_familiar","texto":"Trabajó en la Escuela de Ingenieros de Bilbao."},{"tipo":"memoria_familiar","texto":"Permaneció soltera y no tuvo hijos."},{"tipo":"memoria_familiar","texto":"Vivió toda su vida en Iparraguirre 56."},{"tipo":"documentado","texto":"Falleció en abril de 2010."}],"nombre":"Concepción Liz Gómez","id_legacy":"p11","id":"P0011","rol":"Jefe de Negociado","padres":["P0008","P0009"]},{"datos_resumen":"27 abr 1959","lugar_descanso":null,"hijos":["P0018"],"estado":"documentado","conyuges":["P0017"],"hechos":[{"tipo":"documentado","texto":"Hijo mayor de Manuel María y Mercedes."},{"tipo":"memoria_familiar","texto":"Se casó con Blanca González y posteriormente se separaron."}],"nombre":"Manuel de la Dehesa Liz","id_legacy":"p12","id":"P0012","rol":"","padres":["P0007","P0010"]},{"datos_resumen":"12 feb 1963","lugar_descanso":null,"hijos":["P0020","P0021"],"estado":"documentado","conyuges":["P0019"],"hechos":[{"tipo":"documentado","texto":"Hija de Manuel María y Mercedes."},{"tipo":"memoria_familiar","texto":"Se casó con Federico Hoya Gómez y posteriormente se separaron."}],"nombre":"Mercedes de la Dehesa Liz","id_legacy":"p13","id":"P0013","rol":"","padres":["P0007","P0010"]},{"datos_resumen":"9 jul 1964","lugar_descanso":null,"hijos":["P0025","P0026"],"estado":"documentado","conyuges":["P0024"],"hechos":[{"tipo":"documentado","texto":"Hija de Manuel María y Mercedes."},{"tipo":"memoria_familiar","texto":"Está casada con Ferdinando Rigardo."}],"nombre":"Lourdes de la Dehesa Liz","id_legacy":"p14","id":"P0014","rol":"","padres":["P0007","P0010"]},{"datos_resumen":"2 oct 1966 · Bilbao","lugar_descanso":null,"hijos":[],"estado":"documentado","conyuges":["P0027"],"hechos":[{"tipo":"documentado","texto":"Nació en Bilbao el 2 de octubre de 1966."},{"tipo":"memoria_familiar","texto":"Se casó con Esther García Reizabal el 8 de junio de 2012."},{"tipo":"familia_reconstituida","texto":"No tienen hijos en común; Amets es hijo de Esther de una relación anterior."}],"nombre":"Eduardo de la Dehesa Liz","id_legacy":"p15","id":"P0015","rol":"","padres":["P0007","P0010"]},{"datos_resumen":"11 may 1971","lugar_descanso":null,"hijos":["P0030","P0031"],"estado":"documentado","conyuges":["P0029"],"hechos":[{"tipo":"documentado","texto":"Hija menor de Manuel María y Mercedes."},{"tipo":"memoria_familiar","texto":"Se casó con Eneko Quintana y posteriormente se separaron."}],"nombre":"Elena de la Dehesa Liz","id_legacy":"p16","id":"P0016","rol":"","padres":["P0007","P0010"]},{"datos_resumen":"Excónyuge de Manuel","lugar_descanso":null,"hijos":["P0018"],"estado":"memoria_familiar","conyuges":["P0012"],"hechos":[{"tipo":"memoria_familiar","texto":"Se casó con Manuel de la Dehesa Martín Liz y posteriormente se separaron."},{"tipo":"memoria_familiar","texto":"Madre de Eduardo de la Dehesa González."}],"nombre":"Blanca González","id_legacy":"p17","id":"P0017","rol":"","padres":[]},{"datos_resumen":"28 sep 2000","lugar_descanso":null,"hijos":[],"estado":"memoria_familiar","conyuges":[],"hechos":[{"tipo":"memoria_familiar","texto":"Hijo de Manuel de la Dehesa Martín Liz y Blanca González."}],"nombre":"Eduardo de la Dehesa González","id_legacy":"p18","id":"P0018","rol":"","padres":["P0012","P0017"]},{"datos_resumen":"Excónyuge de Mercedes","lugar_descanso":null,"hijos":["P0020","P0021"],"estado":"memoria_familiar","conyuges":["P0013"],"hechos":[{"tipo":"memoria_familiar","texto":"Se casó con Mercedes de la Dehesa Liz y posteriormente se separaron."}],"nombre":"Federico Hoya Gómez","id_legacy":"p19","id":"P0019","rol":"","padres":[]},{"datos_resumen":"20 jun 1984","lugar_descanso":null,"hijos":["P0023","P0032"],"estado":"memoria_familiar","conyuges":["P0022"],"hechos":[{"tipo":"memoria_familiar","texto":"Hija de Mercedes de la Dehesa Liz y Federico Hoya Gómez."},{"tipo":"memoria_familiar","texto":"Se casó con Nicolás Soengas el 23 de septiembre de 2017."}],"nombre":"Raquel Hoya de la Dehesa","id_legacy":"p20","id":"P0020","rol":"","padres":["P0013","P0019"]},{"datos_resumen":"10 ene 1989","lugar_descanso":null,"hijos":[],"estado":"memoria_familiar","conyuges":[],"hechos":[{"tipo":"memoria_familiar","texto":"Hijo de Mercedes de la Dehesa Liz y Federico Hoya Gómez."}],"nombre":"Daniel Hoya de la Dehesa","id_legacy":"p21","id":"P0021","rol":"","padres":["P0013","P0019"]},{"datos_resumen":"Cónyuge de Raquel","lugar_descanso":null,"hijos":["P0023","P0032"],"estado":"memoria_familiar","conyuges":["P0020"],"hechos":[{"tipo":"memoria_familiar","texto":"Se casó con Raquel Hoya de la Dehesa el 23 de septiembre de 2017."}],"nombre":"Nicolás Soengas","id_legacy":"p22","id":"P0022","rol":"","padres":[]},{"datos_resumen":"Fecha pendiente","lugar_descanso":null,"hijos":[],"estado":"hipotesis","conyuges":[],"hechos":[{"tipo":"memoria_familiar","texto":"Hija de Raquel y Nicolás."},{"tipo":"hipotesis","texto":"Fecha y apellidos completos pendientes de confirmación."}],"nombre":"Arianne Soengas Hoya","id_legacy":"p23","id":"P0023","rol":"","padres":["P0020","P0022"]},{"datos_resumen":"Cónyuge de Lourdes","lugar_descanso":null,"hijos":["P0025","P0026"],"estado":"memoria_familiar","conyuges":["P0014"],"hechos":[{"tipo":"memoria_familiar","texto":"Está casado con Lourdes de la Dehesa Liz."}],"nombre":"Ferdinando Rigardo","id_legacy":"p24","id":"P0024","rol":"","padres":[]},{"datos_resumen":"15 ene · año pendiente","lugar_descanso":null,"hijos":[],"estado":"hipotesis","conyuges":[],"hechos":[{"tipo":"memoria_familiar","texto":"Hijo de Lourdes y Ferdinando."},{"tipo":"hipotesis","texto":"Año de nacimiento pendiente."}],"nombre":"Adrián Rigardo de la Dehesa","id_legacy":"p25","id":"P0025","rol":"","padres":["P0014","P0024"]},{"datos_resumen":"28 jul 1998","lugar_descanso":null,"hijos":[],"estado":"memoria_familiar","conyuges":[],"hechos":[{"tipo":"memoria_familiar","texto":"Hija de Lourdes y Ferdinando."}],"nombre":"Alessandra Rigardo de la Dehesa","id_legacy":"p26","id":"P0026","rol":"","padres":["P0014","P0024"]},{"datos_resumen":"4 mar 1971","lugar_descanso":null,"hijos":["P0028"],"estado":"memoria_familiar","conyuges":["P0015"],"hechos":[{"tipo":"memoria_familiar","texto":"Se casó con Eduardo de la Dehesa Liz el 8 de junio de 2012."},{"tipo":"familia_reconstituida","texto":"Tiene un hijo de una relación anterior: Amets Otaegi García."}],"nombre":"Esther García Reizabal","id_legacy":"p27","id":"P0027","rol":"","padres":[]},{"datos_resumen":"19 sep 2000","lugar_descanso":null,"hijos":[],"estado":"familia_reconstituida","conyuges":[],"hechos":[{"tipo":"memoria_familiar","texto":"Hijo de Esther García Reizabal de una relación anterior."},{"tipo":"familia_reconstituida","texto":"Eduardo de la Dehesa Liz es su padrastro."}],"nombre":"Amets Otaegi García","id_legacy":"p28","id":"P0028","rol":"","padres":["P0027"]},{"datos_resumen":"Excónyuge de Elena","lugar_descanso":null,"hijos":["P0030","P0031"],"estado":"memoria_familiar","conyuges":["P0016"],"hechos":[{"tipo":"memoria_familiar","texto":"Se casó con Elena de la Dehesa Liz y posteriormente se separaron."}],"nombre":"Eneko Quintana","id_legacy":"p29","id":"P0029","rol":"","padres":[]},{"datos_resumen":"15 jul 2000","lugar_descanso":null,"hijos":[],"estado":"memoria_familiar","conyuges":[],"hechos":[{"tipo":"memoria_familiar","texto":"Hijo de Elena y Eneko."}],"nombre":"Eder Quintana de la Dehesa","id_legacy":"p30","id":"P0030","rol":"","padres":["P0016","P0029"]},{"datos_resumen":"26 jun · año pendiente","lugar_descanso":null,"hijos":[],"estado":"hipotesis","conyuges":[],"hechos":[{"tipo":"memoria_familiar","texto":"Hijo de Elena y Eneko."},{"tipo":"hipotesis","texto":"Año de nacimiento pendiente."}],"nombre":"Peio Quintana de la Dehesa","id_legacy":"p31","id":"P0031","rol":"","padres":["P0016","P0029"]},{"datos_resumen":"Fecha pendiente","lugar_descanso":null,"hijos":[],"estado":"hipotesis","conyuges":[],"hechos":[{"tipo":"memoria_familiar","texto":"Hijo de Raquel y Nicolás."},{"tipo":"hipotesis","texto":"Fecha y apellidos completos pendientes de confirmación."}],"nombre":"Noah Soengas Hoya","id_legacy":"p32","id":"P0032","rol":"","padres":["P0020","P0022"]},{"datos_resumen":"Azpeitia y Riego del Camino · siglo XX","lugar_descanso":null,"hijos":[],"estado":"documented","conyuges":[],"hechos":[{"tipo":"documentado","texto":"Carabinero destinado en Azpeitia en 1936."},{"tipo":"documentado","texto":"En noviembre de 1955 figura expresamente como alcalde de Riego del Camino."},{"tipo":"documentado","texto":"El 12 de julio de 1960 Herminio Gallego Gómez tomó posesión como alcalde en sustitución de Cayetano de la Dehesa."},{"tipo":"documentado","texto":"En 1980 figura como titular de dos parcelas en Riego del Camino en un expediente oficial de expropiación."},{"tipo":"hipotesis","texto":"Posible hermano de Manuel y Andrés de la Dehesa Martín; parentesco pendiente de prueba directa."}],"nombre":"Cayetano de la Dehesa Martín","id_legacy":null,"id":"P0036","rol":"Carabinero y alcalde","padres":["P0001","P0002"]},{"datos_resumen":"Riego del Camino · † marzo de 1938","lugar_descanso":null,"hijos":[],"estado":"documented","conyuges":[],"hechos":[{"tipo":"documentado","texto":"Hijo de Francisco de la Dehesa Baladrón y Josefa Martín Calles."},{"tipo":"documentado","texto":"Resultó herido en una reyerta familiar publicada el 8 de enero de 1934."},{"tipo":"documentado","texto":"El 27 de septiembre de 1935 se anunció su procesamiento y juicio por estupro."},{"tipo":"documentado","texto":"El 11 de noviembre de 1935 se publicó la condena, que incluyó multa de 2.500 pesetas, costas e indemnización civil."},{"tipo":"documentado","texto":"El 18 de agosto de 1936 figura entre los soldados y clases ascendidos por acciones distinguidas."},{"tipo":"documentado","texto":"El 4 de marzo de 1938 se informó del traslado a Riego del Camino de sus restos, como suboficial del Regimiento Toledo."},{"tipo":"documentado","texto":"En 1942 se reconoció una pensión a sus padres, Francisco de la Dehesa Baladrón y Josefa Martín Calles, con efectos de 13 de marzo de 1938."},{"tipo":"hipotesis","texto":"Posible hermano de Manuel y Cayetano de la Dehesa Martín; parentesco pendiente de prueba directa."}],"nombre":"Andrés de la Dehesa Martín","id_legacy":null,"id":"P0037","rol":"Militar","padres":["P0001","P0002"]},{"datos_resumen":"Coomonte · 1915","lugar_descanso":null,"hijos":[],"estado":"documented","conyuges":[],"hechos":[{"tipo":"documented","texto":"Figura como maestra de Coomonte en una relación de ascensos publicada en 1915."},{"tipo":"hypothesis","texto":"Posible hermana de Francisco de la Dehesa Baladrón; parentesco pendiente de confirmación documental."}],"nombre":"María Juana de la Dehesa Baladrón","id_legacy":null,"id":"P0038","rol":"Maestra","padres":[]},{"datos_resumen":"Riego del Camino · 1914","lugar_descanso":null,"hijos":[],"estado":"documented","conyuges":[],"hechos":[{"tipo":"documented","texto":"Vecino de Riego del Camino documentado en prensa en 1914."},{"tipo":"hypothesis","texto":"Posible hermano de Francisco de la Dehesa Baladrón; parentesco pendiente de confirmación documental."}],"nombre":"Antonio de la Dehesa Baladrón","id_legacy":null,"id":"P0039","rol":"","padres":[]},{"datos_resumen":"","lugar_descanso":null,"hijos":[],"estado":"hypothesis","conyuges":[],"hechos":[{"tipo":"hypothesis","texto":"Persona localizada durante la investigación; identidad y relación con la familia pendientes de demostración."},{"tipo":"hypothesis","texto":"Se estudia como posible descendiente de un hermano de Francisco de la Dehesa Baladrón."}],"nombre":"Manuel de la Dehesa Nogueras","id_legacy":null,"id":"P0040","rol":"","padres":[]},{"datos_resumen":"","lugar_descanso":null,"hijos":[],"estado":"hypothesis","conyuges":[],"hechos":[{"tipo":"hypothesis","texto":"Persona localizada durante la investigación; identidad y relación con la familia pendientes de demostración."},{"tipo":"hypothesis","texto":"Se estudia como posible descendiente de un hermano de Francisco de la Dehesa Baladrón."}],"nombre":"Antonio de la Dehesa Nogueras","id_legacy":null,"id":"P0041","rol":"","padres":[]},{"datos_resumen":"Padre de José María Múgica Galarza","hijos":["P0003"],"estado":"documentado","conyuges":["P0043"],"hechos":[{"tipo":"documentado","texto":"Padre de José María Múgica Galarza, según el índice de bautismo de 1856."}],"nombre":"Francisco Múgica Galarza","id":"P0042","padres":[],"rol":"","lugar_descanso":""},{"datos_resumen":"Madre de José María Múgica Galarza","hijos":["P0003"],"estado":"documentado","conyuges":["P0042"],"hechos":[{"tipo":"documentado","texto":"Madre de José María Múgica Galarza, según el índice de bautismo de 1856."}],"nombre":"Josefa Galarza Saralegui","id":"P0043","padres":[],"rol":"","lugar_descanso":""},{"datos_resumen":"Padre de María Dolores Ybarburu Lasalde","hijos":["P0004"],"estado":"documentado","conyuges":["P0045"],"hechos":[{"tipo":"documentado","texto":"Padre de María Dolores Ybarburu Lasalde, según el índice de bautismo de 1862."}],"nombre":"Joaquín Ybarburu Arbide","id":"P0044","padres":[],"rol":"","lugar_descanso":""},{"datos_resumen":"Madre de María Dolores Ybarburu Lasalde","hijos":["P0004"],"estado":"documentado","conyuges":["P0044"],"hechos":[{"tipo":"documentado","texto":"Madre de María Dolores Ybarburu Lasalde, según el índice de bautismo de 1862."}],"nombre":"Francisca Lasalde Echeluce","id":"P0045","padres":[],"rol":"","lugar_descanso":""},{"datos_resumen":"Bautizada el 23 nov 1887 · Irún","hijos":[],"estado":"documentado","conyuges":[],"hechos":[{"tipo":"documentado","texto":"Bautizada el 23 de noviembre de 1887 en Irún."}],"nombre":"María Joaquina Josefa Múgica Ybarburu","id":"P0046","padres":["P0003","P0004"],"rol":"","lugar_descanso":""},{"datos_resumen":"Bautizada el 30 may 1889 · Irún","hijos":[],"estado":"documentado","conyuges":[],"hechos":[{"tipo":"documentado","texto":"Bautizada el 30 de mayo de 1889 en Irún."}],"nombre":"Escolástica Salvadora Múgica Ybarburu","id":"P0047","padres":["P0003","P0004"],"rol":"","lugar_descanso":""},{"datos_resumen":"Bautizado el 17 feb 1891 · Irún","hijos":[],"estado":"documentado","conyuges":[],"hechos":[{"tipo":"documentado","texto":"Bautizado el 17 de febrero de 1891 en Irún."}],"nombre":"Francisco Múgica Ybarburu","id":"P0048","padres":["P0003","P0004"],"rol":"","lugar_descanso":""},{"datos_resumen":"Bautizada el 9 nov 1892 · Irún","hijos":[],"estado":"documentado","conyuges":[],"hechos":[{"tipo":"documentado","texto":"Bautizada el 9 de noviembre de 1892 en Irún."}],"nombre":"Joaquina Rafaela Múgica Ybarburu","id":"P0049","padres":["P0003","P0004"],"rol":"","lugar_descanso":""},{"datos_resumen":"Bautizado el 10 mar 1894 · Irún","hijos":[],"estado":"documentado","conyuges":[],"hechos":[{"tipo":"documentado","texto":"Bautizado el 10 de marzo de 1894 en Irún."}],"nombre":"Francisco María Múgica Ybarburu","id":"P0050","padres":["P0003","P0004"],"rol":"","lugar_descanso":""},{"datos_resumen":"Bautizada el 8 ene 1896 · Irún","hijos":[],"estado":"documentado","conyuges":[],"hechos":[{"tipo":"documentado","texto":"Bautizada el 8 de enero de 1896 en Irún."}],"nombre":"Micaela Múgica Ybarburu","id":"P0051","padres":["P0003","P0004"],"rol":"","lugar_descanso":""},{"datos_resumen":"Bautizado el 25 jul 1900 · Irún","hijos":[],"estado":"documentado","conyuges":[],"hechos":[{"tipo":"documentado","texto":"Bautizado el 25 de julio de 1900 en Irún."}],"nombre":"Santiago Múgica Ybarburu","id":"P0052","padres":["P0003","P0004"],"rol":"","lugar_descanso":""},{"datos_resumen":"Bautizado el 28 jun 1886 · Irún","hijos":[],"estado":"documentado","conyuges":[],"hechos":[{"tipo":"documentado","texto":"Bautizado el 28 de junio de 1886 en Irún."}],"nombre":"Pedro Múgica Ybarburu","id":"P0053","padres":["P0003","P0004"],"rol":"","lugar_descanso":""}];
-const byId=Object.fromEntries(PEOPLE.map(p=>[p.id,p]));
-const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const initials=n=>n.split(/\s+/).filter(Boolean).slice(0,2).map(x=>x[0]).join("").toUpperCase();
-
-function stateLabel(s){
- const x=(s||"").toLowerCase();
- if(x.includes("document")) return "Documentado";
- if(x.includes("hipot")) return "Hipótesis";
- if(x.includes("memoria")) return "Memoria familiar";
- if(x.includes("reconst")) return "Familia reconstituida";
- return "Pendiente";
-}
-function card(p){
- return `<button class="card" onclick="openPerson('${p.id}')"><span class="tag">${esc(stateLabel(p.estado))}</span><h4>${esc(p.nombre)}</h4><p>${esc(p.datos_resumen||p.rol||"Información en elaboración")}</p></button>`;
-}
-function init(){
- document.getElementById("statPeople").textContent=PEOPLE.length;
- document.getElementById("statDocumented").textContent=PEOPLE.filter(p=>(p.estado||"").toLowerCase().includes("document")).length;
- const unions=new Set(); PEOPLE.forEach(p=>(p.conyuges||[]).forEach(c=>unions.add([p.id,c].sort().join("|"))));
- document.getElementById("statFamilies").textContent=unions.size;
- const ids=["P0003","P0004","P0006","P0005","P0007","P0010"];
- document.getElementById("featured").innerHTML=ids.map(id=>card(byId[id])).join("");
- renderPeople(); buildTree(); resetTree();
-}
-function showView(id,btn){
- document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===id));
- document.querySelectorAll(".bottom-nav button").forEach(b=>b.classList.toggle("active",b.dataset.view===id));
- if(btn&&btn.dataset?.view) btn.classList.add("active");
- window.scrollTo({top:0,behavior:"smooth"});
-}
-function searchFromHome(){
- const q=document.getElementById("homeSearch").value;
- document.getElementById("peopleSearch").value=q;
- showView("people");
- renderPeople();
-}
-function renderPeople(){
- const q=(document.getElementById("peopleSearch").value||"").trim().toLowerCase();
- const arr=PEOPLE.filter(p=>JSON.stringify([p.nombre,p.datos_resumen,p.rol,p.hechos]).toLowerCase().includes(q))
-                 .sort((a,b)=>a.nombre.localeCompare(b.nombre,"es"));
- document.getElementById("peopleCount").textContent=`${arr.length} resultados`;
- document.getElementById("peopleGrid").innerHTML=arr.length?arr.map(card).join(""):`<div class="empty">No se han encontrado coincidencias.</div>`;
-}
-function relationButtons(ids){
- return (ids||[]).map(id=>byId[id]).filter(Boolean).map(p=>`<button onclick="openPerson('${p.id}')">${esc(p.nombre)}</button>`).join("")||"<p>No consta</p>";
-}
-function openPerson(id){
- const p=byId[id]; if(!p)return;
- const facts=(p.hechos||[]).map(h=>`<div class="fact"><span class="badge">${esc(stateLabel(h.tipo))}</span><div style="margin-top:7px">${esc(h.texto)}</div></div>`).join("")||"<p>No hay hechos añadidos todavía.</p>";
- document.getElementById("detailContent").innerHTML=`
- <div class="detail-grid">
-  <article class="panel">
-   <div class="profile-head"><div class="avatar">${esc(initials(p.nombre))}</div><div><span class="badge">${esc(stateLabel(p.estado))}</span><h2>${esc(p.nombre)}</h2><div style="color:#66736e">${esc(p.datos_resumen||"Datos biográficos en elaboración")}${p.rol?` · ${esc(p.rol)}`:""}</div></div></div>
-   <div style="margin-top:24px"><h3>Biografía y evidencias</h3>${facts}</div>
-  </article>
-  <aside class="panel relations">
-   <h3>Relaciones familiares</h3>
-   <h4>Padres</h4>${relationButtons(p.padres)}
-   <h4>Cónyuges</h4>${relationButtons(p.conyuges)}
-   <h4>Hijos</h4>${relationButtons(p.hijos)}
-  </aside>
- </div>`;
- showView("detail");
- document.querySelectorAll(".bottom-nav button").forEach(b=>b.classList.toggle("active",b.dataset.view==="detail"));
-}
-
-const layout={
- P0042:[1430,70],P0043:[1640,70],P0044:[2190,70],P0045:[2400,70],
- P0003:[1750,290],P0004:[1960,290],
- P0006:[850,530],P0053:[1070,530],P0046:[1290,530],P0047:[1510,530],P0048:[1730,530],P0049:[1950,530],P0050:[2170,530],P0051:[2390,530],P0052:[2610,530],
- P0001:[290,290],P0002:[500,290],P0005:[640,530],
- P0007:[850,780],P0008:[1160,590],P0009:[1370,590],P0010:[1060,780],P0011:[1280,780],
- P0012:[530,1040],P0013:[950,1040],P0014:[1370,1040],P0015:[1790,1040],P0016:[2210,1040]
-};
-function buildTree(){
- const stage=document.getElementById("treeStage"),svg=document.getElementById("treeSvg");
- stage.querySelectorAll(".person-node").forEach(n=>n.remove()); svg.innerHTML="";
- Object.entries(layout).forEach(([id,[x,y]])=>{
-  const p=byId[id]; if(!p)return;
-  const n=document.createElement("button");n.className=`person-node ${p.estado||""}`;n.style.left=x+"px";n.style.top=y+"px";
-  n.innerHTML=`<h5>${esc(p.nombre)}</h5><p>${esc(p.datos_resumen||p.rol||"")}</p>`;n.onclick=()=>openPerson(id);stage.appendChild(n);
- });
- const cx=id=>layout[id][0]+95, top=id=>layout[id][1], bottom=id=>layout[id][1]+91;
- const line=(d,cls="family")=>{const p=document.createElementNS("http://www.w3.org/2000/svg","path");p.setAttribute("d",d);p.setAttribute("fill","none");p.setAttribute("stroke",cls==="marriage"?"#a56558":"#568273");p.setAttribute("stroke-width",cls==="marriage"?"4":"3");p.setAttribute("stroke-linecap","round");svg.appendChild(p)};
- const marriage=(a,b)=>line(`M ${layout[a][0]+190} ${layout[a][1]+45} H ${layout[b][0]} ${layout[b][1]+45}`,"marriage");
- const family=(a,b,kids,barY)=>{
-   marriage(a,b);const mid=(layout[a][0]+190+layout[b][0])/2;
-   line(`M ${mid} ${layout[a][1]+45} V ${barY}`);
-   const xs=kids.map(cx);line(`M ${Math.min(...xs)} ${barY} H ${Math.max(...xs)}`);
-   kids.forEach(k=>line(`M ${cx(k)} ${barY} V ${top(k)}`));
- };
- family("P0042","P0043",["P0003"],245); family("P0044","P0045",["P0004"],245);
- family("P0003","P0004",["P0006","P0053","P0046","P0047","P0048","P0049","P0050","P0051","P0052"],485);
- family("P0001","P0002",["P0005"],485);
- family("P0005","P0006",["P0007"],735);
- family("P0008","P0009",["P0010","P0011"],735);
- family("P0007","P0010",["P0012","P0013","P0014","P0015","P0016"],995);
-}
-let tx=0,ty=0,scale=.48,drag=false,last=null,pinch=null;
-function applyTree(){document.getElementById("treeStage").style.transform=`translate(${tx}px,${ty}px) scale(${scale})`}
-function resetTree(){const shell=document.getElementById("treeShell");scale=window.innerWidth<700?.34:.48;tx=20;ty=30;applyTree()}
-function zoomTree(f){scale=Math.max(.18,Math.min(1.7,scale*f));applyTree()}
-const shell=document.getElementById("treeShell");
-shell.addEventListener("pointerdown",e=>{drag=true;last=[e.clientX,e.clientY];shell.setPointerCapture(e.pointerId)});
-shell.addEventListener("pointermove",e=>{if(!drag)return;tx+=e.clientX-last[0];ty+=e.clientY-last[1];last=[e.clientX,e.clientY];applyTree()});
-shell.addEventListener("pointerup",()=>drag=false);shell.addEventListener("pointercancel",()=>drag=false);
-shell.addEventListener("wheel",e=>{e.preventDefault();zoomTree(e.deltaY<0?1.1:.9)},{passive:false});
-let touches=[];
-shell.addEventListener("touchstart",e=>{touches=[...e.touches];if(touches.length===2)pinch=Math.hypot(touches[0].clientX-touches[1].clientX,touches[0].clientY-touches[1].clientY)},{passive:true});
-shell.addEventListener("touchmove",e=>{if(e.touches.length===2&&pinch){const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);zoomTree(d/pinch);pinch=d}},{passive:true});
-window.addEventListener("resize",()=>{if(document.getElementById("tree").classList.contains("active"))resetTree()});
-init();
-</script>
-
-<noscript><style>
-#featured:empty:after{content:"El visor no permite ejecutar la aplicación."}
-</style></noscript>
+<div class="loading" id="loading">Cargando archivo…</div>
+<script src="js/app.js"></script>
 </body>
 </html>
