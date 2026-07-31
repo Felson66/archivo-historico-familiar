@@ -47,6 +47,12 @@ async function init(){
     resetTree();
 
     document.addEventListener("click", event => {
+      const documentLink = event.target.closest("[data-document-url]");
+      if(documentLink){
+        event.preventDefault();
+        openDocumentViewer(documentLink.dataset.documentUrl, documentLink.dataset.documentTitle);
+        return;
+      }
       const galleryButton = event.target.closest("[data-gallery-person]");
       if(galleryButton){
         openLightbox(galleryButton.dataset.galleryPerson, galleryButton.dataset.galleryIndex);
@@ -185,8 +191,8 @@ function renderDocuments(person){
     }
 
     return `
-      <a class="document-card" href="${esc(path)}" target="_blank" rel="noopener noreferrer"
-         aria-label="Abrir documento: ${esc(title)}">
+      <a class="document-card" href="${esc(path)}" data-document-url="${esc(path)}"
+         data-document-title="${esc(title)}" aria-label="Abrir documento: ${esc(title)}">
         <div class="document-icon" aria-hidden="true">${documentIcon(doc)}</div>
         <div class="document-info">
           <strong>${esc(title)}</strong>
@@ -196,6 +202,70 @@ function renderDocuments(person){
         </div>
       </a>`;
   }).join("")}</div>`;
+}
+
+
+function ensureDocumentViewer(){
+  let viewer = document.getElementById("documentViewer");
+  if(viewer) return viewer;
+
+  viewer = document.createElement("div");
+  viewer.id = "documentViewer";
+  viewer.className = "document-viewer";
+  viewer.setAttribute("aria-hidden","true");
+  viewer.innerHTML = `
+    <div class="document-viewer-panel" role="dialog" aria-modal="true" aria-labelledby="documentViewerTitle">
+      <header class="document-viewer-header">
+        <strong id="documentViewerTitle">Documento</strong>
+        <div class="document-viewer-actions">
+          <a id="documentViewerExternal" class="document-viewer-external" href="#" target="_blank" rel="noopener noreferrer">
+            Abrir aparte
+          </a>
+          <button id="documentViewerClose" class="document-viewer-close" type="button" aria-label="Cerrar documento">×</button>
+        </div>
+      </header>
+      <div id="documentViewerBody" class="document-viewer-body"></div>
+    </div>`;
+
+  document.body.appendChild(viewer);
+  viewer.querySelector("#documentViewerClose").addEventListener("click",closeDocumentViewer);
+  viewer.addEventListener("click",event => {
+    if(event.target === viewer) closeDocumentViewer();
+  });
+  return viewer;
+}
+
+function openDocumentViewer(url,title){
+  if(!url) return;
+  const viewer = ensureDocumentViewer();
+  const body = viewer.querySelector("#documentViewerBody");
+  const external = viewer.querySelector("#documentViewerExternal");
+  const heading = viewer.querySelector("#documentViewerTitle");
+  const cleanUrl = String(url).split("?")[0].split("#")[0];
+  const extension = cleanUrl.includes(".") ? cleanUrl.split(".").pop().toLowerCase() : "";
+
+  heading.textContent = title || "Documento";
+  external.href = url;
+
+  if(["jpg","jpeg","png","webp","gif","tif","tiff"].includes(extension)){
+    body.innerHTML = `<img class="document-viewer-image" src="${esc(url)}" alt="${esc(title || "Documento")}">`;
+  }else{
+    body.innerHTML = `<iframe class="document-viewer-frame" src="${esc(url)}" title="${esc(title || "Documento")}"></iframe>`;
+  }
+
+  viewer.classList.add("open");
+  viewer.setAttribute("aria-hidden","false");
+  document.body.classList.add("document-viewer-open");
+}
+
+function closeDocumentViewer(){
+  const viewer = document.getElementById("documentViewer");
+  if(!viewer) return;
+  viewer.classList.remove("open");
+  viewer.setAttribute("aria-hidden","true");
+  const body = viewer.querySelector("#documentViewerBody");
+  if(body) body.innerHTML = "";
+  document.body.classList.remove("document-viewer-open");
 }
 
 function renderTimeline(person){
@@ -433,6 +503,7 @@ function wireEvents(){
   $("photoLightbox").addEventListener("click",event => { if(event.target.id === "photoLightbox") closeLightbox(); });
   document.addEventListener("keydown",event => {
     if(event.key === "Escape"){
+      closeDocumentViewer();
       closeLightbox();
       closeDrawer();
     }
