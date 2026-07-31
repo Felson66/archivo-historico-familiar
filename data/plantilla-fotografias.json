@@ -1,0 +1,29 @@
+{
+  "fotografia_principal": "assets/fotos/PXXXX/001-principal.jpg",
+  "fotografias": [
+    {
+      "src": "assets/fotos/PXXXX/001-principal.jpg",
+      "titulo": "Retrato principal",
+      "fecha": "2026",
+      "lugar": "Bilbao",
+      "descripcion": "Descripción de la fotografía.",
+      "personas": [
+        "PXXXX"
+      ],
+      "etiquetas": [
+        "retrato"
+      ]
+    },
+    {
+      "src": "assets/fotos/PXXXX/002.jpg",
+      "titulo": "Título de la segunda fotografía",
+      "fecha": "",
+      "lugar": "",
+      "descripcion": "",
+      "personas": [
+        "PXXXX"
+      ],
+      "etiquetas": []
+    }
+  ]
+}

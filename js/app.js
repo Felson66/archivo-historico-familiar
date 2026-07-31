@@ -18,10 +18,12 @@ function stateLabel(state){
 }
 
 function card(person){
-  const thumb = person.fotografia_principal
+  const hasPhoto = Boolean(person.fotografia_principal);
+  const thumb = hasPhoto
     ? `<img class="card-photo" src="${esc(person.fotografia_principal)}" alt="${esc(person.nombre)}" loading="lazy">`
     : `<div class="card-monogram">${esc(initials(person.nombre))}</div>`;
-  return `<button class="card" data-person="${esc(person.id)}">
+
+  return `<button class="card ${hasPhoto ? "has-photo" : ""}" data-person="${esc(person.id)}">
     <div class="card-media">${thumb}</div>
     <div class="card-body">
       <span class="tag">${esc(stateLabel(person.estado))}</span>
@@ -115,14 +117,26 @@ function renderFacts(person){
   </div>`).join("");
 }
 
+function photoCaption(photo, person, index){
+  const title = photo.titulo || `Fotografía ${index + 1}`;
+  const meta = [photo.fecha, photo.lugar].filter(Boolean).join(" · ");
+  return `
+    <span class="photo-caption-title">${esc(title)}</span>
+    ${meta ? `<span class="photo-caption-meta">${esc(meta)}</span>` : ""}
+  `;
+}
+
 function renderGallery(person){
   const photos = person.fotografias || [];
   if(!photos.length) return `<div class="placeholder">Todavía no hay fotografías asociadas.</div>`;
-  return `<div class="photo-grid">${photos.map((photo,index) => `
-    <button class="photo-thumb" data-gallery-person="${esc(person.id)}" data-gallery-index="${index}">
-      <img src="${esc(photo.src)}" alt="${esc(photo.titulo || person.nombre)}" loading="lazy">
-      <span>${esc(photo.titulo || `Fotografía ${index+1}`)}</span>
-    </button>`).join("")}</div>`;
+  return `
+    <div class="photo-count-label">📷 ${photos.length} ${photos.length === 1 ? "fotografía" : "fotografías"}</div>
+    <div class="photo-grid">${photos.map((photo,index) => `
+      <button class="photo-thumb ${index === 0 ? "photo-featured" : ""}" data-gallery-person="${esc(person.id)}" data-gallery-index="${index}">
+        <img src="${esc(photo.src)}" alt="${esc(photo.titulo || person.nombre)}" loading="lazy">
+        <span class="photo-caption">${photoCaption(photo, person, index)}</span>
+      </button>`).join("")}
+    </div>`;
 }
 
 function renderTimeline(person){
@@ -180,7 +194,6 @@ function openPerson(id){
         <section class="profile-section">
           <div class="section-heading-row">
             <h3>Fotografías</h3>
-            ${(person.fotografias || []).length ? `<span>${person.fotografias.length}</span>` : ""}
           </div>
           ${renderGallery(person)}
         </section>

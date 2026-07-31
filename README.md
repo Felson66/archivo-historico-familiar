@@ -1,21 +1,15 @@
-# Archivo Histórico Familiar — v3.0.3
+# Archivo Histórico Familiar — v3.0.4
 
-Corrección de carga de la galería fotográfica.
+Sistema fotográfico reutilizable.
 
-## Qué ocurría
+## Novedades
 
-La galería ya estaba incluida en la v3.0.2, pero el navegador seguía utilizando una copia anterior de `app.js` guardada en caché. Por eso aparecía el texto «3 fotografías asociadas» en lugar de las miniaturas.
+- Pie de foto mejorado: título, fecha y lugar.
+- Contador legible: «3 fotografías».
+- Mosaico tipo álbum, con la primera imagen destacada.
+- Mejor legibilidad del texto sobre las tarjetas con fotografía.
+- Cualquier persona puede incorporar fotografías sin modificar el código.
+- Plantilla JSON incluida.
+- Guía paso a paso incluida.
 
-## Corrección
-
-- Se fuerza la carga de la versión nueva de `app.js`.
-- Se fuerza la carga de la versión nueva de `style.css`.
-- Se mantienen la foto principal, las tres miniaturas y el visor a pantalla completa.
-- No es necesario borrar manualmente la caché.
-
-## Actualización
-
-Copia todo el contenido sobre el repositorio local, acepta sustituir los archivos y publica con GitHub Desktop:
-
-1. Commit to main
-2. Push origin
+Consulta `COMO_AÑADIR_FOTOGRAFIAS.md`.
