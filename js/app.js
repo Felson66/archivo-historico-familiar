@@ -169,7 +169,7 @@ function ensureDocumentViewer(){
     <header class="document-viewer-header"><div class="document-viewer-heading"><strong id="documentViewerTitle">Documento</strong><small id="documentViewerDescription"></small><small id="documentViewerCounter"></small></div>
       <button id="documentViewerClose" class="document-viewer-close" type="button" aria-label="Cerrar documento">×</button></header>
     <div id="documentViewerBody" class="document-viewer-body"></div>
-    <footer class="document-viewer-footer"><button id="documentPrev" type="button">‹ Anterior</button><a id="documentDownload" href="#" download>PDF original</a><button id="documentNext" type="button">Siguiente ›</button></footer>
+    <footer class="document-viewer-footer"><button id="documentPrev" type="button">‹ Anterior</button><button id="documentNext" type="button">Siguiente ›</button></footer>
   </div>`;
   document.body.appendChild(viewer);
   viewer.querySelector("#documentViewerClose").onclick=closeDocumentViewer;
@@ -193,7 +193,6 @@ function openDocumentViewer(documentId,personId){
   const description=viewer.querySelector("#documentViewerDescription");
   description.textContent=doc.descripcion||doc.fecha||"";
   description.hidden=!description.textContent;
-  viewer.querySelector("#documentDownload").href=documentPath(doc);
   currentDocumentPages=Array.isArray(doc.paginas)?doc.paginas:[]; currentDocumentPage=0;
   viewer.querySelector("#documentPrev").onclick=()=>{if(currentDocumentPage>0){currentDocumentPage--;showDocumentPage()}};
   viewer.querySelector("#documentNext").onclick=()=>{if(currentDocumentPage<currentDocumentPages.length-1){currentDocumentPage++;showDocumentPage()}};

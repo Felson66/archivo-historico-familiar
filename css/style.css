@@ -624,3 +624,23 @@ body.document-viewer-open{overflow:hidden}
 @media(max-width:700px){
   .document-viewer-header{padding-right:78px}
 }
+
+
+/* v3.5.5 · navegación móvil segura del visor */
+.document-viewer-footer{
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:10px;
+}
+.document-viewer-footer button{
+  width:100%;
+  min-width:0;
+  white-space:nowrap;
+}
+.document-viewer-heading{max-width:calc(100vw - 96px)}
+@media(max-width:700px){
+  .document-viewer-header{padding-left:14px;padding-right:82px}
+  .document-viewer-heading strong{font-size:20px}
+  .document-viewer-heading small{font-size:14px}
+  .document-viewer-footer{padding-left:10px;padding-right:10px}
+  .document-viewer-footer button{font-size:15px;padding:8px 6px}
+}
