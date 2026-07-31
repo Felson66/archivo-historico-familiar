@@ -235,6 +235,82 @@ function ensureDocumentViewer(){
   return viewer;
 }
 
+
+let pdfJsPromise = null;
+let documentRenderToken = 0;
+
+async function loadPdfJs(){
+  if(!pdfJsPromise){
+    pdfJsPromise = import("https://cdn.jsdelivr.net/npm/pdfjs-dist@6.2.108/build/pdf.mjs")
+      .then(pdfjsLib => {
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+          "https://cdn.jsdelivr.net/npm/pdfjs-dist@6.2.108/build/pdf.worker.mjs";
+        return pdfjsLib;
+      });
+  }
+  return pdfJsPromise;
+}
+
+async function renderPdfInsideViewer(url,body,token){
+  body.innerHTML = `
+    <div class="document-loading">
+      <div class="document-spinner" aria-hidden="true"></div>
+      <strong>Cargando documento…</strong>
+    </div>`;
+
+  try{
+    const pdfjsLib = await loadPdfJs();
+    if(token !== documentRenderToken) return;
+
+    const pdf = await pdfjsLib.getDocument({url}).promise;
+    if(token !== documentRenderToken) return;
+
+    body.innerHTML = `<div class="pdf-pages" aria-label="Páginas del documento"></div>`;
+    const pages = body.querySelector(".pdf-pages");
+
+    for(let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++){
+      if(token !== documentRenderToken) return;
+
+      const page = await pdf.getPage(pageNumber);
+      const baseViewport = page.getViewport({scale:1});
+      const availableWidth = Math.min(window.innerWidth - 24, 1100);
+      const scale = Math.min(2.2, Math.max(1, availableWidth / baseViewport.width));
+      const viewport = page.getViewport({scale});
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "pdf-page";
+      wrapper.setAttribute("aria-label", `Página ${pageNumber} de ${pdf.numPages}`);
+
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d", {alpha:false});
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+
+      canvas.width = Math.floor(viewport.width * pixelRatio);
+      canvas.height = Math.floor(viewport.height * pixelRatio);
+      canvas.style.width = `${viewport.width}px`;
+      canvas.style.height = `${viewport.height}px`;
+
+      wrapper.appendChild(canvas);
+      pages.appendChild(wrapper);
+
+      await page.render({
+        canvasContext:context,
+        viewport,
+        transform:pixelRatio !== 1 ? [pixelRatio,0,0,pixelRatio,0,0] : null
+      }).promise;
+    }
+  }catch(error){
+    console.error("No se pudo mostrar el PDF dentro de la web:",error);
+    if(token !== documentRenderToken) return;
+    body.innerHTML = `
+      <div class="document-error">
+        <strong>No se ha podido mostrar este PDF dentro de la web.</strong>
+        <span>Puedes descargarlo, pero en iPhone se abrirá en el visor del sistema.</span>
+        <a class="document-error-link" href="${esc(url)}" download>Descargar PDF</a>
+      </div>`;
+  }
+}
+
 function openDocumentViewer(url,title){
   if(!url) return;
   const viewer = ensureDocumentViewer();
@@ -243,22 +319,30 @@ function openDocumentViewer(url,title){
   const heading = viewer.querySelector("#documentViewerTitle");
   const cleanUrl = String(url).split("?")[0].split("#")[0];
   const extension = cleanUrl.includes(".") ? cleanUrl.split(".").pop().toLowerCase() : "";
+  const token = ++documentRenderToken;
 
   heading.textContent = title || "Documento";
   external.href = url;
 
-  if(["jpg","jpeg","png","webp","gif","tif","tiff"].includes(extension)){
-    body.innerHTML = `<img class="document-viewer-image" src="${esc(url)}" alt="${esc(title || "Documento")}">`;
-  }else{
-    body.innerHTML = `<iframe class="document-viewer-frame" src="${esc(url)}" title="${esc(title || "Documento")}"></iframe>`;
-  }
-
   viewer.classList.add("open");
   viewer.setAttribute("aria-hidden","false");
   document.body.classList.add("document-viewer-open");
+
+  if(["jpg","jpeg","png","webp","gif","tif","tiff"].includes(extension)){
+    body.innerHTML = `<img class="document-viewer-image" src="${esc(url)}" alt="${esc(title || "Documento")}">`;
+  }else if(extension === "pdf"){
+    renderPdfInsideViewer(url,body,token);
+  }else{
+    body.innerHTML = `
+      <div class="document-error">
+        <strong>Este formato no puede mostrarse dentro de la web.</strong>
+        <a class="document-error-link" href="${esc(url)}" download>Descargar documento</a>
+      </div>`;
+  }
 }
 
 function closeDocumentViewer(){
+  documentRenderToken++;
   const viewer = document.getElementById("documentViewer");
   if(!viewer) return;
   viewer.classList.remove("open");
