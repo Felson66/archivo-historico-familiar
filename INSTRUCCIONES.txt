@@ -1,0 +1,20 @@
+ARCHIVO HISTÓRICO FAMILIAR — ACTUALIZACIÓN v3.3.0
+
+1. Haz una copia de seguridad del repositorio local.
+2. Sustituye estos tres archivos:
+   - admin.html
+   - css/admin.css
+   - js/admin.js
+3. No sustituyas data/personas.json: el gestor actualizará el archivo real cuando trabajes con él.
+4. Abre admin.html mediante la web local o publicada en Chrome/Edge.
+5. Prueba primero con una fotografía no importante.
+6. Revisa los cambios en GitHub Desktop antes de Commit y Push.
+
+Novedades:
+- listado de fotografías por persona;
+- edición de metadatos;
+- identificador propio F000001, F000002...;
+- cambio de principal;
+- eliminación de archivo y registro;
+- reordenación;
+- etiquetas.
