@@ -601,8 +601,20 @@
       "P0010"
     ],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0015/edu-de-la-dehesa-liz.jpg",
+    "fotografias": [
+      {
+        "src": "assets/fotos/P0015/edu-de-la-dehesa-liz.jpg",
+        "titulo": "Edu de la Dehesa Liz",
+        "fecha": "Agosto 2019",
+        "lugar": "Noja",
+        "descripcion": "Casa de Lourdes",
+        "personas": [
+          "P0015"
+        ],
+        "etiquetas": []
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
