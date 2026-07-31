@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#183c35">
   <title>Archivo Histórico Familiar</title>
-  <link rel="stylesheet" href="css/style-v3.5.8.css">
+  <link rel="stylesheet" href="css/style-v3.6.0.css">
 </head>
 <body>
 <div class="app">
@@ -61,11 +61,16 @@
         <h3>Árbol familiar</h3>
         <span>Vista provisional</span>
       </div>
-      <div class="toolbar">
-        <button class="soft" id="zoomOut">−</button>
-        <button class="soft" id="resetTree">Centrar</button>
-        <button class="soft" id="zoomIn">+</button>
+      <div class="toolbar tree-toolbar">
+        <label class="tree-person-picker">
+          <span>Centrar árbol en</span>
+          <select id="treePersonSelect" aria-label="Elegir persona central del árbol"></select>
+        </label>
+        <button class="soft" id="zoomOut" type="button">−</button>
+        <button class="soft" id="resetTree" type="button">Centrar</button>
+        <button class="soft" id="zoomIn" type="button">+</button>
       </div>
+      <div id="treeContext" class="tree-context" aria-live="polite"></div>
       <div class="tree-shell" id="treeShell">
         <div class="tree-stage" id="treeStage">
           <svg id="treeSvg" aria-hidden="true"></svg>
@@ -115,6 +120,6 @@
 </div>
 
 <div class="loading" id="loading">Cargando archivo…</div>
-<script src="js/app-v3.5.9.js"></script>
+<script src="js/app-v3.6.0.js"></script>
 </body>
 </html>
