@@ -212,6 +212,23 @@ function openDocumentViewer(documentId,personId){
 }
 function closeDocumentViewer(){const viewer=document.getElementById("documentViewer");if(!viewer)return;viewer.classList.remove("open");viewer.setAttribute("aria-hidden","true");document.body.classList.remove("document-viewer-open");currentDocumentPages=[];}
 
+function renderTimeline(person){
+  const entries = Array.isArray(person.cronologia) ? person.cronologia : [];
+  if(!entries.length) return `<div class="placeholder">Cronología pendiente de organizar.</div>`;
+
+  return `<div class="mini-timeline">${entries.map(entry => {
+    if(typeof entry === "string"){
+      return `<div class="timeline-item"><div>${esc(entry)}</div></div>`;
+    }
+    const date = entry.fecha || entry.anio || entry.año || entry.periodo || "";
+    const text = entry.texto || entry.descripcion || entry.titulo || entry.hecho || "";
+    return `<div class="timeline-item">
+      ${date ? `<div class="timeline-year">${esc(date)}</div>` : ""}
+      ${text ? `<div>${esc(text)}</div>` : ""}
+    </div>`;
+  }).join("")}</div>`;
+}
+
 function openPerson(id){
   const person = byId[id];
   if(!person) return;
