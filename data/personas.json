@@ -612,7 +612,8 @@
         "personas": [
           "P0015"
         ],
-        "etiquetas": []
+        "etiquetas": [],
+        "id": "F000001"
       }
     ],
     "documentos": [],
@@ -998,21 +999,49 @@
         "titulo": "Retrato en Bilbao",
         "descripcion": "Fotografía principal de la ficha.",
         "lugar": "Bilbao",
-        "fecha": "2026"
+        "fecha": "2026",
+        "id": "F000002",
+        "personas": [
+          "P0027"
+        ],
+        "etiquetas": []
       },
       {
         "src": "assets/fotos/P0027/esther-tren.jpg",
         "titulo": "En el tren",
         "descripcion": "Retrato durante un trayecto.",
-        "lugar": "",
-        "fecha": "2026"
+        "lugar": "Zaldibar",
+        "fecha": "2026",
+        "id": "F000003",
+        "personas": [
+          "P0027"
+        ],
+        "etiquetas": []
       },
       {
         "src": "assets/fotos/P0027/esther-casa.jpg",
         "titulo": "En casa",
         "descripcion": "Retrato de cuerpo entero en casa, con Homer al fondo.",
         "lugar": "Bilbao",
-        "fecha": "2026"
+        "fecha": "2026",
+        "id": "F000004",
+        "personas": [
+          "P0027"
+        ],
+        "etiquetas": []
+      },
+      {
+        "id": "F000005",
+        "src": "assets/fotos/P0027/esther-edu.jpeg",
+        "personas": [
+          "P0027",
+          "P0015"
+        ],
+        "titulo": "Esther Edu",
+        "fecha": "",
+        "lugar": "Bilbao",
+        "descripcion": "De potes - Casco Viejo",
+        "etiquetas": []
       }
     ],
     "documentos": [],
