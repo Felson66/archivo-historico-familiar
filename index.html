@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#183c35">
   <title>Archivo Histórico Familiar</title>
-  <link rel="stylesheet" href="css/style-v3.6.0.css">
+  <link rel="stylesheet" href="css/style-v3.7.0.css">
 </head>
 <body>
 <div class="app">
@@ -69,6 +69,7 @@
         <button class="soft" id="zoomOut" type="button">−</button>
         <button class="soft" id="resetTree" type="button">Centrar</button>
         <button class="soft" id="zoomIn" type="button">+</button>
+        <button class="soft tree-option active" id="toggleSiblings" type="button" aria-pressed="true">Hermanos</button>
       </div>
       <div id="treeContext" class="tree-context" aria-live="polite"></div>
       <div class="tree-shell" id="treeShell">
@@ -76,6 +77,11 @@
           <svg id="treeSvg" aria-hidden="true"></svg>
         </div>
         <div class="tree-hint">Arrastra para moverte · pellizca o usa los botones para ampliar</div>
+      </div>
+      <div class="tree-legend" aria-label="Leyenda del árbol">
+        <span><i class="legend-line couple"></i> Pareja</span>
+        <span><i class="legend-line family"></i> Parentesco</span>
+        <span><i class="legend-focus"></i> Persona central</span>
       </div>
     </section>
 
@@ -120,6 +126,6 @@
 </div>
 
 <div class="loading" id="loading">Cargando archivo…</div>
-<script src="js/app-v3.6.0.js"></script>
+<script src="js/app-v3.7.0.js"></script>
 </body>
 </html>
