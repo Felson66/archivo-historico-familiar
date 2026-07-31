@@ -278,8 +278,53 @@
       "P0006"
     ],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0007/boda-manuel-mercedes.jpg",
+    "fotografias": [
+      {
+        "id": "F000007",
+        "src": "assets/fotos/P0007/boda-manuel-mercedes.jpg",
+        "titulo": "Boda Manuel Mercedes",
+        "fecha": "",
+        "lugar": "Basílica de Begoña",
+        "descripcion": "Boda 02/04/1956",
+        "etiquetas": [],
+        "personas": [
+          "P0007",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000008",
+        "src": "assets/fotos/P0007/bodas-oro.jpeg",
+        "titulo": "Bodas Oro",
+        "fecha": "01/04/2006",
+        "lugar": "Dima",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0007",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000009",
+        "src": "assets/fotos/P0007/familia-de-la-dehesa-liz.jpg",
+        "titulo": "Familia de la Dehesa Liz",
+        "fecha": "Aprox 1973",
+        "lugar": "Bilbao",
+        "descripcion": "Familia completa",
+        "etiquetas": [],
+        "personas": [
+          "P0007",
+          "P0010",
+          "P0013",
+          "P0012",
+          "P0014",
+          "P0015",
+          "P0016"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
@@ -437,7 +482,39 @@
     ],
     "biografia": "",
     "fotografia_principal": "",
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000007",
+        "src": "assets/fotos/P0007/boda-manuel-mercedes.jpg",
+        "titulo": "Boda Manuel Mercedes",
+        "fecha": "",
+        "lugar": "Basílica de Begoña",
+        "descripcion": "Boda 02/04/1956",
+        "etiquetas": [],
+        "personas": [
+          "P0007",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000009",
+        "src": "assets/fotos/P0007/familia-de-la-dehesa-liz.jpg",
+        "titulo": "Familia de la Dehesa Liz",
+        "fecha": "Aprox 1973",
+        "lugar": "Bilbao",
+        "descripcion": "Familia completa",
+        "etiquetas": [],
+        "personas": [
+          "P0007",
+          "P0010",
+          "P0013",
+          "P0012",
+          "P0014",
+          "P0015",
+          "P0016"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
@@ -518,7 +595,26 @@
     ],
     "biografia": "",
     "fotografia_principal": "",
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000009",
+        "src": "assets/fotos/P0007/familia-de-la-dehesa-liz.jpg",
+        "titulo": "Familia de la Dehesa Liz",
+        "fecha": "Aprox 1973",
+        "lugar": "Bilbao",
+        "descripcion": "Familia completa",
+        "etiquetas": [],
+        "personas": [
+          "P0007",
+          "P0010",
+          "P0013",
+          "P0012",
+          "P0014",
+          "P0015",
+          "P0016"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
@@ -555,7 +651,39 @@
     ],
     "biografia": "",
     "fotografia_principal": "",
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000008",
+        "src": "assets/fotos/P0007/bodas-oro.jpeg",
+        "titulo": "Bodas Oro",
+        "fecha": "01/04/2006",
+        "lugar": "Dima",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0007",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000009",
+        "src": "assets/fotos/P0007/familia-de-la-dehesa-liz.jpg",
+        "titulo": "Familia de la Dehesa Liz",
+        "fecha": "Aprox 1973",
+        "lugar": "Bilbao",
+        "descripcion": "Familia completa",
+        "etiquetas": [],
+        "personas": [
+          "P0007",
+          "P0010",
+          "P0013",
+          "P0012",
+          "P0014",
+          "P0015",
+          "P0016"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
@@ -592,7 +720,26 @@
     ],
     "biografia": "",
     "fotografia_principal": "",
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000009",
+        "src": "assets/fotos/P0007/familia-de-la-dehesa-liz.jpg",
+        "titulo": "Familia de la Dehesa Liz",
+        "fecha": "Aprox 1973",
+        "lugar": "Bilbao",
+        "descripcion": "Familia completa",
+        "etiquetas": [],
+        "personas": [
+          "P0007",
+          "P0010",
+          "P0013",
+          "P0012",
+          "P0014",
+          "P0015",
+          "P0016"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
@@ -647,14 +794,32 @@
         "id": "F000005",
         "src": "assets/fotos/P0027/esther-edu.jpeg",
         "personas": [
-          "P0027",
-          "P0015"
+          "P0015",
+          "P0027"
         ],
         "titulo": "Esther Edu",
         "fecha": "",
         "lugar": "Bilbao",
         "descripcion": "De potes - Casco Viejo",
         "etiquetas": []
+      },
+      {
+        "id": "F000009",
+        "src": "assets/fotos/P0007/familia-de-la-dehesa-liz.jpg",
+        "titulo": "Familia de la Dehesa Liz",
+        "fecha": "Aprox 1973",
+        "lugar": "Bilbao",
+        "descripcion": "Familia completa",
+        "etiquetas": [],
+        "personas": [
+          "P0007",
+          "P0010",
+          "P0013",
+          "P0012",
+          "P0014",
+          "P0015",
+          "P0016"
+        ]
       }
     ],
     "documentos": [],
@@ -693,7 +858,26 @@
     ],
     "biografia": "",
     "fotografia_principal": "",
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000009",
+        "src": "assets/fotos/P0007/familia-de-la-dehesa-liz.jpg",
+        "titulo": "Familia de la Dehesa Liz",
+        "fecha": "Aprox 1973",
+        "lugar": "Bilbao",
+        "descripcion": "Familia completa",
+        "etiquetas": [],
+        "personas": [
+          "P0007",
+          "P0010",
+          "P0013",
+          "P0012",
+          "P0014",
+          "P0015",
+          "P0016"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
@@ -1075,8 +1259,8 @@
         "id": "F000005",
         "src": "assets/fotos/P0027/esther-edu.jpeg",
         "personas": [
-          "P0027",
-          "P0015"
+          "P0015",
+          "P0027"
         ],
         "titulo": "Esther Edu",
         "fecha": "",
