@@ -322,3 +322,76 @@ main{max-width:1280px;margin:auto;padding:20px}
 }
 
 .admin-link{display:inline-flex;padding:11px 14px;border-radius:12px;background:var(--soft);color:var(--green);font-weight:800;text-decoration:none}
+
+
+/* Documentos públicos — v3.4.1 */
+.document-list{
+  display:grid;
+  gap:10px;
+}
+.document-card{
+  display:flex;
+  align-items:flex-start;
+  gap:13px;
+  width:100%;
+  border:1px solid #d7dfda;
+  border-radius:14px;
+  padding:13px;
+  background:#fff;
+  color:var(--ink);
+  text-decoration:none;
+  box-shadow:0 3px 12px rgba(20,52,45,.05);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.document-card:hover{
+  transform:translateY(-1px);
+  border-color:#9fb9ae;
+  box-shadow:0 8px 20px rgba(20,52,45,.11);
+}
+.document-card:focus-visible{
+  outline:3px solid rgba(45,101,88,.22);
+  outline-offset:2px;
+}
+.document-icon{
+  width:42px;
+  height:42px;
+  border-radius:11px;
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
+  background:var(--soft);
+  font-size:21px;
+}
+.document-info{
+  min-width:0;
+  display:grid;
+  gap:4px;
+}
+.document-info strong{
+  color:var(--green2);
+  line-height:1.3;
+}
+.document-meta{
+  color:var(--muted);
+  font-size:12px;
+}
+.document-description{
+  color:#4e5e58;
+  font-size:13px;
+  line-height:1.4;
+}
+.document-open{
+  margin-top:3px;
+  color:var(--green);
+  font-size:12px;
+  font-weight:800;
+}
+.document-warning{
+  margin-top:3px;
+  color:#9a5a4b;
+  font-size:12px;
+  font-weight:800;
+}
+.document-unavailable{
+  opacity:.78;
+}

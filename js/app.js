@@ -139,6 +139,65 @@ function renderGallery(person){
     </div>`;
 }
 
+
+function documentPath(doc){
+  return doc.src || doc.archivo || doc.ruta || doc.url || doc.href || "";
+}
+
+function documentExtension(doc){
+  const path = documentPath(doc);
+  const explicit = doc.tipo_archivo || doc.extension || doc.formato || "";
+  const value = explicit || path.split("?")[0].split("#")[0].split(".").pop() || "";
+  return String(value).replace(/^\./,"").toUpperCase();
+}
+
+function documentIcon(doc){
+  const ext = documentExtension(doc);
+  if(ext === "PDF") return "📕";
+  if(["JPG","JPEG","PNG","WEBP","GIF","TIFF","TIF"].includes(ext)) return "🖼️";
+  return "📄";
+}
+
+function renderDocuments(person){
+  const docs = person.documentos || [];
+  if(!docs.length){
+    return `<div class="placeholder">Todavía no hay documentos asociados.</div>`;
+  }
+
+  return `<div class="document-list">${docs.map(doc => {
+    const title = doc.titulo || doc.nombre || "Documento";
+    const path = documentPath(doc);
+    const ext = documentExtension(doc);
+    const meta = [doc.fecha, ext].filter(Boolean).join(" · ");
+    const description = doc.descripcion || "";
+
+    if(!path){
+      return `
+        <article class="document-card document-unavailable">
+          <div class="document-icon" aria-hidden="true">${documentIcon(doc)}</div>
+          <div class="document-info">
+            <strong>${esc(title)}</strong>
+            ${meta ? `<span class="document-meta">${esc(meta)}</span>` : ""}
+            ${description ? `<span class="document-description">${esc(description)}</span>` : ""}
+            <span class="document-warning">Archivo no disponible</span>
+          </div>
+        </article>`;
+    }
+
+    return `
+      <a class="document-card" href="${esc(path)}" target="_blank" rel="noopener noreferrer"
+         aria-label="Abrir documento: ${esc(title)}">
+        <div class="document-icon" aria-hidden="true">${documentIcon(doc)}</div>
+        <div class="document-info">
+          <strong>${esc(title)}</strong>
+          ${meta ? `<span class="document-meta">${esc(meta)}</span>` : ""}
+          ${description ? `<span class="document-description">${esc(description)}</span>` : ""}
+          <span class="document-open">Abrir documento <span aria-hidden="true">→</span></span>
+        </div>
+      </a>`;
+  }).join("")}</div>`;
+}
+
 function renderTimeline(person){
   const events = person.cronologia || [];
   if(events.length){
@@ -186,9 +245,7 @@ function openPerson(id){
 
         <section class="profile-section">
           <h3>Documentos</h3>
-          ${(person.documentos || []).length
-            ? `<div class="relation-list">${person.documentos.map(doc => `<div class="relation-button">${esc(doc.titulo || doc.nombre || "Documento")}</div>`).join("")}</div>`
-            : `<div class="placeholder">Todavía no hay documentos asociados en esta versión.</div>`}
+          ${renderDocuments(person)}
         </section>
 
         <section class="profile-section">
