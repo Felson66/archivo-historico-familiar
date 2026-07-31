@@ -171,20 +171,19 @@ function renderDocuments(person){
 }
 
 function ensureDocumentViewer(){
-  let viewer=document.getElementById("documentViewer");
-  if(viewer) return viewer;
-  viewer=document.createElement("div"); viewer.id="documentViewer"; viewer.className="document-viewer"; viewer.setAttribute("aria-hidden","true");
-  viewer.innerHTML=`<div class="document-viewer-panel" role="dialog" aria-modal="true" aria-labelledby="documentViewerTitle">
-    <header class="document-viewer-header"><div><strong id="documentViewerTitle">Documento</strong><small id="documentViewerCounter"></small></div>
-      <button id="documentViewerClose" class="document-viewer-close" type="button" aria-label="Cerrar documento">×</button></header>
-    <div id="documentViewerBody" class="document-viewer-body"></div>
-    <footer class="document-viewer-footer"><button id="documentPrev" type="button">‹ Anterior</button><a id="documentDownload" href="#" download>Descargar original</a><button id="documentNext" type="button">Siguiente ›</button></footer>
-  </div>`;
-  document.body.appendChild(viewer);
-  viewer.querySelector("#documentViewerClose").onclick=closeDocumentViewer;
-  viewer.addEventListener("click",e=>{if(e.target===viewer)closeDocumentViewer()});
+  const viewer=document.getElementById("documentViewer");
+  if(!viewer) throw new Error("No se encuentra el visor de documentos");
+  if(!viewer.dataset.ready){
+    ["documentViewerClose","documentViewerCloseFloating","documentViewerCloseBottom"].forEach(id=>{
+      const button=document.getElementById(id);
+      if(button) button.addEventListener("click", closeDocumentViewer);
+    });
+    viewer.addEventListener("click",event=>{ if(event.target===viewer) closeDocumentViewer(); });
+    viewer.dataset.ready="1";
+  }
   return viewer;
 }
+
 let currentDocumentPages=[], currentDocumentPage=0;
 function showDocumentPage(){
   const viewer=ensureDocumentViewer(), body=viewer.querySelector("#documentViewerBody"), counter=viewer.querySelector("#documentViewerCounter");
@@ -198,6 +197,9 @@ function openDocumentViewer(documentId,personId){
   const person=byId[personId], doc=(person?.documentos||[]).find(d=>d.id===documentId); if(!doc)return;
   const viewer=ensureDocumentViewer();
   viewer.querySelector("#documentViewerTitle").textContent=doc.titulo||doc.nombre_archivo||"Documento";
+  const description=viewer.querySelector("#documentViewerDescription");
+  description.textContent=doc.descripcion||doc.fecha||"";
+  description.hidden=!description.textContent;
   viewer.querySelector("#documentDownload").href=documentPath(doc);
   currentDocumentPages=Array.isArray(doc.paginas)?doc.paginas:[]; currentDocumentPage=0;
   viewer.querySelector("#documentPrev").onclick=()=>{if(currentDocumentPage>0){currentDocumentPage--;showDocumentPage()}};
