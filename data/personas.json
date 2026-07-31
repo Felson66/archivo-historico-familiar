@@ -196,7 +196,20 @@
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000002",
+        "src": "assets/documentos/P0005/gazeta-republica.pdf",
+        "nombre_archivo": "gazeta-republica.pdf",
+        "formato": "application/pdf",
+        "titulo": "Gazeta Republica",
+        "fecha": "",
+        "descripcion": "Ascenso a Cabo",
+        "personas": [
+          "P0005"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []
@@ -325,7 +338,20 @@
         ]
       }
     ],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000001",
+        "src": "assets/documentos/P0007/acta-nacimiento-manuel-de-la-dehesa-mugica.pdf",
+        "nombre_archivo": "acta-nacimiento-manuel-de-la-dehesa-mugica.pdf",
+        "formato": "application/pdf",
+        "titulo": "Acta Nacimiento Manuel de la Dehesa Mugica",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0007"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []

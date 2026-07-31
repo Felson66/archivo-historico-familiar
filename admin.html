@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#183c35">
   <title>Administración · Archivo Histórico Familiar</title>
-  <link rel="stylesheet" href="css/admin.css?v=3.3.1.1">
+  <link rel="stylesheet" href="css/admin.css?v=3.4.0">
 </head>
 <body>
   <header class="admin-topbar">
     <a href="index.html" class="back">← Volver al archivo</a>
     <div>
       <h1>Centro de Administración</h1>
-      <p>Gestor de fotografías · v3.3.1.1</p>
+      <p>Fotografías y documentos · v3.4.0</p>
     </div>
   </header>
 
   <main class="admin-shell">
     <section class="intro-card">
       <div>
-        <span class="eyebrow">Gestión fotográfica</span>
-        <h2>Añadir y mantener fotografías sin editar JSON</h2>
-        <p>Conecta la carpeta local del repositorio. Después podrás añadir, editar, compartir entre varias personas, ordenar, marcar como principal y eliminar fotografías.</p>
+        <span class="eyebrow">Archivo histórico familiar</span>
+        <h2>Conservar fotografías y documentos sin editar JSON</h2>
+        <p>Conecta la carpeta local del repositorio. Después podrás incorporar, editar, relacionar con varias personas, ordenar y eliminar fotografías o documentos.</p>
       </div>
       <button id="connectFolder" class="primary">Seleccionar carpeta del archivo</button>
       <p id="folderStatus" class="status">Todavía no se ha seleccionado ninguna carpeta.</p>
@@ -35,86 +35,87 @@
             <option value="">Selecciona una persona…</option>
           </select>
         </label>
-        <button id="newPhoto" class="primary" disabled>+ Añadir fotografía</button>
+        <div class="manager-buttons">
+          <button id="newPhoto" class="primary" disabled>+ Añadir fotografía</button>
+          <button id="newDocument" class="primary" disabled>+ Archivar documento</button>
+        </div>
       </div>
 
       <div id="personSummary" class="person-summary hidden"></div>
-      <div id="galleryEmpty" class="empty-state hidden">Selecciona una persona para gestionar sus fotografías.</div>
+
+      <div class="content-tabs" role="tablist" aria-label="Contenido de la persona">
+        <button id="photosTab" class="content-tab active" data-tab="photos" role="tab" aria-selected="true">📷 Fotografías <span id="photosCount">0</span></button>
+        <button id="documentsTab" class="content-tab" data-tab="documents" role="tab" aria-selected="false">📄 Documentos <span id="documentsCount">0</span></button>
+      </div>
+
+      <div id="galleryEmpty" class="empty-state hidden">Selecciona una persona para gestionar su archivo.</div>
       <div id="photoGallery" class="photo-gallery"></div>
+      <div id="documentGallery" class="document-gallery hidden"></div>
       <div id="managerResult" class="result hidden"></div>
     </section>
 
-    <section id="editor" class="editor-card hidden" aria-hidden="true">
+    <section id="photoEditor" class="editor-card hidden" aria-hidden="true">
       <div class="editor-title-row">
-        <div>
-          <span id="editorEyebrow" class="eyebrow">Nueva fotografía</span>
-          <h2 id="editorTitle">Añadir fotografía</h2>
-        </div>
-        <button id="closeEditor" class="icon-button" aria-label="Cerrar formulario">×</button>
+        <div><span id="photoEditorEyebrow" class="eyebrow">Nueva fotografía</span><h2 id="photoEditorTitle">Añadir fotografía</h2></div>
+        <button id="closePhotoEditor" class="icon-button" aria-label="Cerrar formulario">×</button>
       </div>
-
-      <label id="filePickerLabel" class="file-picker">
+      <label id="photoFilePickerLabel" class="file-picker">
         <input id="photoInput" type="file" accept="image/jpeg,image/png,image/webp">
-        <span>Seleccionar imagen</span>
-        <small>JPG, PNG o WEBP</small>
+        <span>Seleccionar imagen</span><small>JPG, PNG o WEBP</small>
       </label>
-
-      <div id="previewWrap" class="preview-wrap hidden">
-        <img id="preview" alt="Vista previa">
-      </div>
-
+      <div id="photoPreviewWrap" class="preview-wrap hidden"><img id="photoPreview" alt="Vista previa"></div>
       <div class="form-grid">
-        <label>
-          Identificador
-          <input id="photoIdInput" type="text" readonly>
-        </label>
-        <label>
-          Título
-          <input id="titleInput" type="text" placeholder="Ej. Paseo por Trengandín">
-        </label>
-        <label>
-          Fecha
-          <input id="dateInput" type="text" placeholder="Ej. Agosto de 2025">
-        </label>
-        <label>
-          Lugar
-          <input id="placeInput" type="text" placeholder="Ej. Noja">
-        </label>
-        <label class="wide">
-          Descripción
-          <textarea id="descriptionInput" rows="4" placeholder="Explica brevemente el contexto de la fotografía."></textarea>
-        </label>
-        <label class="wide">
-          Etiquetas
-          <input id="tagsInput" type="text" placeholder="Ej. retrato, viaje, Navidad">
-          <small>Separadas por comas.</small>
-        </label>
+        <label>Identificador<input id="photoIdInput" type="text" readonly></label>
+        <label>Título<input id="photoTitleInput" type="text" placeholder="Ej. Paseo por Trengandín"></label>
+        <label>Fecha<input id="photoDateInput" type="text" placeholder="Ej. Agosto de 2025"></label>
+        <label>Lugar<input id="photoPlaceInput" type="text" placeholder="Ej. Noja"></label>
+        <label class="wide">Descripción<textarea id="photoDescriptionInput" rows="4" placeholder="Explica brevemente el contexto de la fotografía."></textarea></label>
+        <label class="wide">Etiquetas<input id="photoTagsInput" type="text" placeholder="Ej. retrato, viaje, Navidad"><small>Separadas por comas.</small></label>
         <fieldset class="wide people-fieldset">
           <legend>Personas que aparecen</legend>
-          <p class="field-help">La fotografía aparecerá en la ficha de todas las personas marcadas, sin duplicar el archivo de imagen.</p>
-          <input id="peopleSearch" type="search" placeholder="Buscar persona…" autocomplete="off">
-          <div id="peopleChecklist" class="people-checklist"></div>
+          <p class="field-help">La fotografía aparecerá en la ficha de todas las personas marcadas, sin duplicar el archivo.</p>
+          <input id="photoPeopleSearch" type="search" placeholder="Buscar persona…" autocomplete="off">
+          <div id="photoPeopleChecklist" class="people-checklist"></div>
         </fieldset>
-        <label class="checkbox wide">
-          <input id="principalInput" type="checkbox">
-          <span>Usar como fotografía principal de la persona</span>
-        </label>
+        <label class="checkbox wide"><input id="principalInput" type="checkbox"><span>Usar como fotografía principal de la persona seleccionada</span></label>
       </div>
+      <div class="actions"><button id="savePhoto" class="primary" disabled>Guardar fotografía</button><button id="cancelPhotoEdit" class="secondary">Cancelar</button></div>
+      <div id="photoEditorResult" class="result hidden"></div>
+    </section>
 
-      <div class="actions">
-        <button id="savePhoto" class="primary" disabled>Guardar fotografía</button>
-        <button id="cancelEdit" class="secondary">Cancelar</button>
+    <section id="documentEditor" class="editor-card hidden" aria-hidden="true">
+      <div class="editor-title-row">
+        <div><span id="documentEditorEyebrow" class="eyebrow">Nuevo documento</span><h2 id="documentEditorTitle">Archivar documento</h2></div>
+        <button id="closeDocumentEditor" class="icon-button" aria-label="Cerrar formulario">×</button>
       </div>
-      <div id="editorResult" class="result hidden"></div>
+      <label id="documentFilePickerLabel" class="file-picker">
+        <input id="documentInput" type="file" accept="application/pdf,image/jpeg,image/png,image/webp">
+        <span>Seleccionar documento</span><small>PDF, JPG, PNG o WEBP</small>
+      </label>
+      <div id="documentPreviewWrap" class="document-preview hidden"></div>
+      <div class="form-grid">
+        <label>Identificador<input id="documentIdInput" type="text" readonly></label>
+        <label>Título<input id="documentTitleInput" type="text" placeholder="Ej. Escritura de la vivienda de Noja"></label>
+        <label>Fecha<input id="documentDateInput" type="text" placeholder="Ej. 12 de mayo de 2001"></label>
+        <label class="wide">Descripción<textarea id="documentDescriptionInput" rows="4" placeholder="Información adicional o contexto del documento."></textarea></label>
+        <fieldset class="wide people-fieldset">
+          <legend>Personas relacionadas</legend>
+          <p class="field-help">El documento aparecerá en la ficha de todas las personas marcadas, sin duplicar el archivo.</p>
+          <input id="documentPeopleSearch" type="search" placeholder="Buscar persona…" autocomplete="off">
+          <div id="documentPeopleChecklist" class="people-checklist"></div>
+        </fieldset>
+      </div>
+      <div class="actions"><button id="saveDocument" class="primary" disabled>Archivar documento</button><button id="cancelDocumentEdit" class="secondary">Cancelar</button></div>
+      <div id="documentEditorResult" class="result hidden"></div>
     </section>
 
     <section class="help-card">
       <h3>Después de guardar</h3>
-      <p>Abre GitHub Desktop. Verás los cambios en las imágenes y en <code>data/personas.json</code>. Haz <strong>Commit</strong> y después <strong>Push origin</strong>.</p>
-      <p class="note">La eliminación borra tanto el registro como el archivo de imagen. Antes de hacerlo se pide confirmación.</p>
+      <p>Abre GitHub Desktop. Verás los archivos nuevos y los cambios en <code>data/personas.json</code>. Haz <strong>Commit</strong> y después <strong>Push origin</strong>.</p>
+      <p class="note">Los documentos se guardan en <code>assets/documentos/&lt;ID&gt;/</code>. Al eliminar uno, se borra de todas las personas relacionadas y también se elimina el archivo físico.</p>
     </section>
   </main>
 
-  <script src="js/admin.js?v=3.3.1.1"></script>
+  <script src="js/admin.js?v=3.4.0"></script>
 </body>
 </html>

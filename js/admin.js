@@ -1,182 +1,129 @@
-let rootHandle = null;
-let people = [];
-let selectedFile = null;
-let editingIndex = null;
-let previewUrl = null;
-let editingPhotoId = null;
-let selectedPeople = new Set();
+let rootHandle=null;
+let people=[];
+let activeTab="photos";
+let photoFile=null,photoPreviewUrl=null,editingPhotoId=null;
+let documentFile=null,documentPreviewUrl=null,editingDocumentId=null;
+let photoSelectedPeople=new Set(),documentSelectedPeople=new Set();
 
-const $ = (id) => document.getElementById(id);
-const connectFolder = $("connectFolder");
-const folderStatus = $("folderStatus");
-const manager = $("manager");
-const personSelect = $("personSelect");
-const newPhoto = $("newPhoto");
-const personSummary = $("personSummary");
-const galleryEmpty = $("galleryEmpty");
-const photoGallery = $("photoGallery");
-const managerResult = $("managerResult");
-const editor = $("editor");
-const editorEyebrow = $("editorEyebrow");
-const editorTitle = $("editorTitle");
-const closeEditor = $("closeEditor");
-const cancelEdit = $("cancelEdit");
-const filePickerLabel = $("filePickerLabel");
-const photoInput = $("photoInput");
-const previewWrap = $("previewWrap");
-const preview = $("preview");
-const photoIdInput = $("photoIdInput");
-const titleInput = $("titleInput");
-const dateInput = $("dateInput");
-const placeInput = $("placeInput");
-const descriptionInput = $("descriptionInput");
-const tagsInput = $("tagsInput");
-const peopleSearch = $("peopleSearch");
-const peopleChecklist = $("peopleChecklist");
-const principalInput = $("principalInput");
-const savePhoto = $("savePhoto");
-const editorResult = $("editorResult");
+const $=id=>document.getElementById(id);
+const connectFolder=$("connectFolder"),folderStatus=$("folderStatus"),manager=$("manager"),personSelect=$("personSelect");
+const newPhoto=$("newPhoto"),newDocument=$("newDocument"),personSummary=$("personSummary"),photosCount=$("photosCount"),documentsCount=$("documentsCount");
+const photosTab=$("photosTab"),documentsTab=$("documentsTab"),galleryEmpty=$("galleryEmpty"),photoGallery=$("photoGallery"),documentGallery=$("documentGallery"),managerResult=$("managerResult");
+const photoEditor=$("photoEditor"),photoEditorEyebrow=$("photoEditorEyebrow"),photoEditorTitle=$("photoEditorTitle"),closePhotoEditor=$("closePhotoEditor"),cancelPhotoEdit=$("cancelPhotoEdit"),photoFilePickerLabel=$("photoFilePickerLabel"),photoInput=$("photoInput"),photoPreviewWrap=$("photoPreviewWrap"),photoPreview=$("photoPreview"),photoIdInput=$("photoIdInput"),photoTitleInput=$("photoTitleInput"),photoDateInput=$("photoDateInput"),photoPlaceInput=$("photoPlaceInput"),photoDescriptionInput=$("photoDescriptionInput"),photoTagsInput=$("photoTagsInput"),photoPeopleSearch=$("photoPeopleSearch"),photoPeopleChecklist=$("photoPeopleChecklist"),principalInput=$("principalInput"),savePhoto=$("savePhoto"),photoEditorResult=$("photoEditorResult");
+const documentEditor=$("documentEditor"),documentEditorEyebrow=$("documentEditorEyebrow"),documentEditorTitle=$("documentEditorTitle"),closeDocumentEditor=$("closeDocumentEditor"),cancelDocumentEdit=$("cancelDocumentEdit"),documentFilePickerLabel=$("documentFilePickerLabel"),documentInput=$("documentInput"),documentPreviewWrap=$("documentPreviewWrap"),documentIdInput=$("documentIdInput"),documentTitleInput=$("documentTitleInput"),documentDateInput=$("documentDateInput"),documentDescriptionInput=$("documentDescriptionInput"),documentPeopleSearch=$("documentPeopleSearch"),documentPeopleChecklist=$("documentPeopleChecklist"),saveDocument=$("saveDocument"),documentEditorResult=$("documentEditorResult");
 
-function escapeHtml(value=""){
-  return String(value).replace(/[&<>'"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"})[char]);
-}
+function escapeHtml(value=""){return String(value).replace(/[&<>'"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"})[c])}
 function showResult(box,message,error=false){box.innerHTML=message;box.classList.remove("hidden","error");if(error)box.classList.add("error")}
 function hideResult(box){box.classList.add("hidden");box.classList.remove("error")}
 function currentPerson(){return people.find(p=>p.id===personSelect.value)||null}
 function currentPhotos(){const p=currentPerson();return p&&Array.isArray(p.fotografias)?p.fotografias:[]}
-function setManagerEnabled(enabled){manager.classList.toggle("is-disabled",!enabled);manager.setAttribute("aria-disabled",String(!enabled));personSelect.disabled=!enabled;newPhoto.disabled=!enabled||!personSelect.value}
-function revokePreview(){if(previewUrl){URL.revokeObjectURL(previewUrl);previewUrl=null}}
-function setPreview(src){if(src){preview.src=src;previewWrap.classList.remove("hidden")}else{preview.removeAttribute("src");previewWrap.classList.add("hidden")}}
-function sanitizeFilename(name){const dot=name.lastIndexOf(".");const ext=dot>=0?name.slice(dot).toLowerCase():".jpg";const base=(dot>=0?name.slice(0,dot):name).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,60)||"fotografia";return{base,ext}}
-async function getPersonasFile(){const dataDir=await rootHandle.getDirectoryHandle("data");return dataDir.getFileHandle("personas.json")}
+function currentDocuments(){const p=currentPerson();return p&&Array.isArray(p.documentos)?p.documentos:[]}
+function setManagerEnabled(enabled){manager.classList.toggle("is-disabled",!enabled);manager.setAttribute("aria-disabled",String(!enabled));personSelect.disabled=!enabled;updateToolbarButtons()}
+function updateToolbarButtons(){const enabled=Boolean(rootHandle&&currentPerson());newPhoto.disabled=!enabled;newDocument.disabled=!enabled}
+function revokeUrl(kind){if(kind==="photo"&&photoPreviewUrl){URL.revokeObjectURL(photoPreviewUrl);photoPreviewUrl=null}if(kind==="document"&&documentPreviewUrl){URL.revokeObjectURL(documentPreviewUrl);documentPreviewUrl=null}}
+function sanitizeFilename(name,fallback="archivo"){const dot=name.lastIndexOf(".");const ext=dot>=0?name.slice(dot).toLowerCase():"";const base=(dot>=0?name.slice(0,dot):name).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,70)||fallback;return{base,ext}}
+function titleFromFilename(name){const clean=name.replace(/\.[^.]+$/,"").replace(/[-_]+/g," ").replace(/\s+/g," ").trim();return clean?clean.charAt(0).toUpperCase()+clean.slice(1):""}
+async function getPersonasFile(){const data=await rootHandle.getDirectoryHandle("data");return data.getFileHandle("personas.json")}
 async function readPeople(){const handle=await getPersonasFile();const parsed=JSON.parse(await(await handle.getFile()).text());if(!Array.isArray(parsed))throw new Error("El archivo personas.json no contiene una lista válida.");return parsed}
 async function writePeople(){const handle=await getPersonasFile();const writable=await handle.createWritable();await writable.write(JSON.stringify(people,null,2)+"\n");await writable.close()}
-async function ensurePhotoDirectory(personId){const assets=await rootHandle.getDirectoryHandle("assets");const fotos=await assets.getDirectoryHandle("fotos",{create:true});return fotos.getDirectoryHandle(personId,{create:true})}
-async function uniqueFilename(dirHandle,originalName){const{base,ext}=sanitizeFilename(originalName);let candidate=`${base}${ext}`,n=2;while(true){try{await dirHandle.getFileHandle(candidate);candidate=`${base}-${n}${ext}`;n++}catch(err){if(err.name==="NotFoundError")return candidate;throw err}}}
-function nextPhotoId(){let max=0;for(const person of people){for(const photo of(person.fotografias||[])){const match=String(photo.id||"").match(/^F(\d+)$/);if(match)max=Math.max(max,Number(match[1]))}}return `F${String(max+1).padStart(6,"0")}`}
-function ensurePhotoIds(){
+async function ensureAssetDirectory(type,personId){const assets=await rootHandle.getDirectoryHandle("assets");const group=await assets.getDirectoryHandle(type,{create:true});return group.getDirectoryHandle(personId,{create:true})}
+async function uniqueFilename(dir,original,fallback){const{base,ext}=sanitizeFilename(original,fallback);let candidate=base+ext,n=2;while(true){try{await dir.getFileHandle(candidate);candidate=`${base}-${n}${ext}`;n++}catch(err){if(err.name==="NotFoundError")return candidate;throw err}}}
+async function getFileFromPath(path){const parts=String(path||"").split("/").filter(Boolean);let dir=rootHandle;for(let i=0;i<parts.length-1;i++)dir=await dir.getDirectoryHandle(parts[i]);return(await dir.getFileHandle(parts.at(-1))).getFile()}
+async function deleteFileFromPath(path){const parts=String(path||"").split("/").filter(Boolean);let dir=rootHandle;for(let i=0;i<parts.length-1;i++)dir=await dir.getDirectoryHandle(parts[i]);await dir.removeEntry(parts.at(-1))}
+async function writeFile(dir,name,file){const handle=await dir.getFileHandle(name,{create:true});const writable=await handle.createWritable();await writable.write(file);await writable.close()}
+function nextId(prefix,field){let max=0;for(const person of people)for(const item of(person[field]||[])){const m=String(item.id||"").match(new RegExp(`^${prefix}(\\d+)$`));if(m)max=Math.max(max,Number(m[1]))}return `${prefix}${String(max+1).padStart(6,"0")}`}
+function nextPhotoId(){return nextId("F","fotografias")}
+function nextDocumentId(){return nextId("D","documentos")}
+
+function ensureData(){
+  normalizeShared("fotografias","F",["etiquetas"]);
+  normalizeShared("documentos","D",[]);
+}
+function normalizeShared(field,prefix,arrayFields){
   const bySrc=new Map();
   for(const person of people){
-    if(!Array.isArray(person.fotografias))person.fotografias=[];
-    for(const photo of person.fotografias){
-      if(!photo.id){photo.id=bySrc.get(photo.src)||nextPhotoId()}
-      if(photo.src)bySrc.set(photo.src,photo.id);
-      if(!Array.isArray(photo.personas))photo.personas=[person.id];
-      if(!photo.personas.includes(person.id))photo.personas.push(person.id);
-      if(!Array.isArray(photo.etiquetas))photo.etiquetas=[];
+    if(!Array.isArray(person[field]))person[field]=[];
+    for(const item of person[field]){
+      if(!item.id)item.id=bySrc.get(item.src)||nextId(prefix,field);
+      if(item.src)bySrc.set(item.src,item.id);
+      if(!Array.isArray(item.personas))item.personas=[person.id];
+      if(!item.personas.includes(person.id))item.personas.push(person.id);
+      for(const key of arrayFields)if(!Array.isArray(item[key]))item[key]=[];
     }
   }
-  // Unifica la lista de personas de todas las copias que comparten ID.
   const linked=new Map();
-  for(const person of people)for(const photo of(person.fotografias||[])){
-    if(!linked.has(photo.id))linked.set(photo.id,new Set());
-    linked.get(photo.id).add(person.id);
-    for(const id of(photo.personas||[]))linked.get(photo.id).add(id);
+  for(const person of people)for(const item of(person[field]||[])){
+    if(!linked.has(item.id))linked.set(item.id,new Set());
+    linked.get(item.id).add(person.id);for(const id of(item.personas||[]))linked.get(item.id).add(id);
   }
-  for(const person of people)for(const photo of(person.fotografias||[]))photo.personas=[...(linked.get(photo.id)||new Set([person.id]))];
+  for(const person of people)for(const item of(person[field]||[]))item.personas=[...(linked.get(item.id)||new Set([person.id]))];
 }
-function populatePeople(){personSelect.innerHTML=`<option value="">Selecciona una persona…</option>`+[...people].sort((a,b)=>a.nombre.localeCompare(b.nombre,"es")).map(p=>`<option value="${escapeHtml(p.id)}">${escapeHtml(p.nombre)} · ${escapeHtml(p.id)}</option>`).join("")}
-async function getFileFromPath(path){const parts=path.split("/").filter(Boolean);let dir=rootHandle;for(let i=0;i<parts.length-1;i++)dir=await dir.getDirectoryHandle(parts[i]);return(await dir.getFileHandle(parts.at(-1))).getFile()}
-async function deleteFileFromPath(path){const parts=path.split("/").filter(Boolean);let dir=rootHandle;for(let i=0;i<parts.length-1;i++)dir=await dir.getDirectoryHandle(parts[i]);await dir.removeEntry(parts.at(-1))}
-async function loadCardImage(img,path){try{const file=await getFileFromPath(path);const url=URL.createObjectURL(file);img.src=url;img.onload=()=>URL.revokeObjectURL(url)}catch{img.replaceWith(Object.assign(document.createElement("span"),{textContent:"Imagen no encontrada"}))}}
-function photoCopies(photoId){const copies=[];for(const person of people){const index=(person.fotografias||[]).findIndex(photo=>photo.id===photoId);if(index>=0)copies.push({person,index,photo:person.fotografias[index]})}return copies}
-function canonicalPhoto(photoId){return photoCopies(photoId)[0]?.photo||null}
-function selectedPersonIds(){return [...selectedPeople]}
-function renderPeopleChecklist(selectedIds=null){
-  if(selectedIds!==null)selectedPeople=new Set(selectedIds);
-  const query=peopleSearch.value.trim().toLocaleLowerCase("es");
-  const selected=selectedPeople;
-  const sorted=[...people].sort((a,b)=>a.nombre.localeCompare(b.nombre,"es"));
-  const visible=sorted.filter(person=>!query||person.nombre.toLocaleLowerCase("es").includes(query)||person.id.toLowerCase().includes(query));
-  peopleChecklist.innerHTML=visible.length?visible.map(person=>`<label class="person-check"><input type="checkbox" value="${escapeHtml(person.id)}" ${selected.has(person.id)?"checked":""}><span>${escapeHtml(person.nombre)}<small>${escapeHtml(person.id)}</small></span></label>`).join(""):'<div class="people-empty">No se han encontrado personas.</div>';
+function populatePeople(){personSelect.innerHTML='<option value="">Selecciona una persona…</option>'+[...people].sort((a,b)=>a.nombre.localeCompare(b.nombre,"es")).map(p=>`<option value="${escapeHtml(p.id)}">${escapeHtml(p.nombre)} · ${escapeHtml(p.id)}</option>`).join("")}
+function copies(field,id){const result=[];for(const person of people){const index=(person[field]||[]).findIndex(x=>x.id===id);if(index>=0)result.push({person,index,item:person[field][index]})}return result}
+function canonical(field,id){return copies(field,id)[0]?.item||null}
+function syncAssociations(field,itemData,personIds){const wanted=new Set(personIds);for(const person of people){if(!Array.isArray(person[field]))person[field]=[];const index=person[field].findIndex(x=>x.id===itemData.id);if(wanted.has(person.id)){const copy={...itemData,personas:[...wanted]};if(Array.isArray(itemData.etiquetas))copy.etiquetas=[...itemData.etiquetas];if(index>=0)person[field][index]=copy;else person[field].push(copy)}else if(index>=0){person[field].splice(index,1);if(field==="fotografias"&&person.fotografia_principal===itemData.src)person.fotografia_principal=person.fotografias[0]?.src||""}}}
+
+function renderChecklist(kind,selectedIds=null){
+  const search=kind==="photo"?photoPeopleSearch:documentPeopleSearch;
+  const box=kind==="photo"?photoPeopleChecklist:documentPeopleChecklist;
+  if(selectedIds!==null){if(kind==="photo")photoSelectedPeople=new Set(selectedIds);else documentSelectedPeople=new Set(selectedIds)}
+  const selected=kind==="photo"?photoSelectedPeople:documentSelectedPeople;
+  const q=search.value.trim().toLocaleLowerCase("es");
+  const visible=[...people].sort((a,b)=>a.nombre.localeCompare(b.nombre,"es")).filter(p=>!q||p.nombre.toLocaleLowerCase("es").includes(q)||p.id.toLowerCase().includes(q));
+  box.innerHTML=visible.length?visible.map(p=>`<label class="person-check"><input type="checkbox" value="${escapeHtml(p.id)}" ${selected.has(p.id)?"checked":""}><span>${escapeHtml(p.nombre)}<small>${escapeHtml(p.id)}</small></span></label>`).join(""):'<div class="people-empty">No se han encontrado personas.</div>';
 }
-async function renderGallery(){
-  hideResult(managerResult);photoGallery.innerHTML="";const person=currentPerson();newPhoto.disabled=!rootHandle||!person;
-  if(!person){personSummary.classList.add("hidden");galleryEmpty.textContent="Selecciona una persona para gestionar sus fotografías.";galleryEmpty.classList.remove("hidden");return}
-  const photos=currentPhotos();personSummary.innerHTML=`<div><h3>${escapeHtml(person.nombre)}</h3><p>${escapeHtml(person.id)} · ${photos.length} fotografía${photos.length===1?"":"s"}</p></div>`;personSummary.classList.remove("hidden");
-  if(!photos.length){galleryEmpty.textContent="Esta persona todavía no tiene fotografías.";galleryEmpty.classList.remove("hidden");return}
-  galleryEmpty.classList.add("hidden");
-  photos.forEach((photo,index)=>{
-    const principal=person.fotografia_principal===photo.src;
-    const linkedCount=new Set(photo.personas||[person.id]).size;
-    const card=document.createElement("article");card.className="photo-card";
-    card.innerHTML=`<div class="photo-thumb"><img alt="${escapeHtml(photo.titulo||"Fotografía")}"></div><div class="photo-body">${principal?'<span class="principal-badge">★ Principal</span>':""}${linkedCount>1?`<span class="shared-badge">👥 ${linkedCount} personas</span>`:""}<span class="photo-id">${escapeHtml(photo.id||"")}</span><h4>${escapeHtml(photo.titulo||"Sin título")}</h4><p class="photo-meta">${escapeHtml([photo.fecha,photo.lugar].filter(Boolean).join(" · ")||"Sin fecha ni lugar")}</p><div class="card-actions"><button class="small-button" data-action="edit" data-index="${index}">Editar</button>${principal?"":`<button class="small-button" data-action="principal" data-index="${index}">Principal</button>`}<button class="small-button danger" data-action="delete" data-index="${index}">Eliminar</button><span class="order-actions"><button class="small-button" data-action="up" data-index="${index}" ${index===0?"disabled":""}>↑</button><button class="small-button" data-action="down" data-index="${index}" ${index===photos.length-1?"disabled":""}>↓</button></span></div></div>`;
-    photoGallery.appendChild(card);loadCardImage(card.querySelector("img"),photo.src)
-  })
-}
-function resetEditor(){editingIndex=null;editingPhotoId=null;selectedFile=null;photoInput.value="";photoIdInput.value=nextPhotoId();titleInput.value="";dateInput.value="";placeInput.value="";descriptionInput.value="";tagsInput.value="";peopleSearch.value="";renderPeopleChecklist(currentPerson()?[currentPerson().id]:[]);principalInput.checked=false;filePickerLabel.classList.remove("hidden");setPreview("");hideResult(editorResult);updateSaveState()}
-function openNewEditor(){resetEditor();editorEyebrow.textContent="Nueva fotografía";editorTitle.textContent="Añadir fotografía";editor.classList.remove("hidden");editor.setAttribute("aria-hidden","false");editor.scrollIntoView({behavior:"smooth",block:"start"})}
-async function openEditEditor(index){
-  const person=currentPerson(),photo=currentPhotos()[index];if(!person||!photo)return;
-  resetEditor();editingIndex=index;editingPhotoId=photo.id;editorEyebrow.textContent="Editar fotografía";editorTitle.textContent=photo.titulo||"Fotografía";photoIdInput.value=photo.id||nextPhotoId();titleInput.value=photo.titulo||"";dateInput.value=photo.fecha||"";placeInput.value=photo.lugar||"";descriptionInput.value=photo.descripcion||"";tagsInput.value=(photo.etiquetas||[]).join(", ");peopleSearch.value="";renderPeopleChecklist(photo.personas||[person.id]);principalInput.checked=person.fotografia_principal===photo.src;filePickerLabel.classList.add("hidden");
-  try{const file=await getFileFromPath(photo.src);revokePreview();previewUrl=URL.createObjectURL(file);setPreview(previewUrl)}catch{setPreview("");showResult(editorResult,"La imagen física no se ha encontrado, pero puedes editar sus datos.",true)}
-  editor.classList.remove("hidden");editor.setAttribute("aria-hidden","false");updateSaveState();editor.scrollIntoView({behavior:"smooth",block:"start"})
-}
-function closeEditorPanel(){revokePreview();editor.classList.add("hidden");editor.setAttribute("aria-hidden","true");resetEditor()}
-function updateSaveState(){savePhoto.disabled=!(rootHandle&&currentPerson()&&titleInput.value.trim()&&(editingIndex!==null||selectedFile)&&selectedPersonIds().length)}
-function syncPhotoAssociations(photoData,personIds){
-  const wanted=new Set(personIds);
-  for(const person of people){
-    if(!Array.isArray(person.fotografias))person.fotografias=[];
-    const index=person.fotografias.findIndex(photo=>photo.id===photoData.id);
-    if(wanted.has(person.id)){
-      const copy={...photoData,personas:[...wanted],etiquetas:[...(photoData.etiquetas||[])]};
-      if(index>=0)person.fotografias[index]=copy;else person.fotografias.push(copy);
-    }else if(index>=0){
-      person.fotografias.splice(index,1);
-      if(person.fotografia_principal===photoData.src)person.fotografia_principal=person.fotografias[0]?.src||"";
-    }
+function selectFromChecklist(kind,event){const input=event.target.closest('input[type="checkbox"]');if(!input)return;const selected=kind==="photo"?photoSelectedPeople:documentSelectedPeople;if(input.checked)selected.add(input.value);else selected.delete(input.value);updateSaveStates()}
+
+function switchTab(tab){activeTab=tab;photosTab.classList.toggle("active",tab==="photos");documentsTab.classList.toggle("active",tab==="documents");photosTab.setAttribute("aria-selected",String(tab==="photos"));documentsTab.setAttribute("aria-selected",String(tab==="documents"));photoGallery.classList.toggle("hidden",tab!=="photos");documentGallery.classList.toggle("hidden",tab!=="documents");closeEditors();renderManager()}
+async function loadCardImage(img,path){try{const file=await getFileFromPath(path);const url=URL.createObjectURL(file);img.src=url;img.onload=()=>URL.revokeObjectURL(url)}catch{img.replaceWith(Object.assign(document.createElement("span"),{textContent:"Archivo no encontrado"}))}}
+function documentFormat(doc){const name=doc.nombre_archivo||doc.src||"";const ext=name.split(".").pop()?.toUpperCase()||"ARCHIVO";return ext.slice(0,8)}
+function isImageDocument(doc){return /\.(jpe?g|png|webp)$/i.test(doc.src||doc.nombre_archivo||"")}
+
+async function renderManager(){
+  hideResult(managerResult);photoGallery.innerHTML="";documentGallery.innerHTML="";updateToolbarButtons();
+  const person=currentPerson();
+  if(!person){personSummary.classList.add("hidden");photosCount.textContent="0";documentsCount.textContent="0";galleryEmpty.textContent="Selecciona una persona para gestionar su archivo.";galleryEmpty.classList.remove("hidden");return}
+  const photos=currentPhotos(),docs=currentDocuments();photosCount.textContent=photos.length;documentsCount.textContent=docs.length;
+  personSummary.innerHTML=`<div><h3>${escapeHtml(person.nombre)}</h3><p>${escapeHtml(person.id)} · ${photos.length} fotografía${photos.length===1?"":"s"} · ${docs.length} documento${docs.length===1?"":"s"}</p></div>`;personSummary.classList.remove("hidden");
+  const items=activeTab==="photos"?photos:docs;
+  if(!items.length){galleryEmpty.textContent=activeTab==="photos"?"Esta persona todavía no tiene fotografías.":"Esta persona todavía no tiene documentos archivados.";galleryEmpty.classList.remove("hidden")}else galleryEmpty.classList.add("hidden");
+  if(activeTab==="photos"){
+    photos.forEach((photo,index)=>{const principal=person.fotografia_principal===photo.src,linked=new Set(photo.personas||[person.id]).size;const card=document.createElement("article");card.className="photo-card";card.innerHTML=`<div class="photo-thumb"><img alt="${escapeHtml(photo.titulo||"Fotografía")}"></div><div class="photo-body">${principal?'<span class="principal-badge">★ Principal</span>':""}${linked>1?`<span class="shared-badge">👥 ${linked} personas</span>`:""}<span class="photo-id">${escapeHtml(photo.id||"")}</span><h4>${escapeHtml(photo.titulo||"Sin título")}</h4><p class="photo-meta">${escapeHtml([photo.fecha,photo.lugar].filter(Boolean).join(" · ")||"Sin fecha ni lugar")}</p><div class="card-actions"><button class="small-button" data-photo-action="edit" data-index="${index}">Editar</button>${principal?"":`<button class="small-button" data-photo-action="principal" data-index="${index}">Principal</button>`}<button class="small-button danger" data-photo-action="delete" data-index="${index}">Eliminar</button><span class="order-actions"><button class="small-button" data-photo-action="up" data-index="${index}" ${index===0?"disabled":""}>↑</button><button class="small-button" data-photo-action="down" data-index="${index}" ${index===photos.length-1?"disabled":""}>↓</button></span></div></div>`;photoGallery.appendChild(card);loadCardImage(card.querySelector("img"),photo.src)})
+  }else{
+    docs.forEach((doc,index)=>{const linked=new Set(doc.personas||[person.id]).size;const card=document.createElement("article");card.className="document-card";const thumb=isImageDocument(doc)?`<div class="document-thumb"><img alt="${escapeHtml(doc.titulo||"Documento")}"><span class="document-format">${escapeHtml(documentFormat(doc))}</span></div>`:`<div class="document-thumb"><span class="document-icon">📄</span><span class="document-format">${escapeHtml(documentFormat(doc))}</span></div>`;card.innerHTML=`${thumb}<div class="document-body">${linked>1?`<span class="shared-badge">👥 ${linked} personas</span>`:""}<span class="document-id">${escapeHtml(doc.id||"")}</span><h4>${escapeHtml(doc.titulo||"Sin título")}</h4><p class="document-meta">${escapeHtml(doc.fecha||"Sin fecha")}</p>${doc.descripcion?`<p class="document-description">${escapeHtml(doc.descripcion)}</p>`:""}<div class="card-actions"><button class="small-button" data-document-action="open" data-index="${index}">Abrir</button><button class="small-button" data-document-action="edit" data-index="${index}">Editar</button><button class="small-button danger" data-document-action="delete" data-index="${index}">Eliminar</button><span class="order-actions"><button class="small-button" data-document-action="up" data-index="${index}" ${index===0?"disabled":""}>↑</button><button class="small-button" data-document-action="down" data-index="${index}" ${index===docs.length-1?"disabled":""}>↓</button></span></div></div>`;documentGallery.appendChild(card);if(isImageDocument(doc))loadCardImage(card.querySelector("img"),doc.src)})
   }
 }
 
-connectFolder.addEventListener("click",async()=>{hideResult(managerResult);if(!("showDirectoryPicker" in window)){showResult(managerResult,"Este navegador no permite modificar una carpeta local. Abre la página en <strong>Chrome o Edge desde Windows</strong>.",true);return}try{rootHandle=await window.showDirectoryPicker({mode:"readwrite"});people=await readPeople();ensurePhotoIds();populatePeople();folderStatus.textContent=`Carpeta conectada: ${rootHandle.name}. Se han cargado ${people.length} personas.`;folderStatus.classList.add("ok");setManagerEnabled(true);renderGallery()}catch(err){if(err.name!=="AbortError"){rootHandle=null;setManagerEnabled(false);showResult(managerResult,`No se pudo abrir el archivo: ${escapeHtml(err.message)}`,true)}}});
-personSelect.addEventListener("change",()=>{closeEditorPanel();renderGallery()});newPhoto.addEventListener("click",openNewEditor);closeEditor.addEventListener("click",closeEditorPanel);cancelEdit.addEventListener("click",closeEditorPanel);
-photoInput.addEventListener("change",()=>{hideResult(editorResult);selectedFile=photoInput.files?.[0]||null;revokePreview();if(selectedFile){previewUrl=URL.createObjectURL(selectedFile);setPreview(previewUrl);if(!titleInput.value.trim()){const clean=selectedFile.name.replace(/\.[^.]+$/,"").replace(/[-_]+/g," ");titleInput.value=clean.charAt(0).toUpperCase()+clean.slice(1)}}else setPreview("");updateSaveState()});
-titleInput.addEventListener("input",updateSaveState);
-peopleChecklist.addEventListener("change",event=>{
-  const input=event.target.closest('input[type="checkbox"]');
-  if(input){
-    if(input.checked)selectedPeople.add(input.value);
-    else selectedPeople.delete(input.value);
-  }
-  updateSaveState();
-});
-peopleSearch.addEventListener("input",()=>{renderPeopleChecklist();updateSaveState()});
-photoGallery.addEventListener("click",async event=>{
-  const button=event.target.closest("button[data-action]");if(!button)return;const index=Number(button.dataset.index),action=button.dataset.action,person=currentPerson(),photos=currentPhotos();if(!person||!photos[index])return;
-  try{
-    if(action==="edit")return openEditEditor(index);
-    if(action==="principal"){person.fotografia_principal=photos[index].src;await writePeople();await renderGallery();showResult(managerResult,"Fotografía principal actualizada correctamente.");return}
-    if(action==="up"||action==="down"){const target=action==="up"?index-1:index+1;[photos[index],photos[target]]=[photos[target],photos[index]];await writePeople();await renderGallery();showResult(managerResult,"Orden de las fotografías actualizado.");return}
-    if(action==="delete"){
-      const photo=photos[index],count=photoCopies(photo.id).length;
-      if(!confirm(`Se eliminará «${photo.titulo||"Sin título"}» de ${count} ficha${count===1?"":"s"} y también su archivo físico. ¿Continuar?`))return;
-      try{await deleteFileFromPath(photo.src)}catch(err){if(err.name!=="NotFoundError")throw err}
-      for(const copy of photoCopies(photo.id)){
-        copy.person.fotografias.splice(copy.index,1);
-        if(copy.person.fotografia_principal===photo.src)copy.person.fotografia_principal=copy.person.fotografias[0]?.src||"";
-      }
-      await writePeople();await renderGallery();showResult(managerResult,"Fotografía eliminada de todas las fichas correctamente.")
-    }
-  }catch(err){showResult(managerResult,`No se pudo completar la operación: ${escapeHtml(err.message)}`,true)}
-});
-savePhoto.addEventListener("click",async()=>{
-  hideResult(editorResult);savePhoto.disabled=true;savePhoto.textContent="Guardando…";
-  try{
-    const owner=currentPerson();if(!owner)throw new Error("No se ha encontrado la persona seleccionada.");
-    const personIds=selectedPersonIds();if(!personIds.length)throw new Error("Selecciona al menos una persona que aparezca en la fotografía.");
-    let photo;
-    if(editingIndex===null){
-      const dir=await ensurePhotoDirectory(owner.id);const filename=await uniqueFilename(dir,selectedFile.name);const imageHandle=await dir.getFileHandle(filename,{create:true});const writable=await imageHandle.createWritable();await writable.write(selectedFile);await writable.close();
-      photo={id:photoIdInput.value||nextPhotoId(),src:`assets/fotos/${owner.id}/${filename}`};
-    }else{
-      photo=canonicalPhoto(editingPhotoId);if(!photo)throw new Error("No se ha encontrado la fotografía que se estaba editando.");
-    }
-    photo={...photo,titulo:titleInput.value.trim(),fecha:dateInput.value.trim(),lugar:placeInput.value.trim(),descripcion:descriptionInput.value.trim(),etiquetas:tagsInput.value.split(",").map(t=>t.trim()).filter(Boolean),personas:[...personIds]};
-    syncPhotoAssociations(photo,personIds);
-    if(principalInput.checked||!owner.fotografia_principal)owner.fotografia_principal=photo.src;
-    else if(editingIndex!==null&&owner.fotografia_principal===photo.src&&!principalInput.checked)owner.fotografia_principal=owner.fotografias.find(p=>p.src!==photo.src)?.src||"";
-    await writePeople();await renderGallery();showResult(managerResult,editingIndex===null?`Fotografía añadida y asociada a ${personIds.length} persona${personIds.length===1?"":"s"}.`:`Fotografía actualizada en ${personIds.length} persona${personIds.length===1?"":"s"}.`);closeEditorPanel()
-  }catch(err){showResult(editorResult,`No se pudo guardar la fotografía: ${escapeHtml(err.message)}`,true)}finally{savePhoto.textContent="Guardar fotografía";updateSaveState()}
-});
-setManagerEnabled(false);renderGallery();
+function resetPhotoEditor(){editingPhotoId=null;photoFile=null;photoInput.value="";photoIdInput.value=nextPhotoId();photoTitleInput.value="";photoDateInput.value="";photoPlaceInput.value="";photoDescriptionInput.value="";photoTagsInput.value="";photoPeopleSearch.value="";renderChecklist("photo",currentPerson()?[currentPerson().id]:[]);principalInput.checked=false;photoFilePickerLabel.classList.remove("hidden");revokeUrl("photo");photoPreview.removeAttribute("src");photoPreviewWrap.classList.add("hidden");hideResult(photoEditorResult);updateSaveStates()}
+function openNewPhoto(){closeDocumentPanel();resetPhotoEditor();photoEditorEyebrow.textContent="Nueva fotografía";photoEditorTitle.textContent="Añadir fotografía";photoEditor.classList.remove("hidden");photoEditor.setAttribute("aria-hidden","false");photoEditor.scrollIntoView({behavior:"smooth",block:"start"})}
+async function openEditPhoto(index){const person=currentPerson(),photo=currentPhotos()[index];if(!person||!photo)return;resetPhotoEditor();editingPhotoId=photo.id;photoEditorEyebrow.textContent="Editar fotografía";photoEditorTitle.textContent=photo.titulo||"Fotografía";photoIdInput.value=photo.id;photoTitleInput.value=photo.titulo||"";photoDateInput.value=photo.fecha||"";photoPlaceInput.value=photo.lugar||"";photoDescriptionInput.value=photo.descripcion||"";photoTagsInput.value=(photo.etiquetas||[]).join(", ");renderChecklist("photo",photo.personas||[person.id]);principalInput.checked=person.fotografia_principal===photo.src;photoFilePickerLabel.classList.add("hidden");try{const f=await getFileFromPath(photo.src);photoPreviewUrl=URL.createObjectURL(f);photoPreview.src=photoPreviewUrl;photoPreviewWrap.classList.remove("hidden")}catch{showResult(photoEditorResult,"La imagen física no se ha encontrado, pero puedes editar sus datos.",true)}photoEditor.classList.remove("hidden");photoEditor.setAttribute("aria-hidden","false");updateSaveStates();photoEditor.scrollIntoView({behavior:"smooth",block:"start"})}
+function closePhotoPanel(){revokeUrl("photo");photoEditor.classList.add("hidden");photoEditor.setAttribute("aria-hidden","true")}
+
+function resetDocumentEditor(){editingDocumentId=null;documentFile=null;documentInput.value="";documentIdInput.value=nextDocumentId();documentTitleInput.value="";documentDateInput.value="";documentDescriptionInput.value="";documentPeopleSearch.value="";renderChecklist("document",currentPerson()?[currentPerson().id]:[]);documentFilePickerLabel.classList.remove("hidden");revokeUrl("document");documentPreviewWrap.innerHTML="";documentPreviewWrap.classList.add("hidden");hideResult(documentEditorResult);updateSaveStates()}
+function renderDocumentPreview(file,url){documentPreviewWrap.innerHTML="";documentPreviewWrap.classList.remove("hidden");if(file.type.startsWith("image/")){const img=document.createElement("img");img.src=url;img.alt="Vista previa del documento";documentPreviewWrap.appendChild(img)}else if(file.type==="application/pdf"){const iframe=document.createElement("iframe");iframe.src=url;iframe.title="Vista previa del PDF";documentPreviewWrap.appendChild(iframe)}else{documentPreviewWrap.innerHTML=`<div class="file-summary"><span class="document-icon">📄</span><strong>${escapeHtml(file.name)}</strong><small>${Math.ceil(file.size/1024)} KB</small></div>`}}
+function openNewDocument(){closePhotoPanel();resetDocumentEditor();documentEditorEyebrow.textContent="Nuevo documento";documentEditorTitle.textContent="Archivar documento";documentEditor.classList.remove("hidden");documentEditor.setAttribute("aria-hidden","false");documentEditor.scrollIntoView({behavior:"smooth",block:"start"})}
+async function openEditDocument(index){const person=currentPerson(),doc=currentDocuments()[index];if(!person||!doc)return;resetDocumentEditor();editingDocumentId=doc.id;documentEditorEyebrow.textContent="Editar documento";documentEditorTitle.textContent=doc.titulo||"Documento";documentIdInput.value=doc.id;documentTitleInput.value=doc.titulo||"";documentDateInput.value=doc.fecha||"";documentDescriptionInput.value=doc.descripcion||"";renderChecklist("document",doc.personas||[person.id]);documentFilePickerLabel.classList.add("hidden");try{const file=await getFileFromPath(doc.src);documentPreviewUrl=URL.createObjectURL(file);renderDocumentPreview(file,documentPreviewUrl)}catch{showResult(documentEditorResult,"El archivo físico no se ha encontrado, pero puedes editar sus datos.",true)}documentEditor.classList.remove("hidden");documentEditor.setAttribute("aria-hidden","false");updateSaveStates();documentEditor.scrollIntoView({behavior:"smooth",block:"start"})}
+function closeDocumentPanel(){revokeUrl("document");documentEditor.classList.add("hidden");documentEditor.setAttribute("aria-hidden","true")}
+function closeEditors(){closePhotoPanel();closeDocumentPanel()}
+function updateSaveStates(){savePhoto.disabled=!(rootHandle&&currentPerson()&&photoTitleInput.value.trim()&&(editingPhotoId||photoFile)&&photoSelectedPeople.size);saveDocument.disabled=!(rootHandle&&currentPerson()&&documentTitleInput.value.trim()&&(editingDocumentId||documentFile)&&documentSelectedPeople.size)}
+
+connectFolder.addEventListener("click",async()=>{hideResult(managerResult);if(!("showDirectoryPicker" in window)){showResult(managerResult,"Este navegador no permite modificar una carpeta local. Abre la página en <strong>Chrome o Edge desde Windows</strong>.",true);return}try{rootHandle=await window.showDirectoryPicker({mode:"readwrite"});people=await readPeople();ensureData();populatePeople();folderStatus.textContent=`Carpeta conectada: ${rootHandle.name}. Se han cargado ${people.length} personas.`;folderStatus.classList.add("ok");setManagerEnabled(true);renderManager()}catch(err){if(err.name!=="AbortError"){rootHandle=null;setManagerEnabled(false);showResult(managerResult,`No se pudo abrir el archivo: ${escapeHtml(err.message)}`,true)}}});
+personSelect.addEventListener("change",()=>{closeEditors();renderManager()});
+photosTab.addEventListener("click",()=>switchTab("photos"));documentsTab.addEventListener("click",()=>switchTab("documents"));
+newPhoto.addEventListener("click",openNewPhoto);newDocument.addEventListener("click",openNewDocument);
+closePhotoEditor.addEventListener("click",closePhotoPanel);cancelPhotoEdit.addEventListener("click",closePhotoPanel);closeDocumentEditor.addEventListener("click",closeDocumentPanel);cancelDocumentEdit.addEventListener("click",closeDocumentPanel);
+photoPeopleChecklist.addEventListener("change",e=>selectFromChecklist("photo",e));documentPeopleChecklist.addEventListener("change",e=>selectFromChecklist("document",e));
+photoPeopleSearch.addEventListener("input",()=>renderChecklist("photo"));documentPeopleSearch.addEventListener("input",()=>renderChecklist("document"));
+photoTitleInput.addEventListener("input",updateSaveStates);documentTitleInput.addEventListener("input",updateSaveStates);
+photoInput.addEventListener("change",()=>{hideResult(photoEditorResult);photoFile=photoInput.files?.[0]||null;revokeUrl("photo");if(photoFile){photoPreviewUrl=URL.createObjectURL(photoFile);photoPreview.src=photoPreviewUrl;photoPreviewWrap.classList.remove("hidden");if(!photoTitleInput.value.trim())photoTitleInput.value=titleFromFilename(photoFile.name)}else photoPreviewWrap.classList.add("hidden");updateSaveStates()});
+documentInput.addEventListener("change",()=>{hideResult(documentEditorResult);documentFile=documentInput.files?.[0]||null;revokeUrl("document");if(documentFile){documentPreviewUrl=URL.createObjectURL(documentFile);renderDocumentPreview(documentFile,documentPreviewUrl);if(!documentTitleInput.value.trim())documentTitleInput.value=titleFromFilename(documentFile.name)}else{documentPreviewWrap.innerHTML="";documentPreviewWrap.classList.add("hidden")}updateSaveStates()});
+
+photoGallery.addEventListener("click",async e=>{const button=e.target.closest("button[data-photo-action]");if(!button)return;const index=Number(button.dataset.index),action=button.dataset.photoAction,person=currentPerson(),photos=currentPhotos();if(!person||!photos[index])return;try{if(action==="edit")return openEditPhoto(index);if(action==="principal"){person.fotografia_principal=photos[index].src;await writePeople();await renderManager();showResult(managerResult,"Fotografía principal actualizada correctamente.");return}if(action==="up"||action==="down"){const target=action==="up"?index-1:index+1;[photos[index],photos[target]]=[photos[target],photos[index]];await writePeople();await renderManager();showResult(managerResult,"Orden de las fotografías actualizado.");return}if(action==="delete"){const photo=photos[index],all=copies("fotografias",photo.id);if(!confirm(`Se eliminará «${photo.titulo||"Sin título"}» de ${all.length} ficha${all.length===1?"":"s"} y también su archivo físico. ¿Continuar?`))return;try{await deleteFileFromPath(photo.src)}catch(err){if(err.name!=="NotFoundError")throw err}for(const copy of all){copy.person.fotografias.splice(copy.index,1);if(copy.person.fotografia_principal===photo.src)copy.person.fotografia_principal=copy.person.fotografias[0]?.src||""}await writePeople();await renderManager();showResult(managerResult,"Fotografía eliminada de todas las fichas correctamente.")}}catch(err){showResult(managerResult,`No se pudo completar la operación: ${escapeHtml(err.message)}`,true)}});
+
+documentGallery.addEventListener("click",async e=>{const button=e.target.closest("button[data-document-action]");if(!button)return;const index=Number(button.dataset.index),action=button.dataset.documentAction,person=currentPerson(),docs=currentDocuments();if(!person||!docs[index])return;try{if(action==="edit")return openEditDocument(index);if(action==="open"){const file=await getFileFromPath(docs[index].src);const url=URL.createObjectURL(file);window.open(url,"_blank","noopener");setTimeout(()=>URL.revokeObjectURL(url),60000);return}if(action==="up"||action==="down"){const target=action==="up"?index-1:index+1;[docs[index],docs[target]]=[docs[target],docs[index]];await writePeople();await renderManager();showResult(managerResult,"Orden de los documentos actualizado.");return}if(action==="delete"){const doc=docs[index],all=copies("documentos",doc.id);if(!confirm(`Se eliminará «${doc.titulo||"Sin título"}» de ${all.length} ficha${all.length===1?"":"s"} y también su archivo físico. ¿Continuar?`))return;try{await deleteFileFromPath(doc.src)}catch(err){if(err.name!=="NotFoundError")throw err}for(const copy of all)copy.person.documentos.splice(copy.index,1);await writePeople();await renderManager();showResult(managerResult,"Documento eliminado de todas las fichas correctamente.")}}catch(err){showResult(managerResult,`No se pudo completar la operación: ${escapeHtml(err.message)}`,true)}});
+
+savePhoto.addEventListener("click",async()=>{hideResult(photoEditorResult);savePhoto.disabled=true;savePhoto.textContent="Guardando…";try{const owner=currentPerson();if(!owner)throw new Error("No se ha encontrado la persona seleccionada.");const ids=[...photoSelectedPeople];if(!ids.length)throw new Error("Selecciona al menos una persona.");let photo;if(!editingPhotoId){const dir=await ensureAssetDirectory("fotos",owner.id);const filename=await uniqueFilename(dir,photoFile.name,"fotografia");await writeFile(dir,filename,photoFile);photo={id:photoIdInput.value||nextPhotoId(),src:`assets/fotos/${owner.id}/${filename}`}}else{photo=canonical("fotografias",editingPhotoId);if(!photo)throw new Error("No se ha encontrado la fotografía.")}photo={...photo,titulo:photoTitleInput.value.trim(),fecha:photoDateInput.value.trim(),lugar:photoPlaceInput.value.trim(),descripcion:photoDescriptionInput.value.trim(),etiquetas:photoTagsInput.value.split(",").map(x=>x.trim()).filter(Boolean),personas:ids};syncAssociations("fotografias",photo,ids);if(principalInput.checked||!owner.fotografia_principal)owner.fotografia_principal=photo.src;else if(editingPhotoId&&owner.fotografia_principal===photo.src&&!principalInput.checked)owner.fotografia_principal=owner.fotografias.find(x=>x.src!==photo.src)?.src||"";await writePeople();closePhotoPanel();await renderManager();showResult(managerResult,editingPhotoId?`Fotografía actualizada en ${ids.length} persona${ids.length===1?"":"s"}.`:`Fotografía añadida y asociada a ${ids.length} persona${ids.length===1?"":"s"}.`)}catch(err){showResult(photoEditorResult,`No se pudo guardar la fotografía: ${escapeHtml(err.message)}`,true)}finally{savePhoto.textContent="Guardar fotografía";updateSaveStates()}});
+
+saveDocument.addEventListener("click",async()=>{hideResult(documentEditorResult);saveDocument.disabled=true;saveDocument.textContent="Archivando…";try{const owner=currentPerson();if(!owner)throw new Error("No se ha encontrado la persona seleccionada.");const ids=[...documentSelectedPeople];if(!ids.length)throw new Error("Selecciona al menos una persona relacionada.");let doc;if(!editingDocumentId){const dir=await ensureAssetDirectory("documentos",owner.id);const filename=await uniqueFilename(dir,documentFile.name,"documento");await writeFile(dir,filename,documentFile);doc={id:documentIdInput.value||nextDocumentId(),src:`assets/documentos/${owner.id}/${filename}`,nombre_archivo:filename,formato:(documentFile.type||filename.split(".").pop()||"").toLowerCase()}}else{doc=canonical("documentos",editingDocumentId);if(!doc)throw new Error("No se ha encontrado el documento.")}doc={...doc,titulo:documentTitleInput.value.trim(),fecha:documentDateInput.value.trim(),descripcion:documentDescriptionInput.value.trim(),personas:ids};syncAssociations("documentos",doc,ids);await writePeople();closeDocumentPanel();await renderManager();showResult(managerResult,editingDocumentId?`Documento actualizado en ${ids.length} persona${ids.length===1?"":"s"}.`:`Documento archivado y asociado a ${ids.length} persona${ids.length===1?"":"s"}.`)}catch(err){showResult(documentEditorResult,`No se pudo archivar el documento: ${escapeHtml(err.message)}`,true)}finally{saveDocument.textContent="Archivar documento";updateSaveStates()}});
+
+setManagerEnabled(false);renderManager();
