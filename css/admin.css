@@ -25,3 +25,17 @@ button:disabled{opacity:.45;cursor:not-allowed}.status{padding:12px 14px;border-
 .preview-wrap{margin-top:16px;border-radius:18px;overflow:hidden;background:#edf0ed;max-height:430px;display:grid;place-items:center}.preview-wrap img{display:block;max-width:100%;max-height:430px;object-fit:contain}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.wide{grid-column:1/-1}label{display:grid;gap:8px;margin-top:14px;font-weight:750}input,select,textarea{width:100%;border:1px solid var(--line);border-radius:11px;padding:12px;background:white;color:var(--ink)}input:focus,select:focus,textarea:focus{outline:3px solid rgba(36,88,77,.13);border-color:var(--green2)}input[readonly]{background:#f3f4f2;color:var(--muted)}.checkbox{display:flex;grid-template-columns:auto 1fr;align-items:center;gap:10px}.checkbox input{width:20px;height:20px}.actions{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}.result{margin-top:18px;padding:15px;border-radius:14px;background:#e5f4ec;color:#145c3b;line-height:1.5}.result.error{background:#fce9e7;color:#8f2e27}.help-card h3{margin-top:0}.help-card p{line-height:1.55}.note{color:var(--muted);font-size:14px}code{background:#eef1ee;padding:2px 6px;border-radius:6px}.hidden{display:none!important}
 @media(max-width:700px){.admin-topbar{align-items:flex-start;flex-direction:column;gap:10px}.admin-shell{margin-top:18px}.manager-toolbar{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.wide{grid-column:auto}.intro-card h2,.editor-card h2{font-size:23px}.person-summary{align-items:flex-start;flex-direction:column}.photo-gallery{grid-template-columns:1fr}}
+
+/* v3.3.1.1 · Fotografías asociadas a varias personas */
+.people-fieldset{border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0 0;min-width:0}
+.people-fieldset legend{font-weight:850;padding:0 7px;color:var(--ink)}
+.field-help{margin:0 0 12px;color:var(--muted);font-size:14px;line-height:1.45}
+.people-fieldset input[type="search"]{margin-bottom:10px}
+.people-checklist{max-height:250px;overflow:auto;border:1px solid var(--line);border-radius:11px;background:white;padding:6px}
+.person-check{display:flex;align-items:center;gap:10px;margin:0;padding:9px 10px;border-radius:8px;font-weight:650;cursor:pointer}
+.person-check:hover{background:var(--soft)}
+.person-check input{width:18px;height:18px;flex:0 0 auto;margin:0}
+.person-check span{min-width:0}
+.person-check small{display:block;color:var(--muted);font-weight:500;margin-top:2px}
+.people-empty{padding:14px;color:var(--muted);text-align:center}
+.shared-badge{display:inline-flex;align-items:center;padding:5px 8px;border-radius:999px;background:#eef0fa;color:#414c89;font-size:12px;font-weight:850;margin:0 6px 7px 0}

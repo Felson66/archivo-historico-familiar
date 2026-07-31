@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#183c35">
   <title>Administración · Archivo Histórico Familiar</title>
-  <link rel="stylesheet" href="css/admin.css?v=3.3.0">
+  <link rel="stylesheet" href="css/admin.css?v=3.3.1.1">
 </head>
 <body>
   <header class="admin-topbar">
     <a href="index.html" class="back">← Volver al archivo</a>
     <div>
       <h1>Centro de Administración</h1>
-      <p>Gestor de fotografías · v3.3</p>
+      <p>Gestor de fotografías · v3.3.1.1</p>
     </div>
   </header>
 
@@ -21,7 +21,7 @@
       <div>
         <span class="eyebrow">Gestión fotográfica</span>
         <h2>Añadir y mantener fotografías sin editar JSON</h2>
-        <p>Conecta la carpeta local del repositorio. Después podrás añadir, editar, ordenar, marcar como principal y eliminar fotografías.</p>
+        <p>Conecta la carpeta local del repositorio. Después podrás añadir, editar, compartir entre varias personas, ordenar, marcar como principal y eliminar fotografías.</p>
       </div>
       <button id="connectFolder" class="primary">Seleccionar carpeta del archivo</button>
       <p id="folderStatus" class="status">Todavía no se ha seleccionado ninguna carpeta.</p>
@@ -89,6 +89,12 @@
           <input id="tagsInput" type="text" placeholder="Ej. retrato, viaje, Navidad">
           <small>Separadas por comas.</small>
         </label>
+        <fieldset class="wide people-fieldset">
+          <legend>Personas que aparecen</legend>
+          <p class="field-help">La fotografía aparecerá en la ficha de todas las personas marcadas, sin duplicar el archivo de imagen.</p>
+          <input id="peopleSearch" type="search" placeholder="Buscar persona…" autocomplete="off">
+          <div id="peopleChecklist" class="people-checklist"></div>
+        </fieldset>
         <label class="checkbox wide">
           <input id="principalInput" type="checkbox">
           <span>Usar como fotografía principal de la persona</span>
@@ -109,6 +115,6 @@
     </section>
   </main>
 
-  <script src="js/admin.js?v=3.3.0"></script>
+  <script src="js/admin.js?v=3.3.1.1"></script>
 </body>
 </html>

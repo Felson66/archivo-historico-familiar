@@ -325,8 +325,22 @@
     "rol": "Sastre",
     "padres": [],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0008/foto-francisco-carmen.png",
+    "fotografias": [
+      {
+        "id": "F000006",
+        "src": "assets/fotos/P0008/foto-francisco-carmen.png",
+        "titulo": "Foto Francisco Carmen",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "Boda",
+        "etiquetas": [],
+        "personas": [
+          "P0008",
+          "P0009"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
@@ -361,7 +375,21 @@
     "padres": [],
     "biografia": "",
     "fotografia_principal": "",
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000006",
+        "src": "assets/fotos/P0008/foto-francisco-carmen.png",
+        "titulo": "Foto Francisco Carmen",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "Boda",
+        "etiquetas": [],
+        "personas": [
+          "P0008",
+          "P0009"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
@@ -614,6 +642,19 @@
         ],
         "etiquetas": [],
         "id": "F000001"
+      },
+      {
+        "id": "F000005",
+        "src": "assets/fotos/P0027/esther-edu.jpeg",
+        "personas": [
+          "P0027",
+          "P0015"
+        ],
+        "titulo": "Esther Edu",
+        "fecha": "",
+        "lugar": "Bilbao",
+        "descripcion": "De potes - Casco Viejo",
+        "etiquetas": []
       }
     ],
     "documentos": [],
