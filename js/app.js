@@ -43,25 +43,15 @@ async function init(){
     renderStats();
     renderFeatured();
     renderPeople();
-    buildTree();
-    resetTree();
+    try{
+      buildTree();
+      resetTree();
+    }catch(treeError){
+      console.error("El árbol no se ha podido inicializar, pero las fichas siguen disponibles.", treeError);
+    }
 
-    document.addEventListener("click", event => {
-      const documentLink = event.target.closest("[data-document-url]");
-      if(documentLink){
-        event.preventDefault();
-        openDocumentViewer(documentLink.dataset.documentId, documentLink.dataset.personId);
-        return;
-      }
-      const galleryButton = event.target.closest("[data-gallery-person]");
-      if(galleryButton){
-        openLightbox(galleryButton.dataset.galleryPerson, galleryButton.dataset.galleryIndex);
-        return;
-      }
-      const personButton = event.target.closest("[data-person]");
-      if(personButton) openPerson(personButton.dataset.person);
-    });
-
+    // El archivo ya está cargado. Las interacciones globales se registran
+    // en wireEvents(), antes de init(), para que nunca dependan del árbol.
     $("loading").classList.add("hidden");
   }catch(error){
     $("loading").textContent = "No se han podido cargar los datos. Publica todos los archivos y carpetas en GitHub.";
@@ -438,6 +428,30 @@ function zoomTree(factor, centerX=null, centerY=null){
 }
 
 function wireEvents(){
+  // Delegación global: se activa antes de cargar datos o construir el árbol.
+  // Así las fichas siguen funcionando aunque falle cualquier módulo secundario.
+  document.addEventListener("click", event => {
+    const documentLink = event.target.closest("[data-document-url]");
+    if(documentLink){
+      event.preventDefault();
+      openDocumentViewer(documentLink.dataset.documentId, documentLink.dataset.personId);
+      return;
+    }
+
+    const galleryButton = event.target.closest("[data-gallery-person]");
+    if(galleryButton){
+      event.preventDefault();
+      openLightbox(galleryButton.dataset.galleryPerson, galleryButton.dataset.galleryIndex);
+      return;
+    }
+
+    const personButton = event.target.closest("[data-person]");
+    if(personButton){
+      event.preventDefault();
+      openPerson(personButton.dataset.person);
+    }
+  });
+
   document.querySelectorAll(".bottom-nav button").forEach(button => button.addEventListener("click", () => showView(button.dataset.view)));
   $("homeSearchButton").addEventListener("click",searchFromHome);
   $("homeSearch").addEventListener("keydown",event => { if(event.key === "Enter") searchFromHome(); });
