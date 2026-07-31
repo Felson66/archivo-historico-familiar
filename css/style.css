@@ -320,3 +320,5 @@ main{max-width:1280px;margin:auto;padding:20px}
   .photo-grid{grid-template-columns:1.25fr 1fr;grid-template-rows:repeat(2,minmax(105px,1fr))}
   .photo-featured{min-height:220px}
 }
+
+.admin-link{display:inline-flex;padding:11px 14px;border-radius:12px;background:var(--soft);color:var(--green);font-weight:800;text-decoration:none}

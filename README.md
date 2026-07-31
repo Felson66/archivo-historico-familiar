@@ -1,15 +1,20 @@
-# Archivo Histórico Familiar — v3.0.4
+# Archivo Histórico Familiar — v3.1.0
 
-Sistema fotográfico reutilizable.
+Primera versión del Centro de Administración.
 
-## Novedades
+## Incluye
 
-- Pie de foto mejorado: título, fecha y lugar.
-- Contador legible: «3 fotografías».
-- Mosaico tipo álbum, con la primera imagen destacada.
-- Mejor legibilidad del texto sobre las tarjetas con fotografía.
-- Cualquier persona puede incorporar fotografías sin modificar el código.
-- Plantilla JSON incluida.
-- Guía paso a paso incluida.
+- Página `admin.html`.
+- Selección segura de la carpeta local del repositorio.
+- Carga automática de las 50 personas.
+- Selección de una fotografía.
+- Título, fecha, lugar y descripción.
+- Opción para convertirla en fotografía principal.
+- Copia automática en `assets/fotos/<ID>/`.
+- Actualización automática de `data/personas.json`.
+- Flujo final mediante GitHub Desktop: Commit y Push.
 
-Consulta `COMO_AÑADIR_FOTOGRAFIAS.md`.
+## Uso
+
+La administración debe realizarse desde Chrome o Edge en Windows.
+La consulta pública sigue funcionando en cualquier dispositivo.
