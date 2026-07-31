@@ -50,7 +50,7 @@ async function init(){
       const documentLink = event.target.closest("[data-document-url]");
       if(documentLink){
         event.preventDefault();
-        openDocumentViewer(documentLink.dataset.documentUrl, documentLink.dataset.documentTitle);
+        openDocumentViewer(documentLink.dataset.documentId, documentLink.dataset.personId);
         return;
       }
       const galleryButton = event.target.closest("[data-gallery-person]");
@@ -146,226 +146,66 @@ function renderGallery(person){
 }
 
 
-function documentPath(doc){
-  return doc.src || doc.archivo || doc.ruta || doc.url || doc.href || "";
-}
-
-function documentExtension(doc){
-  const path = documentPath(doc);
-  const explicit = doc.tipo_archivo || doc.extension || doc.formato || "";
-  const value = explicit || path.split("?")[0].split("#")[0].split(".").pop() || "";
-  return String(value).replace(/^\./,"").toUpperCase();
-}
-
-function documentIcon(doc){
-  const ext = documentExtension(doc);
-  if(ext === "PDF") return "📕";
-  if(["JPG","JPEG","PNG","WEBP","GIF","TIFF","TIF"].includes(ext)) return "🖼️";
-  return "📄";
-}
+function documentPath(doc){ return doc.src || doc.ruta || doc.url || ""; }
+function documentExtension(doc){ const path=documentPath(doc); return (doc.nombre_archivo||path).split(".").pop()?.toLowerCase()||""; }
+function documentIcon(doc){ return documentExtension(doc)==="pdf" ? "PDF" : "IMG"; }
 
 function renderDocuments(person){
-  const docs = person.documentos || [];
-  if(!docs.length){
-    return `<div class="placeholder">Todavía no hay documentos asociados.</div>`;
-  }
-
-  return `<div class="document-list">${docs.map(doc => {
-    const title = doc.titulo || doc.nombre || "Documento";
-    const path = documentPath(doc);
-    const ext = documentExtension(doc);
-    const meta = [doc.fecha, ext].filter(Boolean).join(" · ");
-    const description = doc.descripcion || "";
-
-    if(!path){
-      return `
-        <article class="document-card document-unavailable">
-          <div class="document-icon" aria-hidden="true">${documentIcon(doc)}</div>
-          <div class="document-info">
-            <strong>${esc(title)}</strong>
-            ${meta ? `<span class="document-meta">${esc(meta)}</span>` : ""}
-            ${description ? `<span class="document-description">${esc(description)}</span>` : ""}
-            <span class="document-warning">Archivo no disponible</span>
-          </div>
-        </article>`;
-    }
-
-    return `
-      <a class="document-card" href="${esc(path)}" data-document-url="${esc(path)}"
-         data-document-title="${esc(title)}" aria-label="Abrir documento: ${esc(title)}">
-        <div class="document-icon" aria-hidden="true">${documentIcon(doc)}</div>
-        <div class="document-info">
-          <strong>${esc(title)}</strong>
-          ${meta ? `<span class="document-meta">${esc(meta)}</span>` : ""}
-          ${description ? `<span class="document-description">${esc(description)}</span>` : ""}
-          <span class="document-open">Abrir documento <span aria-hidden="true">→</span></span>
-        </div>
-      </a>`;
+  const docs=person.documentos||[];
+  if(!docs.length) return `<div class="placeholder">Todavía no hay documentos asociados.</div>`;
+  return `<div class="document-list">${docs.map(doc=>{
+    const title=doc.titulo||doc.nombre_archivo||"Documento";
+    const description=doc.descripcion||"";
+    const meta=[doc.fecha, documentExtension(doc).toUpperCase()].filter(Boolean).join(" · ");
+    const pageCount=Array.isArray(doc.paginas)?doc.paginas.length:0;
+    return `<button type="button" class="document-card" data-document-url="1" data-document-id="${esc(doc.id)}" data-person-id="${esc(person.id)}">
+      <div class="document-icon" aria-hidden="true">${documentIcon(doc)}</div>
+      <div class="document-info">
+        <strong>${esc(title)}</strong>
+        ${meta?`<span class="document-meta">${esc(meta)}</span>`:""}
+        ${description?`<span class="document-description">${esc(description)}</span>`:""}
+        <span class="document-open">${pageCount?`Consultar ${pageCount} página${pageCount===1?"":"s"}`:"Preparar vista desde Administración"} <span aria-hidden="true">→</span></span>
+      </div>
+    </button>`;
   }).join("")}</div>`;
 }
 
-
 function ensureDocumentViewer(){
-  let viewer = document.getElementById("documentViewer");
+  let viewer=document.getElementById("documentViewer");
   if(viewer) return viewer;
-
-  viewer = document.createElement("div");
-  viewer.id = "documentViewer";
-  viewer.className = "document-viewer";
-  viewer.setAttribute("aria-hidden","true");
-  viewer.innerHTML = `
-    <div class="document-viewer-panel" role="dialog" aria-modal="true" aria-labelledby="documentViewerTitle">
-      <header class="document-viewer-header">
-        <strong id="documentViewerTitle">Documento</strong>
-        <div class="document-viewer-actions">
-          <a id="documentViewerExternal" class="document-viewer-external" href="#" target="_blank" rel="noopener noreferrer">
-            Abrir aparte
-          </a>
-          <button id="documentViewerClose" class="document-viewer-close" type="button" aria-label="Cerrar documento">×</button>
-        </div>
-      </header>
-      <div id="documentViewerBody" class="document-viewer-body"></div>
-    </div>`;
-
+  viewer=document.createElement("div"); viewer.id="documentViewer"; viewer.className="document-viewer"; viewer.setAttribute("aria-hidden","true");
+  viewer.innerHTML=`<div class="document-viewer-panel" role="dialog" aria-modal="true" aria-labelledby="documentViewerTitle">
+    <header class="document-viewer-header"><div><strong id="documentViewerTitle">Documento</strong><small id="documentViewerCounter"></small></div>
+      <button id="documentViewerClose" class="document-viewer-close" type="button" aria-label="Cerrar documento">×</button></header>
+    <div id="documentViewerBody" class="document-viewer-body"></div>
+    <footer class="document-viewer-footer"><button id="documentPrev" type="button">‹ Anterior</button><a id="documentDownload" href="#" download>Descargar original</a><button id="documentNext" type="button">Siguiente ›</button></footer>
+  </div>`;
   document.body.appendChild(viewer);
-  viewer.querySelector("#documentViewerClose").addEventListener("click",closeDocumentViewer);
-  viewer.addEventListener("click",event => {
-    if(event.target === viewer) closeDocumentViewer();
-  });
+  viewer.querySelector("#documentViewerClose").onclick=closeDocumentViewer;
+  viewer.addEventListener("click",e=>{if(e.target===viewer)closeDocumentViewer()});
   return viewer;
 }
-
-
-let pdfJsPromise = null;
-let documentRenderToken = 0;
-
-async function loadPdfJs(){
-  if(!pdfJsPromise){
-    pdfJsPromise = import("https://cdn.jsdelivr.net/npm/pdfjs-dist@6.2.108/build/pdf.mjs")
-      .then(pdfjsLib => {
-        pdfjsLib.GlobalWorkerOptions.workerSrc =
-          "https://cdn.jsdelivr.net/npm/pdfjs-dist@6.2.108/build/pdf.worker.mjs";
-        return pdfjsLib;
-      });
-  }
-  return pdfJsPromise;
+let currentDocumentPages=[], currentDocumentPage=0;
+function showDocumentPage(){
+  const viewer=ensureDocumentViewer(), body=viewer.querySelector("#documentViewerBody"), counter=viewer.querySelector("#documentViewerCounter");
+  const prev=viewer.querySelector("#documentPrev"), next=viewer.querySelector("#documentNext");
+  if(!currentDocumentPages.length) return;
+  body.innerHTML=`<img class="document-page-image" src="${esc(currentDocumentPages[currentDocumentPage])}" alt="Página ${currentDocumentPage+1}">`;
+  counter.textContent=`Página ${currentDocumentPage+1} de ${currentDocumentPages.length}`;
+  prev.disabled=currentDocumentPage===0; next.disabled=currentDocumentPage===currentDocumentPages.length-1;
 }
-
-async function renderPdfInsideViewer(url,body,token){
-  body.innerHTML = `
-    <div class="document-loading">
-      <div class="document-spinner" aria-hidden="true"></div>
-      <strong>Cargando documento…</strong>
-    </div>`;
-
-  try{
-    const pdfjsLib = await loadPdfJs();
-    if(token !== documentRenderToken) return;
-
-    const pdf = await pdfjsLib.getDocument({url}).promise;
-    if(token !== documentRenderToken) return;
-
-    body.innerHTML = `<div class="pdf-pages" aria-label="Páginas del documento"></div>`;
-    const pages = body.querySelector(".pdf-pages");
-
-    for(let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++){
-      if(token !== documentRenderToken) return;
-
-      const page = await pdf.getPage(pageNumber);
-      const baseViewport = page.getViewport({scale:1});
-      const availableWidth = Math.min(window.innerWidth - 24, 1100);
-      const scale = Math.min(2.2, Math.max(1, availableWidth / baseViewport.width));
-      const viewport = page.getViewport({scale});
-
-      const wrapper = document.createElement("div");
-      wrapper.className = "pdf-page";
-      wrapper.setAttribute("aria-label", `Página ${pageNumber} de ${pdf.numPages}`);
-
-      const canvas = document.createElement("canvas");
-      const context = canvas.getContext("2d", {alpha:false});
-      const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
-
-      canvas.width = Math.floor(viewport.width * pixelRatio);
-      canvas.height = Math.floor(viewport.height * pixelRatio);
-      canvas.style.width = `${viewport.width}px`;
-      canvas.style.height = `${viewport.height}px`;
-
-      wrapper.appendChild(canvas);
-      pages.appendChild(wrapper);
-
-      await page.render({
-        canvasContext:context,
-        viewport,
-        transform:pixelRatio !== 1 ? [pixelRatio,0,0,pixelRatio,0,0] : null
-      }).promise;
-    }
-  }catch(error){
-    console.error("No se pudo mostrar el PDF dentro de la web:",error);
-    if(token !== documentRenderToken) return;
-    body.innerHTML = `
-      <div class="document-error">
-        <strong>No se ha podido mostrar este PDF dentro de la web.</strong>
-        <span>Puedes descargarlo, pero en iPhone se abrirá en el visor del sistema.</span>
-        <a class="document-error-link" href="${esc(url)}" download>Descargar PDF</a>
-      </div>`;
-  }
+function openDocumentViewer(documentId,personId){
+  const person=byId[personId], doc=(person?.documentos||[]).find(d=>d.id===documentId); if(!doc)return;
+  const viewer=ensureDocumentViewer();
+  viewer.querySelector("#documentViewerTitle").textContent=doc.titulo||doc.nombre_archivo||"Documento";
+  viewer.querySelector("#documentDownload").href=documentPath(doc);
+  currentDocumentPages=Array.isArray(doc.paginas)?doc.paginas:[]; currentDocumentPage=0;
+  viewer.querySelector("#documentPrev").onclick=()=>{if(currentDocumentPage>0){currentDocumentPage--;showDocumentPage()}};
+  viewer.querySelector("#documentNext").onclick=()=>{if(currentDocumentPage<currentDocumentPages.length-1){currentDocumentPage++;showDocumentPage()}};
+  if(currentDocumentPages.length) showDocumentPage(); else viewer.querySelector("#documentViewerBody").innerHTML=`<div class="document-error"><strong>Este PDF todavía no tiene preparada su vista por páginas.</strong><p>Entra en Administración, abre Documentos y pulsa «Generar vista».</p></div>`;
+  viewer.classList.add("open");viewer.setAttribute("aria-hidden","false");document.body.classList.add("document-viewer-open");
 }
-
-function openDocumentViewer(url,title){
-  if(!url) return;
-  const viewer = ensureDocumentViewer();
-  const body = viewer.querySelector("#documentViewerBody");
-  const external = viewer.querySelector("#documentViewerExternal");
-  const heading = viewer.querySelector("#documentViewerTitle");
-  const cleanUrl = String(url).split("?")[0].split("#")[0];
-  const extension = cleanUrl.includes(".") ? cleanUrl.split(".").pop().toLowerCase() : "";
-  const token = ++documentRenderToken;
-
-  heading.textContent = title || "Documento";
-  external.href = url;
-
-  viewer.classList.add("open");
-  viewer.setAttribute("aria-hidden","false");
-  document.body.classList.add("document-viewer-open");
-
-  if(["jpg","jpeg","png","webp","gif","tif","tiff"].includes(extension)){
-    body.innerHTML = `<img class="document-viewer-image" src="${esc(url)}" alt="${esc(title || "Documento")}">`;
-  }else if(extension === "pdf"){
-    renderPdfInsideViewer(url,body,token);
-  }else{
-    body.innerHTML = `
-      <div class="document-error">
-        <strong>Este formato no puede mostrarse dentro de la web.</strong>
-        <a class="document-error-link" href="${esc(url)}" download>Descargar documento</a>
-      </div>`;
-  }
-}
-
-function closeDocumentViewer(){
-  documentRenderToken++;
-  const viewer = document.getElementById("documentViewer");
-  if(!viewer) return;
-  viewer.classList.remove("open");
-  viewer.setAttribute("aria-hidden","true");
-  const body = viewer.querySelector("#documentViewerBody");
-  if(body) body.innerHTML = "";
-  document.body.classList.remove("document-viewer-open");
-}
-
-function renderTimeline(person){
-  const events = person.cronologia || [];
-  if(events.length){
-    return `<div class="mini-timeline">${events.map(item => `
-      <div class="timeline-item">
-        <div class="timeline-year">${esc(item.fecha || item.año || "")}</div>
-        <div>${esc(item.texto || item.descripcion || "")}</div>
-      </div>`).join("")}</div>`;
-  }
-  const inferred = (person.hechos || []).slice(0,4);
-  if(!inferred.length) return `<div class="placeholder">Cronología en elaboración.</div>`;
-  return `<div class="mini-timeline">${inferred.map(item => `
-    <div class="timeline-item"><div>${esc(item.texto)}</div></div>`).join("")}</div>`;
-}
+function closeDocumentViewer(){const viewer=document.getElementById("documentViewer");if(!viewer)return;viewer.classList.remove("open");viewer.setAttribute("aria-hidden","true");document.body.classList.remove("document-viewer-open");currentDocumentPages=[];}
 
 function openPerson(id){
   const person = byId[id];

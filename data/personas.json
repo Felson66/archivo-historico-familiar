@@ -207,6 +207,9 @@
         "descripcion": "Ascenso a Cabo",
         "personas": [
           "P0005"
+        ],
+        "paginas": [
+          "assets/documentos/P0005/d000002-paginas/pagina-001.webp"
         ]
       }
     ],
@@ -349,6 +352,10 @@
         "descripcion": "",
         "personas": [
           "P0007"
+        ],
+        "paginas": [
+          "assets/documentos/P0007/d000001-paginas/pagina-001.webp",
+          "assets/documentos/P0007/d000001-paginas/pagina-002.webp"
         ]
       }
     ],
