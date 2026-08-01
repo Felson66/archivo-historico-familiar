@@ -2242,7 +2242,29 @@
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000004",
+        "src": "assets/documentos/P0036/boe-25-09-1980.pdf",
+        "nombre_archivo": "boe-25-09-1980.pdf",
+        "formato": "application/pdf",
+        "titulo": "BOE 25 09 1980",
+        "fecha": "25/09/1980",
+        "descripcion": "Expropiación terrenos de Cayetano de la Dehesa Martin en Riego del Camino (Zamora)\nPágina 6",
+        "personas": [
+          "P0036"
+        ],
+        "paginas": [
+          "assets/documentos/P0036/d000004-paginas/pagina-001.webp",
+          "assets/documentos/P0036/d000004-paginas/pagina-002.webp",
+          "assets/documentos/P0036/d000004-paginas/pagina-003.webp",
+          "assets/documentos/P0036/d000004-paginas/pagina-004.webp",
+          "assets/documentos/P0036/d000004-paginas/pagina-005.webp",
+          "assets/documentos/P0036/d000004-paginas/pagina-006.webp",
+          "assets/documentos/P0036/d000004-paginas/pagina-007.webp"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []
