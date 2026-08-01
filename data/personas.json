@@ -35,9 +35,9 @@
         "fecha": "25/02/1944",
         "descripcion": "Concesión Pensión a sus padres en la pagina 6",
         "personas": [
+          "P0001",
           "P0037",
-          "P0002",
-          "P0001"
+          "P0002"
         ],
         "paginas": [
           "assets/documentos/P0037/d000003-paginas/pagina-001.webp",
@@ -109,9 +109,9 @@
         "fecha": "25/02/1944",
         "descripcion": "Concesión Pensión a sus padres en la pagina 6",
         "personas": [
+          "P0001",
           "P0037",
-          "P0002",
-          "P0001"
+          "P0002"
         ],
         "paginas": [
           "assets/documentos/P0037/d000003-paginas/pagina-001.webp",
@@ -417,6 +417,24 @@
           "P0015",
           "P0016"
         ]
+      },
+      {
+        "id": "F000011",
+        "src": "assets/fotos/P0007/iparraguirre-pmmle.jpg",
+        "titulo": "Piso Iparraguirre",
+        "fecha": "Aprox 1968",
+        "lugar": "Bilbao",
+        "descripcion": "Piso de Iparraguirre",
+        "etiquetas": [
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0007",
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
       }
     ],
     "documentos": [
@@ -544,6 +562,24 @@
           "P0008",
           "P0009"
         ]
+      },
+      {
+        "id": "F000015",
+        "src": "assets/fotos/P0014/iparraguirre-mmml.jpg",
+        "titulo": "Iparraguirre",
+        "fecha": "Aprox 1966",
+        "lugar": "Bilbaio",
+        "descripcion": "",
+        "etiquetas": [
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013",
+          "P0010",
+          "P0009"
+        ]
       }
     ],
     "documentos": [],
@@ -623,6 +659,24 @@
           "P0014",
           "P0015",
           "P0016"
+        ]
+      },
+      {
+        "id": "F000015",
+        "src": "assets/fotos/P0014/iparraguirre-mmml.jpg",
+        "titulo": "Iparraguirre",
+        "fecha": "Aprox 1966",
+        "lugar": "Bilbaio",
+        "descripcion": "",
+        "etiquetas": [
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013",
+          "P0010",
+          "P0009"
         ]
       }
     ],
@@ -724,6 +778,75 @@
           "P0015",
           "P0016"
         ]
+      },
+      {
+        "id": "F000011",
+        "src": "assets/fotos/P0007/iparraguirre-pmmle.jpg",
+        "titulo": "Piso Iparraguirre",
+        "fecha": "Aprox 1968",
+        "lugar": "Bilbao",
+        "descripcion": "Piso de Iparraguirre",
+        "etiquetas": [
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0007",
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000012",
+        "src": "assets/fotos/P0015/iparraguirre-mmle.jpg",
+        "titulo": "Piso Iparraguirre",
+        "fecha": "Diciembre 1967",
+        "lugar": "Bilbao",
+        "descripcion": "Navidades en Iparraguirre",
+        "etiquetas": [
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000015",
+        "src": "assets/fotos/P0014/iparraguirre-mmml.jpg",
+        "titulo": "Iparraguirre",
+        "fecha": "Aprox 1966",
+        "lugar": "Bilbaio",
+        "descripcion": "",
+        "etiquetas": [
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013",
+          "P0010",
+          "P0009"
+        ]
+      },
+      {
+        "id": "F000016",
+        "src": "assets/fotos/P0014/parque-mml.jpg",
+        "titulo": "Parque",
+        "fecha": "Aprox 1966",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Parque"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
@@ -793,6 +916,107 @@
           "P0015",
           "P0016"
         ]
+      },
+      {
+        "id": "F000011",
+        "src": "assets/fotos/P0007/iparraguirre-pmmle.jpg",
+        "titulo": "Piso Iparraguirre",
+        "fecha": "Aprox 1968",
+        "lugar": "Bilbao",
+        "descripcion": "Piso de Iparraguirre",
+        "etiquetas": [
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0007",
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000012",
+        "src": "assets/fotos/P0015/iparraguirre-mmle.jpg",
+        "titulo": "Piso Iparraguirre",
+        "fecha": "Diciembre 1967",
+        "lugar": "Bilbao",
+        "descripcion": "Navidades en Iparraguirre",
+        "etiquetas": [
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000013",
+        "src": "assets/fotos/P0015/parque-mme.jpg",
+        "titulo": "Parque",
+        "fecha": "Aprox 1971",
+        "lugar": "Bilbao",
+        "descripcion": "Parque de los patos",
+        "etiquetas": [
+          "Parque"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000014",
+        "src": "assets/fotos/P0014/iparraguirre-ml.jpg",
+        "titulo": "Piso Iparraguirre",
+        "fecha": "Aprox 1966",
+        "lugar": "",
+        "descripcion": "Navidades",
+        "etiquetas": [
+          "Iparraguirre",
+          "Navidad"
+        ],
+        "personas": [
+          "P0014",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000015",
+        "src": "assets/fotos/P0014/iparraguirre-mmml.jpg",
+        "titulo": "Iparraguirre",
+        "fecha": "Aprox 1966",
+        "lugar": "Bilbaio",
+        "descripcion": "",
+        "etiquetas": [
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013",
+          "P0010",
+          "P0009"
+        ]
+      },
+      {
+        "id": "F000016",
+        "src": "assets/fotos/P0014/parque-mml.jpg",
+        "titulo": "Parque",
+        "fecha": "Aprox 1966",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Parque"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
@@ -830,7 +1054,7 @@
       "P0010"
     ],
     "biografia": "",
-    "fotografia_principal": "",
+    "fotografia_principal": "assets/fotos/P0014/iparraguirre-ml.jpg",
     "fotografias": [
       {
         "id": "F000009",
@@ -848,6 +1072,107 @@
           "P0014",
           "P0015",
           "P0016"
+        ]
+      },
+      {
+        "id": "F000011",
+        "src": "assets/fotos/P0007/iparraguirre-pmmle.jpg",
+        "titulo": "Piso Iparraguirre",
+        "fecha": "Aprox 1968",
+        "lugar": "Bilbao",
+        "descripcion": "Piso de Iparraguirre",
+        "etiquetas": [
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0007",
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000012",
+        "src": "assets/fotos/P0015/iparraguirre-mmle.jpg",
+        "titulo": "Piso Iparraguirre",
+        "fecha": "Diciembre 1967",
+        "lugar": "Bilbao",
+        "descripcion": "Navidades en Iparraguirre",
+        "etiquetas": [
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000013",
+        "src": "assets/fotos/P0015/parque-mme.jpg",
+        "titulo": "Parque",
+        "fecha": "Aprox 1971",
+        "lugar": "Bilbao",
+        "descripcion": "Parque de los patos",
+        "etiquetas": [
+          "Parque"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000014",
+        "src": "assets/fotos/P0014/iparraguirre-ml.jpg",
+        "titulo": "Piso Iparraguirre",
+        "fecha": "Aprox 1966",
+        "lugar": "",
+        "descripcion": "Navidades",
+        "etiquetas": [
+          "Iparraguirre",
+          "Navidad"
+        ],
+        "personas": [
+          "P0014",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000015",
+        "src": "assets/fotos/P0014/iparraguirre-mmml.jpg",
+        "titulo": "Iparraguirre",
+        "fecha": "Aprox 1966",
+        "lugar": "Bilbaio",
+        "descripcion": "",
+        "etiquetas": [
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013",
+          "P0010",
+          "P0009"
+        ]
+      },
+      {
+        "id": "F000016",
+        "src": "assets/fotos/P0014/parque-mml.jpg",
+        "titulo": "Parque",
+        "fecha": "Aprox 1966",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Parque"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013"
         ]
       }
     ],
@@ -930,6 +1255,57 @@
           "P0014",
           "P0015",
           "P0016"
+        ]
+      },
+      {
+        "id": "F000011",
+        "src": "assets/fotos/P0007/iparraguirre-pmmle.jpg",
+        "titulo": "Piso Iparraguirre",
+        "fecha": "Aprox 1968",
+        "lugar": "Bilbao",
+        "descripcion": "Piso de Iparraguirre",
+        "etiquetas": [
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0007",
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000012",
+        "src": "assets/fotos/P0015/iparraguirre-mmle.jpg",
+        "titulo": "Piso Iparraguirre",
+        "fecha": "Diciembre 1967",
+        "lugar": "Bilbao",
+        "descripcion": "Navidades en Iparraguirre",
+        "etiquetas": [
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000013",
+        "src": "assets/fotos/P0015/parque-mme.jpg",
+        "titulo": "Parque",
+        "fecha": "Aprox 1971",
+        "lugar": "Bilbao",
+        "descripcion": "Parque de los patos",
+        "etiquetas": [
+          "Parque"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0013"
         ]
       }
     ],
@@ -1671,9 +2047,9 @@
         "fecha": "25/02/1944",
         "descripcion": "Concesión Pensión a sus padres en la pagina 6",
         "personas": [
+          "P0001",
           "P0037",
-          "P0002",
-          "P0001"
+          "P0002"
         ],
         "paginas": [
           "assets/documentos/P0037/d000003-paginas/pagina-001.webp",
