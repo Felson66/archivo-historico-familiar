@@ -33,7 +33,7 @@
         "formato": "application/pdf",
         "titulo": "BOE 1944 56",
         "fecha": "25/02/1944",
-        "descripcion": "Concesión Pensión a sus padres en la pagina 6",
+        "descripcion": "Concesión Pensión a los padres de Andrés de la Dehesa Martin en la pagina 6",
         "personas": [
           "P0001",
           "P0037",
@@ -107,7 +107,7 @@
         "formato": "application/pdf",
         "titulo": "BOE 1944 56",
         "fecha": "25/02/1944",
-        "descripcion": "Concesión Pensión a sus padres en la pagina 6",
+        "descripcion": "Concesión Pensión a los padres de Andrés de la Dehesa Martin en la pagina 6",
         "personas": [
           "P0001",
           "P0037",
@@ -435,6 +435,22 @@
           "P0012",
           "P0013"
         ]
+      },
+      {
+        "id": "F000020",
+        "src": "assets/fotos/P0007/paga.jpg",
+        "titulo": "Paga",
+        "fecha": "Aprox 1967",
+        "lugar": "Pagasarri",
+        "descripcion": "",
+        "etiquetas": [
+          "Pagasarri"
+        ],
+        "personas": [
+          "P0007",
+          "P0012",
+          "P0013"
+        ]
       }
     ],
     "documentos": [
@@ -513,6 +529,19 @@
           "P0008",
           "P0009"
         ]
+      },
+      {
+        "id": "F000018",
+        "src": "assets/fotos/P0009/abuela-lapalma.jpg",
+        "titulo": "La Palma",
+        "fecha": "2026",
+        "lugar": "Bilbao, calle correo",
+        "descripcion": "En esta zapatería nos hacían 10% de dto al decir \"Viuda de Liz\", ersa un acuerdo entre gremios. Actualmente es un bar-restaurante",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0008"
+        ]
       }
     ],
     "documentos": [],
@@ -548,7 +577,7 @@
     "rol": "",
     "padres": [],
     "biografia": "",
-    "fotografia_principal": "",
+    "fotografia_principal": "assets/fotos/P0009/abuela-lapalma.jpg",
     "fotografias": [
       {
         "id": "F000006",
@@ -574,11 +603,41 @@
           "Iparraguirre"
         ],
         "personas": [
+          "P0009",
           "P0014",
           "P0012",
           "P0013",
-          "P0010",
-          "P0009"
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000018",
+        "src": "assets/fotos/P0009/abuela-lapalma.jpg",
+        "titulo": "La Palma",
+        "fecha": "2026",
+        "lugar": "Bilbao, calle correo",
+        "descripcion": "En esta zapatería nos hacían 10% de dto al decir \"Viuda de Liz\", ersa un acuerdo entre gremios. Actualmente es un bar-restaurante",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0008"
+        ]
+      },
+      {
+        "id": "F000019",
+        "src": "assets/fotos/P0009/abuela.jpg",
+        "titulo": "Abuela",
+        "fecha": "Aprox 1965",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Abuela"
+        ],
+        "personas": [
+          "P0009",
+          "P0014",
+          "P0012",
+          "P0013"
         ]
       }
     ],
@@ -672,11 +731,11 @@
           "Iparraguirre"
         ],
         "personas": [
+          "P0009",
           "P0014",
           "P0012",
           "P0013",
-          "P0010",
-          "P0009"
+          "P0010"
         ]
       }
     ],
@@ -808,9 +867,9 @@
           "Iparraguirre"
         ],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -825,11 +884,11 @@
           "Iparraguirre"
         ],
         "personas": [
+          "P0009",
           "P0014",
           "P0012",
           "P0013",
-          "P0010",
-          "P0009"
+          "P0010"
         ]
       },
       {
@@ -843,6 +902,57 @@
           "Parque"
         ],
         "personas": [
+          "P0012",
+          "P0014",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000019",
+        "src": "assets/fotos/P0009/abuela.jpg",
+        "titulo": "Abuela",
+        "fecha": "Aprox 1965",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Abuela"
+        ],
+        "personas": [
+          "P0009",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000020",
+        "src": "assets/fotos/P0007/paga.jpg",
+        "titulo": "Paga",
+        "fecha": "Aprox 1967",
+        "lugar": "Pagasarri",
+        "descripcion": "",
+        "etiquetas": [
+          "Pagasarri"
+        ],
+        "personas": [
+          "P0007",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000021",
+        "src": "assets/fotos/P0015/rismmle.jpg",
+        "titulo": "Ris",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "Playa de Ris",
+        "etiquetas": [
+          "Noja",
+          "Ris"
+        ],
+        "personas": [
+          "P0015",
           "P0014",
           "P0012",
           "P0013"
@@ -946,9 +1056,9 @@
           "Iparraguirre"
         ],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -963,9 +1073,9 @@
           "Parque"
         ],
         "personas": [
+          "P0013",
           "P0015",
-          "P0014",
-          "P0013"
+          "P0014"
         ]
       },
       {
@@ -980,8 +1090,8 @@
           "Navidad"
         ],
         "personas": [
-          "P0014",
-          "P0013"
+          "P0013",
+          "P0014"
         ]
       },
       {
@@ -995,11 +1105,11 @@
           "Iparraguirre"
         ],
         "personas": [
+          "P0009",
           "P0014",
           "P0012",
           "P0013",
-          "P0010",
-          "P0009"
+          "P0010"
         ]
       },
       {
@@ -1013,8 +1123,75 @@
           "Parque"
         ],
         "personas": [
+          "P0012",
+          "P0014",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000019",
+        "src": "assets/fotos/P0009/abuela.jpg",
+        "titulo": "Abuela",
+        "fecha": "Aprox 1965",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Abuela"
+        ],
+        "personas": [
+          "P0009",
           "P0014",
           "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000020",
+        "src": "assets/fotos/P0007/paga.jpg",
+        "titulo": "Paga",
+        "fecha": "Aprox 1967",
+        "lugar": "Pagasarri",
+        "descripcion": "",
+        "etiquetas": [
+          "Pagasarri"
+        ],
+        "personas": [
+          "P0007",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000021",
+        "src": "assets/fotos/P0015/rismmle.jpg",
+        "titulo": "Ris",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "Playa de Ris",
+        "etiquetas": [
+          "Noja",
+          "Ris"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000022",
+        "src": "assets/fotos/P0014/risml.jpg",
+        "titulo": "RIS",
+        "fecha": "Aprox 1972",
+        "lugar": "Noja",
+        "descripcion": "En Ris con Jose Ignacio Amann",
+        "etiquetas": [
+          "Noja",
+          "Ris"
+        ],
+        "personas": [
+          "P0014",
           "P0013"
         ]
       }
@@ -1103,9 +1280,9 @@
           "Iparraguirre"
         ],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -1120,9 +1297,9 @@
           "Parque"
         ],
         "personas": [
+          "P0013",
           "P0015",
-          "P0014",
-          "P0013"
+          "P0014"
         ]
       },
       {
@@ -1137,8 +1314,8 @@
           "Navidad"
         ],
         "personas": [
-          "P0014",
-          "P0013"
+          "P0013",
+          "P0014"
         ]
       },
       {
@@ -1152,11 +1329,11 @@
           "Iparraguirre"
         ],
         "personas": [
+          "P0009",
           "P0014",
           "P0012",
           "P0013",
-          "P0010",
-          "P0009"
+          "P0010"
         ]
       },
       {
@@ -1170,8 +1347,59 @@
           "Parque"
         ],
         "personas": [
+          "P0012",
+          "P0014",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000019",
+        "src": "assets/fotos/P0009/abuela.jpg",
+        "titulo": "Abuela",
+        "fecha": "Aprox 1965",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Abuela"
+        ],
+        "personas": [
+          "P0009",
           "P0014",
           "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000021",
+        "src": "assets/fotos/P0015/rismmle.jpg",
+        "titulo": "Ris",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "Playa de Ris",
+        "etiquetas": [
+          "Noja",
+          "Ris"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000022",
+        "src": "assets/fotos/P0014/risml.jpg",
+        "titulo": "RIS",
+        "fecha": "Aprox 1972",
+        "lugar": "Noja",
+        "descripcion": "En Ris con Jose Ignacio Amann",
+        "etiquetas": [
+          "Noja",
+          "Ris"
+        ],
+        "personas": [
+          "P0014",
           "P0013"
         ]
       }
@@ -1286,9 +1514,9 @@
           "Iparraguirre"
         ],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -1303,8 +1531,26 @@
           "Parque"
         ],
         "personas": [
+          "P0013",
+          "P0015",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000021",
+        "src": "assets/fotos/P0015/rismmle.jpg",
+        "titulo": "Ris",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "Playa de Ris",
+        "etiquetas": [
+          "Noja",
+          "Ris"
+        ],
+        "personas": [
           "P0015",
           "P0014",
+          "P0012",
           "P0013"
         ]
       }
@@ -1813,8 +2059,23 @@
       "P0027"
     ],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0028/amets-portada.jpg",
+    "fotografias": [
+      {
+        "id": "F000017",
+        "src": "assets/fotos/P0028/amets-portada.jpg",
+        "titulo": "Amets Portada",
+        "fecha": "2026",
+        "lugar": "Bilbao",
+        "descripcion": "Amets",
+        "etiquetas": [
+          "Amets"
+        ],
+        "personas": [
+          "P0028"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
@@ -2045,7 +2306,7 @@
         "formato": "application/pdf",
         "titulo": "BOE 1944 56",
         "fecha": "25/02/1944",
-        "descripcion": "Concesión Pensión a sus padres en la pagina 6",
+        "descripcion": "Concesión Pensión a los padres de Andrés de la Dehesa Martin en la pagina 6",
         "personas": [
           "P0001",
           "P0037",
