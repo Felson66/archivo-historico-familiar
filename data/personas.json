@@ -1288,6 +1288,25 @@
           "P0013",
           "P0014"
         ]
+      },
+      {
+        "id": "F000034",
+        "src": "assets/fotos/P0015/comunionedu.jpg",
+        "titulo": "Comunión Edu",
+        "fecha": "Aprox 1973",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Edu",
+          "Comunion",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
@@ -1528,6 +1547,25 @@
         "personas": [
           "P0014"
         ]
+      },
+      {
+        "id": "F000034",
+        "src": "assets/fotos/P0015/comunionedu.jpg",
+        "titulo": "Comunión Edu",
+        "fecha": "Aprox 1973",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Edu",
+          "Comunion",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
@@ -1697,6 +1735,25 @@
           "P0010",
           "P0014",
           "P0015"
+        ]
+      },
+      {
+        "id": "F000034",
+        "src": "assets/fotos/P0015/comunionedu.jpg",
+        "titulo": "Comunión Edu",
+        "fecha": "Aprox 1973",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Edu",
+          "Comunion",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0013"
         ]
       }
     ],
