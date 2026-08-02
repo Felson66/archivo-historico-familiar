@@ -539,8 +539,8 @@
         "descripcion": "En esta zapatería nos hacían 10% de dto al decir \"Viuda de Liz\", ersa un acuerdo entre gremios. Actualmente es un bar-restaurante",
         "etiquetas": [],
         "personas": [
-          "P0009",
-          "P0008"
+          "P0008",
+          "P0009"
         ]
       }
     ],
@@ -619,8 +619,8 @@
         "descripcion": "En esta zapatería nos hacían 10% de dto al decir \"Viuda de Liz\", ersa un acuerdo entre gremios. Actualmente es un bar-restaurante",
         "etiquetas": [],
         "personas": [
-          "P0009",
-          "P0008"
+          "P0008",
+          "P0009"
         ]
       },
       {
@@ -952,9 +952,9 @@
           "Ris"
         ],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       }
@@ -1173,9 +1173,9 @@
           "Ris"
         ],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -1191,8 +1191,8 @@
           "Ris"
         ],
         "personas": [
-          "P0014",
-          "P0013"
+          "P0013",
+          "P0014"
         ]
       }
     ],
@@ -1381,9 +1381,9 @@
           "Ris"
         ],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -1399,8 +1399,8 @@
           "Ris"
         ],
         "personas": [
-          "P0014",
-          "P0013"
+          "P0013",
+          "P0014"
         ]
       }
     ],
@@ -1548,9 +1548,9 @@
           "Ris"
         ],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       }
@@ -1558,7 +1558,8 @@
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 54%"
   },
   {
     "datos_resumen": "11 may 1971",
@@ -2079,7 +2080,8 @@
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "19% 88%"
   },
   {
     "datos_resumen": "Excónyuge de Elena",
