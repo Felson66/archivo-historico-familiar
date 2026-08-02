@@ -1940,6 +1940,22 @@
         "personas": [
           "P0025"
         ]
+      },
+      {
+        "id": "F000025",
+        "src": "assets/fotos/P0025/adriyale.jpg",
+        "titulo": "AdriYAle",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Adri",
+          "Ale"
+        ],
+        "personas": [
+          "P0025",
+          "P0026"
+        ]
       }
     ],
     "documentos": [],
@@ -1975,7 +1991,24 @@
     ],
     "biografia": "",
     "fotografia_principal": "",
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000025",
+        "src": "assets/fotos/P0025/adriyale.jpg",
+        "titulo": "AdriYAle",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Adri",
+          "Ale"
+        ],
+        "personas": [
+          "P0025",
+          "P0026"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
