@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#183c35">
   <title>Administración · Archivo Histórico Familiar</title>
-  <link rel="stylesheet" href="css/admin.css?v=3.4.0">
+  <link rel="stylesheet" href="css/admin-v3.8.0.css">
 </head>
 <body>
   <header class="admin-topbar">
     <a href="index.html" class="back">← Volver al archivo</a>
     <div>
       <h1>Centro de Administración</h1>
-      <p>Fotografías y documentos · v3.5.0</p>
+      <p>Fotografías, documentos y encuadres · v3.8.0</p>
     </div>
   </header>
 
@@ -42,6 +42,41 @@
       </div>
 
       <div id="personSummary" class="person-summary hidden"></div>
+
+      <section id="photoFraming" class="photo-framing hidden" aria-label="Encuadre de la fotografía principal">
+        <div class="framing-heading">
+          <div>
+            <span class="eyebrow">Fotografía principal</span>
+            <h3>Ajustar encuadre de la tarjeta</h3>
+            <p>Mueve los controles hasta que el rostro quede correctamente situado. El ajuste se guarda solo para esta persona.</p>
+          </div>
+          <button id="resetPhotoPosition" class="secondary" type="button">Restablecer</button>
+        </div>
+        <div class="framing-layout">
+          <div class="framing-preview">
+            <img id="framingPreviewImage" alt="Vista previa del encuadre">
+            <div class="framing-preview-text">
+              <span id="framingPreviewState"></span>
+              <strong id="framingPreviewName"></strong>
+              <small id="framingPreviewSummary"></small>
+            </div>
+          </div>
+          <div class="framing-controls">
+            <label>
+              Posición horizontal
+              <input id="photoPositionX" type="range" min="0" max="100" step="1" value="50">
+              <output id="photoPositionXValue">50%</output>
+            </label>
+            <label>
+              Posición vertical
+              <input id="photoPositionY" type="range" min="0" max="100" step="1" value="50">
+              <output id="photoPositionYValue">50%</output>
+            </label>
+            <p class="field-help">El valor se aplicará a las tarjetas y a la cabecera de la ficha pública.</p>
+            <button id="savePhotoPosition" class="primary" type="button">Guardar encuadre</button>
+          </div>
+        </div>
+      </section>
 
       <div class="content-tabs" role="tablist" aria-label="Contenido de la persona">
         <button id="photosTab" class="content-tab active" data-tab="photos" role="tab" aria-selected="true">📷 Fotografías <span id="photosCount">0</span></button>
@@ -116,6 +151,6 @@
     </section>
   </main>
 
-  <script src="js/admin.js?v=3.4.0"></script>
+  <script src="js/admin-v3.8.0.js"></script>
 </body>
 </html>
