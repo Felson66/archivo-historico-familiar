@@ -2063,12 +2063,12 @@
     "fotografia_principal": "assets/fotos/P0028/amets-portada.jpg",
     "fotografias": [
       {
-        "id": "F000017",
+        "id": "F000023",
         "src": "assets/fotos/P0028/amets-portada.jpg",
         "titulo": "Amets Portada",
         "fecha": "2026",
         "lugar": "Bilbao",
-        "descripcion": "Amets",
+        "descripcion": "",
         "etiquetas": [
           "Amets"
         ],
@@ -2081,7 +2081,7 @@
     "cronologia": [],
     "lugares": [],
     "notas": [],
-    "fotoPosicion": "19% 88%"
+    "fotoPosicion": "19% 40%"
   },
   {
     "datos_resumen": "Excónyuge de Elena",
