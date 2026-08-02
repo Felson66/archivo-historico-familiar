@@ -536,7 +536,7 @@
         "titulo": "La Palma",
         "fecha": "2026",
         "lugar": "Bilbao, calle correo",
-        "descripcion": "En esta zapatería nos hacían 10% de dto al decir \"Viuda de Liz\", ersa un acuerdo entre gremios. Actualmente es un bar-restaurante",
+        "descripcion": "En esta zapatería nos hacían 10% de dto al decir \"Viuda de Liz\", era un acuerdo entre gremios. Actualmente es un bar-restaurante",
         "etiquetas": [],
         "personas": [
           "P0008",
@@ -616,7 +616,7 @@
         "titulo": "La Palma",
         "fecha": "2026",
         "lugar": "Bilbao, calle correo",
-        "descripcion": "En esta zapatería nos hacían 10% de dto al decir \"Viuda de Liz\", ersa un acuerdo entre gremios. Actualmente es un bar-restaurante",
+        "descripcion": "En esta zapatería nos hacían 10% de dto al decir \"Viuda de Liz\", era un acuerdo entre gremios. Actualmente es un bar-restaurante",
         "etiquetas": [],
         "personas": [
           "P0008",
@@ -644,7 +644,8 @@
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "† 28 abr 2009",
