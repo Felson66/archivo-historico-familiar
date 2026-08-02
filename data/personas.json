@@ -501,12 +501,12 @@
         "texto": "La escritura indica que ya era inquilino antes de la compra."
       },
       {
-        "tipo": "memoria_familiar",
+        "tipo": "memoria familiar",
         "texto": "El taller de sastrería estaba dentro de la vivienda familiar."
       },
       {
-        "tipo": "memoria_familiar",
-        "texto": "El despacho tenía una línea telefónica independiente."
+        "tipo": "memoria familiar",
+        "texto": "El despacho tenía un timbre independiente."
       }
     ],
     "nombre": "Francisco Liz Rivera",
