@@ -693,7 +693,7 @@
       "P0009"
     ],
     "biografia": "",
-    "fotografia_principal": "",
+    "fotografia_principal": "assets/fotos/P0010/mamale.jpg",
     "fotografias": [
       {
         "id": "F000007",
@@ -743,12 +743,31 @@
           "P0013",
           "P0010"
         ]
+      },
+      {
+        "id": "F000026",
+        "src": "assets/fotos/P0010/mamale.jpg",
+        "titulo": "Mama, Lourdes y Eduardo",
+        "fecha": "Aprox 1969",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Lourdes",
+          "Edu",
+          "Mama"
+        ],
+        "personas": [
+          "P0010",
+          "P0014",
+          "P0015"
+        ]
       }
     ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "† abr 2010",
@@ -1408,6 +1427,24 @@
           "P0013",
           "P0014"
         ]
+      },
+      {
+        "id": "F000026",
+        "src": "assets/fotos/P0010/mamale.jpg",
+        "titulo": "Mama, Lourdes y Eduardo",
+        "fecha": "Aprox 1969",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Lourdes",
+          "Edu",
+          "Mama"
+        ],
+        "personas": [
+          "P0010",
+          "P0014",
+          "P0015"
+        ]
       }
     ],
     "documentos": [],
@@ -1559,6 +1596,24 @@
           "P0014",
           "P0013"
         ]
+      },
+      {
+        "id": "F000026",
+        "src": "assets/fotos/P0010/mamale.jpg",
+        "titulo": "Mama, Lourdes y Eduardo",
+        "fecha": "Aprox 1969",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Lourdes",
+          "Edu",
+          "Mama"
+        ],
+        "personas": [
+          "P0010",
+          "P0014",
+          "P0015"
+        ]
       }
     ],
     "documentos": [],
@@ -1597,7 +1652,7 @@
       "P0010"
     ],
     "biografia": "",
-    "fotografia_principal": "",
+    "fotografia_principal": "assets/fotos/P0016/nojaelenabici.jpg",
     "fotografias": [
       {
         "id": "F000009",
@@ -1616,12 +1671,25 @@
           "P0015",
           "P0016"
         ]
+      },
+      {
+        "id": "F000027",
+        "src": "assets/fotos/P0016/nojaelenabici.jpg",
+        "titulo": "NojaElenaBici",
+        "fecha": "Aprox 74",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016"
+        ]
       }
     ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "Excónyuge de Manuel",
