@@ -1903,7 +1903,7 @@
     "datos_resumen": "15 ene · año pendiente",
     "lugar_descanso": null,
     "hijos": [],
-    "estado": "hipotesis",
+    "estado": "hipótesis",
     "conyuges": [],
     "hechos": [
       {
@@ -1924,12 +1924,34 @@
       "P0024"
     ],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0025/adrian.jpg",
+    "fotografias": [
+      {
+        "id": "F000024",
+        "src": "assets/fotos/P0025/adrian.jpg",
+        "titulo": "Adrian",
+        "fecha": "2017",
+        "lugar": "Camboya",
+        "descripcion": "",
+        "etiquetas": [
+          "Adrian",
+          "Camboya"
+        ],
+        "personas": [
+          "P0025"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 50%",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": ""
   },
   {
     "datos_resumen": "28 jul 1998",
