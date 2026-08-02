@@ -554,9 +554,10 @@
         "fecha": "",
         "descripcion": "Situación Nicho Derio",
         "personas": [
-          "P0009",
           "P0008",
-          "P0010"
+          "P0009",
+          "P0010",
+          "P0011"
         ]
       }
     ],
@@ -671,16 +672,22 @@
         "fecha": "",
         "descripcion": "Situación Nicho Derio",
         "personas": [
-          "P0009",
           "P0008",
-          "P0010"
+          "P0009",
+          "P0010",
+          "P0011"
         ]
       }
     ],
     "cronologia": [],
     "lugares": [],
     "notas": [],
-    "fotoPosicion": "50% 50%"
+    "fotoPosicion": "50% 50%",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "21/03/1996",
+    "lugar_defuncion": "",
+    "profesion": ""
   },
   {
     "datos_resumen": "† 28 abr 2009",
@@ -803,9 +810,10 @@
         "fecha": "",
         "descripcion": "Situación Nicho Derio",
         "personas": [
-          "P0009",
           "P0008",
-          "P0010"
+          "P0009",
+          "P0010",
+          "P0011"
         ]
       }
     ],
@@ -854,7 +862,23 @@
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000005",
+        "src": "assets/documentos/P0009/nicho-derio.txt",
+        "nombre_archivo": "nicho-derio.txt",
+        "formato": "text/plain",
+        "titulo": "Nicho Derio",
+        "fecha": "",
+        "descripcion": "Situación Nicho Derio",
+        "personas": [
+          "P0008",
+          "P0009",
+          "P0010",
+          "P0011"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []
@@ -2079,19 +2103,15 @@
     "notas": []
   },
   {
-    "datos_resumen": "Fecha pendiente",
+    "datos_resumen": "",
     "lugar_descanso": null,
     "hijos": [],
-    "estado": "hipótesis",
+    "estado": "documentado",
     "conyuges": [],
     "hechos": [
       {
-        "tipo": "memoria_familiar",
+        "tipo": "documentado",
         "texto": "Hija de Raquel y Nicolás."
-      },
-      {
-        "tipo": "hipotesis",
-        "texto": "Fecha y apellidos completos pendientes de confirmación."
       }
     ],
     "nombre": "Arianne Soengas Hoya",
@@ -2525,19 +2545,15 @@
     "notas": []
   },
   {
-    "datos_resumen": "Fecha pendiente",
+    "datos_resumen": "",
     "lugar_descanso": null,
     "hijos": [],
-    "estado": "hipotesis",
+    "estado": "documentado",
     "conyuges": [],
     "hechos": [
       {
-        "tipo": "memoria_familiar",
+        "tipo": "documentado",
         "texto": "Hijo de Raquel y Nicolás."
-      },
-      {
-        "tipo": "hipotesis",
-        "texto": "Fecha y apellidos completos pendientes de confirmación."
       }
     ],
     "nombre": "Noah Soengas Hoya",
@@ -2598,7 +2614,12 @@
     "cronologia": [],
     "lugares": [],
     "notas": [],
-    "fotoPosicion": "50% 50%"
+    "fotoPosicion": "50% 50%",
+    "fecha_nacimiento": "19/07/2018",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": ""
   },
   {
     "datos_resumen": "Azpeitia y Riego del Camino · siglo XX",
