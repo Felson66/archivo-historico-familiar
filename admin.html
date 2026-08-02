@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#183c35">
   <title>Administración · Archivo Histórico Familiar</title>
-  <link rel="stylesheet" href="css/admin-v3.8.0.css">
+  <link rel="stylesheet" href="css/admin-v3.9.0.css">
 </head>
 <body>
   <header class="admin-topbar">
     <a href="index.html" class="back">← Volver al archivo</a>
     <div>
       <h1>Centro de Administración</h1>
-      <p>Fotografías, documentos y encuadres · v3.8.0</p>
+      <p>Archivo personal, documentos y biografía · v3.9.0</p>
     </div>
   </header>
 
@@ -81,11 +81,89 @@
       <div class="content-tabs" role="tablist" aria-label="Contenido de la persona">
         <button id="photosTab" class="content-tab active" data-tab="photos" role="tab" aria-selected="true">📷 Fotografías <span id="photosCount">0</span></button>
         <button id="documentsTab" class="content-tab" data-tab="documents" role="tab" aria-selected="false">📄 Documentos <span id="documentsCount">0</span></button>
+        <button id="biographyTab" class="content-tab" data-tab="biography" role="tab" aria-selected="false">✍️ Datos y biografía <span id="factsCount">0</span></button>
       </div>
 
       <div id="galleryEmpty" class="empty-state hidden">Selecciona una persona para gestionar su archivo.</div>
       <div id="photoGallery" class="photo-gallery"></div>
       <div id="documentGallery" class="document-gallery hidden"></div>
+
+      <div id="biographyPanel" class="biography-panel hidden">
+        <section class="bio-section">
+          <div class="bio-section-heading">
+            <div>
+              <span class="eyebrow">Datos estructurados</span>
+              <h3>Datos personales</h3>
+              <p>Estos campos alimentan las tarjetas, la ficha, el buscador y el árbol.</p>
+            </div>
+          </div>
+
+          <div class="bio-form-grid">
+            <label class="wide">Nombre completo
+              <input id="bioName" type="text" autocomplete="off">
+            </label>
+
+            <label>Fecha de nacimiento
+              <input id="bioBirthDate" type="text" placeholder="Ej. 15 ago 1923">
+            </label>
+            <label>Lugar de nacimiento
+              <input id="bioBirthPlace" type="text" placeholder="Ej. Amorebieta">
+            </label>
+
+            <label>Fecha de defunción
+              <input id="bioDeathDate" type="text" placeholder="Ej. 22 jun 2007">
+            </label>
+            <label>Lugar de defunción
+              <input id="bioDeathPlace" type="text" placeholder="Ej. Bilbao">
+            </label>
+
+            <label>Profesión u oficio
+              <input id="bioProfession" type="text" placeholder="Ej. Sastre">
+            </label>
+            <label>Rol familiar
+              <input id="bioRole" type="text" placeholder="Ej. Abuelo materno">
+            </label>
+
+            <label>Estado de la información
+              <select id="bioState">
+                <option value="documentado">Documentado</option>
+                <option value="memoria familiar">Memoria familiar</option>
+                <option value="hipótesis">Hipótesis</option>
+                <option value="familia reconstituida">Familia reconstituida</option>
+                <option value="pendiente">Pendiente</option>
+              </select>
+            </label>
+
+            <label class="wide">Resumen manual o dato complementario
+              <textarea id="bioSummary" rows="3" placeholder="Se conserva como información complementaria y como respaldo para datos antiguos."></textarea>
+            </label>
+          </div>
+
+          <div class="bio-actions">
+            <button id="savePersonalData" class="primary" type="button">Guardar datos personales</button>
+          </div>
+        </section>
+
+        <section class="bio-section">
+          <div class="bio-section-heading evidence-heading">
+            <div>
+              <span class="eyebrow">Biografía y evidencias</span>
+              <h3>Afirmaciones de la ficha</h3>
+              <p>Cada texto conserva su nivel de certeza. Puedes corregirlo, ordenarlo o eliminarlo.</p>
+            </div>
+            <button id="addFact" class="secondary" type="button">+ Añadir evidencia</button>
+          </div>
+
+          <div id="factsEditorList" class="facts-editor-list"></div>
+
+          <div class="bio-actions">
+            <button id="saveFacts" class="primary" type="button">Guardar biografía y evidencias</button>
+          </div>
+        </section>
+
+        <div id="biographyResult" class="result hidden"></div>
+      </div>
+
       <div id="managerResult" class="result hidden"></div>
     </section>
 
@@ -151,6 +229,6 @@
     </section>
   </main>
 
-  <script src="js/admin-v3.8.0.js"></script>
+  <script src="js/admin-v3.9.0.js"></script>
 </body>
 </html>
