@@ -1776,7 +1776,50 @@
     "padres": [],
     "biografia": "",
     "fotografia_principal": "",
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000029",
+        "src": "assets/fotos/P0032/noah.jpg",
+        "titulo": "Noah",
+        "fecha": "2026",
+        "lugar": "Noja",
+        "descripcion": "No se puede ser más guapo",
+        "etiquetas": [
+          "Noja",
+          "Noah",
+          "Soengas",
+          "Hoya"
+        ],
+        "personas": [
+          "P0032",
+          "P0019",
+          "P0021",
+          "P0023",
+          "P0022"
+        ]
+      },
+      {
+        "id": "F000028",
+        "src": "assets/fotos/P0023/ari.jpg",
+        "titulo": "Ari",
+        "fecha": "2026",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [
+          "Noja",
+          "Ari",
+          "Hoya",
+          "Soengas"
+        ],
+        "personas": [
+          "P0023",
+          "P0021",
+          "P0019",
+          "P0032",
+          "P0022"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
@@ -1855,7 +1898,50 @@
     ],
     "biografia": "",
     "fotografia_principal": "",
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000029",
+        "src": "assets/fotos/P0032/noah.jpg",
+        "titulo": "Noah",
+        "fecha": "2026",
+        "lugar": "Noja",
+        "descripcion": "No se puede ser más guapo",
+        "etiquetas": [
+          "Noja",
+          "Noah",
+          "Soengas",
+          "Hoya"
+        ],
+        "personas": [
+          "P0032",
+          "P0019",
+          "P0021",
+          "P0023",
+          "P0022"
+        ]
+      },
+      {
+        "id": "F000028",
+        "src": "assets/fotos/P0023/ari.jpg",
+        "titulo": "Ari",
+        "fecha": "2026",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [
+          "Noja",
+          "Ari",
+          "Hoya",
+          "Soengas"
+        ],
+        "personas": [
+          "P0023",
+          "P0021",
+          "P0019",
+          "P0032",
+          "P0022"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
@@ -1898,6 +1984,48 @@
           "P0020",
           "P0022"
         ]
+      },
+      {
+        "id": "F000029",
+        "src": "assets/fotos/P0032/noah.jpg",
+        "titulo": "Noah",
+        "fecha": "2026",
+        "lugar": "Noja",
+        "descripcion": "No se puede ser más guapo",
+        "etiquetas": [
+          "Noja",
+          "Noah",
+          "Soengas",
+          "Hoya"
+        ],
+        "personas": [
+          "P0032",
+          "P0019",
+          "P0021",
+          "P0023",
+          "P0022"
+        ]
+      },
+      {
+        "id": "F000028",
+        "src": "assets/fotos/P0023/ari.jpg",
+        "titulo": "Ari",
+        "fecha": "2026",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [
+          "Noja",
+          "Ari",
+          "Hoya",
+          "Soengas"
+        ],
+        "personas": [
+          "P0023",
+          "P0021",
+          "P0019",
+          "P0032",
+          "P0022"
+        ]
       }
     ],
     "documentos": [],
@@ -1909,7 +2037,7 @@
     "datos_resumen": "Fecha pendiente",
     "lugar_descanso": null,
     "hijos": [],
-    "estado": "hipotesis",
+    "estado": "hipótesis",
     "conyuges": [],
     "hechos": [
       {
@@ -1930,12 +2058,61 @@
       "P0022"
     ],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0023/ari.jpg",
+    "fotografias": [
+      {
+        "id": "F000028",
+        "src": "assets/fotos/P0023/ari.jpg",
+        "titulo": "Ari",
+        "fecha": "2026",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [
+          "Noja",
+          "Ari",
+          "Hoya",
+          "Soengas"
+        ],
+        "personas": [
+          "P0023",
+          "P0021",
+          "P0019",
+          "P0032",
+          "P0022"
+        ]
+      },
+      {
+        "id": "F000029",
+        "src": "assets/fotos/P0032/noah.jpg",
+        "titulo": "Noah",
+        "fecha": "2026",
+        "lugar": "Noja",
+        "descripcion": "No se puede ser más guapo",
+        "etiquetas": [
+          "Noja",
+          "Noah",
+          "Soengas",
+          "Hoya"
+        ],
+        "personas": [
+          "P0032",
+          "P0019",
+          "P0021",
+          "P0023",
+          "P0022"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 50%",
+    "fecha_nacimiento": "25/10/2015",
+    "lugar_nacimiento": "Bilbao",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": ""
   },
   {
     "datos_resumen": "Cónyuge de Lourdes",
@@ -2327,12 +2504,56 @@
       "P0022"
     ],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0032/noah.jpg",
+    "fotografias": [
+      {
+        "id": "F000029",
+        "src": "assets/fotos/P0032/noah.jpg",
+        "titulo": "Noah",
+        "fecha": "2026",
+        "lugar": "Noja",
+        "descripcion": "No se puede ser más guapo",
+        "etiquetas": [
+          "Noja",
+          "Noah",
+          "Soengas",
+          "Hoya"
+        ],
+        "personas": [
+          "P0032",
+          "P0019",
+          "P0021",
+          "P0023",
+          "P0022"
+        ]
+      },
+      {
+        "id": "F000028",
+        "src": "assets/fotos/P0023/ari.jpg",
+        "titulo": "Ari",
+        "fecha": "2026",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [
+          "Noja",
+          "Ari",
+          "Hoya",
+          "Soengas"
+        ],
+        "personas": [
+          "P0023",
+          "P0021",
+          "P0019",
+          "P0032",
+          "P0022"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "Azpeitia y Riego del Camino · siglo XX",
