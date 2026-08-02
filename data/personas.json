@@ -1325,7 +1325,7 @@
       "P0010"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0014/iparraguirre-ml.jpg",
+    "fotografia_principal": "assets/fotos/P0014/lourdes.jpg",
     "fotografias": [
       {
         "id": "F000009",
@@ -1514,12 +1514,27 @@
           "P0014",
           "P0015"
         ]
+      },
+      {
+        "id": "F000032",
+        "src": "assets/fotos/P0014/lourdes.jpg",
+        "titulo": "Lourdes",
+        "fecha": "Agosto 2024",
+        "lugar": "Lago Maggiore",
+        "descripcion": "",
+        "etiquetas": [
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014"
+        ]
       }
     ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 7%"
   },
   {
     "datos_resumen": "2 oct 1966 · Bilbao",
@@ -2234,7 +2249,7 @@
       "P0024"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0025/adrian.jpg",
+    "fotografia_principal": "assets/fotos/P0025/adri-hugo.jpg",
     "fotografias": [
       {
         "id": "F000024",
@@ -2254,7 +2269,7 @@
       {
         "id": "F000025",
         "src": "assets/fotos/P0025/adriyale.jpg",
-        "titulo": "AdriYAle",
+        "titulo": "Adri y Ale",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
@@ -2266,13 +2281,28 @@
           "P0025",
           "P0026"
         ]
+      },
+      {
+        "id": "F000033",
+        "src": "assets/fotos/P0025/adri-hugo.jpg",
+        "titulo": "Adri Hugo",
+        "fecha": "Agosto 2026",
+        "lugar": "Nueva York",
+        "descripcion": "Mundial Futbol EEUU 2026",
+        "etiquetas": [
+          "Adrian",
+          "Hugo"
+        ],
+        "personas": [
+          "P0025"
+        ]
       }
     ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
     "notas": [],
-    "fotoPosicion": "50% 50%",
+    "fotoPosicion": "55% 44%",
     "fecha_nacimiento": "",
     "lugar_nacimiento": "",
     "fecha_defuncion": "",
@@ -2305,7 +2335,7 @@
       {
         "id": "F000025",
         "src": "assets/fotos/P0025/adriyale.jpg",
-        "titulo": "AdriYAle",
+        "titulo": "Adri y Ale",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
