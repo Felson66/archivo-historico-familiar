@@ -547,7 +547,12 @@
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "15/10/1961",
+    "lugar_defuncion": "",
+    "profesion": "Sastre"
   },
   {
     "datos_resumen": "Abuela materna",
