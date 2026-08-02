@@ -544,7 +544,22 @@
         ]
       }
     ],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000005",
+        "src": "assets/documentos/P0009/nicho-derio.txt",
+        "nombre_archivo": "nicho-derio.txt",
+        "formato": "text/plain",
+        "titulo": "Nicho Derio",
+        "fecha": "",
+        "descripcion": "Situación Nicho Derio",
+        "personas": [
+          "P0009",
+          "P0008",
+          "P0010"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": [],
@@ -646,7 +661,22 @@
         ]
       }
     ],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000005",
+        "src": "assets/documentos/P0009/nicho-derio.txt",
+        "nombre_archivo": "nicho-derio.txt",
+        "formato": "text/plain",
+        "titulo": "Nicho Derio",
+        "fecha": "",
+        "descripcion": "Situación Nicho Derio",
+        "personas": [
+          "P0009",
+          "P0008",
+          "P0010"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": [],
@@ -763,7 +793,22 @@
         ]
       }
     ],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000005",
+        "src": "assets/documentos/P0009/nicho-derio.txt",
+        "nombre_archivo": "nicho-derio.txt",
+        "formato": "text/plain",
+        "titulo": "Nicho Derio",
+        "fecha": "",
+        "descripcion": "Situación Nicho Derio",
+        "personas": [
+          "P0009",
+          "P0008",
+          "P0010"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": [],
@@ -1791,8 +1836,8 @@
           "Hoya"
         ],
         "personas": [
-          "P0032",
           "P0019",
+          "P0032",
           "P0021",
           "P0023",
           "P0022"
@@ -1812,9 +1857,9 @@
           "Soengas"
         ],
         "personas": [
+          "P0019",
           "P0023",
           "P0021",
-          "P0019",
           "P0032",
           "P0022"
         ]
@@ -1913,8 +1958,8 @@
           "Hoya"
         ],
         "personas": [
-          "P0032",
           "P0019",
+          "P0032",
           "P0021",
           "P0023",
           "P0022"
@@ -1934,9 +1979,9 @@
           "Soengas"
         ],
         "personas": [
+          "P0019",
           "P0023",
           "P0021",
-          "P0019",
           "P0032",
           "P0022"
         ]
@@ -1999,8 +2044,8 @@
           "Hoya"
         ],
         "personas": [
-          "P0032",
           "P0019",
+          "P0032",
           "P0021",
           "P0023",
           "P0022"
@@ -2020,9 +2065,9 @@
           "Soengas"
         ],
         "personas": [
+          "P0019",
           "P0023",
           "P0021",
-          "P0019",
           "P0032",
           "P0022"
         ]
@@ -2074,9 +2119,9 @@
           "Soengas"
         ],
         "personas": [
+          "P0019",
           "P0023",
           "P0021",
-          "P0019",
           "P0032",
           "P0022"
         ]
@@ -2095,8 +2140,8 @@
           "Hoya"
         ],
         "personas": [
-          "P0032",
           "P0019",
+          "P0032",
           "P0021",
           "P0023",
           "P0022"
@@ -2520,8 +2565,8 @@
           "Hoya"
         ],
         "personas": [
-          "P0032",
           "P0019",
+          "P0032",
           "P0021",
           "P0023",
           "P0022"
@@ -2541,9 +2586,9 @@
           "Soengas"
         ],
         "personas": [
+          "P0019",
           "P0023",
           "P0021",
-          "P0019",
           "P0032",
           "P0022"
         ]
