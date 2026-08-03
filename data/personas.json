@@ -542,6 +542,20 @@
           "P0008",
           "P0009"
         ]
+      },
+      {
+        "id": "F000037",
+        "src": "assets/fotos/P0008/nicho-francisco.png",
+        "titulo": "Nicho Francisco",
+        "fecha": "",
+        "lugar": "Derio",
+        "descripcion": "",
+        "etiquetas": [
+          "Derio"
+        ],
+        "personas": [
+          "P0008"
+        ]
       }
     ],
     "documentos": [
@@ -659,6 +673,20 @@
           "P0014",
           "P0012",
           "P0013"
+        ]
+      },
+      {
+        "id": "F000035",
+        "src": "assets/fotos/P0009/nicho-carmen.png",
+        "titulo": "Nicho Carmen",
+        "fecha": "",
+        "lugar": "Derio",
+        "descripcion": "",
+        "etiquetas": [
+          "Derio"
+        ],
+        "personas": [
+          "P0009"
         ]
       }
     ],
@@ -798,6 +826,39 @@
           "P0014",
           "P0015"
         ]
+      },
+      {
+        "id": "F000042",
+        "src": "assets/fotos/P0014/moyuammml.jpg",
+        "titulo": "Moyua",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "Plaza Moyúa",
+        "etiquetas": [
+          "Moyua",
+          "Mama",
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000045",
+        "src": "assets/fotos/P0010/mama.jpg",
+        "titulo": "Mama",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "Mama",
+        "etiquetas": [],
+        "personas": [
+          "P0010"
+        ]
       }
     ],
     "documentos": [
@@ -860,8 +921,23 @@
       "P0009"
     ],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0011/nicho-concepcion.png",
+    "fotografias": [
+      {
+        "id": "F000036",
+        "src": "assets/fotos/P0011/nicho-concepcion.png",
+        "titulo": "Nicho Concepcion",
+        "fecha": "",
+        "lugar": "Derio",
+        "descripcion": "",
+        "etiquetas": [
+          "Derio"
+        ],
+        "personas": [
+          "P0011"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000005",
@@ -881,7 +957,8 @@
     ],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "27 abr 1959",
@@ -1051,6 +1128,138 @@
           "P0014",
           "P0013"
         ]
+      },
+      {
+        "id": "F000041",
+        "src": "assets/fotos/P0014/edurecien.jpg",
+        "titulo": "Edu Recien Nacido",
+        "fecha": "Aprox. 1966",
+        "lugar": "",
+        "descripcion": "Edu Recien Nacido",
+        "etiquetas": [
+          "Manu",
+          "Edu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014",
+          "P0015",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000042",
+        "src": "assets/fotos/P0014/moyuammml.jpg",
+        "titulo": "Moyua",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "Plaza Moyúa",
+        "etiquetas": [
+          "Moyua",
+          "Mama",
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000043",
+        "src": "assets/fotos/P0014/reyesmml.jpg",
+        "titulo": "Reyes",
+        "fecha": "",
+        "lugar": "Iparraguirre",
+        "descripcion": "Día de Reyes",
+        "etiquetas": [
+          "Reyes",
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000044",
+        "src": "assets/fotos/P0014/rismml.jpg",
+        "titulo": "Ris",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "Playa de Ris",
+        "etiquetas": [
+          "Ris",
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000046",
+        "src": "assets/fotos/P0013/manumerlour.jpg",
+        "titulo": "ManuMerLour",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0012",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000047",
+        "src": "assets/fotos/P0013/manumerlour-2.jpg",
+        "titulo": "ManuMerLour 2",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0013",
+          "P0014",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000048",
+        "src": "assets/fotos/P0013/juegommle.jpg",
+        "titulo": "JuegoMMLE",
+        "fecha": "Aprox. 1970",
+        "lugar": "Noja",
+        "descripcion": "Jugando",
+        "etiquetas": [
+          "Noja",
+          "Manu",
+          "Merche",
+          "Lourdes",
+          "Edu"
+        ],
+        "personas": [
+          "P0013",
+          "P0015",
+          "P0014",
+          "P0012"
+        ]
       }
     ],
     "documentos": [],
@@ -1088,7 +1297,7 @@
       "P0010"
     ],
     "biografia": "",
-    "fotografia_principal": "",
+    "fotografia_principal": "assets/fotos/P0013/manumerlour.jpg",
     "fotografias": [
       {
         "id": "F000008",
@@ -1303,16 +1512,178 @@
           "Lourdes"
         ],
         "personas": [
+          "P0013",
           "P0015",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000041",
+        "src": "assets/fotos/P0014/edurecien.jpg",
+        "titulo": "Edu Recien Nacido",
+        "fecha": "Aprox. 1966",
+        "lugar": "",
+        "descripcion": "Edu Recien Nacido",
+        "etiquetas": [
+          "Manu",
+          "Edu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014",
+          "P0015",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000042",
+        "src": "assets/fotos/P0014/moyuammml.jpg",
+        "titulo": "Moyua",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "Plaza Moyúa",
+        "etiquetas": [
+          "Moyua",
+          "Mama",
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000043",
+        "src": "assets/fotos/P0014/reyesmml.jpg",
+        "titulo": "Reyes",
+        "fecha": "",
+        "lugar": "Iparraguirre",
+        "descripcion": "Día de Reyes",
+        "etiquetas": [
+          "Reyes",
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000044",
+        "src": "assets/fotos/P0014/rismml.jpg",
+        "titulo": "Ris",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "Playa de Ris",
+        "etiquetas": [
+          "Ris",
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000038",
+        "src": "assets/fotos/P0014/bilbaoml.jpg",
+        "titulo": "Bilbao",
+        "fecha": "Aprox. 1969",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Lourdes",
+          "Merche"
+        ],
+        "personas": [
           "P0014",
           "P0013"
+        ]
+      },
+      {
+        "id": "F000039",
+        "src": "assets/fotos/P0014/reyesipa.jpg",
+        "titulo": "ReyesIpa",
+        "fecha": "Aprox. 1966",
+        "lugar": "Iparraguirre",
+        "descripcion": "Día de Reyes",
+        "etiquetas": [],
+        "personas": [
+          "P0014",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000046",
+        "src": "assets/fotos/P0013/manumerlour.jpg",
+        "titulo": "ManuMerLour",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0012",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000047",
+        "src": "assets/fotos/P0013/manumerlour-2.jpg",
+        "titulo": "ManuMerLour 2",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0013",
+          "P0014",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000048",
+        "src": "assets/fotos/P0013/juegommle.jpg",
+        "titulo": "JuegoMMLE",
+        "fecha": "Aprox. 1970",
+        "lugar": "Noja",
+        "descripcion": "Jugando",
+        "etiquetas": [
+          "Noja",
+          "Manu",
+          "Merche",
+          "Lourdes",
+          "Edu"
+        ],
+        "personas": [
+          "P0013",
+          "P0015",
+          "P0014",
+          "P0012"
         ]
       }
     ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "9 jul 1964",
@@ -1562,9 +1933,184 @@
           "Lourdes"
         ],
         "personas": [
+          "P0013",
           "P0015",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000038",
+        "src": "assets/fotos/P0014/bilbaoml.jpg",
+        "titulo": "Bilbao",
+        "fecha": "Aprox. 1969",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Lourdes",
+          "Merche"
+        ],
+        "personas": [
           "P0014",
           "P0013"
+        ]
+      },
+      {
+        "id": "F000039",
+        "src": "assets/fotos/P0014/reyesipa.jpg",
+        "titulo": "ReyesIpa",
+        "fecha": "Aprox. 1966",
+        "lugar": "Iparraguirre",
+        "descripcion": "Día de Reyes",
+        "etiquetas": [],
+        "personas": [
+          "P0014",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000040",
+        "src": "assets/fotos/P0014/lourdesbilbao.jpg",
+        "titulo": "Lourdes Bilbao",
+        "fecha": "",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000041",
+        "src": "assets/fotos/P0014/edurecien.jpg",
+        "titulo": "Edu Recien Nacido",
+        "fecha": "Aprox. 1966",
+        "lugar": "",
+        "descripcion": "Edu Recien Nacido",
+        "etiquetas": [
+          "Manu",
+          "Edu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014",
+          "P0015",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000042",
+        "src": "assets/fotos/P0014/moyuammml.jpg",
+        "titulo": "Moyua",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "Plaza Moyúa",
+        "etiquetas": [
+          "Moyua",
+          "Mama",
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000043",
+        "src": "assets/fotos/P0014/reyesmml.jpg",
+        "titulo": "Reyes",
+        "fecha": "",
+        "lugar": "Iparraguirre",
+        "descripcion": "Día de Reyes",
+        "etiquetas": [
+          "Reyes",
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000044",
+        "src": "assets/fotos/P0014/rismml.jpg",
+        "titulo": "Ris",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "Playa de Ris",
+        "etiquetas": [
+          "Ris",
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000046",
+        "src": "assets/fotos/P0013/manumerlour.jpg",
+        "titulo": "ManuMerLour",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0012",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000047",
+        "src": "assets/fotos/P0013/manumerlour-2.jpg",
+        "titulo": "ManuMerLour 2",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0013",
+          "P0014",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000048",
+        "src": "assets/fotos/P0013/juegommle.jpg",
+        "titulo": "JuegoMMLE",
+        "fecha": "Aprox. 1970",
+        "lugar": "Noja",
+        "descripcion": "Jugando",
+        "etiquetas": [
+          "Noja",
+          "Manu",
+          "Merche",
+          "Lourdes",
+          "Edu"
+        ],
+        "personas": [
+          "P0013",
+          "P0015",
+          "P0014",
+          "P0012"
         ]
       }
     ],
@@ -1751,9 +2297,50 @@
           "Lourdes"
         ],
         "personas": [
+          "P0013",
+          "P0015",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000041",
+        "src": "assets/fotos/P0014/edurecien.jpg",
+        "titulo": "Edu Recien Nacido",
+        "fecha": "Aprox. 1966",
+        "lugar": "",
+        "descripcion": "Edu Recien Nacido",
+        "etiquetas": [
+          "Manu",
+          "Edu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014",
+          "P0015",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000048",
+        "src": "assets/fotos/P0013/juegommle.jpg",
+        "titulo": "JuegoMMLE",
+        "fecha": "Aprox. 1970",
+        "lugar": "Noja",
+        "descripcion": "Jugando",
+        "etiquetas": [
+          "Noja",
+          "Manu",
+          "Merche",
+          "Lourdes",
+          "Edu"
+        ],
+        "personas": [
+          "P0013",
           "P0015",
           "P0014",
-          "P0013"
+          "P0012"
         ]
       }
     ],
