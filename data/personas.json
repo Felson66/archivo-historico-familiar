@@ -2745,7 +2745,7 @@
       "P0023",
       "P0032"
     ],
-    "estado": "memoria_familiar",
+    "estado": "memoria familiar",
     "conyuges": [
       "P0020"
     ],
@@ -2840,7 +2840,12 @@
     "cronologia": [],
     "lugares": [],
     "notas": [],
-    "fotoPosicion": "50% 50%"
+    "fotoPosicion": "50% 50%",
+    "fecha_nacimiento": "24-10-1985",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": ""
   },
   {
     "datos_resumen": "",
