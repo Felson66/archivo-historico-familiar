@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#183c35">
   <title>Administración · Archivo Histórico Familiar</title>
-  <link rel="stylesheet" href="css/admin-v4.0.0.css">
+  <link rel="stylesheet" href="css/admin-v4.0.1.css">
 </head>
 <body>
   <header class="admin-topbar">
     <a href="index.html" class="back">← Volver al archivo</a>
     <div>
       <h1>Centro de Administración</h1>
-      <p>Gestión integral del Archivo Familiar · v4.0.0</p>
+      <p>Gestión integral del Archivo Familiar · v4.0.1</p>
     </div>
   </header>
 
@@ -29,12 +29,22 @@
 
     <section id="manager" class="manager-card is-disabled" aria-disabled="true">
       <div class="manager-toolbar">
-        <label>
-          Persona
-          <select id="personSelect" disabled>
-            <option value="">Selecciona una persona…</option>
-          </select>
-        </label>
+        <div class="person-selector-block">
+          <label>
+            Buscar persona
+            <div class="person-search-row">
+              <input id="personSearch" type="search" placeholder="Nombre, nombre conocido o ID…" autocomplete="off" disabled>
+              <button id="clearPersonSearch" class="secondary" type="button" disabled>Limpiar</button>
+            </div>
+          </label>
+          <label>
+            Persona
+            <select id="personSelect" disabled>
+              <option value="">Selecciona una persona…</option>
+            </select>
+          </label>
+          <p id="personSearchStatus" class="field-help">Conecta la carpeta para buscar personas.</p>
+        </div>
         <div class="manager-buttons">
           <button id="newPerson" class="primary" disabled>+ Nueva persona</button>
           <button id="newPhoto" class="primary" disabled>+ Añadir fotografía</button>
@@ -340,6 +350,6 @@
     </section>
   </main>
 
-  <script src="js/admin-v4.0.0.js"></script>
+  <script src="js/admin-v4.0.1.js"></script>
 </body>
 </html>
