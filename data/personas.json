@@ -326,7 +326,23 @@
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000006",
+        "src": "assets/documentos/P0006/bautismo-manuela-josefa-mugica-ybarburu.pdf",
+        "nombre_archivo": "bautismo-manuela-josefa-mugica-ybarburu.pdf",
+        "formato": "application/pdf",
+        "titulo": "Bautismo Manuela Josefa, Mugica, Ybarburu",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0006"
+        ],
+        "paginas": [
+          "assets/documentos/P0006/d000006-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []
@@ -842,10 +858,10 @@
           "Lourdes"
         ],
         "personas": [
+          "P0010",
           "P0014",
           "P0012",
-          "P0013",
-          "P0010"
+          "P0013"
         ]
       },
       {
@@ -1143,9 +1159,9 @@
           "Lourdes"
         ],
         "personas": [
+          "P0012",
           "P0014",
           "P0015",
-          "P0012",
           "P0013"
         ]
       },
@@ -1164,10 +1180,10 @@
           "Lourdes"
         ],
         "personas": [
+          "P0010",
           "P0014",
           "P0012",
-          "P0013",
-          "P0010"
+          "P0013"
         ]
       },
       {
@@ -1184,8 +1200,8 @@
           "Lourdes"
         ],
         "personas": [
-          "P0014",
           "P0012",
+          "P0014",
           "P0013"
         ]
       },
@@ -1203,8 +1219,8 @@
           "Lourdes"
         ],
         "personas": [
-          "P0014",
           "P0012",
+          "P0014",
           "P0013"
         ]
       },
@@ -1217,8 +1233,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0013",
           "P0012",
+          "P0013",
           "P0014"
         ]
       },
@@ -1235,9 +1251,9 @@
           "Lourdes"
         ],
         "personas": [
+          "P0012",
           "P0013",
-          "P0014",
-          "P0012"
+          "P0014"
         ]
       },
       {
@@ -1255,10 +1271,10 @@
           "Edu"
         ],
         "personas": [
+          "P0012",
           "P0013",
           "P0015",
-          "P0014",
-          "P0012"
+          "P0014"
         ]
       }
     ],
@@ -1531,9 +1547,9 @@
           "Lourdes"
         ],
         "personas": [
+          "P0012",
           "P0014",
           "P0015",
-          "P0012",
           "P0013"
         ]
       },
@@ -1552,10 +1568,10 @@
           "Lourdes"
         ],
         "personas": [
+          "P0010",
           "P0014",
           "P0012",
-          "P0013",
-          "P0010"
+          "P0013"
         ]
       },
       {
@@ -1572,8 +1588,8 @@
           "Lourdes"
         ],
         "personas": [
-          "P0014",
           "P0012",
+          "P0014",
           "P0013"
         ]
       },
@@ -1591,8 +1607,8 @@
           "Lourdes"
         ],
         "personas": [
-          "P0014",
           "P0012",
+          "P0014",
           "P0013"
         ]
       },
@@ -1608,8 +1624,8 @@
           "Merche"
         ],
         "personas": [
-          "P0014",
-          "P0013"
+          "P0013",
+          "P0014"
         ]
       },
       {
@@ -1621,8 +1637,8 @@
         "descripcion": "Día de Reyes",
         "etiquetas": [],
         "personas": [
-          "P0014",
-          "P0013"
+          "P0013",
+          "P0014"
         ]
       },
       {
@@ -1634,8 +1650,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0013",
           "P0012",
+          "P0013",
           "P0014"
         ]
       },
@@ -1652,9 +1668,9 @@
           "Lourdes"
         ],
         "personas": [
+          "P0012",
           "P0013",
-          "P0014",
-          "P0012"
+          "P0014"
         ]
       },
       {
@@ -1672,10 +1688,10 @@
           "Edu"
         ],
         "personas": [
+          "P0012",
           "P0013",
           "P0015",
-          "P0014",
-          "P0012"
+          "P0014"
         ]
       }
     ],
@@ -1950,8 +1966,8 @@
           "Merche"
         ],
         "personas": [
-          "P0014",
-          "P0013"
+          "P0013",
+          "P0014"
         ]
       },
       {
@@ -1963,8 +1979,8 @@
         "descripcion": "Día de Reyes",
         "etiquetas": [],
         "personas": [
-          "P0014",
-          "P0013"
+          "P0013",
+          "P0014"
         ]
       },
       {
@@ -1995,9 +2011,9 @@
           "Lourdes"
         ],
         "personas": [
+          "P0012",
           "P0014",
           "P0015",
-          "P0012",
           "P0013"
         ]
       },
@@ -2016,10 +2032,10 @@
           "Lourdes"
         ],
         "personas": [
+          "P0010",
           "P0014",
           "P0012",
-          "P0013",
-          "P0010"
+          "P0013"
         ]
       },
       {
@@ -2036,8 +2052,8 @@
           "Lourdes"
         ],
         "personas": [
-          "P0014",
           "P0012",
+          "P0014",
           "P0013"
         ]
       },
@@ -2055,8 +2071,8 @@
           "Lourdes"
         ],
         "personas": [
-          "P0014",
           "P0012",
+          "P0014",
           "P0013"
         ]
       },
@@ -2069,8 +2085,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0013",
           "P0012",
+          "P0013",
           "P0014"
         ]
       },
@@ -2087,9 +2103,9 @@
           "Lourdes"
         ],
         "personas": [
+          "P0012",
           "P0013",
-          "P0014",
-          "P0012"
+          "P0014"
         ]
       },
       {
@@ -2107,10 +2123,10 @@
           "Edu"
         ],
         "personas": [
+          "P0012",
           "P0013",
           "P0015",
-          "P0014",
-          "P0012"
+          "P0014"
         ]
       }
     ],
@@ -2316,9 +2332,9 @@
           "Lourdes"
         ],
         "personas": [
+          "P0012",
           "P0014",
           "P0015",
-          "P0012",
           "P0013"
         ]
       },
@@ -2337,10 +2353,10 @@
           "Edu"
         ],
         "personas": [
+          "P0012",
           "P0013",
           "P0015",
-          "P0014",
-          "P0012"
+          "P0014"
         ]
       }
     ],
