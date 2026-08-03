@@ -2726,7 +2726,7 @@
     "rol": "",
     "padres": [],
     "biografia": "",
-    "fotografia_principal": "",
+    "fotografia_principal": "assets/fotos/P0022/nico-portada.jpg",
     "fotografias": [
       {
         "id": "F000010",
@@ -2782,12 +2782,30 @@
           "P0032",
           "P0022"
         ]
+      },
+      {
+        "id": "F000052",
+        "src": "assets/fotos/P0022/nico-portada.jpg",
+        "titulo": "Nico",
+        "fecha": "11/06/2022",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [
+          "Noja",
+          "Ari",
+          "Nico"
+        ],
+        "personas": [
+          "P0022",
+          "P0023"
+        ]
       }
     ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "",
@@ -2852,6 +2870,23 @@
           "P0021",
           "P0023",
           "P0022"
+        ]
+      },
+      {
+        "id": "F000052",
+        "src": "assets/fotos/P0022/nico-portada.jpg",
+        "titulo": "Nico",
+        "fecha": "11/06/2022",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [
+          "Noja",
+          "Ari",
+          "Nico"
+        ],
+        "personas": [
+          "P0022",
+          "P0023"
         ]
       }
     ],
