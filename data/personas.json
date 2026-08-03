@@ -3232,13 +3232,13 @@
     "fotoPosicion": "19% 40%"
   },
   {
-    "datos_resumen": "Excónyuge de Elena",
+    "datos_resumen": "",
     "lugar_descanso": null,
     "hijos": [
       "P0030",
       "P0031"
     ],
-    "estado": "memoria_familiar",
+    "estado": "memoria familiar",
     "conyuges": [
       "P0016"
     ],
@@ -3251,7 +3251,6 @@
     "nombre": "Eneko Quintana",
     "id_legacy": "p29",
     "id": "P0029",
-    "rol": "",
     "padres": [],
     "biografia": "",
     "fotografia_principal": "",
@@ -3259,7 +3258,16 @@
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": "",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "nombre_conocido": "",
+    "sexo": "",
+    "situacion_vital": "desconocido",
+    "visible": false
   },
   {
     "datos_resumen": "15 jul 2000",
