@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#183c35">
   <title>Administración · Archivo Histórico Familiar</title>
-  <link rel="stylesheet" href="css/admin-v3.9.4.css">
+  <link rel="stylesheet" href="css/admin-v4.0.0.css">
 </head>
 <body>
   <header class="admin-topbar">
     <a href="index.html" class="back">← Volver al archivo</a>
     <div>
       <h1>Centro de Administración</h1>
-      <p>Archivo personal, documentos y biografía · v3.9.4</p>
+      <p>Gestión integral del Archivo Familiar · v4.0.0</p>
     </div>
   </header>
 
@@ -20,8 +20,8 @@
     <section class="intro-card">
       <div>
         <span class="eyebrow">Archivo histórico familiar</span>
-        <h2>Conservar fotografías y documentos sin editar JSON</h2>
-        <p>Conecta la carpeta local del repositorio. Después podrás incorporar, editar, relacionar con varias personas, ordenar y eliminar fotografías o documentos.</p>
+        <h2>Crear personas y conservar su documentación sin editar JSON</h2>
+        <p>Conecta la carpeta local del repositorio. Después podrás crear personas y gestionar sus datos, fotografías, documentos y evidencias.</p>
       </div>
       <button id="connectFolder" class="primary">Seleccionar carpeta del archivo</button>
       <p id="folderStatus" class="status">Todavía no se ha seleccionado ninguna carpeta.</p>
@@ -36,6 +36,7 @@
           </select>
         </label>
         <div class="manager-buttons">
+          <button id="newPerson" class="primary" disabled>+ Nueva persona</button>
           <button id="newPhoto" class="primary" disabled>+ Añadir fotografía</button>
           <button id="newDocument" class="primary" disabled>+ Archivar documento</button>
         </div>
@@ -120,8 +121,25 @@
             <label>Profesión u oficio
               <input id="bioProfession" type="text" placeholder="Ej. Sastre">
             </label>
-            <label>Rol familiar
-              <input id="bioRole" type="text" placeholder="Ej. Abuelo materno">
+            <label>Nombre conocido
+              <input id="bioKnownName" type="text" placeholder="Ej. Paco">
+            </label>
+
+            <label>Sexo
+              <select id="bioSex">
+                <option value="">No especificado</option>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+                <option value="otro">Otro</option>
+              </select>
+            </label>
+
+            <label>Situación vital
+              <select id="bioLifeStatus">
+                <option value="desconocido">Desconocido</option>
+                <option value="vivo">Vivo</option>
+                <option value="fallecido">Fallecido</option>
+              </select>
             </label>
 
             <label>Estado de la información
@@ -134,8 +152,13 @@
               </select>
             </label>
 
-            <label class="wide">Resumen manual o dato complementario
-              <textarea id="bioSummary" rows="3" placeholder="Se conserva como información complementaria y como respaldo para datos antiguos."></textarea>
+            <label class="wide">Notas biográficas
+              <textarea id="bioSummary" rows="3" placeholder="Información general o complementaria sobre la persona."></textarea>
+            </label>
+
+            <label class="checkbox wide">
+              <input id="bioVisible" type="checkbox" checked>
+              <span>Visible en el archivo público</span>
             </label>
           </div>
 
@@ -165,6 +188,94 @@
       </div>
 
       <div id="managerResult" class="result hidden"></div>
+    </section>
+
+    <section id="personEditor" class="editor-card person-editor hidden" aria-hidden="true">
+      <div class="editor-title-row">
+        <div>
+          <span class="eyebrow">Gestión de personas</span>
+          <h2>Nueva persona</h2>
+        </div>
+        <button id="closePersonEditor" class="icon-button" type="button" aria-label="Cerrar formulario">×</button>
+      </div>
+
+      <p class="person-editor-intro">El identificador se asignará automáticamente y nunca se reutilizará. Solo el nombre es obligatorio.</p>
+
+      <div class="form-grid person-form-grid">
+        <label>Identificador
+          <input id="personIdInput" type="text" readonly>
+        </label>
+
+        <label class="wide">Nombre completo *
+          <input id="personNameInput" type="text" autocomplete="off" placeholder="Ej. María Mugica Ybarburu">
+        </label>
+
+        <label>Nombre conocido
+          <input id="personKnownNameInput" type="text" autocomplete="off" placeholder="Ej. Mari">
+        </label>
+
+        <label>Sexo
+          <select id="personSexInput">
+            <option value="">No especificado</option>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="otro">Otro</option>
+          </select>
+        </label>
+
+        <label>Situación vital
+          <select id="personLifeStatusInput">
+            <option value="desconocido">Desconocido</option>
+            <option value="vivo">Vivo</option>
+            <option value="fallecido">Fallecido</option>
+          </select>
+        </label>
+
+        <label>Estado de la información
+          <select id="personStateInput">
+            <option value="pendiente">Pendiente</option>
+            <option value="documentado">Documentado</option>
+            <option value="memoria familiar">Memoria familiar</option>
+            <option value="hipótesis">Hipótesis</option>
+            <option value="familia reconstituida">Familia reconstituida</option>
+          </select>
+        </label>
+
+        <label>Fecha de nacimiento
+          <input id="personBirthDateInput" type="text" placeholder="Ej. 15 ago 1923">
+        </label>
+
+        <label>Lugar de nacimiento
+          <input id="personBirthPlaceInput" type="text" placeholder="Ej. Amorebieta">
+        </label>
+
+        <label>Fecha de defunción
+          <input id="personDeathDateInput" type="text" placeholder="Ej. 22 jun 2007">
+        </label>
+
+        <label>Lugar de defunción
+          <input id="personDeathPlaceInput" type="text" placeholder="Ej. Bilbao">
+        </label>
+
+        <label class="wide">Profesión u oficio
+          <input id="personProfessionInput" type="text" placeholder="Ej. Sastre">
+        </label>
+
+        <label class="wide">Notas biográficas
+          <textarea id="personNotesInput" rows="4" placeholder="Información general que no encaje en un dato estructurado."></textarea>
+        </label>
+
+        <label class="checkbox wide">
+          <input id="personVisibleInput" type="checkbox" checked>
+          <span>Visible en el archivo público</span>
+        </label>
+      </div>
+
+      <div class="actions">
+        <button id="savePerson" class="primary" type="button" disabled>Crear persona</button>
+        <button id="cancelPersonEdit" class="secondary" type="button">Cancelar</button>
+      </div>
+      <div id="personEditorResult" class="result hidden"></div>
     </section>
 
     <section id="photoEditor" class="editor-card hidden" aria-hidden="true">
@@ -229,6 +340,6 @@
     </section>
   </main>
 
-  <script src="js/admin-v3.9.4.js"></script>
+  <script src="js/admin-v4.0.0.js"></script>
 </body>
 </html>
