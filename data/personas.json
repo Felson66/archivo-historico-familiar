@@ -2396,7 +2396,7 @@
       "P0010"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0016/nojaelenabici.jpg",
+    "fotografia_principal": "assets/fotos/P0016/elena-portada.jpg",
     "fotografias": [
       {
         "id": "F000009",
@@ -2427,13 +2427,25 @@
         "personas": [
           "P0016"
         ]
+      },
+      {
+        "id": "F000049",
+        "src": "assets/fotos/P0016/elena-portada.jpg",
+        "titulo": "Elena",
+        "fecha": "4/9/2025",
+        "lugar": "San Miguel de Allende",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016"
+        ]
       }
     ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
     "notas": [],
-    "fotoPosicion": "50% 50%"
+    "fotoPosicion": "50% 45%"
   },
   {
     "datos_resumen": "Excónyuge de Manuel",
