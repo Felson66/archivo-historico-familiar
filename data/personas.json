@@ -3207,12 +3207,26 @@
       "P0029"
     ],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0030/eder.jpg",
+    "fotografias": [
+      {
+        "id": "F000050",
+        "src": "assets/fotos/P0030/eder.jpg",
+        "titulo": "Eder",
+        "fecha": "8/9/2025",
+        "lugar": "Mexico",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0030"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 45%"
   },
   {
     "datos_resumen": "26 jun · año pendiente",
@@ -3239,12 +3253,26 @@
       "P0029"
     ],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0031/peio.jpg",
+    "fotografias": [
+      {
+        "id": "F000051",
+        "src": "assets/fotos/P0031/peio.jpg",
+        "titulo": "Peio",
+        "fecha": "10/08/2025",
+        "lugar": "",
+        "descripcion": "Puenting!!",
+        "etiquetas": [],
+        "personas": [
+          "P0031"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "",
