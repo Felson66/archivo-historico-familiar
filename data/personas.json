@@ -186,7 +186,24 @@
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000015",
+        "src": "assets/documentos/P0003/matrimonio-jose-maria-mugica-galarza.pdf",
+        "nombre_archivo": "matrimonio-jose-maria-mugica-galarza.pdf",
+        "formato": "application/pdf",
+        "titulo": "Matrimonio Jose Maria, Mugica, Galarza",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0003",
+          "P0004"
+        ],
+        "paginas": [
+          "assets/documentos/P0003/d000015-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []
@@ -234,7 +251,24 @@
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000015",
+        "src": "assets/documentos/P0003/matrimonio-jose-maria-mugica-galarza.pdf",
+        "nombre_archivo": "matrimonio-jose-maria-mugica-galarza.pdf",
+        "formato": "application/pdf",
+        "titulo": "Matrimonio Jose Maria, Mugica, Galarza",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0003",
+          "P0004"
+        ],
+        "paginas": [
+          "assets/documentos/P0003/d000015-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []
@@ -531,21 +565,8 @@
     "rol": "Sastre",
     "padres": [],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0008/foto-francisco-carmen.png",
+    "fotografia_principal": "assets/fotos/P0008/boda-carmenyfrancisco-entera.jpg",
     "fotografias": [
-      {
-        "id": "F000006",
-        "src": "assets/fotos/P0008/foto-francisco-carmen.png",
-        "titulo": "Foto Francisco Carmen",
-        "fecha": "",
-        "lugar": "",
-        "descripcion": "Boda",
-        "etiquetas": [],
-        "personas": [
-          "P0008",
-          "P0009"
-        ]
-      },
       {
         "id": "F000018",
         "src": "assets/fotos/P0009/abuela-lapalma.jpg",
@@ -571,6 +592,19 @@
         ],
         "personas": [
           "P0008"
+        ]
+      },
+      {
+        "id": "F000053",
+        "src": "assets/fotos/P0008/boda-carmenyfrancisco-entera.jpg",
+        "titulo": "Boda Carmen y Francisco",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0008",
+          "P0009"
         ]
       }
     ],
@@ -598,7 +632,8 @@
     "lugar_nacimiento": "",
     "fecha_defuncion": "15/10/1961",
     "lugar_defuncion": "",
-    "profesion": "Sastre"
+    "profesion": "Sastre",
+    "fotoPosicion": "50% 26%"
   },
   {
     "datos_resumen": "Abuela materna",
@@ -628,21 +663,8 @@
     "rol": "",
     "padres": [],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0009/abuela-lapalma.jpg",
+    "fotografia_principal": "assets/fotos/P0008/boda-carmenyfrancisco-entera.jpg",
     "fotografias": [
-      {
-        "id": "F000006",
-        "src": "assets/fotos/P0008/foto-francisco-carmen.png",
-        "titulo": "Foto Francisco Carmen",
-        "fecha": "",
-        "lugar": "",
-        "descripcion": "Boda",
-        "etiquetas": [],
-        "personas": [
-          "P0008",
-          "P0009"
-        ]
-      },
       {
         "id": "F000015",
         "src": "assets/fotos/P0014/iparraguirre-mmml.jpg",
@@ -704,6 +726,19 @@
         "personas": [
           "P0009"
         ]
+      },
+      {
+        "id": "F000053",
+        "src": "assets/fotos/P0008/boda-carmenyfrancisco-entera.jpg",
+        "titulo": "Boda Carmen y Francisco",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0008",
+          "P0009"
+        ]
       }
     ],
     "documentos": [
@@ -726,7 +761,7 @@
     "cronologia": [],
     "lugares": [],
     "notas": [],
-    "fotoPosicion": "50% 50%",
+    "fotoPosicion": "50% 27%",
     "fecha_nacimiento": "",
     "lugar_nacimiento": "",
     "fecha_defuncion": "21/03/1996",
