@@ -3722,7 +3722,23 @@
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000011",
+        "src": "assets/documentos/P0046/bautismo-maria-joaquina-josefa-mugica-ybarburu.pdf",
+        "nombre_archivo": "bautismo-maria-joaquina-josefa-mugica-ybarburu.pdf",
+        "formato": "application/pdf",
+        "titulo": "Bautismo Maria Joaquina Josefa, Mugica, Ybarburu",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0046"
+        ],
+        "paginas": [
+          "assets/documentos/P0046/d000011-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []
@@ -3749,7 +3765,23 @@
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000007",
+        "src": "assets/documentos/P0047/bautismo-escolastica-salvadora-mugica-ybarburu.pdf",
+        "nombre_archivo": "bautismo-escolastica-salvadora-mugica-ybarburu.pdf",
+        "formato": "application/pdf",
+        "titulo": "Bautismo Escolastica Salvadora, Mugica, Ybarburu",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0047"
+        ],
+        "paginas": [
+          "assets/documentos/P0047/d000007-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []
@@ -3776,7 +3808,23 @@
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000009",
+        "src": "assets/documentos/P0048/bautismo-francisco-mugica-ybarburu.pdf",
+        "nombre_archivo": "bautismo-francisco-mugica-ybarburu.pdf",
+        "formato": "application/pdf",
+        "titulo": "Bautismo Francisco, Mugica, Ybarburu",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0048"
+        ],
+        "paginas": [
+          "assets/documentos/P0048/d000009-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []
@@ -3803,7 +3851,23 @@
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000010",
+        "src": "assets/documentos/P0049/bautismo-joaquina-rafaela-mugica-ybarburu.pdf",
+        "nombre_archivo": "bautismo-joaquina-rafaela-mugica-ybarburu.pdf",
+        "formato": "application/pdf",
+        "titulo": "Bautismo Joaquina Rafaela, Mugica, Ybarburu",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0049"
+        ],
+        "paginas": [
+          "assets/documentos/P0049/d000010-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []
@@ -3830,7 +3894,23 @@
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000008",
+        "src": "assets/documentos/P0050/bautismo-francisco-maria-mugica-ybarburu.pdf",
+        "nombre_archivo": "bautismo-francisco-maria-mugica-ybarburu.pdf",
+        "formato": "application/pdf",
+        "titulo": "Bautismo Francisco Maria, Mugica, Ybarburu",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0050"
+        ],
+        "paginas": [
+          "assets/documentos/P0050/d000008-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []
@@ -3857,7 +3937,23 @@
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000012",
+        "src": "assets/documentos/P0051/bautismo-micaela-mugica-ybarburu.pdf",
+        "nombre_archivo": "bautismo-micaela-mugica-ybarburu.pdf",
+        "formato": "application/pdf",
+        "titulo": "Bautismo Micaela, Mugica, Ybarburu",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0051"
+        ],
+        "paginas": [
+          "assets/documentos/P0051/d000012-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []
@@ -3884,7 +3980,23 @@
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000014",
+        "src": "assets/documentos/P0052/bautismo-santiago-mugica-ybarburu.pdf",
+        "nombre_archivo": "bautismo-santiago-mugica-ybarburu.pdf",
+        "formato": "application/pdf",
+        "titulo": "Bautismo Santiago, Mugica, Ybarburu",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0052"
+        ],
+        "paginas": [
+          "assets/documentos/P0052/d000014-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []
@@ -3911,7 +4023,23 @@
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000013",
+        "src": "assets/documentos/P0053/bautismo-pedro-mugica-ybarburu.pdf",
+        "nombre_archivo": "bautismo-pedro-mugica-ybarburu.pdf",
+        "formato": "application/pdf",
+        "titulo": "Bautismo Pedro, Mugica, Ybarburu",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0053"
+        ],
+        "paginas": [
+          "assets/documentos/P0053/d000013-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": []
