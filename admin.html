@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#183c35">
   <title>Administración · Archivo Histórico Familiar</title>
-  <link rel="stylesheet" href="css/admin-v4.0.1.css">
+  <link rel="stylesheet" href="css/admin-v4.0.2.css">
 </head>
 <body>
   <header class="admin-topbar">
     <a href="index.html" class="back">← Volver al archivo</a>
     <div>
       <h1>Centro de Administración</h1>
-      <p>Gestión integral del Archivo Familiar · v4.0.1</p>
+      <p>Gestión integral del Archivo Familiar · v4.0.2</p>
     </div>
   </header>
 
@@ -194,6 +194,22 @@
           </div>
         </section>
 
+        <section id="dangerZone" class="danger-zone">
+          <div class="danger-zone-heading">
+            <div>
+              <span class="eyebrow">Operación irreversible</span>
+              <h3>Zona de peligro</h3>
+              <p>Una persona solo puede eliminarse cuando no tiene información ni relaciones asociadas.</p>
+            </div>
+          </div>
+
+          <div id="deletePersonStatus" class="delete-person-status"></div>
+
+          <div class="danger-zone-actions">
+            <button id="deletePerson" class="danger-delete-button" type="button" disabled>🗑 Eliminar definitivamente</button>
+          </div>
+        </section>
+
         <div id="biographyResult" class="result hidden"></div>
       </div>
 
@@ -350,6 +366,6 @@
     </section>
   </main>
 
-  <script src="js/admin-v4.0.1.js"></script>
+  <script src="js/admin-v4.0.2.js"></script>
 </body>
 </html>
