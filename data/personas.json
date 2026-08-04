@@ -622,18 +622,21 @@
     ],
     "documentos": [
       {
-        "id": "D000005",
-        "src": "assets/documentos/P0009/nicho-derio.txt",
-        "nombre_archivo": "nicho-derio.txt",
-        "formato": "text/plain",
-        "titulo": "Nicho Derio",
+        "id": "D000016",
+        "src": "assets/documentos/P0009/consulta-nicho-cementerio-derio-edu-de-la-dehesa-liz-outlook.pdf",
+        "nombre_archivo": "consulta-nicho-cementerio-derio-edu-de-la-dehesa-liz-outlook.pdf",
+        "formato": "application/pdf",
+        "titulo": "Consulta Nicho Cementerio Derio",
         "fecha": "",
-        "descripcion": "Situación Nicho Derio",
+        "descripcion": "",
         "personas": [
-          "P0008",
           "P0009",
-          "P0010",
+          "P0008",
           "P0011"
+        ],
+        "paginas": [
+          "assets/documentos/P0009/d000016-paginas/pagina-001.webp",
+          "assets/documentos/P0009/d000016-paginas/pagina-002.webp"
         ]
       }
     ],
@@ -755,18 +758,21 @@
     ],
     "documentos": [
       {
-        "id": "D000005",
-        "src": "assets/documentos/P0009/nicho-derio.txt",
-        "nombre_archivo": "nicho-derio.txt",
-        "formato": "text/plain",
-        "titulo": "Nicho Derio",
+        "id": "D000016",
+        "src": "assets/documentos/P0009/consulta-nicho-cementerio-derio-edu-de-la-dehesa-liz-outlook.pdf",
+        "nombre_archivo": "consulta-nicho-cementerio-derio-edu-de-la-dehesa-liz-outlook.pdf",
+        "formato": "application/pdf",
+        "titulo": "Consulta Nicho Cementerio Derio",
         "fecha": "",
-        "descripcion": "Situación Nicho Derio",
+        "descripcion": "",
         "personas": [
-          "P0008",
           "P0009",
-          "P0010",
+          "P0008",
           "P0011"
+        ],
+        "paginas": [
+          "assets/documentos/P0009/d000016-paginas/pagina-001.webp",
+          "assets/documentos/P0009/d000016-paginas/pagina-002.webp"
         ]
       }
     ],
@@ -924,23 +930,7 @@
         ]
       }
     ],
-    "documentos": [
-      {
-        "id": "D000005",
-        "src": "assets/documentos/P0009/nicho-derio.txt",
-        "nombre_archivo": "nicho-derio.txt",
-        "formato": "text/plain",
-        "titulo": "Nicho Derio",
-        "fecha": "",
-        "descripcion": "Situación Nicho Derio",
-        "personas": [
-          "P0008",
-          "P0009",
-          "P0010",
-          "P0011"
-        ]
-      }
-    ],
+    "documentos": [],
     "cronologia": [],
     "lugares": [],
     "notas": [],
@@ -1003,18 +993,21 @@
     ],
     "documentos": [
       {
-        "id": "D000005",
-        "src": "assets/documentos/P0009/nicho-derio.txt",
-        "nombre_archivo": "nicho-derio.txt",
-        "formato": "text/plain",
-        "titulo": "Nicho Derio",
+        "id": "D000016",
+        "src": "assets/documentos/P0009/consulta-nicho-cementerio-derio-edu-de-la-dehesa-liz-outlook.pdf",
+        "nombre_archivo": "consulta-nicho-cementerio-derio-edu-de-la-dehesa-liz-outlook.pdf",
+        "formato": "application/pdf",
+        "titulo": "Consulta Nicho Cementerio Derio",
         "fecha": "",
-        "descripcion": "Situación Nicho Derio",
+        "descripcion": "",
         "personas": [
-          "P0008",
           "P0009",
-          "P0010",
+          "P0008",
           "P0011"
+        ],
+        "paginas": [
+          "assets/documentos/P0009/d000016-paginas/pagina-001.webp",
+          "assets/documentos/P0009/d000016-paginas/pagina-002.webp"
         ]
       }
     ],
