@@ -630,8 +630,8 @@
         "fecha": "",
         "descripcion": "",
         "personas": [
-          "P0009",
           "P0008",
+          "P0009",
           "P0011"
         ],
         "paginas": [
@@ -766,8 +766,8 @@
         "fecha": "",
         "descripcion": "",
         "personas": [
-          "P0009",
           "P0008",
+          "P0009",
           "P0011"
         ],
         "paginas": [
@@ -1001,8 +1001,8 @@
         "fecha": "",
         "descripcion": "",
         "personas": [
-          "P0009",
           "P0008",
+          "P0009",
           "P0011"
         ],
         "paginas": [
@@ -1743,9 +1743,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0013",
           "P0016",
-          "P0014",
-          "P0013"
+          "P0014"
         ]
       }
     ],
@@ -2190,9 +2190,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0013",
           "P0016",
-          "P0014",
-          "P0013"
+          "P0014"
         ]
       }
     ],
@@ -2515,9 +2515,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0013",
           "P0016",
-          "P0014",
-          "P0013"
+          "P0014"
         ]
       }
     ],
@@ -3367,7 +3367,7 @@
     "nombre_conocido": "",
     "sexo": "",
     "situacion_vital": "desconocido",
-    "visible": false
+    "visible": true
   },
   {
     "datos_resumen": "15 jul 2000",
