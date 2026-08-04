@@ -3666,6 +3666,18 @@
           "assets/documentos/P0036/d000019-paginas/pagina-001.webp",
           "assets/documentos/P0036/d000019-paginas/pagina-002.webp"
         ]
+      },
+      {
+        "id": "D000021",
+        "src": "assets/documentos/P0036/sustitucion-alcalde-12071960.png",
+        "nombre_archivo": "sustitucion-alcalde-12071960.png",
+        "formato": "image/png",
+        "titulo": "Sustitucion como Alcalde",
+        "fecha": "12/07/1960",
+        "descripcion": "",
+        "personas": [
+          "P0036"
+        ]
       }
     ],
     "cronologia": [],
@@ -3798,6 +3810,54 @@
           "assets/documentos/P0037/d000017-paginas/pagina-022.webp",
           "assets/documentos/P0037/d000017-paginas/pagina-023.webp",
           "assets/documentos/P0037/d000017-paginas/pagina-024.webp"
+        ]
+      },
+      {
+        "id": "D000022",
+        "src": "assets/documentos/P0037/andres-pelea.png",
+        "nombre_archivo": "andres-pelea.png",
+        "formato": "image/png",
+        "titulo": "Andres Pelea",
+        "fecha": "08/01/1934",
+        "descripcion": "",
+        "personas": [
+          "P0037"
+        ]
+      },
+      {
+        "id": "D000023",
+        "src": "assets/documentos/P0037/andres-estupro.png",
+        "nombre_archivo": "andres-estupro.png",
+        "formato": "image/png",
+        "titulo": "Andres Acusación",
+        "fecha": "27/09/1935",
+        "descripcion": "",
+        "personas": [
+          "P0037"
+        ]
+      },
+      {
+        "id": "D000024",
+        "src": "assets/documentos/P0037/andres-condena.png",
+        "nombre_archivo": "andres-condena.png",
+        "formato": "image/png",
+        "titulo": "Andres Condena",
+        "fecha": "11/09/1935",
+        "descripcion": "",
+        "personas": [
+          "P0037"
+        ]
+      },
+      {
+        "id": "D000025",
+        "src": "assets/documentos/P0037/andres-entierro.png",
+        "nombre_archivo": "andres-entierro.png",
+        "formato": "image/png",
+        "titulo": "Andres Entierro",
+        "fecha": "04/03/1938",
+        "descripcion": "",
+        "personas": [
+          "P0037"
         ]
       }
     ],
