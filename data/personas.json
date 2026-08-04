@@ -501,6 +501,18 @@
           "P0012",
           "P0013"
         ]
+      },
+      {
+        "id": "F000058",
+        "src": "assets/fotos/P0007/papanoja.jpg",
+        "titulo": "Casa Aquiles",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "Broma, un hippy le robaba la huerta",
+        "etiquetas": [],
+        "personas": [
+          "P0007"
+        ]
       }
     ],
     "documentos": [
@@ -1728,6 +1740,20 @@
           "P0015",
           "P0014"
         ]
+      },
+      {
+        "id": "F000057",
+        "src": "assets/fotos/P0016/nojalas3.jpg",
+        "titulo": "Noja",
+        "fecha": "Aprox 1974",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0014",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
@@ -1766,7 +1792,7 @@
       "P0010"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0014/lourdes.jpg",
+    "fotografia_principal": "assets/fotos/P0014/lourdes-s.jpg",
     "fotografias": [
       {
         "id": "F000009",
@@ -1954,20 +1980,6 @@
           "P0010",
           "P0014",
           "P0015"
-        ]
-      },
-      {
-        "id": "F000032",
-        "src": "assets/fotos/P0014/lourdes.jpg",
-        "titulo": "Lourdes",
-        "fecha": "Agosto 2024",
-        "lugar": "Lago Maggiore",
-        "descripcion": "",
-        "etiquetas": [
-          "Lourdes"
-        ],
-        "personas": [
-          "P0014"
         ]
       },
       {
@@ -2163,13 +2175,39 @@
           "P0015",
           "P0014"
         ]
+      },
+      {
+        "id": "F000055",
+        "src": "assets/fotos/P0014/lourdes-s.jpg",
+        "titulo": "Lourdes",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000057",
+        "src": "assets/fotos/P0016/nojalas3.jpg",
+        "titulo": "Noja",
+        "fecha": "Aprox 1974",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0014",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
     "notas": [],
-    "fotoPosicion": "50% 7%"
+    "fotoPosicion": "50% 35%"
   },
   {
     "datos_resumen": "2 oct 1966 · Bilbao",
@@ -2474,6 +2512,20 @@
         "personas": [
           "P0016"
         ]
+      },
+      {
+        "id": "F000057",
+        "src": "assets/fotos/P0016/nojalas3.jpg",
+        "titulo": "Noja",
+        "fecha": "Aprox 1974",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0014",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
@@ -2659,6 +2711,20 @@
         "personas": [
           "P0020",
           "P0022"
+        ]
+      },
+      {
+        "id": "F000059",
+        "src": "assets/fotos/P0020/raquelnoahesther.jpg",
+        "titulo": "Raquel Noah Esther",
+        "fecha": "29/09/2024",
+        "lugar": "Playa Madre",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0020",
+          "P0032",
+          "P0027"
         ]
       }
     ],
@@ -2964,12 +3030,26 @@
     "rol": "",
     "padres": [],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0024/nando.jpg",
+    "fotografias": [
+      {
+        "id": "F000056",
+        "src": "assets/fotos/P0024/nando.jpg",
+        "titulo": "Nando",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0024"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "15 ene · año pendiente",
@@ -3077,7 +3157,7 @@
       "P0024"
     ],
     "biografia": "",
-    "fotografia_principal": "",
+    "fotografia_principal": "assets/fotos/P0026/ale.jpg",
     "fotografias": [
       {
         "id": "F000025",
@@ -3094,12 +3174,25 @@
           "P0025",
           "P0026"
         ]
+      },
+      {
+        "id": "F000054",
+        "src": "assets/fotos/P0026/ale.jpg",
+        "titulo": "Ale",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0026"
+        ]
       }
     ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": []
+    "notas": [],
+    "fotoPosicion": "50% 34%"
   },
   {
     "datos_resumen": "4 mar 1971",
@@ -3177,6 +3270,20 @@
         "lugar": "Bilbao",
         "descripcion": "De potes - Casco Viejo",
         "etiquetas": []
+      },
+      {
+        "id": "F000059",
+        "src": "assets/fotos/P0020/raquelnoahesther.jpg",
+        "titulo": "Raquel Noah Esther",
+        "fecha": "29/09/2024",
+        "lugar": "Playa Madre",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0020",
+          "P0032",
+          "P0027"
+        ]
       }
     ],
     "documentos": [],
@@ -3420,6 +3527,20 @@
           "P0021",
           "P0032",
           "P0022"
+        ]
+      },
+      {
+        "id": "F000059",
+        "src": "assets/fotos/P0020/raquelnoahesther.jpg",
+        "titulo": "Raquel Noah Esther",
+        "fecha": "29/09/2024",
+        "lugar": "Playa Madre",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0020",
+          "P0032",
+          "P0027"
         ]
       }
     ],
