@@ -323,6 +323,22 @@
         "paginas": [
           "assets/documentos/P0005/d000002-paginas/pagina-001.webp"
         ]
+      },
+      {
+        "id": "D000020",
+        "src": "assets/documentos/P0005/mdm-renteria.pdf",
+        "nombre_archivo": "mdm-renteria.pdf",
+        "formato": "application/pdf",
+        "titulo": "Destinado en Renteria",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0005"
+        ],
+        "paginas": [
+          "assets/documentos/P0005/d000020-paginas/pagina-001.webp",
+          "assets/documentos/P0005/d000020-paginas/pagina-002.webp"
+        ]
       }
     ],
     "cronologia": [],
@@ -3608,6 +3624,48 @@
           "assets/documentos/P0036/d000004-paginas/pagina-006.webp",
           "assets/documentos/P0036/d000004-paginas/pagina-007.webp"
         ]
+      },
+      {
+        "id": "D000018",
+        "src": "assets/documentos/P0036/cayetano-de-la-dehesa-alcalde.pdf",
+        "nombre_archivo": "cayetano-de-la-dehesa-alcalde.pdf",
+        "formato": "application/pdf",
+        "titulo": "Cayetano de la Dehesa Alcalde",
+        "fecha": "",
+        "descripcion": "Figura como alcalde de Riego del Camino",
+        "personas": [
+          "P0036"
+        ],
+        "paginas": [
+          "assets/documentos/P0036/d000018-paginas/pagina-001.webp",
+          "assets/documentos/P0036/d000018-paginas/pagina-002.webp",
+          "assets/documentos/P0036/d000018-paginas/pagina-003.webp",
+          "assets/documentos/P0036/d000018-paginas/pagina-004.webp",
+          "assets/documentos/P0036/d000018-paginas/pagina-005.webp",
+          "assets/documentos/P0036/d000018-paginas/pagina-006.webp",
+          "assets/documentos/P0036/d000018-paginas/pagina-007.webp",
+          "assets/documentos/P0036/d000018-paginas/pagina-008.webp",
+          "assets/documentos/P0036/d000018-paginas/pagina-009.webp",
+          "assets/documentos/P0036/d000018-paginas/pagina-010.webp",
+          "assets/documentos/P0036/d000018-paginas/pagina-011.webp",
+          "assets/documentos/P0036/d000018-paginas/pagina-012.webp"
+        ]
+      },
+      {
+        "id": "D000019",
+        "src": "assets/documentos/P0036/cdm-azpeitia.pdf",
+        "nombre_archivo": "cdm-azpeitia.pdf",
+        "formato": "application/pdf",
+        "titulo": "Destinado en Azpeitia",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0036"
+        ],
+        "paginas": [
+          "assets/documentos/P0036/d000019-paginas/pagina-001.webp",
+          "assets/documentos/P0036/d000019-paginas/pagina-002.webp"
+        ]
       }
     ],
     "cronologia": [],
@@ -3702,6 +3760,44 @@
           "assets/documentos/P0037/d000003-paginas/pagina-020.webp",
           "assets/documentos/P0037/d000003-paginas/pagina-021.webp",
           "assets/documentos/P0037/d000003-paginas/pagina-022.webp"
+        ]
+      },
+      {
+        "id": "D000017",
+        "src": "assets/documentos/P0037/gmd-1933-351.pdf",
+        "nombre_archivo": "gmd-1933-351.pdf",
+        "formato": "application/pdf",
+        "titulo": "Asenso a Cabo",
+        "fecha": "17/12/1933",
+        "descripcion": "La Gazeta de Madrid",
+        "personas": [
+          "P0037"
+        ],
+        "paginas": [
+          "assets/documentos/P0037/d000017-paginas/pagina-001.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-002.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-003.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-004.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-005.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-006.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-007.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-008.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-009.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-010.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-011.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-012.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-013.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-014.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-015.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-016.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-017.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-018.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-019.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-020.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-021.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-022.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-023.webp",
+          "assets/documentos/P0037/d000017-paginas/pagina-024.webp"
         ]
       }
     ],
