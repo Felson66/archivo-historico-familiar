@@ -609,20 +609,6 @@
         ]
       },
       {
-        "id": "F000037",
-        "src": "assets/fotos/P0008/nicho-francisco.png",
-        "titulo": "Nicho Francisco",
-        "fecha": "",
-        "lugar": "Derio",
-        "descripcion": "",
-        "etiquetas": [
-          "Derio"
-        ],
-        "personas": [
-          "P0008"
-        ]
-      },
-      {
         "id": "F000053",
         "src": "assets/fotos/P0008/boda-carmenyfrancisco-entera.jpg",
         "titulo": "Boda Carmen y Francisco",
@@ -638,21 +624,15 @@
     ],
     "documentos": [
       {
-        "id": "D000016",
-        "src": "assets/documentos/P0009/consulta-nicho-cementerio-derio-edu-de-la-dehesa-liz-outlook.pdf",
-        "nombre_archivo": "consulta-nicho-cementerio-derio-edu-de-la-dehesa-liz-outlook.pdf",
-        "formato": "application/pdf",
-        "titulo": "Consulta Nicho Cementerio Derio",
+        "id": "D000028",
+        "src": "assets/documentos/P0008/nicho-francisco.png",
+        "nombre_archivo": "nicho-francisco.png",
+        "formato": "image/png",
+        "titulo": "Nicho Francisco",
         "fecha": "",
         "descripcion": "",
         "personas": [
-          "P0008",
-          "P0009",
-          "P0011"
-        ],
-        "paginas": [
-          "assets/documentos/P0009/d000016-paginas/pagina-001.webp",
-          "assets/documentos/P0009/d000016-paginas/pagina-002.webp"
+          "P0008"
         ]
       }
     ],
@@ -745,20 +725,6 @@
         ]
       },
       {
-        "id": "F000035",
-        "src": "assets/fotos/P0009/nicho-carmen.png",
-        "titulo": "Nicho Carmen",
-        "fecha": "",
-        "lugar": "Derio",
-        "descripcion": "",
-        "etiquetas": [
-          "Derio"
-        ],
-        "personas": [
-          "P0009"
-        ]
-      },
-      {
         "id": "F000053",
         "src": "assets/fotos/P0008/boda-carmenyfrancisco-entera.jpg",
         "titulo": "Boda Carmen y Francisco",
@@ -774,21 +740,15 @@
     ],
     "documentos": [
       {
-        "id": "D000016",
-        "src": "assets/documentos/P0009/consulta-nicho-cementerio-derio-edu-de-la-dehesa-liz-outlook.pdf",
-        "nombre_archivo": "consulta-nicho-cementerio-derio-edu-de-la-dehesa-liz-outlook.pdf",
-        "formato": "application/pdf",
-        "titulo": "Consulta Nicho Cementerio Derio",
+        "id": "D000026",
+        "src": "assets/documentos/P0009/nicho-carmen.png",
+        "nombre_archivo": "nicho-carmen.png",
+        "formato": "image/png",
+        "titulo": "Nicho Carmen",
         "fecha": "",
         "descripcion": "",
         "personas": [
-          "P0008",
-          "P0009",
-          "P0011"
-        ],
-        "paginas": [
-          "assets/documentos/P0009/d000016-paginas/pagina-001.webp",
-          "assets/documentos/P0009/d000016-paginas/pagina-002.webp"
+          "P0009"
         ]
       }
     ],
@@ -990,40 +950,19 @@
       "P0009"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0011/nicho-concepcion.png",
-    "fotografias": [
-      {
-        "id": "F000036",
-        "src": "assets/fotos/P0011/nicho-concepcion.png",
-        "titulo": "Nicho Concepcion",
-        "fecha": "",
-        "lugar": "Derio",
-        "descripcion": "",
-        "etiquetas": [
-          "Derio"
-        ],
-        "personas": [
-          "P0011"
-        ]
-      }
-    ],
+    "fotografia_principal": "",
+    "fotografias": [],
     "documentos": [
       {
-        "id": "D000016",
-        "src": "assets/documentos/P0009/consulta-nicho-cementerio-derio-edu-de-la-dehesa-liz-outlook.pdf",
-        "nombre_archivo": "consulta-nicho-cementerio-derio-edu-de-la-dehesa-liz-outlook.pdf",
-        "formato": "application/pdf",
-        "titulo": "Consulta Nicho Cementerio Derio",
+        "id": "D000027",
+        "src": "assets/documentos/P0011/nicho-concepcion.png",
+        "nombre_archivo": "nicho-concepcion.png",
+        "formato": "image/png",
+        "titulo": "Nicho Concepcion",
         "fecha": "",
         "descripcion": "",
         "personas": [
-          "P0008",
-          "P0009",
           "P0011"
-        ],
-        "paginas": [
-          "assets/documentos/P0009/d000016-paginas/pagina-001.webp",
-          "assets/documentos/P0009/d000016-paginas/pagina-002.webp"
         ]
       }
     ],
