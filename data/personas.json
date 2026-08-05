@@ -4911,7 +4911,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "conyuges": [],
+    "conyuges": [
+      "P00055"
+    ],
     "hechos": [],
     "fotografias": [],
     "documentos": [],
@@ -4936,7 +4938,9 @@
     "datos_resumen": "",
     "visible": true,
     "padres": [],
-    "conyuges": [],
+    "conyuges": [
+      "P00054"
+    ],
     "hijos": [],
     "hechos": [],
     "fotografias": [],
