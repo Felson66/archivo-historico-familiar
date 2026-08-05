@@ -2737,8 +2737,21 @@
       "P0017"
     ],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0018/edu-deladehesa-gonzalez.jpg",
+    "fotografias": [
+      {
+        "id": "F000063",
+        "src": "assets/fotos/P0018/edu-deladehesa-gonzalez.jpg",
+        "titulo": "Edu deladehesa gonzalez",
+        "fecha": "2026",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0018"
+        ]
+      }
+    ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
@@ -2753,7 +2766,8 @@
     "situacion_vital": "vivo",
     "visible": true,
     "padre": "P0012",
-    "madre": "P0017"
+    "madre": "P0017",
+    "fotoPosicion": "50% 63%"
   },
   {
     "datos_resumen": "",
