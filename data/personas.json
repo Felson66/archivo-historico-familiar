@@ -4963,5 +4963,112 @@
     ],
     "fecha_creacion": "2026-08-05T10:59:46.767Z",
     "ultima_modificacion": "2026-08-05T10:59:46.767Z"
+  },
+  {
+    "id": "P00056",
+    "nombre": "Jose Ramon Mugica Ybarburu",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "Irun",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-05T13:18:59.102Z",
+    "ultima_modificacion": "2026-08-05T13:18:59.102Z",
+    "padre": "P0003",
+    "madre": "P0004"
+  },
+  {
+    "id": "P00057",
+    "nombre": "Maria Juncal Iturrioz Casal",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00058"
+    ],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-05T13:22:15.062Z",
+    "ultima_modificacion": "2026-08-05T13:22:15.062Z"
+  },
+  {
+    "id": "P00058",
+    "nombre": "Galo Mugica Berridi",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "16/06/2023",
+    "lugar_defuncion": "Irun",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00057"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000060",
+        "src": "assets/fotos/P00058/galo-mugica-berridi.jpg",
+        "titulo": "Galo Mugica Berridi",
+        "fecha": "",
+        "lugar": "Irun",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00058"
+        ]
+      }
+    ],
+    "documentos": [
+      {
+        "id": "D000032",
+        "src": "assets/documentos/P00058/esquelas-y-necrologicas-irun-galo-mugica-berridi-diariovasco-com.pdf",
+        "nombre_archivo": "esquelas-y-necrologicas-irun-galo-mugica-berridi-diariovasco-com.pdf",
+        "formato": "application/pdf",
+        "titulo": "Esquelas y Necrologicas Irun Galo Mugica Berridi",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00058"
+        ],
+        "paginas": [
+          "assets/documentos/P00058/d000032-paginas/pagina-001.webp"
+        ]
+      }
+    ],
+    "fecha_creacion": "2026-08-05T13:26:04.940Z",
+    "ultima_modificacion": "2026-08-05T13:26:04.940Z",
+    "padre": "",
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00058/galo-mugica-berridi.jpg",
+    "fotoPosicion": "50% 71%"
   }
 ]
