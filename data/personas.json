@@ -4911,14 +4911,14 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
     "conyuges": [],
-    "hijos": [],
     "hechos": [],
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-08-05T10:55:46.149Z",
-    "ultima_modificacion": "2026-08-05T10:55:46.149Z"
+    "ultima_modificacion": "2026-08-05T10:55:46.149Z",
+    "padre": "",
+    "madre": ""
   },
   {
     "id": "P00055",
