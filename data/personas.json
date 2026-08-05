@@ -5110,9 +5110,7 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
     "conyuges": [],
-    "hijos": [],
     "hechos": [],
     "fotografias": [
       {
@@ -5148,6 +5146,135 @@
     "fecha_creacion": "2026-08-05T13:47:48.516Z",
     "ultima_modificacion": "2026-08-05T13:47:48.516Z",
     "fotografia_principal": "assets/fotos/P00060/juncal-mugica-berridi.jpg",
-    "fotoPosicion": "50% 50%"
+    "fotoPosicion": "50% 50%",
+    "padre": "P00056",
+    "madre": ""
+  },
+  {
+    "id": "P00061",
+    "nombre": "Pepita Mugica Berridi",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "30/08/2022",
+    "lugar_defuncion": "Renteria",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000062",
+        "src": "assets/fotos/P00061/pepita-mugica-berridi.jpg",
+        "titulo": "Pepita Mugica Berridi",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00061"
+        ]
+      }
+    ],
+    "documentos": [
+      {
+        "id": "D000034",
+        "src": "assets/documentos/P00061/esquelas-y-necrologicas-errenteria-pepi-mugica-berridi-diariovasco-com.pdf",
+        "nombre_archivo": "esquelas-y-necrologicas-errenteria-pepi-mugica-berridi-diariovasco-com.pdf",
+        "formato": "application/pdf",
+        "titulo": "Esquelas y Necrologicas Errenteria Pepi Mugica Berridi diariovasco.com",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00061"
+        ],
+        "paginas": [
+          "assets/documentos/P00061/d000034-paginas/pagina-001.webp"
+        ]
+      }
+    ],
+    "fecha_creacion": "2026-08-05T14:20:24.031Z",
+    "ultima_modificacion": "2026-08-05T14:20:24.031Z",
+    "padre": "P00056",
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00061/pepita-mugica-berridi.jpg",
+    "fotoPosicion": "50% 70%"
+  },
+  {
+    "id": "P00062",
+    "nombre": "Francisco Mugica Berridi",
+    "nombre_conocido": "Patxi",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-05T14:30:15.156Z",
+    "ultima_modificacion": "2026-08-05T14:30:15.156Z",
+    "padre": "P00056",
+    "madre": ""
+  },
+  {
+    "id": "P00063",
+    "nombre": "Pilar Mugica Berridi",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "desconocido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-05T14:31:12.825Z",
+    "ultima_modificacion": "2026-08-05T14:31:12.825Z",
+    "padre": "P00056",
+    "madre": ""
+  },
+  {
+    "id": "P00064",
+    "nombre": "Mª Carmen Mugica Berridi",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-05T14:32:33.727Z",
+    "ultima_modificacion": "2026-08-05T14:32:33.727Z",
+    "padre": "P00056",
+    "madre": ""
   }
 ]
