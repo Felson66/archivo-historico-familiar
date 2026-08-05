@@ -2220,7 +2220,7 @@
     "fotoPosicion": "50% 35%"
   },
   {
-    "datos_resumen": "2 oct 1966 · Bilbao",
+    "datos_resumen": "",
     "lugar_descanso": null,
     "hijos": [],
     "estado": "documentado",
@@ -2244,7 +2244,6 @@
     "nombre": "Eduardo de la Dehesa Liz",
     "id_legacy": "p15",
     "id": "P0015",
-    "rol": "",
     "padres": [
       "P0007",
       "P0010"
@@ -2446,11 +2445,20 @@
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": [],
-    "fotoPosicion": "50% 54%"
+    "notas": "",
+    "fotoPosicion": "50% 54%",
+    "fecha_nacimiento": "2 oct 1966",
+    "lugar_nacimiento": "Bilbao",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "nombre_conocido": "",
+    "sexo": "",
+    "situacion_vital": "vivo",
+    "visible": true
   },
   {
-    "datos_resumen": "11 may 1971",
+    "datos_resumen": "",
     "lugar_descanso": null,
     "hijos": [
       "P0030",
@@ -2473,7 +2481,6 @@
     "nombre": "Elena de la Dehesa Liz",
     "id_legacy": "p16",
     "id": "P0016",
-    "rol": "",
     "padres": [
       "P0007",
       "P0010"
@@ -2541,8 +2548,17 @@
     "documentos": [],
     "cronologia": [],
     "lugares": [],
-    "notas": [],
-    "fotoPosicion": "50% 45%"
+    "notas": "",
+    "fotoPosicion": "50% 45%",
+    "fecha_nacimiento": "11 may 1971",
+    "lugar_nacimiento": "Bilbao",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "vivo",
+    "visible": true
   },
   {
     "datos_resumen": "Excónyuge de Manuel",
