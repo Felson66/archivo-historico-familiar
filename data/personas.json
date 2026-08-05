@@ -949,7 +949,7 @@
     "fotoPosicion": "50% 50%"
   },
   {
-    "datos_resumen": "† abr 2010",
+    "datos_resumen": "",
     "lugar_descanso": {
       "cemetery": "Cementerio Municipal de Bilbao (Derio)",
       "location": "Zona Única · Manzana 29 · Unidad/Nicho 0050",
@@ -957,7 +957,7 @@
       "nota_fotos": "La localización es compartida. Las fotografías individuales de cada lápida se incorporarán por separado cuando estén disponibles."
     },
     "hijos": [],
-    "estado": "memoria_familiar",
+    "estado": "memoria familiar",
     "conyuges": [],
     "hechos": [
       {
@@ -980,7 +980,6 @@
     "nombre": "Concepción Liz Gómez",
     "id_legacy": "p11",
     "id": "P0011",
-    "rol": "Jefe de Negociado",
     "padres": [
       "P0008",
       "P0009"
@@ -1022,8 +1021,17 @@
     ],
     "cronologia": [],
     "lugares": [],
-    "notas": [],
-    "fotoPosicion": "50% 50%"
+    "notas": "",
+    "fotoPosicion": "50% 50%",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "nombre_conocido": "",
+    "sexo": "",
+    "situacion_vital": "fallecido",
+    "visible": true
   },
   {
     "datos_resumen": "27 abr 1959",
