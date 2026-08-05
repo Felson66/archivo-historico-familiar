@@ -5066,9 +5066,88 @@
     ],
     "fecha_creacion": "2026-08-05T13:26:04.940Z",
     "ultima_modificacion": "2026-08-05T13:26:04.940Z",
-    "padre": "",
+    "padre": "P00056",
     "madre": "",
     "fotografia_principal": "assets/fotos/P00058/galo-mugica-berridi.jpg",
     "fotoPosicion": "50% 71%"
+  },
+  {
+    "id": "P00059",
+    "nombre": "Manuela Mugica Berridi",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "07/12/2011",
+    "lugar_defuncion": "Irun",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-05T13:43:16.432Z",
+    "ultima_modificacion": "2026-08-05T13:43:16.432Z",
+    "padre": "P00056",
+    "madre": ""
+  },
+  {
+    "id": "P00060",
+    "nombre": "Juncal Mugica Berridi",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "12/03/2014",
+    "lugar_defuncion": "Hondarribia",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000061",
+        "src": "assets/fotos/P00060/juncal-mugica-berridi.jpg",
+        "titulo": "Juncal Mugica Berridi",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00060"
+        ]
+      }
+    ],
+    "documentos": [
+      {
+        "id": "D000033",
+        "src": "assets/documentos/P00060/esquelas-y-necrologicas-hondarribia-m-juncal-mugica-berridi-diariovasc.pdf",
+        "nombre_archivo": "esquelas-y-necrologicas-hondarribia-m-juncal-mugica-berridi-diariovasc.pdf",
+        "formato": "application/pdf",
+        "titulo": "Esquelas y Necrologicas Hondarribia Mª Juncal Mugica Berridi diariovasco.com",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00060"
+        ],
+        "paginas": [
+          "assets/documentos/P00060/d000033-paginas/pagina-001.webp"
+        ]
+      }
+    ],
+    "fecha_creacion": "2026-08-05T13:47:48.516Z",
+    "ultima_modificacion": "2026-08-05T13:47:48.516Z",
+    "fotografia_principal": "assets/fotos/P00060/juncal-mugica-berridi.jpg",
+    "fotoPosicion": "50% 50%"
   }
 ]
