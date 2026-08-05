@@ -4928,8 +4928,8 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "fecha_nacimiento": "",
-    "lugar_nacimiento": "",
+    "fecha_nacimiento": "04/04/1807",
+    "lugar_nacimiento": "Alegia",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "",
@@ -4944,7 +4944,23 @@
     "hijos": [],
     "hechos": [],
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000031",
+        "src": "assets/documentos/P00055/bautismo-maria-francisca-galarza-elizondo.pdf",
+        "nombre_archivo": "bautismo-maria-francisca-galarza-elizondo.pdf",
+        "formato": "application/pdf",
+        "titulo": "Bautismo Maria Francisca, Galarza, Elizondo",
+        "fecha": "04/04/1807",
+        "descripcion": "",
+        "personas": [
+          "P00055"
+        ],
+        "paginas": [
+          "assets/documentos/P00055/d000031-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "fecha_creacion": "2026-08-05T10:59:46.767Z",
     "ultima_modificacion": "2026-08-05T10:59:46.767Z"
   }
