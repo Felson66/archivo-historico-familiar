@@ -1,12 +1,64 @@
 let PEOPLE = [];
 let byId = {};
-let currentView = "home";
+let currentView = "people";
 
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
   "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
 }[char]));
 const initials = name => name.split(/\s+/).filter(Boolean).slice(0,2).map(x => x[0]).join("").toUpperCase();
+
+
+function photoPosition(person){
+  const raw = String(person?.fotoPosicion || "").trim();
+  const match = raw.match(/^(\d{1,3})%\s+(\d{1,3})%$/);
+  if(!match) return "";
+  const x = Math.min(100,Math.max(0,Number(match[1])));
+  const y = Math.min(100,Math.max(0,Number(match[2])));
+  return `${x}% ${y}%`;
+}
+
+function photoPositionStyle(person){
+  const value = photoPosition(person);
+  return value ? ` style="object-position:${value}"` : "";
+}
+
+
+
+function isPublicPerson(person){
+  return person?.visible !== false;
+}
+
+function publicPeople(){
+  return PEOPLE.filter(isPublicPerson);
+}
+
+function cleanText(value){
+  return String(value ?? "").trim();
+}
+
+function personLifeSummary(person){
+  const birth = [cleanText(person?.fecha_nacimiento), cleanText(person?.lugar_nacimiento)]
+    .filter(Boolean).join(" · ");
+  const deathParts = [];
+  if(cleanText(person?.fecha_defuncion)) deathParts.push(`† ${cleanText(person.fecha_defuncion)}`);
+  if(cleanText(person?.lugar_defuncion)) deathParts.push(cleanText(person.lugar_defuncion));
+  const death = deathParts.join(" · ");
+
+  if(birth || death) return [birth,death].filter(Boolean).join(" — ");
+  return cleanText(person?.datos_resumen) || cleanText(person?.rol) || "Información en elaboración";
+}
+
+function personProfileSummary(person){
+  const main = personLifeSummary(person);
+  const role = cleanText(person?.rol);
+  const profession = cleanText(person?.profesion);
+  const extras = [role,profession].filter((value,index,array) =>
+    value && !main.toLowerCase().includes(value.toLowerCase()) &&
+    array.findIndex(item => item.toLowerCase() === value.toLowerCase()) === index
+  );
+  return [main,...extras].filter(Boolean).join(" · ");
+}
 
 function stateLabel(state){
   const x = (state || "").toLowerCase();
@@ -17,18 +69,19 @@ function stateLabel(state){
   return "Pendiente";
 }
 
-function card(person){
+function card(person,mode="standard"){
   const hasPhoto = Boolean(person.fotografia_principal);
   const thumb = hasPhoto
-    ? `<img class="card-photo" src="${esc(person.fotografia_principal)}" alt="${esc(person.nombre)}" loading="lazy">`
+    ? `<img class="card-photo" src="${esc(person.fotografia_principal)}" alt="${esc(person.nombre)}" loading="lazy"${photoPositionStyle(person)}>`
     : `<div class="card-monogram">${esc(initials(person.nombre))}</div>`;
 
-  return `<button class="card ${hasPhoto ? "has-photo" : ""}" data-person="${esc(person.id)}">
+  const compact = mode === "compact";
+  return `<button class="card ${hasPhoto ? "has-photo" : ""} ${compact ? "card-compact" : ""}" data-person="${esc(person.id)}">
     <div class="card-media">${thumb}</div>
     <div class="card-body">
       <span class="tag">${esc(stateLabel(person.estado))}</span>
       <h4>${esc(person.nombre)}</h4>
-      <p>${esc(person.datos_resumen || person.rol || "Información en elaboración")}</p>
+      <p>${esc(personLifeSummary(person))}</p>
     </div>
   </button>`;
 }
@@ -40,12 +93,11 @@ async function init(){
     PEOPLE = await response.json();
     byId = Object.fromEntries(PEOPLE.map(person => [person.id, person]));
 
-    renderStats();
-    renderFeatured();
     renderPeople();
+    populateTreePersonSelect();
     try{
-      buildTree();
-      resetTree();
+      buildTree(treeFocusId);
+      fitTreeToView();
     }catch(treeError){
       console.error("El árbol no se ha podido inicializar, pero las fichas siguen disponibles.", treeError);
     }
@@ -59,39 +111,26 @@ async function init(){
   }
 }
 
-function renderStats(){
-  $("statPeople").textContent = PEOPLE.length;
-  $("statDocumented").textContent = PEOPLE.filter(p => (p.estado || "").toLowerCase().includes("document")).length;
-  const unions = new Set();
-  PEOPLE.forEach(person => (person.conyuges || []).forEach(id => unions.add([person.id,id].sort().join("|"))));
-  $("statFamilies").textContent = unions.size;
-}
-
-function renderFeatured(){
-  const featuredIds = ["P0003","P0004","P0006","P0005","P0007","P0010"];
-  $("featured").innerHTML = featuredIds.map(id => byId[id]).filter(Boolean).map(card).join("");
-}
-
 function showView(id){
+  if(id === "home") id = "people";
   currentView = id;
   document.querySelectorAll(".view").forEach(view => view.classList.toggle("active", view.id === id));
   document.querySelectorAll(".bottom-nav button").forEach(button => button.classList.toggle("active", button.dataset.view === id));
   window.scrollTo({top:0, behavior:"smooth"});
 }
 
-function searchFromHome(){
-  $("peopleSearch").value = $("homeSearch").value;
-  showView("people");
-  renderPeople();
-}
-
 function renderPeople(){
+  const visiblePeople = publicPeople();
   const query = ($("peopleSearch").value || "").trim().toLowerCase();
-  const filtered = PEOPLE
-    .filter(person => JSON.stringify([person.nombre,person.datos_resumen,person.rol,person.hechos]).toLowerCase().includes(query))
+  const filtered = visiblePeople
+    .filter(person => JSON.stringify([
+      person.nombre,person.datos_resumen,person.rol,person.profesion,
+      person.fecha_nacimiento,person.lugar_nacimiento,
+      person.fecha_defuncion,person.lugar_defuncion,person.hechos
+    ]).toLowerCase().includes(query))
     .sort((a,b) => a.nombre.localeCompare(b.nombre,"es"));
   $("peopleCount").textContent = `${filtered.length} ${filtered.length === 1 ? "persona" : "personas"}`;
-  $("peopleGrid").innerHTML = filtered.length ? filtered.map(card).join("") : `<div class="empty">No se han encontrado coincidencias.</div>`;
+  $("peopleGrid").innerHTML = filtered.length ? filtered.map(person => card(person,"compact")).join("") : `<div class="empty">No se han encontrado coincidencias.</div>`;
 }
 
 function relationButtons(ids, emptyText="No consta"){
@@ -100,8 +139,168 @@ function relationButtons(ids, emptyText="No consta"){
   return `<div class="relation-list">${related.map(person => `
     <button class="relation-button" data-person="${esc(person.id)}">
       ${esc(person.nombre)}
-      <span>${esc(person.datos_resumen || "Abrir ficha")}</span>
+      <span>${esc(personLifeSummary(person))}</span>
     </button>`).join("")}</div>`;
+}
+
+function normalizedRelationIds(value){
+  if(Array.isArray(value)) return value.filter(Boolean);
+  if(typeof value === "string" && value.trim()) return [value.trim()];
+  return [];
+}
+
+
+function normalizedRelationIds(value){
+  const values=Array.isArray(value)?value:[value];
+  const result=[];
+  const seen=new Set();
+
+  values.flat(Infinity).forEach(raw=>{
+    const id=String(raw||"").trim();
+    if(!id||seen.has(id)||!byId[id])return;
+    seen.add(id);
+    result.push(id);
+  });
+
+  return result;
+}
+
+function parentIdsFor(person){
+  if(!person)return[];
+
+  const ids=new Set([
+    ...normalizedRelationIds(person.padre),
+    ...normalizedRelationIds(person.madre),
+    ...normalizedRelationIds(person.padres)
+  ]);
+
+  PEOPLE.forEach(candidate=>{
+    const legacyChildren=[
+      ...normalizedRelationIds(candidate.hijos),
+      ...normalizedRelationIds(candidate.hijas)
+    ];
+    if(legacyChildren.includes(person.id))ids.add(candidate.id);
+  });
+
+  ids.delete(person.id);
+  return [...ids];
+}
+
+function childIdsFor(person){
+  if(!person)return[];
+
+  const ids=new Set([
+    ...normalizedRelationIds(person.hijos),
+    ...normalizedRelationIds(person.hijas)
+  ]);
+
+  PEOPLE.forEach(candidate=>{
+    if(parentIdsFor(candidate).includes(person.id))ids.add(candidate.id);
+  });
+
+  ids.delete(person.id);
+  return [...ids];
+}
+
+function spouseIdsFor(person){
+  if(!person)return[];
+
+  const ids=new Set([
+    ...normalizedRelationIds(person.conyuges),
+    ...normalizedRelationIds(person.conyuge)
+  ]);
+
+  PEOPLE.forEach(candidate=>{
+    const candidateSpouses=[
+      ...normalizedRelationIds(candidate.conyuges),
+      ...normalizedRelationIds(candidate.conyuge)
+    ];
+    if(candidateSpouses.includes(person.id))ids.add(candidate.id);
+  });
+
+  ids.delete(person.id);
+  return [...ids];
+}
+
+function siblingGroups(person){
+  const ownParents=parentIdsFor(person);
+  const ownSet=new Set(ownParents);
+
+  if(!ownParents.length){
+    return {full:[],half:[],commonParent:[]};
+  }
+
+  const explicit=new Set([
+    ...normalizedRelationIds(person.hermanos),
+    ...normalizedRelationIds(person.hermanas)
+  ]);
+
+  const full=[];
+  const half=[];
+  const commonParent=[];
+
+  PEOPLE.forEach(candidate=>{
+    if(candidate.id===person.id)return;
+
+    const candidateParents=parentIdsFor(candidate);
+    const shared=candidateParents.filter(id=>ownSet.has(id));
+
+    if(!shared.length){
+      if(explicit.has(candidate.id))commonParent.push(candidate.id);
+      return;
+    }
+
+    if(shared.length>=2){
+      full.push(candidate.id);
+    }else if(ownParents.length>=2&&candidateParents.length>=2){
+      half.push(candidate.id);
+    }else{
+      commonParent.push(candidate.id);
+    }
+  });
+
+  explicit.forEach(id=>{
+    if(!full.includes(id)&&!half.includes(id)&&!commonParent.includes(id)){
+      commonParent.push(id);
+    }
+  });
+
+  const sortIds=ids=>[...new Set(ids)]
+    .filter(id=>byId[id])
+    .sort((a,b)=>byId[a].nombre.localeCompare(byId[b].nombre,"es"));
+
+  return {
+    full:sortIds(full),
+    half:sortIds(half),
+    commonParent:sortIds(commonParent)
+  };
+}
+
+function familyGroup(title, ids, emptyText="No consta"){
+  const count = (ids || []).map(id => byId[id]).filter(Boolean).length;
+  return `<div class="family-group">
+    <h4>${esc(title)}${count ? ` <span class="family-count">${count}</span>` : ""}</h4>
+    ${relationButtons(ids, emptyText)}
+  </div>`;
+}
+
+function renderFamily(person){
+  const parents = parentIdsFor(person);
+  const siblings = siblingGroups(person);
+  const hasAnySibling = siblings.full.length || siblings.half.length || siblings.commonParent.length;
+
+  return `<div class="family-block">
+    ${familyGroup("Padres", parents, "No constan padres registrados")}
+    ${siblings.full.length
+      ? familyGroup("Hermanos", siblings.full)
+      : (!hasAnySibling
+          ? familyGroup("Hermanos", [], parents.length ? "No constan otros hijos de sus padres" : "No se pueden calcular sin padres registrados")
+          : "")}
+    ${siblings.half.length ? familyGroup("Medios hermanos", siblings.half) : ""}
+    ${siblings.commonParent.length ? familyGroup("Hermanos con un progenitor común", siblings.commonParent) : ""}
+    ${familyGroup("Cónyuges", spouseIdsFor(person), "No consta cónyuge")}
+    ${familyGroup("Hijos", childIdsFor(person), "No constan hijos")}
+  </div>`;
 }
 
 function renderFacts(person){
@@ -154,52 +353,215 @@ function renderDocuments(person){
         <strong>${esc(title)}</strong>
         ${meta?`<span class="document-meta">${esc(meta)}</span>`:""}
         ${description?`<span class="document-description">${esc(description)}</span>`:""}
-        <span class="document-open">${pageCount?`Consultar ${pageCount} página${pageCount===1?"":"s"}`:"Preparar vista desde Administración"} <span aria-hidden="true">→</span></span>
+        <span class="document-open">${isTextDocument(doc)?"Leer documento":isImageDocumentPublic(doc)?"Ver imagen":pageCount?`Consultar ${pageCount} página${pageCount===1?"":"s"}`:"Preparar vista desde Administración"} <span aria-hidden="true">→</span></span>
       </div>
     </button>`;
   }).join("")}</div>`;
 }
 
+
+function isTextDocument(doc){
+  const path=String(doc?.archivo||doc?.src||doc?.url||doc?.nombre_archivo||"").toLowerCase();
+  const type=String(doc?.tipo||doc?.formato||"").toLowerCase();
+  return type==="txt"||type.includes("texto")||path.endsWith(".txt");
+}
+
+function isImageDocumentPublic(doc){
+  const path=String(doc?.archivo||doc?.src||doc?.url||doc?.nombre_archivo||"").toLowerCase();
+  const type=String(doc?.tipo||doc?.formato||"").toLowerCase();
+  return type.startsWith("image/") || /\.(jpe?g|png|webp|gif|bmp|avif)$/i.test(path);
+}
+
+
+async function fetchTextDocument(doc){
+  const path=doc?.archivo||doc?.src||doc?.url;
+  if(!path)throw new Error("El documento no tiene una ruta válida.");
+  const response=await fetch(path,{cache:"no-store"});
+  if(!response.ok)throw new Error(`No se pudo cargar el texto (${response.status}).`);
+  const buffer=await response.arrayBuffer();
+  let text=new TextDecoder("utf-8",{fatal:false}).decode(buffer);
+  if((text.match(/\uFFFD/g)||[]).length>2){
+    try{text=new TextDecoder("windows-1252",{fatal:false}).decode(buffer)}catch{}
+  }
+  return text.replace(/\r\n?/g,"\n");
+}
+
+async function openTextDocumentViewer(doc){
+  activeDocumentViewer = ensureDocumentViewer();
+
+  activeDocumentViewer.querySelector("#ahDocTitleV357").textContent =
+    doc.titulo || doc.nombre_archivo || "Documento de texto";
+
+  const description = activeDocumentViewer.querySelector("#ahDocDescriptionV357");
+  description.textContent = doc.descripcion || doc.fecha || "";
+  description.hidden = !description.textContent;
+
+  const counter = activeDocumentViewer.querySelector("#ahDocCounterV357");
+  counter.textContent = "Documento de texto";
+
+  const body = activeDocumentViewer.querySelector("#ahDocBodyV357");
+  const footer = activeDocumentViewer.querySelector(".ah-doc-footer-v357");
+  footer.hidden = true;
+
+  body.innerHTML = `<div class="ah-doc-text-loading">Cargando documento…</div>`;
+
+  activeDocumentViewer.classList.add("open");
+  activeDocumentViewer.setAttribute("aria-hidden","false");
+  document.body.classList.add("ah-doc-open-v357");
+
+  try{
+    const text = await fetchTextDocument(doc);
+    body.innerHTML = `<pre class="ah-doc-text-content">${esc(text)}</pre>`;
+    body.scrollTo({top:0,left:0,behavior:"auto"});
+  }catch(error){
+    body.innerHTML = `
+      <div class="ah-doc-error-v357">
+        <strong>No se pudo abrir el documento de texto.</strong>
+        <p>${esc(error.message)}</p>
+      </div>`;
+  }
+}
+
 function ensureDocumentViewer(){
-  let viewer=document.getElementById("documentViewer");
-  if(viewer) return viewer;
-  viewer=document.createElement("div"); viewer.id="documentViewer"; viewer.className="document-viewer"; viewer.setAttribute("aria-hidden","true");
-  viewer.innerHTML=`<button id="documentViewerCloseFloating" class="document-viewer-close-floating" type="button" aria-label="Cerrar documento">×</button>
-  <div class="document-viewer-panel" role="dialog" aria-modal="true" aria-labelledby="documentViewerTitle">
-    <header class="document-viewer-header"><div class="document-viewer-heading"><strong id="documentViewerTitle">Documento</strong><small id="documentViewerDescription"></small><small id="documentViewerCounter"></small></div>
-      <button id="documentViewerClose" class="document-viewer-close" type="button" aria-label="Cerrar documento">×</button></header>
-    <div id="documentViewerBody" class="document-viewer-body"></div>
-    <footer class="document-viewer-footer"><button id="documentPrev" type="button">‹ Anterior</button><button id="documentNext" type="button">Siguiente ›</button></footer>
-  </div>`;
+  // Elimina cualquier visor heredado de versiones anteriores.
+  document.querySelectorAll("#documentViewer, .document-viewer, #ahDocumentViewerV357").forEach(node => node.remove());
+
+  const viewer = document.createElement("div");
+  viewer.id = "ahDocumentViewerV357";
+  viewer.className = "ah-doc-viewer-v357";
+  viewer.setAttribute("aria-hidden", "true");
+  viewer.innerHTML = `
+    <section class="ah-doc-panel-v357" role="dialog" aria-modal="true" aria-labelledby="ahDocTitleV357">
+      <header class="ah-doc-header-v357">
+        <div class="ah-doc-heading-v357">
+          <strong id="ahDocTitleV357">Documento</strong>
+          <small id="ahDocDescriptionV357"></small>
+          <small id="ahDocCounterV357"></small>
+        </div>
+        <button id="ahDocCloseV357" class="ah-doc-close-v357" type="button" aria-label="Cerrar documento">×</button>
+      </header>
+      <main id="ahDocBodyV357" class="ah-doc-body-v357"></main>
+      <footer class="ah-doc-footer-v357">
+        <button id="ahDocPrevV357" type="button">‹ Anterior</button>
+        <button id="ahDocNextV357" type="button">Siguiente ›</button>
+      </footer>
+    </section>`;
+
   document.body.appendChild(viewer);
-  viewer.querySelector("#documentViewerClose").onclick=closeDocumentViewer;
-  viewer.querySelector("#documentViewerCloseFloating").onclick=closeDocumentViewer;
-  viewer.addEventListener("click",e=>{if(e.target===viewer)closeDocumentViewer()});
+  viewer.querySelector("#ahDocCloseV357").addEventListener("click", closeDocumentViewer);
   return viewer;
 }
-let currentDocumentPages=[], currentDocumentPage=0;
+
+let currentDocumentPages = [];
+let currentDocumentPage = 0;
+let activeDocumentViewer = null;
+
 function showDocumentPage(){
-  const viewer=ensureDocumentViewer(), body=viewer.querySelector("#documentViewerBody"), counter=viewer.querySelector("#documentViewerCounter");
-  const prev=viewer.querySelector("#documentPrev"), next=viewer.querySelector("#documentNext");
-  if(!currentDocumentPages.length) return;
-  body.innerHTML=`<img class="document-page-image" src="${esc(currentDocumentPages[currentDocumentPage])}" alt="Página ${currentDocumentPage+1}">`;
-  counter.textContent=`Página ${currentDocumentPage+1} de ${currentDocumentPages.length}`;
-  prev.disabled=currentDocumentPage===0; next.disabled=currentDocumentPage===currentDocumentPages.length-1;
+  const viewer = activeDocumentViewer;
+  if(!viewer || !currentDocumentPages.length) return;
+
+  const body = viewer.querySelector("#ahDocBodyV357");
+  const counter = viewer.querySelector("#ahDocCounterV357");
+  const prev = viewer.querySelector("#ahDocPrevV357");
+  const next = viewer.querySelector("#ahDocNextV357");
+
+  body.replaceChildren();
+  const image = document.createElement("img");
+  image.className = "ah-doc-page-v357";
+  image.src = currentDocumentPages[currentDocumentPage];
+  image.alt = `Página ${currentDocumentPage + 1}`;
+  body.appendChild(image);
+
+  counter.textContent = `Página ${currentDocumentPage + 1} de ${currentDocumentPages.length}`;
+  prev.disabled = currentDocumentPage === 0;
+  next.disabled = currentDocumentPage === currentDocumentPages.length - 1;
+  body.scrollTo({top:0, left:0, behavior:"auto"});
 }
-function openDocumentViewer(documentId,personId){
-  const person=byId[personId], doc=(person?.documentos||[]).find(d=>d.id===documentId); if(!doc)return;
-  const viewer=ensureDocumentViewer();
-  viewer.querySelector("#documentViewerTitle").textContent=doc.titulo||doc.nombre_archivo||"Documento";
-  const description=viewer.querySelector("#documentViewerDescription");
-  description.textContent=doc.descripcion||doc.fecha||"";
-  description.hidden=!description.textContent;
-  currentDocumentPages=Array.isArray(doc.paginas)?doc.paginas:[]; currentDocumentPage=0;
-  viewer.querySelector("#documentPrev").onclick=()=>{if(currentDocumentPage>0){currentDocumentPage--;showDocumentPage()}};
-  viewer.querySelector("#documentNext").onclick=()=>{if(currentDocumentPage<currentDocumentPages.length-1){currentDocumentPage++;showDocumentPage()}};
-  if(currentDocumentPages.length) showDocumentPage(); else viewer.querySelector("#documentViewerBody").innerHTML=`<div class="document-error"><strong>Este PDF todavía no tiene preparada su vista por páginas.</strong><p>Entra en Administración, abre Documentos y pulsa «Generar vista».</p></div>`;
-  viewer.classList.add("open");viewer.setAttribute("aria-hidden","false");document.body.classList.add("document-viewer-open");
+
+function openDocumentViewer(documentId, personId){
+  const person=byId[personId];
+  const doc=(person?.documentos||[]).find(item=>item.id===documentId);
+  if(doc&&isTextDocument(doc)){
+    openTextDocumentViewer(doc);
+    return;
+  }
+  if(!doc) return;
+
+  activeDocumentViewer = ensureDocumentViewer();
+
+  if(isImageDocumentPublic(doc)){
+    activeDocumentViewer.querySelector(".ah-doc-footer-v357").hidden = true;
+    activeDocumentViewer.querySelector("#ahDocTitleV357").textContent = doc.titulo || doc.nombre_archivo || "Imagen";
+
+    const description = activeDocumentViewer.querySelector("#ahDocDescriptionV357");
+    description.textContent = doc.descripcion || doc.fecha || "";
+    description.hidden = !description.textContent;
+
+    activeDocumentViewer.querySelector("#ahDocCounterV357").textContent = "Imagen";
+
+    const body = activeDocumentViewer.querySelector("#ahDocBodyV357");
+    body.innerHTML = "";
+    const image = document.createElement("img");
+    image.className = "ah-doc-image-v403";
+    image.src = documentPath(doc);
+    image.alt = doc.titulo || doc.nombre_archivo || "Documento gráfico";
+    body.appendChild(image);
+    body.scrollTo({top:0,left:0,behavior:"auto"});
+
+    activeDocumentViewer.classList.add("open");
+    activeDocumentViewer.setAttribute("aria-hidden","false");
+    document.body.classList.add("ah-doc-open-v357");
+    return;
+  }
+
+  activeDocumentViewer.querySelector(".ah-doc-footer-v357").hidden = false;
+  activeDocumentViewer.querySelector("#ahDocTitleV357").textContent = doc.titulo || doc.nombre_archivo || "Documento";
+
+  const description = activeDocumentViewer.querySelector("#ahDocDescriptionV357");
+  description.textContent = doc.descripcion || doc.fecha || "";
+  description.hidden = !description.textContent;
+
+  currentDocumentPages = Array.isArray(doc.paginas) ? doc.paginas.filter(Boolean) : [];
+  currentDocumentPage = 0;
+
+  const prev = activeDocumentViewer.querySelector("#ahDocPrevV357");
+  const next = activeDocumentViewer.querySelector("#ahDocNextV357");
+  prev.addEventListener("click", () => {
+    if(currentDocumentPage > 0){
+      currentDocumentPage -= 1;
+      showDocumentPage();
+    }
+  });
+  next.addEventListener("click", () => {
+    if(currentDocumentPage < currentDocumentPages.length - 1){
+      currentDocumentPage += 1;
+      showDocumentPage();
+    }
+  });
+
+  if(currentDocumentPages.length){
+    showDocumentPage();
+  }else{
+    activeDocumentViewer.querySelector("#ahDocBodyV357").innerHTML = `<div class="ah-doc-error-v357"><strong>Este documento todavía no tiene preparada su vista por páginas.</strong><p>Entra en Administración, abre Documentos y pulsa «Generar vista».</p></div>`;
+    activeDocumentViewer.querySelector("#ahDocCounterV357").textContent = "";
+    prev.disabled = true;
+    next.disabled = true;
+  }
+
+  activeDocumentViewer.classList.add("open");
+  activeDocumentViewer.setAttribute("aria-hidden", "false");
+  document.body.classList.add("ah-doc-open-v357");
 }
-function closeDocumentViewer(){const viewer=document.getElementById("documentViewer");if(!viewer)return;viewer.classList.remove("open");viewer.setAttribute("aria-hidden","true");document.body.classList.remove("document-viewer-open");currentDocumentPages=[];}
+
+function closeDocumentViewer(){
+  if(activeDocumentViewer){
+    activeDocumentViewer.remove();
+    activeDocumentViewer = null;
+  }
+  document.body.classList.remove("ah-doc-open-v357");
+  currentDocumentPages = [];
+  currentDocumentPage = 0;
+}
 
 function renderTimeline(person){
   const entries = Array.isArray(person.cronologia) ? person.cronologia : [];
@@ -223,7 +585,7 @@ function openPerson(id){
   if(!person) return;
 
   const photo = person.fotografia_principal
-    ? `<img src="${esc(person.fotografia_principal)}" alt="${esc(person.nombre)}">`
+    ? `<img src="${esc(person.fotografia_principal)}" alt="${esc(person.nombre)}"${photoPositionStyle(person)}>`
     : `<div class="profile-monogram">${esc(initials(person.nombre))}</div>`;
 
   $("drawerContent").innerHTML = `
@@ -232,7 +594,8 @@ function openPerson(id){
       <div class="profile-intro">
         <span class="badge">${esc(stateLabel(person.estado))}</span>
         <h2>${esc(person.nombre)}</h2>
-        <div class="profile-summary">${esc(person.datos_resumen || "Datos biográficos en elaboración")}${person.rol ? ` · ${esc(person.rol)}` : ""}</div>
+        <div class="profile-summary">${esc(personProfileSummary(person))}</div>
+        <button class="profile-tree-button" type="button" data-tree-center="${esc(person.id)}">🌳 Ver en el árbol</button>
       </div>
     </section>
 
@@ -262,14 +625,9 @@ function openPerson(id){
       </div>
 
       <div>
-        <section class="profile-section">
-          <h3>Relaciones familiares</h3>
-          <h4>Padres</h4>
-          ${relationButtons(person.padres)}
-          <h4>Cónyuges</h4>
-          ${relationButtons(person.conyuges)}
-          <h4>Hijos</h4>
-          ${relationButtons(person.hijos)}
+        <section class="profile-section family-section">
+          <h3>Familia</h3>
+          ${renderFamily(person)}
         </section>
 
         <section class="profile-section">
@@ -344,61 +702,247 @@ function closeDrawer(){
   history.replaceState(null,"",location.pathname + location.search);
 }
 
-const layout = {
-  P0042:[1430,70],P0043:[1640,70],P0044:[2190,70],P0045:[2400,70],
-  P0003:[1750,290],P0004:[1960,290],
-  P0006:[850,530],P0053:[1070,530],P0046:[1290,530],P0047:[1510,530],P0048:[1730,530],P0049:[1950,530],P0050:[2170,530],P0051:[2390,530],P0052:[2610,530],
-  P0001:[290,290],P0002:[500,290],P0005:[640,530],
-  P0007:[850,780],P0008:[1160,590],P0009:[1370,590],P0010:[1060,780],P0011:[1280,780],
-  P0012:[530,1040],P0013:[950,1040],P0014:[1370,1040],P0015:[1790,1040],P0016:[2210,1040]
-};
 
-function buildTree(){
+let treeFocusId = "P0015";
+let treeShowSiblings = true;
+let currentTreeLayout = {};
+let currentTreeBounds = {width:1400,height:980};
+
+function populateTreePersonSelect(){
+  const select = $("treePersonSelect");
+  if(!select) return;
+
+  const sorted = publicPeople().sort((a,b) => a.nombre.localeCompare(b.nombre,"es"));
+  select.innerHTML = sorted.map(person =>
+    `<option value="${esc(person.id)}">${esc(person.nombre)}</option>`
+  ).join("");
+
+  if(!byId[treeFocusId]){
+    treeFocusId = byId["P0007"] ? "P0007" : (sorted[0]?.id || "");
+  }
+  select.value = treeFocusId;
+}
+
+function uniqueIds(ids){
+  return [...new Set((ids || []).filter(id => byId[id]))];
+}
+
+function childIdsFor(person){
+  const ids = new Set(normalizedRelationIds(person?.hijos));
+  PEOPLE.forEach(candidate => {
+    if(parentIdsFor(candidate).includes(person?.id)) ids.add(candidate.id);
+  });
+  return [...ids].filter(id => byId[id]);
+}
+
+function spouseIdsFor(person){
+  const ids = new Set(normalizedRelationIds(person?.conyuges));
+  PEOPLE.forEach(candidate => {
+    if(normalizedRelationIds(candidate.conyuges).includes(person?.id)) ids.add(candidate.id);
+  });
+  return [...ids].filter(id => byId[id]);
+}
+
+function treeNodeLabel(person){
+  const summary = personLifeSummary(person);
+  return `<h5>${esc(person.nombre)}</h5>${summary ? `<p>${esc(summary)}</p>` : ""}`;
+}
+
+function placeRow(ids,y,stageWidth,nodeWidth=210,gap=34){
+  const unique = uniqueIds(ids);
+  if(!unique.length) return;
+  const total = unique.length * nodeWidth + Math.max(0,unique.length-1) * gap;
+  let x = Math.max(40,(stageWidth-total)/2);
+  unique.forEach(id => {
+    currentTreeLayout[id] = [x,y];
+    x += nodeWidth + gap;
+  });
+}
+
+function buildTree(focusId=treeFocusId){
+  const focus = byId[focusId] || PEOPLE[0];
+  if(!focus) return;
+
+  treeFocusId = focus.id;
+  const select = $("treePersonSelect");
+  if(select) select.value = treeFocusId;
+
+  const parents = parentIdsFor(focus);
+  const grandparents = uniqueIds(parents.flatMap(id => parentIdsFor(byId[id])));
+  const siblingSets = siblingGroups(focus);
+  const allSiblings = uniqueIds([
+    ...siblingSets.full,
+    ...siblingSets.half,
+    ...siblingSets.commonParent
+  ]);
+  const siblings = treeShowSiblings ? allSiblings : [];
+  const spouses = spouseIdsFor(focus);
+  const children = childIdsFor(focus);
+
+  const middleRow = [...siblings, focus.id, ...spouses];
+  const widestCount = Math.max(
+    grandparents.length,
+    parents.length,
+    middleRow.length,
+    children.length,
+    3
+  );
+  const stageWidth = Math.max(1300, widestCount * 244 + 160);
+  const stageHeight = 1030;
+
+  currentTreeLayout = {};
+  currentTreeBounds = {width:stageWidth,height:stageHeight};
+
+  placeRow(grandparents,70,stageWidth);
+  placeRow(parents,300,stageWidth);
+  placeRow(middleRow,555,stageWidth);
+  placeRow(children,820,stageWidth);
+
   const stage = $("treeStage");
   const svg = $("treeSvg");
-  stage.querySelectorAll(".person-node").forEach(node => node.remove());
+  stage.style.width = `${stageWidth}px`;
+  stage.style.height = `${stageHeight}px`;
+  svg.setAttribute("viewBox",`0 0 ${stageWidth} ${stageHeight}`);
+  stage.querySelectorAll(".person-node, .tree-generation-label").forEach(node => node.remove());
   svg.innerHTML = "";
 
-  Object.entries(layout).forEach(([id,[x,y]]) => {
+  const addBand = (y,height,label,className) => {
+    const rect = document.createElementNS("http://www.w3.org/2000/svg","rect");
+    rect.setAttribute("x","18");
+    rect.setAttribute("y",String(y));
+    rect.setAttribute("width",String(stageWidth-36));
+    rect.setAttribute("height",String(height));
+    rect.setAttribute("rx","22");
+    rect.setAttribute("class",`tree-band tree-band-${className}`);
+    svg.appendChild(rect);
+
+    const text = document.createElementNS("http://www.w3.org/2000/svg","text");
+    text.setAttribute("x","38");
+    text.setAttribute("y",String(y+30));
+    text.setAttribute("class",`tree-band-label tree-band-label-${className}`);
+    text.textContent = label;
+    svg.appendChild(text);
+  };
+
+  addBand(40,190,"ABUELOS","grandparents");
+  addBand(270,190,"PADRES","parents");
+  addBand(515,190,"PERSONA Y FAMILIA","focus");
+  addBand(785,205,"HIJOS","children");
+
+  const addBranchBox = (ids,label,className) => {
+    const valid = uniqueIds(ids).filter(id => currentTreeLayout[id]);
+    if(!valid.length) return;
+    const xs = valid.map(id => currentTreeLayout[id][0]);
+    const minX = Math.min(...xs)-18;
+    const maxX = Math.max(...xs)+210+18;
+    const rect = document.createElementNS("http://www.w3.org/2000/svg","rect");
+    rect.setAttribute("x",String(minX));
+    rect.setAttribute("y","52");
+    rect.setAttribute("width",String(maxX-minX));
+    rect.setAttribute("height","166");
+    rect.setAttribute("rx","18");
+    rect.setAttribute("class",`tree-branch-box tree-branch-${className}`);
+    svg.appendChild(rect);
+
+    const text = document.createElementNS("http://www.w3.org/2000/svg","text");
+    text.setAttribute("x",String((minX+maxX)/2));
+    text.setAttribute("y","75");
+    text.setAttribute("text-anchor","middle");
+    text.setAttribute("class",`tree-branch-label tree-branch-label-${className}`);
+    text.textContent = label;
+    svg.appendChild(text);
+  };
+
+  if(parents[0]){
+    addBranchBox(parentIdsFor(byId[parents[0]]),"RAMA PATERNA","paternal");
+  }
+  if(parents[1]){
+    addBranchBox(parentIdsFor(byId[parents[1]]),"RAMA MATERNA","maternal");
+  }
+
+  const nodeWidth = 210;
+  const nodeHeight = 104;
+  const centerX = id => currentTreeLayout[id][0] + nodeWidth/2;
+  const topY = id => currentTreeLayout[id][1];
+  const bottomY = id => currentTreeLayout[id][1] + nodeHeight;
+
+  const line = (d,type="family") => {
+    const path = document.createElementNS("http://www.w3.org/2000/svg","path");
+    path.setAttribute("d",d);
+    path.setAttribute("class",`tree-line tree-line-${type}`);
+    svg.appendChild(path);
+  };
+
+  const connectParentToChildren = (parentIds,childIds,barY) => {
+    const validParents = uniqueIds(parentIds).filter(id => currentTreeLayout[id]);
+    const validChildren = uniqueIds(childIds).filter(id => currentTreeLayout[id]);
+    if(!validParents.length || !validChildren.length) return;
+
+    const parentCenters = validParents.map(centerX);
+    const parentMid = parentCenters.reduce((a,b)=>a+b,0)/parentCenters.length;
+    if(validParents.length > 1){
+      line(`M ${Math.min(...parentCenters)} ${bottomY(validParents[0])+12} H ${Math.max(...parentCenters)}`,"couple");
+    }
+    line(`M ${parentMid} ${Math.max(...validParents.map(bottomY))+12} V ${barY}`,"family");
+
+    const childCenters = validChildren.map(centerX);
+    if(childCenters.length > 1){
+      line(`M ${Math.min(...childCenters)} ${barY} H ${Math.max(...childCenters)}`,"family");
+    }
+    validChildren.forEach(id => line(`M ${centerX(id)} ${barY} V ${topY(id)}`,"family"));
+  };
+
+  // Grandparents -> each parent.
+  parents.forEach(parentId => {
+    const gps = parentIdsFor(byId[parentId]).filter(id => currentTreeLayout[id]);
+    connectParentToChildren(gps,[parentId],260);
+  });
+
+  // Parents -> focal person and siblings who share those parents.
+  const sameGenerationChildren = uniqueIds([focus.id,...siblings]).filter(id => {
+    const candidateParents = parentIdsFor(byId[id]);
+    return candidateParents.some(parentId => parents.includes(parentId));
+  });
+  connectParentToChildren(parents,sameGenerationChildren,510);
+
+  // Focus + spouse -> children.
+  const childParents = [focus.id,...spouses].filter(id => currentTreeLayout[id]);
+  connectParentToChildren(childParents,children,775);
+
+  Object.entries(currentTreeLayout).forEach(([id,[x,y]]) => {
     const person = byId[id];
     if(!person) return;
     const node = document.createElement("button");
-    node.className = `person-node ${person.estado || ""}`;
+    const role = id === focus.id ? "focus" :
+      grandparents.includes(id) ? "grandparent" :
+      parents.includes(id) ? "parent" :
+      spouses.includes(id) ? "spouse" :
+      children.includes(id) ? "child" : "sibling";
+    node.className = `person-node ${person.estado || ""} tree-role-${role}`;
     node.style.left = `${x}px`;
     node.style.top = `${y}px`;
-    node.dataset.person = id;
-    node.innerHTML = `<h5>${esc(person.nombre)}</h5><p>${esc(person.datos_resumen || person.rol || "")}</p>`;
+    if(person.visible === false){
+      node.classList.add("tree-person-hidden");
+      node.disabled = true;
+      node.removeAttribute("data-person");
+    }else{
+      node.dataset.person = id;
+    }
+    node.setAttribute("aria-label",`Abrir ficha de ${person.nombre}`);
+    node.innerHTML = treeNodeLabel(person);
     stage.appendChild(node);
   });
 
-  const cx = id => layout[id][0] + 95;
-  const top = id => layout[id][1];
-  const line = (pathData, marriage=false) => {
-    const path = document.createElementNS("http://www.w3.org/2000/svg","path");
-    path.setAttribute("d",pathData);
-    path.setAttribute("fill","none");
-    path.setAttribute("stroke",marriage ? "#a56558" : "#568273");
-    path.setAttribute("stroke-width",marriage ? "4" : "3");
-    path.setAttribute("stroke-linecap","round");
-    svg.appendChild(path);
-  };
-  const marriage = (a,b) => line(`M ${layout[a][0]+190} ${layout[a][1]+45} H ${layout[b][0]} ${layout[b][1]+45}`,true);
-  const family = (a,b,kids,barY) => {
-    marriage(a,b);
-    const mid = (layout[a][0]+190+layout[b][0])/2;
-    line(`M ${mid} ${layout[a][1]+45} V ${barY}`);
-    const xs = kids.map(cx);
-    line(`M ${Math.min(...xs)} ${barY} H ${Math.max(...xs)}`);
-    kids.forEach(kid => line(`M ${cx(kid)} ${barY} V ${top(kid)}`));
-  };
-
-  family("P0042","P0043",["P0003"],245);
-  family("P0044","P0045",["P0004"],245);
-  family("P0003","P0004",["P0006","P0053","P0046","P0047","P0048","P0049","P0050","P0051","P0052"],485);
-  family("P0001","P0002",["P0005"],485);
-  family("P0005","P0006",["P0007"],735);
-  family("P0008","P0009",["P0010","P0011"],735);
-  family("P0007","P0010",["P0012","P0013","P0014","P0015","P0016"],995);
+  const context = $("treeContext");
+  if(context){
+    const parts = [
+      `${parents.length} ${parents.length===1?"progenitor":"progenitores"}`,
+      `${allSiblings.length} ${allSiblings.length===1?"hermano":"hermanos"}`,
+      `${spouses.length} ${spouses.length===1?"cónyuge":"cónyuges"}`,
+      `${children.length} ${children.length===1?"hijo":"hijos"}`
+    ];
+    context.innerHTML = `<strong>${esc(focus.nombre)}</strong><span>${parts.join(" · ")}</span>`;
+  }
 }
 
 let transform = {x:0,y:0,scale:.52};
@@ -408,10 +952,25 @@ let pinch = null;
 function applyTreeTransform(){
   $("treeStage").style.transform = `translate(${transform.x}px,${transform.y}px) scale(${transform.scale})`;
 }
-function resetTree(){
+function fitTreeToView(){
   const shell = $("treeShell");
-  transform = {x:Math.min(40, shell.clientWidth * .05),y:20,scale:shell.clientWidth < 700 ? .31 : .48};
+  if(!shell) return;
+  const padding = shell.clientWidth < 700 ? 18 : 36;
+  const scaleX = (shell.clientWidth-padding*2)/currentTreeBounds.width;
+  const scaleY = (shell.clientHeight-padding*2)/currentTreeBounds.height;
+  let scale = Math.min(1,Math.max(.18,Math.min(scaleX,scaleY)));
+  if(shell.clientWidth < 700){
+    scale = Math.max(scale,.36);
+  }
+  transform = {
+    x:(shell.clientWidth-currentTreeBounds.width*scale)/2,
+    y:Math.max(16,(shell.clientHeight-currentTreeBounds.height*scale)/2),
+    scale
+  };
   applyTreeTransform();
+}
+function resetTree(){
+  fitTreeToView();
 }
 function zoomTree(factor, centerX=null, centerY=null){
   const shell = $("treeShell");
@@ -430,6 +989,17 @@ function wireEvents(){
   // Delegación global: se activa antes de cargar datos o construir el árbol.
   // Así las fichas siguen funcionando aunque falle cualquier módulo secundario.
   document.addEventListener("click", event => {
+    const treeCenterButton = event.target.closest("[data-tree-center]");
+    if(treeCenterButton){
+      event.preventDefault();
+      const id = treeCenterButton.dataset.treeCenter;
+      closeDrawer();
+      showView("tree");
+      buildTree(id);
+      requestAnimationFrame(fitTreeToView);
+      return;
+    }
+
     const documentLink = event.target.closest("[data-document-url]");
     if(documentLink){
       event.preventDefault();
@@ -452,8 +1022,6 @@ function wireEvents(){
   });
 
   document.querySelectorAll(".bottom-nav button").forEach(button => button.addEventListener("click", () => showView(button.dataset.view)));
-  $("homeSearchButton").addEventListener("click",searchFromHome);
-  $("homeSearch").addEventListener("keydown",event => { if(event.key === "Enter") searchFromHome(); });
   $("peopleSearch").addEventListener("input",renderPeople);
   $("clearSearch").addEventListener("click",() => { $("peopleSearch").value=""; renderPeople(); });
   $("drawerClose").addEventListener("click",closeDrawer);
@@ -466,6 +1034,17 @@ function wireEvents(){
       closeLightbox();
       closeDrawer();
     }
+  });
+  $("treePersonSelect").addEventListener("change",event => {
+    buildTree(event.target.value);
+    requestAnimationFrame(fitTreeToView);
+  });
+  $("toggleSiblings").addEventListener("click",event => {
+    treeShowSiblings = !treeShowSiblings;
+    event.currentTarget.classList.toggle("active",treeShowSiblings);
+    event.currentTarget.setAttribute("aria-pressed",String(treeShowSiblings));
+    buildTree(treeFocusId);
+    requestAnimationFrame(fitTreeToView);
   });
   $("resetTree").addEventListener("click",resetTree);
   $("zoomIn").addEventListener("click",() => zoomTree(1.22));
@@ -509,6 +1088,9 @@ function wireEvents(){
     }
   },{passive:true});
   shell.addEventListener("touchend",() => pinch=null,{passive:true});
+  window.addEventListener("resize",() => {
+    if(currentView === "tree") fitTreeToView();
+  });
 }
 
 wireEvents();

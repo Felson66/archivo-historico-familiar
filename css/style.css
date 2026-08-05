@@ -644,3 +644,697 @@ body.document-viewer-open{overflow:hidden}
   .document-viewer-footer{padding-left:10px;padding-right:10px}
   .document-viewer-footer button{font-size:15px;padding:8px 6px}
 }
+
+
+/* v3.5.6 · archivos físicos nuevos para evitar caché de Safari */
+.document-viewer-header{padding-right:84px}
+.document-viewer-close{display:none!important}
+.document-viewer-footer{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+.document-viewer-footer a,#documentDownload{display:none!important}
+.document-viewer-footer button{display:flex!important;width:100%!important;min-width:0!important;visibility:visible!important}
+#documentPrev{grid-column:1}
+#documentNext{grid-column:2}
+@media(max-width:700px){
+  .document-viewer-footer{gap:8px!important;padding:10px 8px calc(10px + env(safe-area-inset-bottom))!important}
+  .document-viewer-footer button{font-size:16px!important;padding:8px 4px!important}
+}
+
+
+/* Visor de documentos reconstruido desde cero — v3.5.7 */
+body.ah-doc-open-v357{overflow:hidden!important}
+.ah-doc-viewer-v357{
+  position:fixed!important;
+  inset:0!important;
+  z-index:2147483000!important;
+  display:none!important;
+  background:#f3efe6!important;
+}
+.ah-doc-viewer-v357.open{display:block!important}
+.ah-doc-panel-v357{
+  position:absolute!important;
+  inset:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  width:100%!important;
+  height:100%!important;
+  min-width:0!important;
+  overflow:hidden!important;
+  background:#f3efe6!important;
+}
+.ah-doc-header-v357{
+  flex:0 0 auto!important;
+  min-width:0!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:12px!important;
+  padding:calc(12px + env(safe-area-inset-top)) 14px 12px!important;
+  background:#183c35!important;
+  color:#fff!important;
+  box-shadow:0 2px 12px rgba(0,0,0,.25)!important;
+}
+.ah-doc-heading-v357{flex:1 1 auto!important;min-width:0!important;overflow:hidden!important}
+.ah-doc-heading-v357 strong,.ah-doc-heading-v357 small{display:block!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+.ah-doc-heading-v357 strong{font-family:Georgia,serif!important;font-size:clamp(20px,5vw,30px)!important}
+.ah-doc-heading-v357 small{margin-top:3px!important;font-size:15px!important;opacity:.82!important}
+.ah-doc-close-v357{
+  flex:0 0 54px!important;
+  width:54px!important;
+  height:54px!important;
+  padding:0!important;
+  border:2px solid rgba(24,60,53,.16)!important;
+  border-radius:50%!important;
+  background:#fff!important;
+  color:#183c35!important;
+  font:400 42px/48px Arial,sans-serif!important;
+  text-align:center!important;
+}
+.ah-doc-body-v357{
+  flex:1 1 auto!important;
+  min-height:0!important;
+  overflow:auto!important;
+  -webkit-overflow-scrolling:touch!important;
+  display:block!important;
+  padding:14px!important;
+  text-align:center!important;
+  touch-action:pan-x pan-y pinch-zoom!important;
+}
+.ah-doc-page-v357{
+  display:block!important;
+  width:auto!important;
+  max-width:100%!important;
+  height:auto!important;
+  margin:0 auto!important;
+  background:#fff!important;
+  box-shadow:0 3px 18px rgba(0,0,0,.18)!important;
+}
+.ah-doc-footer-v357{
+  flex:0 0 auto!important;
+  display:flex!important;
+  width:100%!important;
+  gap:10px!important;
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom))!important;
+  border-top:1px solid #d7d0c3!important;
+  background:#fff!important;
+}
+.ah-doc-footer-v357 button{
+  flex:1 1 0!important;
+  min-width:0!important;
+  width:50%!important;
+  min-height:52px!important;
+  padding:8px 6px!important;
+  border:1px solid #b8b0a3!important;
+  border-radius:12px!important;
+  background:#fff!important;
+  color:#183c35!important;
+  font:700 clamp(15px,4vw,21px)/1.1 Inter,Arial,sans-serif!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+.ah-doc-footer-v357 button:disabled{opacity:.3!important}
+.ah-doc-error-v357{max-width:520px;margin:40px auto;padding:28px;background:#fff;border-radius:16px;text-align:center}
+@media(min-width:850px){
+  .ah-doc-viewer-v357{background:rgba(10,20,18,.82)!important;padding:24px!important}
+  .ah-doc-panel-v357{inset:24px!important;max-width:1050px!important;max-height:calc(100% - 48px)!important;margin:auto!important;border-radius:18px!important}
+  .ah-doc-page-v357{max-width:900px!important}
+}
+
+
+/* v3.5.8 · Bloque Familia y hermanos calculados automáticamente */
+.family-section{overflow:hidden}
+.family-block{display:grid;gap:16px}
+.family-group{min-width:0}
+.family-group h4{display:flex;align-items:center;gap:8px;margin:0 0 8px}
+.family-count{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 7px;border-radius:999px;background:#dfeae5;color:var(--green);font-size:11px;letter-spacing:0;font-weight:800}
+.family-group .relation-list{margin:0}
+.family-group .placeholder{margin:0;padding:12px 14px}
+
+
+/* Árbol genealógico dinámico — v3.6.0 */
+.tree-toolbar{
+  align-items:flex-end;
+}
+.tree-person-picker{
+  display:grid;
+  gap:5px;
+  flex:1;
+  min-width:260px;
+}
+.tree-person-picker span{
+  color:var(--muted);
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+.tree-person-picker select{
+  width:100%;
+  border:1px solid #cbd5d0;
+  border-radius:12px;
+  padding:10px 36px 10px 12px;
+  background:white;
+  color:var(--ink);
+  font:inherit;
+}
+.tree-context{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin:0 2px 11px;
+  color:var(--muted);
+  font-size:13px;
+}
+.tree-context strong{
+  color:var(--green);
+}
+.tree-stage{
+  width:1400px;
+  height:1030px;
+}
+.person-node{
+  width:210px;
+  min-height:104px;
+}
+.person-node.tree-role-focus{
+  border:4px solid var(--gold);
+  background:#fffaf0;
+  box-shadow:0 13px 32px rgba(86,66,24,.24);
+  z-index:3;
+}
+.person-node.tree-role-parent{
+  border-top:5px solid #477a9a;
+}
+.person-node.tree-role-grandparent{
+  border-top:5px solid #7a6c9d;
+}
+.person-node.tree-role-sibling{
+  border-top:5px solid #b7934a;
+}
+.person-node.tree-role-spouse{
+  border-top:5px solid #a56558;
+}
+.person-node.tree-role-child{
+  border-top:5px solid #568273;
+}
+.tree-line{
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+}
+.tree-line-family{
+  stroke:#568273;
+  stroke-width:3;
+}
+.tree-line-couple{
+  stroke:#a56558;
+  stroke-width:4;
+}
+.profile-tree-button{
+  margin-top:14px;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:12px;
+  padding:10px 13px;
+  background:rgba(255,255,255,.12);
+  color:white;
+  font-weight:800;
+}
+.profile-tree-button:hover{
+  background:rgba(255,255,255,.2);
+}
+
+@media(max-width:700px){
+  .tree-toolbar{
+    display:grid;
+    grid-template-columns:1fr auto auto auto;
+  }
+  .tree-person-picker{
+    grid-column:1/-1;
+    min-width:0;
+  }
+  .tree-context{
+    display:grid;
+    gap:3px;
+  }
+  .tree-shell{
+    min-height:560px;
+  }
+}
+
+
+/* Árbol familiar avanzado — v3.7.0 */
+.tree-option.active{
+  background:var(--green);
+  color:white;
+  border-color:var(--green);
+}
+.tree-legend{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin:12px 0 0;
+  color:var(--muted);
+  font-size:12px;
+}
+.tree-legend span{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+}
+.legend-line{
+  width:30px;
+  height:0;
+  display:inline-block;
+  border-top:3px solid;
+}
+.legend-line.couple{border-color:#a56558}
+.legend-line.family{border-color:#568273}
+.legend-focus{
+  width:18px;
+  height:14px;
+  display:inline-block;
+  border:3px solid var(--gold);
+  border-radius:5px;
+  background:#fffaf0;
+}
+.tree-band{
+  pointer-events:none;
+  stroke-width:1;
+  vector-effect:non-scaling-stroke;
+}
+.tree-band-grandparents{fill:rgba(122,108,157,.055);stroke:rgba(122,108,157,.17)}
+.tree-band-parents{fill:rgba(71,122,154,.05);stroke:rgba(71,122,154,.16)}
+.tree-band-focus{fill:rgba(183,147,74,.05);stroke:rgba(183,147,74,.17)}
+.tree-band-children{fill:rgba(86,130,115,.05);stroke:rgba(86,130,115,.16)}
+.tree-band-label{
+  font:800 13px Inter,ui-sans-serif,sans-serif;
+  letter-spacing:.08em;
+}
+.tree-band-label-grandparents{fill:#665584}
+.tree-band-label-parents{fill:#3f6e8a}
+.tree-band-label-focus{fill:#8b6c2d}
+.tree-band-label-children{fill:#467263}
+.tree-branch-box{
+  pointer-events:none;
+  fill:rgba(255,255,255,.5);
+  stroke-width:1.5;
+  stroke-dasharray:5 4;
+  vector-effect:non-scaling-stroke;
+}
+.tree-branch-paternal{stroke:rgba(71,122,154,.42)}
+.tree-branch-maternal{stroke:rgba(122,108,157,.42)}
+.tree-branch-label{
+  font:800 11px Inter,ui-sans-serif,sans-serif;
+  letter-spacing:.07em;
+}
+.tree-branch-label-paternal{fill:#3f6e8a}
+.tree-branch-label-maternal{fill:#665584}
+.tree-line{
+  pointer-events:none;
+}
+.person-node{
+  z-index:2;
+}
+.person-node:hover{
+  transform:translateY(-3px);
+}
+.tree-shell{
+  background-color:#f0f4f1;
+}
+@media(max-width:700px){
+  .tree-toolbar{
+    grid-template-columns:repeat(4,1fr);
+  }
+  .tree-toolbar .soft{
+    width:100%;
+  }
+  .tree-option{
+    grid-column:1/-1;
+  }
+  .tree-shell{
+    height:72dvh;
+    min-height:610px;
+  }
+  .tree-hint{
+    font-size:11px;
+    max-width:calc(100% - 24px);
+  }
+  .tree-band-label{
+    font-size:11px;
+  }
+  .tree-legend{
+    justify-content:flex-start;
+    padding:0 4px;
+  }
+}
+
+
+/* Portada depurada — v3.7.2 */
+.hero-refined{
+  padding-top:34px;
+  padding-bottom:34px;
+}
+.hero-main-title{
+  max-width:none;
+  margin:0 0 22px;
+  font:700 clamp(42px,6vw,72px)/1 Georgia,serif;
+  letter-spacing:-.025em;
+  color:var(--ink);
+}
+.hero-refined .search{
+  margin-top:0;
+}
+@media(max-width:700px){
+  .hero-refined{
+    padding:28px 18px;
+  }
+  .hero-main-title{
+    margin-bottom:18px;
+    font-size:clamp(36px,12vw,52px);
+  }
+}
+
+
+/* Encuadre de fotografías en tarjetas móviles — v3.7.3 */
+@media(max-width:700px){
+  .card.has-photo{
+    min-height:250px;
+  }
+
+  .card.has-photo .card-photo{
+    object-position:center 72%;
+  }
+
+  .card.has-photo .card-media:after{
+    background:linear-gradient(
+      to bottom,
+      rgba(10,26,22,.01) 28%,
+      rgba(10,26,22,.16) 52%,
+      rgba(10,26,22,.93) 100%
+    );
+  }
+}
+
+
+/* Fotografías inteligentes — v3.8.0 */
+.card-photo,
+.profile-photo img{
+  object-position:center center;
+}
+
+
+/* Listado compacto de personas — v3.8.1 */
+#peopleGrid{
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:14px;
+}
+
+.card.card-compact{
+  min-height:0;
+  display:grid;
+  grid-template-columns:96px minmax(0,1fr);
+  align-items:stretch;
+  overflow:hidden;
+  border-radius:16px;
+  background:var(--paper);
+  color:var(--ink);
+  text-align:left;
+  box-shadow:0 7px 20px rgba(20,52,45,.09);
+}
+
+.card.card-compact .card-media{
+  position:relative;
+  min-height:126px;
+  height:100%;
+  background:linear-gradient(145deg,#dfe9e4,#f1ede5);
+}
+
+.card.card-compact .card-media:after{
+  display:none;
+}
+
+.card.card-compact .card-photo{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.card.card-compact .card-monogram{
+  width:100%;
+  height:100%;
+  min-height:126px;
+  display:grid;
+  place-items:center;
+  border-radius:0;
+  font-size:34px;
+}
+
+.card.card-compact .card-body{
+  position:static;
+  display:grid;
+  align-content:center;
+  gap:5px;
+  min-width:0;
+  padding:15px 17px;
+  background:var(--paper);
+  color:var(--ink);
+}
+
+.card.card-compact .tag{
+  width:max-content;
+  margin:0;
+  color:var(--green2);
+  background:var(--soft);
+}
+
+.card.card-compact h4{
+  margin:0;
+  color:var(--green);
+  font:700 20px/1.18 Georgia,serif;
+  overflow-wrap:anywhere;
+}
+
+.card.card-compact p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.35;
+}
+
+.card.card-compact:hover{
+  transform:translateY(-2px);
+  box-shadow:0 11px 26px rgba(20,52,45,.14);
+}
+
+@media(max-width:700px){
+  #peopleGrid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .card.card-compact{
+    grid-template-columns:92px minmax(0,1fr);
+    border-radius:15px;
+  }
+
+  .card.card-compact .card-media,
+  .card.card-compact .card-monogram{
+    min-height:118px;
+  }
+
+  .card.card-compact .card-body{
+    padding:13px 14px;
+  }
+
+  .card.card-compact h4{
+    font-size:18px;
+  }
+
+  .card.card-compact p{
+    font-size:13px;
+  }
+}
+
+
+/* Personas como portada — v3.8.2 */
+#people{
+  padding-top:22px;
+}
+
+#people .section-title{
+  margin-top:0;
+}
+
+.bottom-nav{
+  grid-template-columns:repeat(3,1fr);
+}
+
+@media(max-width:700px){
+  #people{
+    padding-top:24px;
+  }
+}
+
+
+/* Datos biográficos estructurados — v3.9.0 */
+.card-compact p,
+.profile-summary,
+.person-node p,
+.relation-button span{
+  font-variant-numeric:tabular-nums;
+}
+
+
+/* Visor directo de TXT — v3.9.2 */
+body.document-viewer-open{overflow:hidden}
+.text-document-viewer{position:fixed;inset:0;z-index:10000;display:grid;grid-template-rows:auto minmax(0,1fr);background:var(--cream);color:var(--ink)}
+.text-viewer-header{display:flex;justify-content:space-between;gap:18px;padding:20px clamp(18px,4vw,42px);background:var(--green);color:#fff;box-shadow:0 8px 24px rgba(14,44,37,.18)}
+.text-viewer-header h2{margin:0;font:700 clamp(26px,4vw,40px)/1.08 Georgia,serif}
+.text-viewer-header p{margin:7px 0 0;color:rgba(255,255,255,.78);font-size:17px}
+.text-viewer-close{flex:0 0 auto;width:58px;height:58px;border:3px solid rgba(20,52,45,.18);border-radius:50%;background:#fff;color:var(--green);font:400 46px/1 Arial,sans-serif}
+.text-viewer-body{min-height:0;overflow:auto;-webkit-overflow-scrolling:touch;padding:clamp(16px,4vw,44px)}
+.text-document-content{width:min(100%,960px);margin:0 auto;padding:clamp(20px,4vw,38px);border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 12px 32px rgba(20,52,45,.09);font:400 clamp(16px,1.8vw,19px)/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}
+.text-viewer-loading,.text-viewer-error{width:min(100%,720px);margin:10vh auto 0;padding:28px;border-radius:18px;background:#fff;text-align:center;box-shadow:0 12px 32px rgba(20,52,45,.09)}
+.text-viewer-error{display:grid;gap:10px;color:#8b1f1f}
+@media(max-width:700px){
+  .text-viewer-header{padding:17px}
+  .text-viewer-close{width:54px;height:54px;font-size:43px}
+  .text-viewer-body{padding:14px 11px 26px}
+  .text-document-content{padding:19px 16px;border-radius:14px;font-size:16px;line-height:1.55}
+}
+
+/* Corrección de scroll del visor TXT — v3.9.3 */
+.text-document-viewer{
+  height:100dvh;
+  max-height:100dvh;
+  overflow:hidden;
+}
+.text-viewer-body{
+  min-height:0;
+  height:100%;
+  overflow-y:auto !important;
+  overflow-x:hidden;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior:contain;
+  touch-action:pan-y;
+}
+.text-document-content{
+  min-height:auto;
+  margin-bottom:32px;
+}
+@supports not (height:100dvh){
+  .text-document-viewer{height:100vh;max-height:100vh}
+}
+@media(max-width:700px){
+  .text-viewer-body{
+    padding-bottom:max(32px,env(safe-area-inset-bottom));
+  }
+}
+
+
+/* TXT integrado en el visor modal de documentos — v3.9.4 */
+.ah-doc-text-content{
+  width:min(100%,920px);
+  margin:0 auto;
+  padding:30px 34px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:white;
+  color:var(--ink);
+  box-shadow:0 8px 24px rgba(20,52,45,.08);
+  font:400 17px/1.65 ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+  tab-size:4;
+}
+
+.ah-doc-text-loading{
+  margin:auto;
+  padding:28px;
+  border-radius:16px;
+  background:white;
+  color:var(--muted);
+  text-align:center;
+}
+
+.ah-doc-body-v357:has(.ah-doc-text-content){
+  align-items:flex-start;
+  overflow-y:auto;
+  overflow-x:hidden;
+  padding:22px;
+}
+
+@media(max-width:700px){
+  .ah-doc-body-v357:has(.ah-doc-text-content){
+    padding:12px;
+  }
+
+  .ah-doc-text-content{
+    padding:20px 17px;
+    border-radius:12px;
+    font-size:16px;
+    line-height:1.55;
+  }
+}
+
+
+/* Modelo Persona v4.0.0 */
+.person-node.tree-person-hidden{
+  opacity:.5;
+  filter:grayscale(.35);
+  cursor:default;
+  border-style:dashed;
+}
+
+/* Archivo Familiar v4.0.1 */
+
+/* Archivo Familiar v4.0.2 */
+
+
+/* Documentos gráficos — v4.0.3 */
+.ah-doc-body-v357:has(.ah-doc-image-v403){
+  overflow:auto;
+  align-items:flex-start;
+  justify-content:center;
+  padding:18px;
+}
+
+.ah-doc-image-v403{
+  display:block;
+  width:auto;
+  max-width:100%;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+  border-radius:8px;
+  box-shadow:0 8px 28px rgba(20,52,45,.12);
+}
+
+@media(max-width:700px){
+  .ah-doc-body-v357:has(.ah-doc-image-v403){
+    padding:8px;
+  }
+
+  .ah-doc-image-v403{
+    border-radius:5px;
+  }
+}
+
+/* Archivo Familiar v4.1.0a-alpha1 */
+
+/* Archivo Familiar v4.1.0a-alpha3 */
+
+/* Archivo Familiar v4.1.0a-alpha4 */
+
+/* Archivo Familiar v4.1.0a-alpha5 */
+
+/* Archivo Familiar v4.1.0a-alpha6 */
+
+/* Archivo Familiar v4.1.0a-alpha7 */
+
+/* Archivo Familiar v4.1.0a-alpha8 */
+
+/* Archivo Familiar v4.1.0b-alpha2 */
