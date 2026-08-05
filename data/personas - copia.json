@@ -75,9 +75,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -159,9 +157,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -234,9 +230,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0042",
-    "madre": "P0043"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -309,9 +303,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0044",
-    "madre": "P0045"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -391,9 +383,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0001",
-    "madre": "P0002"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -453,9 +443,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0003",
-    "madre": "P0004"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -619,9 +607,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0005",
-    "madre": "P0006"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -735,9 +721,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -874,9 +858,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -1034,9 +1016,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0008",
-    "madre": "P0009"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -1121,9 +1101,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0008",
-    "madre": "P0009"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -1438,9 +1416,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "P0007",
-    "madre": "P0010"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -1880,9 +1856,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "P0007",
-    "madre": "P0010"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -2337,9 +2311,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "P0007",
-    "madre": "P0010"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -2577,13 +2549,15 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "P0007",
-    "madre": "P0010"
+    "visible": true
   },
   {
     "datos_resumen": "",
     "lugar_descanso": null,
+    "hijos": [
+      "P0030",
+      "P0031"
+    ],
     "estado": "documentado",
     "conyuges": [
       "P0029"
@@ -2601,6 +2575,10 @@
     "nombre": "Elena de la Dehesa Liz",
     "id_legacy": "p16",
     "id": "P0016",
+    "padres": [
+      "P0007",
+      "P0010"
+    ],
     "biografia": "",
     "fotografia_principal": "assets/fotos/P0016/elena-portada.jpg",
     "fotografias": [
@@ -2674,9 +2652,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "P0007",
-    "madre": "P0010"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -2717,9 +2693,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -2755,9 +2729,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "P0012",
-    "madre": "P0017"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -2838,9 +2810,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -2913,9 +2883,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "P0019",
-    "madre": "P0013"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -2994,9 +2962,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "P0019",
-    "madre": "P0013"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -3108,9 +3074,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -3207,9 +3171,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "P0022",
-    "madre": "P0020"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -3261,9 +3223,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -3351,9 +3311,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "P0024",
-    "madre": "P0014"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -3419,9 +3377,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "P0024",
-    "madre": "P0014"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -3526,9 +3482,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -3583,9 +3537,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "",
-    "madre": "P0027"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -3623,9 +3575,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -3675,9 +3625,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "P0029",
-    "madre": "P0016"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -3731,9 +3679,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "P0029",
-    "madre": "P0016"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -3827,9 +3773,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "vivo",
-    "visible": true,
-    "padre": "P0022",
-    "madre": "P0020"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -3957,9 +3901,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0001",
-    "madre": "P0002"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4148,9 +4090,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0001",
-    "madre": "P0002"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4187,9 +4127,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4226,9 +4164,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4265,9 +4201,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "desconocido",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4304,9 +4238,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "desconocido",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4342,9 +4274,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4380,9 +4310,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4418,9 +4346,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4456,9 +4382,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "",
-    "madre": ""
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4509,9 +4433,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0003",
-    "madre": "P0004"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4562,9 +4484,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0003",
-    "madre": "P0004"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4615,9 +4535,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0003",
-    "madre": "P0004"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4668,9 +4586,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0003",
-    "madre": "P0004"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4721,9 +4637,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0003",
-    "madre": "P0004"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4774,9 +4688,7 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0003",
-    "madre": "P0004"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4827,9 +4739,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0003",
-    "madre": "P0004"
+    "visible": true
   },
   {
     "datos_resumen": "",
@@ -4880,8 +4790,6 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "visible": true,
-    "padre": "P0003",
-    "madre": "P0004"
+    "visible": true
   }
 ]

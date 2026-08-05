@@ -6,14 +6,14 @@
 <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
 <meta content="#183c35" name="theme-color"/>
 <title>Administración · Archivo Histórico Familiar</title>
-<link href="css/admin.css?v=4.1.0c" rel="stylesheet"/>
+<link href="css/admin.css?v=4.1.1-alpha3" rel="stylesheet"/>
 </head>
 <body>
 <header class="admin-topbar">
 <a class="back" href="index.html">← Volver al archivo</a>
 <div>
 <h1>Centro de Administración</h1>
-<p>Gestión integral del Archivo Familiar · v4.1.0c</p>
+<p>Gestión integral del Archivo Familiar · 4.1.1-alpha2</p>
 </div>
 </header>
 <main class="admin-shell">
@@ -84,7 +84,7 @@
 <div aria-label="Contenido de la persona" class="content-tabs" role="tablist">
 <button aria-controls="photosWorkspace" aria-selected="true" class="content-tab active" data-tab="photos" id="photosTab" role="tab" tabindex="0">📷 Fotografías <span id="photosCount">0</span></button>
 <button aria-controls="documentsWorkspace" aria-selected="false" class="content-tab" data-tab="documents" id="documentsTab" role="tab" tabindex="-1">📄 Documentos <span id="documentsCount">0</span></button>
-<button aria-controls="biographyWorkspace" aria-selected="false" class="content-tab" data-tab="biography" id="biographyTab" role="tab" tabindex="-1">✍️ Datos y biografía <span id="factsCount">0</span></button>
+<button aria-controls="biographyWorkspace" aria-selected="false" class="content-tab" data-tab="biography" id="biographyTab" role="tab" tabindex="-1">✍️ Datos y biografía <span id="factsCount">0</span></button><button aria-controls="relationsWorkspace" aria-selected="false" class="content-tab" data-tab="relations" id="relationsTab" role="tab" tabindex="-1">👪 Relaciones <span id="relationsCount">0</span></button>
 </div>
 <section aria-labelledby="photosTab" class="workspace-panel" id="photosWorkspace" role="tabpanel"><section aria-label="Encuadre de la fotografía principal" class="photo-framing hidden" id="photoFraming">
 <div class="framing-heading">
@@ -214,7 +214,56 @@
 </div>
 </section>
 <div class="result hidden" id="biographyResult"></div>
-</div></section>
+</div></section><section aria-labelledby="relationsTab" class="workspace-panel hidden" id="relationsWorkspace" role="tabpanel">
+<div class="relations-panel">
+<div class="relations-heading">
+<div>
+<span class="eyebrow">Relaciones familiares</span>
+<h3>Editar relaciones directas</h3>
+<p>Padre, madre y cónyuges se guardan. Hijos y hermanos se calculan automáticamente.</p>
+</div>
+<button class="primary" id="saveRelations" type="button">Guardar relaciones</button>
+</div>
+<div aria-live="polite" class="result hidden" id="relationsMessage"></div>
+<div class="relations-grid">
+<label>
+<span>Padre</span>
+<input autocomplete="off" id="fatherSearch" placeholder="Buscar por nombre o ID..." type="search"/>
+<select id="fatherSelect"><option value="">No consta</option></select>
+</label>
+<label>
+<span>Madre</span>
+<input autocomplete="off" id="motherSearch" placeholder="Buscar por nombre o ID..." type="search"/>
+<select id="motherSelect"><option value="">No consta</option></select>
+</label>
+</div>
+<div class="relations-block">
+<div class="relations-block-heading">
+<div>
+<span class="eyebrow">Cónyuges</span>
+<h4>Relaciones recíprocas</h4>
+</div>
+<button class="secondary" id="addSpouse" type="button">+ Añadir cónyuge</button>
+</div>
+<input autocomplete="off" id="spouseSearch" placeholder="Buscar persona por nombre o ID..." type="search"/>
+<select id="spouseSelect"><option value="">Selecciona una persona...</option></select>
+<div class="relation-chips" id="spouseList"></div>
+</div>
+<div class="relations-derived-grid">
+<section>
+<span class="eyebrow">Calculadas</span>
+<h4>Hijos</h4>
+<div class="derived-list" id="derivedChildren"></div>
+</section>
+<section>
+<span class="eyebrow">Calculadas</span>
+<h4>Hermanos</h4>
+<div class="derived-list" id="derivedSiblings"></div>
+</section>
+</div>
+<div class="relations-warnings hidden" id="relationsWarnings"></div>
+</div>
+</section>
 <div class="result hidden" id="managerResult"></div>
 </section>
 <section aria-hidden="true" class="editor-card person-editor hidden" id="personEditor">
@@ -348,7 +397,7 @@
 <p class="note">Los PDF generan automáticamente una copia de consulta por páginas. Los documentos se guardan en <code>assets/documentos/&lt;ID&gt;/</code>. Al eliminar uno, se borra de todas las personas relacionadas y también se elimina el archivo físico.</p>
 </section>
 </main>
-<footer class="project-footer"><strong>Archivo Familiar</strong><span>Proyecto personal de investigación genealógica</span><small>v4.1.0c · © 2026–2027</small></footer>
-<script src="js/admin.js?v=4.1.0c"></script>
+<footer class="project-footer"><strong>Archivo Familiar</strong><span>Proyecto personal de investigación genealógica</span><small>4.1.1-alpha2 · © 2026–2027</small></footer>
+<script src="js/admin.js?v=4.1.1-alpha3"></script>
 </body>
 </html>

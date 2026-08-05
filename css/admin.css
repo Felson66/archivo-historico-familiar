@@ -669,3 +669,138 @@ textarea:focus-visible{
 }
 
 /* Archivo Familiar v4.1.0b-alpha2 — EP-003.0 */
+
+
+/* EP-003.1 — Editor básico de relaciones */
+.relations-panel{
+  display:grid;
+  gap:22px;
+  padding:22px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--panel);
+}
+
+.relations-heading,
+.relations-block-heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:18px;
+}
+
+.relations-heading h3,
+.relations-block-heading h4{
+  margin:4px 0 6px;
+}
+
+.relations-heading p{
+  margin:0;
+  color:var(--muted);
+}
+
+.relations-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+
+.relations-grid label{
+  display:grid;
+  gap:8px;
+}
+
+.relations-grid label > span{
+  font-weight:900;
+}
+
+.relations-block{
+  display:grid;
+  gap:12px;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:rgba(255,255,255,.62);
+}
+
+.relation-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  min-height:42px;
+}
+
+.relation-chip{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 10px;
+  border:1px solid rgba(31,95,77,.22);
+  border-radius:999px;
+  background:#eef7f1;
+  color:var(--ink);
+  font-size:13px;
+  font-weight:850;
+}
+
+.relation-chip button{
+  display:grid;
+  place-items:center;
+  width:24px;
+  height:24px;
+  padding:0;
+  border-radius:50%;
+  background:#fff;
+  color:#7b3c32;
+}
+
+.relations-derived-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+
+.relations-derived-grid section{
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:rgba(255,255,255,.62);
+}
+
+.derived-list{
+  display:grid;
+  gap:8px;
+  margin-top:10px;
+}
+
+.derived-item{
+  padding:9px 11px;
+  border-radius:10px;
+  background:#eef3f0;
+  font-weight:750;
+}
+
+.relations-warnings{
+  padding:14px 16px;
+  border:1px solid #d8a36f;
+  border-radius:14px;
+  background:#fff4e8;
+  color:#743f1b;
+}
+
+.relations-warnings ul{
+  margin:8px 0 0;
+  padding-left:20px;
+}
+
+@media(max-width:760px){
+  .relations-heading,
+  .relations-block-heading{
+    display:grid;
+  }
+
+  .relations-grid,
+  .relations-derived-grid{
+    grid-template-columns:1fr;
+  }
+}

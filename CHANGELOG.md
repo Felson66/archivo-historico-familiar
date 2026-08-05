@@ -1,5 +1,14 @@
 # Historial de versiones
 
+## 4.1.1-alpha1 — Editor básico de relaciones
+- Nueva pestaña Relaciones.
+- Edición de padre y madre.
+- Cónyuges recíprocos.
+- Búsqueda por nombre o ID.
+- Hijos y hermanos calculados.
+- Validaciones básicas de integridad.
+
+
 ## 4.1.0c — Reorganización del repositorio
 - Sustitución de archivos CSS y JavaScript versionados por nombres fijos.
 - Eliminación de todos los pares antiguos `app-v*`, `admin-v*`, `style-v*` y `admin-v*`.

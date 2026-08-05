@@ -12,8 +12,9 @@ const connectFolder=$("connectFolder"),folderStatus=$("folderStatus"),manager=$(
 const newPerson=$("newPerson"),newPhoto=$("newPhoto"),newDocument=$("newDocument"),photosCount=$("photosCount"),documentsCount=$("documentsCount");
 const expedientHeader=$("expedientHeader"),expedientId=$("expedientId"),expedientName=$("expedientName"),expedientLife=$("expedientLife"),expedientMeta=$("expedientMeta"),expedientVisibility=$("expedientVisibility"),expedientPhotos=$("expedientPhotos"),expedientDocuments=$("expedientDocuments"),expedientFacts=$("expedientFacts"),expedientPhotosCount=$("expedientPhotosCount"),expedientDocumentsCount=$("expedientDocumentsCount"),expedientFactsCount=$("expedientFactsCount");
 const photosWorkspace=$("photosWorkspace"),documentsWorkspace=$("documentsWorkspace"),biographyWorkspace=$("biographyWorkspace");
+const relationsWorkspace=$("relationsWorkspace"),relationsCount=$("relationsCount"),fatherSearch=$("fatherSearch"),fatherSelect=$("fatherSelect"),motherSearch=$("motherSearch"),motherSelect=$("motherSelect"),spouseSearch=$("spouseSearch"),spouseSelect=$("spouseSelect"),addSpouse=$("addSpouse"),spouseList=$("spouseList"),derivedChildren=$("derivedChildren"),derivedSiblings=$("derivedSiblings"),relationsWarnings=$("relationsWarnings"),relationsMessage=$("relationsMessage"),saveRelations=$("saveRelations");
 const photoFraming=$("photoFraming"),framingPreviewImage=$("framingPreviewImage"),framingPreviewState=$("framingPreviewState"),framingPreviewName=$("framingPreviewName"),framingPreviewSummary=$("framingPreviewSummary"),photoPositionX=$("photoPositionX"),photoPositionY=$("photoPositionY"),photoPositionXValue=$("photoPositionXValue"),photoPositionYValue=$("photoPositionYValue"),savePhotoPosition=$("savePhotoPosition"),resetPhotoPosition=$("resetPhotoPosition");
-const photosTab=$("photosTab"),documentsTab=$("documentsTab"),biographyTab=$("biographyTab"),photosEmpty=$("photosEmpty"),documentsEmpty=$("documentsEmpty"),photoGallery=$("photoGallery"),documentGallery=$("documentGallery"),biographyPanel=$("biographyPanel"),managerResult=$("managerResult"),factsCount=$("factsCount");
+const photosTab=$("photosTab"),documentsTab=$("documentsTab"),biographyTab=$("biographyTab"),relationsTab=$("relationsTab"),photosEmpty=$("photosEmpty"),documentsEmpty=$("documentsEmpty"),photoGallery=$("photoGallery"),documentGallery=$("documentGallery"),biographyPanel=$("biographyPanel"),managerResult=$("managerResult"),factsCount=$("factsCount");
 const bioName=$("bioName"),bioBirthDate=$("bioBirthDate"),bioBirthPlace=$("bioBirthPlace"),bioDeathDate=$("bioDeathDate"),bioDeathPlace=$("bioDeathPlace"),bioProfession=$("bioProfession"),bioKnownName=$("bioKnownName"),bioSex=$("bioSex"),bioLifeStatus=$("bioLifeStatus"),bioState=$("bioState"),bioSummary=$("bioSummary"),bioVisible=$("bioVisible"),savePersonalData=$("savePersonalData");
 const factsEditorList=$("factsEditorList"),addFact=$("addFact"),saveFacts=$("saveFacts"),biographyResult=$("biographyResult"),dangerZone=$("dangerZone"),deletePersonStatus=$("deletePersonStatus"),deletePerson=$("deletePerson");
 const personEditor=$("personEditor"),closePersonEditor=$("closePersonEditor"),cancelPersonEdit=$("cancelPersonEdit"),personIdInput=$("personIdInput"),personNameInput=$("personNameInput"),personKnownNameInput=$("personKnownNameInput"),personSexInput=$("personSexInput"),personLifeStatusInput=$("personLifeStatusInput"),personStateInput=$("personStateInput"),personBirthDateInput=$("personBirthDateInput"),personBirthPlaceInput=$("personBirthPlaceInput"),personDeathDateInput=$("personDeathDateInput"),personDeathPlaceInput=$("personDeathPlaceInput"),personProfessionInput=$("personProfessionInput"),personNotesInput=$("personNotesInput"),personVisibleInput=$("personVisibleInput"),savePerson=$("savePerson"),personEditorResult=$("personEditorResult");
@@ -252,14 +253,225 @@ function renderChecklist(kind,selectedIds=null){
 function selectFromChecklist(kind,event){const input=event.target.closest('input[type="checkbox"]');if(!input)return;const selected=kind==="photo"?photoSelectedPeople:documentSelectedPeople;if(input.checked)selected.add(input.value);else selected.delete(input.value);updateSaveStates()}
 
 
+
+let pendingSpouseIds=[];
+
+function relationLabel(id){
+  const person=people.find(item=>item.id===id);
+  return person?`${person.nombre} · ${person.id}`:id;
+}
+
+function selectablePeople(currentId,query=""){
+  const normalized=normalizedSearchText(query);
+  return people
+    .filter(person=>person.id!==currentId)
+    .filter(person=>{
+      if(!normalized)return true;
+      return normalizedSearchText([
+        person.nombre,
+        person.nombre_conocido,
+        person.id
+      ].filter(Boolean).join(" ")).includes(normalized);
+    })
+    .sort((a,b)=>a.nombre.localeCompare(b.nombre,"es"));
+}
+
+function fillRelationSelect(select,currentId,selectedId,query="",emptyLabel="No consta"){
+  select.innerHTML="";
+  const empty=document.createElement("option");
+  empty.value="";
+  empty.textContent=emptyLabel;
+  select.appendChild(empty);
+
+  selectablePeople(currentId,query).forEach(person=>{
+    const option=document.createElement("option");
+    option.value=person.id;
+    option.textContent=`${person.nombre} · ${person.id}`;
+    option.selected=person.id===selectedId;
+    select.appendChild(option);
+  });
+
+  if(selectedId&&!Array.from(select.options).some(option=>option.value===selectedId)){
+    const selected=people.find(person=>person.id===selectedId);
+    if(selected){
+      const option=document.createElement("option");
+      option.value=selected.id;
+      option.textContent=`${selected.nombre} · ${selected.id}`;
+      option.selected=true;
+      select.appendChild(option);
+    }
+  }
+}
+
+function renderRelationChips(){
+  spouseList.innerHTML="";
+  if(!pendingSpouseIds.length){
+    spouseList.innerHTML='<p class="muted">No constan cónyuges.</p>';
+    return;
+  }
+
+  pendingSpouseIds.forEach(id=>{
+    const chip=document.createElement("span");
+    chip.className="relation-chip";
+    chip.innerHTML=`<span>${escapeHtml(relationLabel(id))}</span><button type="button" data-remove-spouse="${escapeHtml(id)}" aria-label="Eliminar cónyuge">×</button>`;
+    spouseList.appendChild(chip);
+  });
+}
+
+function siblingIdsForAdmin(person){
+  const parents=parentIdsForAdmin(person);
+  if(!parents.length)return[];
+
+  return [...new Set(
+    people
+      .filter(candidate=>candidate.id!==person.id)
+      .filter(candidate=>parentIdsForAdmin(candidate).some(id=>parents.includes(id)))
+      .map(candidate=>candidate.id)
+  )];
+}
+
+function renderDerivedRelations(person){
+  const renderList=(target,ids,emptyText)=>{
+    target.innerHTML="";
+    const valid=[...new Set(ids)].filter(id=>people.some(person=>person.id===id));
+    if(!valid.length){
+      target.innerHTML=`<p class="muted">${escapeHtml(emptyText)}</p>`;
+      return;
+    }
+
+    valid
+      .sort((a,b)=>relationLabel(a).localeCompare(relationLabel(b),"es"))
+      .forEach(id=>{
+        const item=document.createElement("div");
+        item.className="derived-item";
+        item.textContent=relationLabel(id);
+        target.appendChild(item);
+      });
+  };
+
+  renderList(derivedChildren,childIdsForAdmin(person),"No constan hijos.");
+  renderList(derivedSiblings,siblingIdsForAdmin(person),"No constan hermanos.");
+}
+
+function descendantIdsForAdmin(person){
+  const result=new Set();
+  const visit=id=>{
+    const current=people.find(person=>person.id===id);
+    if(!current)return;
+
+    childIdsForAdmin(current).forEach(childId=>{
+      if(result.has(childId))return;
+      result.add(childId);
+      visit(childId);
+    });
+  };
+
+  visit(person.id);
+  return result;
+}
+
+function relationshipWarningsFor(person,fatherId,motherId,spouses){
+  const warnings=[];
+
+  if(fatherId===person.id)warnings.push("Una persona no puede ser su propio padre.");
+  if(motherId===person.id)warnings.push("Una persona no puede ser su propia madre.");
+  if(fatherId&&motherId&&fatherId===motherId)warnings.push("Padre y madre no pueden ser la misma persona.");
+  if(spouses.includes(person.id))warnings.push("Una persona no puede ser su propio cónyuge.");
+
+  const descendants=descendantIdsForAdmin(person);
+  [fatherId,motherId].filter(Boolean).forEach(parentId=>{
+    if(descendants.has(parentId)){
+      warnings.push(`${relationLabel(parentId)} figura entre los descendientes de esta persona.`);
+    }
+  });
+
+  return [...new Set(warnings)];
+}
+
+function renderRelationsWarnings(person){
+  const warnings=relationshipWarningsFor(
+    person,
+    fatherSelect.value,
+    motherSelect.value,
+    pendingSpouseIds
+  );
+
+  relationsWarnings.classList.toggle("hidden",warnings.length===0);
+  relationsWarnings.innerHTML=warnings.length
+    ? `<strong>Revisa antes de guardar</strong><ul>${warnings.map(item=>`<li>${escapeHtml(item)}</li>`).join("")}</ul>`
+    : "";
+}
+
+function renderRelationsPanel(person){
+  if(!person)return;
+
+  const parents=parentIdsForAdmin(person);
+  const explicitFather=String(person.padre||"").trim();
+  const explicitMother=String(person.madre||"").trim();
+
+  const legacyFather=parents.find(id=>{
+    const parent=people.find(candidate=>candidate.id===id);
+    return parent?.sexo==="hombre";
+  })||"";
+
+  const legacyMother=parents.find(id=>{
+    const parent=people.find(candidate=>candidate.id===id);
+    return parent?.sexo==="mujer";
+  })||"";
+
+  const fatherId=explicitFather||legacyFather;
+  const motherId=explicitMother||legacyMother;
+
+  pendingSpouseIds=[...new Set(spouseIdsForAdmin(person))];
+
+  fillRelationSelect(fatherSelect,person.id,fatherId,fatherSearch.value,"No consta");
+  fillRelationSelect(motherSelect,person.id,motherId,motherSearch.value,"No consta");
+  fillRelationSelect(spouseSelect,person.id,"",spouseSearch.value,"Selecciona una persona...");
+  renderRelationChips();
+  renderDerivedRelations(person);
+  renderRelationsWarnings(person);
+
+  relationsCount.textContent=String(
+    [fatherId,motherId].filter(Boolean).length+pendingSpouseIds.length
+  );
+}
+
+function setReciprocalSpouses(person,newSpouseIds){
+  const previous=spouseIdsForAdmin(person);
+  const next=[...new Set(newSpouseIds)].filter(id=>id&&id!==person.id);
+
+  previous
+    .filter(id=>!next.includes(id))
+    .forEach(id=>{
+      const spouse=people.find(candidate=>candidate.id===id);
+      if(!spouse)return;
+      spouse.conyuges=relationIds(spouse.conyuges).filter(spouseId=>spouseId!==person.id);
+      delete spouse.conyuge;
+    });
+
+  next
+    .filter(id=>!previous.includes(id))
+    .forEach(id=>{
+      const spouse=people.find(candidate=>candidate.id===id);
+      if(!spouse)return;
+      spouse.conyuges=[...new Set([...relationIds(spouse.conyuges),person.id])];
+      delete spouse.conyuge;
+    });
+
+  person.conyuges=next;
+  delete person.conyuge;
+}
+
 function renderWorkspaceVisibility(tab){
   const showPhotos=tab==="photos";
   const showDocuments=tab==="documents";
   const showBiography=tab==="biography";
+  const showRelations=tab==="relations";
 
   photosWorkspace.classList.toggle("hidden",!showPhotos);
   documentsWorkspace.classList.toggle("hidden",!showDocuments);
   biographyWorkspace.classList.toggle("hidden",!showBiography);
+  relationsWorkspace.classList.toggle("hidden",!showRelations);
 
   photoGallery.classList.toggle("hidden",!showPhotos);
   documentGallery.classList.toggle("hidden",!showDocuments);
@@ -272,7 +484,7 @@ function renderWorkspaceVisibility(tab){
 
 function switchTab(tab,{focus=false}={}){
   activeTab=tab;
-  const tabs=[photosTab,documentsTab,biographyTab];
+  const tabs=[photosTab,documentsTab,biographyTab,relationsTab];
 
   tabs.forEach(button=>{
     const active=button.dataset.tab===tab;
@@ -606,6 +818,7 @@ async function renderManager(){
     photosWorkspace.classList.add("hidden");
     documentsWorkspace.classList.add("hidden");
     biographyWorkspace.classList.add("hidden");
+    relationsWorkspace.classList.add("hidden");
     photoFraming.classList.add("hidden");
     biographyPanel.classList.add("hidden");
     dangerZone.classList.add("hidden");
@@ -625,6 +838,7 @@ async function renderManager(){
 
   await renderPhotoFraming(person);
   renderBiographyPanel(person);
+  renderRelationsPanel(person);
   renderWorkspaceVisibility(activeTab);
 
   photosEmpty.classList.toggle("hidden",photos.length>0);
@@ -719,11 +933,107 @@ clearPersonSearch.addEventListener("click",()=>{personSearch.value="";populatePe
 expedientPhotos.addEventListener("click",()=>{if(currentPerson())switchTab("photos")});
 expedientDocuments.addEventListener("click",()=>{if(currentPerson())switchTab("documents")});
 expedientFacts.addEventListener("click",()=>{if(currentPerson())switchTab("biography")});
-personSelect.addEventListener("change",()=>{closeEditors();renderManager()});
-[photosTab,documentsTab,biographyTab].forEach(button=>{
+
+fatherSearch.addEventListener("input",()=>{
+  const person=currentPerson();
+  if(person)fillRelationSelect(fatherSelect,person.id,fatherSelect.value,fatherSearch.value,"No consta");
+});
+
+motherSearch.addEventListener("input",()=>{
+  const person=currentPerson();
+  if(person)fillRelationSelect(motherSelect,person.id,motherSelect.value,motherSearch.value,"No consta");
+});
+
+spouseSearch.addEventListener("input",()=>{
+  const person=currentPerson();
+  if(person)fillRelationSelect(spouseSelect,person.id,"",spouseSearch.value,"Selecciona una persona...");
+});
+
+[fatherSelect,motherSelect].forEach(select=>{
+  select.addEventListener("change",()=>{
+    const person=currentPerson();
+    if(person)renderRelationsWarnings(person);
+  });
+});
+
+addSpouse.addEventListener("click",()=>{
+  const person=currentPerson();
+  const spouseId=spouseSelect.value;
+  if(!person||!spouseId)return;
+
+  if(!pendingSpouseIds.includes(spouseId))pendingSpouseIds.push(spouseId);
+  spouseSearch.value="";
+  spouseSelect.value="";
+  renderRelationChips();
+  renderRelationsWarnings(person);
+});
+
+spouseList.addEventListener("click",event=>{
+  const button=event.target.closest("[data-remove-spouse]");
+  if(!button)return;
+
+  pendingSpouseIds=pendingSpouseIds.filter(id=>id!==button.dataset.removeSpouse);
+  renderRelationChips();
+
+  const person=currentPerson();
+  if(person)renderRelationsWarnings(person);
+});
+
+saveRelations.addEventListener("click",async()=>{
+  const person=currentPerson();
+  if(!person)return;
+
+  saveRelations.disabled=true;
+  saveRelations.textContent="Guardando…";
+  hideResult(relationsMessage);
+
+  try{
+    const fatherId=fatherSelect.value;
+    const motherId=motherSelect.value;
+    const warnings=relationshipWarningsFor(person,fatherId,motherId,pendingSpouseIds);
+
+    if(warnings.length){
+      renderRelationsWarnings(person);
+      throw new Error("Corrige las relaciones señaladas antes de guardar.");
+    }
+
+    person.padre=fatherId;
+    person.madre=motherId;
+
+    delete person.padres;
+    delete person.hijos;
+    delete person.hijas;
+    delete person.hermanos;
+    delete person.hermanas;
+
+    setReciprocalSpouses(person,pendingSpouseIds);
+
+    await writePeople();
+    await renderManager();
+    showResult(relationsMessage,"Relaciones guardadas correctamente.");
+  }catch(err){
+    showResult(
+      relationsMessage,
+      `No se pudieron guardar las relaciones: ${escapeHtml(err.message)}`,
+      true
+    );
+  }finally{
+    saveRelations.disabled=false;
+    saveRelations.textContent="Guardar relaciones";
+  }
+});
+
+personSelect.addEventListener("change",()=>{
+  fatherSearch.value="";
+  motherSearch.value="";
+  spouseSearch.value="";
+  closeEditors();
+  renderManager();
+});
+[photosTab,documentsTab,biographyTab,relationsTab].forEach(button=>{
   button.addEventListener("click",()=>switchTab(button.dataset.tab));
   button.addEventListener("keydown",event=>{
-    const tabs=[photosTab,documentsTab,biographyTab];
+    const tabs=[photosTab,documentsTab,biographyTab,relationsTab];
     const current=tabs.indexOf(button);
     let next=current;
 
