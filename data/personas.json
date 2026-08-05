@@ -1149,7 +1149,7 @@
       "P0010"
     ],
     "biografia": "",
-    "fotografia_principal": "",
+    "fotografia_principal": "assets/fotos/P0012/manu.jpg",
     "fotografias": [
       {
         "id": "F000009",
@@ -1420,6 +1420,18 @@
           "P0015",
           "P0014"
         ]
+      },
+      {
+        "id": "F000064",
+        "src": "assets/fotos/P0012/manu.jpg",
+        "titulo": "Manu",
+        "fecha": "2026",
+        "lugar": "Chiva",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012"
+        ]
       }
     ],
     "documentos": [],
@@ -1436,7 +1448,8 @@
     "situacion_vital": "vivo",
     "visible": true,
     "padre": "P0007",
-    "madre": "P0010"
+    "madre": "P0010",
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "",
@@ -2742,7 +2755,7 @@
       {
         "id": "F000063",
         "src": "assets/fotos/P0018/edu-deladehesa-gonzalez.jpg",
-        "titulo": "Edu deladehesa gonzalez",
+        "titulo": "Edu",
         "fecha": "2026",
         "lugar": "",
         "descripcion": "",
