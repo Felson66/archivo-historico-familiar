@@ -1,371 +1,354 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#183c35">
-  <title>Administración · Archivo Histórico Familiar</title>
-  <link rel="stylesheet" href="css/admin-v4.0.3.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#183c35" name="theme-color"/>
+<title>Administración · Archivo Histórico Familiar</title>
+<link href="css/admin-v4.1.0b-alpha2.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="admin-topbar">
-    <a href="index.html" class="back">← Volver al archivo</a>
-    <div>
-      <h1>Centro de Administración</h1>
-      <p>Gestión integral del Archivo Familiar · v4.0.3</p>
-    </div>
-  </header>
-
-  <main class="admin-shell">
-    <section class="intro-card">
-      <div>
-        <span class="eyebrow">Archivo histórico familiar</span>
-        <h2>Crear personas y conservar su documentación sin editar JSON</h2>
-        <p>Conecta la carpeta local del repositorio. Después podrás crear personas y gestionar sus datos, fotografías, documentos y evidencias.</p>
-      </div>
-      <button id="connectFolder" class="primary">Seleccionar carpeta del archivo</button>
-      <p id="folderStatus" class="status">Todavía no se ha seleccionado ninguna carpeta.</p>
-    </section>
-
-    <section id="manager" class="manager-card is-disabled" aria-disabled="true">
-      <div class="manager-toolbar">
-        <div class="person-selector-block">
-          <label>
+<header class="admin-topbar">
+<a class="back" href="index.html">← Volver al archivo</a>
+<div>
+<h1>Centro de Administración</h1>
+<p>Gestión integral del Archivo Familiar · v4.1.0b-alpha2</p>
+</div>
+</header>
+<main class="admin-shell">
+<section class="intro-card">
+<div>
+<span class="eyebrow">Archivo histórico familiar</span>
+<h2>Crear personas y conservar su documentación sin editar JSON</h2>
+<p>Conecta la carpeta local del repositorio. Después podrás crear personas y gestionar sus datos, fotografías, documentos y evidencias.</p>
+</div>
+<button class="primary" id="connectFolder">Seleccionar carpeta del archivo</button>
+<p class="status" id="folderStatus">Todavía no se ha seleccionado ninguna carpeta.</p>
+</section>
+<section aria-disabled="true" class="manager-card is-disabled" id="manager">
+<div class="manager-toolbar">
+<div class="person-selector-block">
+<label>
             Buscar persona
             <div class="person-search-row">
-              <input id="personSearch" type="search" placeholder="Nombre, nombre conocido o ID…" autocomplete="off" disabled>
-              <button id="clearPersonSearch" class="secondary" type="button" disabled>Limpiar</button>
-            </div>
-          </label>
-          <label>
+<input autocomplete="off" disabled="" id="personSearch" placeholder="Nombre, nombre conocido o ID…" type="search"/>
+<button class="secondary" disabled="" id="clearPersonSearch" type="button">Limpiar</button>
+</div>
+</label>
+<label>
             Persona
-            <select id="personSelect" disabled>
-              <option value="">Selecciona una persona…</option>
-            </select>
-          </label>
-          <p id="personSearchStatus" class="field-help">Conecta la carpeta para buscar personas.</p>
-        </div>
-        <div class="manager-buttons">
-          <button id="newPerson" class="primary" disabled>+ Nueva persona</button>
-          <button id="newPhoto" class="primary" disabled>+ Añadir fotografía</button>
-          <button id="newDocument" class="primary" disabled>+ Archivar documento</button>
-        </div>
-      </div>
-
-      <div id="personSummary" class="person-summary hidden"></div>
-
-      <section id="photoFraming" class="photo-framing hidden" aria-label="Encuadre de la fotografía principal">
-        <div class="framing-heading">
-          <div>
-            <span class="eyebrow">Fotografía principal</span>
-            <h3>Ajustar encuadre de la tarjeta</h3>
-            <p>Mueve los controles hasta que el rostro quede correctamente situado. El ajuste se guarda solo para esta persona.</p>
-          </div>
-          <button id="resetPhotoPosition" class="secondary" type="button">Restablecer</button>
-        </div>
-        <div class="framing-layout">
-          <div class="framing-preview">
-            <img id="framingPreviewImage" alt="Vista previa del encuadre">
-            <div class="framing-preview-text">
-              <span id="framingPreviewState"></span>
-              <strong id="framingPreviewName"></strong>
-              <small id="framingPreviewSummary"></small>
-            </div>
-          </div>
-          <div class="framing-controls">
-            <label>
+            <select disabled="" id="personSelect">
+<option value="">Selecciona una persona…</option>
+</select>
+</label>
+<p class="field-help" id="personSearchStatus">Conecta la carpeta para buscar personas.</p>
+</div>
+<div class="manager-buttons">
+<button class="primary" disabled="" id="newPerson">+ Nueva persona</button>
+<button class="primary" disabled="" id="newPhoto">+ Añadir fotografía</button>
+<button class="primary" disabled="" id="newDocument">+ Archivar documento</button>
+</div>
+</div>
+<section aria-live="polite" class="expedient-header hidden" id="expedientHeader">
+<div class="expedient-topline">
+<div class="expedient-breadcrumb"><span>Administración</span><span>›</span><strong>Expediente de persona</strong></div>
+<span class="expedient-id" id="expedientId">—</span>
+</div>
+<div class="expedient-main">
+<div class="expedient-identity">
+<span class="eyebrow">Expediente de persona</span>
+<h2 id="expedientName">—</h2>
+<p class="expedient-life" id="expedientLife">—</p>
+<p class="expedient-meta hidden" id="expedientMeta"></p>
+</div>
+<div class="expedient-status-column">
+<span class="expedient-visibility visible" id="expedientVisibility">Visible</span>
+</div>
+</div>
+<div aria-label="Resumen del expediente" class="expedient-counters">
+<button aria-label="Abrir fotografías" class="expedient-counter" id="expedientPhotos" title="Fotografías" type="button">
+<span aria-hidden="true" class="expedient-counter-icon">📷</span>
+<strong id="expedientPhotosCount">0</strong>
+</button>
+<button aria-label="Abrir documentos" class="expedient-counter" id="expedientDocuments" title="Documentos" type="button">
+<span aria-hidden="true" class="expedient-counter-icon">📄</span>
+<strong id="expedientDocumentsCount">0</strong>
+</button>
+<button aria-label="Abrir datos y biografía" class="expedient-counter" id="expedientFacts" title="Datos y biografía" type="button">
+<span aria-hidden="true" class="expedient-counter-icon">📝</span>
+<strong id="expedientFactsCount">0</strong>
+</button>
+</div>
+</section>
+<div aria-label="Contenido de la persona" class="content-tabs" role="tablist">
+<button aria-controls="photosWorkspace" aria-selected="true" class="content-tab active" data-tab="photos" id="photosTab" role="tab" tabindex="0">📷 Fotografías <span id="photosCount">0</span></button>
+<button aria-controls="documentsWorkspace" aria-selected="false" class="content-tab" data-tab="documents" id="documentsTab" role="tab" tabindex="-1">📄 Documentos <span id="documentsCount">0</span></button>
+<button aria-controls="biographyWorkspace" aria-selected="false" class="content-tab" data-tab="biography" id="biographyTab" role="tab" tabindex="-1">✍️ Datos y biografía <span id="factsCount">0</span></button>
+</div>
+<section aria-labelledby="photosTab" class="workspace-panel" id="photosWorkspace" role="tabpanel"><section aria-label="Encuadre de la fotografía principal" class="photo-framing hidden" id="photoFraming">
+<div class="framing-heading">
+<div>
+<span class="eyebrow">Fotografía principal</span>
+<h3>Ajustar encuadre de la tarjeta</h3>
+<p>Mueve los controles hasta que el rostro quede correctamente situado. El ajuste se guarda solo para esta persona.</p>
+</div>
+<button class="secondary" id="resetPhotoPosition" type="button">Restablecer</button>
+</div>
+<div class="framing-layout">
+<div class="framing-preview">
+<img alt="Vista previa del encuadre" id="framingPreviewImage"/>
+<div class="framing-preview-text">
+<span id="framingPreviewState"></span>
+<strong id="framingPreviewName"></strong>
+<small id="framingPreviewSummary"></small>
+</div>
+</div>
+<div class="framing-controls">
+<label>
               Posición horizontal
-              <input id="photoPositionX" type="range" min="0" max="100" step="1" value="50">
-              <output id="photoPositionXValue">50%</output>
-            </label>
-            <label>
+              <input id="photoPositionX" max="100" min="0" step="1" type="range" value="50"/>
+<output id="photoPositionXValue">50%</output>
+</label>
+<label>
               Posición vertical
-              <input id="photoPositionY" type="range" min="0" max="100" step="1" value="50">
-              <output id="photoPositionYValue">50%</output>
-            </label>
-            <p class="field-help">El valor se aplicará a las tarjetas y a la cabecera de la ficha pública.</p>
-            <button id="savePhotoPosition" class="primary" type="button">Guardar encuadre</button>
-          </div>
-        </div>
-      </section>
-
-      <div class="content-tabs" role="tablist" aria-label="Contenido de la persona">
-        <button id="photosTab" class="content-tab active" data-tab="photos" role="tab" aria-selected="true">📷 Fotografías <span id="photosCount">0</span></button>
-        <button id="documentsTab" class="content-tab" data-tab="documents" role="tab" aria-selected="false">📄 Documentos <span id="documentsCount">0</span></button>
-        <button id="biographyTab" class="content-tab" data-tab="biography" role="tab" aria-selected="false">✍️ Datos y biografía <span id="factsCount">0</span></button>
-      </div>
-
-      <div id="galleryEmpty" class="empty-state hidden">Selecciona una persona para gestionar su archivo.</div>
-      <div id="photoGallery" class="photo-gallery"></div>
-      <div id="documentGallery" class="document-gallery hidden"></div>
-
-      <div id="biographyPanel" class="biography-panel hidden">
-        <section class="bio-section">
-          <div class="bio-section-heading">
-            <div>
-              <span class="eyebrow">Datos estructurados</span>
-              <h3>Datos personales</h3>
-              <p>Estos campos alimentan las tarjetas, la ficha, el buscador y el árbol.</p>
-            </div>
-          </div>
-
-          <div class="bio-form-grid">
-            <label class="wide">Nombre completo
-              <input id="bioName" type="text" autocomplete="off">
-            </label>
-
-            <label>Fecha de nacimiento
-              <input id="bioBirthDate" type="text" placeholder="Ej. 15 ago 1923">
-            </label>
-            <label>Lugar de nacimiento
-              <input id="bioBirthPlace" type="text" placeholder="Ej. Amorebieta">
-            </label>
-
-            <label>Fecha de defunción
-              <input id="bioDeathDate" type="text" placeholder="Ej. 22 jun 2007">
-            </label>
-            <label>Lugar de defunción
-              <input id="bioDeathPlace" type="text" placeholder="Ej. Bilbao">
-            </label>
-
-            <label>Profesión u oficio
-              <input id="bioProfession" type="text" placeholder="Ej. Sastre">
-            </label>
-            <label>Nombre conocido
-              <input id="bioKnownName" type="text" placeholder="Ej. Paco">
-            </label>
-
-            <label>Sexo
+              <input id="photoPositionY" max="100" min="0" step="1" type="range" value="50"/>
+<output id="photoPositionYValue">50%</output>
+</label>
+<p class="field-help">El valor se aplicará a las tarjetas y a la cabecera de la ficha pública.</p>
+<button class="primary" id="savePhotoPosition" type="button">Guardar encuadre</button>
+</div>
+</div>
+</section><div class="empty-state hidden" id="photosEmpty">Esta persona todavía no tiene fotografías.</div><div class="photo-gallery" id="photoGallery"></div></section><section aria-labelledby="documentsTab" class="workspace-panel hidden" id="documentsWorkspace" role="tabpanel"><div class="empty-state hidden" id="documentsEmpty">Esta persona todavía no tiene documentos archivados.</div><div class="document-gallery hidden" id="documentGallery"></div></section><section aria-labelledby="biographyTab" class="workspace-panel hidden" id="biographyWorkspace" role="tabpanel"><div class="biography-panel hidden" id="biographyPanel">
+<section class="bio-section">
+<div class="bio-section-heading">
+<div>
+<span class="eyebrow">Datos estructurados</span>
+<h3>Datos personales</h3>
+<p>Estos campos alimentan las tarjetas, la ficha, el buscador y el árbol.</p>
+</div>
+</div>
+<div class="bio-form-grid">
+<label class="wide">Nombre completo
+              <input autocomplete="off" id="bioName" type="text"/>
+</label>
+<label>Fecha de nacimiento
+              <input id="bioBirthDate" placeholder="Ej. 15 ago 1923" type="text"/>
+</label>
+<label>Lugar de nacimiento
+              <input id="bioBirthPlace" placeholder="Ej. Amorebieta" type="text"/>
+</label>
+<label>Fecha de defunción
+              <input id="bioDeathDate" placeholder="Ej. 22 jun 2007" type="text"/>
+</label>
+<label>Lugar de defunción
+              <input id="bioDeathPlace" placeholder="Ej. Bilbao" type="text"/>
+</label>
+<label>Profesión u oficio
+              <input id="bioProfession" placeholder="Ej. Sastre" type="text"/>
+</label>
+<label>Nombre conocido
+              <input id="bioKnownName" placeholder="Ej. Paco" type="text"/>
+</label>
+<label>Sexo
               <select id="bioSex">
-                <option value="">No especificado</option>
-                <option value="hombre">Hombre</option>
-                <option value="mujer">Mujer</option>
-                <option value="otro">Otro</option>
-              </select>
-            </label>
-
-            <label>Situación vital
+<option value="">No especificado</option>
+<option value="hombre">Hombre</option>
+<option value="mujer">Mujer</option>
+<option value="otro">Otro</option>
+</select>
+</label>
+<label>Situación vital
               <select id="bioLifeStatus">
-                <option value="desconocido">Desconocido</option>
-                <option value="vivo">Vivo</option>
-                <option value="fallecido">Fallecido</option>
-              </select>
-            </label>
-
-            <label>Estado de la información
+<option value="desconocido">Desconocido</option>
+<option value="vivo">Vivo</option>
+<option value="fallecido">Fallecido</option>
+</select>
+</label>
+<label>Estado de la información
               <select id="bioState">
-                <option value="documentado">Documentado</option>
-                <option value="memoria familiar">Memoria familiar</option>
-                <option value="hipótesis">Hipótesis</option>
-                <option value="familia reconstituida">Familia reconstituida</option>
-                <option value="pendiente">Pendiente</option>
-              </select>
-            </label>
-
-            <label class="wide">Notas biográficas
-              <textarea id="bioSummary" rows="3" placeholder="Información general o complementaria sobre la persona."></textarea>
-            </label>
-
-            <label class="checkbox wide">
-              <input id="bioVisible" type="checkbox" checked>
-              <span>Visible en el archivo público</span>
-            </label>
-          </div>
-
-          <div class="bio-actions">
-            <button id="savePersonalData" class="primary" type="button">Guardar datos personales</button>
-          </div>
-        </section>
-
-        <section class="bio-section">
-          <div class="bio-section-heading evidence-heading">
-            <div>
-              <span class="eyebrow">Biografía y evidencias</span>
-              <h3>Afirmaciones de la ficha</h3>
-              <p>Cada texto conserva su nivel de certeza. Puedes corregirlo, ordenarlo o eliminarlo.</p>
-            </div>
-            <button id="addFact" class="secondary" type="button">+ Añadir evidencia</button>
-          </div>
-
-          <div id="factsEditorList" class="facts-editor-list"></div>
-
-          <div class="bio-actions">
-            <button id="saveFacts" class="primary" type="button">Guardar biografía y evidencias</button>
-          </div>
-        </section>
-
-        <section id="dangerZone" class="danger-zone">
-          <div class="danger-zone-heading">
-            <div>
-              <span class="eyebrow">Operación irreversible</span>
-              <h3>Zona de peligro</h3>
-              <p>Una persona solo puede eliminarse cuando no tiene información ni relaciones asociadas.</p>
-            </div>
-          </div>
-
-          <div id="deletePersonStatus" class="delete-person-status"></div>
-
-          <div class="danger-zone-actions">
-            <button id="deletePerson" class="danger-delete-button" type="button" disabled>🗑 Eliminar definitivamente</button>
-          </div>
-        </section>
-
-        <div id="biographyResult" class="result hidden"></div>
-      </div>
-
-      <div id="managerResult" class="result hidden"></div>
-    </section>
-
-    <section id="personEditor" class="editor-card person-editor hidden" aria-hidden="true">
-      <div class="editor-title-row">
-        <div>
-          <span class="eyebrow">Gestión de personas</span>
-          <h2>Nueva persona</h2>
-        </div>
-        <button id="closePersonEditor" class="icon-button" type="button" aria-label="Cerrar formulario">×</button>
-      </div>
-
-      <p class="person-editor-intro">El identificador se asignará automáticamente y nunca se reutilizará. Solo el nombre es obligatorio.</p>
-
-      <div class="form-grid person-form-grid">
-        <label>Identificador
-          <input id="personIdInput" type="text" readonly>
-        </label>
-
-        <label class="wide">Nombre completo *
-          <input id="personNameInput" type="text" autocomplete="off" placeholder="Ej. María Mugica Ybarburu">
-        </label>
-
-        <label>Nombre conocido
-          <input id="personKnownNameInput" type="text" autocomplete="off" placeholder="Ej. Mari">
-        </label>
-
-        <label>Sexo
+<option value="documentado">Documentado</option>
+<option value="memoria familiar">Memoria familiar</option>
+<option value="hipótesis">Hipótesis</option>
+<option value="familia reconstituida">Familia reconstituida</option>
+<option value="pendiente">Pendiente</option>
+</select>
+</label>
+<label class="wide">Notas biográficas
+              <textarea id="bioSummary" placeholder="Información general o complementaria sobre la persona." rows="3"></textarea>
+</label>
+<label class="checkbox wide">
+<input checked="" id="bioVisible" type="checkbox"/>
+<span>Visible en el archivo público</span>
+</label>
+</div>
+<div class="bio-actions">
+<button class="primary" id="savePersonalData" type="button">Guardar datos personales</button>
+</div>
+</section>
+<section class="bio-section">
+<div class="bio-section-heading evidence-heading">
+<div>
+<span class="eyebrow">Biografía y evidencias</span>
+<h3>Afirmaciones de la ficha</h3>
+<p>Cada texto conserva su nivel de certeza. Puedes corregirlo, ordenarlo o eliminarlo.</p>
+</div>
+<button class="secondary" id="addFact" type="button">+ Añadir evidencia</button>
+</div>
+<div class="facts-editor-list" id="factsEditorList"></div>
+<div class="bio-actions">
+<button class="primary" id="saveFacts" type="button">Guardar biografía y evidencias</button>
+</div>
+</section>
+<section class="danger-zone" id="dangerZone">
+<div class="danger-zone-heading">
+<div>
+<span class="eyebrow">Operación irreversible</span>
+<h3>Zona de peligro</h3>
+<p>Una persona solo puede eliminarse cuando no tiene información ni relaciones asociadas.</p>
+</div>
+</div>
+<div class="delete-person-status" id="deletePersonStatus"></div>
+<div class="danger-zone-actions">
+<button class="danger-delete-button" disabled="" id="deletePerson" type="button">🗑 Eliminar definitivamente</button>
+</div>
+</section>
+<div class="result hidden" id="biographyResult"></div>
+</div></section>
+<div class="result hidden" id="managerResult"></div>
+</section>
+<section aria-hidden="true" class="editor-card person-editor hidden" id="personEditor">
+<div class="editor-title-row">
+<div>
+<span class="eyebrow">Gestión de personas</span>
+<h2>Nueva persona</h2>
+</div>
+<button aria-label="Cerrar formulario" class="icon-button" id="closePersonEditor" type="button">×</button>
+</div>
+<p class="person-editor-intro">El identificador se asignará automáticamente y nunca se reutilizará. Solo el nombre es obligatorio.</p>
+<div class="form-grid person-form-grid">
+<label>Identificador
+          <input id="personIdInput" readonly="" type="text"/>
+</label>
+<label class="wide">Nombre completo *
+          <input autocomplete="off" id="personNameInput" placeholder="Ej. María Mugica Ybarburu" type="text"/>
+</label>
+<label>Nombre conocido
+          <input autocomplete="off" id="personKnownNameInput" placeholder="Ej. Mari" type="text"/>
+</label>
+<label>Sexo
           <select id="personSexInput">
-            <option value="">No especificado</option>
-            <option value="hombre">Hombre</option>
-            <option value="mujer">Mujer</option>
-            <option value="otro">Otro</option>
-          </select>
-        </label>
-
-        <label>Situación vital
+<option value="">No especificado</option>
+<option value="hombre">Hombre</option>
+<option value="mujer">Mujer</option>
+<option value="otro">Otro</option>
+</select>
+</label>
+<label>Situación vital
           <select id="personLifeStatusInput">
-            <option value="desconocido">Desconocido</option>
-            <option value="vivo">Vivo</option>
-            <option value="fallecido">Fallecido</option>
-          </select>
-        </label>
-
-        <label>Estado de la información
+<option value="desconocido">Desconocido</option>
+<option value="vivo">Vivo</option>
+<option value="fallecido">Fallecido</option>
+</select>
+</label>
+<label>Estado de la información
           <select id="personStateInput">
-            <option value="pendiente">Pendiente</option>
-            <option value="documentado">Documentado</option>
-            <option value="memoria familiar">Memoria familiar</option>
-            <option value="hipótesis">Hipótesis</option>
-            <option value="familia reconstituida">Familia reconstituida</option>
-          </select>
-        </label>
-
-        <label>Fecha de nacimiento
-          <input id="personBirthDateInput" type="text" placeholder="Ej. 15 ago 1923">
-        </label>
-
-        <label>Lugar de nacimiento
-          <input id="personBirthPlaceInput" type="text" placeholder="Ej. Amorebieta">
-        </label>
-
-        <label>Fecha de defunción
-          <input id="personDeathDateInput" type="text" placeholder="Ej. 22 jun 2007">
-        </label>
-
-        <label>Lugar de defunción
-          <input id="personDeathPlaceInput" type="text" placeholder="Ej. Bilbao">
-        </label>
-
-        <label class="wide">Profesión u oficio
-          <input id="personProfessionInput" type="text" placeholder="Ej. Sastre">
-        </label>
-
-        <label class="wide">Notas biográficas
-          <textarea id="personNotesInput" rows="4" placeholder="Información general que no encaje en un dato estructurado."></textarea>
-        </label>
-
-        <label class="checkbox wide">
-          <input id="personVisibleInput" type="checkbox" checked>
-          <span>Visible en el archivo público</span>
-        </label>
-      </div>
-
-      <div class="actions">
-        <button id="savePerson" class="primary" type="button" disabled>Crear persona</button>
-        <button id="cancelPersonEdit" class="secondary" type="button">Cancelar</button>
-      </div>
-      <div id="personEditorResult" class="result hidden"></div>
-    </section>
-
-    <section id="photoEditor" class="editor-card hidden" aria-hidden="true">
-      <div class="editor-title-row">
-        <div><span id="photoEditorEyebrow" class="eyebrow">Nueva fotografía</span><h2 id="photoEditorTitle">Añadir fotografía</h2></div>
-        <button id="closePhotoEditor" class="icon-button" aria-label="Cerrar formulario">×</button>
-      </div>
-      <label id="photoFilePickerLabel" class="file-picker">
-        <input id="photoInput" type="file" accept="image/jpeg,image/png,image/webp">
-        <span>Seleccionar imagen</span><small>JPG, PNG o WEBP</small>
-      </label>
-      <div id="photoPreviewWrap" class="preview-wrap hidden"><img id="photoPreview" alt="Vista previa"></div>
-      <div class="form-grid">
-        <label>Identificador<input id="photoIdInput" type="text" readonly></label>
-        <label>Título<input id="photoTitleInput" type="text" placeholder="Ej. Paseo por Trengandín"></label>
-        <label>Fecha<input id="photoDateInput" type="text" placeholder="Ej. Agosto de 2025"></label>
-        <label>Lugar<input id="photoPlaceInput" type="text" placeholder="Ej. Noja"></label>
-        <label class="wide">Descripción<textarea id="photoDescriptionInput" rows="4" placeholder="Explica brevemente el contexto de la fotografía."></textarea></label>
-        <label class="wide">Etiquetas<input id="photoTagsInput" type="text" placeholder="Ej. retrato, viaje, Navidad"><small>Separadas por comas.</small></label>
-        <fieldset class="wide people-fieldset">
-          <legend>Personas que aparecen</legend>
-          <p class="field-help">La fotografía aparecerá en la ficha de todas las personas marcadas, sin duplicar el archivo.</p>
-          <input id="photoPeopleSearch" type="search" placeholder="Buscar persona…" autocomplete="off">
-          <div id="photoPeopleChecklist" class="people-checklist"></div>
-        </fieldset>
-        <label class="checkbox wide"><input id="principalInput" type="checkbox"><span>Usar como fotografía principal de la persona seleccionada</span></label>
-      </div>
-      <div class="actions"><button id="savePhoto" class="primary" disabled>Guardar fotografía</button><button id="cancelPhotoEdit" class="secondary">Cancelar</button></div>
-      <div id="photoEditorResult" class="result hidden"></div>
-    </section>
-
-    <section id="documentEditor" class="editor-card hidden" aria-hidden="true">
-      <div class="editor-title-row">
-        <div><span id="documentEditorEyebrow" class="eyebrow">Nuevo documento</span><h2 id="documentEditorTitle">Archivar documento</h2></div>
-        <button id="closeDocumentEditor" class="icon-button" aria-label="Cerrar formulario">×</button>
-      </div>
-      <label id="documentFilePickerLabel" class="file-picker">
-        <input id="documentInput" type="file" accept="application/pdf,image/jpeg,image/png,image/webp">
-        <span>Seleccionar documento</span><small>PDF, JPG, PNG o WEBP</small>
-      </label>
-      <div id="documentPreviewWrap" class="document-preview hidden"></div>
-      <div class="form-grid">
-        <label>Identificador<input id="documentIdInput" type="text" readonly></label>
-        <label>Título<input id="documentTitleInput" type="text" placeholder="Ej. Escritura de la vivienda de Noja"></label>
-        <label>Fecha<input id="documentDateInput" type="text" placeholder="Ej. 12 de mayo de 2001"></label>
-        <label class="wide">Descripción<textarea id="documentDescriptionInput" rows="4" placeholder="Información adicional o contexto del documento."></textarea></label>
-        <fieldset class="wide people-fieldset">
-          <legend>Personas relacionadas</legend>
-          <p class="field-help">El documento aparecerá en la ficha de todas las personas marcadas, sin duplicar el archivo.</p>
-          <input id="documentPeopleSearch" type="search" placeholder="Buscar persona…" autocomplete="off">
-          <div id="documentPeopleChecklist" class="people-checklist"></div>
-        </fieldset>
-      </div>
-      <div class="actions"><button id="saveDocument" class="primary" disabled>Archivar documento</button><button id="cancelDocumentEdit" class="secondary">Cancelar</button></div>
-      <div id="documentEditorResult" class="result hidden"></div>
-    </section>
-
-    <section class="help-card">
-      <h3>Después de guardar</h3>
-      <p>Abre GitHub Desktop. Verás los archivos nuevos y los cambios en <code>data/personas.json</code>. Haz <strong>Commit</strong> y después <strong>Push origin</strong>.</p>
-      <p class="note">Los PDF generan automáticamente una copia de consulta por páginas. Los documentos se guardan en <code>assets/documentos/&lt;ID&gt;/</code>. Al eliminar uno, se borra de todas las personas relacionadas y también se elimina el archivo físico.</p>
-    </section>
-  </main>
-
-  <script src="js/admin-v4.0.3.js"></script>
+<option value="pendiente">Pendiente</option>
+<option value="documentado">Documentado</option>
+<option value="memoria familiar">Memoria familiar</option>
+<option value="hipótesis">Hipótesis</option>
+<option value="familia reconstituida">Familia reconstituida</option>
+</select>
+</label>
+<label>Fecha de nacimiento
+          <input id="personBirthDateInput" placeholder="Ej. 15 ago 1923" type="text"/>
+</label>
+<label>Lugar de nacimiento
+          <input id="personBirthPlaceInput" placeholder="Ej. Amorebieta" type="text"/>
+</label>
+<label>Fecha de defunción
+          <input id="personDeathDateInput" placeholder="Ej. 22 jun 2007" type="text"/>
+</label>
+<label>Lugar de defunción
+          <input id="personDeathPlaceInput" placeholder="Ej. Bilbao" type="text"/>
+</label>
+<label class="wide">Profesión u oficio
+          <input id="personProfessionInput" placeholder="Ej. Sastre" type="text"/>
+</label>
+<label class="wide">Notas biográficas
+          <textarea id="personNotesInput" placeholder="Información general que no encaje en un dato estructurado." rows="4"></textarea>
+</label>
+<label class="checkbox wide">
+<input checked="" id="personVisibleInput" type="checkbox"/>
+<span>Visible en el archivo público</span>
+</label>
+</div>
+<div class="actions">
+<button class="primary" disabled="" id="savePerson" type="button">Crear persona</button>
+<button class="secondary" id="cancelPersonEdit" type="button">Cancelar</button>
+</div>
+<div class="result hidden" id="personEditorResult"></div>
+</section>
+<section aria-hidden="true" class="editor-card hidden" id="photoEditor">
+<div class="editor-title-row">
+<div><span class="eyebrow" id="photoEditorEyebrow">Nueva fotografía</span><h2 id="photoEditorTitle">Añadir fotografía</h2></div>
+<button aria-label="Cerrar formulario" class="icon-button" id="closePhotoEditor">×</button>
+</div>
+<label class="file-picker" id="photoFilePickerLabel">
+<input accept="image/jpeg,image/png,image/webp" id="photoInput" type="file"/>
+<span>Seleccionar imagen</span><small>JPG, PNG o WEBP</small>
+</label>
+<div class="preview-wrap hidden" id="photoPreviewWrap"><img alt="Vista previa" id="photoPreview"/></div>
+<div class="form-grid">
+<label>Identificador<input id="photoIdInput" readonly="" type="text"/></label>
+<label>Título<input id="photoTitleInput" placeholder="Ej. Paseo por Trengandín" type="text"/></label>
+<label>Fecha<input id="photoDateInput" placeholder="Ej. Agosto de 2025" type="text"/></label>
+<label>Lugar<input id="photoPlaceInput" placeholder="Ej. Noja" type="text"/></label>
+<label class="wide">Descripción<textarea id="photoDescriptionInput" placeholder="Explica brevemente el contexto de la fotografía." rows="4"></textarea></label>
+<label class="wide">Etiquetas<input id="photoTagsInput" placeholder="Ej. retrato, viaje, Navidad" type="text"/><small>Separadas por comas.</small></label>
+<fieldset class="wide people-fieldset">
+<legend>Personas que aparecen</legend>
+<p class="field-help">La fotografía aparecerá en la ficha de todas las personas marcadas, sin duplicar el archivo.</p>
+<input autocomplete="off" id="photoPeopleSearch" placeholder="Buscar persona…" type="search"/>
+<div class="people-checklist" id="photoPeopleChecklist"></div>
+</fieldset>
+<label class="checkbox wide"><input id="principalInput" type="checkbox"/><span>Usar como fotografía principal de la persona seleccionada</span></label>
+</div>
+<div class="actions"><button class="primary" disabled="" id="savePhoto">Guardar fotografía</button><button class="secondary" id="cancelPhotoEdit">Cancelar</button></div>
+<div class="result hidden" id="photoEditorResult"></div>
+</section>
+<section aria-hidden="true" class="editor-card hidden" id="documentEditor">
+<div class="editor-title-row">
+<div><span class="eyebrow" id="documentEditorEyebrow">Nuevo documento</span><h2 id="documentEditorTitle">Archivar documento</h2></div>
+<button aria-label="Cerrar formulario" class="icon-button" id="closeDocumentEditor">×</button>
+</div>
+<label class="file-picker" id="documentFilePickerLabel">
+<input accept="application/pdf,image/jpeg,image/png,image/webp" id="documentInput" type="file"/>
+<span>Seleccionar documento</span><small>PDF, JPG, PNG o WEBP</small>
+</label>
+<div class="document-preview hidden" id="documentPreviewWrap"></div>
+<div class="form-grid">
+<label>Identificador<input id="documentIdInput" readonly="" type="text"/></label>
+<label>Título<input id="documentTitleInput" placeholder="Ej. Escritura de la vivienda de Noja" type="text"/></label>
+<label>Fecha<input id="documentDateInput" placeholder="Ej. 12 de mayo de 2001" type="text"/></label>
+<label class="wide">Descripción<textarea id="documentDescriptionInput" placeholder="Información adicional o contexto del documento." rows="4"></textarea></label>
+<fieldset class="wide people-fieldset">
+<legend>Personas relacionadas</legend>
+<p class="field-help">El documento aparecerá en la ficha de todas las personas marcadas, sin duplicar el archivo.</p>
+<input autocomplete="off" id="documentPeopleSearch" placeholder="Buscar persona…" type="search"/>
+<div class="people-checklist" id="documentPeopleChecklist"></div>
+</fieldset>
+</div>
+<div class="actions"><button class="primary" disabled="" id="saveDocument">Archivar documento</button><button class="secondary" id="cancelDocumentEdit">Cancelar</button></div>
+<div class="result hidden" id="documentEditorResult"></div>
+</section>
+<section class="help-card">
+<h3>Después de guardar</h3>
+<p>Abre GitHub Desktop. Verás los archivos nuevos y los cambios en <code>data/personas.json</code>. Haz <strong>Commit</strong> y después <strong>Push origin</strong>.</p>
+<p class="note">Los PDF generan automáticamente una copia de consulta por páginas. Los documentos se guardan en <code>assets/documentos/&lt;ID&gt;/</code>. Al eliminar uno, se borra de todas las personas relacionadas y también se elimina el archivo físico.</p>
+</section>
+</main>
+<footer class="project-footer"><strong>Archivo Familiar</strong><span>Proyecto personal de investigación genealógica</span><small>v4.1.0b-alpha2 · © 2026–2027</small></footer>
+<script src="js/admin-v4.1.0b-alpha2.js"></script>
 </body>
 </html>

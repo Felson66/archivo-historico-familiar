@@ -3376,7 +3376,7 @@
     "nombre_conocido": "",
     "sexo": "",
     "situacion_vital": "desconocido",
-    "visible": true
+    "visible": false
   },
   {
     "datos_resumen": "15 jul 2000",
