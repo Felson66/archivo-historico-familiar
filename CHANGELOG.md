@@ -81,4 +81,4 @@
 
 ## 4.0.3 — Gestión documental
 - Visor de imágenes y documentos.
-- Mejoras en Administración.
+- Mejoras en Administración. 
