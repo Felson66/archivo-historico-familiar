@@ -622,12 +622,22 @@ function quickRelationButtons(ids,emptyText){
       <small>${esc(personLifeLine(person)||person.profesion||person.lugar_nacimiento||"Ver en el árbol")}</small>
     </button>`).join("")}</div>`;
 }
+
+function personAvatarMarkup(person,{size="small",className=""}={}){
+  const photo=String(person?.fotografia_principal||"").trim();
+  const classes=["person-avatar",`person-avatar-${size}`,className].filter(Boolean).join(" ");
+  if(photo){
+    return `<span class="${classes}"><img src="${esc(photo)}" alt=""${photoPositionStyle(person)}></span>`;
+  }
+  return `<span class="${classes} person-avatar-fallback" aria-hidden="true">${esc(initials(person?.nombre||""))}</span>`;
+}
+
 function openTreeQuickPanel(id){
   const person=byId[id]; if(!person||!isPublicPerson(person))return;
-  const photo=person.fotografia_principal?`<img src="${esc(person.fotografia_principal)}" alt="${esc(person.nombre)}"${photoPositionStyle(person)}>`:`<div class="tree-quick-monogram">${esc(initials(person.nombre))}</div>`;
+  const avatar=personAvatarMarkup(person,{size:"large",className:`tree-quick-avatar tree-doc-${treeDocumentationLevel(person)}`});
   const parents=parentIdsFor(person); const siblings=siblingGroups(person); const allSiblings=uniqueIds([...siblings.full,...siblings.half,...siblings.commonParent]); const spouses=spouseIdsFor(person); const children=childIdsFor(person); const life=personLifeLine(person); const secondary=[person.lugar_nacimiento,person.profesion].filter(Boolean).join(" · ");
   $("personDrawer").classList.add("tree-quick-mode");
-  $("drawerContent").innerHTML=`<section class="tree-quick-hero"><div class="tree-quick-photo">${photo}</div><div class="tree-quick-intro"><span class="badge">${esc(stateLabel(person.estado))}</span><h2>${esc(person.nombre)}</h2>${life?`<div class="tree-quick-life">${esc(life)}</div>`:""}${secondary?`<div class="tree-quick-secondary">${esc(secondary)}</div>`:""}<div class="tree-quick-actions"><button type="button" class="primary" data-tree-center-person="${esc(person.id)}">Centrar en el árbol</button><button type="button" class="soft" data-open-full-person="${esc(person.id)}">Abrir ficha completa</button></div></div></section><div class="tree-quick-stats"><span><strong>${parents.length}</strong> progenitores</span><span><strong>${allSiblings.length}</strong> hermanos</span><span><strong>${spouses.length}</strong> cónyuges</span><span><strong>${children.length}</strong> hijos</span></div><section class="tree-quick-section"><h3>Padres</h3>${quickRelationButtons(parents,"No constan padres")}</section>${spouses.length?`<section class="tree-quick-section"><h3>Cónyuges</h3>${quickRelationButtons(spouses,"No consta cónyuge")}</section>`:""}${children.length?`<section class="tree-quick-section"><h3>Hijos</h3>${quickRelationButtons(children,"No constan hijos")}</section>`:""}${allSiblings.length?`<section class="tree-quick-section"><h3>Hermanos</h3>${quickRelationButtons(allSiblings,"No constan hermanos")}</section>`:""}`;
+  $("drawerContent").innerHTML=`<section class="tree-quick-hero tree-quick-hero-avatar"><div class="tree-quick-avatar-wrap">${avatar}</div><div class="tree-quick-intro"><span class="badge">${esc(stateLabel(person.estado))}</span><h2>${esc(person.nombre)}</h2>${life?`<div class="tree-quick-life">${esc(life)}</div>`:""}${secondary?`<div class="tree-quick-secondary">${esc(secondary)}</div>`:""}<div class="tree-quick-actions"><button type="button" class="primary" data-tree-center-person="${esc(person.id)}">Centrar en el árbol</button><button type="button" class="soft" data-open-full-person="${esc(person.id)}">Abrir ficha completa</button></div></div></section><div class="tree-quick-stats"><span><strong>${parents.length}</strong> progenitores</span><span><strong>${allSiblings.length}</strong> hermanos</span><span><strong>${spouses.length}</strong> cónyuges</span><span><strong>${children.length}</strong> hijos</span></div><section class="tree-quick-section"><h3>Padres</h3>${quickRelationButtons(parents,"No constan padres")}</section>${spouses.length?`<section class="tree-quick-section"><h3>Cónyuges</h3>${quickRelationButtons(spouses,"No consta cónyuge")}</section>`:""}${children.length?`<section class="tree-quick-section"><h3>Hijos</h3>${quickRelationButtons(children,"No constan hijos")}</section>`:""}${allSiblings.length?`<section class="tree-quick-section"><h3>Hermanos</h3>${quickRelationButtons(allSiblings,"No constan hermanos")}</section>`:""}`;
   $("drawerBackdrop").classList.add("open"); $("personDrawer").classList.add("open"); $("personDrawer").setAttribute("aria-hidden","false"); document.body.classList.add("drawer-open"); history.replaceState(null,"",`#arbol/${encodeURIComponent(id)}`);
 }
 function centerTreeOnPerson(id,{keepPanel=false}={}){
@@ -824,9 +834,7 @@ function treeNodeLabel(person){
   const documents=Array.isArray(person.documentos)?person.documentos.length:0;
   const state=treeDocumentationLevel(person);
 
-  const avatar=photo
-    ? `<img class="tree-card-photo" src="${esc(photo)}" alt="">`
-    : `<span class="tree-card-placeholder" aria-hidden="true">👤</span>`;
+  const avatar=personAvatarMarkup(person,{size:"small",className:"tree-card-avatar-unified"});
 
   const meta=[years,profession]
     .filter(Boolean)

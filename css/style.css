@@ -1584,3 +1584,104 @@ body.document-viewer-open{overflow:hidden}
     max-height:230px;
   }
 }
+
+
+/* v4.2.0-alpha7 — avatar unificado en árbol y panel rápido */
+.person-avatar{
+  position:relative;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  flex:0 0 auto;
+  border-radius:50%;
+  background:#eef3f0;
+  color:#31584c;
+  border:3px solid rgba(255,255,255,.72);
+  box-shadow:0 8px 22px rgba(20,45,38,.20);
+  font-family:Georgia,serif;
+  font-weight:700;
+}
+.person-avatar img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+.person-avatar-small{
+  width:50px;
+  height:50px;
+  font-size:15px;
+}
+.person-avatar-large{
+  width:142px;
+  height:142px;
+  font-size:38px;
+}
+.person-avatar.tree-doc-medium::after,
+.person-avatar.tree-doc-high::after{
+  content:"";
+  position:absolute;
+  inset:auto 10px 8px auto;
+  width:14px;
+  height:14px;
+  border:2px solid white;
+  border-radius:50%;
+  background:#d5a94f;
+}
+.person-avatar.tree-doc-high::after{background:#43816d}
+
+.person-drawer.tree-quick-mode .tree-quick-hero-avatar{
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  align-items:center;
+  gap:20px;
+  padding:22px;
+}
+.person-drawer.tree-quick-mode .tree-quick-avatar-wrap{
+  display:grid;
+  place-items:center;
+}
+.person-drawer.tree-quick-mode .tree-quick-intro{
+  padding:0;
+  min-width:0;
+}
+.person-drawer.tree-quick-mode .tree-quick-intro h2{
+  display:-webkit-box;
+  overflow:hidden;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  margin:8px 0 6px;
+  font-size:31px;
+  line-height:1.02;
+}
+.person-drawer.tree-quick-mode .tree-quick-life{font-size:17px}
+.person-drawer.tree-quick-mode .tree-quick-photo,
+.person-drawer.tree-quick-mode .tree-quick-monogram{
+  display:none!important;
+}
+.tree-card-avatar .person-avatar{
+  width:100%;
+  height:100%;
+  border-width:0;
+  box-shadow:none;
+}
+
+@media(max-width:700px){
+  .person-avatar-large{
+    width:112px;
+    height:112px;
+    font-size:31px;
+  }
+  .person-drawer.tree-quick-mode .tree-quick-hero-avatar{
+    grid-template-columns:1fr;
+    justify-items:center;
+    text-align:center;
+    gap:12px;
+    padding:18px 16px;
+  }
+  .person-drawer.tree-quick-mode .tree-quick-intro{width:100%}
+  .person-drawer.tree-quick-mode .tree-quick-intro h2{
+    font-size:27px;
+    max-width:100%;
+  }
+}

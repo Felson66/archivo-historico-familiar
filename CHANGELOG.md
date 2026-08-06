@@ -1,5 +1,14 @@
 # Historial de versiones
 
+## 4.2.0-alpha7 — EP-004.3B: avatar unificado
+- Sustituida la fotografía panorámica del panel rápido por un avatar circular grande.
+- Reutilización de la misma lógica visual del árbol.
+- Avatar de 142 px en PC y 112 px en iPhone.
+- Mismo encuadre individual y mismo fallback sin fotografía.
+- Nombre limitado a dos líneas.
+- Panel más compacto y robusto ante fotografías de cualquier proporción.
+
+
 ## 4.2.0-alpha6 — Corrección de fotografía del panel rápido
 - El bloque fotográfico del panel lateral pasa a una proporción 4:3.
 - Se reduce el recorte vertical de fotografías horizontales.
