@@ -1,5 +1,13 @@
 # Historial de versiones
 
+## 4.2.0-alpha6 — Corrección de fotografía del panel rápido
+- El bloque fotográfico del panel lateral pasa a una proporción 4:3.
+- Se reduce el recorte vertical de fotografías horizontales.
+- Se conserva el encuadre individual guardado en `fotoPosicion`.
+- Ajuste específico para la hoja inferior en iPhone.
+- Sin cambios en navegación, relaciones ni datos.
+
+
 ## 4.2.0-alpha5 — EP-004.3 Fase A: tarjetas clicables
 - Clic en cualquier tarjeta del árbol abre un panel rápido.
 - Panel lateral en PC y hoja inferior en iPhone.

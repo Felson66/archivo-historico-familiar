@@ -1,3 +1,3 @@
-VERSIÓN: 4.2.0-alpha5
+VERSIÓN: 4.2.0-alpha6
 ESTADO: DESARROLLO
-HITO: EP-004.3 Fase A — Tarjetas clicables
+HITO: EP-004.3 Fase A — Corrección de fotografía del panel
