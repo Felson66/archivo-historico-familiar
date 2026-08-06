@@ -1,20 +1,20 @@
-ARCHIVO HISTÓRICO FAMILIAR — ACTUALIZACIÓN v3.3.0
+ARCHIVO HISTÓRICO FAMILIAR — v4.1.1 ESTABLE
 
-1. Haz una copia de seguridad del repositorio local.
-2. Sustituye estos tres archivos:
-   - admin.html
-   - css/admin.css
-   - js/admin.js
-3. No sustituyas data/personas.json: el gestor actualizará el archivo real cuando trabajes con él.
-4. Abre admin.html mediante la web local o publicada en Chrome/Edge.
-5. Prueba primero con una fotografía no importante.
-6. Revisa los cambios en GitHub Desktop antes de Commit y Push.
+INSTALACIÓN
+1. Haz una copia de seguridad de tu repositorio local.
+2. Copia todo el contenido de esta carpeta sobre la raíz del repositorio.
+3. Acepta la sustitución de archivos existentes.
+4. La carpeta `.git` NO está incluida y tu historial local no se modifica.
+5. Abre GitHub Desktop y revisa los cambios antes de hacer Commit.
+6. Publica con Push origin.
 
-Novedades:
-- listado de fotografías por persona;
-- edición de metadatos;
-- identificador propio F000001, F000002...;
-- cambio de principal;
-- eliminación de archivo y registro;
-- reordenación;
-- etiquetas.
+COMPROBACIONES
+- La cabecera de Administración debe mostrar v4.1.1.
+- Las fichas públicas deben abrir correctamente.
+- Fotografías, documentos y biografías deben mantenerse.
+- La pestaña Relaciones debe cargar y guardar padre, madre y cónyuges.
+- Hijos y hermanos deben calcularse automáticamente.
+- El árbol debe conservar todas las ramas.
+
+DATOS
+Esta versión contiene exactamente los datos y recursos del repositorio que sirvió de base para generar la entrega. No se ha alterado manualmente ninguna persona, fotografía ni documento.
