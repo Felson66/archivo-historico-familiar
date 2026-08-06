@@ -1,5 +1,15 @@
 # Historial de versiones
 
+## 4.2.0-alpha1 — EP-004.1: nuevo motor del árbol
+- Índice genealógico construido una sola vez al cargar los datos.
+- Fuente principal: `padre`, `madre` y `conyuges`.
+- Hijos y hermanos derivados desde el índice.
+- Orden estable de padre y madre.
+- Eliminadas funciones duplicadas del árbol.
+- Compatibilidad temporal con registros heredados.
+- Sin cambios visuales en esta primera entrega.
+
+
 ## 4.1.1 — Versión estable
 - Editor de relaciones familiares validado con uso real.
 - Padre y madre explícitos.

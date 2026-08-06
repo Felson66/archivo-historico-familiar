@@ -92,6 +92,7 @@ async function init(){
     if(!response.ok) throw new Error("No se pudo cargar personas.json");
     PEOPLE = await response.json();
     byId = Object.fromEntries(PEOPLE.map(person => [person.id, person]));
+    rebuildRelationIndex();
 
     renderPeople();
     populateTreePersonSelect();
@@ -143,12 +144,12 @@ function relationButtons(ids, emptyText="No consta"){
     </button>`).join("")}</div>`;
 }
 
-function normalizedRelationIds(value){
-  if(Array.isArray(value)) return value.filter(Boolean);
-  if(typeof value === "string" && value.trim()) return [value.trim()];
-  return [];
-}
 
+const RELATION_INDEX = {
+  parents:new Map(),
+  children:new Map(),
+  spouses:new Map()
+};
 
 function normalizedRelationIds(value){
   const values=Array.isArray(value)?value:[value];
@@ -165,103 +166,112 @@ function normalizedRelationIds(value){
   return result;
 }
 
+function addIndexedRelation(map,sourceId,targetId){
+  if(!sourceId||!targetId||sourceId===targetId||!byId[sourceId]||!byId[targetId])return;
+  if(!map.has(sourceId))map.set(sourceId,new Set());
+  map.get(sourceId).add(targetId);
+}
+
+function rebuildRelationIndex(){
+  RELATION_INDEX.parents.clear();
+  RELATION_INDEX.children.clear();
+  RELATION_INDEX.spouses.clear();
+
+  PEOPLE.forEach(person=>{
+    const canonicalParents=[
+      ...normalizedRelationIds(person.padre),
+      ...normalizedRelationIds(person.madre)
+    ];
+
+    // Compatibilidad temporal para personas que todavía no hayan sido
+    // guardadas desde el editor de relaciones.
+    const legacyParents=normalizedRelationIds(person.padres);
+    const parents=canonicalParents.length ? canonicalParents : legacyParents;
+
+    parents.forEach(parentId=>{
+      addIndexedRelation(RELATION_INDEX.parents,person.id,parentId);
+      addIndexedRelation(RELATION_INDEX.children,parentId,person.id);
+    });
+
+    normalizedRelationIds(person.conyuges).forEach(spouseId=>{
+      addIndexedRelation(RELATION_INDEX.spouses,person.id,spouseId);
+      addIndexedRelation(RELATION_INDEX.spouses,spouseId,person.id);
+    });
+  });
+
+  // Compatibilidad de seguridad con hijos heredados. Solo añade relaciones
+  // que no contradicen la fuente canónica.
+  PEOPLE.forEach(person=>{
+    normalizedRelationIds(person.hijos).forEach(childId=>{
+      const childParents=RELATION_INDEX.parents.get(childId);
+      if(!childParents || childParents.size===0){
+        addIndexedRelation(RELATION_INDEX.parents,childId,person.id);
+        addIndexedRelation(RELATION_INDEX.children,person.id,childId);
+      }
+    });
+  });
+}
+
+function relationIdsFromIndex(map,person){
+  if(!person)return[];
+  return [...(map.get(person.id)||new Set())].filter(id=>byId[id]);
+}
+
 function parentIdsFor(person){
   if(!person)return[];
 
-  const ids=new Set([
-    ...normalizedRelationIds(person.padre),
-    ...normalizedRelationIds(person.madre),
-    ...normalizedRelationIds(person.padres)
-  ]);
+  const indexed=relationIdsFromIndex(RELATION_INDEX.parents,person);
+  const father=normalizedRelationIds(person.padre)[0];
+  const mother=normalizedRelationIds(person.madre)[0];
 
-  PEOPLE.forEach(candidate=>{
-    const legacyChildren=[
-      ...normalizedRelationIds(candidate.hijos),
-      ...normalizedRelationIds(candidate.hijas)
-    ];
-    if(legacyChildren.includes(person.id))ids.add(candidate.id);
-  });
-
-  ids.delete(person.id);
-  return [...ids];
+  return [
+    father,
+    mother,
+    ...indexed.filter(id=>id!==father&&id!==mother)
+  ].filter(Boolean);
 }
 
 function childIdsFor(person){
-  if(!person)return[];
-
-  const ids=new Set([
-    ...normalizedRelationIds(person.hijos),
-    ...normalizedRelationIds(person.hijas)
-  ]);
-
-  PEOPLE.forEach(candidate=>{
-    if(parentIdsFor(candidate).includes(person.id))ids.add(candidate.id);
-  });
-
-  ids.delete(person.id);
-  return [...ids];
+  return relationIdsFromIndex(RELATION_INDEX.children,person)
+    .sort((a,b)=>byId[a].nombre.localeCompare(byId[b].nombre,"es"));
 }
 
 function spouseIdsFor(person){
-  if(!person)return[];
-
-  const ids=new Set([
-    ...normalizedRelationIds(person.conyuges),
-    ...normalizedRelationIds(person.conyuge)
-  ]);
-
-  PEOPLE.forEach(candidate=>{
-    const candidateSpouses=[
-      ...normalizedRelationIds(candidate.conyuges),
-      ...normalizedRelationIds(candidate.conyuge)
-    ];
-    if(candidateSpouses.includes(person.id))ids.add(candidate.id);
-  });
-
-  ids.delete(person.id);
-  return [...ids];
+  return relationIdsFromIndex(RELATION_INDEX.spouses,person)
+    .sort((a,b)=>byId[a].nombre.localeCompare(byId[b].nombre,"es"));
 }
 
 function siblingGroups(person){
   const ownParents=parentIdsFor(person);
-  const ownSet=new Set(ownParents);
-
   if(!ownParents.length){
     return {full:[],half:[],commonParent:[]};
   }
 
-  const explicit=new Set([
-    ...normalizedRelationIds(person.hermanos),
-    ...normalizedRelationIds(person.hermanas)
-  ]);
+  const ownSet=new Set(ownParents);
+  const candidates=new Set(
+    ownParents.flatMap(parentId=>
+      [...(RELATION_INDEX.children.get(parentId)||new Set())]
+    )
+  );
+  candidates.delete(person.id);
 
   const full=[];
   const half=[];
   const commonParent=[];
 
-  PEOPLE.forEach(candidate=>{
-    if(candidate.id===person.id)return;
+  candidates.forEach(candidateId=>{
+    const candidate=byId[candidateId];
+    if(!candidate)return;
 
     const candidateParents=parentIdsFor(candidate);
     const shared=candidateParents.filter(id=>ownSet.has(id));
 
-    if(!shared.length){
-      if(explicit.has(candidate.id))commonParent.push(candidate.id);
-      return;
-    }
-
     if(shared.length>=2){
-      full.push(candidate.id);
+      full.push(candidateId);
     }else if(ownParents.length>=2&&candidateParents.length>=2){
-      half.push(candidate.id);
-    }else{
-      commonParent.push(candidate.id);
-    }
-  });
-
-  explicit.forEach(id=>{
-    if(!full.includes(id)&&!half.includes(id)&&!commonParent.includes(id)){
-      commonParent.push(id);
+      half.push(candidateId);
+    }else if(shared.length===1){
+      commonParent.push(candidateId);
     }
   });
 
@@ -275,6 +285,7 @@ function siblingGroups(person){
     commonParent:sortIds(commonParent)
   };
 }
+
 
 function familyGroup(title, ids, emptyText="No consta"){
   const count = (ids || []).map(id => byId[id]).filter(Boolean).length;
@@ -725,22 +736,6 @@ function populateTreePersonSelect(){
 
 function uniqueIds(ids){
   return [...new Set((ids || []).filter(id => byId[id]))];
-}
-
-function childIdsFor(person){
-  const ids = new Set(normalizedRelationIds(person?.hijos));
-  PEOPLE.forEach(candidate => {
-    if(parentIdsFor(candidate).includes(person?.id)) ids.add(candidate.id);
-  });
-  return [...ids].filter(id => byId[id]);
-}
-
-function spouseIdsFor(person){
-  const ids = new Set(normalizedRelationIds(person?.conyuges));
-  PEOPLE.forEach(candidate => {
-    if(normalizedRelationIds(candidate.conyuges).includes(person?.id)) ids.add(candidate.id);
-  });
-  return [...ids].filter(id => byId[id]);
 }
 
 function treeNodeLabel(person){
