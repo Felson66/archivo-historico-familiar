@@ -486,6 +486,18 @@
           "assets/documentos/P0006/d000036-paginas/pagina-001.webp",
           "assets/documentos/P0006/d000036-paginas/pagina-002.webp"
         ]
+      },
+      {
+        "id": "D000037",
+        "src": "assets/documentos/P0006/mapa-caserio.txt",
+        "nombre_archivo": "mapa-caserio.txt",
+        "formato": "text/plain",
+        "titulo": "Mapa Caserio",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0006"
+        ]
       }
     ],
     "cronologia": [],
