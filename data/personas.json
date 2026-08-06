@@ -374,6 +374,23 @@
           "assets/documentos/P0005/d000020-paginas/pagina-001.webp",
           "assets/documentos/P0005/d000020-paginas/pagina-002.webp"
         ]
+      },
+      {
+        "id": "D000035",
+        "src": "assets/documentos/P0005/certificado-de-matrimonio-manuel-y-manuela.pdf",
+        "nombre_archivo": "certificado-de-matrimonio-manuel-y-manuela.pdf",
+        "formato": "application/pdf",
+        "titulo": "Certificado de Matrimonio Manuel y Manuela",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0005",
+          "P0006"
+        ],
+        "paginas": [
+          "assets/documentos/P0005/d000035-paginas/pagina-001.webp",
+          "assets/documentos/P0005/d000035-paginas/pagina-002.webp"
+        ]
       }
     ],
     "cronologia": [],
@@ -435,6 +452,39 @@
         ],
         "paginas": [
           "assets/documentos/P0006/d000006-paginas/pagina-001.webp"
+        ]
+      },
+      {
+        "id": "D000035",
+        "src": "assets/documentos/P0005/certificado-de-matrimonio-manuel-y-manuela.pdf",
+        "nombre_archivo": "certificado-de-matrimonio-manuel-y-manuela.pdf",
+        "formato": "application/pdf",
+        "titulo": "Certificado de Matrimonio Manuel y Manuela",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0005",
+          "P0006"
+        ],
+        "paginas": [
+          "assets/documentos/P0005/d000035-paginas/pagina-001.webp",
+          "assets/documentos/P0005/d000035-paginas/pagina-002.webp"
+        ]
+      },
+      {
+        "id": "D000036",
+        "src": "assets/documentos/P0006/certificado-defuncion-manuela-mugica.pdf",
+        "nombre_archivo": "certificado-defuncion-manuela-mugica.pdf",
+        "formato": "application/pdf",
+        "titulo": "Certificado Defuncion Manuela Mugica",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0006"
+        ],
+        "paginas": [
+          "assets/documentos/P0006/d000036-paginas/pagina-001.webp",
+          "assets/documentos/P0006/d000036-paginas/pagina-002.webp"
         ]
       }
     ],
