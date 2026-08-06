@@ -766,12 +766,12 @@ function treeNodeLabel(person){
   const state=treeDocumentationLevel(person);
 
   const avatar=photo
-    ? `<img class="tree-card-photo" src="${escapeHtml(photo)}" alt="">`
+    ? `<img class="tree-card-photo" src="${esc(photo)}" alt="">`
     : `<span class="tree-card-placeholder" aria-hidden="true">👤</span>`;
 
   const meta=[years,profession]
     .filter(Boolean)
-    .map(item=>`<span>${escapeHtml(item)}</span>`)
+    .map(item=>`<span>${esc(item)}</span>`)
     .join("");
 
   const counters=[
@@ -779,10 +779,10 @@ function treeNodeLabel(person){
     documents?`<span title="Documentos">📄 ${documents}</span>`:""
   ].filter(Boolean).join("");
 
-  return `<div class="tree-person-card tree-doc-${state}" data-person-id="${escapeHtml(person.id)}">
+  return `<div class="tree-person-card tree-doc-${state}" data-person-id="${esc(person.id)}">
     <div class="tree-card-avatar">${avatar}</div>
     <div class="tree-card-content">
-      <strong>${escapeHtml(person.nombre)}</strong>
+      <strong>${esc(person.nombre)}</strong>
       ${meta?`<div class="tree-card-meta">${meta}</div>`:""}
       ${counters?`<div class="tree-card-counters">${counters}</div>`:""}
     </div>

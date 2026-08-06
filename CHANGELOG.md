@@ -1,5 +1,11 @@
 # Historial de versiones
 
+## 4.2.0-alpha3 — Corrección de tarjetas del árbol
+- Corregida la llamada a `escapeHtml()`, inexistente en la aplicación pública.
+- Las tarjetas usan ahora la función `esc()` ya existente.
+- Sin cambios en diseño, motor, datos ni navegación.
+
+
 ## 4.2.0-alpha2 — EP-004.2 Fase A: tarjetas del árbol
 - Fotografías circulares en las tarjetas.
 - Nombre, años de vida y profesión.
