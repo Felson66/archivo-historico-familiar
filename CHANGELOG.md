@@ -1,5 +1,16 @@
 # Historial de versiones
 
+## 4.2.0-alpha4 — EP-004.2 Fase B: pulido e iPhone
+- Persona central más destacada.
+- Tarjetas con acabado de ficha de archivo.
+- Fotografías ligeramente mayores.
+- Contadores convertidos en indicadores compactos.
+- En iPhone, el árbol se abre centrado en la persona con escala legible.
+- Cabecera y controles móviles más compactos.
+- `VERSION.txt` sincronizado con la versión real.
+- Comprobación automática de versión para evitar cachés antiguas.
+
+
 ## 4.2.0-alpha3 — Corrección de tarjetas del árbol
 - Corregida la llamada a `escapeHtml()`, inexistente en la aplicación pública.
 - Las tarjetas usan ahora la función `esc()` ya existente.

@@ -86,6 +86,27 @@ function card(person,mode="standard"){
   </button>`;
 }
 
+
+async function ensureCurrentApplicationVersion(){
+  const localVersion=document.documentElement.dataset.appVersion||"";
+  if(!localVersion)return;
+
+  try{
+    const response=await fetch(`VERSION.txt?check=${Date.now()}`,{cache:"no-store"});
+    if(!response.ok)return;
+    const text=await response.text();
+    const remoteVersion=text.match(/VERSI[ÓO]N:\s*([^\s]+)/i)?.[1]||"";
+    if(!remoteVersion||remoteVersion===localVersion)return;
+
+    const url=new URL(window.location.href);
+    if(url.searchParams.get("v")===remoteVersion)return;
+    url.searchParams.set("v",remoteVersion);
+    window.location.replace(url.toString());
+  }catch(_error){
+    // La aplicación sigue funcionando aunque VERSION.txt no esté disponible.
+  }
+}
+
 async function init(){
   try{
     const response = await fetch("data/personas.json", {cache:"no-store"});
@@ -995,15 +1016,31 @@ function applyTreeTransform(){
 }
 function fitTreeToView(){
   const shell = $("treeShell");
-  if(!shell) return;
-  const padding = shell.clientWidth < 700 ? 18 : 36;
-  const scaleX = (shell.clientWidth-padding*2)/currentTreeBounds.width;
-  const scaleY = (shell.clientHeight-padding*2)/currentTreeBounds.height;
-  let scale = Math.min(1,Math.max(.18,Math.min(scaleX,scaleY)));
-  if(shell.clientWidth < 700){
-    scale = Math.max(scale,.36);
+  if(!shell)return;
+
+  const isMobile=shell.clientWidth<700;
+  const padding=isMobile?18:36;
+  const scaleX=(shell.clientWidth-padding*2)/currentTreeBounds.width;
+  const scaleY=(shell.clientHeight-padding*2)/currentTreeBounds.height;
+  let scale=Math.min(1,Math.max(.18,Math.min(scaleX,scaleY)));
+
+  if(isMobile){
+    scale=Math.max(scale,.48);
+    const focusPosition=currentTreeLayout[treeFocusId];
+    if(focusPosition){
+      const focusCenterX=focusPosition[0]+105;
+      const focusCenterY=focusPosition[1]+52;
+      transform={
+        x:shell.clientWidth/2-focusCenterX*scale,
+        y:shell.clientHeight*.55-focusCenterY*scale,
+        scale
+      };
+      applyTreeTransform();
+      return;
+    }
   }
-  transform = {
+
+  transform={
     x:(shell.clientWidth-currentTreeBounds.width*scale)/2,
     y:Math.max(16,(shell.clientHeight-currentTreeBounds.height*scale)/2),
     scale
@@ -1134,5 +1171,6 @@ function wireEvents(){
   });
 }
 
+ensureCurrentApplicationVersion();
 wireEvents();
 init();

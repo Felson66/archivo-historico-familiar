@@ -1,3 +1,3 @@
-Archivo Histórico Familiar
-Versión: 4.1.1
-Estado: ESTABLE
+VERSIÓN: 4.2.0-alpha4
+ESTADO: DESARROLLO
+HITO: EP-004.2 Fase B — Pulido visual e iPhone
