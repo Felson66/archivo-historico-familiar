@@ -738,9 +738,55 @@ function uniqueIds(ids){
   return [...new Set((ids || []).filter(id => byId[id]))];
 }
 
+function treeLifeYears(person){
+  const birth=String(person.fecha_nacimiento||"").match(/\b(1[5-9]\d{2}|20\d{2})\b/)?.[1]||"";
+  const death=String(person.fecha_defuncion||"").match(/\b(1[5-9]\d{2}|20\d{2})\b/)?.[1]||"";
+  if(birth&&death)return `${birth}–${death}`;
+  if(birth)return `${birth}–`;
+  if(death)return `† ${death}`;
+  return "";
+}
+
+function treeDocumentationLevel(person){
+  const photos=Array.isArray(person.fotografias)?person.fotografias.length:0;
+  const documents=Array.isArray(person.documentos)?person.documentos.length:0;
+  const facts=Array.isArray(person.hechos)?person.hechos.length:0;
+  const score=(photos>0?1:0)+(documents>0?1:0)+(facts>0?1:0);
+  if(score>=3)return"high";
+  if(score>=1)return"medium";
+  return"low";
+}
+
 function treeNodeLabel(person){
-  const summary = personLifeSummary(person);
-  return `<h5>${esc(person.nombre)}</h5>${summary ? `<p>${esc(summary)}</p>` : ""}`;
+  const photo=String(person.fotografia_principal||"").trim();
+  const years=treeLifeYears(person);
+  const profession=String(person.profesion||"").trim();
+  const photos=Array.isArray(person.fotografias)?person.fotografias.length:0;
+  const documents=Array.isArray(person.documentos)?person.documentos.length:0;
+  const state=treeDocumentationLevel(person);
+
+  const avatar=photo
+    ? `<img class="tree-card-photo" src="${escapeHtml(photo)}" alt="">`
+    : `<span class="tree-card-placeholder" aria-hidden="true">👤</span>`;
+
+  const meta=[years,profession]
+    .filter(Boolean)
+    .map(item=>`<span>${escapeHtml(item)}</span>`)
+    .join("");
+
+  const counters=[
+    photos?`<span title="Fotografías">📷 ${photos}</span>`:"",
+    documents?`<span title="Documentos">📄 ${documents}</span>`:""
+  ].filter(Boolean).join("");
+
+  return `<div class="tree-person-card tree-doc-${state}" data-person-id="${escapeHtml(person.id)}">
+    <div class="tree-card-avatar">${avatar}</div>
+    <div class="tree-card-content">
+      <strong>${escapeHtml(person.nombre)}</strong>
+      ${meta?`<div class="tree-card-meta">${meta}</div>`:""}
+      ${counters?`<div class="tree-card-counters">${counters}</div>`:""}
+    </div>
+  </div>`;
 }
 
 function placeRow(ids,y,stageWidth,nodeWidth=210,gap=34){

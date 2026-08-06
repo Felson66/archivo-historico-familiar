@@ -1,5 +1,13 @@
 # Historial de versiones
 
+## 4.2.0-alpha2 — EP-004.2 Fase A: tarjetas del árbol
+- Fotografías circulares en las tarjetas.
+- Nombre, años de vida y profesión.
+- Contadores de fotografías y documentos.
+- Indicador discreto del nivel documental.
+- Sin cambios en el motor, zoom, arrastre o navegación.
+
+
 ## 4.2.0-alpha1 — EP-004.1: nuevo motor del árbol
 - Índice genealógico construido una sola vez al cargar los datos.
 - Fuente principal: `padre`, `madre` y `conyuges`.
