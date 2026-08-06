@@ -612,7 +612,29 @@ function renderTimeline(person){
   }).join("")}</div>`;
 }
 
+
+function quickRelationButtons(ids,emptyText){
+  const people=uniqueIds(ids).map(id=>byId[id]).filter(person=>person&&isPublicPerson(person));
+  if(!people.length)return `<div class="tree-quick-empty">${esc(emptyText)}</div>`;
+  return `<div class="tree-quick-relations">${people.map(person=>`
+    <button type="button" class="tree-quick-relation" data-tree-explore="${esc(person.id)}">
+      <span>${esc(person.nombre)}</span>
+      <small>${esc(personLifeLine(person)||person.profesion||person.lugar_nacimiento||"Ver en el árbol")}</small>
+    </button>`).join("")}</div>`;
+}
+function openTreeQuickPanel(id){
+  const person=byId[id]; if(!person||!isPublicPerson(person))return;
+  const photo=person.fotografia_principal?`<img src="${esc(person.fotografia_principal)}" alt="${esc(person.nombre)}"${photoPositionStyle(person)}>`:`<div class="tree-quick-monogram">${esc(initials(person.nombre))}</div>`;
+  const parents=parentIdsFor(person); const siblings=siblingGroups(person); const allSiblings=uniqueIds([...siblings.full,...siblings.half,...siblings.commonParent]); const spouses=spouseIdsFor(person); const children=childIdsFor(person); const life=personLifeLine(person); const secondary=[person.lugar_nacimiento,person.profesion].filter(Boolean).join(" · ");
+  $("personDrawer").classList.add("tree-quick-mode");
+  $("drawerContent").innerHTML=`<section class="tree-quick-hero"><div class="tree-quick-photo">${photo}</div><div class="tree-quick-intro"><span class="badge">${esc(stateLabel(person.estado))}</span><h2>${esc(person.nombre)}</h2>${life?`<div class="tree-quick-life">${esc(life)}</div>`:""}${secondary?`<div class="tree-quick-secondary">${esc(secondary)}</div>`:""}<div class="tree-quick-actions"><button type="button" class="primary" data-tree-center-person="${esc(person.id)}">Centrar en el árbol</button><button type="button" class="soft" data-open-full-person="${esc(person.id)}">Abrir ficha completa</button></div></div></section><div class="tree-quick-stats"><span><strong>${parents.length}</strong> progenitores</span><span><strong>${allSiblings.length}</strong> hermanos</span><span><strong>${spouses.length}</strong> cónyuges</span><span><strong>${children.length}</strong> hijos</span></div><section class="tree-quick-section"><h3>Padres</h3>${quickRelationButtons(parents,"No constan padres")}</section>${spouses.length?`<section class="tree-quick-section"><h3>Cónyuges</h3>${quickRelationButtons(spouses,"No consta cónyuge")}</section>`:""}${children.length?`<section class="tree-quick-section"><h3>Hijos</h3>${quickRelationButtons(children,"No constan hijos")}</section>`:""}${allSiblings.length?`<section class="tree-quick-section"><h3>Hermanos</h3>${quickRelationButtons(allSiblings,"No constan hermanos")}</section>`:""}`;
+  $("drawerBackdrop").classList.add("open"); $("personDrawer").classList.add("open"); $("personDrawer").setAttribute("aria-hidden","false"); document.body.classList.add("drawer-open"); history.replaceState(null,"",`#arbol/${encodeURIComponent(id)}`);
+}
+function centerTreeOnPerson(id,{keepPanel=false}={}){
+  if(!byId[id])return; treeFocusId=id; const select=$("treePersonSelect"); if(select)select.value=id; buildTree(id); requestAnimationFrame(()=>{fitTreeToView(); if(keepPanel)openTreeQuickPanel(id);});
+}
 function openPerson(id){
+  $("personDrawer").classList.remove("tree-quick-mode");
   const person = byId[id];
   if(!person) return;
 
@@ -727,6 +749,7 @@ function closeLightbox(){
 }
 
 function closeDrawer(){
+  $("personDrawer").classList.remove("tree-quick-mode");
   $("drawerBackdrop").classList.remove("open");
   $("personDrawer").classList.remove("open");
   $("personDrawer").setAttribute("aria-hidden","true");
@@ -759,10 +782,25 @@ function uniqueIds(ids){
   return [...new Set((ids || []).filter(id => byId[id]))];
 }
 
-function treeLifeYears(person){
-  const birth=String(person.fecha_nacimiento||"").match(/\b(1[5-9]\d{2}|20\d{2})\b/)?.[1]||"";
-  const death=String(person.fecha_defuncion||"").match(/\b(1[5-9]\d{2}|20\d{2})\b/)?.[1]||"";
+function extractYear(value){
+  return String(value||"").match(/\b(1[5-9]\d{2}|20\d{2})\b/)?.[1]||"";
+}
+function documentedDeathYear(person){
+  const structured=extractYear(person?.fecha_defuncion);
+  if(structured)return structured;
+  const facts=Array.isArray(person?.hechos)?person.hechos:[];
+  for(const fact of facts){
+    const text=String(fact?.texto||fact||"");
+    const deathMatch=text.match(/(?:falleci[oó]|muri[oó]|defunci[oó]n)[^0-9]{0,40}\b(1[5-9]\d{2}|20\d{2})\b/i);
+    if(deathMatch)return deathMatch[1];
+  }
+  return "";
+}
+function personLifeLine(person){
+  const birth=extractYear(person?.fecha_nacimiento);
+  const death=documentedDeathYear(person);
   if(birth&&death)return `${birth}–${death}`;
+  if(birth&&String(person?.situacion_vital||"").toLowerCase()==="fallecido")return `${birth}–?`;
   if(birth)return `${birth}–`;
   if(death)return `† ${death}`;
   return "";
@@ -780,7 +818,7 @@ function treeDocumentationLevel(person){
 
 function treeNodeLabel(person){
   const photo=String(person.fotografia_principal||"").trim();
-  const years=treeLifeYears(person);
+  const years=personLifeLine(person);
   const profession=String(person.profesion||"").trim();
   const photos=Array.isArray(person.fotografias)?person.fotografias.length:0;
   const documents=Array.isArray(person.documentos)?person.documentos.length:0;
@@ -1092,11 +1130,16 @@ function wireEvents(){
       return;
     }
 
+    const treeExploreButton=event.target.closest("[data-tree-explore]");
+    if(treeExploreButton){event.preventDefault();centerTreeOnPerson(treeExploreButton.dataset.treeExplore,{keepPanel:true});return;}
+    const quickCenterButton=event.target.closest("[data-tree-center-person]");
+    if(quickCenterButton){event.preventDefault();centerTreeOnPerson(quickCenterButton.dataset.treeCenterPerson);closeDrawer();return;}
+    const fullPersonButton=event.target.closest("[data-open-full-person]");
+    if(fullPersonButton){event.preventDefault();openPerson(fullPersonButton.dataset.openFullPerson);return;}
+    const treePersonButton=event.target.closest("#treeStage .person-node[data-person]");
+    if(treePersonButton){event.preventDefault();openTreeQuickPanel(treePersonButton.dataset.person);return;}
     const personButton = event.target.closest("[data-person]");
-    if(personButton){
-      event.preventDefault();
-      openPerson(personButton.dataset.person);
-    }
+    if(personButton){event.preventDefault();openPerson(personButton.dataset.person);}
   });
 
   document.querySelectorAll(".bottom-nav button").forEach(button => button.addEventListener("click", () => showView(button.dataset.view)));

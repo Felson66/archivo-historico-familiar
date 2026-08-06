@@ -1,5 +1,14 @@
 # Historial de versiones
 
+## 4.2.0-alpha5 — EP-004.3 Fase A: tarjetas clicables
+- Clic en cualquier tarjeta del árbol abre un panel rápido.
+- Panel lateral en PC y hoja inferior en iPhone.
+- Navegación directa entre padres, cónyuges, hijos y hermanos.
+- Recentrado del árbol desde el panel.
+- Acceso a la ficha pública completa.
+- Línea de vida común y corrección de defunciones documentadas en evidencias.
+
+
 ## 4.2.0-alpha4 — EP-004.2 Fase B: pulido e iPhone
 - Persona central más destacada.
 - Tarjetas con acabado de ficha de archivo.
