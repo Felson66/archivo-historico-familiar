@@ -3563,9 +3563,6 @@
   {
     "datos_resumen": "",
     "lugar_descanso": null,
-    "hijos": [
-      "P0028"
-    ],
     "estado": "memoria familiar",
     "conyuges": [
       "P0015"
@@ -3583,7 +3580,6 @@
     "nombre": "Esther García Reizabal",
     "id_legacy": "p27",
     "id": "P0027",
-    "padres": [],
     "biografia": "",
     "fotografia_principal": "assets/fotos/P0027/esther-principal.jpg",
     "fotografias": [
@@ -3664,7 +3660,7 @@
     "sexo": "mujer",
     "situacion_vital": "vivo",
     "visible": true,
-    "padre": "",
+    "padre": "P00065",
     "madre": ""
   },
   {
@@ -3699,6 +3695,19 @@
           "Amets"
         ],
         "personas": [
+          "P0028"
+        ]
+      },
+      {
+        "id": "F000065",
+        "src": "assets/fotos/P00065/roberto-amets.jpg",
+        "titulo": "Roberto Amets",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00065",
           "P0028"
         ]
       }
@@ -5405,5 +5414,62 @@
     "ultima_modificacion": "2026-08-05T14:32:33.727Z",
     "padre": "P00056",
     "madre": ""
+  },
+  {
+    "id": "P00065",
+    "nombre": "Roberto Garcia Fernandez",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "02/02/1944",
+    "lugar_nacimiento": "Bilbao",
+    "fecha_defuncion": "16/10/2018",
+    "lugar_defuncion": "Bilbao",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "memoria familiar",
+        "texto": "Fundador del dúo Rohan con JoseFote"
+      }
+    ],
+    "fotografias": [
+      {
+        "id": "F000065",
+        "src": "assets/fotos/P00065/roberto-amets.jpg",
+        "titulo": "Roberto Amets",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00065",
+          "P0028"
+        ]
+      },
+      {
+        "id": "F000066",
+        "src": "assets/fotos/P00065/roberto-josefote.jpg",
+        "titulo": "Roberto JoseFote",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "Dúo Rohan",
+        "etiquetas": [],
+        "personas": [
+          "P00065"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-08-07T15:15:48.978Z",
+    "ultima_modificacion": "2026-08-07T15:15:48.979Z",
+    "fotografia_principal": "assets/fotos/P00065/roberto-amets.jpg",
+    "fotoPosicion": "50% 50%"
   }
 ]
