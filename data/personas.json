@@ -3661,7 +3661,7 @@
     "situacion_vital": "vivo",
     "visible": true,
     "padre": "P00065",
-    "madre": ""
+    "madre": "P00066"
   },
   {
     "datos_resumen": "",
@@ -3707,8 +3707,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P00065",
-          "P0028"
+          "P0028",
+          "P00065"
         ]
       }
     ],
@@ -5449,8 +5449,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P00065",
-          "P0028"
+          "P0028",
+          "P00065"
         ]
       },
       {
@@ -5471,5 +5471,29 @@
     "ultima_modificacion": "2026-08-07T15:15:48.979Z",
     "fotografia_principal": "assets/fotos/P00065/roberto-amets.jpg",
     "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00066",
+    "nombre": "Iluminada Reizabal Perez",
+    "nombre_conocido": "Ilu",
+    "sexo": "mujer",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "30/01/1950",
+    "lugar_nacimiento": "Cerezo de Río Tirón",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-07T15:28:38.918Z",
+    "ultima_modificacion": "2026-08-07T15:28:38.918Z"
   }
 ]
