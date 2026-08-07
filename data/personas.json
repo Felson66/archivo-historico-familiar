@@ -3824,12 +3824,8 @@
     "conyuges": [],
     "hechos": [
       {
-        "tipo": "memoria_familiar",
+        "tipo": "memoria familiar",
         "texto": "Hijo de Elena y Eneko."
-      },
-      {
-        "tipo": "hipotesis",
-        "texto": "Año de nacimiento pendiente."
       }
     ],
     "nombre": "Peio Quintana de la Dehesa",
