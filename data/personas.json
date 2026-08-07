@@ -5491,9 +5491,24 @@
     "conyuges": [],
     "hijos": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000067",
+        "src": "assets/fotos/P00066/ilu.jpg",
+        "titulo": "Ilu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00066"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-08-07T15:28:38.918Z",
-    "ultima_modificacion": "2026-08-07T15:28:38.918Z"
+    "ultima_modificacion": "2026-08-07T15:28:38.918Z",
+    "fotografia_principal": "assets/fotos/P00066/ilu.jpg",
+    "fotoPosicion": "50% 28%"
   }
 ]
