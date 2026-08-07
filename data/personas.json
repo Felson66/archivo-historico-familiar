@@ -3671,16 +3671,12 @@
     "datos_resumen": "",
     "lugar_descanso": null,
     "hijos": [],
-    "estado": "familia reconstituida",
+    "estado": "documentado",
     "conyuges": [],
     "hechos": [
       {
-        "tipo": "memoria_familiar",
+        "tipo": "memoria familiar",
         "texto": "Hijo de Esther García Reizabal de una relación anterior."
-      },
-      {
-        "tipo": "familia_reconstituida",
-        "texto": "Eduardo de la Dehesa Liz es su padrastro."
       }
     ],
     "nombre": "Amets Otaegi García",
@@ -3713,7 +3709,7 @@
     "notas": "",
     "fotoPosicion": "19% 40%",
     "fecha_nacimiento": "19 sep 2000",
-    "lugar_nacimiento": "",
+    "lugar_nacimiento": "Bilbao",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "",
