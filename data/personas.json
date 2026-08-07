@@ -876,7 +876,7 @@
     "id": "P0009",
     "padres": [],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0008/boda-carmenyfrancisco-entera.jpg",
+    "fotografia_principal": "assets/fotos/P0009/carmen-gomez.jpg",
     "fotografias": [
       {
         "id": "F000015",
@@ -938,6 +938,18 @@
           "P0008",
           "P0009"
         ]
+      },
+      {
+        "id": "F000068",
+        "src": "assets/fotos/P0009/carmen-gomez.jpg",
+        "titulo": "Carmen Gomez",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009"
+        ]
       }
     ],
     "documentos": [
@@ -975,7 +987,7 @@
     "cronologia": [],
     "lugares": [],
     "notas": "",
-    "fotoPosicion": "50% 27%",
+    "fotoPosicion": "50% 7%",
     "fecha_nacimiento": "",
     "lugar_nacimiento": "",
     "fecha_defuncion": "21/03/1996",
@@ -1028,7 +1040,7 @@
       "P0009"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0010/mamale.jpg",
+    "fotografia_principal": "assets/fotos/P0010/mercedes-liz-portada.jpg",
     "fotografias": [
       {
         "id": "F000007",
@@ -1129,13 +1141,25 @@
         "personas": [
           "P0010"
         ]
+      },
+      {
+        "id": "F000069",
+        "src": "assets/fotos/P0010/mercedes-liz-portada.jpg",
+        "titulo": "Mercedes Liz Portada",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0010"
+        ]
       }
     ],
     "documentos": [],
     "cronologia": [],
     "lugares": [],
     "notas": "",
-    "fotoPosicion": "50% 50%",
+    "fotoPosicion": "50% 35%",
     "fecha_nacimiento": "",
     "lugar_nacimiento": "Santurce",
     "fecha_defuncion": "",
