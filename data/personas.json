@@ -13,8 +13,12 @@
     ],
     "hechos": [
       {
-        "tipo": "hipotesis",
-        "texto": "Lectura probable del nombre en la partida de nacimiento de Manuel María."
+        "tipo": "documentado",
+        "texto": "Nacido de Riego del Camino"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Fue Carabinero y entre otros destinos estuvo en Algeciras. Se retiró en la comandancia de carabineros de Zamora"
       }
     ],
     "nombre": "Francisco de la Dehesa Baladrón",
@@ -61,6 +65,54 @@
           "assets/documentos/P0037/d000003-paginas/pagina-020.webp",
           "assets/documentos/P0037/d000003-paginas/pagina-021.webp",
           "assets/documentos/P0037/d000003-paginas/pagina-022.webp"
+        ]
+      },
+      {
+        "id": "D000038",
+        "src": "assets/documentos/P0001/exp-militar-fdb-1.pdf",
+        "nombre_archivo": "exp-militar-fdb-1.pdf",
+        "formato": "application/pdf",
+        "titulo": "Exp Militar FDB 1",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0001"
+        ],
+        "paginas": [
+          "assets/documentos/P0001/d000038-paginas/pagina-001.webp",
+          "assets/documentos/P0001/d000038-paginas/pagina-002.webp"
+        ]
+      },
+      {
+        "id": "D000039",
+        "src": "assets/documentos/P0001/exp-militar-fdb-2.pdf",
+        "nombre_archivo": "exp-militar-fdb-2.pdf",
+        "formato": "application/pdf",
+        "titulo": "Exp Militar FDB 2",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0001"
+        ],
+        "paginas": [
+          "assets/documentos/P0001/d000039-paginas/pagina-001.webp",
+          "assets/documentos/P0001/d000039-paginas/pagina-002.webp"
+        ]
+      },
+      {
+        "id": "D000040",
+        "src": "assets/documentos/P0001/exp-militar-fdb-3.pdf",
+        "nombre_archivo": "exp-militar-fdb-3.pdf",
+        "formato": "application/pdf",
+        "titulo": "Exp Militar FDB 3",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0001"
+        ],
+        "paginas": [
+          "assets/documentos/P0001/d000040-paginas/pagina-001.webp",
+          "assets/documentos/P0001/d000040-paginas/pagina-002.webp"
         ]
       }
     ],
