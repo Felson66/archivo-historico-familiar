@@ -489,7 +489,24 @@
     ],
     "biografia": "",
     "fotografia_principal": "",
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000071",
+        "src": "assets/fotos/P0016/elena-comunion.jpg",
+        "titulo": "Elena Comunion",
+        "fecha": "",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0013",
+          "P0010",
+          "P0007",
+          "P0006"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000006",
@@ -696,6 +713,66 @@
         "descripcion": "Broma, un hippy le robaba la huerta",
         "etiquetas": [],
         "personas": [
+          "P0007"
+        ]
+      },
+      {
+        "id": "F000071",
+        "src": "assets/fotos/P0016/elena-comunion.jpg",
+        "titulo": "Elena Comunion",
+        "fecha": "",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0013",
+          "P0010",
+          "P0007",
+          "P0006"
+        ]
+      },
+      {
+        "id": "F000072",
+        "src": "assets/fotos/P0016/palas.jpg",
+        "titulo": "Palas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Palas"
+        ],
+        "personas": [
+          "P0016",
+          "P0013",
+          "P0012",
+          "P0015",
+          "P0007"
+        ]
+      },
+      {
+        "id": "F000075",
+        "src": "assets/fotos/P0010/boda-mercedes-liz.jpg",
+        "titulo": "Boda Mercedes Liz",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0010",
+          "P0007"
+        ]
+      },
+      {
+        "id": "F000076",
+        "src": "assets/fotos/P0010/boda-mm.jpg",
+        "titulo": "Boda MM",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0010",
           "P0007"
         ]
       }
@@ -950,6 +1027,18 @@
         "personas": [
           "P0009"
         ]
+      },
+      {
+        "id": "F000081",
+        "src": "assets/fotos/P0009/carmen.jpg",
+        "titulo": "Carmen",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009"
+        ]
       }
     ],
     "documentos": [
@@ -1150,6 +1239,74 @@
         "lugar": "",
         "descripcion": "",
         "etiquetas": [],
+        "personas": [
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000071",
+        "src": "assets/fotos/P0016/elena-comunion.jpg",
+        "titulo": "Elena Comunion",
+        "fecha": "",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0013",
+          "P0010",
+          "P0007",
+          "P0006"
+        ]
+      },
+      {
+        "id": "F000075",
+        "src": "assets/fotos/P0010/boda-mercedes-liz.jpg",
+        "titulo": "Boda Mercedes Liz",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0010",
+          "P0007"
+        ]
+      },
+      {
+        "id": "F000076",
+        "src": "assets/fotos/P0010/boda-mm.jpg",
+        "titulo": "Boda MM",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0010",
+          "P0007"
+        ]
+      },
+      {
+        "id": "F000077",
+        "src": "assets/fotos/P0010/mercedes-liz.jpg",
+        "titulo": "Mercedes Liz",
+        "fecha": "",
+        "lugar": "Bilbao",
+        "descripcion": "Foto Indautxu",
+        "etiquetas": [],
+        "personas": [
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000078",
+        "src": "assets/fotos/P0010/mercedes-liz-carnet.jpg",
+        "titulo": "Mercedes Liz Carnet",
+        "fecha": "",
+        "lugar": "Bilbao",
+        "descripcion": "Carnet familiar",
+        "etiquetas": [
+          "Artxanda"
+        ],
         "personas": [
           "P0010"
         ]
@@ -1569,6 +1726,37 @@
         "etiquetas": [],
         "personas": [
           "P0012"
+        ]
+      },
+      {
+        "id": "F000070",
+        "src": "assets/fotos/P0016/comunion-elena-manu.jpg",
+        "titulo": "Comunion Elena Manu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000072",
+        "src": "assets/fotos/P0016/palas.jpg",
+        "titulo": "Palas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Palas"
+        ],
+        "personas": [
+          "P0016",
+          "P0013",
+          "P0012",
+          "P0015",
+          "P0007"
         ]
       }
     ],
@@ -2011,6 +2199,40 @@
           "P0013",
           "P0016",
           "P0014"
+        ]
+      },
+      {
+        "id": "F000071",
+        "src": "assets/fotos/P0016/elena-comunion.jpg",
+        "titulo": "Elena Comunion",
+        "fecha": "",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0013",
+          "P0010",
+          "P0007",
+          "P0006"
+        ]
+      },
+      {
+        "id": "F000072",
+        "src": "assets/fotos/P0016/palas.jpg",
+        "titulo": "Palas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Palas"
+        ],
+        "personas": [
+          "P0016",
+          "P0013",
+          "P0012",
+          "P0015",
+          "P0007"
         ]
       }
     ],
@@ -2469,6 +2691,20 @@
           "P0016",
           "P0014"
         ]
+      },
+      {
+        "id": "F000080",
+        "src": "assets/fotos/P0014/lourdes-noja.jpg",
+        "titulo": "Lourdes Noja",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [
+          "Lourdes"
+        ],
+        "personas": [
+          "P0014"
+        ]
       }
     ],
     "documentos": [],
@@ -2709,6 +2945,37 @@
           "P0015",
           "P0014"
         ]
+      },
+      {
+        "id": "F000072",
+        "src": "assets/fotos/P0016/palas.jpg",
+        "titulo": "Palas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Palas"
+        ],
+        "personas": [
+          "P0016",
+          "P0013",
+          "P0012",
+          "P0015",
+          "P0007"
+        ]
+      },
+      {
+        "id": "F000074",
+        "src": "assets/fotos/P0016/estrangulamiento.jpg",
+        "titulo": "Estrangulamiento",
+        "fecha": "",
+        "lugar": "Noja - Ris",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0015"
+        ]
       }
     ],
     "documentos": [],
@@ -2805,6 +3072,78 @@
           "P0013",
           "P0016",
           "P0014"
+        ]
+      },
+      {
+        "id": "F000070",
+        "src": "assets/fotos/P0016/comunion-elena-manu.jpg",
+        "titulo": "Comunion Elena Manu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000071",
+        "src": "assets/fotos/P0016/elena-comunion.jpg",
+        "titulo": "Elena Comunion",
+        "fecha": "",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0013",
+          "P0010",
+          "P0007",
+          "P0006"
+        ]
+      },
+      {
+        "id": "F000072",
+        "src": "assets/fotos/P0016/palas.jpg",
+        "titulo": "Palas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Palas"
+        ],
+        "personas": [
+          "P0016",
+          "P0013",
+          "P0012",
+          "P0015",
+          "P0007"
+        ]
+      },
+      {
+        "id": "F000073",
+        "src": "assets/fotos/P0016/elena-noja.jpg",
+        "titulo": "Elena Noja",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016"
+        ]
+      },
+      {
+        "id": "F000074",
+        "src": "assets/fotos/P0016/estrangulamiento.jpg",
+        "titulo": "Estrangulamiento",
+        "fecha": "",
+        "lugar": "Noja - Ris",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0015"
         ]
       }
     ],
@@ -3826,6 +4165,19 @@
         "personas": [
           "P0030"
         ]
+      },
+      {
+        "id": "F000079",
+        "src": "assets/fotos/P0030/eder-peio.jpg",
+        "titulo": "Eder Peio",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0030",
+          "P0031"
+        ]
       }
     ],
     "documentos": [],
@@ -3876,6 +4228,19 @@
         "descripcion": "Puenting!!",
         "etiquetas": [],
         "personas": [
+          "P0031"
+        ]
+      },
+      {
+        "id": "F000079",
+        "src": "assets/fotos/P0030/eder-peio.jpg",
+        "titulo": "Eder Peio",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0030",
           "P0031"
         ]
       }
