@@ -22,7 +22,7 @@
 - Panel lateral en PC y hoja inferior en iPhone.
 - Navegación directa entre padres, cónyuges, hijos y hermanos.
 - Recentrado del árbol desde el panel.
-- Acceso a la ficha pública completa.
+- Acceso a la ficha pública completa. 
 - Línea de vida común y corrección de defunciones documentadas en evidencias.
 
 
