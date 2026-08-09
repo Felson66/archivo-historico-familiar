@@ -1511,8 +1511,33 @@
       "P0009"
     ],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0011/conchi-portada.jpg",
+    "fotografias": [
+      {
+        "id": "F000089",
+        "src": "assets/fotos/P0011/conchi-portada.jpg",
+        "titulo": "Conchi Portada",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "Nunca nadie me ha tratado tan bien y a mis hermanos igual (Soy Edu)",
+        "etiquetas": [],
+        "personas": [
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000090",
+        "src": "assets/fotos/P0011/tia.jpg",
+        "titulo": "Carnet Servicio Social",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0011"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000027",
