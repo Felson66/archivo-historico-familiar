@@ -3497,9 +3497,9 @@
         "personas": [
           "P0019",
           "P0032",
-          "P0021",
           "P0023",
-          "P0022"
+          "P0022",
+          "P0020"
         ]
       },
       {
@@ -3518,9 +3518,9 @@
         "personas": [
           "P0019",
           "P0023",
-          "P0021",
           "P0032",
-          "P0022"
+          "P0022",
+          "P0020"
         ]
       }
     ],
@@ -3610,6 +3610,48 @@
           "P0020",
           "P0021"
         ]
+      },
+      {
+        "id": "F000029",
+        "src": "assets/fotos/P0032/noah.jpg",
+        "titulo": "Noah",
+        "fecha": "2026",
+        "lugar": "Noja",
+        "descripcion": "No se puede ser más guapo",
+        "etiquetas": [
+          "Noja",
+          "Noah",
+          "Soengas",
+          "Hoya"
+        ],
+        "personas": [
+          "P0019",
+          "P0032",
+          "P0023",
+          "P0022",
+          "P0020"
+        ]
+      },
+      {
+        "id": "F000028",
+        "src": "assets/fotos/P0023/ari.jpg",
+        "titulo": "Ari",
+        "fecha": "2026",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [
+          "Noja",
+          "Ari",
+          "Hoya",
+          "Soengas"
+        ],
+        "personas": [
+          "P0019",
+          "P0023",
+          "P0032",
+          "P0022",
+          "P0020"
+        ]
       }
     ],
     "documentos": [],
@@ -3650,48 +3692,6 @@
     "biografia": "",
     "fotografia_principal": "assets/fotos/P0021/r-n-cocktail-28-de-34.jpg",
     "fotografias": [
-      {
-        "id": "F000029",
-        "src": "assets/fotos/P0032/noah.jpg",
-        "titulo": "Noah",
-        "fecha": "2026",
-        "lugar": "Noja",
-        "descripcion": "No se puede ser más guapo",
-        "etiquetas": [
-          "Noja",
-          "Noah",
-          "Soengas",
-          "Hoya"
-        ],
-        "personas": [
-          "P0019",
-          "P0032",
-          "P0021",
-          "P0023",
-          "P0022"
-        ]
-      },
-      {
-        "id": "F000028",
-        "src": "assets/fotos/P0023/ari.jpg",
-        "titulo": "Ari",
-        "fecha": "2026",
-        "lugar": "Noja",
-        "descripcion": "",
-        "etiquetas": [
-          "Noja",
-          "Ari",
-          "Hoya",
-          "Soengas"
-        ],
-        "personas": [
-          "P0019",
-          "P0023",
-          "P0021",
-          "P0032",
-          "P0022"
-        ]
-      },
       {
         "id": "F000086",
         "src": "assets/fotos/P0021/r-n-cocktail-28-de-34.jpg",
@@ -3776,9 +3776,9 @@
         "personas": [
           "P0019",
           "P0032",
-          "P0021",
           "P0023",
-          "P0022"
+          "P0022",
+          "P0020"
         ]
       },
       {
@@ -3797,9 +3797,9 @@
         "personas": [
           "P0019",
           "P0023",
-          "P0021",
           "P0032",
-          "P0022"
+          "P0022",
+          "P0020"
         ]
       },
       {
@@ -3875,9 +3875,9 @@
         "personas": [
           "P0019",
           "P0023",
-          "P0021",
           "P0032",
-          "P0022"
+          "P0022",
+          "P0020"
         ]
       },
       {
@@ -3896,9 +3896,9 @@
         "personas": [
           "P0019",
           "P0032",
-          "P0021",
           "P0023",
-          "P0022"
+          "P0022",
+          "P0020"
         ]
       },
       {
@@ -4525,9 +4525,9 @@
         "personas": [
           "P0019",
           "P0032",
-          "P0021",
           "P0023",
-          "P0022"
+          "P0022",
+          "P0020"
         ]
       },
       {
@@ -4546,9 +4546,9 @@
         "personas": [
           "P0019",
           "P0023",
-          "P0021",
           "P0032",
-          "P0022"
+          "P0022",
+          "P0020"
         ]
       },
       {
