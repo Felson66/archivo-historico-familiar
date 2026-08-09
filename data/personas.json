@@ -3513,6 +3513,19 @@
           "P0032",
           "P0027"
         ]
+      },
+      {
+        "id": "F000086",
+        "src": "assets/fotos/P0021/r-n-cocktail-28-de-34.jpg",
+        "titulo": "Dani y Raquel",
+        "fecha": "23/09/2017",
+        "lugar": "Escalante",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0021",
+          "P0020"
+        ]
       }
     ],
     "documentos": [],
@@ -3551,7 +3564,7 @@
       "P0019"
     ],
     "biografia": "",
-    "fotografia_principal": "",
+    "fotografia_principal": "assets/fotos/P0021/r-n-cocktail-28-de-34.jpg",
     "fotografias": [
       {
         "id": "F000029",
@@ -3594,6 +3607,19 @@
           "P0032",
           "P0022"
         ]
+      },
+      {
+        "id": "F000086",
+        "src": "assets/fotos/P0021/r-n-cocktail-28-de-34.jpg",
+        "titulo": "Dani y Raquel",
+        "fecha": "23/09/2017",
+        "lugar": "Escalante",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0021",
+          "P0020"
+        ]
       }
     ],
     "documentos": [],
@@ -3610,7 +3636,8 @@
     "situacion_vital": "vivo",
     "visible": true,
     "padre": "P0019",
-    "madre": "P0013"
+    "madre": "P0013",
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "",
