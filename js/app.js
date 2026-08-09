@@ -643,6 +643,44 @@ function openTreeQuickPanel(id){
 function centerTreeOnPerson(id,{keepPanel=false}={}){
   if(!byId[id])return; treeFocusId=id; const select=$("treePersonSelect"); if(select)select.value=id; buildTree(id); requestAnimationFrame(()=>{fitTreeToView(); if(keepPanel)openTreeQuickPanel(id);});
 }
+
+function normalizedNotes(person){
+  const value=person?.notas;
+
+  if(value===null||value===undefined||value==="")return[];
+
+  if(Array.isArray(value)){
+    return value
+      .map(item=>{
+        if(item===null||item===undefined)return"";
+        if(typeof item==="string")return item.trim();
+        if(typeof item==="object")return String(item.texto||item.descripcion||item.nota||"").trim();
+        return String(item).trim();
+      })
+      .filter(Boolean);
+  }
+
+  if(typeof value==="string"){
+    return value
+      .split(/\r?\n/)
+      .map(line=>line.trim())
+      .filter(Boolean);
+  }
+
+  return [String(value).trim()].filter(Boolean);
+}
+
+function renderPersonNotes(person){
+  const notes=normalizedNotes(person);
+  if(!notes.length){
+    return `<div class="placeholder">Sin observaciones añadidas.</div>`;
+  }
+
+  return notes
+    .map(note=>`<div class="fact">${esc(note)}</div>`)
+    .join("");
+}
+
 function openPerson(id){
   $("personDrawer").classList.remove("tree-quick-mode");
   const person = byId[id];
@@ -703,9 +741,7 @@ function openPerson(id){
 
         <section class="profile-section">
           <h3>Observaciones</h3>
-          ${(person.notas || []).length
-            ? person.notas.map(nota => `<div class="fact">${esc(nota.texto || nota)}</div>`).join("")
-            : `<div class="placeholder">Sin observaciones añadidas.</div>`}
+          ${renderPersonNotes(person)}
         </section>
       </div>
     </div>`;

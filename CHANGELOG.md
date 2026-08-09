@@ -1,5 +1,13 @@
 # Historial de versiones
 
+## 4.2.0-alpha8 — Corrección de notas en ficha pública
+- `notas` admite ahora tanto texto como arrays.
+- Las notas de texto multilínea se muestran línea a línea.
+- Se elimina la llamada insegura a `person.notas.map()` cuando `notas` es una cadena.
+- No se modifica `personas.json`.
+- Sin cambios en documentos, fotografías, relaciones ni árbol.
+
+
 ## 4.2.0-alpha7 — EP-004.3B: avatar unificado
 - Sustituida la fotografía panorámica del panel rápido por un avatar circular grande.
 - Reutilización de la misma lógica visual del árbol.
@@ -22,7 +30,7 @@
 - Panel lateral en PC y hoja inferior en iPhone.
 - Navegación directa entre padres, cónyuges, hijos y hermanos.
 - Recentrado del árbol desde el panel.
-- Acceso a la ficha pública completa. 
+- Acceso a la ficha pública completa.
 - Línea de vida común y corrección de defunciones documentadas en evidencias.
 
 
@@ -81,4 +89,4 @@
 
 ## 4.0.3 — Gestión documental
 - Visor de imágenes y documentos.
-- Mejoras en Administración. 
+- Mejoras en Administración.
