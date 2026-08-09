@@ -643,7 +643,7 @@
       "P0006"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0007/boda-manuel-mercedes.jpg",
+    "fotografia_principal": "assets/fotos/P0007/amona.jpg",
     "fotografias": [
       {
         "id": "F000007",
@@ -813,6 +813,18 @@
           "P0006",
           "P0008"
         ]
+      },
+      {
+        "id": "F000088",
+        "src": "assets/fotos/P0007/amona.jpg",
+        "titulo": "Amona",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0007"
+        ]
       }
     ],
     "documentos": [
@@ -846,7 +858,8 @@
     "situacion_vital": "fallecido",
     "visible": true,
     "padre": "P0005",
-    "madre": "P0006"
+    "madre": "P0006",
+    "fotoPosicion": "50% 60%"
   },
   {
     "datos_resumen": "Hijo de Manuel y Francisca.\nDNI : 14.756.003",
@@ -6017,9 +6030,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
-    "conyuges": [],
-    "hijos": [],
+    "conyuges": [
+      "P00066"
+    ],
     "hechos": [
       {
         "tipo": "memoria familiar",
@@ -6057,7 +6070,9 @@
     "fecha_creacion": "2026-08-07T15:15:48.978Z",
     "ultima_modificacion": "2026-08-07T15:15:48.979Z",
     "fotografia_principal": "assets/fotos/P00065/roberto-amets.jpg",
-    "fotoPosicion": "50% 50%"
+    "fotoPosicion": "50% 50%",
+    "padre": "",
+    "madre": ""
   },
   {
     "id": "P00066",
@@ -6075,7 +6090,9 @@
     "datos_resumen": "",
     "visible": true,
     "padres": [],
-    "conyuges": [],
+    "conyuges": [
+      "P00065"
+    ],
     "hijos": [],
     "hechos": [],
     "fotografias": [
