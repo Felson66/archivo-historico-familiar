@@ -887,7 +887,7 @@
     "id": "P0008",
     "padres": [],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0008/boda-carmenyfrancisco-entera.jpg",
+    "fotografia_principal": "assets/fotos/P0008/franciso-liz.jpg",
     "fotografias": [
       {
         "id": "F000018",
@@ -933,6 +933,18 @@
           "P0006",
           "P0008"
         ]
+      },
+      {
+        "id": "F000087",
+        "src": "assets/fotos/P0008/franciso-liz.jpg",
+        "titulo": "Franciso Liz",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0008"
+        ]
       }
     ],
     "documentos": [
@@ -964,6 +976,21 @@
         "paginas": [
           "assets/documentos/P0008/d000029-paginas/pagina-001.webp",
           "assets/documentos/P0008/d000029-paginas/pagina-002.webp"
+        ]
+      },
+      {
+        "id": "D000041",
+        "src": "assets/documentos/P0008/dni-francisco-liz.pdf",
+        "nombre_archivo": "dni-francisco-liz.pdf",
+        "formato": "application/pdf",
+        "titulo": "DNI Francisco Liz",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0008"
+        ],
+        "paginas": [
+          "assets/documentos/P0008/d000041-paginas/pagina-001.webp"
         ]
       }
     ],
@@ -1127,6 +1154,21 @@
         "paginas": [
           "assets/documentos/P0008/d000029-paginas/pagina-001.webp",
           "assets/documentos/P0008/d000029-paginas/pagina-002.webp"
+        ]
+      },
+      {
+        "id": "D000042",
+        "src": "assets/documentos/P0009/dni-carmen-gomez.pdf",
+        "nombre_archivo": "dni-carmen-gomez.pdf",
+        "formato": "application/pdf",
+        "titulo": "Dni Carmen Gomez",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0009"
+        ],
+        "paginas": [
+          "assets/documentos/P0009/d000042-paginas/pagina-001.webp"
         ]
       }
     ],
@@ -1487,6 +1529,21 @@
         "paginas": [
           "assets/documentos/P0008/d000029-paginas/pagina-001.webp",
           "assets/documentos/P0008/d000029-paginas/pagina-002.webp"
+        ]
+      },
+      {
+        "id": "D000043",
+        "src": "assets/documentos/P0011/dni-concepcion-liz.pdf",
+        "nombre_archivo": "dni-concepcion-liz.pdf",
+        "formato": "application/pdf",
+        "titulo": "Dni Concepcion Liz",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0011"
+        ],
+        "paginas": [
+          "assets/documentos/P0011/d000043-paginas/pagina-001.webp"
         ]
       }
     ],
