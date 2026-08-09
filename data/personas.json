@@ -488,7 +488,7 @@
       "P0004"
     ],
     "biografia": "",
-    "fotografia_principal": "",
+    "fotografia_principal": "assets/fotos/P0006/amona.jpg",
     "fotografias": [
       {
         "id": "F000071",
@@ -519,10 +519,22 @@
           "Mama"
         ],
         "personas": [
+          "P0006",
           "P0010",
           "P0007",
-          "P0006",
           "P0008"
+        ]
+      },
+      {
+        "id": "F000091",
+        "src": "assets/fotos/P0006/amona.jpg",
+        "titulo": "Amona",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0006"
         ]
       }
     ],
@@ -601,7 +613,8 @@
     "situacion_vital": "fallecido",
     "visible": true,
     "padre": "P0003",
-    "madre": "P0004"
+    "madre": "P0004",
+    "fotoPosicion": "50% 73%"
   },
   {
     "datos_resumen": "",
@@ -643,7 +656,7 @@
       "P0006"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0007/amona.jpg",
+    "fotografia_principal": "assets/fotos/P0007/boda-manuel-mercedes.jpg",
     "fotografias": [
       {
         "id": "F000007",
@@ -808,22 +821,10 @@
           "Mama"
         ],
         "personas": [
+          "P0006",
           "P0010",
           "P0007",
-          "P0006",
           "P0008"
-        ]
-      },
-      {
-        "id": "F000088",
-        "src": "assets/fotos/P0007/amona.jpg",
-        "titulo": "Amona",
-        "fecha": "",
-        "lugar": "",
-        "descripcion": "",
-        "etiquetas": [],
-        "personas": [
-          "P0007"
         ]
       }
     ],
@@ -941,9 +942,9 @@
           "Mama"
         ],
         "personas": [
+          "P0006",
           "P0010",
           "P0007",
-          "P0006",
           "P0008"
         ]
       },
@@ -1436,9 +1437,9 @@
           "Mama"
         ],
         "personas": [
+          "P0006",
           "P0010",
           "P0007",
-          "P0006",
           "P0008"
         ]
       },
@@ -1615,10 +1616,6 @@
       {
         "tipo": "documentado",
         "texto": "Hijo mayor de Manuel María y Mercedes."
-      },
-      {
-        "tipo": "memoria_familiar",
-        "texto": "Se casó con Blanca González y posteriormente se separaron."
       }
     ],
     "nombre": "Manuel de la Dehesa Liz",
@@ -1977,10 +1974,6 @@
       {
         "tipo": "documentado",
         "texto": "Hija de Manuel María y Mercedes."
-      },
-      {
-        "tipo": "memoria_familiar",
-        "texto": "Se casó con Federico Hoya Gómez y posteriormente se separaron."
       }
     ],
     "nombre": "Mercedes de la Dehesa Liz",
@@ -3215,10 +3208,6 @@
       {
         "tipo": "documentado",
         "texto": "Hija menor de Manuel María y Mercedes."
-      },
-      {
-        "tipo": "memoria_familiar",
-        "texto": "Se casó con Eneko Quintana y posteriormente se separaron."
       }
     ],
     "nombre": "Elena de la Dehesa Liz",
@@ -3618,8 +3607,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0021",
-          "P0020"
+          "P0020",
+          "P0021"
         ]
       }
     ],
@@ -3712,8 +3701,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0021",
-          "P0020"
+          "P0020",
+          "P0021"
         ]
       }
     ],
@@ -4009,12 +3998,12 @@
     "conyuges": [],
     "hechos": [
       {
-        "tipo": "memoria_familiar",
+        "tipo": "memoria familiar",
         "texto": "Hijo de Lourdes y Ferdinando."
       },
       {
-        "tipo": "hipotesis",
-        "texto": "Año de nacimiento pendiente."
+        "tipo": "memoria familiar",
+        "texto": "Su madre no recuerda la habitación de la clínica Bidone 😂"
       }
     ],
     "nombre": "Adrián Rigardo de la Dehesa",
@@ -4079,8 +4068,8 @@
     "lugares": [],
     "notas": "",
     "fotoPosicion": "55% 44%",
-    "fecha_nacimiento": "",
-    "lugar_nacimiento": "año pendiente",
+    "fecha_nacimiento": "15/01/1997",
+    "lugar_nacimiento": "Turin",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "",
@@ -4095,7 +4084,7 @@
     "datos_resumen": "",
     "lugar_descanso": null,
     "hijos": [],
-    "estado": "memoria familiar",
+    "estado": "documentado",
     "conyuges": [],
     "hechos": [
       {
@@ -4148,7 +4137,7 @@
     "notas": "",
     "fotoPosicion": "50% 34%",
     "fecha_nacimiento": "28 jul 1998",
-    "lugar_nacimiento": "",
+    "lugar_nacimiento": "Bilbao",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "",
