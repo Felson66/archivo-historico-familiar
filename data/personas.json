@@ -499,11 +499,30 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0006",
           "P0016",
           "P0013",
           "P0010",
+          "P0007"
+        ]
+      },
+      {
+        "id": "F000084",
+        "src": "assets/fotos/P0010/boda-padrinos.jpg",
+        "titulo": "Boda Padrinos",
+        "fecha": "02/04/1956",
+        "lugar": "Basílica de Begoña",
+        "descripcion": "",
+        "etiquetas": [
+          "Boda",
+          "Padrinos",
+          "Mama"
+        ],
+        "personas": [
+          "P0010",
           "P0007",
-          "P0006"
+          "P0006",
+          "P0008"
         ]
       }
     ],
@@ -725,11 +744,11 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0006",
           "P0016",
           "P0013",
           "P0010",
-          "P0007",
-          "P0006"
+          "P0007"
         ]
       },
       {
@@ -743,11 +762,11 @@
           "Palas"
         ],
         "personas": [
+          "P0007",
           "P0016",
           "P0013",
           "P0012",
-          "P0015",
-          "P0007"
+          "P0015"
         ]
       },
       {
@@ -759,8 +778,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0010",
-          "P0007"
+          "P0007",
+          "P0010"
         ]
       },
       {
@@ -772,8 +791,27 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0007",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000084",
+        "src": "assets/fotos/P0010/boda-padrinos.jpg",
+        "titulo": "Boda Padrinos",
+        "fecha": "02/04/1956",
+        "lugar": "Basílica de Begoña",
+        "descripcion": "",
+        "etiquetas": [
+          "Boda",
+          "Padrinos",
+          "Mama"
+        ],
+        "personas": [
           "P0010",
-          "P0007"
+          "P0007",
+          "P0006",
+          "P0008"
         ]
       }
     ],
@@ -811,7 +849,7 @@
     "madre": "P0006"
   },
   {
-    "datos_resumen": "",
+    "datos_resumen": "Hijo de Manuel y Francisca.\nDNI : 14.756.003",
     "lugar_descanso": {
       "cemetery": "Cementerio Municipal de Bilbao (Derio)",
       "location": "Zona Única · Manzana 29 · Unidad/Nicho 0050",
@@ -876,6 +914,25 @@
           "P0008",
           "P0009"
         ]
+      },
+      {
+        "id": "F000084",
+        "src": "assets/fotos/P0010/boda-padrinos.jpg",
+        "titulo": "Boda Padrinos",
+        "fecha": "02/04/1956",
+        "lugar": "Basílica de Begoña",
+        "descripcion": "",
+        "etiquetas": [
+          "Boda",
+          "Padrinos",
+          "Mama"
+        ],
+        "personas": [
+          "P0010",
+          "P0007",
+          "P0006",
+          "P0008"
+        ]
       }
     ],
     "documentos": [
@@ -912,11 +969,11 @@
     ],
     "cronologia": [],
     "lugares": [],
-    "notas": "",
-    "fecha_nacimiento": "",
-    "lugar_nacimiento": "",
+    "notas": "Hijo de Manuel y Francisca.\nDNI : 14.756.003",
+    "fecha_nacimiento": "24/01/1899",
+    "lugar_nacimiento": "Paramo en Lugo",
     "fecha_defuncion": "15/10/1961",
-    "lugar_defuncion": "",
+    "lugar_defuncion": "Bilbao",
     "profesion": "Sastre",
     "fotoPosicion": "50% 26%",
     "nombre_conocido": "",
@@ -927,7 +984,7 @@
     "madre": ""
   },
   {
-    "datos_resumen": "",
+    "datos_resumen": "Hija de Angel y Carmen\nDNI : 14.111.328",
     "lugar_descanso": {
       "cemetery": "Cementerio Municipal de Bilbao (Derio)",
       "location": "Zona Única · Manzana 29 · Unidad/Nicho 0050",
@@ -1075,12 +1132,12 @@
     ],
     "cronologia": [],
     "lugares": [],
-    "notas": "",
+    "notas": "Hija de Angel y Carmen\nDNI : 14.111.328",
     "fotoPosicion": "50% 7%",
-    "fecha_nacimiento": "",
-    "lugar_nacimiento": "",
+    "fecha_nacimiento": "14/01/1910",
+    "lugar_nacimiento": "Galdames",
     "fecha_defuncion": "21/03/1996",
-    "lugar_defuncion": "",
+    "lugar_defuncion": "Bilbao",
     "profesion": "",
     "nombre_conocido": "",
     "sexo": "mujer",
@@ -1252,11 +1309,11 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0006",
           "P0016",
           "P0013",
           "P0010",
-          "P0007",
-          "P0006"
+          "P0007"
         ]
       },
       {
@@ -1268,8 +1325,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0010",
-          "P0007"
+          "P0007",
+          "P0010"
         ]
       },
       {
@@ -1281,8 +1338,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0010",
-          "P0007"
+          "P0007",
+          "P0010"
         ]
       },
       {
@@ -1310,6 +1367,39 @@
         "personas": [
           "P0010"
         ]
+      },
+      {
+        "id": "F000084",
+        "src": "assets/fotos/P0010/boda-padrinos.jpg",
+        "titulo": "Boda Padrinos",
+        "fecha": "02/04/1956",
+        "lugar": "Basílica de Begoña",
+        "descripcion": "",
+        "etiquetas": [
+          "Boda",
+          "Padrinos",
+          "Mama"
+        ],
+        "personas": [
+          "P0010",
+          "P0007",
+          "P0006",
+          "P0008"
+        ]
+      },
+      {
+        "id": "F000085",
+        "src": "assets/fotos/P0010/mama-paisaje.jpg",
+        "titulo": "Mama Paisaje",
+        "fecha": "01/08/1999",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Mama"
+        ],
+        "personas": [
+          "P0010"
+        ]
       }
     ],
     "documentos": [],
@@ -1330,7 +1420,7 @@
     "madre": "P0009"
   },
   {
-    "datos_resumen": "",
+    "datos_resumen": "DNI: 14.401.424-C",
     "lugar_descanso": {
       "cemetery": "Cementerio Municipal de Bilbao (Derio)",
       "location": "Zona Única · Manzana 29 · Unidad/Nicho 0050",
@@ -1402,12 +1492,12 @@
     ],
     "cronologia": [],
     "lugares": [],
-    "notas": "",
+    "notas": "DNI: 14.401.424-C",
     "fotoPosicion": "50% 50%",
-    "fecha_nacimiento": "",
+    "fecha_nacimiento": "20/10/1931",
     "lugar_nacimiento": "",
     "fecha_defuncion": "",
-    "lugar_defuncion": "",
+    "lugar_defuncion": "Bilbao",
     "profesion": "",
     "nombre_conocido": "",
     "sexo": "mujer",
@@ -1737,8 +1827,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0016",
-          "P0012"
+          "P0012",
+          "P0016"
         ]
       },
       {
@@ -1752,11 +1842,11 @@
           "Palas"
         ],
         "personas": [
+          "P0007",
           "P0016",
           "P0013",
           "P0012",
-          "P0015",
-          "P0007"
+          "P0015"
         ]
       }
     ],
@@ -2210,11 +2300,11 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0006",
           "P0016",
           "P0013",
           "P0010",
-          "P0007",
-          "P0006"
+          "P0007"
         ]
       },
       {
@@ -2228,11 +2318,11 @@
           "Palas"
         ],
         "personas": [
+          "P0007",
           "P0016",
           "P0013",
           "P0012",
-          "P0015",
-          "P0007"
+          "P0015"
         ]
       }
     ],
@@ -2705,6 +2795,30 @@
         "personas": [
           "P0014"
         ]
+      },
+      {
+        "id": "F000082",
+        "src": "assets/fotos/P0014/lourdes-carnet-artxanda.jpg",
+        "titulo": "Lourdes Carnet Artxanda",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000083",
+        "src": "assets/fotos/P0014/lourdes-comunion.jpg",
+        "titulo": "Lourdes Comunion",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0014"
+        ]
       }
     ],
     "documentos": [],
@@ -2957,11 +3071,11 @@
           "Palas"
         ],
         "personas": [
+          "P0007",
           "P0016",
           "P0013",
           "P0012",
-          "P0015",
-          "P0007"
+          "P0015"
         ]
       },
       {
@@ -2973,8 +3087,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0016",
-          "P0015"
+          "P0015",
+          "P0016"
         ]
       }
     ],
@@ -3083,8 +3197,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0016",
-          "P0012"
+          "P0012",
+          "P0016"
         ]
       },
       {
@@ -3096,11 +3210,11 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0006",
           "P0016",
           "P0013",
           "P0010",
-          "P0007",
-          "P0006"
+          "P0007"
         ]
       },
       {
@@ -3114,11 +3228,11 @@
           "Palas"
         ],
         "personas": [
+          "P0007",
           "P0016",
           "P0013",
           "P0012",
-          "P0015",
-          "P0007"
+          "P0015"
         ]
       },
       {
@@ -3142,8 +3256,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0016",
-          "P0015"
+          "P0015",
+          "P0016"
         ]
       }
     ],
