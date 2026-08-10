@@ -2047,6 +2047,42 @@
           "P0014",
           "P0013"
         ]
+      },
+      {
+        "id": "F000116",
+        "src": "assets/fotos/P0015/edu-y-manu-comunion.jpg",
+        "titulo": "Edu y Manu Comunion",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Edu",
+          "Manu",
+          "Comunion"
+        ],
+        "personas": [
+          "P0015",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000117",
+        "src": "assets/fotos/P0013/cena-iparraguirre.jpg",
+        "titulo": "Cena Iparraguirre",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Manu",
+          "Merche",
+          "Lourdes",
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0013",
+          "P0014",
+          "P0012"
+        ]
       }
     ],
     "documentos": [],
@@ -2558,6 +2594,25 @@
           "P0012",
           "P0014",
           "P0013"
+        ]
+      },
+      {
+        "id": "F000117",
+        "src": "assets/fotos/P0013/cena-iparraguirre.jpg",
+        "titulo": "Cena Iparraguirre",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Manu",
+          "Merche",
+          "Lourdes",
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0013",
+          "P0014",
+          "P0012"
         ]
       }
     ],
@@ -3094,6 +3149,54 @@
           "P0014",
           "P0013"
         ]
+      },
+      {
+        "id": "F000115",
+        "src": "assets/fotos/P0015/edu-lourdes-comunion.jpg",
+        "titulo": "Edu Lourdes Comunion",
+        "fecha": "Aprox 09/72",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Edu",
+          "Lourdes",
+          "Comunion"
+        ],
+        "personas": [
+          "P0015",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000117",
+        "src": "assets/fotos/P0013/cena-iparraguirre.jpg",
+        "titulo": "Cena Iparraguirre",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Manu",
+          "Merche",
+          "Lourdes",
+          "Iparraguirre"
+        ],
+        "personas": [
+          "P0013",
+          "P0014",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000118",
+        "src": "assets/fotos/P0014/lourdes.jpg",
+        "titulo": "LOurdes",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0014"
+        ]
       }
     ],
     "documentos": [],
@@ -3430,6 +3533,86 @@
           "P0014",
           "P0013"
         ]
+      },
+      {
+        "id": "F000112",
+        "src": "assets/fotos/P0015/edu-barco.jpg",
+        "titulo": "Edu Barco",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Edu",
+          "Barco"
+        ],
+        "personas": [
+          "P0015"
+        ]
+      },
+      {
+        "id": "F000113",
+        "src": "assets/fotos/P0015/edu-carnet-artxanda.jpg",
+        "titulo": "Edu Carnet Artxanda",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Edu",
+          "Carnet",
+          "Artxanda"
+        ],
+        "personas": [
+          "P0015"
+        ]
+      },
+      {
+        "id": "F000114",
+        "src": "assets/fotos/P0015/edu-gallinas.jpg",
+        "titulo": "Edu Gallinas",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [
+          "Edu",
+          "Gallinas"
+        ],
+        "personas": [
+          "P0015"
+        ]
+      },
+      {
+        "id": "F000115",
+        "src": "assets/fotos/P0015/edu-lourdes-comunion.jpg",
+        "titulo": "Edu Lourdes Comunion",
+        "fecha": "Aprox 09/72",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Edu",
+          "Lourdes",
+          "Comunion"
+        ],
+        "personas": [
+          "P0015",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000116",
+        "src": "assets/fotos/P0015/edu-y-manu-comunion.jpg",
+        "titulo": "Edu y Manu Comunion",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Edu",
+          "Manu",
+          "Comunion"
+        ],
+        "personas": [
+          "P0015",
+          "P0012"
+        ]
       }
     ],
     "documentos": [
@@ -3739,6 +3922,38 @@
         "personas": [
           "P0018",
           "P0030"
+        ]
+      },
+      {
+        "id": "F000110",
+        "src": "assets/fotos/P0018/eder-edu-zuhaizti.jpg",
+        "titulo": "Eder Edu Zuhaizti",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Edu",
+          "Eder",
+          "Zuhaizti"
+        ],
+        "personas": [
+          "P0018",
+          "P0030"
+        ]
+      },
+      {
+        "id": "F000111",
+        "src": "assets/fotos/P0018/edu-y-lola.jpg",
+        "titulo": "Edu y Lola",
+        "fecha": "",
+        "lugar": "Madrid",
+        "descripcion": "",
+        "etiquetas": [
+          "Edu",
+          "Lola"
+        ],
+        "personas": [
+          "P0018"
         ]
       }
     ],
@@ -4752,6 +4967,23 @@
         ],
         "personas": [
           "P0028",
+          "P0030"
+        ]
+      },
+      {
+        "id": "F000110",
+        "src": "assets/fotos/P0018/eder-edu-zuhaizti.jpg",
+        "titulo": "Eder Edu Zuhaizti",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Edu",
+          "Eder",
+          "Zuhaizti"
+        ],
+        "personas": [
+          "P0018",
           "P0030"
         ]
       }
@@ -6626,5 +6858,29 @@
     "madre": "",
     "fotografia_principal": "assets/fotos/P00070/dcastanos-portada.jpg",
     "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00071",
+    "nombre": "Mari Carmen Castaños Gomez",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "desconocido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-10T16:52:22.609Z",
+    "ultima_modificacion": "2026-08-10T16:52:22.609Z",
+    "padre": "P00070",
+    "madre": "P00069"
   }
 ]
