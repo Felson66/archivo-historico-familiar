@@ -854,6 +854,18 @@
           "P0007",
           "P0008"
         ]
+      },
+      {
+        "id": "F000107",
+        "src": "assets/fotos/P0007/buque-ea.jpg",
+        "titulo": "Buque EA",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0007"
+        ]
       }
     ],
     "documentos": [
@@ -3425,7 +3437,25 @@
         ]
       }
     ],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000044",
+        "src": "assets/documentos/P0015/certificado-nacimiento-edl.pdf",
+        "nombre_archivo": "certificado-nacimiento-edl.pdf",
+        "formato": "application/pdf",
+        "titulo": "Certificado Nacimiento EDL",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0015"
+        ],
+        "paginas": [
+          "assets/documentos/P0015/d000044-paginas/pagina-001.webp",
+          "assets/documentos/P0015/d000044-paginas/pagina-002.webp",
+          "assets/documentos/P0015/d000044-paginas/pagina-003.webp"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": "",
