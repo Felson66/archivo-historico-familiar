@@ -26,19 +26,17 @@
     "id": "P0001",
     "padres": [],
     "biografia": "",
-    "fotografia_principal": "",
+    "fotografia_principal": "assets/fotos/P0001/carabineros.jpg",
     "fotografias": [
       {
-        "id": "F000101",
-        "src": "assets/fotos/P0036/carabiescudo.png",
-        "titulo": "Escudo Carabineros",
+        "id": "F000102",
+        "src": "assets/fotos/P0001/carabineros.jpg",
+        "titulo": "Carabineros",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0036",
-          "P0005",
           "P0001"
         ]
       }
@@ -144,7 +142,8 @@
     "situacion_vital": "fallecido",
     "visible": true,
     "padre": "",
-    "madre": ""
+    "madre": "",
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "",
@@ -408,20 +407,18 @@
       "P0002"
     ],
     "biografia": "",
-    "fotografia_principal": "",
+    "fotografia_principal": "assets/fotos/P0005/carabineros.jpg",
     "fotografias": [
       {
-        "id": "F000101",
-        "src": "assets/fotos/P0036/carabiescudo.png",
-        "titulo": "Escudo Carabineros",
+        "id": "F000103",
+        "src": "assets/fotos/P0005/carabineros.jpg",
+        "titulo": "Carabineros",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0036",
-          "P0005",
-          "P0001"
+          "P0005"
         ]
       }
     ],
@@ -488,7 +485,8 @@
     "situacion_vital": "fallecido",
     "visible": true,
     "padre": "P0001",
-    "madre": "P0002"
+    "madre": "P0002",
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "",
@@ -4947,20 +4945,18 @@
       "P0002"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0036/carabiescudo.png",
+    "fotografia_principal": "assets/fotos/P0036/carabineros.jpg",
     "fotografias": [
       {
         "id": "F000101",
-        "src": "assets/fotos/P0036/carabiescudo.png",
-        "titulo": "Escudo Carabineros",
+        "src": "assets/fotos/P0036/carabineros.jpg",
+        "titulo": "Carabineros",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0036",
-          "P0005",
-          "P0001"
+          "P0036"
         ]
       }
     ],
