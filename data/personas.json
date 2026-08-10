@@ -29,7 +29,7 @@
     "fotografia_principal": "assets/fotos/P0001/carabineros.jpg",
     "fotografias": [
       {
-        "id": "F000102",
+        "id": "F000105",
         "src": "assets/fotos/P0001/carabineros.jpg",
         "titulo": "Carabineros",
         "fecha": "",
@@ -410,7 +410,7 @@
     "fotografia_principal": "assets/fotos/P0005/carabineros.jpg",
     "fotografias": [
       {
-        "id": "F000103",
+        "id": "F000106",
         "src": "assets/fotos/P0005/carabineros.jpg",
         "titulo": "Carabineros",
         "fecha": "",
@@ -4948,7 +4948,7 @@
     "fotografia_principal": "assets/fotos/P0036/carabineros.jpg",
     "fotografias": [
       {
-        "id": "F000101",
+        "id": "F000104",
         "src": "assets/fotos/P0036/carabineros.jpg",
         "titulo": "Carabineros",
         "fecha": "",
