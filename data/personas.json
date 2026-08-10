@@ -1940,6 +1940,78 @@
           "P0012",
           "P0015"
         ]
+      },
+      {
+        "id": "F000092",
+        "src": "assets/fotos/P0015/manu-edu.jpg",
+        "titulo": "Manu Edu",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [
+          "Manu",
+          "Edu",
+          "Noja"
+        ],
+        "personas": [
+          "P0015",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000095",
+        "src": "assets/fotos/P0015/4-en-el-paga.jpg",
+        "titulo": "4 en el Paga",
+        "fecha": "11/09/1968",
+        "lugar": "Pagasarri",
+        "descripcion": "",
+        "etiquetas": [
+          "Manu",
+          "Merche",
+          "Lourdes",
+          "Edu",
+          "Paga"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000096",
+        "src": "assets/fotos/P0012/manu-comunion.jpg",
+        "titulo": "Manu Comunion",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Manu",
+          "Comunion"
+        ],
+        "personas": [
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000097",
+        "src": "assets/fotos/P0012/3-en-moyua.jpg",
+        "titulo": "3 en Moyua",
+        "fecha": "24/06/1966",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Moyua",
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0012",
+          "P0014",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
@@ -2411,6 +2483,46 @@
           "P0013",
           "P0012",
           "P0015"
+        ]
+      },
+      {
+        "id": "F000095",
+        "src": "assets/fotos/P0015/4-en-el-paga.jpg",
+        "titulo": "4 en el Paga",
+        "fecha": "11/09/1968",
+        "lugar": "Pagasarri",
+        "descripcion": "",
+        "etiquetas": [
+          "Manu",
+          "Merche",
+          "Lourdes",
+          "Edu",
+          "Paga"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000097",
+        "src": "assets/fotos/P0012/3-en-moyua.jpg",
+        "titulo": "3 en Moyua",
+        "fecha": "24/06/1966",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Moyua",
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0012",
+          "P0014",
+          "P0013"
         ]
       }
     ],
@@ -2907,6 +3019,46 @@
         "personas": [
           "P0014"
         ]
+      },
+      {
+        "id": "F000095",
+        "src": "assets/fotos/P0015/4-en-el-paga.jpg",
+        "titulo": "4 en el Paga",
+        "fecha": "11/09/1968",
+        "lugar": "Pagasarri",
+        "descripcion": "",
+        "etiquetas": [
+          "Manu",
+          "Merche",
+          "Lourdes",
+          "Edu",
+          "Paga"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000097",
+        "src": "assets/fotos/P0012/3-en-moyua.jpg",
+        "titulo": "3 en Moyua",
+        "fecha": "24/06/1966",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Moyua",
+          "Manu",
+          "Merche",
+          "Lourdes"
+        ],
+        "personas": [
+          "P0012",
+          "P0014",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
@@ -3178,6 +3330,71 @@
           "P0015",
           "P0016"
         ]
+      },
+      {
+        "id": "F000092",
+        "src": "assets/fotos/P0015/manu-edu.jpg",
+        "titulo": "Manu Edu",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [
+          "Manu",
+          "Edu",
+          "Noja"
+        ],
+        "personas": [
+          "P0015",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000093",
+        "src": "assets/fotos/P0015/edu-caballo.jpg",
+        "titulo": "Edu Caballo",
+        "fecha": "",
+        "lugar": "Iparraguirre",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015"
+        ]
+      },
+      {
+        "id": "F000094",
+        "src": "assets/fotos/P0015/edu-banco.jpg",
+        "titulo": "Edu Banco",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Edu",
+          "Banco"
+        ],
+        "personas": [
+          "P0015"
+        ]
+      },
+      {
+        "id": "F000095",
+        "src": "assets/fotos/P0015/4-en-el-paga.jpg",
+        "titulo": "4 en el Paga",
+        "fecha": "11/09/1968",
+        "lugar": "Pagasarri",
+        "descripcion": "",
+        "etiquetas": [
+          "Manu",
+          "Merche",
+          "Lourdes",
+          "Edu",
+          "Paga"
+        ],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
@@ -3343,6 +3560,21 @@
           "P0015",
           "P0016"
         ]
+      },
+      {
+        "id": "F000098",
+        "src": "assets/fotos/P0016/elena-hamalau.jpg",
+        "titulo": "Elena Hamalau",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Elena",
+          "Hamalau"
+        ],
+        "personas": [
+          "P0016"
+        ]
       }
     ],
     "documentos": [],
@@ -3436,6 +3668,23 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0018"
+        ]
+      },
+      {
+        "id": "F000099",
+        "src": "assets/fotos/P0030/eder-y-edu.jpg",
+        "titulo": "Eder y Edu",
+        "fecha": "",
+        "lugar": "Bar Zuhaizti",
+        "descripcion": "",
+        "etiquetas": [
+          "Eder",
+          "Edu",
+          "Lola"
+        ],
+        "personas": [
+          "P0030",
           "P0018"
         ]
       }
@@ -4298,6 +4547,22 @@
           "P0028",
           "P00065"
         ]
+      },
+      {
+        "id": "F000100",
+        "src": "assets/fotos/P0030/amets-eder.jpg",
+        "titulo": "Amets Eder",
+        "fecha": "",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Eder",
+          "Amets"
+        ],
+        "personas": [
+          "P0030",
+          "P0028"
+        ]
       }
     ],
     "documentos": [],
@@ -4402,6 +4667,39 @@
         "personas": [
           "P0030",
           "P0031"
+        ]
+      },
+      {
+        "id": "F000099",
+        "src": "assets/fotos/P0030/eder-y-edu.jpg",
+        "titulo": "Eder y Edu",
+        "fecha": "",
+        "lugar": "Bar Zuhaizti",
+        "descripcion": "",
+        "etiquetas": [
+          "Eder",
+          "Edu",
+          "Lola"
+        ],
+        "personas": [
+          "P0030",
+          "P0018"
+        ]
+      },
+      {
+        "id": "F000100",
+        "src": "assets/fotos/P0030/amets-eder.jpg",
+        "titulo": "Amets Eder",
+        "fecha": "",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [
+          "Eder",
+          "Amets"
+        ],
+        "personas": [
+          "P0030",
+          "P0028"
         ]
       }
     ],
