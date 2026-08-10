@@ -910,10 +910,6 @@
       "note": "Sepultura compartida por Francisco Liz Rivera, Carmen Gómez López y Concepción Liz Gómez.",
       "nota_fotos": "La localización es compartida. Las fotografías individuales de cada lápida se incorporarán por separado cuando estén disponibles."
     },
-    "hijos": [
-      "P0010",
-      "P0011"
-    ],
     "estado": "documentado",
     "conyuges": [
       "P0009"
@@ -939,7 +935,6 @@
     "nombre": "Francisco Liz Rivera",
     "id_legacy": "p8",
     "id": "P0008",
-    "padres": [],
     "biografia": "",
     "fotografia_principal": "assets/fotos/P0008/franciso-liz.jpg",
     "fotografias": [
@@ -1061,8 +1056,8 @@
     "sexo": "hombre",
     "situacion_vital": "fallecido",
     "visible": true,
-    "padre": "",
-    "madre": ""
+    "padre": "P00073",
+    "madre": "P00074"
   },
   {
     "datos_resumen": "Hija de Angel y Carmen\nDNI : 14.111.328",
@@ -2061,8 +2056,8 @@
           "Comunion"
         ],
         "personas": [
-          "P0015",
-          "P0012"
+          "P0012",
+          "P0015"
         ]
       },
       {
@@ -2079,9 +2074,9 @@
           "Iparraguirre"
         ],
         "personas": [
+          "P0012",
           "P0013",
-          "P0014",
-          "P0012"
+          "P0014"
         ]
       }
     ],
@@ -2610,9 +2605,9 @@
           "Iparraguirre"
         ],
         "personas": [
+          "P0012",
           "P0013",
-          "P0014",
-          "P0012"
+          "P0014"
         ]
       }
     ],
@@ -3163,8 +3158,8 @@
           "Comunion"
         ],
         "personas": [
-          "P0015",
-          "P0014"
+          "P0014",
+          "P0015"
         ]
       },
       {
@@ -3181,9 +3176,9 @@
           "Iparraguirre"
         ],
         "personas": [
+          "P0012",
           "P0013",
-          "P0014",
-          "P0012"
+          "P0014"
         ]
       },
       {
@@ -3593,8 +3588,8 @@
           "Comunion"
         ],
         "personas": [
-          "P0015",
-          "P0014"
+          "P0014",
+          "P0015"
         ]
       },
       {
@@ -3610,8 +3605,8 @@
           "Comunion"
         ],
         "personas": [
-          "P0015",
-          "P0012"
+          "P0012",
+          "P0015"
         ]
       }
     ],
@@ -6906,5 +6901,53 @@
     "ultima_modificacion": "2026-08-10T18:30:27.414Z",
     "padre": "P00070",
     "madre": "P00069"
+  },
+  {
+    "id": "P00073",
+    "nombre": "Manuel Liz",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "Padre de Francisco Liz",
+    "datos_resumen": "Padre de Francisco Liz",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-10T18:58:41.510Z",
+    "ultima_modificacion": "2026-08-10T18:58:41.511Z"
+  },
+  {
+    "id": "P00074",
+    "nombre": "Francisca Rivera",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "Madre de Francisco Liz",
+    "datos_resumen": "Madre de Francisco Liz",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-10T18:59:18.981Z",
+    "ultima_modificacion": "2026-08-10T18:59:18.982Z"
   }
 ]
