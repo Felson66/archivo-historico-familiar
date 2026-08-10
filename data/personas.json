@@ -27,7 +27,22 @@
     "padres": [],
     "biografia": "",
     "fotografia_principal": "",
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000101",
+        "src": "assets/fotos/P0036/carabiescudo.png",
+        "titulo": "Escudo Carabineros",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0036",
+          "P0005",
+          "P0001"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000003",
@@ -405,7 +420,8 @@
         "etiquetas": [],
         "personas": [
           "P0036",
-          "P0005"
+          "P0005",
+          "P0001"
         ]
       }
     ],
@@ -4943,7 +4959,8 @@
         "etiquetas": [],
         "personas": [
           "P0036",
-          "P0005"
+          "P0005",
+          "P0001"
         ]
       }
     ],
