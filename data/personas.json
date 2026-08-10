@@ -1072,10 +1072,6 @@
       "note": "Sepultura compartida por Francisco Liz Rivera, Carmen Gómez López y Concepción Liz Gómez.",
       "nota_fotos": "La localización es compartida. Las fotografías individuales de cada lápida se incorporarán por separado cuando estén disponibles."
     },
-    "hijos": [
-      "P0010",
-      "P0011"
-    ],
     "estado": "documentado",
     "conyuges": [
       "P0008"
@@ -1089,7 +1085,6 @@
     "nombre": "Carmen Gómez López",
     "id_legacy": "p9",
     "id": "P0009",
-    "padres": [],
     "biografia": "",
     "fotografia_principal": "assets/fotos/P0009/carmen-gomez.jpg",
     "fotografias": [
@@ -1239,8 +1234,8 @@
     "sexo": "mujer",
     "situacion_vital": "fallecido",
     "visible": true,
-    "padre": "",
-    "madre": ""
+    "padre": "P00067",
+    "madre": "P00068"
   },
   {
     "datos_resumen": "",
@@ -6498,5 +6493,138 @@
     "ultima_modificacion": "2026-08-07T15:28:38.918Z",
     "fotografia_principal": "assets/fotos/P00066/ilu.jpg",
     "fotoPosicion": "50% 28%"
+  },
+  {
+    "id": "P00067",
+    "nombre": "Angel Gomez",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "Padre de Carmen y Conchita Gomez Lopez",
+    "datos_resumen": "Padre de Carmen y Conchita Gomez Lopez",
+    "visible": true,
+    "conyuges": [
+      "P00068"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-10T11:05:17.848Z",
+    "ultima_modificacion": "2026-08-10T11:05:17.848Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00068",
+    "nombre": "Carmen Lopez",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "Madre de Carmen y Conchita Gomez Lopez",
+    "datos_resumen": "Madre de Carmen y Conchita Gomez Lopez",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00067"
+    ],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-10T11:06:42.657Z",
+    "ultima_modificacion": "2026-08-10T11:06:42.657Z"
+  },
+  {
+    "id": "P00069",
+    "nombre": "Conchita Gomez Lopez",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00070"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-10T11:09:41.055Z",
+    "ultima_modificacion": "2026-08-10T11:09:41.055Z",
+    "padre": "P00067",
+    "madre": "P00068"
+  },
+  {
+    "id": "P00070",
+    "nombre": "Daniel Castaños",
+    "nombre_conocido": "El Portu",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "14/08/1909",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00069"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000108",
+        "src": "assets/fotos/P00070/dcastanos-portada.jpg",
+        "titulo": "Daniel Castaños",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [
+          "Daniel"
+        ],
+        "personas": [
+          "P00070"
+        ]
+      },
+      {
+        "id": "F000109",
+        "src": "assets/fotos/P00070/daniel-castanos.jpg",
+        "titulo": "Homenaje a Daniel Castaños",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00070"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-08-10T11:12:46.825Z",
+    "ultima_modificacion": "2026-08-10T11:12:46.825Z",
+    "padre": "",
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00070/dcastanos-portada.jpg",
+    "fotoPosicion": "50% 50%"
   }
 ]
