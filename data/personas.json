@@ -394,7 +394,21 @@
     ],
     "biografia": "",
     "fotografia_principal": "",
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000101",
+        "src": "assets/fotos/P0036/carabiescudo.png",
+        "titulo": "Escudo Carabineros",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0036",
+          "P0005"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000002",
@@ -1954,8 +1968,8 @@
           "Noja"
         ],
         "personas": [
-          "P0015",
-          "P0012"
+          "P0012",
+          "P0015"
         ]
       },
       {
@@ -1973,9 +1987,9 @@
           "Paga"
         ],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -2500,9 +2514,9 @@
           "Paga"
         ],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -3035,9 +3049,9 @@
           "Paga"
         ],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -3344,8 +3358,8 @@
           "Noja"
         ],
         "personas": [
-          "P0015",
-          "P0012"
+          "P0012",
+          "P0015"
         ]
       },
       {
@@ -3390,9 +3404,9 @@
           "Paga"
         ],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       }
@@ -3684,8 +3698,8 @@
           "Lola"
         ],
         "personas": [
-          "P0030",
-          "P0018"
+          "P0018",
+          "P0030"
         ]
       }
     ],
@@ -4560,8 +4574,8 @@
           "Amets"
         ],
         "personas": [
-          "P0030",
-          "P0028"
+          "P0028",
+          "P0030"
         ]
       }
     ],
@@ -4682,8 +4696,8 @@
           "Lola"
         ],
         "personas": [
-          "P0030",
-          "P0018"
+          "P0018",
+          "P0030"
         ]
       },
       {
@@ -4698,8 +4712,8 @@
           "Amets"
         ],
         "personas": [
-          "P0030",
-          "P0028"
+          "P0028",
+          "P0030"
         ]
       }
     ],
@@ -4917,8 +4931,22 @@
       "P0002"
     ],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0036/carabiescudo.png",
+    "fotografias": [
+      {
+        "id": "F000101",
+        "src": "assets/fotos/P0036/carabiescudo.png",
+        "titulo": "Escudo Carabineros",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0036",
+          "P0005"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000004",
@@ -5009,7 +5037,8 @@
     "situacion_vital": "fallecido",
     "visible": true,
     "padre": "P0001",
-    "madre": "P0002"
+    "madre": "P0002",
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "",
