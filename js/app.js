@@ -37,6 +37,41 @@ function cleanText(value){
   return String(value ?? "").trim();
 }
 
+
+const MONTH_NAMES_ES={ene:1,enero:1,feb:2,febrero:2,mar:3,marzo:3,abr:4,abril:4,may:5,mayo:5,jun:6,junio:6,jul:7,julio:7,ago:8,agosto:8,sep:9,sept:9,septiembre:9,set:9,setiembre:9,oct:10,octubre:10,nov:11,noviembre:11,dic:12,diciembre:12};
+function parseBirthDateForBirthday(value){
+  const raw=cleanText(value).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+  if(!raw)return null;
+  let m=raw.match(/\b(\d{1,2})[\/.-](\d{1,2})[\/.-](\d{4})\b/);
+  if(m){const day=+m[1],month=+m[2],year=+m[3];if(day>=1&&day<=31&&month>=1&&month<=12)return{day,month,year};}
+  m=raw.match(/\b(\d{1,2})\s+([a-z]+)\s+(\d{4})\b/);
+  if(m){const day=+m[1],month=MONTH_NAMES_ES[m[2]],year=+m[3];if(day>=1&&day<=31&&month)return{day,month,year};}
+  return null;
+}
+function livingBirthdayPeople(today=new Date()){
+  return publicPeople().filter(p=>String(p?.situacion_vital||p?.situacionVital||"").toLowerCase()==="vivo")
+    .map(person=>({person,birth:parseBirthDateForBirthday(person?.fecha_nacimiento)}))
+    .filter(x=>x.birth&&x.birth.day===today.getDate()&&x.birth.month===today.getMonth()+1)
+    .sort((a,b)=>a.person.nombre.localeCompare(b.person.nombre,"es"));
+}
+function dismissBirthdayToast(){
+  const host=$("birthdayToastHost"),toast=host?.querySelector(".birthday-toast");
+  if(!toast)return; toast.classList.remove("show"); setTimeout(()=>{if(host)host.innerHTML="";},250);
+}
+function showBirthdayToast(){
+  const host=$("birthdayToastHost");
+  if(!host||sessionStorage.getItem("raicesBirthdayToastShown")==="1")return;
+  const matches=livingBirthdayPeople(); if(!matches.length)return;
+  sessionStorage.setItem("raicesBirthdayToastShown","1");
+  const year=new Date().getFullYear();
+  const rows=matches.map(({person,birth})=>`<button class="birthday-person" type="button" data-person="${esc(person.id)}"><strong>${esc(person.nombre)}</strong><span>${year-birth.year} años</span></button>`).join("");
+  host.innerHTML=`<aside class="birthday-toast" role="status"><div class="birthday-toast-icon">🎂</div><div class="birthday-toast-content"><b>${matches.length===1?"Hoy es su cumpleaños":"Cumpleaños de hoy"}</b><div class="birthday-people">${rows}</div></div><button class="birthday-toast-close" type="button" aria-label="Cerrar aviso">×</button></aside>`;
+  const toast=host.querySelector(".birthday-toast"); requestAnimationFrame(()=>toast?.classList.add("show"));
+  host.querySelector(".birthday-toast-close")?.addEventListener("click",dismissBirthdayToast);
+  host.querySelectorAll(".birthday-person").forEach(b=>b.addEventListener("click",()=>{dismissBirthdayToast();openPerson(b.dataset.person);}));
+  setTimeout(dismissBirthdayToast,9000);
+}
+
 function personLifeSummary(person){
   const birth = [cleanText(person?.fecha_nacimiento), cleanText(person?.lugar_nacimiento)]
     .filter(Boolean).join(" · ");
@@ -127,6 +162,7 @@ async function init(){
     // El archivo ya está cargado. Las interacciones globales se registran
     // en wireEvents(), antes de init(), para que nunca dependan del árbol.
     $("loading").classList.add("hidden");
+    showBirthdayToast();
   }catch(error){
     $("loading").textContent = "No se han podido cargar los datos. Publica todos los archivos y carpetas en GitHub.";
     console.error(error);

@@ -1,5 +1,14 @@
 # Historial de versiones
 
+## 4.2.0-alpha9 — EP-004.4 · Cumpleaños y continuidad
+- Toast de cumpleaños únicamente para personas vivas.
+- Soporte para fechas numéricas y fechas textuales españolas.
+- Edad calculada y acceso directo a la ficha.
+- Varios cumpleaños agrupados.
+- Una aparición por sesión y cierre automático.
+- Inicio de `MANUAL_DE_CONTINUIDAD.md`.
+
+
 ## 4.2.0-alpha8 — Corrección de notas en ficha pública
 - `notas` admite ahora tanto texto como arrays.
 - Las notas de texto multilínea se muestran línea a línea.
