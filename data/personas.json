@@ -7151,7 +7151,20 @@
     ],
     "hechos": [],
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000056",
+        "src": "assets/documentos/P00077/esquela-jose-mari-gomez-uria.png",
+        "nombre_archivo": "esquela-jose-mari-gomez-uria.png",
+        "formato": "image/png",
+        "titulo": "Esquela Jose Mari Gomez Uria",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00077"
+        ]
+      }
+    ],
     "fecha_creacion": "2026-08-11T13:41:10.107Z",
     "ultima_modificacion": "2026-08-11T13:41:10.107Z",
     "padre": "P00075",
