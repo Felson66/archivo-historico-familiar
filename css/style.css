@@ -1770,3 +1770,28 @@ body.document-viewer-open{overflow:hidden}
   .desktop-tree-only{display:none!important}
   .tree-full-mode .tree-shell{height:66dvh;min-height:520px}
 }
+
+
+/* v4.2.0-alpha11 — aprovechar el ancho del monitor SOLO en Árbol completo */
+@media (min-width:901px){
+  #tree.full-tree-mode{
+    width:calc(100vw - 56px);
+    max-width:none;
+    margin-left:calc(50% - 50vw + 28px);
+    margin-right:calc(50% - 50vw + 28px);
+  }
+
+  #tree.full-tree-mode .tree-toolbar,
+  #tree.full-tree-mode .tree-context,
+  #tree.full-tree-mode .tree-shell,
+  #tree.full-tree-mode .tree-legend,
+  #tree.full-tree-mode .tree-hint{
+    width:100%;
+    max-width:none;
+  }
+
+  #tree.full-tree-mode .tree-shell{
+    height:76vh;
+    min-height:650px;
+  }
+}

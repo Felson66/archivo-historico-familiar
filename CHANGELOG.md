@@ -1,5 +1,14 @@
 # Historial de versiones
 
+## 4.2.0-alpha11 — Árbol completo: ancho de escritorio
+- La vista `Árbol completo` aprovecha casi todo el ancho disponible del monitor.
+- Se conservan márgenes laterales de 28 px para evitar que el lienzo quede pegado al borde.
+- `Ajustar todo` utiliza automáticamente el nuevo tamaño del contenedor.
+- No se aumenta artificialmente el tamaño de las tarjetas: la mejora procede del mayor espacio disponible.
+- La `Vista normal` conserva exactamente su ancho anterior.
+- Sin cambios en móvil.
+
+
 ## 4.2.0-alpha10 — EP-004.5 · Árbol completo para escritorio
 - Nueva vista `Árbol completo`, disponible solo en PC.
 - Representa todas las personas públicas y sus relaciones conocidas.

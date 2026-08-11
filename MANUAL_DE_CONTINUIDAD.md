@@ -43,3 +43,24 @@ Este documento no pretende explicar cómo está programado Raíces. Su finalidad
 
 ## Pendiente para v1.0
 Acceso y publicación; copias de seguridad; recuperación; cuentas necesarias sin contraseñas; transferencia de responsabilidad; guía completa de Administración; comprobaciones tras publicar; entrega del proyecto a una futura IA o desarrollador; e historia y propósito del proyecto escrita por su creador.
+
+## Árbol completo en ordenador
+
+En ordenadores de escritorio, la vista Árbol dispone de un botón **Árbol completo**.
+Esta vista intenta representar de una sola vez todas las personas públicas existentes en
+Raíces y sus relaciones conocidas.
+
+- Utiliza **+** y **−** o la rueda del ratón para ampliar y reducir.
+- Arrastra el fondo para desplazarte por el árbol.
+- **Ajustar todo** recupera una vista general si te pierdes.
+- Las personas siguen siendo pulsables y abren el panel rápido.
+- Esta opción no se muestra en teléfonos móviles, donde se mantiene el árbol centrado en
+  una persona por ser más legible.
+
+Si el árbol completo parece desordenado después de añadir relaciones nuevas, comprueba
+primero que padres, hijos y parejas están correctamente relacionados en Administración.
+
+### Aprovechamiento de pantalla en PC
+Desde la versión 4.2.0-alpha11, al activar **Árbol completo** el área del árbol se ensancha
+automáticamente hasta ocupar casi todo el monitor. Al volver a **Vista normal**, la página
+recupera el ancho habitual. El botón **Ajustar todo** recalcula la escala con el espacio disponible.
