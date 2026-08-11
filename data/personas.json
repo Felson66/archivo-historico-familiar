@@ -896,6 +896,18 @@
           "assets/documentos/P0007/d000001-paginas/pagina-001.webp",
           "assets/documentos/P0007/d000001-paginas/pagina-002.webp"
         ]
+      },
+      {
+        "id": "D000054",
+        "src": "assets/documentos/P0007/esquela-manuel-de-la-dehesa-mugica.png",
+        "nombre_archivo": "esquela-manuel-de-la-dehesa-mugica.png",
+        "formato": "image/png",
+        "titulo": "Esquela Manuel de la Dehesa Mugica",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0007"
+        ]
       }
     ],
     "cronologia": [],
@@ -1512,7 +1524,20 @@
         ]
       }
     ],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000053",
+        "src": "assets/documentos/P0010/esquela-mercedes-liz-gomez.png",
+        "nombre_archivo": "esquela-mercedes-liz-gomez.png",
+        "formato": "image/png",
+        "titulo": "Esquela Mercedes Liz Gomez",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0010"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": "",
