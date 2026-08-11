@@ -1275,16 +1275,52 @@ function fitFullTreeToView(){
   const shell=$("treeShell");
   if(!shell)return;
 
-  const padding=44;
-  const scaleX=(shell.clientWidth-padding*2)/currentTreeBounds.width;
-  const scaleY=(shell.clientHeight-padding*2)/currentTreeBounds.height;
-  const scale=Math.min(.9,Math.max(.07,Math.min(scaleX,scaleY)));
+  /*
+   * alpha12:
+   * Ajustamos contra los límites REALES ocupados por tarjetas, no contra
+   * todo el stage teórico. Esto elimina gran parte del aire sobrante de
+   * alpha11 y permite ampliar el árbol sin cortar personas.
+   */
+  const nodeWidth=188;
+  const nodeHeight=90;
+  const positions=Object.values(currentTreeLayout);
+
+  if(!positions.length)return;
+
+  const minX=Math.min(...positions.map(([x])=>x));
+  const maxX=Math.max(...positions.map(([x])=>x+nodeWidth));
+  const minY=Math.min(...positions.map(([,y])=>y));
+  const maxY=Math.max(...positions.map(([,y])=>y+nodeHeight));
+
+  // Conservamos margen para líneas, rótulos de generación y respiración visual.
+  const contentPadX=72;
+  const contentPadTop=54;
+  const contentPadBottom=58;
+
+  const contentLeft=Math.max(0,minX-contentPadX);
+  const contentRight=Math.min(currentTreeBounds.width,maxX+contentPadX);
+  const contentTop=Math.max(0,minY-contentPadTop);
+  const contentBottom=Math.min(currentTreeBounds.height,maxY+contentPadBottom);
+
+  const contentWidth=Math.max(1,contentRight-contentLeft);
+  const contentHeight=Math.max(1,contentBottom-contentTop);
+
+  // Márgenes reales dentro del visor: menores que en alpha11.
+  const viewportPadX=24;
+  const viewportPadY=20;
+
+  const scaleX=(shell.clientWidth-viewportPadX*2)/contentWidth;
+  const scaleY=(shell.clientHeight-viewportPadY*2)/contentHeight;
+
+  // Sin multiplicadores artificiales: la escala máxima es la que realmente cabe.
+  const scale=Math.min(1.08,Math.max(.07,Math.min(scaleX,scaleY)));
 
   transform={
-    x:(shell.clientWidth-currentTreeBounds.width*scale)/2,
-    y:Math.max(18,(shell.clientHeight-currentTreeBounds.height*scale)/2),
+    x:(shell.clientWidth-contentWidth*scale)/2-contentLeft*scale,
+    y:(shell.clientHeight-contentHeight*scale)/2-contentTop*scale,
     scale
   };
+
   applyTreeTransform();
 }
 

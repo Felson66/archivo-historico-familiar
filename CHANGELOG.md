@@ -1,5 +1,14 @@
 # Historial de versiones
 
+## 4.2.0-alpha12 — Árbol completo: Ajustar todo optimizado
+- `Ajustar todo` calcula ahora el encuadre usando el área realmente ocupada por las tarjetas.
+- Se elimina buena parte del espacio vacío que reducía innecesariamente el árbol en alpha11.
+- El conjunto queda centrado horizontal y verticalmente.
+- Se mantienen márgenes de seguridad para líneas y rótulos de generación.
+- No se modifica la distribución genealógica ni el tamaño base de las tarjetas.
+- Vista normal y móvil permanecen sin cambios.
+
+
 ## 4.2.0-alpha11 — Árbol completo: ancho de escritorio
 - La vista `Árbol completo` aprovecha casi todo el ancho disponible del monitor.
 - Se conservan márgenes laterales de 28 px para evitar que el lienzo quede pegado al borde.

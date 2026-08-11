@@ -64,3 +64,9 @@ primero que padres, hijos y parejas están correctamente relacionados en Adminis
 Desde la versión 4.2.0-alpha11, al activar **Árbol completo** el área del árbol se ensancha
 automáticamente hasta ocupar casi todo el monitor. Al volver a **Vista normal**, la página
 recupera el ancho habitual. El botón **Ajustar todo** recalcula la escala con el espacio disponible.
+
+### Ajustar todo
+Desde 4.2.0-alpha12, **Ajustar todo** toma como referencia el espacio realmente ocupado
+por las personas del árbol completo, en lugar del tamaño teórico de todo el lienzo.
+Esto permite aprovechar mejor el monitor y mostrar las tarjetas a mayor escala sin
+dejar personas fuera del área visible.
