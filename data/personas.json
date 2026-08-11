@@ -1614,6 +1614,21 @@
         "paginas": [
           "assets/documentos/P0011/d000043-paginas/pagina-001.webp"
         ]
+      },
+      {
+        "id": "D000045",
+        "src": "assets/documentos/P0011/cer-def-concepcion-liz.pdf",
+        "nombre_archivo": "cer-def-concepcion-liz.pdf",
+        "formato": "application/pdf",
+        "titulo": "Cert. Defunción Concepción Liz",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0011"
+        ],
+        "paginas": [
+          "assets/documentos/P0011/d000045-paginas/pagina-001.webp"
+        ]
       }
     ],
     "cronologia": [],
