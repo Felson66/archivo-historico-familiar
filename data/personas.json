@@ -7092,5 +7092,121 @@
     "ultima_modificacion": "2026-08-11T13:31:47.755Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00077",
+    "nombre": "Jose Mari Gomez Uria",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "18/10/2006",
+    "lugar_defuncion": "Algorta",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00079"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-11T13:41:10.107Z",
+    "ultima_modificacion": "2026-08-11T13:41:10.107Z",
+    "padre": "P00075",
+    "madre": "P00076"
+  },
+  {
+    "id": "P00078",
+    "nombre": "Angel Gomez Uria",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "desconocido",
+    "fecha_nacimiento": "07/08/1937",
+    "lugar_nacimiento": "Getxo",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "Electricista",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [
+      {
+        "id": "D000052",
+        "src": "assets/documentos/P00078/angel-gomez-uria.pdf",
+        "nombre_archivo": "angel-gomez-uria.pdf",
+        "formato": "application/pdf",
+        "titulo": "Angel Gomez Uria",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00078"
+        ],
+        "paginas": [
+          "assets/documentos/P00078/d000052-paginas/pagina-001.webp"
+        ]
+      }
+    ],
+    "fecha_creacion": "2026-08-11T13:58:35.710Z",
+    "ultima_modificacion": "2026-08-11T13:58:35.710Z",
+    "padre": "P00075",
+    "madre": "P00076"
+  },
+  {
+    "id": "P00079",
+    "nombre": "Maite Maza",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "desconocido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00077"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-11T14:00:33.125Z",
+    "ultima_modificacion": "2026-08-11T14:00:33.125Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00080",
+    "nombre": "Aritz Gomez Maza",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-11T14:01:50.601Z",
+    "ultima_modificacion": "2026-08-11T14:01:50.601Z",
+    "padre": "P00077",
+    "madre": "P00079"
   }
 ]
