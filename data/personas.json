@@ -626,6 +626,18 @@
         "personas": [
           "P0006"
         ]
+      },
+      {
+        "id": "D000050",
+        "src": "assets/documentos/P0006/esquela-manuela-mugica-ibarburu.png",
+        "nombre_archivo": "esquela-manuela-mugica-ibarburu.png",
+        "formato": "image/png",
+        "titulo": "Esquela Manuela Mugica Ibarburu",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0006"
+        ]
       }
     ],
     "cronologia": [],
@@ -1213,6 +1225,18 @@
         ],
         "paginas": [
           "assets/documentos/P0009/d000042-paginas/pagina-001.webp"
+        ]
+      },
+      {
+        "id": "D000048",
+        "src": "assets/documentos/P0009/esquela-carmen-gomez-lopez.png",
+        "nombre_archivo": "esquela-carmen-gomez-lopez.png",
+        "formato": "image/png",
+        "titulo": "Esquela Carmen Gomez Lopez",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0009"
         ]
       }
     ],
@@ -6738,14 +6762,14 @@
   },
   {
     "id": "P00067",
-    "nombre": "Angel Gomez",
+    "nombre": "Angel Gomez Neira",
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
     "fecha_nacimiento": "",
     "lugar_nacimiento": "",
-    "fecha_defuncion": "",
-    "lugar_defuncion": "",
+    "fecha_defuncion": "17/03/1962",
+    "lugar_defuncion": "Santurce",
     "profesion": "",
     "estado": "pendiente",
     "notas": "Padre de Carmen y Conchita Gomez Lopez",
@@ -6756,7 +6780,20 @@
     ],
     "hechos": [],
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000046",
+        "src": "assets/documentos/P00067/esquela-angel-gomez-neira.png",
+        "nombre_archivo": "esquela-angel-gomez-neira.png",
+        "formato": "image/png",
+        "titulo": "Esquela Angel Gomez Neira",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00067"
+        ]
+      }
+    ],
     "fecha_creacion": "2026-08-10T11:05:17.848Z",
     "ultima_modificacion": "2026-08-10T11:05:17.848Z",
     "padre": "",
@@ -6764,18 +6801,18 @@
   },
   {
     "id": "P00068",
-    "nombre": "Carmen Lopez",
+    "nombre": "Carmen Lopez y Lopez",
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
     "fecha_nacimiento": "",
     "lugar_nacimiento": "",
-    "fecha_defuncion": "",
-    "lugar_defuncion": "",
+    "fecha_defuncion": "26/02/1958",
+    "lugar_defuncion": "Santurce",
     "profesion": "",
     "estado": "pendiente",
-    "notas": "Madre de Carmen y Conchita Gomez Lopez",
-    "datos_resumen": "Madre de Carmen y Conchita Gomez Lopez",
+    "notas": "Madre de Carmen y Concha Gomez Lopez",
+    "datos_resumen": "Madre de Carmen y Concha Gomez Lopez",
     "visible": true,
     "padres": [],
     "conyuges": [
@@ -6784,7 +6821,20 @@
     "hijos": [],
     "hechos": [],
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000047",
+        "src": "assets/documentos/P00068/esquela-carmen-lopez-y-lopez.png",
+        "nombre_archivo": "esquela-carmen-lopez-y-lopez.png",
+        "formato": "image/png",
+        "titulo": "Esquela Carmen Lopez y Lopez",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00068"
+        ]
+      }
+    ],
     "fecha_creacion": "2026-08-10T11:06:42.657Z",
     "ultima_modificacion": "2026-08-10T11:06:42.657Z"
   },
@@ -6796,8 +6846,8 @@
     "situacion_vital": "fallecido",
     "fecha_nacimiento": "",
     "lugar_nacimiento": "",
-    "fecha_defuncion": "",
-    "lugar_defuncion": "",
+    "fecha_defuncion": "26/10/1995",
+    "lugar_defuncion": "Santurce",
     "profesion": "",
     "estado": "pendiente",
     "notas": "",
@@ -6808,7 +6858,20 @@
     ],
     "hechos": [],
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000049",
+        "src": "assets/documentos/P00069/esquela-concepcion-gomez-lopez.png",
+        "nombre_archivo": "esquela-concepcion-gomez-lopez.png",
+        "formato": "image/png",
+        "titulo": "Esquela Concepcion Gomez Lopez",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00069"
+        ]
+      }
+    ],
     "fecha_creacion": "2026-08-10T11:09:41.055Z",
     "ultima_modificacion": "2026-08-10T11:09:41.055Z",
     "padre": "P00067",
@@ -6964,5 +7027,70 @@
     "documentos": [],
     "fecha_creacion": "2026-08-10T18:59:18.981Z",
     "ultima_modificacion": "2026-08-10T18:59:18.982Z"
+  },
+  {
+    "id": "P00075",
+    "nombre": "Jose Gomez Lopez",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00076"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-11T13:29:55.096Z",
+    "ultima_modificacion": "2026-08-11T13:29:55.096Z",
+    "padre": "P00067",
+    "madre": "P00068"
+  },
+  {
+    "id": "P00076",
+    "nombre": "Elena Uria Landarte",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "28/07/1972",
+    "lugar_defuncion": "Getxo",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00075"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [
+      {
+        "id": "D000051",
+        "src": "assets/documentos/P00076/esquela-elena-uria.png",
+        "nombre_archivo": "esquela-elena-uria.png",
+        "formato": "image/png",
+        "titulo": "Esquela Elena Uria",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00076"
+        ]
+      }
+    ],
+    "fecha_creacion": "2026-08-11T13:31:47.755Z",
+    "ultima_modificacion": "2026-08-11T13:31:47.755Z",
+    "padre": "",
+    "madre": ""
   }
 ]
