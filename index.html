@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="es" data-app-version="4.2.0-alpha9">
+<html lang="es" data-app-version="4.2.0-alpha10">
 <head>
   <meta charset="utf-8">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="application-version" content="4.2.0-alpha9">
+<meta name="application-version" content="4.2.0-alpha10">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#183c35">
   <title>Archivo Histórico Familiar</title>
-  <link rel="stylesheet" href="css/style.css?v=4.2.0-alpha9">
+  <link rel="stylesheet" href="css/style.css?v=4.2.0-alpha10">
 </head>
 <body>
 <div class="app">
@@ -50,13 +50,15 @@
         <button class="soft" id="resetTree" type="button">Centrar</button>
         <button class="soft" id="zoomIn" type="button">+</button>
         <button class="soft tree-option active" id="toggleSiblings" type="button" aria-pressed="true">Hermanos</button>
+        <button class="soft tree-full-toggle desktop-tree-only" id="toggleFullTree" type="button" aria-pressed="false">Árbol completo</button>
+        <button class="soft desktop-tree-only tree-fit-all" id="fitAllTree" type="button" hidden>Ajustar todo</button>
       </div>
       <div id="treeContext" class="tree-context" aria-live="polite"></div>
       <div class="tree-shell" id="treeShell">
         <div class="tree-stage" id="treeStage">
           <svg id="treeSvg" aria-hidden="true"></svg>
         </div>
-        <div class="tree-hint">Arrastra para moverte · pellizca o usa los botones para ampliar</div>
+        <div class="tree-hint" id="treeHint">Arrastra para moverte · pellizca o usa los botones para ampliar</div>
       </div>
       <div class="tree-legend" aria-label="Leyenda del árbol">
         <span><i class="legend-line couple"></i> Pareja</span>
@@ -106,6 +108,6 @@
 
 <div class="birthday-toast-host" id="birthdayToastHost" aria-live="polite" aria-atomic="true"></div>
 <div class="loading" id="loading">Cargando archivo…</div>
-<script src="js/app.js?v=4.2.0-alpha9"></script>
+<script src="js/app.js?v=4.2.0-alpha10"></script>
 </body>
 </html>

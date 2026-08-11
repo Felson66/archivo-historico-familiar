@@ -1,5 +1,18 @@
 # Historial de versiones
 
+## 4.2.0-alpha10 — EP-004.5 · Árbol completo para escritorio
+- Nueva vista `Árbol completo`, disponible solo en PC.
+- Representa todas las personas públicas y sus relaciones conocidas.
+- Agrupa parejas en la misma generación.
+- Distribuye generaciones automáticamente.
+- Mantiene tarjetas clicables y panel rápido.
+- Zoom y desplazamiento reutilizan los controles existentes.
+- Nuevo botón `Ajustar todo`.
+- La vista normal del árbol permanece intacta.
+- En iPhone y otros móviles no se muestra la opción.
+- Manual de Continuidad actualizado con el uso de la nueva vista.
+
+
 ## 4.2.0-alpha9 — EP-004.4 · Cumpleaños y continuidad
 - Toast de cumpleaños únicamente para personas vivas.
 - Soporte para fechas numéricas y fechas textuales españolas.

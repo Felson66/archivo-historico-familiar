@@ -1,3 +1,3 @@
-VERSIÓN: 4.2.0-alpha9
+VERSIÓN: 4.2.0-alpha10
 ESTADO: DESARROLLO
-HITO: EP-004.4 · Toast de cumpleaños + Manual de Continuidad
+HITO: EP-004.5 · Árbol completo para escritorio

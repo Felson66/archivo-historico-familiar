@@ -677,7 +677,22 @@ function openTreeQuickPanel(id){
   $("drawerBackdrop").classList.add("open"); $("personDrawer").classList.add("open"); $("personDrawer").setAttribute("aria-hidden","false"); document.body.classList.add("drawer-open"); history.replaceState(null,"",`#arbol/${encodeURIComponent(id)}`);
 }
 function centerTreeOnPerson(id,{keepPanel=false}={}){
-  if(!byId[id])return; treeFocusId=id; const select=$("treePersonSelect"); if(select)select.value=id; buildTree(id); requestAnimationFrame(()=>{fitTreeToView(); if(keepPanel)openTreeQuickPanel(id);});
+  if(!byId[id])return;
+  treeFocusId=id;
+  const select=$("treePersonSelect");
+  if(select)select.value=id;
+
+  if(treeFullMode){
+    focusFullTreePerson(id);
+    if(keepPanel)openTreeQuickPanel(id);
+    return;
+  }
+
+  buildTree(id);
+  requestAnimationFrame(()=>{
+    fitTreeToView();
+    if(keepPanel)openTreeQuickPanel(id);
+  });
 }
 
 function normalizedNotes(person){
@@ -842,6 +857,7 @@ function closeDrawer(){
 
 let treeFocusId = "P0015";
 let treeShowSiblings = true;
+let treeFullMode = false;
 let currentTreeLayout = {};
 let currentTreeBounds = {width:1400,height:980};
 
@@ -938,6 +954,383 @@ function placeRow(ids,y,stageWidth,nodeWidth=210,gap=34){
     x += nodeWidth + gap;
   });
 }
+
+
+function fullTreePublicIds(){
+  return publicPeople().map(person=>person.id).filter(Boolean);
+}
+
+function fullTreeGenerationMap(ids){
+  const allowed=new Set(ids);
+  const memo=new Map();
+  const visiting=new Set();
+
+  const generationOf=id=>{
+    if(memo.has(id))return memo.get(id);
+    if(visiting.has(id))return 0;
+    visiting.add(id);
+
+    const person=byId[id];
+    const parents=person
+      ? parentIdsFor(person).filter(parentId=>allowed.has(parentId))
+      : [];
+
+    let generation=0;
+    if(parents.length){
+      generation=Math.max(...parents.map(parentId=>generationOf(parentId)+1));
+    }
+
+    visiting.delete(id);
+    memo.set(id,generation);
+    return generation;
+  };
+
+  ids.forEach(generationOf);
+
+  // Las parejas deben compartir fila. Después se vuelven a respetar
+  // las restricciones padre/madre -> hijo.
+  for(let pass=0;pass<8;pass++){
+    let changed=false;
+
+    ids.forEach(id=>{
+      const partners=spouseIdsFor(byId[id]).filter(partnerId=>allowed.has(partnerId));
+      partners.forEach(partnerId=>{
+        const level=Math.max(memo.get(id)||0,memo.get(partnerId)||0);
+        if((memo.get(id)||0)!==level){memo.set(id,level);changed=true;}
+        if((memo.get(partnerId)||0)!==level){memo.set(partnerId,level);changed=true;}
+      });
+    });
+
+    ids.forEach(id=>{
+      const parents=parentIdsFor(byId[id]).filter(parentId=>allowed.has(parentId));
+      if(!parents.length)return;
+      const required=Math.max(...parents.map(parentId=>(memo.get(parentId)||0)+1));
+      if((memo.get(id)||0)<required){
+        memo.set(id,required);
+        changed=true;
+      }
+    });
+
+    if(!changed)break;
+  }
+
+  return Object.fromEntries(ids.map(id=>[id,memo.get(id)||0]));
+}
+
+function fullTreePartnerUnits(ids,generationMap){
+  const allowed=new Set(ids);
+  const seen=new Set();
+  const units=[];
+
+  ids.forEach(startId=>{
+    if(seen.has(startId))return;
+
+    const level=generationMap[startId]||0;
+    const queue=[startId];
+    const members=[];
+    seen.add(startId);
+
+    while(queue.length){
+      const id=queue.shift();
+      members.push(id);
+      spouseIdsFor(byId[id])
+        .filter(partnerId=>allowed.has(partnerId)&&(generationMap[partnerId]||0)===level)
+        .forEach(partnerId=>{
+          if(!seen.has(partnerId)){
+            seen.add(partnerId);
+            queue.push(partnerId);
+          }
+        });
+    }
+
+    members.sort((a,b)=>(byId[a]?.nombre||"").localeCompare(byId[b]?.nombre||"","es"));
+    units.push(members);
+  });
+
+  return units;
+}
+
+function buildFullTree(){
+  if(window.matchMedia("(max-width: 900px)").matches){
+    treeFullMode=false;
+    buildTree(treeFocusId);
+    return;
+  }
+
+  const ids=fullTreePublicIds();
+  if(!ids.length)return;
+
+  const generationMap=fullTreeGenerationMap(ids);
+  const maxGeneration=Math.max(...ids.map(id=>generationMap[id]||0),0);
+
+  const rows=[];
+  for(let generation=0;generation<=maxGeneration;generation++){
+    const rowIds=ids.filter(id=>(generationMap[id]||0)===generation);
+    let units=fullTreePartnerUnits(rowIds,generationMap);
+
+    // Orden top-down por posición media de los padres. En la primera fila,
+    // orden alfabético estable.
+    const previousPositions=currentTreeLayout;
+    units.sort((unitA,unitB)=>{
+      const score=unit=>{
+        const parents=uniqueIds(unit.flatMap(id=>parentIdsFor(byId[id])))
+          .filter(parentId=>previousPositions[parentId]);
+        if(!parents.length)return Number.POSITIVE_INFINITY;
+        return parents.reduce((sum,parentId)=>sum+previousPositions[parentId][0],0)/parents.length;
+      };
+      const a=score(unitA),b=score(unitB);
+      if(Number.isFinite(a)||Number.isFinite(b)){
+        if(a!==b)return a-b;
+      }
+      return (byId[unitA[0]]?.nombre||"").localeCompare(byId[unitB[0]]?.nombre||"","es");
+    });
+
+    rows.push({generation,units});
+  }
+
+  const nodeWidth=188;
+  const nodeHeight=90;
+  const spouseGap=16;
+  const familyGap=62;
+  const rowGap=205;
+  const topPadding=78;
+  const sidePadding=90;
+
+  const requiredWidths=rows.map(row=>{
+    return row.units.reduce((total,unit,index)=>{
+      const unitWidth=unit.length*nodeWidth+Math.max(0,unit.length-1)*spouseGap;
+      return total+unitWidth+(index? familyGap:0);
+    },0);
+  });
+
+  const stageWidth=Math.max(1500,...requiredWidths.map(width=>width+sidePadding*2));
+  const stageHeight=Math.max(800,topPadding+(maxGeneration+1)*rowGap+110);
+
+  currentTreeLayout={};
+  currentTreeBounds={width:stageWidth,height:stageHeight};
+
+  rows.forEach((row,rowIndex)=>{
+    const width=requiredWidths[rowIndex];
+    let x=(stageWidth-width)/2;
+    const y=topPadding+row.generation*rowGap;
+
+    row.units.forEach((unit,unitIndex)=>{
+      if(unitIndex)x+=familyGap;
+      unit.forEach((id,memberIndex)=>{
+        if(memberIndex)x+=spouseGap;
+        currentTreeLayout[id]=[x,y];
+        x+=nodeWidth;
+      });
+    });
+  });
+
+  // Segunda pasada: ordenar cada generación por el centro medio de sus padres,
+  // manteniendo juntas las unidades de pareja.
+  for(let generation=1;generation<=maxGeneration;generation++){
+    const row=rows[generation];
+    if(!row)continue;
+
+    row.units.sort((unitA,unitB)=>{
+      const centerOfParents=unit=>{
+        const parents=uniqueIds(unit.flatMap(id=>parentIdsFor(byId[id])))
+          .filter(parentId=>currentTreeLayout[parentId]);
+        if(!parents.length)return Number.POSITIVE_INFINITY;
+        return parents.reduce((sum,parentId)=>{
+          const pos=currentTreeLayout[parentId];
+          return sum+pos[0]+nodeWidth/2;
+        },0)/parents.length;
+      };
+      const a=centerOfParents(unitA),b=centerOfParents(unitB);
+      if(a!==b)return a-b;
+      return (byId[unitA[0]]?.nombre||"").localeCompare(byId[unitB[0]]?.nombre||"","es");
+    });
+
+    const rowWidth=requiredWidths[generation]||0;
+    let x=(stageWidth-rowWidth)/2;
+    row.units.forEach((unit,unitIndex)=>{
+      if(unitIndex)x+=familyGap;
+      unit.forEach((id,memberIndex)=>{
+        if(memberIndex)x+=spouseGap;
+        currentTreeLayout[id]=[x,topPadding+generation*rowGap];
+        x+=nodeWidth;
+      });
+    });
+  }
+
+  const stage=$("treeStage");
+  const svg=$("treeSvg");
+  stage.style.width=`${stageWidth}px`;
+  stage.style.height=`${stageHeight}px`;
+  svg.setAttribute("viewBox",`0 0 ${stageWidth} ${stageHeight}`);
+  stage.querySelectorAll(".person-node, .tree-generation-label").forEach(node=>node.remove());
+  svg.innerHTML="";
+
+  // Bandas por generación.
+  rows.forEach(row=>{
+    const y=topPadding+row.generation*rowGap-36;
+
+    const rect=document.createElementNS("http://www.w3.org/2000/svg","rect");
+    rect.setAttribute("x","24");
+    rect.setAttribute("y",String(y));
+    rect.setAttribute("width",String(stageWidth-48));
+    rect.setAttribute("height",String(nodeHeight+72));
+    rect.setAttribute("rx","22");
+    rect.setAttribute("class","tree-band tree-band-full");
+    svg.appendChild(rect);
+
+    const text=document.createElementNS("http://www.w3.org/2000/svg","text");
+    text.setAttribute("x","46");
+    text.setAttribute("y",String(y+27));
+    text.setAttribute("class","tree-band-label tree-band-label-full");
+    text.textContent=`GENERACIÓN ${row.generation+1}`;
+    svg.appendChild(text);
+  });
+
+  const centerX=id=>currentTreeLayout[id][0]+nodeWidth/2;
+  const topY=id=>currentTreeLayout[id][1];
+  const bottomY=id=>currentTreeLayout[id][1]+nodeHeight;
+
+  const line=(d,type="family")=>{
+    const path=document.createElementNS("http://www.w3.org/2000/svg","path");
+    path.setAttribute("d",d);
+    path.setAttribute("class",`tree-line tree-line-${type}`);
+    svg.appendChild(path);
+  };
+
+  // Parejas.
+  const pairKeys=new Set();
+  ids.forEach(id=>{
+    spouseIdsFor(byId[id]).filter(partnerId=>currentTreeLayout[partnerId]).forEach(partnerId=>{
+      const key=[id,partnerId].sort().join("|");
+      if(pairKeys.has(key))return;
+      pairKeys.add(key);
+      const y=Math.max(bottomY(id),bottomY(partnerId))+9;
+      line(`M ${centerX(id)} ${y} H ${centerX(partnerId)}`,"couple");
+    });
+  });
+
+  // Familias: agrupación por combinación de progenitores conocidos.
+  const families=new Map();
+  ids.forEach(childId=>{
+    const parents=parentIdsFor(byId[childId]).filter(parentId=>currentTreeLayout[parentId]);
+    if(!parents.length)return;
+
+    const key=parents.slice().sort().join("|");
+    if(!families.has(key))families.set(key,{parents:parents.slice(),children:[]});
+    families.get(key).children.push(childId);
+  });
+
+  families.forEach(family=>{
+    const parents=family.parents.filter(id=>currentTreeLayout[id]);
+    const children=uniqueIds(family.children).filter(id=>currentTreeLayout[id]);
+    if(!parents.length||!children.length)return;
+
+    const parentCenters=parents.map(centerX);
+    const parentMid=parentCenters.reduce((a,b)=>a+b,0)/parentCenters.length;
+    const parentBottom=Math.max(...parents.map(bottomY));
+    const childTop=Math.min(...children.map(topY));
+    const barY=parentBottom+Math.max(34,(childTop-parentBottom)*.48);
+
+    line(`M ${parentMid} ${parentBottom+9} V ${barY}`,"family");
+
+    const childCenters=children.map(centerX);
+    if(childCenters.length>1){
+      line(`M ${Math.min(...childCenters)} ${barY} H ${Math.max(...childCenters)}`,"family");
+    }
+    children.forEach(childId=>line(`M ${centerX(childId)} ${barY} V ${topY(childId)}`,"family"));
+  });
+
+  // Personas.
+  Object.entries(currentTreeLayout).forEach(([id,[x,y]])=>{
+    const person=byId[id];
+    if(!person)return;
+
+    const node=document.createElement("button");
+    node.className=`person-node ${person.estado||""} tree-role-full${id===treeFocusId?" tree-role-focus":""}`;
+    node.style.left=`${x}px`;
+    node.style.top=`${y}px`;
+
+    if(person.visible===false){
+      node.classList.add("tree-person-hidden");
+      node.disabled=true;
+    }else{
+      node.dataset.person=id;
+    }
+
+    node.setAttribute("aria-label",`Abrir ficha de ${person.nombre}`);
+    node.innerHTML=treeNodeLabel(person);
+    stage.appendChild(node);
+  });
+
+  const context=$("treeContext");
+  if(context){
+    context.innerHTML=`<strong>Árbol completo</strong><span>${ids.length} personas · ${maxGeneration+1} generaciones representadas</span>`;
+  }
+
+  const hint=$("treeHint");
+  if(hint)hint.textContent="Arrastra para recorrer el árbol · rueda del ratón para ampliar · Ajustar todo recupera la vista completa";
+}
+
+function fitFullTreeToView(){
+  const shell=$("treeShell");
+  if(!shell)return;
+
+  const padding=44;
+  const scaleX=(shell.clientWidth-padding*2)/currentTreeBounds.width;
+  const scaleY=(shell.clientHeight-padding*2)/currentTreeBounds.height;
+  const scale=Math.min(.9,Math.max(.07,Math.min(scaleX,scaleY)));
+
+  transform={
+    x:(shell.clientWidth-currentTreeBounds.width*scale)/2,
+    y:Math.max(18,(shell.clientHeight-currentTreeBounds.height*scale)/2),
+    scale
+  };
+  applyTreeTransform();
+}
+
+function focusFullTreePerson(id){
+  if(!currentTreeLayout[id])return;
+  treeFocusId=id;
+
+  document.querySelectorAll("#treeStage .person-node").forEach(node=>{
+    node.classList.toggle("tree-role-focus",node.dataset.person===id);
+  });
+
+  const shell=$("treeShell");
+  const [x,y]=currentTreeLayout[id];
+  const nodeWidth=188,nodeHeight=90;
+  transform.x=shell.clientWidth/2-(x+nodeWidth/2)*transform.scale;
+  transform.y=shell.clientHeight/2-(y+nodeHeight/2)*transform.scale;
+  applyTreeTransform();
+}
+
+function setFullTreeMode(enabled){
+  const desktop=!window.matchMedia("(max-width: 900px)").matches;
+  treeFullMode=Boolean(enabled&&desktop);
+
+  const section=$("tree");
+  const button=$("toggleFullTree");
+  const fitButton=$("fitAllTree");
+
+  section?.classList.toggle("full-tree-mode",treeFullMode);
+  if(button){
+    button.classList.toggle("active",treeFullMode);
+    button.setAttribute("aria-pressed",String(treeFullMode));
+    button.textContent=treeFullMode?"Vista normal":"Árbol completo";
+  }
+  if(fitButton)fitButton.hidden=!treeFullMode;
+
+  if(treeFullMode){
+    buildFullTree();
+    requestAnimationFrame(fitFullTreeToView);
+  }else{
+    const hint=$("treeHint");
+    if(hint)hint.textContent="Arrastra para moverte · pellizca o usa los botones para ampliar";
+    buildTree(treeFocusId);
+    requestAnimationFrame(fitTreeToView);
+  }
+}
+
 
 function buildTree(focusId=treeFocusId){
   const focus = byId[focusId] || PEOPLE[0];
@@ -1133,6 +1526,10 @@ function applyTreeTransform(){
   $("treeStage").style.transform = `translate(${transform.x}px,${transform.y}px) scale(${transform.scale})`;
 }
 function fitTreeToView(){
+  if(treeFullMode){
+    fitFullTreeToView();
+    return;
+  }
   const shell = $("treeShell");
   if(!shell)return;
 
@@ -1217,7 +1614,17 @@ function wireEvents(){
     const fullPersonButton=event.target.closest("[data-open-full-person]");
     if(fullPersonButton){event.preventDefault();openPerson(fullPersonButton.dataset.openFullPerson);return;}
     const treePersonButton=event.target.closest("#treeStage .person-node[data-person]");
-    if(treePersonButton){event.preventDefault();openTreeQuickPanel(treePersonButton.dataset.person);return;}
+    if(treePersonButton){
+      event.preventDefault();
+      if(treeFullMode){
+        treeFocusId=treePersonButton.dataset.person;
+        document.querySelectorAll("#treeStage .person-node").forEach(node=>{
+          node.classList.toggle("tree-role-focus",node===treePersonButton);
+        });
+      }
+      openTreeQuickPanel(treePersonButton.dataset.person);
+      return;
+    }
     const personButton = event.target.closest("[data-person]");
     if(personButton){event.preventDefault();openPerson(personButton.dataset.person);}
   });
@@ -1237,10 +1644,13 @@ function wireEvents(){
     }
   });
   $("treePersonSelect").addEventListener("change",event => {
-    buildTree(event.target.value);
+    if(treeFullMode)setFullTreeMode(false);
+    treeFocusId=event.target.value;
+    buildTree(treeFocusId);
     requestAnimationFrame(fitTreeToView);
   });
   $("toggleSiblings").addEventListener("click",event => {
+    if(treeFullMode)setFullTreeMode(false);
     treeShowSiblings = !treeShowSiblings;
     event.currentTarget.classList.toggle("active",treeShowSiblings);
     event.currentTarget.setAttribute("aria-pressed",String(treeShowSiblings));
@@ -1250,6 +1660,14 @@ function wireEvents(){
   $("resetTree").addEventListener("click",resetTree);
   $("zoomIn").addEventListener("click",() => zoomTree(1.22));
   $("zoomOut").addEventListener("click",() => zoomTree(.82));
+  $("toggleFullTree")?.addEventListener("click",()=>setFullTreeMode(!treeFullMode));
+  $("fitAllTree")?.addEventListener("click",fitFullTreeToView);
+
+  window.addEventListener("resize",()=>{
+    if(treeFullMode&&window.matchMedia("(max-width: 900px)").matches){
+      setFullTreeMode(false);
+    }
+  });
 
   const shell = $("treeShell");
   shell.addEventListener("pointerdown",event => {
