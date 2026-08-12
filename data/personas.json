@@ -927,7 +927,7 @@
     "fotoPosicion": "50% 60%"
   },
   {
-    "datos_resumen": "Hijo de Manuel y Francisca.\nDNI : 14.756.003",
+    "datos_resumen": "Hijo de Manuel y Francisca.\nDNI : 14.756.003 - La letra calculada sería la \"P\"",
     "lugar_descanso": {
       "cemetery": "Cementerio Municipal de Bilbao (Derio)",
       "location": "Zona Única · Manzana 29 · Unidad/Nicho 0050",
@@ -1065,11 +1065,27 @@
         "paginas": [
           "assets/documentos/P0008/d000041-paginas/pagina-001.webp"
         ]
+      },
+      {
+        "id": "D000057",
+        "src": "assets/documentos/P0008/certificado-defuncion-francisco-liz.pdf",
+        "nombre_archivo": "certificado-defuncion-francisco-liz.pdf",
+        "formato": "application/pdf",
+        "titulo": "Certificado Defuncion Francisco Liz",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0008"
+        ],
+        "paginas": [
+          "assets/documentos/P0008/d000057-paginas/pagina-001.webp",
+          "assets/documentos/P0008/d000057-paginas/pagina-002.webp"
+        ]
       }
     ],
     "cronologia": [],
     "lugares": [],
-    "notas": "Hijo de Manuel y Francisca.\nDNI : 14.756.003",
+    "notas": "Hijo de Manuel y Francisca.\nDNI : 14.756.003 - La letra calculada sería la \"P\"",
     "fecha_nacimiento": "24/01/1899",
     "lugar_nacimiento": "Paramo en Lugo",
     "fecha_defuncion": "15/10/1961",
