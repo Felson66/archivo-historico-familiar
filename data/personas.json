@@ -7475,12 +7475,12 @@
     "nombre_conocido": "Sentencias",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "fecha_nacimiento": "",
+    "fecha_nacimiento": "28/02/1921",
     "lugar_nacimiento": "Cerezo de Rio Tirón",
-    "fecha_defuncion": "",
+    "fecha_defuncion": "05/06/2008",
     "lugar_defuncion": "Bilbao",
     "profesion": "",
-    "estado": "pendiente",
+    "estado": "documentado",
     "notas": "",
     "datos_resumen": "",
     "visible": true,
@@ -7489,7 +7489,20 @@
     ],
     "hechos": [],
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000062",
+        "src": "assets/documentos/P00085/esquela-basilio.png",
+        "nombre_archivo": "esquela-basilio.png",
+        "formato": "image/png",
+        "titulo": "Esquela Basilio",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00085"
+        ]
+      }
+    ],
     "fecha_creacion": "2026-08-12T15:44:37.751Z",
     "ultima_modificacion": "2026-08-12T15:44:37.751Z",
     "padre": "",
@@ -7501,12 +7514,12 @@
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
-    "fecha_nacimiento": "",
+    "fecha_nacimiento": "09/06/1923",
     "lugar_nacimiento": "Cerezo de Rio Tirón",
-    "fecha_defuncion": "",
+    "fecha_defuncion": "24/06/2004",
     "lugar_defuncion": "Bilbao",
     "profesion": "",
-    "estado": "pendiente",
+    "estado": "documentado",
     "notas": "",
     "datos_resumen": "",
     "visible": true,
@@ -7517,7 +7530,20 @@
     "hijos": [],
     "hechos": [],
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000061",
+        "src": "assets/documentos/P00086/esquela-feliciana.png",
+        "nombre_archivo": "esquela-feliciana.png",
+        "formato": "image/png",
+        "titulo": "Esquela Feliciana",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00086"
+        ]
+      }
+    ],
     "fecha_creacion": "2026-08-12T15:45:53.727Z",
     "ultima_modificacion": "2026-08-12T15:45:53.727Z"
   }
