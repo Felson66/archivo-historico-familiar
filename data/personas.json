@@ -6807,8 +6807,8 @@
     "ultima_modificacion": "2026-08-07T15:15:48.979Z",
     "fotografia_principal": "assets/fotos/P00065/roberto-amets.jpg",
     "fotoPosicion": "50% 50%",
-    "padre": "",
-    "madre": ""
+    "padre": "P00084",
+    "madre": "P00083"
   },
   {
     "id": "P00066",
@@ -7402,6 +7402,71 @@
     "fotografia_principal": "assets/fotos/P00082/iker-portada.jpg",
     "fotoPosicion": "50% 13%",
     "padre": "P00081",
+    "madre": ""
+  },
+  {
+    "id": "P00083",
+    "nombre": "Maria de los Angeles Fernandez Fernandez",
+    "nombre_conocido": "Angeles",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Bilbao",
+    "fecha_defuncion": "22/11/1983",
+    "lugar_defuncion": "Bilbao",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00084"
+    ],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [
+      {
+        "id": "D000060",
+        "src": "assets/documentos/P00083/esquela-mangelesfernandez.png",
+        "nombre_archivo": "esquela-mangelesfernandez.png",
+        "formato": "image/png",
+        "titulo": "Esquela Mª Angeles",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00083"
+        ]
+      }
+    ],
+    "fecha_creacion": "2026-08-12T15:26:02.813Z",
+    "ultima_modificacion": "2026-08-12T15:26:02.813Z"
+  },
+  {
+    "id": "P00084",
+    "nombre": "José Garcia Cestafe",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "Bilbao",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00083"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-12T15:29:34.439Z",
+    "ultima_modificacion": "2026-08-12T15:29:34.439Z",
+    "padre": "",
     "madre": ""
   }
 ]
