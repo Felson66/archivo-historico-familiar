@@ -348,12 +348,15 @@ function peopleForBranch(branchName="conjunta"){
 }
 
 
-/* EP-005.3 · El árbol obedece a la rama global seleccionada. */
+/* EP-005.3 · Restricción del árbol a la rama global seleccionada. */
 function treePeopleForSelectedBranch(){
-  return peopleForBranch(currentFamilyBranch());
+  return peopleForBranch(currentFamilyBranch);
 }
 function treeIdsForSelectedBranch(){
   return new Set(treePeopleForSelectedBranch().map(person=>person.id));
+}
+function treeRelationIds(ids,allowedIds){
+  return uniqueIds(ids).filter(id=>allowedIds.has(id));
 }
 
 function familyBranchDiagnostics(){
@@ -384,18 +387,22 @@ function setFamilyBranch(branchName,{centerTree=true}={}){
   localStorage.setItem("raicesFamilyBranch",currentFamilyBranch);
   renderFamilyBranchSelector();
 
-  // EP-005.2: el selector ya es global y persistente.
-  // El filtrado de árbol y buscador se activa en las fases siguientes.
-  if(centerTree && currentFamilyBranch!=="conjunta"){
-    const rootId=FAMILY_BRANCH_ROOTS[currentFamilyBranch];
-    if(rootId && byId[rootId]){
-      if(treeFullMode)setFullTreeMode(false);
-      treeFocusId=rootId;
-      const select=$("treePersonSelect");
-      if(select)select.value=rootId;
-      buildTree(rootId);
-      requestAnimationFrame(fitTreeToView);
-    }
+  const rootId=currentFamilyBranch!=="conjunta"
+    ? FAMILY_BRANCH_ROOTS[currentFamilyBranch]
+    : (byId[treeFocusId] ? treeFocusId : FAMILY_BRANCH_ROOTS.eduardo);
+
+  if(centerTree && rootId && byId[rootId]){
+    treeFocusId=rootId;
+  }
+
+  populateTreePersonSelect();
+
+  if(treeFullMode){
+    buildFullTree();
+    requestAnimationFrame(fitFullTreeToView);
+  }else{
+    buildTree(treeFocusId);
+    requestAnimationFrame(fitTreeToView);
   }
 }
 
@@ -1470,24 +1477,32 @@ function setFullTreeMode(enabled){
 
 
 function buildTree(focusId=treeFocusId){
-  const focus = byId[focusId] || PEOPLE[0];
+  const allowedIds=treeIdsForSelectedBranch();
+  let focus = byId[focusId];
+
+  if(!focus || !allowedIds.has(focus.id)){
+    const branchRoot=currentFamilyBranch!=="conjunta" ? FAMILY_BRANCH_ROOTS[currentFamilyBranch] : null;
+    focus=(branchRoot && byId[branchRoot] && allowedIds.has(branchRoot))
+      ? byId[branchRoot]
+      : treePeopleForSelectedBranch()[0];
+  }
   if(!focus) return;
 
   treeFocusId = focus.id;
   const select = $("treePersonSelect");
   if(select) select.value = treeFocusId;
 
-  const parents = parentIdsFor(focus);
-  const grandparents = uniqueIds(parents.flatMap(id => parentIdsFor(byId[id])));
+  const parents = treeRelationIds(parentIdsFor(focus),allowedIds);
+  const grandparents = treeRelationIds(parents.flatMap(id => parentIdsFor(byId[id])),allowedIds);
   const siblingSets = siblingGroups(focus);
   const allSiblings = uniqueIds([
     ...siblingSets.full,
     ...siblingSets.half,
     ...siblingSets.commonParent
   ]);
-  const siblings = treeShowSiblings ? allSiblings : [];
-  const spouses = spouseIdsFor(focus);
-  const children = childIdsFor(focus);
+  const siblings = treeShowSiblings ? treeRelationIds(allSiblings,allowedIds) : [];
+  const spouses = treeRelationIds(spouseIdsFor(focus),allowedIds);
+  const children = treeRelationIds(childIdsFor(focus),allowedIds);
 
   const middleRow = [...siblings, focus.id, ...spouses];
   const widestCount = Math.max(
@@ -1564,10 +1579,10 @@ function buildTree(focusId=treeFocusId){
   };
 
   if(parents[0]){
-    addBranchBox(parentIdsFor(byId[parents[0]]),"RAMA PATERNA","paternal");
+    addBranchBox(treeRelationIds(parentIdsFor(byId[parents[0]]),allowedIds),"RAMA PATERNA","paternal");
   }
   if(parents[1]){
-    addBranchBox(parentIdsFor(byId[parents[1]]),"RAMA MATERNA","maternal");
+    addBranchBox(treeRelationIds(parentIdsFor(byId[parents[1]]),allowedIds),"RAMA MATERNA","maternal");
   }
 
   const nodeWidth = 210;

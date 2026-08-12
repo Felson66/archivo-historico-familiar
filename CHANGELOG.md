@@ -1,12 +1,14 @@
 # Historial de versiones
 
-## 4.2.0-alpha15 — EP-005.3 · Árbol filtrado por rama
-- El árbol pasa a obedecer al selector global Eduardo / Esther / Conjunta.
-- Rama Eduardo limita el árbol al conjunto calculado por el motor EP-005.1.
-- Rama Esther hace lo mismo con Esther como centro.
-- Rama conjunta muestra la unión de ambas ramas sin duplicar personas.
-- Se mantiene intacto el buscador de Personas: su filtrado corresponde a EP-005.4.
-- No se modifica `personas.json`.
+## 4.2.0-alpha15b — EP-005.3 · Árbol filtrado por rama (corregida)
+- Rehecha desde alpha14 estable.
+- Corregido el fallo de inicialización de alpha15: `currentFamilyBranch` es una variable, no una función.
+- El selector «Centrar árbol en» queda limitado a la rama activa.
+- La vista normal filtra padres, abuelos, hermanos, parejas e hijos por la rama activa.
+- Árbol completo usa únicamente las personas de la rama activa.
+- Al cambiar Eduardo / Esther / Conjunta se reconstruyen selector y árbol inmediatamente.
+- `personas.json` permanece intacto.
+- El buscador de Personas sigue sin filtrar hasta EP-005.4.
 
 
 ## 4.2.0-alpha14 — EP-005.2 · Selector global de rama
