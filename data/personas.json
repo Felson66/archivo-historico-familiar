@@ -6825,11 +6825,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00065"
     ],
-    "hijos": [],
     "hechos": [],
     "fotografias": [
       {
@@ -6849,7 +6847,9 @@
     "fecha_creacion": "2026-08-07T15:28:38.918Z",
     "ultima_modificacion": "2026-08-07T15:28:38.918Z",
     "fotografia_principal": "assets/fotos/P00066/ilu.jpg",
-    "fotoPosicion": "50% 28%"
+    "fotoPosicion": "50% 28%",
+    "padre": "P00085",
+    "madre": "P00086"
   },
   {
     "id": "P00067",
@@ -7468,5 +7468,57 @@
     "ultima_modificacion": "2026-08-12T15:29:34.439Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00085",
+    "nombre": "Basilio Reizabal Puente",
+    "nombre_conocido": "Sentencias",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Cerezo de Rio Tirón",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "Bilbao",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00086"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-12T15:44:37.751Z",
+    "ultima_modificacion": "2026-08-12T15:44:37.751Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00086",
+    "nombre": "Feliciana Perez Montañana",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Cerezo de Rio Tirón",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "Bilbao",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00085"
+    ],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-12T15:45:53.727Z",
+    "ultima_modificacion": "2026-08-12T15:45:53.727Z"
   }
 ]
