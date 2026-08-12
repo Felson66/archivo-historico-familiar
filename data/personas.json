@@ -6350,8 +6350,8 @@
         "fecha": "03/11/1830",
         "descripcion": "",
         "personas": [
-          "P00055",
-          "P00054"
+          "P00054",
+          "P00055"
         ],
         "paginas": [
           "assets/documentos/P00055/d000058-paginas/pagina-001.webp"
@@ -6410,8 +6410,8 @@
         "fecha": "03/11/1830",
         "descripcion": "",
         "personas": [
-          "P00055",
-          "P00054"
+          "P00054",
+          "P00055"
         ],
         "paginas": [
           "assets/documentos/P00055/d000058-paginas/pagina-001.webp"
@@ -6785,7 +6785,24 @@
         ]
       }
     ],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000059",
+        "src": "assets/documentos/P00065/certificadonac-roberto.pdf",
+        "nombre_archivo": "certificadonac-roberto.pdf",
+        "formato": "application/pdf",
+        "titulo": "Certificado Nacimiento Roberto",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00065"
+        ],
+        "paginas": [
+          "assets/documentos/P00065/d000059-paginas/pagina-001.webp",
+          "assets/documentos/P00065/d000059-paginas/pagina-002.webp"
+        ]
+      }
+    ],
     "fecha_creacion": "2026-08-07T15:15:48.978Z",
     "ultima_modificacion": "2026-08-07T15:15:48.979Z",
     "fotografia_principal": "assets/fotos/P00065/roberto-amets.jpg",
@@ -7308,5 +7325,83 @@
     "ultima_modificacion": "2026-08-11T14:01:50.601Z",
     "padre": "P00077",
     "madre": "P00079"
+  },
+  {
+    "id": "P00081",
+    "nombre": "Unai Reizabal Garcia",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "09/06/1974",
+    "lugar_nacimiento": "Bilbao",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000119",
+        "src": "assets/fotos/P00081/unai-portada.jpg",
+        "titulo": "Unai Portada",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00081"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-08-12T15:02:19.192Z",
+    "ultima_modificacion": "2026-08-12T15:02:19.192Z",
+    "padre": "P00065",
+    "madre": "P00066",
+    "fotografia_principal": "assets/fotos/P00081/unai-portada.jpg",
+    "fotoPosicion": "50% 26%"
+  },
+  {
+    "id": "P00082",
+    "nombre": "Iker Reizabal Coronel",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "18/12/2005",
+    "lugar_nacimiento": "Bilbao",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000120",
+        "src": "assets/fotos/P00082/iker-portada.jpg",
+        "titulo": "Iker Portada",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00082"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-08-12T15:10:24.779Z",
+    "ultima_modificacion": "2026-08-12T15:10:24.779Z",
+    "fotografia_principal": "assets/fotos/P00082/iker-portada.jpg",
+    "fotoPosicion": "50% 13%",
+    "padre": "P00081",
+    "madre": ""
   }
 ]
