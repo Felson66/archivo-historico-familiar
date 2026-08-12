@@ -1,5 +1,15 @@
 # Historial de versiones
 
+## 4.2.0-alpha16 — EP-005.4 · Buscador filtrado por rama
+- El buscador de Personas obedece al selector global de rama.
+- Rama Eduardo muestra únicamente las personas calculadas para Eduardo.
+- Rama Esther muestra únicamente las personas calculadas para Esther.
+- Rama Conjunta muestra la unión de ambas ramas sin duplicados.
+- El contador de personas se actualiza según la rama activa.
+- Cambiar de rama refresca inmediatamente el buscador y el árbol.
+- `personas.json` permanece intacto.
+
+
 ## 4.2.0-alpha15d — EP-005.3 · Rama Conjunta con Vista normal
 - Al seleccionar `Conjunta` se sigue abriendo inicialmente `Árbol completo`.
 - Corregido el botón `Vista normal`: ya puede salir del árbol completo.

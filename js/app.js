@@ -183,7 +183,7 @@ function showView(id){
 }
 
 function renderPeople(){
-  const visiblePeople = publicPeople();
+  const visiblePeople = peopleForBranch(currentFamilyBranch);
   const query = ($("peopleSearch").value || "").trim().toLowerCase();
   const filtered = visiblePeople
     .filter(person => JSON.stringify([
@@ -386,6 +386,7 @@ function setFamilyBranch(branchName,{centerTree=true}={}){
   currentFamilyBranch=normalizeFamilyBranch(branchName);
   localStorage.setItem("raicesFamilyBranch",currentFamilyBranch);
   renderFamilyBranchSelector();
+  renderPeople();
 
   /*
    * EP-005.3 alpha15c:
