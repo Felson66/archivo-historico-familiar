@@ -150,6 +150,9 @@ async function init(){
     byId = Object.fromEntries(PEOPLE.map(person => [person.id, person]));
     rebuildRelationIndex();
 
+    window.__raicesBranches=familyBranchDiagnostics();
+    console.info("EP-005.1 · Motor de ramas",window.__raicesBranches);
+
     renderPeople();
     populateTreePersonSelect();
     try{
@@ -296,6 +299,60 @@ function childIdsFor(person){
 function spouseIdsFor(person){
   return relationIdsFromIndex(RELATION_INDEX.spouses,person)
     .sort((a,b)=>byId[a].nombre.localeCompare(byId[b].nombre,"es"));
+}
+
+
+/* EP-005.1 · Motor de ramas familiares.
+   La pertenencia se calcula desde relaciones; no se guarda en personas.json. */
+const FAMILY_BRANCH_ROOTS=Object.freeze({eduardo:"P0015",esther:"P0027"});
+
+function branchCoreIds(rootId){
+  const result=new Set(),queue=[rootId];
+  while(queue.length){
+    const id=queue.shift();
+    if(!id||result.has(id)||!byId[id])continue;
+    result.add(id);
+    parentIdsFor(byId[id]).forEach(x=>{if(!result.has(x))queue.push(x);});
+    childIdsFor(byId[id]).forEach(x=>{if(!result.has(x))queue.push(x);});
+  }
+  return result;
+}
+
+function branchIds(rootId){
+  const core=branchCoreIds(rootId),result=new Set(core);
+
+  // Hermanos: comparten al menos un progenitor con una persona del núcleo.
+  [...core].forEach(id=>parentIdsFor(byId[id]).forEach(parentId=>
+    childIdsFor(byId[parentId]).forEach(siblingId=>result.add(siblingId))
+  ));
+
+  // Parejas directas de las personas ya incluidas.
+  [...result].forEach(id=>spouseIdsFor(byId[id]).forEach(partnerId=>{
+    if(byId[partnerId])result.add(partnerId);
+  }));
+
+  return result;
+}
+
+function familyBranchSets(){
+  const eduardo=branchIds(FAMILY_BRANCH_ROOTS.eduardo);
+  const esther=branchIds(FAMILY_BRANCH_ROOTS.esther);
+  return {eduardo,esther,conjunta:new Set([...eduardo,...esther])};
+}
+
+function peopleForBranch(branchName="conjunta"){
+  const sets=familyBranchSets(),ids=sets[branchName]||sets.conjunta;
+  return publicPeople().filter(person=>ids.has(person.id));
+}
+
+function familyBranchDiagnostics(){
+  const sets=familyBranchSets(),allPublic=new Set(publicPeople().map(p=>p.id));
+  const outside=[...allPublic].filter(id=>!sets.conjunta.has(id));
+  return {
+    roots:{...FAMILY_BRANCH_ROOTS},
+    counts:{eduardo:sets.eduardo.size,esther:sets.esther.size,conjunta:sets.conjunta.size,publicas:allPublic.size,fueraDeRamas:outside.length},
+    outside
+  };
 }
 
 function siblingGroups(person){

@@ -1,5 +1,15 @@
 # Historial de versiones
 
+## 4.2.0-alpha13 — EP-005.1 · Motor de ramas familiares
+- Motor automático para Rama Eduardo, Rama Esther y Rama conjunta.
+- Centros detectados en los datos: `P0015` — Eduardo de la Dehesa Liz y `P0027` — Esther García Reizabal.
+- La pertenencia se calcula desde las relaciones; no se añade ningún campo de rama a `personas.json`.
+- Recorre ascendientes, descendientes, hermanos y parejas relacionadas.
+- Se añade diagnóstico interno antes de aplicar filtros visuales.
+- Se elimina del encabezado la antigua enumeración de apellidos `Familias ...`.
+- Árbol y buscador todavía no se filtran: corresponde a las siguientes fases de EP-005.
+
+
 ## 4.2.0-alpha12 — Árbol completo: Ajustar todo optimizado
 - `Ajustar todo` calcula ahora el encuadre usando el área realmente ocupada por las tarjetas.
 - Se elimina buena parte del espacio vacío que reducía innecesariamente el árbol en alpha11.
