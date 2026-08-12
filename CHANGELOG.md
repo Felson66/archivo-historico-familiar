@@ -1,5 +1,14 @@
 # Historial de versiones
 
+## 4.2.0-alpha15 — EP-005.3 · Árbol filtrado por rama
+- El árbol pasa a obedecer al selector global Eduardo / Esther / Conjunta.
+- Rama Eduardo limita el árbol al conjunto calculado por el motor EP-005.1.
+- Rama Esther hace lo mismo con Esther como centro.
+- Rama conjunta muestra la unión de ambas ramas sin duplicar personas.
+- Se mantiene intacto el buscador de Personas: su filtrado corresponde a EP-005.4.
+- No se modifica `personas.json`.
+
+
 ## 4.2.0-alpha14 — EP-005.2 · Selector global de rama
 - Selector global `Eduardo | Esther | Conjunta` visible en la aplicación.
 - La selección persiste entre sesiones mediante almacenamiento local del navegador.

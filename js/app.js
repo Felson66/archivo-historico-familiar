@@ -347,6 +347,15 @@ function peopleForBranch(branchName="conjunta"){
   return publicPeople().filter(person=>ids.has(person.id));
 }
 
+
+/* EP-005.3 · El árbol obedece a la rama global seleccionada. */
+function treePeopleForSelectedBranch(){
+  return peopleForBranch(currentFamilyBranch());
+}
+function treeIdsForSelectedBranch(){
+  return new Set(treePeopleForSelectedBranch().map(person=>person.id));
+}
+
 function familyBranchDiagnostics(){
   const sets=familyBranchSets(),allPublic=new Set(publicPeople().map(p=>p.id));
   const outside=[...allPublic].filter(id=>!sets.conjunta.has(id));
@@ -957,7 +966,7 @@ function populateTreePersonSelect(){
   const select = $("treePersonSelect");
   if(!select) return;
 
-  const sorted = publicPeople().sort((a,b) => a.nombre.localeCompare(b.nombre,"es"));
+  const sorted = treePeopleForSelectedBranch().sort((a,b) => a.nombre.localeCompare(b.nombre,"es"));
   select.innerHTML = sorted.map(person =>
     `<option value="${esc(person.id)}">${esc(person.nombre)}</option>`
   ).join("");
@@ -1049,7 +1058,7 @@ function placeRow(ids,y,stageWidth,nodeWidth=210,gap=34){
 
 
 function fullTreePublicIds(){
-  return publicPeople().map(person=>person.id).filter(Boolean);
+  return treePeopleForSelectedBranch().map(person=>person.id).filter(Boolean);
 }
 
 function fullTreeGenerationMap(ids){
