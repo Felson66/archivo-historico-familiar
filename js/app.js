@@ -1,6 +1,7 @@
 let PEOPLE = [];
 let byId = {};
 let currentView = "people";
+let currentFamilyBranch = localStorage.getItem("raicesFamilyBranch") || "conjunta";
 
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
@@ -151,7 +152,8 @@ async function init(){
     rebuildRelationIndex();
 
     window.__raicesBranches=familyBranchDiagnostics();
-    console.info("EP-005.1 · Motor de ramas",window.__raicesBranches);
+    console.info("EP-005.2 · Ramas",window.__raicesBranches);
+    renderFamilyBranchSelector();
 
     renderPeople();
     populateTreePersonSelect();
@@ -353,6 +355,39 @@ function familyBranchDiagnostics(){
     counts:{eduardo:sets.eduardo.size,esther:sets.esther.size,conjunta:sets.conjunta.size,publicas:allPublic.size,fueraDeRamas:outside.length},
     outside
   };
+}
+
+function normalizeFamilyBranch(branchName){
+  return ["eduardo","esther","conjunta"].includes(branchName) ? branchName : "conjunta";
+}
+
+function renderFamilyBranchSelector(){
+  currentFamilyBranch=normalizeFamilyBranch(currentFamilyBranch);
+  document.querySelectorAll("[data-branch]").forEach(button=>{
+    const active=button.dataset.branch===currentFamilyBranch;
+    button.classList.toggle("active",active);
+    button.setAttribute("aria-pressed",String(active));
+  });
+}
+
+function setFamilyBranch(branchName,{centerTree=true}={}){
+  currentFamilyBranch=normalizeFamilyBranch(branchName);
+  localStorage.setItem("raicesFamilyBranch",currentFamilyBranch);
+  renderFamilyBranchSelector();
+
+  // EP-005.2: el selector ya es global y persistente.
+  // El filtrado de árbol y buscador se activa en las fases siguientes.
+  if(centerTree && currentFamilyBranch!=="conjunta"){
+    const rootId=FAMILY_BRANCH_ROOTS[currentFamilyBranch];
+    if(rootId && byId[rootId]){
+      if(treeFullMode)setFullTreeMode(false);
+      treeFocusId=rootId;
+      const select=$("treePersonSelect");
+      if(select)select.value=rootId;
+      buildTree(rootId);
+      requestAnimationFrame(fitTreeToView);
+    }
+  }
 }
 
 function siblingGroups(person){
@@ -1722,6 +1757,7 @@ function wireEvents(){
     if(personButton){event.preventDefault();openPerson(personButton.dataset.person);}
   });
 
+  document.querySelectorAll("[data-branch]").forEach(button => button.addEventListener("click",()=>setFamilyBranch(button.dataset.branch)));
   document.querySelectorAll(".bottom-nav button").forEach(button => button.addEventListener("click", () => showView(button.dataset.view)));
   $("peopleSearch").addEventListener("input",renderPeople);
   $("clearSearch").addEventListener("click",() => { $("peopleSearch").value=""; renderPeople(); });

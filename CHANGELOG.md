@@ -1,5 +1,14 @@
 # Historial de versiones
 
+## 4.2.0-alpha14 — EP-005.2 · Selector global de rama
+- Selector global `Eduardo | Esther | Conjunta` visible en la aplicación.
+- La selección persiste entre sesiones mediante almacenamiento local del navegador.
+- Al elegir Eduardo o Esther, el árbol normal se centra automáticamente en la persona raíz correspondiente.
+- La Rama conjunta conserva el contexto actual del árbol.
+- Esta fase aún no filtra Personas ni el árbol completo: EP-005.3 y EP-005.4 aplicarán el motor a esas vistas.
+- Eliminado definitivamente del encabezado el subtítulo de apellidos `Familias ...`.
+
+
 ## 4.2.0-alpha13 — EP-005.1 · Motor de ramas familiares
 - Motor automático para Rama Eduardo, Rama Esther y Rama conjunta.
 - Centros detectados en los datos: `P0015` — Eduardo de la Dehesa Liz y `P0027` — Esther García Reizabal.
