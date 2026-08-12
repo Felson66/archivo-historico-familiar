@@ -387,23 +387,31 @@ function setFamilyBranch(branchName,{centerTree=true}={}){
   localStorage.setItem("raicesFamilyBranch",currentFamilyBranch);
   renderFamilyBranchSelector();
 
-  const rootId=currentFamilyBranch!=="conjunta"
-    ? FAMILY_BRANCH_ROOTS[currentFamilyBranch]
-    : (byId[treeFocusId] ? treeFocusId : FAMILY_BRANCH_ROOTS.eduardo);
+  /*
+   * EP-005.3 alpha15c:
+   * "Conjunta" no es un tercer árbol centrado en la última persona.
+   * Es la unión visual de las ramas Eduardo + Esther, por lo que en PC
+   * entra directamente en Árbol completo.
+   */
+  if(currentFamilyBranch==="conjunta"){
+    populateTreePersonSelect();
+    setFullTreeMode(true);
+    return;
+  }
 
+  const rootId=FAMILY_BRANCH_ROOTS[currentFamilyBranch];
   if(centerTree && rootId && byId[rootId]){
     treeFocusId=rootId;
   }
 
   populateTreePersonSelect();
 
-  if(treeFullMode){
-    buildFullTree();
-    requestAnimationFrame(fitFullTreeToView);
-  }else{
-    buildTree(treeFocusId);
-    requestAnimationFrame(fitTreeToView);
-  }
+  /*
+   * Las ramas individuales vuelven a la vista genealógica normal centrada
+   * en su raíz. El usuario conserva la posibilidad de pulsar Árbol completo
+   * si quiere ver toda esa rama.
+   */
+  setFullTreeMode(false);
 }
 
 function siblingGroups(person){
@@ -1450,6 +1458,12 @@ function focusFullTreePerson(id){
 
 function setFullTreeMode(enabled){
   const desktop=!window.matchMedia("(max-width: 900px)").matches;
+
+  // En PC, Rama Conjunta representa necesariamente la unión completa.
+  if(currentFamilyBranch==="conjunta" && desktop){
+    enabled=true;
+  }
+
   treeFullMode=Boolean(enabled&&desktop);
 
   const section=$("tree");

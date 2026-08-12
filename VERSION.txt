@@ -1,3 +1,3 @@
-VERSIÓN: 4.2.0-alpha15b
+VERSIÓN: 4.2.0-alpha15c
 ESTADO: DESARROLLO
-HITO: EP-005.3 · Árbol filtrado por rama — corrección de inicialización
+HITO: EP-005.3 · Rama Conjunta corregida

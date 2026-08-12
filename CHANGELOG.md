@@ -1,5 +1,14 @@
 # Historial de versiones
 
+## 4.2.0-alpha15c — EP-005.3 · Rama Conjunta corregida
+- Corregido el comportamiento de Rama Conjunta.
+- Conjunta ya no conserva el foco de la última rama individual.
+- En PC, Conjunta abre directamente el Árbol completo con la unión Eduardo + Esther.
+- Eduardo y Esther mantienen su vista normal centrada en la raíz de cada rama.
+- El botón Árbol completo sigue disponible en las ramas individuales.
+- `personas.json` permanece intacto.
+
+
 ## 4.2.0-alpha15b — EP-005.3 · Árbol filtrado por rama (corregida)
 - Rehecha desde alpha14 estable.
 - Corregido el fallo de inicialización de alpha15: `currentFamilyBranch` es una variable, no una función.
