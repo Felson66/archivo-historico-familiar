@@ -6340,7 +6340,24 @@
     ],
     "hechos": [],
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000058",
+        "src": "assets/documentos/P00055/matrimonio-geeronimo-maria-mujica-sorrarain.pdf",
+        "nombre_archivo": "matrimonio-geeronimo-maria-mujica-sorrarain.pdf",
+        "formato": "application/pdf",
+        "titulo": "Matrimonio Geerónimo Maria, Mujica, Sorrarain",
+        "fecha": "03/11/1830",
+        "descripcion": "",
+        "personas": [
+          "P00055",
+          "P00054"
+        ],
+        "paginas": [
+          "assets/documentos/P00055/d000058-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "fecha_creacion": "2026-08-05T10:55:46.149Z",
     "ultima_modificacion": "2026-08-05T10:55:46.149Z",
     "padre": "",
@@ -6382,6 +6399,22 @@
         ],
         "paginas": [
           "assets/documentos/P00055/d000031-paginas/pagina-001.webp"
+        ]
+      },
+      {
+        "id": "D000058",
+        "src": "assets/documentos/P00055/matrimonio-geeronimo-maria-mujica-sorrarain.pdf",
+        "nombre_archivo": "matrimonio-geeronimo-maria-mujica-sorrarain.pdf",
+        "formato": "application/pdf",
+        "titulo": "Matrimonio Geerónimo Maria, Mujica, Sorrarain",
+        "fecha": "03/11/1830",
+        "descripcion": "",
+        "personas": [
+          "P00055",
+          "P00054"
+        ],
+        "paginas": [
+          "assets/documentos/P00055/d000058-paginas/pagina-001.webp"
         ]
       }
     ],
