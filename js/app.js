@@ -1458,12 +1458,6 @@ function focusFullTreePerson(id){
 
 function setFullTreeMode(enabled){
   const desktop=!window.matchMedia("(max-width: 900px)").matches;
-
-  // En PC, Rama Conjunta representa necesariamente la unión completa.
-  if(currentFamilyBranch==="conjunta" && desktop){
-    enabled=true;
-  }
-
   treeFullMode=Boolean(enabled&&desktop);
 
   const section=$("tree");

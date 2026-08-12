@@ -1,5 +1,13 @@
 # Historial de versiones
 
+## 4.2.0-alpha15d — EP-005.3 · Rama Conjunta con Vista normal
+- Al seleccionar `Conjunta` se sigue abriendo inicialmente `Árbol completo`.
+- Corregido el botón `Vista normal`: ya puede salir del árbol completo.
+- En `Vista normal`, Conjunta mantiene como universo la unión Eduardo + Esther y permite centrar el árbol en cualquier persona de esa unión.
+- Eduardo y Esther no cambian.
+- `personas.json` permanece intacto.
+
+
 ## 4.2.0-alpha15c — EP-005.3 · Rama Conjunta corregida
 - Corregido el comportamiento de Rama Conjunta.
 - Conjunta ya no conserva el foco de la última rama individual.
