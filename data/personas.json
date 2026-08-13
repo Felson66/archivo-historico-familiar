@@ -6894,6 +6894,33 @@
           "assets/documentos/P00065/d000059-paginas/pagina-001.webp",
           "assets/documentos/P00065/d000059-paginas/pagina-002.webp"
         ]
+      },
+      {
+        "id": "D000064",
+        "src": "assets/documentos/P00065/esquela-roberto.jpg",
+        "nombre_archivo": "esquela-roberto.jpg",
+        "formato": "image/jpeg",
+        "titulo": "Esquela Roberto",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00065"
+        ]
+      },
+      {
+        "id": "D000065",
+        "src": "assets/documentos/P00065/certifi-def-roberto.pdf",
+        "nombre_archivo": "certifi-def-roberto.pdf",
+        "formato": "application/pdf",
+        "titulo": "Certifi Defunción Roberto",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00065"
+        ],
+        "paginas": [
+          "assets/documentos/P00065/d000065-paginas/pagina-001.webp"
+        ]
       }
     ],
     "fecha_creacion": "2026-08-07T15:15:48.978Z",
@@ -7745,7 +7772,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "conyuges": [],
+    "conyuges": [
+      "P00092"
+    ],
     "hechos": [],
     "fotografias": [],
     "documentos": [],
@@ -7771,12 +7800,27 @@
     "visible": true,
     "conyuges": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000126",
+        "src": "assets/fotos/P00090/tono-portada.jpg",
+        "titulo": "Toño Portada",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00090"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-08-13T10:04:13.562Z",
     "ultima_modificacion": "2026-08-13T10:04:13.562Z",
     "padre": "P00085",
-    "madre": "P00086"
+    "madre": "P00086",
+    "fotografia_principal": "assets/fotos/P00090/tono-portada.jpg",
+    "fotoPosicion": "50% 18%"
   },
   {
     "id": "P00091",
@@ -7812,9 +7856,89 @@
     "documentos": [],
     "fecha_creacion": "2026-08-13T15:41:25.203Z",
     "ultima_modificacion": "2026-08-13T15:41:25.203Z",
-    "padre": "",
+    "padre": "P00092",
     "madre": "P00089",
     "fotografia_principal": "assets/fotos/P00091/alfre.jpg",
     "fotoPosicion": "50% 39%"
+  },
+  {
+    "id": "P00092",
+    "nombre": "Alfredo Garcia",
+    "nombre_conocido": "El rubio",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Aranda de Duero",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00089"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000127",
+        "src": "assets/fotos/P00092/alfredo.png",
+        "titulo": "Alfredo",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00092"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-08-13T20:20:06.412Z",
+    "ultima_modificacion": "2026-08-13T20:20:06.413Z",
+    "fotografia_principal": "assets/fotos/P00092/alfredo.png",
+    "fotoPosicion": "50% 50%",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00093",
+    "nombre": "Laura Garcia Reizabal",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Bilbao",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000128",
+        "src": "assets/fotos/P00093/laura.jpg",
+        "titulo": "Laura",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00093"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-08-13T20:21:33.934Z",
+    "ultima_modificacion": "2026-08-13T20:21:33.934Z",
+    "padre": "P00092",
+    "madre": "P00089",
+    "fotografia_principal": "assets/fotos/P00093/laura.jpg",
+    "fotoPosicion": "50% 24%"
   }
 ]
