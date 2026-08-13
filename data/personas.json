@@ -888,11 +888,11 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0007",
           "P0015",
           "P0016",
           "P0014",
-          "P0010",
-          "P0007"
+          "P0010"
         ]
       }
     ],
@@ -1564,11 +1564,11 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0007",
           "P0015",
           "P0016",
           "P0014",
-          "P0010",
-          "P0007"
+          "P0010"
         ]
       }
     ],
@@ -3314,11 +3314,11 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0007",
           "P0015",
           "P0016",
           "P0014",
-          "P0010",
-          "P0007"
+          "P0010"
         ]
       }
     ],
@@ -3746,11 +3746,11 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0007",
           "P0015",
           "P0016",
           "P0014",
-          "P0010",
-          "P0007"
+          "P0010"
         ]
       }
     ],
@@ -3960,11 +3960,11 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0007",
           "P0015",
           "P0016",
           "P0014",
-          "P0010",
-          "P0007"
+          "P0010"
         ]
       }
     ],
@@ -7762,5 +7762,44 @@
     "ultima_modificacion": "2026-08-13T10:04:13.562Z",
     "padre": "P00085",
     "madre": "P00086"
+  },
+  {
+    "id": "P00091",
+    "nombre": "Alfredo Garcia Reizabal",
+    "nombre_conocido": "Alfredito",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Bilbao",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000124",
+        "src": "assets/fotos/P00091/alfre.jpg",
+        "titulo": "Alfre",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00091"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-08-13T15:41:25.203Z",
+    "ultima_modificacion": "2026-08-13T15:41:25.203Z",
+    "padre": "",
+    "madre": "P00089",
+    "fotografia_principal": "assets/fotos/P00091/alfre.jpg",
+    "fotoPosicion": "50% 39%"
   }
 ]
