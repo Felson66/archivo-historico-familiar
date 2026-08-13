@@ -4761,7 +4761,7 @@
     "id_legacy": "p27",
     "id": "P0027",
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0027/esther-principal.jpg",
+    "fotografia_principal": "assets/fotos/P0027/esther-metro.jpg",
     "fotografias": [
       {
         "src": "assets/fotos/P0027/esther-principal.jpg",
@@ -4825,6 +4825,18 @@
           "P0032",
           "P0027"
         ]
+      },
+      {
+        "id": "F000121",
+        "src": "assets/fotos/P0027/esther-metro.jpg",
+        "titulo": "Esther Metro",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0027"
+        ]
       }
     ],
     "documentos": [],
@@ -4841,7 +4853,8 @@
     "situacion_vital": "vivo",
     "visible": true,
     "padre": "P00065",
-    "madre": "P00066"
+    "madre": "P00066",
+    "fotoPosicion": "50% 23%"
   },
   {
     "datos_resumen": "",
