@@ -154,6 +154,7 @@ async function init(){
     window.__raicesBranches=familyBranchDiagnostics();
     console.info("EP-005.2 · Ramas",window.__raicesBranches);
     renderFamilyBranchSelector();
+    setFamilyBranch(currentFamilyBranch,{centerTree:true});
 
     renderPeople();
     populateTreePersonSelect();

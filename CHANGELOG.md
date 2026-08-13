@@ -1,5 +1,12 @@
 # Historial de versiones
 
+## 4.2.0-alpha16b — Inicialización de rama persistida
+- Corregido el arranque cuando la última rama guardada es Eduardo, Esther o Conjunta.
+- La rama recuperada del navegador se aplica ahora mediante la misma lógica usada al cambiar de rama manualmente.
+- Árbol, foco, selector de personas y buscador arrancan sincronizados con la rama activa.
+- `personas.json` permanece intacto.
+
+
 ## 4.2.0-alpha16 — EP-005.4 · Buscador filtrado por rama
 - El buscador de Personas obedece al selector global de rama.
 - Rama Eduardo muestra únicamente las personas calculadas para Eduardo.
