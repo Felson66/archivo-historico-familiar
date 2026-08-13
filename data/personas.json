@@ -7649,7 +7649,20 @@
     ],
     "hijos": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000125",
+        "src": "assets/fotos/P00086/feli-portada.jpg",
+        "titulo": "Feli Portada",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00086"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000061",
@@ -7665,7 +7678,9 @@
       }
     ],
     "fecha_creacion": "2026-08-12T15:45:53.727Z",
-    "ultima_modificacion": "2026-08-12T15:45:53.727Z"
+    "ultima_modificacion": "2026-08-12T15:45:53.727Z",
+    "fotografia_principal": "assets/fotos/P00086/feli-portada.jpg",
+    "fotoPosicion": "50% 15%"
   },
   {
     "id": "P00087",
