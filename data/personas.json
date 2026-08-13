@@ -878,6 +878,22 @@
         "personas": [
           "P0007"
         ]
+      },
+      {
+        "id": "F000123",
+        "src": "assets/fotos/P0015/jackson-three.jpg",
+        "titulo": "Retrato",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0016",
+          "P0014",
+          "P0010",
+          "P0007"
+        ]
       }
     ],
     "documentos": [
@@ -1537,6 +1553,22 @@
         ],
         "personas": [
           "P0010"
+        ]
+      },
+      {
+        "id": "F000123",
+        "src": "assets/fotos/P0015/jackson-three.jpg",
+        "titulo": "Retrato",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0016",
+          "P0014",
+          "P0010",
+          "P0007"
         ]
       }
     ],
@@ -3272,6 +3304,22 @@
         "personas": [
           "P0014"
         ]
+      },
+      {
+        "id": "F000123",
+        "src": "assets/fotos/P0015/jackson-three.jpg",
+        "titulo": "Retrato",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0016",
+          "P0014",
+          "P0010",
+          "P0007"
+        ]
       }
     ],
     "documentos": [],
@@ -3688,6 +3736,22 @@
           "P0012",
           "P0015"
         ]
+      },
+      {
+        "id": "F000123",
+        "src": "assets/fotos/P0015/jackson-three.jpg",
+        "titulo": "Retrato",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0016",
+          "P0014",
+          "P0010",
+          "P0007"
+        ]
       }
     ],
     "documentos": [
@@ -3712,7 +3776,7 @@
     "cronologia": [],
     "lugares": [],
     "notas": "",
-    "fotoPosicion": "50% 42%",
+    "fotoPosicion": "50% 46%",
     "fecha_nacimiento": "02/10/1966",
     "lugar_nacimiento": "Bilbao",
     "fecha_defuncion": "",
@@ -3885,6 +3949,22 @@
         ],
         "personas": [
           "P0016"
+        ]
+      },
+      {
+        "id": "F000123",
+        "src": "assets/fotos/P0015/jackson-three.jpg",
+        "titulo": "Retrato",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0016",
+          "P0014",
+          "P0010",
+          "P0007"
         ]
       }
     ],
@@ -7501,7 +7581,20 @@
       "P00086"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000122",
+        "src": "assets/fotos/P00085/basilio-portada.png",
+        "titulo": "Basilio Portada",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00085"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000062",
@@ -7514,12 +7607,26 @@
         "personas": [
           "P00085"
         ]
+      },
+      {
+        "id": "D000063",
+        "src": "assets/documentos/P00085/basilio-recor.jpg",
+        "nombre_archivo": "basilio-recor.jpg",
+        "formato": "image/jpeg",
+        "titulo": "Basilio Recordatorio",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00085"
+        ]
       }
     ],
     "fecha_creacion": "2026-08-12T15:44:37.751Z",
     "ultima_modificacion": "2026-08-12T15:44:37.751Z",
     "padre": "",
-    "madre": ""
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00085/basilio-portada.png",
+    "fotoPosicion": "50% 36%"
   },
   {
     "id": "P00086",
