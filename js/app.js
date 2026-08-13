@@ -181,6 +181,13 @@ function showView(id){
   document.querySelectorAll(".view").forEach(view => view.classList.toggle("active", view.id === id));
   document.querySelectorAll(".bottom-nav button").forEach(button => button.classList.toggle("active", button.dataset.view === id));
   window.scrollTo({top:0, behavior:"smooth"});
+
+  // alpha16c: al entrar en Árbol, centrar cuando la vista ya tiene dimensiones reales.
+  if(id === "tree"){
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => fitTreeToView());
+    });
+  }
 }
 
 function renderPeople(){

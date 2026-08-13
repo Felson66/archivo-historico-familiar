@@ -1,5 +1,11 @@
 # Historial de versiones
 
+## 4.2.0-alpha16c — Centrado automático al entrar en Árbol
+- Corregido el desplazamiento del árbol al abrir su pestaña desde Personas.
+- El centrado se ejecuta después de hacer visible el lienzo, usando dos ciclos de renderizado.
+- No cambia la lógica de ramas ni `personas.json`.
+
+
 ## 4.2.0-alpha16b — Inicialización de rama persistida
 - Corregido el arranque cuando la última rama guardada es Eduardo, Esther o Conjunta.
 - La rama recuperada del navegador se aplica ahora mediante la misma lógica usada al cambiar de rama manualmente.
