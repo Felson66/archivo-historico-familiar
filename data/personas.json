@@ -7776,12 +7776,27 @@
       "P00092"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000129",
+        "src": "assets/fotos/P00089/josefina.png",
+        "titulo": "Josefina",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00089"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-08-13T10:02:56.680Z",
     "ultima_modificacion": "2026-08-13T10:02:56.680Z",
     "padre": "P00085",
-    "madre": "P00086"
+    "madre": "P00086",
+    "fotografia_principal": "assets/fotos/P00089/josefina.png",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00090",
