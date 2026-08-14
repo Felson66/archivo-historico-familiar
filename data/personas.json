@@ -696,7 +696,7 @@
       "P0006"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0007/boda-manuel-mercedes.jpg",
+    "fotografia_principal": "assets/fotos/P0007/manuel-de-la-dehesa.png",
     "fotografias": [
       {
         "id": "F000007",
@@ -906,6 +906,18 @@
         "personas": [
           "P0007"
         ]
+      },
+      {
+        "id": "F000131",
+        "src": "assets/fotos/P0007/manuel-de-la-dehesa.png",
+        "titulo": "Manuel de la Dehesa",
+        "fecha": "02/04/1956",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0007"
+        ]
       }
     ],
     "documentos": [
@@ -952,7 +964,7 @@
     "visible": true,
     "padre": "P0005",
     "madre": "P0006",
-    "fotoPosicion": "50% 60%"
+    "fotoPosicion": "50% 45%"
   },
   {
     "datos_resumen": "Hijo de Manuel y Francisca.\nDNI : 14.756.003 - La letra calculada sería la \"P\"",
