@@ -894,6 +894,18 @@
           "P0014",
           "P0010"
         ]
+      },
+      {
+        "id": "F000130",
+        "src": "assets/fotos/P0007/buque-munguia.png",
+        "titulo": "Buque MUNGUIA",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0007"
+        ]
       }
     ],
     "documentos": [
