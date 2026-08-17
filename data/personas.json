@@ -2,11 +2,6 @@
   {
     "datos_resumen": "",
     "lugar_descanso": null,
-    "hijos": [
-      "P0005",
-      "P0036",
-      "P0037"
-    ],
     "estado": "documentado",
     "conyuges": [
       "P0002"
@@ -24,7 +19,6 @@
     "nombre": "Francisco de la Dehesa Baladrón",
     "id_legacy": "p1",
     "id": "P0001",
-    "padres": [],
     "biografia": "",
     "fotografia_principal": "assets/fotos/P0001/carabineros.jpg",
     "fotografias": [
@@ -141,8 +135,8 @@
     "sexo": "hombre",
     "situacion_vital": "fallecido",
     "visible": true,
-    "padre": "",
-    "madre": "",
+    "padre": "P00094",
+    "madre": "P00095",
     "fotoPosicion": "50% 50%"
   },
   {
@@ -1120,6 +1114,22 @@
         "paginas": [
           "assets/documentos/P0008/d000057-paginas/pagina-001.webp",
           "assets/documentos/P0008/d000057-paginas/pagina-002.webp"
+        ]
+      },
+      {
+        "id": "D000072",
+        "src": "assets/documentos/P0008/certificado-nacimiento-francisco-liz.pdf",
+        "nombre_archivo": "certificado-nacimiento-francisco-liz.pdf",
+        "formato": "application/pdf",
+        "titulo": "Certificado Nacimiento Francisco Liz",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0008"
+        ],
+        "paginas": [
+          "assets/documentos/P0008/d000072-paginas/pagina-001.webp",
+          "assets/documentos/P0008/d000072-paginas/pagina-002.webp"
         ]
       }
     ],
@@ -5696,7 +5706,6 @@
   {
     "datos_resumen": "",
     "lugar_descanso": null,
-    "hijos": [],
     "estado": "documentado",
     "conyuges": [],
     "hechos": [
@@ -5712,11 +5721,23 @@
     "nombre": "María Juana de la Dehesa Baladrón",
     "id_legacy": null,
     "id": "P0038",
-    "padres": [],
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000066",
+        "src": "assets/documentos/P0038/maria-juana-de-la-dehesa-baladron.png",
+        "nombre_archivo": "maria-juana-de-la-dehesa-baladron.png",
+        "formato": "image/png",
+        "titulo": "Ascenso Maestra Maria Juana de la Dehesa Baladron",
+        "fecha": "22/02/1915",
+        "descripcion": "",
+        "personas": [
+          "P0038"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": "",
@@ -5729,13 +5750,12 @@
     "sexo": "mujer",
     "situacion_vital": "fallecido",
     "visible": true,
-    "padre": "",
-    "madre": ""
+    "padre": "P00094",
+    "madre": "P00095"
   },
   {
     "datos_resumen": "",
     "lugar_descanso": null,
-    "hijos": [],
     "estado": "documentado",
     "conyuges": [],
     "hechos": [
@@ -5751,11 +5771,35 @@
     "nombre": "Antonio de la Dehesa Baladrón",
     "id_legacy": null,
     "id": "P0039",
-    "padres": [],
     "biografia": "",
     "fotografia_principal": "",
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000067",
+        "src": "assets/documentos/P0039/antonio-de-la-dehesa-baladron.png",
+        "nombre_archivo": "antonio-de-la-dehesa-baladron.png",
+        "formato": "image/png",
+        "titulo": "Antonio de la Dehesa Baladron Concejal",
+        "fecha": "18/05/1923",
+        "descripcion": "",
+        "personas": [
+          "P0039"
+        ]
+      },
+      {
+        "id": "D000068",
+        "src": "assets/documentos/P0039/antonio-de-la-dehesa-baladron-caballerias.png",
+        "nombre_archivo": "antonio-de-la-dehesa-baladron-caballerias.png",
+        "formato": "image/png",
+        "titulo": "Antonio de la Dehesa Baladron Robo en Caballerias",
+        "fecha": "28/12/1914",
+        "descripcion": "",
+        "personas": [
+          "P0039"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": "",
@@ -5768,8 +5812,8 @@
     "sexo": "hombre",
     "situacion_vital": "fallecido",
     "visible": true,
-    "padre": "",
-    "madre": ""
+    "padre": "P00094",
+    "madre": "P00095"
   },
   {
     "datos_resumen": "",
@@ -7235,7 +7279,7 @@
     "sexo": "hombre",
     "situacion_vital": "fallecido",
     "fecha_nacimiento": "",
-    "lugar_nacimiento": "",
+    "lugar_nacimiento": "Paredes (Lugo)",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "",
@@ -7259,7 +7303,7 @@
     "sexo": "mujer",
     "situacion_vital": "fallecido",
     "fecha_nacimiento": "",
-    "lugar_nacimiento": "",
+    "lugar_nacimiento": "Paredes (Lugo)",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "",
@@ -7979,5 +8023,119 @@
     "madre": "P00089",
     "fotografia_principal": "assets/fotos/P00093/laura.jpg",
     "fotoPosicion": "50% 24%"
+  },
+  {
+    "id": "P00094",
+    "nombre": "Jacinto de la Dehesa",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Riego del Camino",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "Labrador",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00095"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [
+      {
+        "id": "D000070",
+        "src": "assets/documentos/P00094/jacinto-de-la-dehesa-exprop.png",
+        "nombre_archivo": "jacinto-de-la-dehesa-exprop.png",
+        "formato": "image/png",
+        "titulo": "Jacinto de la Dehesa Expropiación viña",
+        "fecha": "13/06/1888",
+        "descripcion": "",
+        "personas": [
+          "P00094"
+        ]
+      },
+      {
+        "id": "D000071",
+        "src": "assets/documentos/P00094/zona-militar-toro-francisco.png",
+        "nombre_archivo": "zona-militar-toro-francisco.png",
+        "formato": "image/png",
+        "titulo": "Zona Militar Toro Francisco",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00094"
+        ]
+      }
+    ],
+    "fecha_creacion": "2026-08-17T12:44:37.045Z",
+    "ultima_modificacion": "2026-08-17T12:44:37.045Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00095",
+    "nombre": "Julia Baladron",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Pedrosa Zamora",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00094"
+    ],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-17T12:45:22.305Z",
+    "ultima_modificacion": "2026-08-17T12:45:22.305Z"
+  },
+  {
+    "id": "P00096",
+    "nombre": "Joaquin de la Dehesa Baladron",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [
+      {
+        "id": "D000069",
+        "src": "assets/documentos/P00096/joaquin-de-la-dehesa-baladron.png",
+        "nombre_archivo": "joaquin-de-la-dehesa-baladron.png",
+        "formato": "image/png",
+        "titulo": "Joaquin de la Dehesa Baladron Premio Constancia",
+        "fecha": "15/09/1916",
+        "descripcion": "",
+        "personas": [
+          "P00096"
+        ]
+      }
+    ],
+    "fecha_creacion": "2026-08-17T12:51:21.296Z",
+    "ultima_modificacion": "2026-08-17T12:51:21.296Z",
+    "padre": "P00094",
+    "madre": "P00095"
   }
 ]
