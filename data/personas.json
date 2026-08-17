@@ -8118,7 +8118,20 @@
     "visible": true,
     "conyuges": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000132",
+        "src": "assets/fotos/P00096/carabineros.jpg",
+        "titulo": "Carabineros",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00096"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000069",
@@ -8136,6 +8149,8 @@
     "fecha_creacion": "2026-08-17T12:51:21.296Z",
     "ultima_modificacion": "2026-08-17T12:51:21.296Z",
     "padre": "P00094",
-    "madre": "P00095"
+    "madre": "P00095",
+    "fotografia_principal": "assets/fotos/P00096/carabineros.jpg",
+    "fotoPosicion": "50% 50%"
   }
 ]
