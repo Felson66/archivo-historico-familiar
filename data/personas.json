@@ -7287,9 +7287,7 @@
     "notas": "Padre de Francisco Liz",
     "datos_resumen": "Padre de Francisco Liz",
     "visible": true,
-    "padres": [],
     "conyuges": [],
-    "hijos": [],
     "hechos": [
       {
         "tipo": "documentado",
@@ -7299,7 +7297,10 @@
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-08-10T18:58:41.510Z",
-    "ultima_modificacion": "2026-08-10T18:58:41.511Z"
+    "ultima_modificacion": "2026-08-10T18:58:41.511Z",
+    "padre": "",
+    "madre": "P00098",
+    "padreEstado": "incognito"
   },
   {
     "id": "P00074",
@@ -7316,14 +7317,15 @@
     "notas": "Madre de Francisco Liz",
     "datos_resumen": "Madre de Francisco Liz",
     "visible": true,
-    "padres": [],
     "conyuges": [],
-    "hijos": [],
     "hechos": [],
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-08-10T18:59:18.981Z",
-    "ultima_modificacion": "2026-08-10T18:59:18.982Z"
+    "ultima_modificacion": "2026-08-10T18:59:18.982Z",
+    "padre": "",
+    "madre": "P00097",
+    "padreEstado": "incognito"
   },
   {
     "id": "P00075",
@@ -8157,5 +8159,53 @@
     "madre": "P00095",
     "fotografia_principal": "assets/fotos/P00096/carabineros.jpg",
     "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00097",
+    "nombre": "Juliana Fernandez",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Paredes",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-18T08:11:09.455Z",
+    "ultima_modificacion": "2026-08-18T08:11:09.455Z"
+  },
+  {
+    "id": "P00098",
+    "nombre": "Isabel Vazquez",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Paredes",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-08-18T08:12:48.840Z",
+    "ultima_modificacion": "2026-08-18T08:12:48.840Z"
   }
 ]
