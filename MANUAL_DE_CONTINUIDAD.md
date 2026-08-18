@@ -70,3 +70,8 @@ Desde 4.2.0-alpha12, **Ajustar todo** toma como referencia el espacio realmente 
 por las personas del árbol completo, en lugar del tamaño teórico de todo el lienzo.
 Esto permite aprovechar mejor el monitor y mostrar las tarjetas a mayor escala sin
 dejar personas fuera del área visible.
+
+
+## Progenitor incógnito
+
+Cuando una fuente documental indique expresamente que un padre o una madre es incógnito, no se crea una persona ficticia. Se usa `padreEstado: "incognito"` o `madreEstado: "incognito"`. La ausencia de estos campos significa simplemente que ese dato no consta en Raíces. Si posteriormente se identifica al progenitor, se desmarca el estado incógnito y se selecciona la persona correspondiente.

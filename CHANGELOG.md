@@ -1,5 +1,15 @@
 # Historial de versiones
 
+## 4.2.0-alpha17 — Progenitor incógnito documentado
+- Se incorporan `padreEstado: "incognito"` y `madreEstado: "incognito"`.
+- Administración permite marcar padre o madre como incógnitos según documentación.
+- El estado incógnito es incompatible con seleccionar una persona como ese progenitor.
+- La ficha pública y el panel rápido muestran el estado documental.
+- El árbol lo indica en la tarjeta de la persona, sin crear personas ficticias.
+- Las personas sin estos campos siguen funcionando sin migración.
+- `personas.json` no se modifica durante la actualización.
+
+
 ## 4.2.0-alpha16c — Centrado automático al entrar en Árbol
 - Corregido el desplazamiento del árbol al abrir su pestaña desde Personas.
 - El centrado se ejecuta después de hacer visible el lienzo, usando dos ciclos de renderizado.

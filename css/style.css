@@ -1808,3 +1808,8 @@ body.document-viewer-open{overflow:hidden}
   .branch-switcher{display:grid;grid-template-columns:auto repeat(3,1fr);gap:5px;}
   .branch-switcher button{padding:8px 6px;font-size:12px;}
 }
+
+.documented-unknown-public{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.documented-unknown-public span,.tree-unknown-parent{display:inline-flex;padding:5px 9px;border:1px dashed currentColor;border-radius:999px;font-size:.78rem;opacity:.78}
+.tree-card-unknown{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}
+.tree-card-unknown .tree-unknown-parent{padding:2px 6px;font-size:.66rem}

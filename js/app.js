@@ -477,13 +477,28 @@ function familyGroup(title, ids, emptyText="No consta"){
   </div>`;
 }
 
+function documentedUnknownParents(person){
+  const items=[];
+  if(person.padreEstado==="incognito")items.push("Padre incógnito (según documentación)");
+  if(person.madreEstado==="incognito")items.push("Madre incógnita (según documentación)");
+  return items;
+}
+
+function documentedUnknownParentsMarkup(person){
+  const items=documentedUnknownParents(person);
+  return items.length
+    ? `<div class="documented-unknown-public">${items.map(item=>`<span>${esc(item)}</span>`).join("")}</div>`
+    : "";
+}
+
 function renderFamily(person){
   const parents = parentIdsFor(person);
   const siblings = siblingGroups(person);
   const hasAnySibling = siblings.full.length || siblings.half.length || siblings.commonParent.length;
 
   return `<div class="family-block">
-    ${familyGroup("Padres", parents, "No constan padres registrados")}
+    ${familyGroup("Padres", parents, documentedUnknownParents(person).length ? "" : "No constan padres registrados")}
+    ${documentedUnknownParentsMarkup(person)}
     ${siblings.full.length
       ? familyGroup("Hermanos", siblings.full)
       : (!hasAnySibling
@@ -798,7 +813,7 @@ function openTreeQuickPanel(id){
   const avatar=personAvatarMarkup(person,{size:"large",className:`tree-quick-avatar tree-doc-${treeDocumentationLevel(person)}`});
   const parents=parentIdsFor(person); const siblings=siblingGroups(person); const allSiblings=uniqueIds([...siblings.full,...siblings.half,...siblings.commonParent]); const spouses=spouseIdsFor(person); const children=childIdsFor(person); const life=personLifeLine(person); const secondary=[person.lugar_nacimiento,person.profesion].filter(Boolean).join(" · ");
   $("personDrawer").classList.add("tree-quick-mode");
-  $("drawerContent").innerHTML=`<section class="tree-quick-hero tree-quick-hero-avatar"><div class="tree-quick-avatar-wrap">${avatar}</div><div class="tree-quick-intro"><span class="badge">${esc(stateLabel(person.estado))}</span><h2>${esc(person.nombre)}</h2>${life?`<div class="tree-quick-life">${esc(life)}</div>`:""}${secondary?`<div class="tree-quick-secondary">${esc(secondary)}</div>`:""}<div class="tree-quick-actions"><button type="button" class="primary" data-tree-center-person="${esc(person.id)}">Centrar en el árbol</button><button type="button" class="soft" data-open-full-person="${esc(person.id)}">Abrir ficha completa</button></div></div></section><div class="tree-quick-stats"><span><strong>${parents.length}</strong> progenitores</span><span><strong>${allSiblings.length}</strong> hermanos</span><span><strong>${spouses.length}</strong> cónyuges</span><span><strong>${children.length}</strong> hijos</span></div><section class="tree-quick-section"><h3>Padres</h3>${quickRelationButtons(parents,"No constan padres")}</section>${spouses.length?`<section class="tree-quick-section"><h3>Cónyuges</h3>${quickRelationButtons(spouses,"No consta cónyuge")}</section>`:""}${children.length?`<section class="tree-quick-section"><h3>Hijos</h3>${quickRelationButtons(children,"No constan hijos")}</section>`:""}${allSiblings.length?`<section class="tree-quick-section"><h3>Hermanos</h3>${quickRelationButtons(allSiblings,"No constan hermanos")}</section>`:""}`;
+  $("drawerContent").innerHTML=`<section class="tree-quick-hero tree-quick-hero-avatar"><div class="tree-quick-avatar-wrap">${avatar}</div><div class="tree-quick-intro"><span class="badge">${esc(stateLabel(person.estado))}</span><h2>${esc(person.nombre)}</h2>${life?`<div class="tree-quick-life">${esc(life)}</div>`:""}${secondary?`<div class="tree-quick-secondary">${esc(secondary)}</div>`:""}<div class="tree-quick-actions"><button type="button" class="primary" data-tree-center-person="${esc(person.id)}">Centrar en el árbol</button><button type="button" class="soft" data-open-full-person="${esc(person.id)}">Abrir ficha completa</button></div></div></section><div class="tree-quick-stats"><span><strong>${parents.length}</strong> progenitores</span><span><strong>${allSiblings.length}</strong> hermanos</span><span><strong>${spouses.length}</strong> cónyuges</span><span><strong>${children.length}</strong> hijos</span></div><section class="tree-quick-section"><h3>Padres</h3>${quickRelationButtons(parents,documentedUnknownParents(person).length?"":"No constan padres")}${documentedUnknownParentsMarkup(person)}</section>${spouses.length?`<section class="tree-quick-section"><h3>Cónyuges</h3>${quickRelationButtons(spouses,"No consta cónyuge")}</section>`:""}${children.length?`<section class="tree-quick-section"><h3>Hijos</h3>${quickRelationButtons(children,"No constan hijos")}</section>`:""}${allSiblings.length?`<section class="tree-quick-section"><h3>Hermanos</h3>${quickRelationButtons(allSiblings,"No constan hermanos")}</section>`:""}`;
   $("drawerBackdrop").classList.add("open"); $("personDrawer").classList.add("open"); $("personDrawer").setAttribute("aria-hidden","false"); document.body.classList.add("drawer-open"); history.replaceState(null,"",`#arbol/${encodeURIComponent(id)}`);
 }
 function centerTreeOnPerson(id,{keepPanel=false}={}){
@@ -1059,12 +1074,17 @@ function treeNodeLabel(person){
     documents?`<span title="Documentos">📄 ${documents}</span>`:""
   ].filter(Boolean).join("");
 
+  const unknownParentNote=documentedUnknownParents(person)
+    .map(item=>`<span class="tree-unknown-parent">${esc(item.replace(" (según documentación)",""))}</span>`)
+    .join("");
+
   return `<div class="tree-person-card tree-doc-${state}" data-person-id="${esc(person.id)}">
     <div class="tree-card-avatar">${avatar}</div>
     <div class="tree-card-content">
       <strong>${esc(person.nombre)}</strong>
       ${meta?`<div class="tree-card-meta">${meta}</div>`:""}
       ${counters?`<div class="tree-card-counters">${counters}</div>`:""}
+      ${unknownParentNote?`<div class="tree-card-unknown">${unknownParentNote}</div>`:""}
     </div>
   </div>`;
 }

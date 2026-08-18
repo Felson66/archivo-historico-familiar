@@ -804,3 +804,7 @@ textarea:focus-visible{
     grid-template-columns:1fr;
   }
 }
+
+.documented-unknown{display:flex!important;align-items:center;gap:8px;margin-top:4px;font-size:.88rem;font-weight:600!important}
+.documented-unknown input{width:auto}
+.documented-unknown span{font-weight:600!important}

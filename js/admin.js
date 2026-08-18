@@ -12,7 +12,7 @@ const connectFolder=$("connectFolder"),folderStatus=$("folderStatus"),manager=$(
 const newPerson=$("newPerson"),newPhoto=$("newPhoto"),newDocument=$("newDocument"),photosCount=$("photosCount"),documentsCount=$("documentsCount");
 const expedientHeader=$("expedientHeader"),expedientId=$("expedientId"),expedientName=$("expedientName"),expedientLife=$("expedientLife"),expedientMeta=$("expedientMeta"),expedientVisibility=$("expedientVisibility"),expedientPhotos=$("expedientPhotos"),expedientDocuments=$("expedientDocuments"),expedientFacts=$("expedientFacts"),expedientPhotosCount=$("expedientPhotosCount"),expedientDocumentsCount=$("expedientDocumentsCount"),expedientFactsCount=$("expedientFactsCount");
 const photosWorkspace=$("photosWorkspace"),documentsWorkspace=$("documentsWorkspace"),biographyWorkspace=$("biographyWorkspace");
-const relationsWorkspace=$("relationsWorkspace"),relationsCount=$("relationsCount"),fatherSearch=$("fatherSearch"),fatherSelect=$("fatherSelect"),motherSearch=$("motherSearch"),motherSelect=$("motherSelect"),spouseSearch=$("spouseSearch"),spouseSelect=$("spouseSelect"),addSpouse=$("addSpouse"),spouseList=$("spouseList"),derivedChildren=$("derivedChildren"),derivedSiblings=$("derivedSiblings"),relationsWarnings=$("relationsWarnings"),relationsMessage=$("relationsMessage"),saveRelations=$("saveRelations");
+const relationsWorkspace=$("relationsWorkspace"),relationsCount=$("relationsCount"),fatherSearch=$("fatherSearch"),fatherSelect=$("fatherSelect"),fatherUnknown=$("fatherUnknown"),motherSearch=$("motherSearch"),motherSelect=$("motherSelect"),motherUnknown=$("motherUnknown"),spouseSearch=$("spouseSearch"),spouseSelect=$("spouseSelect"),addSpouse=$("addSpouse"),spouseList=$("spouseList"),derivedChildren=$("derivedChildren"),derivedSiblings=$("derivedSiblings"),relationsWarnings=$("relationsWarnings"),relationsMessage=$("relationsMessage"),saveRelations=$("saveRelations");
 const photoFraming=$("photoFraming"),framingPreviewImage=$("framingPreviewImage"),framingPreviewState=$("framingPreviewState"),framingPreviewName=$("framingPreviewName"),framingPreviewSummary=$("framingPreviewSummary"),photoPositionX=$("photoPositionX"),photoPositionY=$("photoPositionY"),photoPositionXValue=$("photoPositionXValue"),photoPositionYValue=$("photoPositionYValue"),savePhotoPosition=$("savePhotoPosition"),resetPhotoPosition=$("resetPhotoPosition");
 const photosTab=$("photosTab"),documentsTab=$("documentsTab"),biographyTab=$("biographyTab"),relationsTab=$("relationsTab"),photosEmpty=$("photosEmpty"),documentsEmpty=$("documentsEmpty"),photoGallery=$("photoGallery"),documentGallery=$("documentGallery"),biographyPanel=$("biographyPanel"),managerResult=$("managerResult"),factsCount=$("factsCount");
 const bioName=$("bioName"),bioBirthDate=$("bioBirthDate"),bioBirthPlace=$("bioBirthPlace"),bioDeathDate=$("bioDeathDate"),bioDeathPlace=$("bioDeathPlace"),bioProfession=$("bioProfession"),bioKnownName=$("bioKnownName"),bioSex=$("bioSex"),bioLifeStatus=$("bioLifeStatus"),bioState=$("bioState"),bioSummary=$("bioSummary"),bioVisible=$("bioVisible"),savePersonalData=$("savePersonalData");
@@ -426,6 +426,11 @@ function renderRelationsPanel(person){
 
   fillRelationSelect(fatherSelect,person.id,fatherId,fatherSearch.value,"No consta");
   fillRelationSelect(motherSelect,person.id,motherId,motherSearch.value,"No consta");
+
+  fatherUnknown.checked=person.padreEstado==="incognito";
+  motherUnknown.checked=person.madreEstado==="incognito";
+  fatherSearch.disabled=fatherSelect.disabled=fatherUnknown.checked;
+  motherSearch.disabled=motherSelect.disabled=motherUnknown.checked;
   fillRelationSelect(spouseSelect,person.id,"",spouseSearch.value,"Selecciona una persona...");
   renderRelationChips();
   renderDerivedRelations(person);
@@ -956,6 +961,25 @@ spouseSearch.addEventListener("input",()=>{
   });
 });
 
+function syncUnknownParentControl(kind){
+  const isFather=kind==="father";
+  const check=isFather?fatherUnknown:motherUnknown;
+  const search=isFather?fatherSearch:motherSearch;
+  const select=isFather?fatherSelect:motherSelect;
+
+  if(check.checked){
+    select.value="";
+    search.value="";
+  }
+  search.disabled=select.disabled=check.checked;
+
+  const person=currentPerson();
+  if(person)renderRelationsWarnings(person);
+}
+
+fatherUnknown.addEventListener("change",()=>syncUnknownParentControl("father"));
+motherUnknown.addEventListener("change",()=>syncUnknownParentControl("mother"));
+
 addSpouse.addEventListener("click",()=>{
   const person=currentPerson();
   const spouseId=spouseSelect.value;
@@ -988,8 +1012,8 @@ saveRelations.addEventListener("click",async()=>{
   hideResult(relationsMessage);
 
   try{
-    const fatherId=fatherSelect.value;
-    const motherId=motherSelect.value;
+    const fatherId=fatherUnknown.checked ? "" : fatherSelect.value;
+    const motherId=motherUnknown.checked ? "" : motherSelect.value;
     const warnings=relationshipWarningsFor(person,fatherId,motherId,pendingSpouseIds);
 
     if(warnings.length){
@@ -999,6 +1023,12 @@ saveRelations.addEventListener("click",async()=>{
 
     person.padre=fatherId;
     person.madre=motherId;
+
+    if(fatherUnknown.checked)person.padreEstado="incognito";
+    else delete person.padreEstado;
+
+    if(motherUnknown.checked)person.madreEstado="incognito";
+    else delete person.madreEstado;
 
     delete person.padres;
     delete person.hijos;
