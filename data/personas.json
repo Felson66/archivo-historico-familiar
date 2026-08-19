@@ -1673,12 +1673,12 @@
       "P0009"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0011/conchi-portada.jpg",
+    "fotografia_principal": "assets/fotos/P0011/conchi-liz.jpg",
     "fotografias": [
       {
         "id": "F000089",
         "src": "assets/fotos/P0011/conchi-portada.jpg",
-        "titulo": "Conchi Portada",
+        "titulo": "Conchi",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
@@ -1691,6 +1691,18 @@
         "id": "F000090",
         "src": "assets/fotos/P0011/tia.jpg",
         "titulo": "Carnet Funcionario Ministerio",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000134",
+        "src": "assets/fotos/P0011/conchi-liz.jpg",
+        "titulo": "Conchi Liz",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
@@ -1765,7 +1777,7 @@
     "cronologia": [],
     "lugares": [],
     "notas": "DNI: 14.401.424-C",
-    "fotoPosicion": "50% 50%",
+    "fotoPosicion": "50% 44%",
     "fecha_nacimiento": "20/10/1931",
     "lugar_nacimiento": "",
     "fecha_defuncion": "23/04/2010",
@@ -3786,6 +3798,31 @@
           "P0014",
           "P0010"
         ]
+      },
+      {
+        "id": "F000136",
+        "src": "assets/fotos/P0015/edu-uni-deusto.jpg",
+        "titulo": "Edu Uni Deusto",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015"
+        ]
+      },
+      {
+        "id": "F000137",
+        "src": "assets/fotos/P0015/edu-y-ale.jpg",
+        "titulo": "Edu y Ale",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0026"
+        ]
       }
     ],
     "documentos": [
@@ -4141,6 +4178,18 @@
           "Edu",
           "Lola"
         ],
+        "personas": [
+          "P0018"
+        ]
+      },
+      {
+        "id": "F000135",
+        "src": "assets/fotos/P0018/edu-gonzalez-de-la-dehesa.jpg",
+        "titulo": "Edu Gonzalez de la Dehesa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
         "personas": [
           "P0018"
         ]
@@ -4846,6 +4895,19 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0026"
+        ]
+      },
+      {
+        "id": "F000137",
+        "src": "assets/fotos/P0015/edu-y-ale.jpg",
+        "titulo": "Edu y Ale",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
           "P0026"
         ]
       }
