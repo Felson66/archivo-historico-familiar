@@ -912,6 +912,20 @@
         "personas": [
           "P0007"
         ]
+      },
+      {
+        "id": "F000138",
+        "src": "assets/fotos/P0015/monte-picayo.jpg",
+        "titulo": "Monte Picayo - Valencia",
+        "fecha": "1967",
+        "lugar": "Monte Picayo - Valencia",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0007",
+          "P0010"
+        ]
       }
     ],
     "documentos": [
@@ -1602,6 +1616,20 @@
           "P0015",
           "P0016",
           "P0014",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000138",
+        "src": "assets/fotos/P0015/monte-picayo.jpg",
+        "titulo": "Monte Picayo - Valencia",
+        "fecha": "1967",
+        "lugar": "Monte Picayo - Valencia",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0007",
           "P0010"
         ]
       }
@@ -3823,6 +3851,20 @@
           "P0015",
           "P0026"
         ]
+      },
+      {
+        "id": "F000138",
+        "src": "assets/fotos/P0015/monte-picayo.jpg",
+        "titulo": "Monte Picayo - Valencia",
+        "fecha": "1967",
+        "lugar": "Monte Picayo - Valencia",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0007",
+          "P0010"
+        ]
       }
     ],
     "documentos": [
@@ -5261,6 +5303,18 @@
         ],
         "personas": [
           "P0018",
+          "P0030"
+        ]
+      },
+      {
+        "id": "F000139",
+        "src": "assets/fotos/P0030/eder-y-sira.jpg",
+        "titulo": "Eder y Sira",
+        "fecha": "2002",
+        "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
           "P0030"
         ]
       }
