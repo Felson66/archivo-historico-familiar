@@ -4713,7 +4713,7 @@
     "datos_resumen": "",
     "lugar_descanso": null,
     "hijos": [],
-    "estado": "pendiente",
+    "estado": "documentado",
     "conyuges": [],
     "hechos": [
       {
@@ -5723,11 +5723,11 @@
     "conyuges": [],
     "hechos": [
       {
-        "tipo": "documented",
+        "tipo": "documentado",
         "texto": "Figura como maestra de Coomonte en una relación de ascensos publicada en 1915."
       },
       {
-        "tipo": "hypothesis",
+        "tipo": "memoria familiar",
         "texto": "Posible hermana de Francisco de la Dehesa Baladrón; parentesco pendiente de confirmación documental."
       }
     ],
@@ -5758,7 +5758,7 @@
     "lugar_nacimiento": "1915",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
-    "profesion": "",
+    "profesion": "Maestra",
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
