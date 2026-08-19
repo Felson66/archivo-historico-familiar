@@ -7146,6 +7146,22 @@
         "personas": [
           "P00067"
         ]
+      },
+      {
+        "id": "D000073",
+        "src": "assets/documentos/P00067/certificado-defuncion-angel-gomez-neira.pdf",
+        "nombre_archivo": "certificado-defuncion-angel-gomez-neira.pdf",
+        "formato": "application/pdf",
+        "titulo": "Certificado Defuncion Angel Gomez Neira",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00067"
+        ],
+        "paginas": [
+          "assets/documentos/P00067/d000073-paginas/pagina-001.webp",
+          "assets/documentos/P00067/d000073-paginas/pagina-002.webp"
+        ]
       }
     ],
     "fecha_creacion": "2026-08-10T11:05:17.848Z",
