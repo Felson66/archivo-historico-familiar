@@ -2807,6 +2807,19 @@
           "P0013",
           "P0014"
         ]
+      },
+      {
+        "id": "F000141",
+        "src": "assets/fotos/P0020/raquel-bebe.jpg",
+        "titulo": "Raquel Bebe",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0020",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
@@ -4474,6 +4487,19 @@
           "P0022",
           "P0020"
         ]
+      },
+      {
+        "id": "F000141",
+        "src": "assets/fotos/P0020/raquel-bebe.jpg",
+        "titulo": "Raquel Bebe",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0020",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
@@ -4737,6 +4763,18 @@
         ],
         "personas": [
           "P0022",
+          "P0023"
+        ]
+      },
+      {
+        "id": "F000142",
+        "src": "assets/fotos/P0023/ari-pintora.jpg",
+        "titulo": "Ari Pintora",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
           "P0023"
         ]
       }
