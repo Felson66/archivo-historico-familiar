@@ -922,8 +922,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0015",
           "P0007",
+          "P0015",
           "P0010"
         ]
       }
@@ -1388,7 +1388,7 @@
       "P0009"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0010/mercedes-liz-portada.jpg",
+    "fotografia_principal": "assets/fotos/P0010/mercedes-liz-2.jpg",
     "fotografias": [
       {
         "id": "F000007",
@@ -1628,8 +1628,20 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0015",
           "P0007",
+          "P0015",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000140",
+        "src": "assets/fotos/P0010/mercedes-liz-2.jpg",
+        "titulo": "Mercedes Liz",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
           "P0010"
         ]
       }
@@ -1651,7 +1663,7 @@
     "cronologia": [],
     "lugares": [],
     "notas": "",
-    "fotoPosicion": "50% 35%",
+    "fotoPosicion": "50% 33%",
     "fecha_nacimiento": "11/09/1927",
     "lugar_nacimiento": "Santurce",
     "fecha_defuncion": "28/04/2009",
@@ -3861,8 +3873,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0015",
           "P0007",
+          "P0015",
           "P0010"
         ]
       }
