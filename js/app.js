@@ -1515,198 +1515,106 @@ function setFullTreeMode(enabled){
 
 function buildTree(focusId=treeFocusId){
   const allowedIds=treeIdsForSelectedBranch();
-  let focus = byId[focusId];
-
+  let focus=byId[focusId];
   if(!focus || !allowedIds.has(focus.id)){
     const branchRoot=currentFamilyBranch!=="conjunta" ? FAMILY_BRANCH_ROOTS[currentFamilyBranch] : null;
-    focus=(branchRoot && byId[branchRoot] && allowedIds.has(branchRoot))
-      ? byId[branchRoot]
-      : treePeopleForSelectedBranch()[0];
+    focus=(branchRoot && byId[branchRoot] && allowedIds.has(branchRoot)) ? byId[branchRoot] : treePeopleForSelectedBranch()[0];
   }
-  if(!focus) return;
+  if(!focus)return;
 
-  treeFocusId = focus.id;
-  const select = $("treePersonSelect");
-  if(select) select.value = treeFocusId;
+  treeFocusId=focus.id;
+  const select=$("treePersonSelect");
+  if(select)select.value=treeFocusId;
 
-  const parents = treeRelationIds(parentIdsFor(focus),allowedIds);
-  const grandparents = treeRelationIds(parents.flatMap(id => parentIdsFor(byId[id])),allowedIds);
-  const siblingSets = siblingGroups(focus);
-  const allSiblings = uniqueIds([
-    ...siblingSets.full,
-    ...siblingSets.half,
-    ...siblingSets.commonParent
-  ]);
-  const siblings = treeShowSiblings ? treeRelationIds(allSiblings,allowedIds) : [];
-  const spouses = treeRelationIds(spouseIdsFor(focus),allowedIds);
-  const children = treeRelationIds(childIdsFor(focus),allowedIds);
+  const parents=treeRelationIds(parentIdsFor(focus),allowedIds);
+  const siblingSets=siblingGroups(focus);
+  const allSiblings=uniqueIds([...siblingSets.full,...siblingSets.half,...siblingSets.commonParent]);
+  const siblings=treeShowSiblings?treeRelationIds(allSiblings,allowedIds):[];
+  const spouses=treeRelationIds(spouseIdsFor(focus),allowedIds);
+  const children=treeRelationIds(childIdsFor(focus),allowedIds);
 
-  const middleRow = [...siblings, focus.id, ...spouses];
-  const widestCount = Math.max(
-    grandparents.length,
-    parents.length,
-    middleRow.length,
-    children.length,
-    3
-  );
-  const stageWidth = Math.max(1300, widestCount * 244 + 160);
-  const stageHeight = 1030;
+  // Vista de entorno: una sola generación alrededor de la persona central.
+  // Para avanzar por el árbol se pulsa cualquier familiar, que pasa a ser el nuevo centro.
+  const nodeW=210,nodeH=104;
+  const centerX=600,focusY=330;
+  const stageWidth=Math.max(1200, 760 + Math.max(parents.length,children.length)*235);
+  const sideCount=Math.max(siblings.length,spouses.length,1);
+  const stageHeight=Math.max(760, 500 + sideCount*126);
+  const cx=stageWidth/2;
 
-  currentTreeLayout = {};
-  currentTreeBounds = {width:stageWidth,height:stageHeight};
+  currentTreeLayout={};
+  currentTreeBounds={width:stageWidth,height:stageHeight};
+  currentTreeLayout[focus.id]=[cx-nodeW/2,focusY];
 
-  placeRow(grandparents,70,stageWidth);
-  placeRow(parents,300,stageWidth);
-  placeRow(middleRow,555,stageWidth);
-  placeRow(children,820,stageWidth);
+  const row=(ids,y,spacing=235)=>{
+    const width=(ids.length-1)*spacing;
+    ids.forEach((id,i)=>currentTreeLayout[id]=[cx-width/2+i*spacing-nodeW/2,y]);
+  };
+  row(parents,70);
+  row(children,610);
 
-  const stage = $("treeStage");
-  const svg = $("treeSvg");
-  stage.style.width = `${stageWidth}px`;
-  stage.style.height = `${stageHeight}px`;
+  siblings.forEach((id,i)=>currentTreeLayout[id]=[55,245+i*126]);
+  spouses.forEach((id,i)=>currentTreeLayout[id]=[stageWidth-nodeW-55,300+i*126]);
+
+  const stage=$("treeStage"),svg=$("treeSvg");
+  stage.style.width=`${stageWidth}px`;stage.style.height=`${stageHeight}px`;
   svg.setAttribute("viewBox",`0 0 ${stageWidth} ${stageHeight}`);
-  stage.querySelectorAll(".person-node, .tree-generation-label").forEach(node => node.remove());
-  svg.innerHTML = "";
+  stage.querySelectorAll(".person-node, .tree-generation-label, .tree-nav-label").forEach(n=>n.remove());
+  svg.innerHTML="";
 
-  const addBand = (y,height,label,className) => {
-    const rect = document.createElementNS("http://www.w3.org/2000/svg","rect");
-    rect.setAttribute("x","18");
-    rect.setAttribute("y",String(y));
-    rect.setAttribute("width",String(stageWidth-36));
-    rect.setAttribute("height",String(height));
-    rect.setAttribute("rx","22");
-    rect.setAttribute("class",`tree-band tree-band-${className}`);
-    svg.appendChild(rect);
-
-    const text = document.createElementNS("http://www.w3.org/2000/svg","text");
-    text.setAttribute("x","38");
-    text.setAttribute("y",String(y+30));
-    text.setAttribute("class",`tree-band-label tree-band-label-${className}`);
-    text.textContent = label;
-    svg.appendChild(text);
+  const label=(text,x,y,anchor="middle")=>{
+    const el=document.createElement("div");
+    el.className="tree-nav-label";el.textContent=text;
+    el.style.left=`${x}px`;el.style.top=`${y}px`;el.dataset.anchor=anchor;
+    stage.appendChild(el);
   };
+  if(parents.length)label("↑ SUBIR A PADRES",cx,24);
+  if(siblings.length)label("← HERMANOS",160,190);
+  if(spouses.length)label("CÓNYUGE →",stageWidth-160,245);
+  if(children.length)label("↓ BAJAR A HIJOS",cx,555);
 
-  addBand(40,190,"ABUELOS","grandparents");
-  addBand(270,190,"PADRES","parents");
-  addBand(515,190,"PERSONA Y FAMILIA","focus");
-  addBand(785,205,"HIJOS","children");
+  const center=id=>currentTreeLayout[id][0]+nodeW/2;
+  const top=id=>currentTreeLayout[id][1];
+  const bottom=id=>currentTreeLayout[id][1]+nodeH;
+  const line=(d,type="family")=>{const p=document.createElementNS("http://www.w3.org/2000/svg","path");p.setAttribute("d",d);p.setAttribute("class",`tree-line tree-line-${type}`);svg.appendChild(p);};
 
-  const addBranchBox = (ids,label,className) => {
-    const valid = uniqueIds(ids).filter(id => currentTreeLayout[id]);
-    if(!valid.length) return;
-    const xs = valid.map(id => currentTreeLayout[id][0]);
-    const minX = Math.min(...xs)-18;
-    const maxX = Math.max(...xs)+210+18;
-    const rect = document.createElementNS("http://www.w3.org/2000/svg","rect");
-    rect.setAttribute("x",String(minX));
-    rect.setAttribute("y","52");
-    rect.setAttribute("width",String(maxX-minX));
-    rect.setAttribute("height","166");
-    rect.setAttribute("rx","18");
-    rect.setAttribute("class",`tree-branch-box tree-branch-${className}`);
-    svg.appendChild(rect);
-
-    const text = document.createElementNS("http://www.w3.org/2000/svg","text");
-    text.setAttribute("x",String((minX+maxX)/2));
-    text.setAttribute("y","75");
-    text.setAttribute("text-anchor","middle");
-    text.setAttribute("class",`tree-branch-label tree-branch-label-${className}`);
-    text.textContent = label;
-    svg.appendChild(text);
-  };
-
-  if(parents[0]){
-    addBranchBox(treeRelationIds(parentIdsFor(byId[parents[0]]),allowedIds),"RAMA PATERNA","paternal");
+  // Padres -> persona central. Los hermanos se muestran lateralmente sin líneas cruzadas.
+  if(parents.length){
+    const pcs=parents.map(center),mid=pcs.reduce((a,b)=>a+b,0)/pcs.length,bar=245;
+    if(parents.length>1)line(`M ${Math.min(...pcs)} ${bottom(parents[0])+10} H ${Math.max(...pcs)}`,"couple");
+    line(`M ${mid} ${Math.max(...parents.map(bottom))+10} V ${bar} H ${cx} V ${focusY}`,"family");
   }
-  if(parents[1]){
-    addBranchBox(treeRelationIds(parentIdsFor(byId[parents[1]]),allowedIds),"RAMA MATERNA","maternal");
+  // Pareja: línea horizontal limpia.
+  spouses.forEach(id=>{
+    const y=Math.min(focusY+nodeH/2,currentTreeLayout[id][1]+nodeH/2);
+    line(`M ${cx+nodeW/2} ${focusY+nodeH/2} H ${currentTreeLayout[id][0]} V ${currentTreeLayout[id][1]+nodeH/2}`,"couple");
+  });
+  // Persona central -> hijos.
+  if(children.length){
+    const childCenters=children.map(center),bar=545;
+    line(`M ${cx} ${focusY+nodeH} V ${bar}`,"family");
+    if(children.length>1)line(`M ${Math.min(...childCenters)} ${bar} H ${Math.max(...childCenters)}`,"family");
+    children.forEach(id=>line(`M ${center(id)} ${bar} V ${top(id)}`,"family"));
   }
 
-  const nodeWidth = 210;
-  const nodeHeight = 104;
-  const centerX = id => currentTreeLayout[id][0] + nodeWidth/2;
-  const topY = id => currentTreeLayout[id][1];
-  const bottomY = id => currentTreeLayout[id][1] + nodeHeight;
-
-  const line = (d,type="family") => {
-    const path = document.createElementNS("http://www.w3.org/2000/svg","path");
-    path.setAttribute("d",d);
-    path.setAttribute("class",`tree-line tree-line-${type}`);
-    svg.appendChild(path);
-  };
-
-  const connectParentToChildren = (parentIds,childIds,barY) => {
-    const validParents = uniqueIds(parentIds).filter(id => currentTreeLayout[id]);
-    const validChildren = uniqueIds(childIds).filter(id => currentTreeLayout[id]);
-    if(!validParents.length || !validChildren.length) return;
-
-    const parentCenters = validParents.map(centerX);
-    const parentMid = parentCenters.reduce((a,b)=>a+b,0)/parentCenters.length;
-    if(validParents.length > 1){
-      line(`M ${Math.min(...parentCenters)} ${bottomY(validParents[0])+12} H ${Math.max(...parentCenters)}`,"couple");
-    }
-    line(`M ${parentMid} ${Math.max(...validParents.map(bottomY))+12} V ${barY}`,"family");
-
-    const childCenters = validChildren.map(centerX);
-    if(childCenters.length > 1){
-      line(`M ${Math.min(...childCenters)} ${barY} H ${Math.max(...childCenters)}`,"family");
-    }
-    validChildren.forEach(id => line(`M ${centerX(id)} ${barY} V ${topY(id)}`,"family"));
-  };
-
-  // Grandparents -> each parent.
-  parents.forEach(parentId => {
-    const gps = parentIdsFor(byId[parentId]).filter(id => currentTreeLayout[id]);
-    connectParentToChildren(gps,[parentId],260);
-  });
-
-  // Parents -> focal person and siblings who share those parents.
-  const sameGenerationChildren = uniqueIds([focus.id,...siblings]).filter(id => {
-    const candidateParents = parentIdsFor(byId[id]);
-    return candidateParents.some(parentId => parents.includes(parentId));
-  });
-  connectParentToChildren(parents,sameGenerationChildren,510);
-
-  // Focus + spouse -> children.
-  const childParents = [focus.id,...spouses].filter(id => currentTreeLayout[id]);
-  connectParentToChildren(childParents,children,775);
-
-  Object.entries(currentTreeLayout).forEach(([id,[x,y]]) => {
-    const person = byId[id];
-    if(!person) return;
-    const node = document.createElement("button");
-    const role = id === focus.id ? "focus" :
-      grandparents.includes(id) ? "grandparent" :
-      parents.includes(id) ? "parent" :
-      spouses.includes(id) ? "spouse" :
-      children.includes(id) ? "child" : "sibling";
-    node.className = `person-node ${person.estado || ""} tree-role-${role}`;
-    node.style.left = `${x}px`;
-    node.style.top = `${y}px`;
-    if(person.visible === false){
-      node.classList.add("tree-person-hidden");
-      node.disabled = true;
-      node.removeAttribute("data-person");
-    }else{
-      node.dataset.person = id;
-    }
-    node.setAttribute("aria-label",`Abrir ficha de ${person.nombre}`);
-    node.innerHTML = treeNodeLabel(person);
+  Object.entries(currentTreeLayout).forEach(([id,[x,y]])=>{
+    const person=byId[id];if(!person)return;
+    const role=id===focus.id?"focus":parents.includes(id)?"parent":spouses.includes(id)?"spouse":children.includes(id)?"child":"sibling";
+    const node=document.createElement("button");
+    node.className=`person-node ${person.estado||""} tree-role-${role} tree-navigator-node`;
+    node.style.left=`${x}px`;node.style.top=`${y}px`;
+    if(person.visible===false){node.classList.add("tree-person-hidden");node.disabled=true;}
+    else{node.dataset.person=id;node.dataset.treeNavigate=id;}
+    node.setAttribute("aria-label",id===focus.id?`Abrir ficha rápida de ${person.nombre}`:`Centrar árbol en ${person.nombre}`);
+    node.innerHTML=treeNodeLabel(person)+(id===focus.id?`<span class="tree-node-action">Ver ficha</span>`:`<span class="tree-node-action">Explorar</span>`);
     stage.appendChild(node);
   });
 
-  const context = $("treeContext");
-  if(context){
-    const parts = [
-      `${parents.length} ${parents.length===1?"progenitor":"progenitores"}`,
-      `${allSiblings.length} ${allSiblings.length===1?"hermano":"hermanos"}`,
-      `${spouses.length} ${spouses.length===1?"cónyuge":"cónyuges"}`,
-      `${children.length} ${children.length===1?"hijo":"hijos"}`
-    ];
-    context.innerHTML = `<strong>${esc(focus.nombre)}</strong><span>${parts.join(" · ")}</span>`;
-  }
+  const context=$("treeContext");
+  if(context)context.innerHTML=`<strong>${esc(focus.nombre)}</strong><span>${parents.length} padres · ${allSiblings.length} hermanos · ${spouses.length} cónyuges · ${children.length} hijos</span>`;
+  const hint=$("treeHint");
+  if(hint)hint.textContent="Pulsa un familiar para convertirlo en el centro · pulsa la persona central para abrir su ficha";
 }
-
 let transform = {x:0,y:0,scale:.52};
 let drag = null;
 let pinch = null;
@@ -1805,6 +1713,10 @@ function wireEvents(){
     const treePersonButton=event.target.closest("#treeStage .person-node[data-person]");
     if(treePersonButton){
       event.preventDefault();
+      if(!treeFullMode && treePersonButton.dataset.person!==treeFocusId){
+        centerTreeOnPerson(treePersonButton.dataset.person);
+        return;
+      }
       if(treeFullMode){
         treeFocusId=treePersonButton.dataset.person;
         document.querySelectorAll("#treeStage .person-node").forEach(node=>{

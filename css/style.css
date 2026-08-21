@@ -1813,3 +1813,12 @@ body.document-viewer-open{overflow:hidden}
 .documented-unknown-public span,.tree-unknown-parent{display:inline-flex;padding:5px 9px;border:1px dashed currentColor;border-radius:999px;font-size:.78rem;opacity:.78}
 .tree-card-unknown{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}
 .tree-card-unknown .tree-unknown-parent{padding:2px 6px;font-size:.66rem}
+
+
+/* Árbol navegable de entorno — 4.2.0-alpha18 */
+.tree-nav-label{position:absolute;z-index:2;transform:translateX(-50%);padding:6px 11px;border-radius:999px;background:#e7eee9;color:#315c50;font-size:11px;font-weight:900;letter-spacing:.07em;pointer-events:none;white-space:nowrap}
+.tree-navigator-node{transition:transform .16s ease,box-shadow .16s ease}
+.tree-navigator-node:hover{transform:translateY(-3px);box-shadow:0 13px 28px rgba(31,70,60,.18)}
+.tree-node-action{display:inline-block;margin-top:7px;padding:3px 7px;border-radius:999px;background:#edf3ef;color:#356557;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
+.tree-role-focus .tree-node-action{background:#e7d6a6;color:#5e4b1f}
+@media(max-width:700px){.tree-nav-label{font-size:10px}.tree-node-action{font-size:8px}}
