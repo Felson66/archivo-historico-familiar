@@ -2817,8 +2817,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0020",
-          "P0013"
+          "P0013",
+          "P0020"
         ]
       }
     ],
@@ -4497,8 +4497,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0020",
-          "P0013"
+          "P0013",
+          "P0020"
         ]
       }
     ],
@@ -7265,6 +7265,34 @@
         "paginas": [
           "assets/documentos/P00067/d000073-paginas/pagina-001.webp",
           "assets/documentos/P00067/d000073-paginas/pagina-002.webp"
+        ]
+      },
+      {
+        "id": "D000074",
+        "src": "assets/documentos/P00067/certificado-nacimiento-angel-gomez-neira.pdf",
+        "nombre_archivo": "certificado-nacimiento-angel-gomez-neira.pdf",
+        "formato": "application/pdf",
+        "titulo": "Certificado Nacimiento Angel Gomez Neira",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00067"
+        ],
+        "paginas": [
+          "assets/documentos/P00067/d000074-paginas/pagina-001.webp",
+          "assets/documentos/P00067/d000074-paginas/pagina-002.webp"
+        ]
+      },
+      {
+        "id": "D000075",
+        "src": "assets/documentos/P00067/transcripcion-acta-nacimiento-angel-gomez-neira.txt",
+        "nombre_archivo": "transcripcion-acta-nacimiento-angel-gomez-neira.txt",
+        "formato": "text/plain",
+        "titulo": "Transcripcion Acta Nacimiento Angel Gomez Neira",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00067"
         ]
       }
     ],
