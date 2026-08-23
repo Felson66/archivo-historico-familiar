@@ -6885,12 +6885,43 @@
     "visible": true,
     "conyuges": [],
     "hechos": [],
-    "fotografias": [],
-    "documentos": [],
+    "fotografias": [
+      {
+        "id": "F000144",
+        "src": "assets/fotos/P00059/manuela-mugica-berridi.png",
+        "titulo": "Manuela Mugica Berridi",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00059"
+        ]
+      }
+    ],
+    "documentos": [
+      {
+        "id": "D000076",
+        "src": "assets/documentos/P00059/esquelas-y-necrologicas-irun-manuela-mugica-berridi.pdf",
+        "nombre_archivo": "esquelas-y-necrologicas-irun-manuela-mugica-berridi.pdf",
+        "formato": "application/pdf",
+        "titulo": "Esquelas y Necrologicas Irun Manuela Mugica Berridi",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00059"
+        ],
+        "paginas": [
+          "assets/documentos/P00059/d000076-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "fecha_creacion": "2026-08-05T13:43:16.432Z",
     "ultima_modificacion": "2026-08-05T13:43:16.432Z",
     "padre": "P00056",
-    "madre": ""
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00059/manuela-mugica-berridi.png",
+    "fotoPosicion": "50% 72%"
   },
   {
     "id": "P00060",
