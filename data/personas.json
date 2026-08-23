@@ -7488,12 +7488,27 @@
     "visible": true,
     "conyuges": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000143",
+        "src": "assets/fotos/P00072/angel-castanos-gomez.jpg",
+        "titulo": "Angel Castaños Gomez",
+        "fecha": "",
+        "lugar": "Valencia",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00072"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-08-10T18:30:27.414Z",
     "ultima_modificacion": "2026-08-10T18:30:27.414Z",
     "padre": "P00070",
-    "madre": "P00069"
+    "madre": "P00069",
+    "fotografia_principal": "assets/fotos/P00072/angel-castanos-gomez.jpg",
+    "fotoPosicion": "50% 33%"
   },
   {
     "id": "P00073",
