@@ -7631,7 +7631,9 @@
     "notas": "Padre de Francisco Liz",
     "datos_resumen": "Padre de Francisco Liz",
     "visible": true,
-    "conyuges": [],
+    "conyuges": [
+      "P00074"
+    ],
     "hechos": [
       {
         "tipo": "documentado",
@@ -7661,7 +7663,9 @@
     "notas": "Madre de Francisco Liz",
     "datos_resumen": "Madre de Francisco Liz",
     "visible": true,
-    "conyuges": [],
+    "conyuges": [
+      "P00073"
+    ],
     "hechos": [],
     "fotografias": [],
     "documentos": [],
