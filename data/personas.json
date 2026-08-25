@@ -3909,6 +3909,22 @@
           "assets/documentos/P0015/d000044-paginas/pagina-002.webp",
           "assets/documentos/P0015/d000044-paginas/pagina-003.webp"
         ]
+      },
+      {
+        "id": "D000077",
+        "src": "assets/documentos/P0015/justificante-de-presentacion-reg.pdf",
+        "nombre_archivo": "justificante-de-presentacion-reg.pdf",
+        "formato": "application/pdf",
+        "titulo": "Justificante de Presentación REG",
+        "fecha": "",
+        "descripcion": "REGAGE26e00075205587",
+        "personas": [
+          "P0015",
+          "P0016"
+        ],
+        "paginas": [
+          "assets/documentos/P0015/d000077-paginas/pagina-001.webp"
+        ]
       }
     ],
     "cronologia": [],
@@ -4106,7 +4122,24 @@
         ]
       }
     ],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000077",
+        "src": "assets/documentos/P0015/justificante-de-presentacion-reg.pdf",
+        "nombre_archivo": "justificante-de-presentacion-reg.pdf",
+        "formato": "application/pdf",
+        "titulo": "Justificante de Presentación REG",
+        "fecha": "",
+        "descripcion": "REGAGE26e00075205587",
+        "personas": [
+          "P0015",
+          "P0016"
+        ],
+        "paginas": [
+          "assets/documentos/P0015/d000077-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "cronologia": [],
     "lugares": [],
     "notas": "",
