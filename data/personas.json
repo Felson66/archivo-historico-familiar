@@ -3925,6 +3925,27 @@
         "paginas": [
           "assets/documentos/P0015/d000077-paginas/pagina-001.webp"
         ]
+      },
+      {
+        "id": "D000078",
+        "src": "assets/documentos/P0015/solicitud-completa-archivo-interior-eduardo-de-la-dehesa.pdf",
+        "nombre_archivo": "solicitud-completa-archivo-interior-eduardo-de-la-dehesa.pdf",
+        "formato": "application/pdf",
+        "titulo": "Solicitud completa Archivo Interior Eduardo de la Dehesa",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0015",
+          "P0016"
+        ],
+        "paginas": [
+          "assets/documentos/P0015/d000078-paginas/pagina-001.webp",
+          "assets/documentos/P0015/d000078-paginas/pagina-002.webp",
+          "assets/documentos/P0015/d000078-paginas/pagina-003.webp",
+          "assets/documentos/P0015/d000078-paginas/pagina-004.webp",
+          "assets/documentos/P0015/d000078-paginas/pagina-005.webp",
+          "assets/documentos/P0015/d000078-paginas/pagina-006.webp"
+        ]
       }
     ],
     "cronologia": [],
@@ -4137,6 +4158,27 @@
         ],
         "paginas": [
           "assets/documentos/P0015/d000077-paginas/pagina-001.webp"
+        ]
+      },
+      {
+        "id": "D000078",
+        "src": "assets/documentos/P0015/solicitud-completa-archivo-interior-eduardo-de-la-dehesa.pdf",
+        "nombre_archivo": "solicitud-completa-archivo-interior-eduardo-de-la-dehesa.pdf",
+        "formato": "application/pdf",
+        "titulo": "Solicitud completa Archivo Interior Eduardo de la Dehesa",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0015",
+          "P0016"
+        ],
+        "paginas": [
+          "assets/documentos/P0015/d000078-paginas/pagina-001.webp",
+          "assets/documentos/P0015/d000078-paginas/pagina-002.webp",
+          "assets/documentos/P0015/d000078-paginas/pagina-003.webp",
+          "assets/documentos/P0015/d000078-paginas/pagina-004.webp",
+          "assets/documentos/P0015/d000078-paginas/pagina-005.webp",
+          "assets/documentos/P0015/d000078-paginas/pagina-006.webp"
         ]
       }
     ],
