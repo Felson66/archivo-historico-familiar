@@ -4026,6 +4026,21 @@
           "assets/documentos/P0015/d000078-paginas/pagina-005.webp",
           "assets/documentos/P0015/d000078-paginas/pagina-006.webp"
         ]
+      },
+      {
+        "id": "D000080",
+        "src": "assets/documentos/P0015/dni-edu-de-la-dehesa.pdf",
+        "nombre_archivo": "dni-edu-de-la-dehesa.pdf",
+        "formato": "application/pdf",
+        "titulo": "DNI Edu de la Dehesa",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0015"
+        ],
+        "paginas": [
+          "assets/documentos/P0015/d000080-paginas/pagina-001.webp"
+        ]
       }
     ],
     "cronologia": [],
