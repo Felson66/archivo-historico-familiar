@@ -1271,6 +1271,22 @@
         "personas": [
           "P0009"
         ]
+      },
+      {
+        "id": "F000147",
+        "src": "assets/fotos/P0009/abuela-carmen.jpg",
+        "titulo": "Abuela Carmen",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
       }
     ],
     "documentos": [
@@ -2276,6 +2292,22 @@
           "P0013",
           "P0014"
         ]
+      },
+      {
+        "id": "F000147",
+        "src": "assets/fotos/P0009/abuela-carmen.jpg",
+        "titulo": "Abuela Carmen",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
@@ -2819,6 +2851,22 @@
         "personas": [
           "P0013",
           "P0020"
+        ]
+      },
+      {
+        "id": "F000147",
+        "src": "assets/fotos/P0009/abuela-carmen.jpg",
+        "titulo": "Abuela Carmen",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
         ]
       }
     ],
@@ -3419,6 +3467,22 @@
           "P0014",
           "P0010"
         ]
+      },
+      {
+        "id": "F000147",
+        "src": "assets/fotos/P0009/abuela-carmen.jpg",
+        "titulo": "Abuela Carmen",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
@@ -3889,6 +3953,22 @@
           "P0007",
           "P0015",
           "P0010"
+        ]
+      },
+      {
+        "id": "F000147",
+        "src": "assets/fotos/P0009/abuela-carmen.jpg",
+        "titulo": "Abuela Carmen",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
         ]
       }
     ],
@@ -4996,6 +5076,19 @@
         "personas": [
           "P0025"
         ]
+      },
+      {
+        "id": "F000146",
+        "src": "assets/fotos/P0025/adrian-y-alessandra.jpg",
+        "titulo": "Adrian y Alessandra",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0025",
+          "P0026"
+        ]
       }
     ],
     "documentos": [],
@@ -5075,6 +5168,19 @@
         "etiquetas": [],
         "personas": [
           "P0015",
+          "P0026"
+        ]
+      },
+      {
+        "id": "F000146",
+        "src": "assets/fotos/P0025/adrian-y-alessandra.jpg",
+        "titulo": "Adrian y Alessandra",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0025",
           "P0026"
         ]
       }
@@ -5437,6 +5543,18 @@
         "titulo": "Eder y Sira",
         "fecha": "2002",
         "lugar": "Bilbao",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0030"
+        ]
+      },
+      {
+        "id": "F000145",
+        "src": "assets/fotos/P0030/eder-plaza-nueva.jpg",
+        "titulo": "Eder Plaza Nueva",
+        "fecha": "",
+        "lugar": "",
         "descripcion": "",
         "etiquetas": [],
         "personas": [
