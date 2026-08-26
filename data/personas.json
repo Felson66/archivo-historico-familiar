@@ -1728,18 +1728,6 @@
         ]
       },
       {
-        "id": "F000090",
-        "src": "assets/fotos/P0011/tia.jpg",
-        "titulo": "Carnet Funcionario Ministerio",
-        "fecha": "",
-        "lugar": "",
-        "descripcion": "",
-        "etiquetas": [],
-        "personas": [
-          "P0011"
-        ]
-      },
-      {
         "id": "F000134",
         "src": "assets/fotos/P0011/conchi-liz.jpg",
         "titulo": "Conchi Liz",
@@ -1811,6 +1799,18 @@
         ],
         "paginas": [
           "assets/documentos/P0011/d000045-paginas/pagina-001.webp"
+        ]
+      },
+      {
+        "id": "D000079",
+        "src": "assets/documentos/P0011/tia.jpg",
+        "nombre_archivo": "tia.jpg",
+        "formato": "image/jpeg",
+        "titulo": "Carnet Funcionario MInisterio Educación",
+        "fecha": "1975",
+        "descripcion": "",
+        "personas": [
+          "P0011"
         ]
       }
     ],
