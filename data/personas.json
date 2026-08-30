@@ -926,6 +926,20 @@
           "P0015",
           "P0010"
         ]
+      },
+      {
+        "id": "F000162",
+        "src": "assets/fotos/P0012/manu-comunion-2.jpg",
+        "titulo": "Manu Comunion",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0010",
+          "P0007"
+        ]
       }
     ],
     "documentos": [
@@ -1735,6 +1749,33 @@
           "P0009",
           "P0010"
         ]
+      },
+      {
+        "id": "F000159",
+        "src": "assets/fotos/P0012/manu-bano.jpg",
+        "titulo": "Manu Baño",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000162",
+        "src": "assets/fotos/P0012/manu-comunion-2.jpg",
+        "titulo": "Manu Comunion",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0010",
+          "P0007"
+        ]
       }
     ],
     "documentos": [
@@ -2464,6 +2505,33 @@
         "personas": [
           "P0012",
           "P0009"
+        ]
+      },
+      {
+        "id": "F000159",
+        "src": "assets/fotos/P0012/manu-bano.jpg",
+        "titulo": "Manu Baño",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000162",
+        "src": "assets/fotos/P0012/manu-comunion-2.jpg",
+        "titulo": "Manu Comunion",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0010",
+          "P0007"
         ]
       }
     ],
@@ -4393,6 +4461,32 @@
           "P0014",
           "P0010"
         ]
+      },
+      {
+        "id": "F000160",
+        "src": "assets/fotos/P0016/elena-eder-hamalau.jpg",
+        "titulo": "Elena Eder Hamalau",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0030"
+        ]
+      },
+      {
+        "id": "F000161",
+        "src": "assets/fotos/P0016/elena-eder.jpg",
+        "titulo": "Elena Eder",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0030"
+        ]
       }
     ],
     "documentos": [
@@ -5744,6 +5838,32 @@
         "personas": [
           "P0030",
           "P0011"
+        ]
+      },
+      {
+        "id": "F000160",
+        "src": "assets/fotos/P0016/elena-eder-hamalau.jpg",
+        "titulo": "Elena Eder Hamalau",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0030"
+        ]
+      },
+      {
+        "id": "F000161",
+        "src": "assets/fotos/P0016/elena-eder.jpg",
+        "titulo": "Elena Eder",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0030"
         ]
       }
     ],
