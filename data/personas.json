@@ -1066,6 +1066,21 @@
         "personas": [
           "P0008"
         ]
+      },
+      {
+        "id": "F000156",
+        "src": "assets/fotos/P0011/liz-gomez.jpg",
+        "titulo": "Liz Gomez",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0011",
+          "P0008",
+          "P0009",
+          "P0010"
+        ]
       }
     ],
     "documentos": [
@@ -1286,6 +1301,51 @@
           "P0014",
           "P0012",
           "P0013"
+        ]
+      },
+      {
+        "id": "F000152",
+        "src": "assets/fotos/P00077/boda-josemari.jpg",
+        "titulo": "Boda JoseMari",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00077",
+          "P00079",
+          "P00069",
+          "P0009",
+          "P0011",
+          "P00071"
+        ]
+      },
+      {
+        "id": "F000156",
+        "src": "assets/fotos/P0011/liz-gomez.jpg",
+        "titulo": "Liz Gomez",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0011",
+          "P0008",
+          "P0009",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000158",
+        "src": "assets/fotos/P0012/abuela-carmen-manu.jpg",
+        "titulo": "Abuela Carmen Manu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0009"
         ]
       }
     ],
@@ -1660,6 +1720,21 @@
         "personas": [
           "P0010"
         ]
+      },
+      {
+        "id": "F000156",
+        "src": "assets/fotos/P0011/liz-gomez.jpg",
+        "titulo": "Liz Gomez",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0011",
+          "P0008",
+          "P0009",
+          "P0010"
+        ]
       }
     ],
     "documentos": [
@@ -1729,7 +1804,7 @@
       "P0009"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0011/conchi-liz.jpg",
+    "fotografia_principal": "assets/fotos/P0011/concepcion-liz.jpg",
     "fotografias": [
       {
         "id": "F000089",
@@ -1753,6 +1828,63 @@
         "etiquetas": [],
         "personas": [
           "P0011"
+        ]
+      },
+      {
+        "id": "F000148",
+        "src": "assets/fotos/P0030/eder-tia.jpg",
+        "titulo": "Eder",
+        "fecha": "",
+        "lugar": "Iparraguirre",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0030",
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000152",
+        "src": "assets/fotos/P00077/boda-josemari.jpg",
+        "titulo": "Boda JoseMari",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00077",
+          "P00079",
+          "P00069",
+          "P0009",
+          "P0011",
+          "P00071"
+        ]
+      },
+      {
+        "id": "F000155",
+        "src": "assets/fotos/P0011/concepcion-liz.jpg",
+        "titulo": "Concepcion Liz",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000156",
+        "src": "assets/fotos/P0011/liz-gomez.jpg",
+        "titulo": "Liz Gomez",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0011",
+          "P0008",
+          "P0009",
+          "P0010"
         ]
       }
     ],
@@ -2307,6 +2439,31 @@
           "P0014",
           "P0012",
           "P0013"
+        ]
+      },
+      {
+        "id": "F000157",
+        "src": "assets/fotos/P0012/manu-noja.jpg",
+        "titulo": "Manu Noja",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000158",
+        "src": "assets/fotos/P0012/abuela-carmen-manu.jpg",
+        "titulo": "Abuela Carmen Manu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0009"
         ]
       }
     ],
@@ -5575,6 +5732,19 @@
         "personas": [
           "P0030"
         ]
+      },
+      {
+        "id": "F000148",
+        "src": "assets/fotos/P0030/eder-tia.jpg",
+        "titulo": "Eder",
+        "fecha": "",
+        "lugar": "Iparraguirre",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0030",
+          "P0011"
+        ]
       }
     ],
     "documentos": [],
@@ -7598,7 +7768,37 @@
       "P00070"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000149",
+        "src": "assets/fotos/P00069/concha-gomez-portada.png",
+        "titulo": "Concha Gomez Portada",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00069"
+        ]
+      },
+      {
+        "id": "F000152",
+        "src": "assets/fotos/P00077/boda-josemari.jpg",
+        "titulo": "Boda JoseMari",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00077",
+          "P00079",
+          "P00069",
+          "P0009",
+          "P0011",
+          "P00071"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000049",
@@ -7616,7 +7816,9 @@
     "fecha_creacion": "2026-08-10T11:09:41.055Z",
     "ultima_modificacion": "2026-08-10T11:09:41.055Z",
     "padre": "P00067",
-    "madre": "P00068"
+    "madre": "P00068",
+    "fotografia_principal": "assets/fotos/P00069/concha-gomez-portada.png",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00070",
@@ -7703,12 +7905,44 @@
     "visible": true,
     "conyuges": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000152",
+        "src": "assets/fotos/P00077/boda-josemari.jpg",
+        "titulo": "Boda JoseMari",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00077",
+          "P00079",
+          "P00069",
+          "P0009",
+          "P0011",
+          "P00071"
+        ]
+      },
+      {
+        "id": "F000154",
+        "src": "assets/fotos/P00071/maricarmen-castanos-portada.png",
+        "titulo": "MariCarmen Castaños Portada",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00071"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-08-10T16:52:22.609Z",
     "ultima_modificacion": "2026-08-10T16:52:22.609Z",
     "padre": "P00070",
-    "madre": "P00069"
+    "madre": "P00069",
+    "fotografia_principal": "assets/fotos/P00071/maricarmen-castanos-portada.png",
+    "fotoPosicion": "50% 67%"
   },
   {
     "id": "P00072",
@@ -7892,7 +8126,50 @@
       "P00079"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000150",
+        "src": "assets/fotos/P00077/josemari-portada.png",
+        "titulo": "JoseMari Portada",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00077"
+        ]
+      },
+      {
+        "id": "F000151",
+        "src": "assets/fotos/P00077/josemari-maite.jpg",
+        "titulo": "JoseMari Maite",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00077",
+          "P00079"
+        ]
+      },
+      {
+        "id": "F000152",
+        "src": "assets/fotos/P00077/boda-josemari.jpg",
+        "titulo": "Boda JoseMari",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00077",
+          "P00079",
+          "P00069",
+          "P0009",
+          "P0011",
+          "P00071"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000056",
@@ -7910,7 +8187,9 @@
     "fecha_creacion": "2026-08-11T13:41:10.107Z",
     "ultima_modificacion": "2026-08-11T13:41:10.107Z",
     "padre": "P00075",
-    "madre": "P00076"
+    "madre": "P00076",
+    "fotografia_principal": "assets/fotos/P00077/josemari-portada.png",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00078",
@@ -7971,12 +8250,57 @@
       "P00077"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000152",
+        "src": "assets/fotos/P00077/boda-josemari.jpg",
+        "titulo": "Boda JoseMari",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00077",
+          "P00079",
+          "P00069",
+          "P0009",
+          "P0011",
+          "P00071"
+        ]
+      },
+      {
+        "id": "F000151",
+        "src": "assets/fotos/P00077/josemari-maite.jpg",
+        "titulo": "JoseMari Maite",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00077",
+          "P00079"
+        ]
+      },
+      {
+        "id": "F000153",
+        "src": "assets/fotos/P00079/maitemaza-portada.png",
+        "titulo": "MaiteMaza Portada",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00079"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-08-11T14:00:33.125Z",
     "ultima_modificacion": "2026-08-11T14:00:33.125Z",
     "padre": "",
-    "madre": ""
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00079/maitemaza-portada.png",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00080",
