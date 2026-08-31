@@ -958,6 +958,19 @@
           "P0012",
           "P0010"
         ]
+      },
+      {
+        "id": "F000170",
+        "src": "assets/fotos/P0007/pareja.jpg",
+        "titulo": "Manuel y Mercedes",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0007",
+          "P0010"
+        ]
       }
     ],
     "documentos": [
@@ -1126,23 +1139,6 @@
           "P0008",
           "P0010",
           "P0011"
-        ]
-      },
-      {
-        "id": "F000167",
-        "src": "assets/fotos/P00070/concha-daniel-y-mas.jpg",
-        "titulo": "Concha Daniel y mas",
-        "fecha": "",
-        "lugar": "",
-        "descripcion": "",
-        "etiquetas": [],
-        "personas": [
-          "P00070",
-          "P0008",
-          "P00069",
-          "P00071",
-          "P00072",
-          "P00068"
         ]
       }
     ],
@@ -1427,6 +1423,35 @@
           "P0014",
           "P0012",
           "P0013"
+        ]
+      },
+      {
+        "id": "F000174",
+        "src": "assets/fotos/P0012/josecarmenmanu.jpg",
+        "titulo": "Jose  y Carmen Gomez con Manu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P00075",
+          "P0009"
+        ]
+      },
+      {
+        "id": "F000175",
+        "src": "assets/fotos/P0012/joseelenacarmenmanu.jpg",
+        "titulo": "Jose Gomez Elena Uria Carmen Gomez y Manu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0009",
+          "P00075",
+          "P00076"
         ]
       }
     ],
@@ -1869,6 +1894,19 @@
           "P0010",
           "P0011"
         ]
+      },
+      {
+        "id": "F000170",
+        "src": "assets/fotos/P0007/pareja.jpg",
+        "titulo": "Manuel y Mercedes",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0007",
+          "P0010"
+        ]
       }
     ],
     "documentos": [
@@ -2032,6 +2070,20 @@
         "personas": [
           "P0008",
           "P0010",
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000173",
+        "src": "assets/fotos/P00076/elena-conchi-manu.jpg",
+        "titulo": "Elena Conchi Manu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00076",
+          "P0012",
           "P0011"
         ]
       }
@@ -2658,6 +2710,49 @@
           "P0012",
           "P0013"
         ]
+      },
+      {
+        "id": "F000173",
+        "src": "assets/fotos/P00076/elena-conchi-manu.jpg",
+        "titulo": "Elena Conchi Manu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00076",
+          "P0012",
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000174",
+        "src": "assets/fotos/P0012/josecarmenmanu.jpg",
+        "titulo": "Jose  y Carmen Gomez con Manu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P00075",
+          "P0009"
+        ]
+      },
+      {
+        "id": "F000175",
+        "src": "assets/fotos/P0012/joseelenacarmenmanu.jpg",
+        "titulo": "Jose Gomez Elena Uria Carmen Gomez y Manu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0009",
+          "P00075",
+          "P00076"
+        ]
       }
     ],
     "documentos": [],
@@ -3234,6 +3329,20 @@
           "P0009",
           "P0014",
           "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000171",
+        "src": "assets/fotos/P0016/edumercheelena.jpg",
+        "titulo": "Edu Merche Elena",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0015",
           "P0013"
         ]
       }
@@ -4356,6 +4465,20 @@
           "P0012",
           "P0013"
         ]
+      },
+      {
+        "id": "F000171",
+        "src": "assets/fotos/P0016/edumercheelena.jpg",
+        "titulo": "Edu Merche Elena",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0015",
+          "P0013"
+        ]
       }
     ],
     "documentos": [
@@ -4647,6 +4770,20 @@
         "personas": [
           "P0016",
           "P0030"
+        ]
+      },
+      {
+        "id": "F000171",
+        "src": "assets/fotos/P0016/edumercheelena.jpg",
+        "titulo": "Edu Merche Elena",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0015",
+          "P0013"
         ]
       }
     ],
@@ -7953,7 +8090,37 @@
       "P00068"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000167",
+        "src": "assets/fotos/P00070/concha-daniel-y-mas.jpg",
+        "titulo": "Concha Daniel y mas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00070",
+          "P00069",
+          "P00071",
+          "P00072",
+          "P00068",
+          "P00067"
+        ]
+      },
+      {
+        "id": "F000169",
+        "src": "assets/fotos/P00067/angelgomezneira.png",
+        "titulo": "Angel Gomez Neira",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00067"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000046",
@@ -8015,7 +8182,9 @@
     "fecha_creacion": "2026-08-10T11:05:17.848Z",
     "ultima_modificacion": "2026-08-10T11:05:17.848Z",
     "padre": "P00099",
-    "madre": "P00100"
+    "madre": "P00100",
+    "fotografia_principal": "assets/fotos/P00067/angelgomezneira.png",
+    "fotoPosicion": "50% 61%"
   },
   {
     "id": "P00068",
@@ -8049,11 +8218,11 @@
         "etiquetas": [],
         "personas": [
           "P00070",
-          "P0008",
           "P00069",
           "P00071",
           "P00072",
-          "P00068"
+          "P00068",
+          "P00067"
         ]
       },
       {
@@ -8165,11 +8334,11 @@
         "etiquetas": [],
         "personas": [
           "P00070",
-          "P0008",
           "P00069",
           "P00071",
           "P00072",
-          "P00068"
+          "P00068",
+          "P00067"
         ]
       }
     ],
@@ -8268,11 +8437,11 @@
         "etiquetas": [],
         "personas": [
           "P00070",
-          "P0008",
           "P00069",
           "P00071",
           "P00072",
-          "P00068"
+          "P00068",
+          "P00067"
         ]
       }
     ],
@@ -8354,11 +8523,11 @@
         "etiquetas": [],
         "personas": [
           "P00070",
-          "P0008",
           "P00069",
           "P00071",
           "P00072",
-          "P00068"
+          "P00068",
+          "P00067"
         ]
       }
     ],
@@ -8410,11 +8579,11 @@
         "etiquetas": [],
         "personas": [
           "P00070",
-          "P0008",
           "P00069",
           "P00071",
           "P00072",
-          "P00068"
+          "P00068",
+          "P00067"
         ]
       }
     ],
@@ -8504,7 +8673,37 @@
       "P00076"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000174",
+        "src": "assets/fotos/P0012/josecarmenmanu.jpg",
+        "titulo": "Jose  y Carmen Gomez con Manu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P00075",
+          "P0009"
+        ]
+      },
+      {
+        "id": "F000175",
+        "src": "assets/fotos/P0012/joseelenacarmenmanu.jpg",
+        "titulo": "Jose Gomez Elena Uria Carmen Gomez y Manu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0009",
+          "P00075",
+          "P00076"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-08-11T13:29:55.096Z",
     "ultima_modificacion": "2026-08-11T13:29:55.096Z",
@@ -8530,7 +8729,49 @@
       "P00075"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000172",
+        "src": "assets/fotos/P00076/elena-uria.png",
+        "titulo": "Elena Uria",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00076"
+        ]
+      },
+      {
+        "id": "F000173",
+        "src": "assets/fotos/P00076/elena-conchi-manu.jpg",
+        "titulo": "Elena Conchi Manu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00076",
+          "P0012",
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000175",
+        "src": "assets/fotos/P0012/joseelenacarmenmanu.jpg",
+        "titulo": "Jose Gomez Elena Uria Carmen Gomez y Manu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0009",
+          "P00075",
+          "P00076"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000051",
@@ -8548,7 +8789,9 @@
     "fecha_creacion": "2026-08-11T13:31:47.755Z",
     "ultima_modificacion": "2026-08-11T13:31:47.755Z",
     "padre": "",
-    "madre": ""
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00076/elena-uria.png",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00077",
