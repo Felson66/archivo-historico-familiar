@@ -568,13 +568,13 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0006",
           "P00070",
           "P00069",
           "P0009",
           "P0014",
           "P0012",
-          "P0013",
-          "P0006"
+          "P0013"
         ]
       }
     ],
@@ -1123,22 +1123,26 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0008",
           "P0010",
-          "P0011",
-          "P0008"
+          "P0011"
         ]
       },
       {
         "id": "F000167",
-        "src": "assets/fotos/P0009/carmen-y-mas.jpg",
-        "titulo": "Carmen y mas",
+        "src": "assets/fotos/P00070/concha-daniel-y-mas.jpg",
+        "titulo": "Concha Daniel y mas",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0009",
-          "P0008"
+          "P00070",
+          "P0008",
+          "P00069",
+          "P00071",
+          "P00072",
+          "P00068"
         ]
       }
     ],
@@ -1416,26 +1420,13 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0006",
           "P00070",
           "P00069",
           "P0009",
           "P0014",
           "P0012",
-          "P0013",
-          "P0006"
-        ]
-      },
-      {
-        "id": "F000167",
-        "src": "assets/fotos/P0009/carmen-y-mas.jpg",
-        "titulo": "Carmen y mas",
-        "fecha": "",
-        "lugar": "",
-        "descripcion": "",
-        "etiquetas": [],
-        "personas": [
-          "P0009",
-          "P0008"
+          "P0013"
         ]
       }
     ],
@@ -1874,9 +1865,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0008",
           "P0010",
-          "P0011",
-          "P0008"
+          "P0011"
         ]
       }
     ],
@@ -2039,9 +2030,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0008",
           "P0010",
-          "P0011",
-          "P0008"
+          "P0011"
         ]
       }
     ],
@@ -2659,13 +2650,13 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0006",
           "P00070",
           "P00069",
           "P0009",
           "P0014",
           "P0012",
-          "P0013",
-          "P0006"
+          "P0013"
         ]
       }
     ],
@@ -3237,13 +3228,13 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0006",
           "P00070",
           "P00069",
           "P0009",
           "P0014",
           "P0012",
-          "P0013",
-          "P0006"
+          "P0013"
         ]
       }
     ],
@@ -3870,13 +3861,13 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0006",
           "P00070",
           "P00069",
           "P0009",
           "P0014",
           "P0012",
-          "P0013",
-          "P0006"
+          "P0013"
         ]
       }
     ],
@@ -8047,7 +8038,37 @@
     ],
     "hijos": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000167",
+        "src": "assets/fotos/P00070/concha-daniel-y-mas.jpg",
+        "titulo": "Concha Daniel y mas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00070",
+          "P0008",
+          "P00069",
+          "P00071",
+          "P00072",
+          "P00068"
+        ]
+      },
+      {
+        "id": "F000168",
+        "src": "assets/fotos/P00068/carmen-lopez-lopez.png",
+        "titulo": "Carmen Lopez Lopez",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00068"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000047",
@@ -8063,7 +8084,9 @@
       }
     ],
     "fecha_creacion": "2026-08-10T11:06:42.657Z",
-    "ultima_modificacion": "2026-08-10T11:06:42.657Z"
+    "ultima_modificacion": "2026-08-10T11:06:42.657Z",
+    "fotografia_principal": "assets/fotos/P00068/carmen-lopez-lopez.png",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00069",
@@ -8123,13 +8146,30 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0006",
           "P00070",
           "P00069",
           "P0009",
           "P0014",
           "P0012",
-          "P0013",
-          "P0006"
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000167",
+        "src": "assets/fotos/P00070/concha-daniel-y-mas.jpg",
+        "titulo": "Concha Daniel y mas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00070",
+          "P0008",
+          "P00069",
+          "P00071",
+          "P00072",
+          "P00068"
         ]
       }
     ],
@@ -8209,13 +8249,30 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0006",
           "P00070",
           "P00069",
           "P0009",
           "P0014",
           "P0012",
-          "P0013",
-          "P0006"
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000167",
+        "src": "assets/fotos/P00070/concha-daniel-y-mas.jpg",
+        "titulo": "Concha Daniel y mas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00070",
+          "P0008",
+          "P00069",
+          "P00071",
+          "P00072",
+          "P00068"
         ]
       }
     ],
@@ -8286,6 +8343,23 @@
         "personas": [
           "P00071"
         ]
+      },
+      {
+        "id": "F000167",
+        "src": "assets/fotos/P00070/concha-daniel-y-mas.jpg",
+        "titulo": "Concha Daniel y mas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00070",
+          "P0008",
+          "P00069",
+          "P00071",
+          "P00072",
+          "P00068"
+        ]
       }
     ],
     "documentos": [],
@@ -8324,6 +8398,23 @@
         "etiquetas": [],
         "personas": [
           "P00072"
+        ]
+      },
+      {
+        "id": "F000167",
+        "src": "assets/fotos/P00070/concha-daniel-y-mas.jpg",
+        "titulo": "Concha Daniel y mas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00070",
+          "P0008",
+          "P00069",
+          "P00071",
+          "P00072",
+          "P00068"
         ]
       }
     ],
