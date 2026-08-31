@@ -8702,13 +8702,27 @@
           "P00075",
           "P00076"
         ]
+      },
+      {
+        "id": "F000176",
+        "src": "assets/fotos/P00075/jose-gomez-lopez.png",
+        "titulo": "Jose Gomez Lopez",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00075"
+        ]
       }
     ],
     "documentos": [],
     "fecha_creacion": "2026-08-11T13:29:55.096Z",
     "ultima_modificacion": "2026-08-11T13:29:55.096Z",
     "padre": "P00067",
-    "madre": "P00068"
+    "madre": "P00068",
+    "fotografia_principal": "assets/fotos/P00075/jose-gomez-lopez.png",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00076",
