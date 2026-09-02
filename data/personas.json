@@ -1434,9 +1434,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0012",
-          "P00075",
-          "P0009"
+          "P0009",
+          "P0012"
         ]
       },
       {
@@ -1448,10 +1447,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0012",
           "P0009",
-          "P00075",
-          "P00076"
+          "P0012"
         ]
       }
     ],
@@ -2082,9 +2079,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P00076",
-          "P0012",
-          "P0011"
+          "P0011",
+          "P0012"
         ]
       }
     ],
@@ -2720,9 +2716,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P00076",
-          "P0012",
-          "P0011"
+          "P0011",
+          "P0012"
         ]
       },
       {
@@ -2734,9 +2729,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0012",
-          "P00075",
-          "P0009"
+          "P0009",
+          "P0012"
         ]
       },
       {
@@ -2748,10 +2742,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0012",
           "P0009",
-          "P00075",
-          "P00076"
+          "P0012"
         ]
       }
     ],
@@ -3341,9 +3333,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0013",
           "P0016",
-          "P0015",
-          "P0013"
+          "P0015"
         ]
       }
     ],
@@ -4475,9 +4467,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0013",
           "P0016",
-          "P0015",
-          "P0013"
+          "P0015"
         ]
       }
     ],
@@ -4781,9 +4773,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0013",
           "P0016",
-          "P0015",
-          "P0013"
+          "P0015"
         ]
       }
     ],
@@ -8100,12 +8092,12 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P00067",
           "P00070",
           "P00069",
           "P00071",
           "P00072",
-          "P00068",
-          "P00067"
+          "P00068"
         ]
       },
       {
@@ -8217,12 +8209,12 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P00067",
           "P00070",
           "P00069",
           "P00071",
           "P00072",
-          "P00068",
-          "P00067"
+          "P00068"
         ]
       },
       {
@@ -8333,12 +8325,12 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P00067",
           "P00070",
           "P00069",
           "P00071",
           "P00072",
-          "P00068",
-          "P00067"
+          "P00068"
         ]
       }
     ],
@@ -8436,12 +8428,12 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P00067",
           "P00070",
           "P00069",
           "P00071",
           "P00072",
-          "P00068",
-          "P00067"
+          "P00068"
         ]
       }
     ],
@@ -8522,12 +8514,12 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P00067",
           "P00070",
           "P00069",
           "P00071",
           "P00072",
-          "P00068",
-          "P00067"
+          "P00068"
         ]
       }
     ],
@@ -8578,12 +8570,12 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P00067",
           "P00070",
           "P00069",
           "P00071",
           "P00072",
-          "P00068",
-          "P00067"
+          "P00068"
         ]
       }
     ],
@@ -8673,55 +8665,13 @@
       "P00076"
     ],
     "hechos": [],
-    "fotografias": [
-      {
-        "id": "F000174",
-        "src": "assets/fotos/P0012/josecarmenmanu.jpg",
-        "titulo": "Jose  y Carmen Gomez con Manu",
-        "fecha": "",
-        "lugar": "",
-        "descripcion": "",
-        "etiquetas": [],
-        "personas": [
-          "P0012",
-          "P00075",
-          "P0009"
-        ]
-      },
-      {
-        "id": "F000175",
-        "src": "assets/fotos/P0012/joseelenacarmenmanu.jpg",
-        "titulo": "Jose Gomez Elena Uria Carmen Gomez y Manu",
-        "fecha": "",
-        "lugar": "",
-        "descripcion": "",
-        "etiquetas": [],
-        "personas": [
-          "P0012",
-          "P0009",
-          "P00075",
-          "P00076"
-        ]
-      },
-      {
-        "id": "F000176",
-        "src": "assets/fotos/P00075/jose-gomez-lopez.png",
-        "titulo": "Jose Gomez Lopez",
-        "fecha": "",
-        "lugar": "",
-        "descripcion": "",
-        "etiquetas": [],
-        "personas": [
-          "P00075"
-        ]
-      }
-    ],
+    "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-08-11T13:29:55.096Z",
     "ultima_modificacion": "2026-08-11T13:29:55.096Z",
     "padre": "P00067",
     "madre": "P00068",
-    "fotografia_principal": "assets/fotos/P00075/jose-gomez-lopez.png",
+    "fotografia_principal": "assets/fotos/P0012/josecarmenmanu.jpg",
     "fotoPosicion": "50% 50%"
   },
   {
@@ -8743,49 +8693,7 @@
       "P00075"
     ],
     "hechos": [],
-    "fotografias": [
-      {
-        "id": "F000172",
-        "src": "assets/fotos/P00076/elena-uria.png",
-        "titulo": "Elena Uria",
-        "fecha": "",
-        "lugar": "",
-        "descripcion": "",
-        "etiquetas": [],
-        "personas": [
-          "P00076"
-        ]
-      },
-      {
-        "id": "F000173",
-        "src": "assets/fotos/P00076/elena-conchi-manu.jpg",
-        "titulo": "Elena Conchi Manu",
-        "fecha": "",
-        "lugar": "",
-        "descripcion": "",
-        "etiquetas": [],
-        "personas": [
-          "P00076",
-          "P0012",
-          "P0011"
-        ]
-      },
-      {
-        "id": "F000175",
-        "src": "assets/fotos/P0012/joseelenacarmenmanu.jpg",
-        "titulo": "Jose Gomez Elena Uria Carmen Gomez y Manu",
-        "fecha": "",
-        "lugar": "",
-        "descripcion": "",
-        "etiquetas": [],
-        "personas": [
-          "P0012",
-          "P0009",
-          "P00075",
-          "P00076"
-        ]
-      }
-    ],
+    "fotografias": [],
     "documentos": [
       {
         "id": "D000051",
@@ -8804,7 +8712,7 @@
     "ultima_modificacion": "2026-08-11T13:31:47.755Z",
     "padre": "",
     "madre": "",
-    "fotografia_principal": "assets/fotos/P00076/elena-uria.png",
+    "fotografia_principal": "",
     "fotoPosicion": "50% 50%"
   },
   {
