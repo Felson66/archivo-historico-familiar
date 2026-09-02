@@ -708,7 +708,7 @@
       "P0006"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0007/manuel-de-la-dehesa.png",
+    "fotografia_principal": "assets/fotos/P0007/manuel-de-la-dehesa.jpg",
     "fotografias": [
       {
         "id": "F000007",
@@ -971,6 +971,18 @@
           "P0007",
           "P0010"
         ]
+      },
+      {
+        "id": "F000176",
+        "src": "assets/fotos/P0007/manuel-de-la-dehesa.jpg",
+        "titulo": "Manuel de la Dehesa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0007"
+        ]
       }
     ],
     "documentos": [
@@ -1001,6 +1013,21 @@
         "personas": [
           "P0007"
         ]
+      },
+      {
+        "id": "D000081",
+        "src": "assets/documentos/P0007/carnets-marina-mercante.pdf",
+        "nombre_archivo": "carnets-marina-mercante.pdf",
+        "formato": "application/pdf",
+        "titulo": "Carnets Marina Mercante",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0007"
+        ],
+        "paginas": [
+          "assets/documentos/P0007/d000081-paginas/pagina-001.webp"
+        ]
       }
     ],
     "cronologia": [],
@@ -1017,7 +1044,7 @@
     "visible": true,
     "padre": "P0005",
     "madre": "P0006",
-    "fotoPosicion": "50% 45%"
+    "fotoPosicion": "50% 22%"
   },
   {
     "datos_resumen": "Hijo de Manuel y Francisca.\nDNI : 14.756.003 - La letra calculada sería la \"P\"",
@@ -1428,7 +1455,7 @@
       {
         "id": "F000174",
         "src": "assets/fotos/P0012/josecarmenmanu.jpg",
-        "titulo": "Jose  y Carmen Gomez con Manu",
+        "titulo": "Carmen Gomez con Manu",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
@@ -1441,7 +1468,7 @@
       {
         "id": "F000175",
         "src": "assets/fotos/P0012/joseelenacarmenmanu.jpg",
-        "titulo": "Jose Gomez Elena Uria Carmen Gomez y Manu",
+        "titulo": "Carmen Gomez y Manu",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
@@ -2073,7 +2100,7 @@
       {
         "id": "F000173",
         "src": "assets/fotos/P00076/elena-conchi-manu.jpg",
-        "titulo": "Elena Conchi Manu",
+        "titulo": "Conchi Manu",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
@@ -2155,6 +2182,21 @@
         "descripcion": "",
         "personas": [
           "P0011"
+        ]
+      },
+      {
+        "id": "D000082",
+        "src": "assets/documentos/P0011/grado-pericial-concepcion-liz.pdf",
+        "nombre_archivo": "grado-pericial-concepcion-liz.pdf",
+        "formato": "application/pdf",
+        "titulo": "Grado Pericial Concepcion Liz",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0011"
+        ],
+        "paginas": [
+          "assets/documentos/P0011/d000082-paginas/pagina-001.webp"
         ]
       }
     ],
@@ -2710,7 +2752,7 @@
       {
         "id": "F000173",
         "src": "assets/fotos/P00076/elena-conchi-manu.jpg",
-        "titulo": "Elena Conchi Manu",
+        "titulo": "Conchi Manu",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
@@ -2723,7 +2765,7 @@
       {
         "id": "F000174",
         "src": "assets/fotos/P0012/josecarmenmanu.jpg",
-        "titulo": "Jose  y Carmen Gomez con Manu",
+        "titulo": "Carmen Gomez con Manu",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
@@ -2736,7 +2778,7 @@
       {
         "id": "F000175",
         "src": "assets/fotos/P0012/joseelenacarmenmanu.jpg",
-        "titulo": "Jose Gomez Elena Uria Carmen Gomez y Manu",
+        "titulo": "Carmen Gomez y Manu",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
