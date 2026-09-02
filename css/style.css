@@ -1823,52 +1823,24 @@ body.document-viewer-open{overflow:hidden}
 .tree-role-focus .tree-node-action{background:#e7d6a6;color:#5e4b1f}
 @media(max-width:700px){.tree-nav-label{font-size:10px}.tree-node-action{font-size:8px}}
 
-/* v4.2.0-alpha19 — cabecera compacta del árbol en móvil */
+/* v4.2.0-alpha20 · optimización móvil + protección de foto principal huérfana */
 @media(max-width:700px){
-  #tree .section-title{margin:10px 2px 7px}
-  #tree .section-title h3{font-size:21px}
+  .topbar{padding:calc(8px + env(safe-area-inset-top)) 14px 8px}
+  .seal{width:36px;height:36px;font-size:19px}
+  .brand{gap:9px}
+  .brand h1{font-size:16px}
+  .branch-bar{margin-top:7px}
+  #tree .section-title{margin-top:15px;margin-bottom:8px}
   #tree .section-title span{display:none}
-  #tree .tree-toolbar{
-    display:grid;
-    grid-template-columns:44px 1fr 44px 88px;
-    gap:6px;
-    margin-bottom:6px;
-    align-items:stretch;
-  }
-  #tree .tree-person-picker{
-    grid-column:1/-1;
-    min-width:0;
-    gap:0;
-  }
   #tree .tree-person-picker>span{display:none}
-  #tree .tree-person-picker select{
-    min-height:42px;
-    height:42px;
-    padding:6px 34px 6px 11px;
-    border-radius:11px;
-    font-size:15px;
-  }
-  #tree .tree-toolbar .soft{
-    min-height:38px;
-    height:38px;
-    padding:5px 7px;
-    border-radius:10px;
-    font-size:14px;
-  }
-  #tree #zoomOut{grid-column:1}
-  #tree #resetTree{grid-column:2}
-  #tree #zoomIn{grid-column:3}
-  #tree #toggleSiblings{
-    grid-column:4;
-    min-height:38px;
-    height:38px;
-    font-size:12px;
-  }
-  #tree .tree-context{
-    margin:3px 4px 6px;
-    gap:2px;
-    font-size:10px;
-    line-height:1.2;
-  }
-  #tree .tree-context strong{font-size:12px}
+  #tree .tree-person-picker select{min-height:44px;padding-top:7px;padding-bottom:7px}
+  #tree .tree-toolbar{grid-template-columns:64px minmax(120px,1fr) 64px auto;gap:6px;margin-bottom:5px}
+  #tree .tree-person-picker{grid-column:1/-1}
+  #tree .tree-toolbar .soft,#tree .tree-option{min-height:42px;padding:7px 10px}
+  #tree .tree-context{margin:5px 4px 5px;gap:1px}
+  #tree .tree-shell{margin-top:0}
+}
+@media(max-width:390px){
+  #tree .tree-toolbar{grid-template-columns:56px minmax(105px,1fr) 56px auto}
+  #tree .tree-option{grid-column:auto}
 }

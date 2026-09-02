@@ -1,1 +1,3 @@
-4.2.0-alpha19
+VERSIÓN: 4.2.0-alpha20
+ESTADO: DESARROLLO
+HITO: Foto principal consistente y ajustes móviles del árbol

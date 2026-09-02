@@ -1,0 +1,16 @@
+ALPHA20 SEGURA
+===============
+
+Este paquete contiene UNICAMENTE los archivos modificados respecto a la alpha19.
+NO incluye la carpeta data/ ni ningun archivo JSON.
+
+Copiar el contenido de esta carpeta sobre la raiz del proyecto y aceptar reemplazar.
+
+Archivos incluidos:
+- VERSION.txt
+- css/style.css
+- js/admin.js
+- js/app.js
+- releases/4.2.0-alpha20.md
+
+Tus datos actuales no se sobrescriben.

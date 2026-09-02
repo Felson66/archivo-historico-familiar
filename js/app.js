@@ -105,10 +105,18 @@ function stateLabel(state){
   return "Pendiente";
 }
 
+function validPrincipalPhoto(person){
+  const principal=String(person?.fotografia_principal||"").trim();
+  if(!principal)return "";
+  const photos=Array.isArray(person?.fotografias)?person.fotografias:[];
+  return photos.some(photo=>String(photo?.src||"").trim()===principal)?principal:"";
+}
+
 function card(person,mode="standard"){
-  const hasPhoto = Boolean(person.fotografia_principal);
+  const principalPhoto=validPrincipalPhoto(person);
+  const hasPhoto = Boolean(principalPhoto);
   const thumb = hasPhoto
-    ? `<img class="card-photo" src="${esc(person.fotografia_principal)}" alt="${esc(person.nombre)}" loading="lazy"${photoPositionStyle(person)}>`
+    ? `<img class="card-photo" src="${esc(principalPhoto)}" alt="${esc(person.nombre)}" loading="lazy"${photoPositionStyle(person)}>`
     : `<div class="card-monogram">${esc(initials(person.nombre))}</div>`;
 
   const compact = mode === "compact";
@@ -800,7 +808,7 @@ function quickRelationButtons(ids,emptyText){
 }
 
 function personAvatarMarkup(person,{size="small",className=""}={}){
-  const photo=String(person?.fotografia_principal||"").trim();
+  const photo=validPrincipalPhoto(person);
   const classes=["person-avatar",`person-avatar-${size}`,className].filter(Boolean).join(" ");
   if(photo){
     return `<span class="${classes}"><img src="${esc(photo)}" alt=""${photoPositionStyle(person)}></span>`;
@@ -877,8 +885,9 @@ function openPerson(id){
   const person = byId[id];
   if(!person) return;
 
-  const photo = person.fotografia_principal
-    ? `<img src="${esc(person.fotografia_principal)}" alt="${esc(person.nombre)}"${photoPositionStyle(person)}>`
+  const principalPhoto = validPrincipalPhoto(person);
+  const photo = principalPhoto
+    ? `<img src="${esc(principalPhoto)}" alt="${esc(person.nombre)}"${photoPositionStyle(person)}>`
     : `<div class="profile-monogram">${esc(initials(person.nombre))}</div>`;
 
   $("drawerContent").innerHTML = `
@@ -1055,7 +1064,7 @@ function treeDocumentationLevel(person){
 }
 
 function treeNodeLabel(person){
-  const photo=String(person.fotografia_principal||"").trim();
+  const photo=validPrincipalPhoto(person);
   const years=personLifeLine(person);
   const profession=String(person.profesion||"").trim();
   const photos=Array.isArray(person.fotografias)?person.fotografias.length:0;
