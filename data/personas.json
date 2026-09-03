@@ -983,6 +983,22 @@
         "personas": [
           "P0007"
         ]
+      },
+      {
+        "id": "F000183",
+        "src": "assets/fotos/P0015/en-un-banco.jpg",
+        "titulo": "En un banco",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013",
+          "P0007"
+        ]
       }
     ],
     "documentos": [
@@ -1931,6 +1947,32 @@
           "P0007",
           "P0010"
         ]
+      },
+      {
+        "id": "F000193",
+        "src": "assets/fotos/P0012/mercedes-y-manu-1.jpg",
+        "titulo": "Mercedes y Manu 1",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000194",
+        "src": "assets/fotos/P0012/mercedes-y-manu-2.jpg",
+        "titulo": "Mercedes y Manu 2",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0010"
+        ]
       }
     ],
     "documentos": [
@@ -2109,6 +2151,46 @@
           "P0011",
           "P0012"
         ]
+      },
+      {
+        "id": "F000187",
+        "src": "assets/fotos/P0013/la-tia-con-merche.jpg",
+        "titulo": "La tia con Merche",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000188",
+        "src": "assets/fotos/P0013/manu-y-merche-con-la-tia.jpg",
+        "titulo": "Manu y Merche con la tia",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0011",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000191",
+        "src": "assets/fotos/P0012/manu-y-conchi-en-el-parque-de-los-patos-1961.jpg",
+        "titulo": "Manu y Conchi en el parque de los patos 1961",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0011"
+        ]
       }
     ],
     "documentos": [
@@ -2197,6 +2279,18 @@
         ],
         "paginas": [
           "assets/documentos/P0011/d000082-paginas/pagina-001.webp"
+        ]
+      },
+      {
+        "id": "D000083",
+        "src": "assets/documentos/P0011/concepcion-carnet-socio-deportivo.jpg",
+        "nombre_archivo": "concepcion-carnet-socio-deportivo.jpg",
+        "formato": "image/jpeg",
+        "titulo": "Concepcion Carnet Socio Deportivo",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0011"
         ]
       }
     ],
@@ -2786,6 +2880,126 @@
         "personas": [
           "P0009",
           "P0012"
+        ]
+      },
+      {
+        "id": "F000179",
+        "src": "assets/fotos/P0015/edu-y-manu-con-marian.jpg",
+        "titulo": "Edu y Manu con Marian",
+        "fecha": "",
+        "lugar": "Bilbao, boda de Lourdes",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000183",
+        "src": "assets/fotos/P0015/en-un-banco.jpg",
+        "titulo": "En un banco",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013",
+          "P0007"
+        ]
+      },
+      {
+        "id": "F000186",
+        "src": "assets/fotos/P0015/manu-merche-y-edu-en-el-portal.jpg",
+        "titulo": "Manu Merche y Edu en el portal",
+        "fecha": "",
+        "lugar": "Iparraguirre",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0013",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000188",
+        "src": "assets/fotos/P0013/manu-y-merche-con-la-tia.jpg",
+        "titulo": "Manu y Merche con la tia",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0011",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000190",
+        "src": "assets/fotos/P0012/manu-adolescente.jpg",
+        "titulo": "Manu adolescente",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000191",
+        "src": "assets/fotos/P0012/manu-y-conchi-en-el-parque-de-los-patos-1961.jpg",
+        "titulo": "Manu y Conchi en el parque de los patos 1961",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000192",
+        "src": "assets/fotos/P0012/manu-y-un-amiguete.jpg",
+        "titulo": "Manu y un amiguete",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000193",
+        "src": "assets/fotos/P0012/mercedes-y-manu-1.jpg",
+        "titulo": "Mercedes y Manu 1",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000194",
+        "src": "assets/fotos/P0012/mercedes-y-manu-2.jpg",
+        "titulo": "Mercedes y Manu 2",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012",
+          "P0010"
         ]
       }
     ],
@@ -3378,6 +3592,90 @@
           "P0013",
           "P0016",
           "P0015"
+        ]
+      },
+      {
+        "id": "F000183",
+        "src": "assets/fotos/P0015/en-un-banco.jpg",
+        "titulo": "En un banco",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013",
+          "P0007"
+        ]
+      },
+      {
+        "id": "F000185",
+        "src": "assets/fotos/P0015/gallinas-mino-1968.jpg",
+        "titulo": "Gallinas Miño 1968",
+        "fecha": "",
+        "lugar": "Miño",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0013",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000186",
+        "src": "assets/fotos/P0015/manu-merche-y-edu-en-el-portal.jpg",
+        "titulo": "Manu Merche y Edu en el portal",
+        "fecha": "",
+        "lugar": "Iparraguirre",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0013",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000187",
+        "src": "assets/fotos/P0013/la-tia-con-merche.jpg",
+        "titulo": "La tia con Merche",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000188",
+        "src": "assets/fotos/P0013/manu-y-merche-con-la-tia.jpg",
+        "titulo": "Manu y Merche con la tia",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0011",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000189",
+        "src": "assets/fotos/P0013/merche-y-lourdes-costa.jpg",
+        "titulo": "Merche y Lourdes Costa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0014"
         ]
       }
     ],
@@ -4012,6 +4310,63 @@
           "P0012",
           "P0013"
         ]
+      },
+      {
+        "id": "F000181",
+        "src": "assets/fotos/P0015/en-la-costa-noja.jpg",
+        "titulo": "En la costa",
+        "fecha": "",
+        "lugar": "NOJA",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0016"
+        ]
+      },
+      {
+        "id": "F000183",
+        "src": "assets/fotos/P0015/en-un-banco.jpg",
+        "titulo": "En un banco",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013",
+          "P0007"
+        ]
+      },
+      {
+        "id": "F000185",
+        "src": "assets/fotos/P0015/gallinas-mino-1968.jpg",
+        "titulo": "Gallinas Miño 1968",
+        "fecha": "",
+        "lugar": "Miño",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0013",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000189",
+        "src": "assets/fotos/P0013/merche-y-lourdes-costa.jpg",
+        "titulo": "Merche y Lourdes Costa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0014"
+        ]
       }
     ],
     "documentos": [],
@@ -4513,6 +4868,127 @@
           "P0016",
           "P0015"
         ]
+      },
+      {
+        "id": "F000177",
+        "src": "assets/fotos/P0015/a-cargo-de-adrian-y-ale.jpg",
+        "titulo": "A cargo de Adrian y Ale",
+        "fecha": "",
+        "lugar": "Madrid",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0025",
+          "P0026"
+        ]
+      },
+      {
+        "id": "F000178",
+        "src": "assets/fotos/P0015/edu-en-su-trono.jpg",
+        "titulo": "Edu en su trono",
+        "fecha": "",
+        "lugar": "Iparraguirre",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015"
+        ]
+      },
+      {
+        "id": "F000179",
+        "src": "assets/fotos/P0015/edu-y-manu-con-marian.jpg",
+        "titulo": "Edu y Manu con Marian",
+        "fecha": "",
+        "lugar": "Bilbao, boda de Lourdes",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000180",
+        "src": "assets/fotos/P0015/edu-y-vagabundo.jpg",
+        "titulo": "Edu y Vagabundo",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015"
+        ]
+      },
+      {
+        "id": "F000181",
+        "src": "assets/fotos/P0015/en-la-costa-noja.jpg",
+        "titulo": "En la costa",
+        "fecha": "",
+        "lugar": "NOJA",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0016"
+        ]
+      },
+      {
+        "id": "F000182",
+        "src": "assets/fotos/P0015/en-la-higuera.jpg",
+        "titulo": "En la Higuera",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015"
+        ]
+      },
+      {
+        "id": "F000183",
+        "src": "assets/fotos/P0015/en-un-banco.jpg",
+        "titulo": "En un banco",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013",
+          "P0007"
+        ]
+      },
+      {
+        "id": "F000185",
+        "src": "assets/fotos/P0015/gallinas-mino-1968.jpg",
+        "titulo": "Gallinas Miño 1968",
+        "fecha": "",
+        "lugar": "Miño",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0013",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000186",
+        "src": "assets/fotos/P0015/manu-merche-y-edu-en-el-portal.jpg",
+        "titulo": "Manu Merche y Edu en el portal",
+        "fecha": "",
+        "lugar": "Iparraguirre",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0013",
+          "P0012"
+        ]
       }
     ],
     "documentos": [
@@ -4818,6 +5294,32 @@
           "P0013",
           "P0016",
           "P0015"
+        ]
+      },
+      {
+        "id": "F000181",
+        "src": "assets/fotos/P0015/en-la-costa-noja.jpg",
+        "titulo": "En la costa",
+        "fecha": "",
+        "lugar": "NOJA",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0016"
+        ]
+      },
+      {
+        "id": "F000184",
+        "src": "assets/fotos/P0016/elena-primera-comunion.jpg",
+        "titulo": "Elena Primera Comunion",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016"
         ]
       }
     ],
@@ -5687,6 +6189,20 @@
           "P0025",
           "P0026"
         ]
+      },
+      {
+        "id": "F000177",
+        "src": "assets/fotos/P0015/a-cargo-de-adrian-y-ale.jpg",
+        "titulo": "A cargo de Adrian y Ale",
+        "fecha": "",
+        "lugar": "Madrid",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0025",
+          "P0026"
+        ]
       }
     ],
     "documentos": [],
@@ -5793,6 +6309,20 @@
         "personas": [
           "P0026",
           "P0031"
+        ]
+      },
+      {
+        "id": "F000177",
+        "src": "assets/fotos/P0015/a-cargo-de-adrian-y-ale.jpg",
+        "titulo": "A cargo de Adrian y Ale",
+        "fecha": "",
+        "lugar": "Madrid",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0025",
+          "P0026"
         ]
       }
     ],
