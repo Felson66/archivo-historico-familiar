@@ -1209,6 +1209,21 @@
           "P0011",
           "P0010"
         ]
+      },
+      {
+        "id": "F000207",
+        "src": "assets/fotos/P0009/francisco-carmen-hijas.jpg",
+        "titulo": "Francisco Carmen Hijas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0008",
+          "P0010",
+          "P0011"
+        ]
       }
     ],
     "documentos": [
@@ -1516,6 +1531,75 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0009",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000206",
+        "src": "assets/fotos/P0009/carmen-comida-familiar.jpg",
+        "titulo": "Carmen comida familiar",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009"
+        ]
+      },
+      {
+        "id": "F000207",
+        "src": "assets/fotos/P0009/francisco-carmen-hijas.jpg",
+        "titulo": "Francisco Carmen Hijas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0008",
+          "P0010",
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000208",
+        "src": "assets/fotos/P0009/manu-con-la-abuela-y-mercedes.jpg",
+        "titulo": "Manu con la abuela y Mercedes",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0010",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000209",
+        "src": "assets/fotos/P0009/merche-y-manu-con-la-abuela.jpg",
+        "titulo": "Merche y Manu con la abuela",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000212",
+        "src": "assets/fotos/P0013/merche-cavando.jpg",
+        "titulo": "Merche cavando",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
           "P0009",
           "P0012"
         ]
@@ -2013,6 +2097,60 @@
           "P0011",
           "P0010"
         ]
+      },
+      {
+        "id": "F000207",
+        "src": "assets/fotos/P0009/francisco-carmen-hijas.jpg",
+        "titulo": "Francisco Carmen Hijas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0008",
+          "P0010",
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000208",
+        "src": "assets/fotos/P0009/manu-con-la-abuela-y-mercedes.jpg",
+        "titulo": "Manu con la abuela y Mercedes",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0010",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000220",
+        "src": "assets/fotos/P0010/mercedes-barandilla.jpg",
+        "titulo": "Mercedes Barandilla",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000221",
+        "src": "assets/fotos/P0010/mercedes-y-concepcion-liz.jpg",
+        "titulo": "Mercedes y Concepcion Liz",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0010",
+          "P0011"
+        ]
       }
     ],
     "documentos": [
@@ -2256,6 +2394,48 @@
           "P0008",
           "P0011",
           "P0010"
+        ]
+      },
+      {
+        "id": "F000207",
+        "src": "assets/fotos/P0009/francisco-carmen-hijas.jpg",
+        "titulo": "Francisco Carmen Hijas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0008",
+          "P0010",
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000213",
+        "src": "assets/fotos/P0013/merche-y-manu-con-su-tia.jpg",
+        "titulo": "Merche y Manu con su tía",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0012",
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000221",
+        "src": "assets/fotos/P0010/mercedes-y-concepcion-liz.jpg",
+        "titulo": "Mercedes y Concepcion Liz",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0010",
+          "P0011"
         ]
       }
     ],
@@ -3077,9 +3257,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -3112,6 +3292,126 @@
         "id": "F000203",
         "src": "assets/fotos/P0012/manu-pequeno.jpg",
         "titulo": "Manu Pequeño",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000208",
+        "src": "assets/fotos/P0009/manu-con-la-abuela-y-mercedes.jpg",
+        "titulo": "Manu con la abuela y Mercedes",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0010",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000209",
+        "src": "assets/fotos/P0009/merche-y-manu-con-la-abuela.jpg",
+        "titulo": "Merche y Manu con la abuela",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000210",
+        "src": "assets/fotos/P0013/manu-y-merche-bilbao.jpg",
+        "titulo": "Manu y Merche bilbao",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000211",
+        "src": "assets/fotos/P0013/manu-y-merche-playa.jpg",
+        "titulo": "Manu y Merche playa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000212",
+        "src": "assets/fotos/P0013/merche-cavando.jpg",
+        "titulo": "Merche cavando",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0009",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000213",
+        "src": "assets/fotos/P0013/merche-y-manu-con-su-tia.jpg",
+        "titulo": "Merche y Manu con su tía",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0012",
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000214",
+        "src": "assets/fotos/P0013/ninos-en-la-playa.jpg",
+        "titulo": "Niños en la playa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0014",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000218",
+        "src": "assets/fotos/P0012/manu-ingenieros.jpg",
+        "titulo": "Manu Ingenieros",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000219",
+        "src": "assets/fotos/P0012/manu-marinerito.jpg",
+        "titulo": "Manu Marinerito",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
@@ -3163,7 +3463,7 @@
       "P0010"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0013/manumerlour.jpg",
+    "fotografia_principal": "assets/fotos/P0013/merche-en-el-rio.jpg",
     "fotografias": [
       {
         "id": "F000008",
@@ -3805,9 +4105,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -3820,8 +4120,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0015",
           "P0013",
+          "P0015",
           "P0014"
         ]
       },
@@ -3834,7 +4134,101 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0013",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000209",
+        "src": "assets/fotos/P0009/merche-y-manu-con-la-abuela.jpg",
+        "titulo": "Merche y Manu con la abuela",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0009",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000210",
+        "src": "assets/fotos/P0013/manu-y-merche-bilbao.jpg",
+        "titulo": "Manu y Merche bilbao",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000211",
+        "src": "assets/fotos/P0013/manu-y-merche-playa.jpg",
+        "titulo": "Manu y Merche playa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000212",
+        "src": "assets/fotos/P0013/merche-cavando.jpg",
+        "titulo": "Merche cavando",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0009",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000213",
+        "src": "assets/fotos/P0013/merche-y-manu-con-su-tia.jpg",
+        "titulo": "Merche y Manu con su tía",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0012",
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000214",
+        "src": "assets/fotos/P0013/ninos-en-la-playa.jpg",
+        "titulo": "Niños en la playa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
           "P0014",
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000215",
+        "src": "assets/fotos/P0013/merche-en-el-rio.jpg",
+        "titulo": "Merche en el rio",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
           "P0013"
         ]
       }
@@ -4537,9 +4931,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -4552,8 +4946,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0015",
           "P0013",
+          "P0015",
           "P0014"
         ]
       },
@@ -4579,8 +4973,34 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0013",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000214",
+        "src": "assets/fotos/P0013/ninos-en-la-playa.jpg",
+        "titulo": "Niños en la playa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
           "P0014",
-          "P0013"
+          "P0012"
+        ]
+      },
+      {
+        "id": "F000216",
+        "src": "assets/fotos/P0014/lourdes-artxanda.jpg",
+        "titulo": "Lourdes Artxanda",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0014"
         ]
       }
     ],
@@ -5226,9 +5646,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -5253,9 +5673,21 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0015",
           "P0013",
+          "P0015",
           "P0014"
+        ]
+      },
+      {
+        "id": "F000217",
+        "src": "assets/fotos/P0015/edu-artxanda.jpg",
+        "titulo": "Edu Artxanda",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015"
         ]
       }
     ],
