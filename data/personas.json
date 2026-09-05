@@ -733,7 +733,7 @@
         "etiquetas": [],
         "personas": [
           "P0007",
-          "P0013"
+          "P0010"
         ]
       },
       {
@@ -2151,6 +2151,19 @@
           "P0010",
           "P0011"
         ]
+      },
+      {
+        "id": "F000008",
+        "src": "assets/fotos/P0007/bodas-oro.jpeg",
+        "titulo": "Bodas Oro",
+        "fecha": "01/04/2006",
+        "lugar": "Dima",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0007",
+          "P0010"
+        ]
       }
     ],
     "documentos": [
@@ -3465,19 +3478,6 @@
     "biografia": "",
     "fotografia_principal": "assets/fotos/P0013/merche-en-el-rio.jpg",
     "fotografias": [
-      {
-        "id": "F000008",
-        "src": "assets/fotos/P0007/bodas-oro.jpeg",
-        "titulo": "Bodas Oro",
-        "fecha": "01/04/2006",
-        "lugar": "Dima",
-        "descripcion": "",
-        "etiquetas": [],
-        "personas": [
-          "P0007",
-          "P0013"
-        ]
-      },
       {
         "id": "F000009",
         "src": "assets/fotos/P0007/familia-de-la-dehesa-liz.jpg",
