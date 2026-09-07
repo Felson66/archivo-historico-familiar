@@ -1056,6 +1056,41 @@
         "paginas": [
           "assets/documentos/P0007/d000081-paginas/pagina-001.webp"
         ]
+      },
+      {
+        "id": "D000084",
+        "src": "assets/documentos/P0007/expediente-academico-nautica-manuel-de-la-dehesa-mugica.pdf",
+        "nombre_archivo": "expediente-academico-nautica-manuel-de-la-dehesa-mugica.pdf",
+        "formato": "application/pdf",
+        "titulo": "Expediente Academico Nautica Manuel de la Dehesa Mugica",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0007"
+        ],
+        "paginas": [
+          "assets/documentos/P0007/d000084-paginas/pagina-001.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-002.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-003.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-004.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-005.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-006.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-007.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-008.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-009.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-010.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-011.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-012.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-013.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-014.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-015.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-016.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-017.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-018.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-019.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-020.webp",
+          "assets/documentos/P0007/d000084-paginas/pagina-021.webp"
+        ]
       }
     ],
     "cronologia": [],
@@ -1219,8 +1254,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0009",
           "P0008",
+          "P0009",
           "P0010",
           "P0011"
         ]
@@ -1556,8 +1591,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0009",
           "P0008",
+          "P0009",
           "P0010",
           "P0011"
         ]
@@ -1599,8 +1634,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0013",
           "P0009",
+          "P0013",
           "P0012"
         ]
       }
@@ -2107,8 +2142,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0009",
           "P0008",
+          "P0009",
           "P0010",
           "P0011"
         ]
@@ -2418,8 +2453,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0009",
           "P0008",
+          "P0009",
           "P0010",
           "P0011"
         ]
@@ -2433,9 +2468,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0011",
           "P0013",
-          "P0012",
-          "P0011"
+          "P0012"
         ]
       },
       {
@@ -3350,8 +3385,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0013",
-          "P0012"
+          "P0012",
+          "P0013"
         ]
       },
       {
@@ -3363,8 +3398,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0013",
-          "P0012"
+          "P0012",
+          "P0013"
         ]
       },
       {
@@ -3376,8 +3411,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0013",
           "P0009",
+          "P0013",
           "P0012"
         ]
       },
@@ -3390,9 +3425,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0011",
           "P0013",
-          "P0012",
-          "P0011"
+          "P0012"
         ]
       },
       {
@@ -3404,9 +3439,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0012",
           "P0013",
-          "P0014",
-          "P0012"
+          "P0014"
         ]
       },
       {
@@ -4161,8 +4196,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0013",
-          "P0012"
+          "P0012",
+          "P0013"
         ]
       },
       {
@@ -4174,8 +4209,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0013",
-          "P0012"
+          "P0012",
+          "P0013"
         ]
       },
       {
@@ -4187,8 +4222,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0013",
           "P0009",
+          "P0013",
           "P0012"
         ]
       },
@@ -4201,9 +4236,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0011",
           "P0013",
-          "P0012",
-          "P0011"
+          "P0012"
         ]
       },
       {
@@ -4215,9 +4250,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0012",
           "P0013",
-          "P0014",
-          "P0012"
+          "P0014"
         ]
       },
       {
@@ -4986,9 +5021,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0012",
           "P0013",
-          "P0014",
-          "P0012"
+          "P0014"
         ]
       },
       {
@@ -10718,7 +10753,7 @@
   },
   {
     "id": "P00094",
-    "nombre": "Jacinto de la Dehesa",
+    "nombre": "Jacinto de la Dehesa Jorge",
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
