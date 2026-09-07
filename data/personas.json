@@ -121,6 +121,18 @@
           "assets/documentos/P0001/d000040-paginas/pagina-001.webp",
           "assets/documentos/P0001/d000040-paginas/pagina-002.webp"
         ]
+      },
+      {
+        "id": "D000071",
+        "src": "assets/documentos/P00094/zona-militar-toro-francisco.png",
+        "nombre_archivo": "zona-militar-toro-francisco.png",
+        "formato": "image/png",
+        "titulo": "Zona Militar Toro Francisco",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0001"
+        ]
       }
     ],
     "cronologia": [],
@@ -8041,8 +8053,8 @@
     "cronologia": [],
     "lugares": [],
     "notas": "",
-    "fecha_nacimiento": "",
-    "lugar_nacimiento": "1915",
+    "fecha_nacimiento": "28/04/1872",
+    "lugar_nacimiento": "Riego del Camino",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "Maestra",
@@ -8050,8 +8062,8 @@
     "sexo": "mujer",
     "situacion_vital": "fallecido",
     "visible": true,
-    "padre": "",
-    "madre": ""
+    "padre": "P00121",
+    "madre": "P00124"
   },
   {
     "datos_resumen": "",
@@ -10779,24 +10791,12 @@
         "personas": [
           "P00094"
         ]
-      },
-      {
-        "id": "D000071",
-        "src": "assets/documentos/P00094/zona-militar-toro-francisco.png",
-        "nombre_archivo": "zona-militar-toro-francisco.png",
-        "formato": "image/png",
-        "titulo": "Zona Militar Toro Francisco",
-        "fecha": "",
-        "descripcion": "",
-        "personas": [
-          "P00094"
-        ]
       }
     ],
     "fecha_creacion": "2026-08-17T12:44:37.045Z",
     "ultima_modificacion": "2026-08-17T12:44:37.045Z",
-    "padre": "",
-    "madre": ""
+    "padre": "P00122",
+    "madre": "P00123"
   },
   {
     "id": "P00095",
@@ -11477,5 +11477,105 @@
     "ultima_modificacion": "2026-09-07T17:18:18.631Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00121",
+    "nombre": "Modesto de la Dehesa Jorge",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1844",
+    "lugar_nacimiento": "Zamora",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00124"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-07T19:15:17.546Z",
+    "ultima_modificacion": "2026-09-07T19:15:17.546Z",
+    "padre": "P00122",
+    "madre": "P00123"
+  },
+  {
+    "id": "P00122",
+    "nombre": "Victoriano de la Dehesa Rodriguez",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "San Cebrián de Castro",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-07T19:16:24.524Z",
+    "ultima_modificacion": "2026-09-07T19:16:24.524Z"
+  },
+  {
+    "id": "P00123",
+    "nombre": "Isidora Jorge Blanco",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Riego del Camino",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-07T19:17:32.840Z",
+    "ultima_modificacion": "2026-09-07T19:17:32.840Z"
+  },
+  {
+    "id": "P00124",
+    "nombre": "Candida Baladron Crespo",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Zamora",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00121"
+    ],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-07T19:19:36.466Z",
+    "ultima_modificacion": "2026-09-07T19:19:36.466Z"
   }
 ]
