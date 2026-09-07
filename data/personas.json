@@ -11425,5 +11425,57 @@
     "ultima_modificacion": "2026-09-07T15:40:46.356Z",
     "padre": "P00094",
     "madre": "P00095"
+  },
+  {
+    "id": "P00119",
+    "nombre": "Maria Angeles de la Dehesa Martin",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Riego del Camino",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00120"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-07T17:15:53.225Z",
+    "ultima_modificacion": "2026-09-07T17:15:53.225Z",
+    "padre": "P0001",
+    "madre": "P0002"
+  },
+  {
+    "id": "P00120",
+    "nombre": "Leopoldo Calles Otero",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00119"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-07T17:18:18.631Z",
+    "ultima_modificacion": "2026-09-07T17:18:18.631Z",
+    "padre": "",
+    "madre": ""
   }
 ]
