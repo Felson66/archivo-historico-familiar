@@ -127,7 +127,7 @@
     "lugares": [],
     "notas": "",
     "fecha_nacimiento": "08/12/1868",
-    "lugar_nacimiento": "",
+    "lugar_nacimiento": "Riego del Camino",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "",
@@ -8060,12 +8060,8 @@
     "conyuges": [],
     "hechos": [
       {
-        "tipo": "documented",
+        "tipo": "documentado",
         "texto": "Vecino de Riego del Camino documentado en prensa en 1914."
-      },
-      {
-        "tipo": "hypothesis",
-        "texto": "Posible hermano de Francisco de la Dehesa Baladrón; parentesco pendiente de confirmación documental."
       }
     ],
     "nombre": "Antonio de la Dehesa Baladrón",
@@ -8103,8 +8099,8 @@
     "cronologia": [],
     "lugares": [],
     "notas": "",
-    "fecha_nacimiento": "",
-    "lugar_nacimiento": "1914",
+    "fecha_nacimiento": "17/01/1871",
+    "lugar_nacimiento": "Riego del Camino",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "",
@@ -11163,7 +11159,7 @@
     "sexo": "mujer",
     "situacion_vital": "fallecido",
     "fecha_nacimiento": "26/07/1852",
-    "lugar_nacimiento": "",
+    "lugar_nacimiento": "Riego del Camino",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "",
@@ -11273,6 +11269,30 @@
     "documentos": [],
     "fecha_creacion": "2026-09-07T15:14:02.018Z",
     "ultima_modificacion": "2026-09-07T15:14:02.018Z",
+    "padre": "P00094",
+    "madre": "P00095"
+  },
+  {
+    "id": "P00113",
+    "nombre": "Nicolas de la Dehesa Baladron",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "17/09/1865",
+    "lugar_nacimiento": "Riego del Camino",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-07T15:22:19.365Z",
+    "ultima_modificacion": "2026-09-07T15:22:19.366Z",
     "padre": "P00094",
     "madre": "P00095"
   }
