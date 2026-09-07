@@ -10758,7 +10758,7 @@
     "sexo": "hombre",
     "situacion_vital": "fallecido",
     "fecha_nacimiento": "",
-    "lugar_nacimiento": "Riego del Camino",
+    "lugar_nacimiento": "San Cebrián de Castro (Zamora)",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "Labrador",
@@ -10804,7 +10804,7 @@
   },
   {
     "id": "P00095",
-    "nombre": "Julia Baladron",
+    "nombre": "Julita Maria Baladron Fernandez",
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
@@ -11155,5 +11155,29 @@
     "ultima_modificacion": "2026-08-25T12:37:31.781Z",
     "padre": "P00073",
     "madre": "P00074"
+  },
+  {
+    "id": "P00108",
+    "nombre": "Maria Josefa de la Dehesa Baladron",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1852",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-07T14:50:37.934Z",
+    "ultima_modificacion": "2026-09-07T14:50:37.935Z",
+    "padre": "P00094",
+    "madre": "P00095"
   }
 ]
