@@ -11167,7 +11167,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "conyuges": [],
+    "conyuges": [
+      "P00125"
+    ],
     "hechos": [],
     "fotografias": [],
     "documentos": [],
@@ -11577,5 +11579,234 @@
     "documentos": [],
     "fecha_creacion": "2026-09-07T19:19:36.466Z",
     "ultima_modificacion": "2026-09-07T19:19:36.466Z"
+  },
+  {
+    "id": "P00125",
+    "nombre": "Lazaro Calles Cid",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Riego del Camino",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00108"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-08T09:52:40.889Z",
+    "ultima_modificacion": "2026-09-08T09:52:40.889Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00126",
+    "nombre": "Wildevaldo Calles de la Dehesa",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "06/10/1892",
+    "lugar_nacimiento": "Riego del Camino",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00127"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000222",
+        "src": "assets/fotos/P00126/wildevaldo-calles-de-la-dehesa.jpg",
+        "titulo": "Wildevaldo Calles de la Dehesa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00126"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-09-08T09:56:36.446Z",
+    "ultima_modificacion": "2026-09-08T09:56:36.446Z",
+    "fotografia_principal": "assets/fotos/P00126/wildevaldo-calles-de-la-dehesa.jpg",
+    "fotoPosicion": "50% 32%",
+    "padre": "P00125",
+    "madre": "P00108"
+  },
+  {
+    "id": "P00127",
+    "nombre": "Maria Rosa Toranzo Porto",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1898",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00126"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000223",
+        "src": "assets/fotos/P00127/maria-rosa-toranzo-porto.png",
+        "titulo": "Maria Rosa Toranzo Porto",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00127"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-09-08T09:59:51.362Z",
+    "ultima_modificacion": "2026-09-08T09:59:51.362Z",
+    "padre": "",
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00127/maria-rosa-toranzo-porto.png",
+    "fotoPosicion": "42% 44%"
+  },
+  {
+    "id": "P00128",
+    "nombre": "Anunciacion Calles Toranzo",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "25/03/1923",
+    "lugar_nacimiento": "Riego del Camino",
+    "fecha_defuncion": "24/07/2012",
+    "lugar_defuncion": "Riego del Camino",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00129"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000224",
+        "src": "assets/fotos/P00128/anunciacion-calles-toranzo.png",
+        "titulo": "Anunciacion Calles Toranzo",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00128"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-09-08T10:05:02.140Z",
+    "ultima_modificacion": "2026-09-08T10:05:02.140Z",
+    "fotografia_principal": "assets/fotos/P00128/anunciacion-calles-toranzo.png",
+    "fotoPosicion": "50% 66%",
+    "padre": "P00126",
+    "madre": "P00127"
+  },
+  {
+    "id": "P00129",
+    "nombre": "Gorgonio Hernandez Prieto",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "23/03/1915",
+    "lugar_nacimiento": "Riego del Camino",
+    "fecha_defuncion": "24/11/1986",
+    "lugar_defuncion": "Riego del Camino",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00128"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000226",
+        "src": "assets/fotos/P00129/gorgonio-hernandez-prieto.png",
+        "titulo": "Gorgonio Hernandez Prieto",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00129"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-09-08T10:09:46.049Z",
+    "ultima_modificacion": "2026-09-08T10:09:46.049Z",
+    "padre": "",
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00129/gorgonio-hernandez-prieto.png",
+    "fotoPosicion": "50% 75%"
+  },
+  {
+    "id": "P00130",
+    "nombre": "Jesus Hernandez Calles",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "07/04/1954",
+    "lugar_nacimiento": "Riego del Camino",
+    "fecha_defuncion": "15/04/2011",
+    "lugar_defuncion": "Baracaldo",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000225",
+        "src": "assets/fotos/P00130/jesus-hernandez-calles.png",
+        "titulo": "Jesus Hernandez Calles",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00130"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-09-08T10:15:19.573Z",
+    "ultima_modificacion": "2026-09-08T10:15:19.573Z",
+    "padre": "P00129",
+    "madre": "P00128",
+    "fotografia_principal": "assets/fotos/P00130/jesus-hernandez-calles.png",
+    "fotoPosicion": "50% 45%"
   }
 ]
