@@ -11521,14 +11521,16 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
-    "conyuges": [],
-    "hijos": [],
+    "conyuges": [
+      "P00123"
+    ],
     "hechos": [],
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-09-07T19:16:24.524Z",
-    "ultima_modificacion": "2026-09-07T19:16:24.524Z"
+    "ultima_modificacion": "2026-09-07T19:16:24.524Z",
+    "padre": "P00140",
+    "madre": "P00141"
   },
   {
     "id": "P00123",
@@ -11546,7 +11548,9 @@
     "datos_resumen": "",
     "visible": true,
     "padres": [],
-    "conyuges": [],
+    "conyuges": [
+      "P00122"
+    ],
     "hijos": [],
     "hechos": [],
     "fotografias": [],
@@ -12024,5 +12028,53 @@
     "ultima_modificacion": "2026-09-08T14:50:19.203Z",
     "padre": "P00122",
     "madre": "P00123"
+  },
+  {
+    "id": "P00140",
+    "nombre": "Joaquin de la Dehesa",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Fontanillas de Castro (Zamora)",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-08T14:54:09.333Z",
+    "ultima_modificacion": "2026-09-08T14:54:09.333Z"
+  },
+  {
+    "id": "P00141",
+    "nombre": "Eulalia Rodriguez",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Sejas de Aliste (Zamora)",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-08T14:54:57.665Z",
+    "ultima_modificacion": "2026-09-08T14:54:57.665Z"
   }
 ]
