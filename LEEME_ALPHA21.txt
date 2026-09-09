@@ -1,0 +1,9 @@
+ALPHA21 SEGURA — MODO PÚBLICO RAMA EDUARDO
+
+Copiar TODO el contenido de este ZIP sobre la raíz del proyecto y reemplazar.
+
+NO contiene data/, JSON, fotos ni documentos.
+NO borra información de Esther ni de la rama conjunta.
+Solo oculta el selector público y fija temporalmente la web pública a Eduardo.
+
+Para revertirlo en el futuro se conserva el motor de ramas en el código.

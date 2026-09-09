@@ -1,3 +1,3 @@
-VERSIÓN: 4.2.0-alpha20
+VERSIÓN: 4.2.0-alpha21
 ESTADO: DESARROLLO
-HITO: Foto principal consistente y ajustes móviles del árbol
+HITO: Modo público temporal limitado a la rama Eduardo

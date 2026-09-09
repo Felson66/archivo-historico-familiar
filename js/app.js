@@ -1,7 +1,13 @@
 let PEOPLE = [];
 let byId = {};
 let currentView = "people";
-let currentFamilyBranch = localStorage.getItem("raicesFamilyBranch") || "conjunta";
+/* v4.2.0-alpha21 · Modo público temporal.
+ * Se conserva íntegro el motor de ramas para poder revertir esta decisión.
+ * Para restaurar el selector basta con volver a mostrar su bloque en index.html
+ * y establecer PUBLIC_FIXED_BRANCH = null.
+ */
+const PUBLIC_FIXED_BRANCH = "eduardo";
+let currentFamilyBranch = PUBLIC_FIXED_BRANCH || localStorage.getItem("raicesFamilyBranch") || "conjunta";
 
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
@@ -386,6 +392,7 @@ function familyBranchDiagnostics(){
 }
 
 function normalizeFamilyBranch(branchName){
+  if(PUBLIC_FIXED_BRANCH) return PUBLIC_FIXED_BRANCH;
   return ["eduardo","esther","conjunta"].includes(branchName) ? branchName : "conjunta";
 }
 
@@ -400,7 +407,7 @@ function renderFamilyBranchSelector(){
 
 function setFamilyBranch(branchName,{centerTree=true}={}){
   currentFamilyBranch=normalizeFamilyBranch(branchName);
-  localStorage.setItem("raicesFamilyBranch",currentFamilyBranch);
+  if(!PUBLIC_FIXED_BRANCH) localStorage.setItem("raicesFamilyBranch",currentFamilyBranch);
   renderFamilyBranchSelector();
   renderPeople();
 
