@@ -12104,14 +12104,16 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
-    "conyuges": [],
-    "hijos": [],
+    "conyuges": [
+      "P00141"
+    ],
     "hechos": [],
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-09-08T14:54:09.333Z",
-    "ultima_modificacion": "2026-09-08T14:54:09.333Z"
+    "ultima_modificacion": "2026-09-08T14:54:09.333Z",
+    "padre": "",
+    "madre": ""
   },
   {
     "id": "P00141",
@@ -12129,7 +12131,9 @@
     "datos_resumen": "",
     "visible": true,
     "padres": [],
-    "conyuges": [],
+    "conyuges": [
+      "P00140"
+    ],
     "hijos": [],
     "hechos": [],
     "fotografias": [],
