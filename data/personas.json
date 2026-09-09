@@ -7487,6 +7487,54 @@
           "P0016",
           "P0030"
         ]
+      },
+      {
+        "id": "F000227",
+        "src": "assets/fotos/P0030/eder-camisa.jpg",
+        "titulo": "Eder",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0030"
+        ]
+      },
+      {
+        "id": "F000228",
+        "src": "assets/fotos/P0030/eder-con-peio.jpg",
+        "titulo": "Eder con Peio",
+        "fecha": "",
+        "lugar": "Arantzazu",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0030"
+        ]
+      },
+      {
+        "id": "F000229",
+        "src": "assets/fotos/P0030/eder-noche.jpg",
+        "titulo": "Eder",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0030"
+        ]
+      },
+      {
+        "id": "F000230",
+        "src": "assets/fotos/P0030/eder-monte.jpg",
+        "titulo": "Eder Monte",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0030"
+        ]
       }
     ],
     "documentos": [],
