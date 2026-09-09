@@ -7509,7 +7509,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0030"
+          "P0030",
+          "P0031"
         ]
       },
       {
@@ -7611,6 +7612,19 @@
         "etiquetas": [],
         "personas": [
           "P0026",
+          "P0031"
+        ]
+      },
+      {
+        "id": "F000228",
+        "src": "assets/fotos/P0030/eder-con-peio.jpg",
+        "titulo": "Eder con Peio",
+        "fecha": "",
+        "lugar": "Arantzazu",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0030",
           "P0031"
         ]
       }
