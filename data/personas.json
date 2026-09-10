@@ -2221,9 +2221,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0010",
           "P0030",
-          "P0016",
-          "P0010"
+          "P0016"
         ]
       }
     ],
@@ -5073,8 +5073,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0030",
-          "P0014"
+          "P0014",
+          "P0030"
         ]
       }
     ],
@@ -5773,8 +5773,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0030",
-          "P0015"
+          "P0015",
+          "P0030"
         ]
       }
     ],
@@ -6118,9 +6118,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0016",
           "P0030",
-          "P0031",
-          "P0016"
+          "P0031"
         ]
       },
       {
@@ -6132,9 +6132,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0010",
           "P0030",
-          "P0016",
-          "P0010"
+          "P0016"
         ]
       }
     ],
@@ -7691,8 +7691,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0030",
-          "P0015"
+          "P0015",
+          "P0030"
         ]
       },
       {
@@ -7704,9 +7704,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0016",
           "P0030",
-          "P0031",
-          "P0016"
+          "P0031"
         ]
       },
       {
@@ -7718,8 +7718,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0030",
-          "P0014"
+          "P0014",
+          "P0030"
         ]
       },
       {
@@ -7731,9 +7731,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0010",
           "P0030",
-          "P0016",
-          "P0010"
+          "P0016"
         ]
       }
     ],
@@ -7901,9 +7901,21 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0016",
           "P0030",
-          "P0031",
-          "P0016"
+          "P0031"
+        ]
+      },
+      {
+        "id": "F000241",
+        "src": "assets/fotos/P0031/peio-vasquito.jpg",
+        "titulo": "Peio Vasquito",
+        "fecha": "",
+        "lugar": "Atxuri",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0031"
         ]
       }
     ],
