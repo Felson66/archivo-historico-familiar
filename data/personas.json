@@ -1023,6 +1023,19 @@
         "personas": [
           "P0007"
         ]
+      },
+      {
+        "id": "F000250",
+        "src": "assets/fotos/P0016/elena-papa-porche.jpg",
+        "titulo": "Elena Papa Porche",
+        "fecha": "",
+        "lugar": "Noja - Casa de los Velasco",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0007"
+        ]
       }
     ],
     "documentos": [
@@ -1102,6 +1115,22 @@
           "assets/documentos/P0007/d000084-paginas/pagina-019.webp",
           "assets/documentos/P0007/d000084-paginas/pagina-020.webp",
           "assets/documentos/P0007/d000084-paginas/pagina-021.webp"
+        ]
+      },
+      {
+        "id": "D000085",
+        "src": "assets/documentos/P0007/titulo-piloto-vapor.pdf",
+        "nombre_archivo": "titulo-piloto-vapor.pdf",
+        "formato": "application/pdf",
+        "titulo": "Titulo Piloto Vapor",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P0007"
+        ],
+        "paginas": [
+          "assets/documentos/P0007/d000085-paginas/pagina-001.webp",
+          "assets/documentos/P0007/d000085-paginas/pagina-002.webp"
         ]
       }
     ],
@@ -1649,6 +1678,19 @@
           "P0009",
           "P0013",
           "P0012"
+        ]
+      },
+      {
+        "id": "F000242",
+        "src": "assets/fotos/P0016/abuela-elena-ris.jpg",
+        "titulo": "Abuela Elena Ris",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0009"
         ]
       }
     ],
@@ -5076,6 +5118,32 @@
           "P0014",
           "P0030"
         ]
+      },
+      {
+        "id": "F000255",
+        "src": "assets/fotos/P0016/lourdes-y-elena.jpg",
+        "titulo": "Lourdes y Elena",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0014"
+        ]
+      },
+      {
+        "id": "F000257",
+        "src": "assets/fotos/P0014/lourdes-con-edu.jpg",
+        "titulo": "Lourdes con Edu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0014",
+          "P0015"
+        ]
       }
     ],
     "documentos": [],
@@ -5776,6 +5844,45 @@
           "P0015",
           "P0030"
         ]
+      },
+      {
+        "id": "F000243",
+        "src": "assets/fotos/P0016/edu-y-elena-escaleras.jpg",
+        "titulo": "Edu y Elena Escaleras",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0015"
+        ]
+      },
+      {
+        "id": "F000245",
+        "src": "assets/fotos/P0016/elena-con-edu.jpg",
+        "titulo": "Elena con Edu",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0015"
+        ]
+      },
+      {
+        "id": "F000257",
+        "src": "assets/fotos/P0014/lourdes-con-edu.jpg",
+        "titulo": "Lourdes con Edu",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0014",
+          "P0015"
+        ]
       }
     ],
     "documentos": [
@@ -6135,6 +6242,179 @@
           "P0010",
           "P0030",
           "P0016"
+        ]
+      },
+      {
+        "id": "F000242",
+        "src": "assets/fotos/P0016/abuela-elena-ris.jpg",
+        "titulo": "Abuela Elena Ris",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0009"
+        ]
+      },
+      {
+        "id": "F000243",
+        "src": "assets/fotos/P0016/edu-y-elena-escaleras.jpg",
+        "titulo": "Edu y Elena Escaleras",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0015"
+        ]
+      },
+      {
+        "id": "F000244",
+        "src": "assets/fotos/P0016/elena-con-ana-y-maria.jpg",
+        "titulo": "Elena con Ana y Maria",
+        "fecha": "",
+        "lugar": "Noja - Casa del Sheriff",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016"
+        ]
+      },
+      {
+        "id": "F000245",
+        "src": "assets/fotos/P0016/elena-con-edu.jpg",
+        "titulo": "Elena con Edu",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0015"
+        ]
+      },
+      {
+        "id": "F000246",
+        "src": "assets/fotos/P0016/elena-con-javi-y-rafa-amann.jpg",
+        "titulo": "Elena con Javi y Rafa Amann",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016"
+        ]
+      },
+      {
+        "id": "F000247",
+        "src": "assets/fotos/P0016/elena-con-los-sanchez.jpg",
+        "titulo": "Elena con los Sanchez",
+        "fecha": "",
+        "lugar": "Noja - Casa del Sheriff",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016"
+        ]
+      },
+      {
+        "id": "F000248",
+        "src": "assets/fotos/P0016/elena-con-sira.jpg",
+        "titulo": "Elena con Sira",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016"
+        ]
+      },
+      {
+        "id": "F000249",
+        "src": "assets/fotos/P0016/elena-ignacio.jpg",
+        "titulo": "Elena con Ignacio Amann en Ris",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016"
+        ]
+      },
+      {
+        "id": "F000250",
+        "src": "assets/fotos/P0016/elena-papa-porche.jpg",
+        "titulo": "Elena Papa Porche",
+        "fecha": "",
+        "lugar": "Noja - Casa de los Velasco",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0007"
+        ]
+      },
+      {
+        "id": "F000251",
+        "src": "assets/fotos/P0016/elena-playa.jpg",
+        "titulo": "Elena Playa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016"
+        ]
+      },
+      {
+        "id": "F000252",
+        "src": "assets/fotos/P0016/elena-sira-panojos.jpg",
+        "titulo": "Elena Sira Panojos",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016"
+        ]
+      },
+      {
+        "id": "F000253",
+        "src": "assets/fotos/P0016/elena-y-maria.jpg",
+        "titulo": "Elena y Maria",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016"
+        ]
+      },
+      {
+        "id": "F000254",
+        "src": "assets/fotos/P0016/elena-y-sira.jpg",
+        "titulo": "Elena y Sira",
+        "fecha": "",
+        "lugar": "Noja Frente a casa de los Ruigomez",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016"
+        ]
+      },
+      {
+        "id": "F000255",
+        "src": "assets/fotos/P0016/lourdes-y-elena.jpg",
+        "titulo": "Lourdes y Elena",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0016",
+          "P0014"
         ]
       }
     ],
@@ -6568,6 +6848,18 @@
         "etiquetas": [],
         "personas": [
           "P0013",
+          "P0020"
+        ]
+      },
+      {
+        "id": "F000256",
+        "src": "assets/fotos/P0020/raquel-sira.jpg",
+        "titulo": "Raquel Sira",
+        "fecha": "",
+        "lugar": "Noja",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
           "P0020"
         ]
       }
