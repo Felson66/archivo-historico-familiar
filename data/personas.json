@@ -1033,8 +1033,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0016",
-          "P0007"
+          "P0007",
+          "P0016"
         ]
       }
     ],
@@ -1689,8 +1689,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0016",
-          "P0009"
+          "P0009",
+          "P0016"
         ]
       }
     ],
@@ -5128,8 +5128,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0016",
-          "P0014"
+          "P0014",
+          "P0016"
         ]
       },
       {
@@ -5854,8 +5854,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0016",
-          "P0015"
+          "P0015",
+          "P0016"
         ]
       },
       {
@@ -5867,8 +5867,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0016",
-          "P0015"
+          "P0015",
+          "P0016"
         ]
       },
       {
@@ -6253,8 +6253,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0016",
-          "P0009"
+          "P0009",
+          "P0016"
         ]
       },
       {
@@ -6266,8 +6266,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0016",
-          "P0015"
+          "P0015",
+          "P0016"
         ]
       },
       {
@@ -6291,8 +6291,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0016",
-          "P0015"
+          "P0015",
+          "P0016"
         ]
       },
       {
@@ -6352,8 +6352,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0016",
-          "P0007"
+          "P0007",
+          "P0016"
         ]
       },
       {
@@ -6413,8 +6413,8 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
-          "P0016",
-          "P0014"
+          "P0014",
+          "P0016"
         ]
       }
     ],
@@ -12799,7 +12799,7 @@
   },
   {
     "id": "P00145",
-    "nombre": "Prudencia de la Dehesa Nogales",
+    "nombre": "Prudencia de la Dehesa Nogueras",
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
