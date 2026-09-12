@@ -1,7 +1,7 @@
 let PEOPLE = [];
 let byId = {};
 let currentView = "people";
-/* v4.2.0-alpha21 · Modo público temporal.
+/* v4.2.0-alpha22 · Modo público temporal.
  * Se conserva íntegro el motor de ramas para poder revertir esta decisión.
  * Para restaurar el selector basta con volver a mostrar su bloque en index.html
  * y establecer PUBLIC_FIXED_BRANCH = null.
@@ -206,13 +206,15 @@ function showView(id){
 
 function renderPeople(){
   const visiblePeople = peopleForBranch(currentFamilyBranch);
-  const query = ($("peopleSearch").value || "").trim().toLowerCase();
+  const normalizeSearchText = value => String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+  const query = normalizeSearchText($("peopleSearch").value).trim();
   const filtered = visiblePeople
-    .filter(person => JSON.stringify([
-      person.nombre,person.datos_resumen,person.rol,person.profesion,
-      person.fecha_nacimiento,person.lugar_nacimiento,
-      person.fecha_defuncion,person.lugar_defuncion,person.hechos
-    ]).toLowerCase().includes(query))
+    // alpha22: el buscador público filtra exclusivamente por el nombre.
+    // Se mantiene búsqueda parcial: «Eder» encuentra «Eder» y «Federico».
+    .filter(person => normalizeSearchText(person.nombre).includes(query))
     .sort((a,b) => a.nombre.localeCompare(b.nombre,"es"));
   $("peopleCount").textContent = `${filtered.length} ${filtered.length === 1 ? "persona" : "personas"}`;
   $("peopleGrid").innerHTML = filtered.length ? filtered.map(person => card(person,"compact")).join("") : `<div class="empty">No se han encontrado coincidencias.</div>`;

@@ -1,3 +1,1 @@
-VERSIÓN: 4.2.0-alpha21
-ESTADO: DESARROLLO
-HITO: Modo público temporal limitado a la rama Eduardo
+VERSIÓN: 4.2.0-alpha22

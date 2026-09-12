@@ -1,0 +1,15 @@
+ALPHA22 SEGURA — BUSCADOR POR NOMBRE + DESCARGA DEL ÁRBOL
+
+Copiar TODO el contenido de este ZIP sobre la raíz del proyecto y reemplazar.
+
+CAMBIOS:
+- El buscador solo busca en el nombre de la persona.
+- La búsqueda sigue siendo parcial: Eder encuentra Eder y Federico.
+- Se añade el botón “Descargar Árbol Familiar” en la vista Árbol.
+- Se incluye el PDF definitivo de 200 × 72 cm.
+
+SEGURIDAD:
+- NO contiene data/ ni JSON.
+- NO contiene ni sustituye fotos ni documentos existentes.
+- NO elimina información de Esther ni de la rama conjunta.
+- Se mantiene el modo público temporal fijado a Eduardo.
