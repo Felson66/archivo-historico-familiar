@@ -1,0 +1,10 @@
+Archivo Histórico Familiar v4.2.0-alpha23 — actualización segura
+
+Cambio:
+- Se elimina el botón «Árbol completo».
+- Se elimina también «Ajustar todo», ya que solo tenía sentido en la vista completa.
+- El árbol web queda como árbol navegable centrado en una persona.
+- El árbol completo se ofrece mediante el PDF descargable de 200 × 72 cm.
+
+No incluye ni modifica data/, JSON, fotografías ni documentos.
+Copiar el contenido sobre la raíz del proyecto, reemplazar cuando se solicite y publicar con GitHub Desktop.
