@@ -2267,6 +2267,61 @@
           "P0030",
           "P0016"
         ]
+      },
+      {
+        "id": "F000258",
+        "src": "assets/fotos/P0015/en-el-monte-los-5.jpg",
+        "titulo": "En el monte los 5",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0016",
+          "P0014",
+          "P0013",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000260",
+        "src": "assets/fotos/P0013/mercedos-con-manu-y-merche.jpg",
+        "titulo": "Mercedos con Manu y Merche",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0012",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000261",
+        "src": "assets/fotos/P0010/mercedes-bicicleta.jpg",
+        "titulo": "Mercedes Bicicleta",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000262",
+        "src": "assets/fotos/P0010/paseo-en-burro-goian-7-9-52.jpg",
+        "titulo": "Paseo en Burro Goian 7 9 52",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0010",
+          "P0011"
+        ]
       }
     ],
     "documentos": [
@@ -2545,6 +2600,19 @@
         "id": "F000221",
         "src": "assets/fotos/P0010/mercedes-y-concepcion-liz.jpg",
         "titulo": "Mercedes y Concepcion Liz",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0010",
+          "P0011"
+        ]
+      },
+      {
+        "id": "F000262",
+        "src": "assets/fotos/P0010/paseo-en-burro-goian-7-9-52.jpg",
+        "titulo": "Paseo en Burro Goian 7 9 52",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
@@ -3535,6 +3603,35 @@
         "personas": [
           "P0012"
         ]
+      },
+      {
+        "id": "F000259",
+        "src": "assets/fotos/P0015/iparraguirre.jpg",
+        "titulo": "Iparraguirre",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000260",
+        "src": "assets/fotos/P0013/mercedos-con-manu-y-merche.jpg",
+        "titulo": "Mercedos con Manu y Merche",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0012",
+          "P0010"
+        ]
       }
     ],
     "documentos": [],
@@ -4333,6 +4430,51 @@
         "etiquetas": [],
         "personas": [
           "P0013"
+        ]
+      },
+      {
+        "id": "F000258",
+        "src": "assets/fotos/P0015/en-el-monte-los-5.jpg",
+        "titulo": "En el monte los 5",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0016",
+          "P0014",
+          "P0013",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000259",
+        "src": "assets/fotos/P0015/iparraguirre.jpg",
+        "titulo": "Iparraguirre",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
+      },
+      {
+        "id": "F000260",
+        "src": "assets/fotos/P0013/mercedos-con-manu-y-merche.jpg",
+        "titulo": "Mercedos con Manu y Merche",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0013",
+          "P0012",
+          "P0010"
         ]
       }
     ],
@@ -5144,6 +5286,37 @@
           "P0014",
           "P0015"
         ]
+      },
+      {
+        "id": "F000258",
+        "src": "assets/fotos/P0015/en-el-monte-los-5.jpg",
+        "titulo": "En el monte los 5",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0016",
+          "P0014",
+          "P0013",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000259",
+        "src": "assets/fotos/P0015/iparraguirre.jpg",
+        "titulo": "Iparraguirre",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
       }
     ],
     "documentos": [],
@@ -5883,6 +6056,37 @@
           "P0014",
           "P0015"
         ]
+      },
+      {
+        "id": "F000258",
+        "src": "assets/fotos/P0015/en-el-monte-los-5.jpg",
+        "titulo": "En el monte los 5",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0016",
+          "P0014",
+          "P0013",
+          "P0010"
+        ]
+      },
+      {
+        "id": "F000259",
+        "src": "assets/fotos/P0015/iparraguirre.jpg",
+        "titulo": "Iparraguirre",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0014",
+          "P0012",
+          "P0013"
+        ]
       }
     ],
     "documentos": [
@@ -6415,6 +6619,22 @@
         "personas": [
           "P0014",
           "P0016"
+        ]
+      },
+      {
+        "id": "F000258",
+        "src": "assets/fotos/P0015/en-el-monte-los-5.jpg",
+        "titulo": "En el monte los 5",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0015",
+          "P0016",
+          "P0014",
+          "P0013",
+          "P0010"
         ]
       }
     ],
