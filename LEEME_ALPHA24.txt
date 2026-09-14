@@ -1,9 +1,9 @@
-Archivo Histórico Familiar v4.2.0-alpha24 — actualización segura
+Archivo Histórico Familiar · v4.2.0-alpha24 · paquete seguro
 
-Cambio:
-- Cada vez que se abre una ficha de persona, la ficha se posiciona automáticamente arriba del todo.
-- Ya no se hereda la posición de scroll de la ficha visitada anteriormente.
-- Se mantiene intacto el funcionamiento del árbol navegable y la descarga del PDF.
+Cambios:
+- Cada ficha de persona se abre siempre desde arriba del todo.
+- Se corrige la identificación visible de versión en la web y en Administración.
+- Se corrige VERSION.txt para que la comprobación automática de versión funcione correctamente.
 
-No incluye ni modifica data/, JSON, fotografías ni documentos.
-Copiar el contenido sobre la raíz del proyecto, reemplazar cuando se solicite y publicar con GitHub Desktop.
+Este paquete NO incluye ni modifica data/, personas.json, fotografías ni documentos.
+El PDF del Árbol Familiar se conserva sin cambios.

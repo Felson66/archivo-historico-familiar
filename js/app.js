@@ -1,7 +1,7 @@
 let PEOPLE = [];
 let byId = {};
 let currentView = "people";
-/* v4.2.0-alpha22 · Modo público temporal.
+/* v4.2.0-alpha24 · Modo público temporal.
  * Se conserva íntegro el motor de ramas para poder revertir esta decisión.
  * Para restaurar el selector basta con volver a mostrar su bloque en index.html
  * y establecer PUBLIC_FIXED_BRANCH = null.
