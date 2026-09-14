@@ -1,1 +1,1 @@
-VERSIÓN: 4.2.0-alpha24
+VERSIÓN: 4.2.0-alpha25

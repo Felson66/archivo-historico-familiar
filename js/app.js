@@ -1,7 +1,7 @@
 let PEOPLE = [];
 let byId = {};
 let currentView = "people";
-/* v4.2.0-alpha24 · Modo público temporal.
+/* v4.2.0-alpha25 · Modo público temporal.
  * Se conserva íntegro el motor de ramas para poder revertir esta decisión.
  * Para restaurar el selector basta con volver a mostrar su bloque en index.html
  * y establecer PUBLIC_FIXED_BRANCH = null.
@@ -961,10 +961,26 @@ function openPerson(id){
   personDrawer.setAttribute("aria-hidden","false");
   document.body.classList.add("drawer-open");
 
-  // Cada ficha debe abrir siempre desde el principio, sin heredar
-  // la posición de scroll de la ficha visitada anteriormente.
-  personDrawer.scrollTop = 0;
-  requestAnimationFrame(() => { personDrawer.scrollTop = 0; });
+  // alpha25: cada ficha debe abrir siempre desde el principio, incluso
+  // al cambiar de persona sin cerrar antes la ficha actual. Algunos navegadores
+  // conservan el anclaje de scroll al sustituir el contenido, por eso se
+  // reinician tanto el panel como su contenido en varios ciclos de render.
+  const drawerContent = $("drawerContent");
+  const resetPersonScroll = () => {
+    personDrawer.scrollTop = 0;
+    if (typeof personDrawer.scrollTo === "function") personDrawer.scrollTo({top:0,left:0,behavior:"auto"});
+    if (drawerContent) {
+      drawerContent.scrollTop = 0;
+      if (typeof drawerContent.scrollTo === "function") drawerContent.scrollTo({top:0,left:0,behavior:"auto"});
+    }
+  };
+  resetPersonScroll();
+  requestAnimationFrame(() => {
+    resetPersonScroll();
+    requestAnimationFrame(resetPersonScroll);
+  });
+  setTimeout(resetPersonScroll, 60);
+  setTimeout(resetPersonScroll, 180);
 
   history.replaceState(null,"",`#persona=${encodeURIComponent(id)}`);
 }

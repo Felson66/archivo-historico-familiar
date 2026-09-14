@@ -1,0 +1,5 @@
+Archivo Histórico Familiar · v4.2.0-alpha25
+
+Corrección segura: al abrir cualquier ficha de persona, incluso cambiando desde otra ficha sin cerrarla, se muestra siempre desde arriba.
+
+No se incluyen ni modifican data/, JSON, fotografías o documentos.
