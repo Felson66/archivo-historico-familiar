@@ -1,7 +1,7 @@
 let PEOPLE = [];
 let byId = {};
 let currentView = "people";
-/* v4.2.0-alpha25 · Modo público temporal.
+/* v4.2.0-alpha26 · Modo público temporal.
  * Se conserva íntegro el motor de ramas para poder revertir esta decisión.
  * Para restaurar el selector basta con volver a mostrar su bloque en index.html
  * y establecer PUBLIC_FIXED_BRANCH = null.
@@ -961,26 +961,42 @@ function openPerson(id){
   personDrawer.setAttribute("aria-hidden","false");
   document.body.classList.add("drawer-open");
 
-  // alpha25: cada ficha debe abrir siempre desde el principio, incluso
-  // al cambiar de persona sin cerrar antes la ficha actual. Algunos navegadores
-  // conservan el anclaje de scroll al sustituir el contenido, por eso se
-  // reinician tanto el panel como su contenido en varios ciclos de render.
+  // alpha26: una ficha nueva siempre empieza arriba, también cuando se cambia
+  // directamente de una persona a otra sin cerrar el panel. Desactivamos el
+  // scroll anchoring de Chrome y reiniciamos todos los posibles contenedores.
   const drawerContent = $("drawerContent");
+  personDrawer.style.overflowAnchor = "none";
+  if (drawerContent) drawerContent.style.overflowAnchor = "none";
+
   const resetPersonScroll = () => {
     personDrawer.scrollTop = 0;
-    if (typeof personDrawer.scrollTo === "function") personDrawer.scrollTo({top:0,left:0,behavior:"auto"});
+    if (typeof personDrawer.scrollTo === "function") {
+      personDrawer.scrollTo({top:0,left:0,behavior:"auto"});
+    }
     if (drawerContent) {
       drawerContent.scrollTop = 0;
-      if (typeof drawerContent.scrollTo === "function") drawerContent.scrollTo({top:0,left:0,behavior:"auto"});
+      if (typeof drawerContent.scrollTo === "function") {
+        drawerContent.scrollTo({top:0,left:0,behavior:"auto"});
+      }
+      const first = drawerContent.firstElementChild;
+      if (first && typeof first.scrollIntoView === "function") {
+        first.scrollIntoView({block:"start",inline:"nearest",behavior:"auto"});
+      }
     }
+    // Respaldo para navegadores en los que el desplazamiento efectivo termina
+    // recayendo en la página aunque el panel sea fijo.
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   };
+
   resetPersonScroll();
   requestAnimationFrame(() => {
     resetPersonScroll();
     requestAnimationFrame(resetPersonScroll);
   });
-  setTimeout(resetPersonScroll, 60);
-  setTimeout(resetPersonScroll, 180);
+  setTimeout(resetPersonScroll, 50);
+  setTimeout(resetPersonScroll, 150);
+  setTimeout(resetPersonScroll, 350);
 
   history.replaceState(null,"",`#persona=${encodeURIComponent(id)}`);
 }

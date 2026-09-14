@@ -1,0 +1,8 @@
+Archivo Histórico Familiar · v4.2.0-alpha26
+
+Corrección segura del scroll de fichas:
+- Cada nueva ficha se abre arriba del todo.
+- Funciona también al cambiar de persona sin cerrar antes la ficha.
+- Se desactiva el scroll anchoring del panel para evitar que Chrome restaure la posición al cargar imágenes.
+
+No incluye ni modifica data/, JSON, fotografías ni documentos.
