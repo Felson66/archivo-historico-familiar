@@ -1,7 +1,7 @@
 let PEOPLE = [];
 let byId = {};
 let currentView = "people";
-/* v4.2.0-alpha26 · Modo público temporal.
+/* v4.2.0-alpha27 · Modo público temporal.
  * Se conserva íntegro el motor de ramas para poder revertir esta decisión.
  * Para restaurar el selector basta con volver a mostrar su bloque en index.html
  * y establecer PUBLIC_FIXED_BRANCH = null.
@@ -825,13 +825,48 @@ function personAvatarMarkup(person,{size="small",className=""}={}){
   return `<span class="${classes} person-avatar-fallback" aria-hidden="true">${esc(initials(person?.nombre||""))}</span>`;
 }
 
+function resetPersonDrawerScroll(){
+  const personDrawer = $("personDrawer");
+  const drawerContent = $("drawerContent");
+  if(!personDrawer) return;
+
+  // El único contenedor con scroll real de la ficha es .person-drawer.
+  // Reiniciamos también el contenido por seguridad y repetimos tras el render.
+  personDrawer.scrollTop = 0;
+  if(typeof personDrawer.scrollTo === "function") {
+    personDrawer.scrollTo({top:0,left:0,behavior:"auto"});
+  }
+  if(drawerContent){
+    drawerContent.scrollTop = 0;
+    if(typeof drawerContent.scrollTo === "function") {
+      drawerContent.scrollTo({top:0,left:0,behavior:"auto"});
+    }
+  }
+
+  requestAnimationFrame(()=>{
+    personDrawer.scrollTop = 0;
+    if(typeof personDrawer.scrollTo === "function") {
+      personDrawer.scrollTo({top:0,left:0,behavior:"auto"});
+    }
+  });
+}
+
 function openTreeQuickPanel(id){
   const person=byId[id]; if(!person||!isPublicPerson(person))return;
   const avatar=personAvatarMarkup(person,{size:"large",className:`tree-quick-avatar tree-doc-${treeDocumentationLevel(person)}`});
   const parents=parentIdsFor(person); const siblings=siblingGroups(person); const allSiblings=uniqueIds([...siblings.full,...siblings.half,...siblings.commonParent]); const spouses=spouseIdsFor(person); const children=childIdsFor(person); const life=personLifeLine(person); const secondary=[person.lugar_nacimiento,person.profesion].filter(Boolean).join(" · ");
   $("personDrawer").classList.add("tree-quick-mode");
   $("drawerContent").innerHTML=`<section class="tree-quick-hero tree-quick-hero-avatar"><div class="tree-quick-avatar-wrap">${avatar}</div><div class="tree-quick-intro"><span class="badge">${esc(stateLabel(person.estado))}</span><h2>${esc(person.nombre)}</h2>${life?`<div class="tree-quick-life">${esc(life)}</div>`:""}${secondary?`<div class="tree-quick-secondary">${esc(secondary)}</div>`:""}<div class="tree-quick-actions"><button type="button" class="primary" data-tree-center-person="${esc(person.id)}">Centrar en el árbol</button><button type="button" class="soft" data-open-full-person="${esc(person.id)}">Abrir ficha completa</button></div></div></section><div class="tree-quick-stats"><span><strong>${parents.length}</strong> progenitores</span><span><strong>${allSiblings.length}</strong> hermanos</span><span><strong>${spouses.length}</strong> cónyuges</span><span><strong>${children.length}</strong> hijos</span></div><section class="tree-quick-section"><h3>Padres</h3>${quickRelationButtons(parents,documentedUnknownParents(person).length?"":"No constan padres")}${documentedUnknownParentsMarkup(person)}</section>${spouses.length?`<section class="tree-quick-section"><h3>Cónyuges</h3>${quickRelationButtons(spouses,"No consta cónyuge")}</section>`:""}${children.length?`<section class="tree-quick-section"><h3>Hijos</h3>${quickRelationButtons(children,"No constan hijos")}</section>`:""}${allSiblings.length?`<section class="tree-quick-section"><h3>Hermanos</h3>${quickRelationButtons(allSiblings,"No constan hermanos")}</section>`:""}`;
-  $("drawerBackdrop").classList.add("open"); $("personDrawer").classList.add("open"); $("personDrawer").setAttribute("aria-hidden","false"); document.body.classList.add("drawer-open"); history.replaceState(null,"",`#arbol/${encodeURIComponent(id)}`);
+  $("drawerBackdrop").classList.add("open");
+  $("personDrawer").classList.add("open");
+  $("personDrawer").setAttribute("aria-hidden","false");
+  document.body.classList.add("drawer-open");
+
+  // alpha27: el panel rápido del árbol usa el MISMO drawer que la ficha completa.
+  // Si la ficha anterior estaba abajo, hay que reiniciarlo también aquí.
+  resetPersonDrawerScroll();
+
+  history.replaceState(null,"",`#arbol/${encodeURIComponent(id)}`);
 }
 function centerTreeOnPerson(id,{keepPanel=false}={}){
   if(!byId[id])return;
@@ -961,42 +996,8 @@ function openPerson(id){
   personDrawer.setAttribute("aria-hidden","false");
   document.body.classList.add("drawer-open");
 
-  // alpha26: una ficha nueva siempre empieza arriba, también cuando se cambia
-  // directamente de una persona a otra sin cerrar el panel. Desactivamos el
-  // scroll anchoring de Chrome y reiniciamos todos los posibles contenedores.
-  const drawerContent = $("drawerContent");
-  personDrawer.style.overflowAnchor = "none";
-  if (drawerContent) drawerContent.style.overflowAnchor = "none";
-
-  const resetPersonScroll = () => {
-    personDrawer.scrollTop = 0;
-    if (typeof personDrawer.scrollTo === "function") {
-      personDrawer.scrollTo({top:0,left:0,behavior:"auto"});
-    }
-    if (drawerContent) {
-      drawerContent.scrollTop = 0;
-      if (typeof drawerContent.scrollTo === "function") {
-        drawerContent.scrollTo({top:0,left:0,behavior:"auto"});
-      }
-      const first = drawerContent.firstElementChild;
-      if (first && typeof first.scrollIntoView === "function") {
-        first.scrollIntoView({block:"start",inline:"nearest",behavior:"auto"});
-      }
-    }
-    // Respaldo para navegadores en los que el desplazamiento efectivo termina
-    // recayendo en la página aunque el panel sea fijo.
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-  };
-
-  resetPersonScroll();
-  requestAnimationFrame(() => {
-    resetPersonScroll();
-    requestAnimationFrame(resetPersonScroll);
-  });
-  setTimeout(resetPersonScroll, 50);
-  setTimeout(resetPersonScroll, 150);
-  setTimeout(resetPersonScroll, 350);
+  // alpha27: tanto ficha completa como panel rápido del árbol arrancan arriba.
+  resetPersonDrawerScroll();
 
   history.replaceState(null,"",`#persona=${encodeURIComponent(id)}`);
 }
