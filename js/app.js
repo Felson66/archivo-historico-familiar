@@ -955,10 +955,17 @@ function openPerson(id){
       </div>
     </div>`;
 
+  const personDrawer = $("personDrawer");
   $("drawerBackdrop").classList.add("open");
-  $("personDrawer").classList.add("open");
-  $("personDrawer").setAttribute("aria-hidden","false");
+  personDrawer.classList.add("open");
+  personDrawer.setAttribute("aria-hidden","false");
   document.body.classList.add("drawer-open");
+
+  // Cada ficha debe abrir siempre desde el principio, sin heredar
+  // la posición de scroll de la ficha visitada anteriormente.
+  personDrawer.scrollTop = 0;
+  requestAnimationFrame(() => { personDrawer.scrollTop = 0; });
+
   history.replaceState(null,"",`#persona=${encodeURIComponent(id)}`);
 }
 
