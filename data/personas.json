@@ -2277,11 +2277,11 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0010",
           "P0015",
           "P0016",
           "P0014",
-          "P0013",
-          "P0010"
+          "P0013"
         ]
       },
       {
@@ -2293,9 +2293,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0010",
           "P0013",
-          "P0012",
-          "P0010"
+          "P0012"
         ]
       },
       {
@@ -3613,9 +3613,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -3628,9 +3628,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0010",
           "P0013",
-          "P0012",
-          "P0010"
+          "P0012"
         ]
       }
     ],
@@ -4441,11 +4441,11 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0010",
           "P0015",
           "P0016",
           "P0014",
-          "P0013",
-          "P0010"
+          "P0013"
         ]
       },
       {
@@ -4457,9 +4457,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       },
@@ -4472,9 +4472,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0010",
           "P0013",
-          "P0012",
-          "P0010"
+          "P0012"
         ]
       }
     ],
@@ -5296,11 +5296,11 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0010",
           "P0015",
           "P0016",
           "P0014",
-          "P0013",
-          "P0010"
+          "P0013"
         ]
       },
       {
@@ -5312,9 +5312,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       }
@@ -6066,11 +6066,11 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0010",
           "P0015",
           "P0016",
           "P0014",
-          "P0013",
-          "P0010"
+          "P0013"
         ]
       },
       {
@@ -6082,9 +6082,9 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0012",
           "P0015",
           "P0014",
-          "P0012",
           "P0013"
         ]
       }
@@ -6630,11 +6630,11 @@
         "descripcion": "",
         "etiquetas": [],
         "personas": [
+          "P0010",
           "P0015",
           "P0016",
           "P0014",
-          "P0013",
-          "P0010"
+          "P0013"
         ]
       }
     ],
@@ -8270,7 +8270,7 @@
     "datos_resumen": "",
     "lugar_descanso": null,
     "hijos": [],
-    "estado": "hipótesis",
+    "estado": "documentado",
     "conyuges": [],
     "hechos": [
       {
@@ -8435,9 +8435,9 @@
     "cronologia": [],
     "lugares": [],
     "notas": "",
-    "fotoPosicion": "50% 50%",
-    "fecha_nacimiento": "",
-    "lugar_nacimiento": "año pendiente",
+    "fotoPosicion": "50% 21%",
+    "fecha_nacimiento": "26/06/2003",
+    "lugar_nacimiento": "Bilbao",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "",
