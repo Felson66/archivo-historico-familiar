@@ -8549,7 +8549,9 @@
     "lugar_descanso": null,
     "hijos": [],
     "estado": "documentado",
-    "conyuges": [],
+    "conyuges": [
+      "P00146"
+    ],
     "hechos": [
       {
         "tipo": "documentado",
@@ -13040,5 +13042,139 @@
     "ultima_modificacion": "2026-09-08T18:42:10.725Z",
     "padre": "P00118",
     "madre": "P00142"
+  },
+  {
+    "id": "P00146",
+    "nombre": "Basilisa Chillon",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P0036"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-17T09:43:50.839Z",
+    "ultima_modificacion": "2026-09-17T09:43:50.839Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00147",
+    "nombre": "Luis de la Dehesa Chillon",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "17/10/1932",
+    "lugar_nacimiento": "Mutriku",
+    "fecha_defuncion": "11/08/2022",
+    "lugar_defuncion": "Bilbao",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00148"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000263",
+        "src": "assets/fotos/P00147/luis-de-la-dehesa-chillon.jpeg",
+        "titulo": "Luis de la dehesa chillon",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00147"
+        ]
+      }
+    ],
+    "documentos": [
+      {
+        "id": "D000086",
+        "src": "assets/documentos/P00147/cert-defuncion-luis-de-la-dehesa-chillon.pdf",
+        "nombre_archivo": "cert-defuncion-luis-de-la-dehesa-chillon.pdf",
+        "formato": "application/pdf",
+        "titulo": "Cert Defuncion Luis de la Dehesa Chillon",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00147"
+        ],
+        "paginas": [
+          "assets/documentos/P00147/d000086-paginas/pagina-001.webp"
+        ]
+      },
+      {
+        "id": "D000087",
+        "src": "assets/documentos/P00147/esquela-luis-de-la-dehesa.png",
+        "nombre_archivo": "esquela-luis-de-la-dehesa.png",
+        "formato": "image/png",
+        "titulo": "Esquela Luis de la Dehesa",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00147"
+        ]
+      }
+    ],
+    "fecha_creacion": "2026-09-17T09:48:19.087Z",
+    "ultima_modificacion": "2026-09-17T09:48:19.087Z",
+    "fotografia_principal": "assets/fotos/P00147/luis-de-la-dehesa-chillon.jpeg",
+    "fotoPosicion": "50% 57%",
+    "padre": "P0036",
+    "madre": "P00146"
+  },
+  {
+    "id": "P00148",
+    "nombre": "Nieves Junquera Baquerin",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1932",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "25/12/2008",
+    "lugar_defuncion": "Bilbao",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00147"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [
+      {
+        "id": "D000088",
+        "src": "assets/documentos/P00148/esquela-nieves-junquera.png",
+        "nombre_archivo": "esquela-nieves-junquera.png",
+        "formato": "image/png",
+        "titulo": "Esquela Nieves Junquera",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00148"
+        ]
+      }
+    ],
+    "fecha_creacion": "2026-09-17T10:00:35.016Z",
+    "ultima_modificacion": "2026-09-17T10:00:35.016Z",
+    "padre": "",
+    "madre": ""
   }
 ]
