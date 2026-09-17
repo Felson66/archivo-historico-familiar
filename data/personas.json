@@ -13399,5 +13399,29 @@
     "fotoPosicion": "50% 10%",
     "padre": "",
     "madre": "P00150"
+  },
+  {
+    "id": "P00155",
+    "nombre": "Jacinto de la Dehesa Chillon",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "desconocido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "Matrícula Coche : BI-9956-C (127 de Gasolina)",
+    "datos_resumen": "Matrícula Coche : BI-9956-C (127 de Gasolina)",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-17T13:22:06.398Z",
+    "ultima_modificacion": "2026-09-17T13:22:06.398Z",
+    "padre": "P0036",
+    "madre": "P00146"
   }
 ]
