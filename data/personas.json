@@ -13176,5 +13176,228 @@
     "ultima_modificacion": "2026-09-17T10:00:35.016Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00149",
+    "nombre": "Cesar de la Dehesa Junquera",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Bilbao",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00151"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000264",
+        "src": "assets/fotos/P00149/cesar-de-la-dehesa-junquera.jpg",
+        "titulo": "Cesar de la Dehesa Junquera",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00149"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-09-17T10:05:43.711Z",
+    "ultima_modificacion": "2026-09-17T10:05:43.711Z",
+    "fotografia_principal": "assets/fotos/P00149/cesar-de-la-dehesa-junquera.jpg",
+    "fotoPosicion": "50% 50%",
+    "padre": "P00147",
+    "madre": "P00148"
+  },
+  {
+    "id": "P00150",
+    "nombre": "Ana Victoria de la Dehesa Junquera",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "11/11/1961",
+    "lugar_nacimiento": "Bilbao",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-17T10:09:14.160Z",
+    "ultima_modificacion": "2026-09-17T10:09:14.160Z",
+    "padre": "P00147",
+    "madre": "P00148"
+  },
+  {
+    "id": "P00151",
+    "nombre": "Montse Colmenares",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00149"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000265",
+        "src": "assets/fotos/P00151/montse-colmenares.png",
+        "titulo": "Montse Colmenares",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00151"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-09-17T10:11:28.553Z",
+    "ultima_modificacion": "2026-09-17T10:11:28.553Z",
+    "fotografia_principal": "assets/fotos/P00151/montse-colmenares.png",
+    "fotoPosicion": "50% 67%",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00152",
+    "nombre": "Endika de la Dehesa Colmenares",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Bilbao",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000266",
+        "src": "assets/fotos/P00152/endika-de-la-dehesa-colmenares.jpg",
+        "titulo": "Endika de la Dehesa Colmenares",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00152"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-09-17T10:13:34.817Z",
+    "ultima_modificacion": "2026-09-17T10:13:34.817Z",
+    "fotografia_principal": "assets/fotos/P00152/endika-de-la-dehesa-colmenares.jpg",
+    "fotoPosicion": "50% 4%",
+    "padre": "P00149",
+    "madre": "P00151"
+  },
+  {
+    "id": "P00153",
+    "nombre": "Amaia de la Dehesa Colmenares",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Bilbao",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000267",
+        "src": "assets/fotos/P00153/amaia-de-la-dehesa-colmenares.jpg",
+        "titulo": "Amaia de la Dehesa Colmenares",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00153"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-09-17T10:15:03.760Z",
+    "ultima_modificacion": "2026-09-17T10:15:03.760Z",
+    "fotografia_principal": "assets/fotos/P00153/amaia-de-la-dehesa-colmenares.jpg",
+    "fotoPosicion": "50% 50%",
+    "padre": "P00149",
+    "madre": "P00151"
+  },
+  {
+    "id": "P00154",
+    "nombre": "Tamara Calvo de la Dehesa",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "22/06/1983",
+    "lugar_nacimiento": "Bilbao",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000268",
+        "src": "assets/fotos/P00154/tamara-calvo-de-la-dehesa.jpg",
+        "titulo": "Tamara Calvo de la Dehesa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00154"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-09-17T10:16:37.896Z",
+    "ultima_modificacion": "2026-09-17T10:16:37.896Z",
+    "fotografia_principal": "assets/fotos/P00154/tamara-calvo-de-la-dehesa.jpg",
+    "fotoPosicion": "50% 10%",
+    "padre": "",
+    "madre": "P00150"
   }
 ]
