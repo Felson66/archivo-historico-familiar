@@ -13418,7 +13418,20 @@
     "conyuges": [],
     "hechos": [],
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000089",
+        "src": "assets/documentos/P00155/bosv-infraccion-circulacion-jacinto.png",
+        "nombre_archivo": "bosv-infraccion-circulacion-jacinto.png",
+        "formato": "image/png",
+        "titulo": "Boletín Oficial Señorío de Vizcaya  Infracción Circulación Jacinto",
+        "fecha": "28/06/1985",
+        "descripcion": "",
+        "personas": [
+          "P00155"
+        ]
+      }
+    ],
     "fecha_creacion": "2026-09-17T13:22:06.398Z",
     "ultima_modificacion": "2026-09-17T13:22:06.398Z",
     "padre": "P0036",
