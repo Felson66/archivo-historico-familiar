@@ -1,0 +1,20 @@
+4.2.0-alpha28 · Árbol panorámico dinámico
+
+INCLUYE SOLO:
+- index.html
+- arbol-familiar.html
+- VERSION.txt
+- releases/4.2.0-alpha28.md
+
+NO INCLUYE NI MODIFICA:
+- data/
+- assets/fotos/
+- assets/documentos/
+- admin.html / js/admin.js
+- js/app.js
+- css/
+
+CAMBIO:
+El antiguo enlace al PDF estático se sustituye por «Abrir Árbol Familiar panorámico».
+El mural carga data/personas.json en tiempo real, aplica la geometría validada V21.1 y permite imprimir/guardar a 200 × 72 cm.
+Las fotografías principales se usan solo si fotografia_principal sigue presente en fotografias.

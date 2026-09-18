@@ -1,0 +1,101 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Árbol Familiar panorámico · Raíces</title><style>
+*{box-sizing:border-box}body{margin:0;background:#d8d4cb;font-family:Arial;color:#26352f}.bar{height:46px;background:#fff;display:flex;align-items:center;padding:0 14px;gap:12px}.bar b{margin-right:auto}.bar button{background:#315e50;color:#fff;border:0;border-radius:8px;padding:9px 13px;font-weight:700}.sheet{position:relative;width:2000px;height:720px;margin:14px auto;background:#f7f3ea;overflow:hidden;box-shadow:0 4px 18px #0002}h1{position:absolute;top:10px;left:0;right:0;text-align:center;margin:0;font:700 28px Georgia;color:#20342c}h1:after{content:"";display:block;width:150px;margin:5px auto 0;border-bottom:1px solid #aeb8b2}#stage{position:absolute;left:18px;right:18px;top:58px;bottom:18px}svg{position:absolute;inset:0;width:100%;height:100%}.card{position:absolute;width:62px;height:40px;background:#fffefa;border:1px solid #aebdb6;border-radius:5px;padding:5px 3px 2px 22px;overflow:hidden;box-shadow:0 1px 2px #00000012}.card.root{border:1.6px solid #315e50;background:#f3f8f5;box-shadow:0 0 0 1px #315e5022}.ico{position:absolute;left:4px;top:10px;width:16px;height:16px;border-radius:50%;border:1px solid #b8c6bf;background:#edf1ed;display:grid;place-items:center;font:700 8px Georgia;color:#53675e;overflow:hidden}.ico img{width:100%;height:100%;display:block;object-fit:cover}.ico.has-photo{background:#fff;border-color:#9dafA6}.name{font:700 6.8px/1.06 Georgia;color:#1f3029;max-height:22px;overflow:hidden;letter-spacing:-.05px}.dates{font:5.1px/1.05 Arial;color:#6d7873;margin-top:1px;white-space:nowrap;overflow:hidden}.legend{position:absolute;right:10px;bottom:5px;font-size:6px;color:#777}@page{size:200cm 72cm;margin:0}@media print{html,body{margin:0!important;padding:0!important;width:200cm!important;height:72cm!important;overflow:hidden!important;background:#fff!important}.bar,.legend{display:none!important}.sheet{position:absolute!important;left:0!important;top:0!important;margin:0!important;width:2000px!important;height:720px!important;box-shadow:none!important;transform-origin:0 0!important;transform:scale(3.7795275591)!important;overflow:hidden!important}}
+</style></head><body><div class="bar"><b>Árbol Familiar · Raíces</b><span id="status"></span><button onclick="print()">Imprimir / Guardar PDF</button></div><div class="sheet"><h1>Árbol Familiar</h1><div id="stage"><svg id="lines"></svg></div><div class="legend">Árbol dinámico · impresión 200 × 72 cm</div></div><script>
+let A=[];
+async function renderPanoramicTree(){
+  try{
+    const response=await fetch('data/personas.json?ts='+Date.now(),{cache:'no-store'});
+    if(!response.ok)throw new Error('No se pudo cargar data/personas.json');
+    A=await response.json();
+const B=Object.fromEntries(A.map(x=>[x.id,x])),ROOT='P0015';
+const P=new Map,C=new Map,S=new Map;const add=(m,a,b)=>{if(!a||!b||!B[a]||!B[b])return;if(!m.has(a))m.set(a,new Set);m.get(a).add(b)}, vals=(m,k)=>[...(m.get(k)||[])];
+for(const x of A){let ps=(x.padres&&x.padres.length)?x.padres:[x.padre,x.madre].filter(Boolean);for(const p of ps){add(P,x.id,p);add(C,p,x.id)}for(const c of (x.hijos||[])){add(C,x.id,c);add(P,c,x.id)}for(const s of (x.conyuges||[])){add(S,x.id,s);add(S,s,x.id)}}
+function branch(r){let core=new Set(),q=[r];while(q.length){let x=q.shift();if(!B[x]||core.has(x))continue;core.add(x);q.push(...vals(P,x),...vals(C,x))}let z=new Set(core);for(const x of core)for(const p of vals(P,x))for(const y of vals(C,p))z.add(y);for(const x of [...z])for(const y of vals(S,x))z.add(y);return z}
+const Z=branch(ROOT),G=new Map([[ROOT,0]]),q=[ROOT];while(q.length){let x=q.shift(),g=G.get(x);for(const p of vals(P,x))if(Z.has(p)&&!G.has(p)){G.set(p,g-1);q.push(p)}for(const c of vals(C,x))if(Z.has(c)&&!G.has(c)){G.set(c,g+1);q.push(c)}}let changed=true;while(changed){changed=false;for(const x of Z)if(!G.has(x)){let s=vals(S,x).find(y=>G.has(y));if(s){G.set(x,G.get(s));changed=true}}}for(const x of Z)if(!G.has(x))G.set(x,0);
+const minG=Math.min(...G.values()),maxG=Math.max(...G.values()),rows=maxG-minG+1,W=1964,H=644,CW=62,CH=40,GAP=4,UGAP=5,FAMGAP=24,pos={};
+// Unidades visuales: pareja real o persona sola. No se duplica ninguna persona.
+const units=[],unitOf=new Map,byG=new Map;for(let g=minG;g<=maxG;g++){let ids=[...Z].filter(x=>G.get(x)===g),used=new Set,arr=[];ids.sort((a,b)=>(B[a].nombre||'').localeCompare(B[b].nombre||'','es'));for(const x of ids)if(!used.has(x)){let mate=vals(S,x).find(y=>Z.has(y)&&G.get(y)===g&&!used.has(y));let m=mate?[x,mate]:[x];if(m.includes(ROOT))m.sort((a,b)=>a===ROOT?-1:b===ROOT?1:0);let u={id:'u'+units.length,g,m,parents:new Set,kids:new Set,order:0,x:0,w:m.length*CW+(m.length-1)*GAP};units.push(u);arr.push(u);m.forEach(y=>{used.add(y);unitOf.set(y,u)})}byG.set(g,arr)}
+// Enlaces entre unidades basados SOLO en padres registrados del hijo.
+for(const c of Z){let cu=unitOf.get(c);for(const p of vals(P,c)){if(!Z.has(p))continue;let pu=unitOf.get(p);if(pu&&cu&&pu!==cu){pu.kids.add(cu);cu.parents.add(pu)}}}
+function familyKey(u){let keys=[];for(const id of u.m){let ps=vals(P,id).filter(x=>Z.has(x)).sort();if(ps.length)keys.push(ps.join('+'))}return keys.sort()[0]||'~'+u.id}
+function unitGap(a,b){return familyKey(a)===familyKey(b)?UGAP:FAMGAP}
+function rowGaps(arr){
+  if(arr.length<2)return [];
+  const base=arr.slice(1).map((u,i)=>unitGap(arr[i],u));
+  const widths=arr.reduce((s,u)=>s+u.w,0), budget=Math.max(0,W-32-widths);
+  const same=base.filter(g=>g===UGAP).length, fam=base.length-same;
+  if(!fam)return base;
+  const fixedSame=same*UGAP, desiredFam=Math.max(FAMGAP,Math.min(34,(budget-fixedSame)/fam));
+  return base.map(g=>g===UGAP?UGAP:desiredFam);
+}
+// Orden inicial y barridos baricéntricos para mantener cada familia cerca de su propio subárbol.
+for(const [g,arr] of byG)arr.forEach((u,i)=>u.order=i);
+function reorder(g,dir){let arr=byG.get(g),other=dir>0?'parents':'kids';arr.sort((a,b)=>{let aa=[...a[other]],bb=[...b[other]];let ba=aa.length?aa.reduce((s,u)=>s+u.order,0)/aa.length:a.order, bc=bb.length?bb.reduce((s,u)=>s+u.order,0)/bb.length:b.order;return ba-bc||a.order-b.order});arr.forEach((u,i)=>u.order=i)}
+for(let pass=0;pass<12;pass++){for(let g=minG+1;g<=maxG;g++)reorder(g,1);for(let g=maxG-1;g>=minG;g--)reorder(g,-1)}
+// Fuerza hermanos de los mismos padres a permanecer contiguos.
+for(let g=minG+1;g<=maxG;g++){let arr=byG.get(g),groups=new Map;for(const u of arr){let keys=new Set;for(const id of u.m){let ps=vals(P,id).filter(x=>Z.has(x)).sort();if(ps.length)keys.add(ps.join('+'))}let k=[...keys][0]||'~'+u.id;if(!groups.has(k))groups.set(k,[]);groups.get(k).push(u)}let blocks=[...groups.values()];blocks.sort((a,b)=>Math.min(...a.map(u=>u.order))-Math.min(...b.map(u=>u.order)));let out=[];for(const bl of blocks){bl.sort((a,b)=>a.order-b.order);out.push(...bl)}byG.set(g,out);out.forEach((u,i)=>u.order=i)}
+// Colocación compacta. Cada fila se centra; luego se atraen unidades hacia padres/hijos sin romper el orden.
+const VSTEP=Math.min(68,(H-CH-34)/Math.max(1,rows-1)),TREEH=(rows-1)*VSTEP+CH,Y0=(H-TREEH)/2;for(let g=minG;g<=maxG;g++){let arr=byG.get(g),rg=rowGaps(arr),gaps=rg.reduce((s,v)=>s+v,0),total=arr.reduce((s,u)=>s+u.w,0)+gaps,x=(W-total)/2,y=Y0+(g-minG)*VSTEP;for(let j=0;j<arr.length;j++){let u=arr[j];u.x=x;for(let i=0;i<u.m.length;i++)pos[u.m[i]]={x:x+i*(CW+GAP),y};x+=u.w+(j<arr.length-1?rg[j]:0)}}
+function center(u){return u.x+u.w/2}function repack(g){let arr=byG.get(g),rg=rowGaps(arr),left=16;for(let j=0;j<arr.length;j++){let u=arr[j];u.x=Math.max(u.x,left);left=u.x+u.w+(j<arr.length-1?rg[j]:0)}let overflow=left-(W-16);if(overflow>0)for(const u of arr)u.x-=overflow;let min=Math.min(...arr.map(u=>u.x));if(min<16)for(const u of arr)u.x+=16-min;for(const u of arr)for(let i=0;i<u.m.length;i++)pos[u.m[i]].x=u.x+i*(CW+GAP)}
+for(let pass=0;pass<10;pass++){for(let g=minG+1;g<=maxG;g++){for(const u of byG.get(g)){let ps=[...u.parents];if(ps.length){let t=ps.reduce((s,p)=>s+center(p),0)/ps.length;u.x+=0.66*(t-center(u))}}repack(g)}for(let g=maxG-1;g>=minG;g--){for(const u of byG.get(g)){let ks=[...u.kids];if(ks.length){let t=ks.reduce((s,k)=>s+center(k),0)/ks.length;u.x+=0.10*(t-center(u))}}repack(g)}}
+// V14: ajuste global final. Usa toda la anchura útil, mantiene margen seguro y evita tarjetas cortadas.
+{const SAFE=16,ids=[...Z],xmin=Math.min(...ids.map(id=>pos[id].x)),xmax=Math.max(...ids.map(id=>pos[id].x+CW)),span=Math.max(1,xmax-xmin),avail=W-2*SAFE,scale=Math.min(1,avail/span),used=span*scale,offset=(W-used)/2;for(const id of ids)pos[id].x=offset+(pos[id].x-xmin)*scale;for(const u of units){u.x=Math.min(...u.m.map(id=>pos[id].x));u.w=Math.max(...u.m.map(id=>pos[id].x+CW))-u.x}}
+// V19: acabado visual sobre geometría V18; datos actualizados desde personas(8).json
+// familiar siempre que exista hueco real en su fila. No cambia generaciones, orden ni parentescos.
+function refreshUnit(u){u.x=Math.min(...u.m.map(id=>pos[id].x));u.w=Math.max(...u.m.map(id=>pos[id].x+CW))-u.x}
+for(const u of units)refreshUnit(u);
+for(let pass=0;pass<4;pass++){
+  for(let g=minG+1;g<=maxG;g++){
+    const arr=byG.get(g);
+    for(let i=0;i<arr.length;i++){
+      const u=arr[i];
+      if(u.kids.size||!u.parents.size)continue;
+      const target=[...u.parents].reduce((s,p)=>s+center(p),0)/u.parents.size;
+      const desired=target-u.w/2;
+      const left=i?arr[i-1].x+arr[i-1].w+unitGap(arr[i-1],u):16;
+      const right=i<arr.length-1?arr[i+1].x-unitGap(u,arr[i+1])-u.w:W-16-u.w;
+      if(right<left)continue;
+      const nx=Math.max(left,Math.min(right,desired));
+      // Sólo hacemos el ajuste cuando realmente acorta la conexión con sus padres.
+      if(Math.abs((nx+u.w/2)-target)<Math.abs(center(u)-target)){
+        const dx=nx-u.x;u.x=nx;
+        for(const id of u.m)pos[id].x+=dx;
+      }
+    }
+  }
+}
+// Segunda pasada para unidades terminales de un solo miembro: permite usar huecos grandes
+// sin desplazar parejas ni bloques con descendencia.
+for(let g=minG+1;g<=maxG;g++){
+  const arr=byG.get(g);
+  for(let i=0;i<arr.length;i++){
+    const u=arr[i];
+    if(u.m.length!==1||u.kids.size||!u.parents.size)continue;
+    const target=[...u.parents].reduce((s,p)=>s+center(p),0)/u.parents.size;
+    const left=i?arr[i-1].x+arr[i-1].w+UGAP:16;
+    const right=i<arr.length-1?arr[i+1].x-UGAP-u.w:W-16-u.w;
+    if(right<left)continue;
+    const nx=Math.max(left,Math.min(right,target-u.w/2));
+    if(Math.abs((nx+u.w/2)-target)+2<Math.abs(center(u)-target)){
+      const dx=nx-u.x;u.x=nx;pos[u.m[0]].x+=dx;
+    }
+  }
+}
+for(const u of units)refreshUnit(u);
+const stage=document.getElementById('stage'),svg=document.getElementById('lines');function line(d,w=1){let e=document.createElementNS('http://www.w3.org/2000/svg','path');e.setAttribute('d',d);e.setAttribute('fill','none');e.setAttribute('stroke','#8fa39a');e.setAttribute('stroke-width',w);svg.appendChild(e)}
+// Parejas.
+for(const u of units)if(u.m.length===2){let a=pos[u.m[0]],b=pos[u.m[1]];line(`M${a.x+CW},${a.y+CH/2} L${b.x},${b.y+CH/2}`,1.3)}
+// Familias exactas: una línea horizontal nunca sale del intervalo de SUS hijos.
+const fam=new Map;for(const c of Z){let ps=vals(P,c).filter(x=>Z.has(x)).sort();if(!ps.length)continue;let k=ps.join('+');if(!fam.has(k))fam.set(k,{ps,kids:[]});fam.get(k).kids.push(c)}
+for(const f of fam.values()){let ps=f.ps.filter(x=>pos[x]),kids=f.kids.filter(x=>pos[x]);if(!ps.length||!kids.length)continue;let px=ps.reduce((s,x)=>s+pos[x].x+CW/2,0)/ps.length,py=Math.max(...ps.map(x=>pos[x].y+CH)),cy=Math.min(...kids.map(x=>pos[x].y));if(cy<=py)continue;let bus=py+(cy-py)*.48,cc=kids.map(x=>pos[x].x+CW/2).sort((a,b)=>a-b);line(`M${px},${py} L${px},${bus}`);if(cc.length>1)line(`M${cc[0]},${bus} L${cc[cc.length-1]},${bus}`);for(const c of kids){let cx=pos[c].x+CW/2;line(`M${cx},${bus} L${cx},${pos[c].y}`)}}
+function years(p){let a=p.fecha_nacimiento||'',d=p.fecha_defuncion||'';let ya=(a.match(/(?:18|19|20)\d{2}/)||['?'])[0],yd=(d.match(/(?:18|19|20)\d{2}/)||[''])[0];return yd?`${ya} – ${yd}`:`${ya} –`}
+function validPrincipal(p){let fp=p.fotografia_principal||'';return fp&&(p.fotografias||[]).some(f=>f&&f.src===fp)?fp:''}
+for(const id of Z){let p=B[id],e=document.createElement('div');e.className='card'+(id===ROOT?' root':'');e.style.left=pos[id].x+'px';e.style.top=pos[id].y+'px';e.innerHTML='<div class="ico">♧</div><div class="name"></div><div class="dates"></div>';let ico=e.querySelector('.ico'),fp=validPrincipal(p);if(fp){let img=document.createElement('img');img.src=fp;img.alt='';img.style.objectPosition=p.fotoPosicion||'50% 50%';img.onerror=()=>{img.remove();ico.classList.remove('has-photo');ico.textContent='♧'};ico.textContent='';ico.classList.add('has-photo');ico.appendChild(img)}e.querySelector('.name').textContent=p.nombre||id;e.querySelector('.dates').textContent=years(p);stage.appendChild(e)}let mate=vals(S,ROOT).find(x=>Z.has(x));document.getElementById('status').textContent=`${Z.size} personas · ${rows} generaciones · ${B[ROOT].nombre}${mate?' + '+B[mate].nombre:''}`;
+  }catch(error){
+    console.error(error);
+    document.getElementById('status').textContent='No se pudieron cargar los datos';
+    document.getElementById('stage').innerHTML='<p style="padding:30px;font:16px Arial">No se pudo cargar data/personas.json.</p>';
+  }
+}
+renderPanoramicTree();
+</script></body></html>
