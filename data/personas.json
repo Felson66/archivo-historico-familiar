@@ -13045,12 +13045,12 @@
   },
   {
     "id": "P00146",
-    "nombre": "Basilisa Chillon",
+    "nombre": "Basilisa Chillon Hernandez",
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
     "fecha_nacimiento": "",
-    "lugar_nacimiento": "",
+    "lugar_nacimiento": "Coreses (Zamora)",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "",
@@ -13128,6 +13128,22 @@
         "descripcion": "",
         "personas": [
           "P00147"
+        ]
+      },
+      {
+        "id": "D000090",
+        "src": "assets/documentos/P00147/certificado-nacimiento-luis-de-la-dehesa.pdf",
+        "nombre_archivo": "certificado-nacimiento-luis-de-la-dehesa.pdf",
+        "formato": "application/pdf",
+        "titulo": "Certificado Nacimiento Luis de la Dehesa",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00147"
+        ],
+        "paginas": [
+          "assets/documentos/P00147/d000090-paginas/pagina-001.webp",
+          "assets/documentos/P00147/d000090-paginas/pagina-002.webp"
         ]
       }
     ],
