@@ -1,0 +1,8 @@
+Raíces 4.2.0-alpha31 SEGURA
+
+- Móvil: elimina el espacio gris vertical sobrante bajo el mural panorámico.
+- Mantiene intacta la geometría V21.1 y el refuerzo de conexiones de alpha30.
+- Portada: muestra la versión justo después de AH.
+- Administración: deja de llevar una versión fija; lee VERSION.txt y muestra la versión actual.
+- app.js: acepta el formato real de VERSION.txt.
+- No incluye ni modifica data/, fotos ni documentos.

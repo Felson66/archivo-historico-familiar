@@ -12,7 +12,7 @@
   #lines path{stroke-width:4px!important}
 }
 @media print{html,body{margin:0!important;padding:0!important;width:200cm!important;height:72cm!important;overflow:hidden!important;background:#fff!important}.bar,.legend{display:none!important}.sheet{position:absolute!important;left:0!important;top:0!important;margin:0!important;width:2000px!important;height:720px!important;box-shadow:none!important;transform-origin:0 0!important;transform:scale(3.7795275591)!important;overflow:hidden!important}}
-</style></head><body><div class="bar"><b>Árbol Familiar · Raíces</b><span id="status"></span><button onclick="print()">Imprimir / Guardar PDF</button></div><div class="sheet"><h1>Árbol Familiar</h1><div id="stage"><svg id="lines"></svg></div><div class="legend">Árbol dinámico · alpha30 · impresión 200 × 72 cm</div></div><script>
+</style></head><body><div class="bar"><b>Árbol Familiar · Raíces</b><span id="status"></span><button onclick="print()">Imprimir / Guardar PDF</button></div><div class="sheet"><h1>Árbol Familiar</h1><div id="stage"><svg id="lines"></svg></div><div class="legend">Árbol dinámico · alpha31 · impresión 200 × 72 cm</div></div><script>
 let A=[];
 async function renderPanoramicTree(){
   try{
@@ -116,10 +116,10 @@ function fitMobilePanorama(){
     const scale=window.innerWidth/2000;
     sheet.style.transform=`scale(${scale})`;
     sheet.style.margin='0';
-    document.body.style.minHeight=(42+720*scale)+'px';
+    const h=42+720*scale; document.body.style.height=h+'px'; document.documentElement.style.height=h+'px'; document.body.style.minHeight='0'; document.body.style.overflowY='hidden';
   }else{
     sheet.style.transform='';
-    document.body.style.minHeight='';
+    document.body.style.height=''; document.documentElement.style.height=''; document.body.style.minHeight=''; document.body.style.overflowY='';
   }
 }
 window.addEventListener('resize',fitMobilePanorama,{passive:true});
