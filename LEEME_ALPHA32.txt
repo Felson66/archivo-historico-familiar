@@ -1,0 +1,14 @@
+Raíces 4.2.0-alpha32 SEGURA
+
+Integración del Árbol Familiar V22.1 validado visualmente.
+- Motor familiar reconstruido: parejas como unidades indivisibles.
+- Conectores independientes por familia; no hay barras generacionales globales.
+- Líneas familiares diferenciadas con cuatro tonos discretos cuando comparten intervalo.
+- Auditoría geométrica incluida en ejecución (solapamientos).
+- Eduardo + Esther permanecen como pareja; la paternidad se deriva sólo de padre/madre/padres del JSON.
+- Datos cargados dinámicamente desde data/personas.json: este ZIP NO contiene ni modifica data/.
+- Conserva ajuste móvil y la impresión 200 × 72 cm.
+- Portada y Administración actualizados a v4.2.0-alpha32.
+
+Archivos incluidos: index.html, admin.html, js/app.js, arbol-familiar.html, VERSION.txt y este LEEME.
+No incluye CSS, data, fotografías ni documentos.
