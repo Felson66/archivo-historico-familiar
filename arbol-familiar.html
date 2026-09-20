@@ -1,5 +1,15 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Árbol Familiar panorámico · Raíces</title><style>
-*{box-sizing:border-box}body{margin:0;background:#d8d4cb;font-family:Arial;color:#26352f}.bar{height:46px;background:#fff;display:flex;align-items:center;padding:0 14px;gap:12px}.bar b{margin-right:auto}.bar button{background:#315e50;color:#fff;border:0;border-radius:8px;padding:9px 13px;font-weight:700}.sheet{position:relative;width:2000px;height:720px;margin:14px auto;background:#f7f3ea;overflow:hidden;box-shadow:0 4px 18px #0002}h1{position:absolute;top:10px;left:0;right:0;text-align:center;margin:0;font:700 28px Georgia;color:#20342c}h1:after{content:"";display:block;width:150px;margin:5px auto 0;border-bottom:1px solid #aeb8b2}#stage{position:absolute;left:18px;right:18px;top:58px;bottom:18px}svg{position:absolute;inset:0;width:100%;height:100%}.card{position:absolute;width:62px;height:40px;background:#fffefa;border:1px solid #aebdb6;border-radius:5px;padding:5px 3px 2px 22px;overflow:hidden;box-shadow:0 1px 2px #00000012}.card.root{border:1.6px solid #315e50;background:#f3f8f5;box-shadow:0 0 0 1px #315e5022}.ico{position:absolute;left:4px;top:10px;width:16px;height:16px;border-radius:50%;border:1px solid #b8c6bf;background:#edf1ed;display:grid;place-items:center;font:700 8px Georgia;color:#53675e;overflow:hidden}.ico img{width:100%;height:100%;display:block;object-fit:cover}.ico.has-photo{background:#fff;border-color:#9dafA6}.name{font:700 6.8px/1.06 Georgia;color:#1f3029;max-height:22px;overflow:hidden;letter-spacing:-.05px}.dates{font:5.1px/1.05 Arial;color:#6d7873;margin-top:1px;white-space:nowrap;overflow:hidden}.legend{position:absolute;right:10px;bottom:5px;font-size:6px;color:#777}@page{size:200cm 72cm;margin:0}@media print{html,body{margin:0!important;padding:0!important;width:200cm!important;height:72cm!important;overflow:hidden!important;background:#fff!important}.bar,.legend{display:none!important}.sheet{position:absolute!important;left:0!important;top:0!important;margin:0!important;width:2000px!important;height:720px!important;box-shadow:none!important;transform-origin:0 0!important;transform:scale(3.7795275591)!important;overflow:hidden!important}}
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes"><title>Árbol Familiar panorámico · Raíces</title><style>
+*{box-sizing:border-box}body{margin:0;background:#d8d4cb;font-family:Arial;color:#26352f}.bar{height:46px;background:#fff;display:flex;align-items:center;padding:0 14px;gap:12px}.bar b{margin-right:auto}.bar button{background:#315e50;color:#fff;border:0;border-radius:8px;padding:9px 13px;font-weight:700}.sheet{position:relative;width:2000px;height:720px;margin:14px auto;background:#f7f3ea;overflow:hidden;box-shadow:0 4px 18px #0002}h1{position:absolute;top:10px;left:0;right:0;text-align:center;margin:0;font:700 28px Georgia;color:#20342c}h1:after{content:"";display:block;width:150px;margin:5px auto 0;border-bottom:1px solid #aeb8b2}#stage{position:absolute;left:18px;right:18px;top:58px;bottom:18px}svg{position:absolute;inset:0;width:100%;height:100%}.card{position:absolute;width:62px;height:40px;background:#fffefa;border:1px solid #aebdb6;border-radius:5px;padding:5px 3px 2px 22px;overflow:hidden;box-shadow:0 1px 2px #00000012}.card.root{border:1.6px solid #315e50;background:#f3f8f5;box-shadow:0 0 0 1px #315e5022}.ico{position:absolute;left:4px;top:10px;width:16px;height:16px;border-radius:50%;border:1px solid #b8c6bf;background:#edf1ed;display:grid;place-items:center;font:700 8px Georgia;color:#53675e;overflow:hidden}.ico img{width:100%;height:100%;display:block;object-fit:cover}.ico.has-photo{background:#fff;border-color:#9dafA6}.name{font:700 6.8px/1.06 Georgia;color:#1f3029;max-height:22px;overflow:hidden;letter-spacing:-.05px}.dates{font:5.1px/1.05 Arial;color:#6d7873;margin-top:1px;white-space:nowrap;overflow:hidden}.legend{position:absolute;right:10px;bottom:5px;font-size:6px;color:#777}@page{size:200cm 72cm;margin:0}
+@media (max-width:768px){
+  body{overflow-x:hidden;background:#d8d4cb}
+  .bar{height:42px;padding:0 8px;gap:6px;font-size:13px;position:relative;z-index:5}
+  .bar b{font-size:13px;line-height:1.05;max-width:92px}
+  .bar #status{display:none}
+  .bar button{display:none}
+  .sheet{margin:0!important;box-shadow:none;transform-origin:0 0;will-change:transform}
+  h1{top:10px}
+}
+@media print{html,body{margin:0!important;padding:0!important;width:200cm!important;height:72cm!important;overflow:hidden!important;background:#fff!important}.bar,.legend{display:none!important}.sheet{position:absolute!important;left:0!important;top:0!important;margin:0!important;width:2000px!important;height:720px!important;box-shadow:none!important;transform-origin:0 0!important;transform:scale(3.7795275591)!important;overflow:hidden!important}}
 </style></head><body><div class="bar"><b>Árbol Familiar · Raíces</b><span id="status"></span><button onclick="print()">Imprimir / Guardar PDF</button></div><div class="sheet"><h1>Árbol Familiar</h1><div id="stage"><svg id="lines"></svg></div><div class="legend">Árbol dinámico · impresión 200 × 72 cm</div></div><script>
 let A=[];
 async function renderPanoramicTree(){
@@ -97,5 +107,21 @@ for(const id of Z){let p=B[id],e=document.createElement('div');e.className='card
     document.getElementById('stage').innerHTML='<p style="padding:30px;font:16px Arial">No se pudo cargar data/personas.json.</p>';
   }
 }
+function fitMobilePanorama(){
+  const sheet=document.querySelector('.sheet');
+  if(!sheet)return;
+  if(window.matchMedia('(max-width:768px)').matches){
+    const scale=window.innerWidth/2000;
+    sheet.style.transform=`scale(${scale})`;
+    sheet.style.margin='0';
+    document.body.style.minHeight=(42+720*scale)+'px';
+  }else{
+    sheet.style.transform='';
+    document.body.style.minHeight='';
+  }
+}
+window.addEventListener('resize',fitMobilePanorama,{passive:true});
+window.addEventListener('orientationchange',()=>setTimeout(fitMobilePanorama,100),{passive:true});
 renderPanoramicTree();
+fitMobilePanorama();
 </script></body></html>

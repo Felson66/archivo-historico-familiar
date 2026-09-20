@@ -1,1 +1,1 @@
-VERSIÓN: 4.2.0-alpha28
+4.2.0-alpha29 SEGURA

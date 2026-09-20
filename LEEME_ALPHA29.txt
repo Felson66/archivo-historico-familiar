@@ -1,0 +1,9 @@
+Raíces 4.2.0-alpha29 SEGURA
+
+Cambio exclusivo del Árbol Familiar panorámico en móvil:
+- Encaje automático del mural completo al ancho de iPhone/móvil.
+- Zoom táctil/nativo del navegador permitido (hasta 5x).
+- Cabecera móvil compacta.
+- Se ocultan en móvil el estado largo y el botón de impresión.
+- PC e impresión 200 × 72 cm permanecen sin cambios.
+- No incluye ni modifica data/, fotos ni documentos.
