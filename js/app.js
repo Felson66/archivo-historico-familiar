@@ -145,7 +145,7 @@ async function ensureCurrentApplicationVersion(){
     const response=await fetch(`VERSION.txt?check=${Date.now()}`,{cache:"no-store"});
     if(!response.ok)return;
     const text=await response.text();
-    const remoteVersion=text.match(/VERSI[ÓO]N:\s*([^\s]+)/i)?.[1]||"";
+    const remoteVersion=(text.match(/VERSI[ÓO]N:\s*([^\s]+)/i)?.[1] || text.trim().split(/\s+/)[0] || "");
     if(!remoteVersion||remoteVersion===localVersion)return;
 
     const url=new URL(window.location.href);
