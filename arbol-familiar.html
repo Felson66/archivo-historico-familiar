@@ -8,9 +8,11 @@
   .bar button{display:none}
   .sheet{margin:0!important;box-shadow:none;transform-origin:0 0;will-change:transform}
   h1{top:10px}
+  /* Safari/iPhone: al reducir 2000px al ancho móvil, los trazos de 1px quedaban en ~0,2px y algunos desaparecían. */
+  #lines path{stroke-width:4px!important}
 }
 @media print{html,body{margin:0!important;padding:0!important;width:200cm!important;height:72cm!important;overflow:hidden!important;background:#fff!important}.bar,.legend{display:none!important}.sheet{position:absolute!important;left:0!important;top:0!important;margin:0!important;width:2000px!important;height:720px!important;box-shadow:none!important;transform-origin:0 0!important;transform:scale(3.7795275591)!important;overflow:hidden!important}}
-</style></head><body><div class="bar"><b>Árbol Familiar · Raíces</b><span id="status"></span><button onclick="print()">Imprimir / Guardar PDF</button></div><div class="sheet"><h1>Árbol Familiar</h1><div id="stage"><svg id="lines"></svg></div><div class="legend">Árbol dinámico · impresión 200 × 72 cm</div></div><script>
+</style></head><body><div class="bar"><b>Árbol Familiar · Raíces</b><span id="status"></span><button onclick="print()">Imprimir / Guardar PDF</button></div><div class="sheet"><h1>Árbol Familiar</h1><div id="stage"><svg id="lines"></svg></div><div class="legend">Árbol dinámico · alpha30 · impresión 200 × 72 cm</div></div><script>
 let A=[];
 async function renderPanoramicTree(){
   try{

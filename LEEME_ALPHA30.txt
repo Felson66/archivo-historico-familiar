@@ -1,0 +1,10 @@
+Raíces 4.2.0-alpha30 SEGURA
+
+Corrección exclusiva del Árbol Familiar panorámico en móvil.
+
+- Conserva exactamente la geometría V21.1.
+- Conserva el escalado del mural completo como una sola unidad.
+- Corrige las conexiones que parecían desaparecer en Safari/iPhone: al reducir 2000 px al ancho del móvil, líneas de 1 px quedaban por debajo de un píxel físico y Safari omitía algunos segmentos.
+- En móvil se refuerza únicamente el grosor de las líneas antes del escalado. No se recalculan posiciones.
+- PC e impresión 200 × 72 cm no cambian.
+- No incluye ni modifica data/, fotos ni documentos.
