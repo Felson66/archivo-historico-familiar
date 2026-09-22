@@ -12127,7 +12127,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "conyuges": [],
+    "conyuges": [
+      "P00156"
+    ],
     "hechos": [],
     "fotografias": [],
     "documentos": [],
@@ -13452,5 +13454,131 @@
     "ultima_modificacion": "2026-09-17T13:22:06.398Z",
     "padre": "P0036",
     "madre": "P00146"
+  },
+  {
+    "id": "P00156",
+    "nombre": "Rosalia Regalado",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1874",
+    "lugar_nacimiento": "Cañizo (Zamora)",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00112"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-22T10:41:07.998Z",
+    "ultima_modificacion": "2026-09-22T10:41:07.998Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00157",
+    "nombre": "Esteban de la Dehesa Regalado",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1904",
+    "lugar_nacimiento": "Valderas (Leon)",
+    "fecha_defuncion": "1989",
+    "lugar_defuncion": "Bahía Blanca, Buenos Aires, Argentina",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-09-22T10:44:34.955Z",
+    "ultima_modificacion": "2026-09-22T10:44:34.955Z",
+    "padre": "P00112",
+    "madre": "P00156"
+  },
+  {
+    "id": "P00158",
+    "nombre": "Jose de la Dehesa Regalado",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1912",
+    "lugar_nacimiento": "Bahía Blanca, Buenos Aires, Argentina",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "Bahía Blanca, Buenos Aires, Argentina",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [
+      {
+        "id": "D000091",
+        "src": "assets/documentos/P00158/nacimiento-jose-de-la-dehesa-regalado.png",
+        "nombre_archivo": "nacimiento-jose-de-la-dehesa-regalado.png",
+        "formato": "image/png",
+        "titulo": "Nacimiento Jose de la Dehesa Regalado",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00158"
+        ]
+      }
+    ],
+    "fecha_creacion": "2026-09-22T10:46:25.344Z",
+    "ultima_modificacion": "2026-09-22T10:46:25.344Z",
+    "padre": "P00112",
+    "madre": "P00156"
+  },
+  {
+    "id": "P00159",
+    "nombre": "Fernando Esteban de la Dehesa de Luisa",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "05/11/1968",
+    "lugar_nacimiento": "Bahía Blanca, Buenos Aires, Argentina",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "Ingeniero",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000270",
+        "src": "assets/fotos/P00159/fernando-de-la-dehesa.jpg",
+        "titulo": "Fernando de la Dehesa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00159"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-09-22T10:53:27.795Z",
+    "ultima_modificacion": "2026-09-22T10:53:27.795Z",
+    "padre": "P00157",
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00159/fernando-de-la-dehesa.jpg",
+    "fotoPosicion": "50% 50%"
   }
 ]
