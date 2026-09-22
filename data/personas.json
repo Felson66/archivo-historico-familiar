@@ -13550,7 +13550,7 @@
     "situacion_vital": "fallecido",
     "fecha_nacimiento": "05/11/1968",
     "lugar_nacimiento": "Bahía Blanca, Buenos Aires, Argentina",
-    "fecha_defuncion": "24/08/2020",
+    "fecha_defuncion": "13/07/2020",
     "lugar_defuncion": "Bahía Blanca, Buenos Aires, Argentina",
     "profesion": "Ingeniero",
     "estado": "pendiente",
@@ -13571,6 +13571,18 @@
         "personas": [
           "P00159"
         ]
+      },
+      {
+        "id": "F000271",
+        "src": "assets/fotos/P00159/fernando-obituario.jpg",
+        "titulo": "Fernando Obituario",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00159"
+        ]
       }
     ],
     "documentos": [],
@@ -13578,7 +13590,7 @@
     "ultima_modificacion": "2026-09-22T10:53:27.795Z",
     "padre": "P00157",
     "madre": "",
-    "fotografia_principal": "assets/fotos/P00159/fernando-de-la-dehesa.jpg",
+    "fotografia_principal": "assets/fotos/P00159/fernando-obituario.jpg",
     "fotoPosicion": "50% 50%"
   }
 ]
