@@ -13592,5 +13592,83 @@
     "madre": "",
     "fotografia_principal": "assets/fotos/P00159/fernando-obituario.jpg",
     "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00160",
+    "nombre": "Martin Santiago de la Dehesa de Luisa",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Bahia Blanca Buenos Aires Argentina",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "Auditor",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000272",
+        "src": "assets/fotos/P00160/martin-santiago-de-la-dehesa.jpg",
+        "titulo": "Martin Santiago de la Dehesa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00160"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-09-22T11:19:57.777Z",
+    "ultima_modificacion": "2026-09-22T11:19:57.778Z",
+    "fotografia_principal": "assets/fotos/P00160/martin-santiago-de-la-dehesa.jpg",
+    "fotoPosicion": "50% 50%",
+    "padre": "P00157",
+    "madre": ""
+  },
+  {
+    "id": "P00161",
+    "nombre": "Silvina de la Dehesa de Luisa",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Bahia Blanca Buenos Aires Argentina",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "Odontóloga",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000273",
+        "src": "assets/fotos/P00161/silvina-de-la-dehesa.png",
+        "titulo": "Silvina de la Dehesa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00161"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-09-22T11:22:18.823Z",
+    "ultima_modificacion": "2026-09-22T11:22:18.823Z",
+    "fotografia_principal": "assets/fotos/P00161/silvina-de-la-dehesa.png",
+    "fotoPosicion": "50% 26%",
+    "padre": "P00157",
+    "madre": ""
   }
 ]
