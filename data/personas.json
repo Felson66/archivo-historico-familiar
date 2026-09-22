@@ -12124,19 +12124,34 @@
     "lugar_defuncion": "",
     "profesion": "",
     "estado": "pendiente",
-    "notas": "",
-    "datos_resumen": "",
+    "notas": "Emigró a Argentina (Bahia Blanca)",
+    "datos_resumen": "Emigró a Argentina (Bahia Blanca)",
     "visible": true,
     "conyuges": [
       "P00156"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000274",
+        "src": "assets/fotos/P00112/argentina.jpg",
+        "titulo": "Argentina",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00112"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-09-07T15:14:02.018Z",
     "ultima_modificacion": "2026-09-07T15:14:02.018Z",
     "padre": "P00094",
-    "madre": "P00095"
+    "madre": "P00095",
+    "fotografia_principal": "assets/fotos/P00112/argentina.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00113",
