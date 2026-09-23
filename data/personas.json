@@ -12118,7 +12118,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "fecha_nacimiento": "18/07/1863",
+    "fecha_nacimiento": "18/07/1876",
     "lugar_nacimiento": "Riego del Camino",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
@@ -13685,5 +13685,42 @@
     "fotoPosicion": "50% 26%",
     "padre": "P00157",
     "madre": ""
+  },
+  {
+    "id": "P00162",
+    "nombre": "Miguel de la Dehesa Regalado",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "14/10/1910",
+    "lugar_nacimiento": "Bahia Blanca Buenos Aires Argentina",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [
+      {
+        "id": "D000092",
+        "src": "assets/documentos/P00162/acta-nacimiento-miguel-de-la-dehesa-regalado.png",
+        "nombre_archivo": "acta-nacimiento-miguel-de-la-dehesa-regalado.png",
+        "formato": "image/png",
+        "titulo": "Acta Nacimiento Miguel de la Dehesa Regalado",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00162"
+        ]
+      }
+    ],
+    "fecha_creacion": "2026-09-23T10:15:25.906Z",
+    "ultima_modificacion": "2026-09-23T10:15:25.906Z",
+    "padre": "P00112",
+    "madre": "P00156"
   }
 ]
