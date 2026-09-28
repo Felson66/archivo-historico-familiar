@@ -1,0 +1,3 @@
+Raíces 4.2.0-alpha39
+
+Parte de alpha37. Rehace los conectores como unidades familiares reales: progenitor(es) -> nodo familiar -> hijos. Cada familia usa su propio carril y un punto de unión visible. No modifica el árbol de impresión/PDF.
