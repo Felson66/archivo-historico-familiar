@@ -1,0 +1,7 @@
+RAÍCES 4.2.0-alpha34 PRUEBA
+
+- Vista completa: nuevo layout por unidades familiares.
+- Los hermanos quedan agrupados bajo sus progenitores.
+- Se evita compactar generaciones mezclando familias.
+- Ruta entre dos personas: muestra también ambos progenitores cuando la relación atraviesa un hijo.
+- La vista de impresión/PDF permanece sin cambios.
