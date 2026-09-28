@@ -1,0 +1,12 @@
+Raíces 4.2.0-alpha33 PRUEBA
+
+Nueva Vista completa del árbol familiar.
+- Nuevo botón “Vista completa” separado de “Imprimir / PDF”.
+- Lienzo grande con scroll horizontal y vertical.
+- Zoom + / −, centrar y ajuste general.
+- Tarjetas legibles con foto, nombre y años.
+- Clic en dos personas para resaltar el camino de parentesco que las une.
+- Botón “Limpiar ruta” para volver al árbol normal.
+- El visor panorámico/PDF alpha32 se conserva sin cambios funcionales.
+
+Archivo nuevo: arbol-completo.html
