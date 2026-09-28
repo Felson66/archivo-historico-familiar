@@ -1,0 +1,14 @@
+RAÍCES 4.2.0-alpha37 PRUEBA
+
+Base: alpha35.
+Cambio principal: nuevo layout compacto por filas y unidades familiares.
+- Mantiene parejas como una unidad.
+- Agrupa hermanos por sus progenitores.
+- El orden se calcula por parentesco (barridos descendente/ascendente).
+- Las filas se empaquetan sin huecos artificiales; el parentesco ya no puede generar distancias kilométricas.
+- No modifica el árbol de impresión/PDF.
+
+Pruebas recomendadas:
+1. Elena + Eneko deben quedar juntos y Eder + Peio agrupados en la fila inferior.
+2. Comprobar que el ancho total es mucho menor que en alpha35.
+3. Seleccionar dos personas y verificar el resaltado de la ruta.

@@ -1,7 +1,7 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes"><title>Vista completa · Árbol Familiar · Raíces · alpha36</title><style>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes"><title>Vista completa · Árbol Familiar · Raíces · alpha37</title><style>
 *{box-sizing:border-box}html,body{margin:0;height:100%;font-family:Arial,sans-serif;background:#5f5e59;color:#fff;overflow:hidden}.top{height:58px;background:#183c35;display:flex;align-items:center;gap:10px;padding:8px 12px;box-shadow:0 2px 10px #0005;position:relative;z-index:20}.title{font:700 18px Georgia;white-space:nowrap}.status{font-size:12px;opacity:.8;margin-right:auto}.top button{border:1px solid #ffffff42;background:#fff;color:#183c35;border-radius:7px;padding:8px 11px;font-weight:700;cursor:pointer}.top button:hover{background:#edf4f0}.route{font-size:12px;max-width:380px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.viewport{position:absolute;inset:58px 0 0;overflow:auto;overscroll-behavior:contain;background:#66645f}.canvas{position:relative;transform-origin:0 0;background:#77746e;min-width:100%;min-height:100%}.stage{position:absolute}.lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.card{position:absolute;width:176px;height:84px;background:#343b39;border:1px solid #8d9995;border-radius:7px;color:#fff;padding:9px 8px 7px 58px;box-shadow:0 2px 5px #0003;cursor:pointer;overflow:hidden;transition:opacity .18s,border .18s,box-shadow .18s}.card:hover{border-color:#dbe7e1;box-shadow:0 3px 10px #0006}.card.root{border:2px solid #8bc2ae}.photo{position:absolute;left:10px;top:13px;width:38px;height:38px;border-radius:50%;background:#dce6e1;color:#385248;display:grid;place-items:center;overflow:hidden;font:700 16px Georgia}.photo img{width:100%;height:100%;object-fit:cover}.name{font:700 12px/1.15 Georgia;max-height:42px;overflow:hidden}.dates{font-size:9px;color:#d0d6d3;margin-top:5px}.card.selected{outline:3px solid #f0c45b;outline-offset:2px}.card.onroute{border:2px solid #f0c45b;background:#3e443f;box-shadow:0 0 0 2px #f0c45b33,0 4px 12px #0006}.dim{opacity:.18}.family-line{stroke:#a9b4af;stroke-width:1.6;fill:none}.couple-line{stroke:#d2b4bc;stroke-width:1.7;fill:none}.route-line{stroke:#f0c45b;stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px #0008)}.gen{position:absolute;left:0;color:#e7e5df;font:700 12px Georgia;opacity:.75;transform:translateY(-22px)}.help{position:fixed;left:12px;bottom:10px;background:#1e2926e8;padding:8px 11px;border-radius:7px;font-size:11px;z-index:30;box-shadow:0 2px 8px #0004}.badge{display:inline-block;border:1px solid #ffffff55;border-radius:10px;padding:1px 6px;margin-right:5px}.back{color:white;text-decoration:none;font-size:13px;font-weight:700}@media(max-width:760px){.top{height:104px;align-content:center;flex-wrap:wrap}.viewport{inset:104px 0 0}.title{font-size:15px}.status{display:none}.route{order:5;width:100%;max-width:none}.top button{padding:6px 9px}.help{font-size:10px;max-width:92%}}
 </style></head><body><div class="top"><a class="back" href="index.html">← Raíces</a><span class="title">Vista completa</span><span id="status" class="status"></span><button id="minus">−</button><button id="center">Centrar</button><button id="fit">Ver todo</button><button id="plus">+</button><button id="clear">Limpiar ruta</button><span id="route" class="route">Selecciona dos personas para ver cómo se conectan.</span></div><div id="viewport" class="viewport"><div id="canvas" class="canvas"><div id="stage" class="stage"><svg id="lines" class="lines"></svg><svg id="routeLines" class="lines"></svg></div></div></div><div class="help"><span class="badge">Clic</span> selecciona dos personas · <span class="badge">Scroll</span> recorre el árbol · <span class="badge">Ctrl + rueda</span> zoom</div><script>
-let A=[],B={},P=new Map(),C=new Map(),S=new Map(),Z=new Set(),G=new Map(),pos={},scale=1,selected=[];const ROOT='P0015',CW=176,CH=84,GAP=20,FAMILYGAP=46,ROWGAP=150,PAD=80;
+let A=[],B={},P=new Map(),C=new Map(),S=new Map(),Z=new Set(),G=new Map(),pos={},scale=1,selected=[];const ROOT='P0015',CW=176,CH=84,GAP=20,FAMILYGAP=70,ROWGAP=150,PAD=100;
 const vals=(m,k)=>[...(m.get(k)||[])];function add(m,a,b){if(!a||!b||!B[a]||!B[b])return;if(!m.has(a))m.set(a,new Set);m.get(a).add(b)}
 function years(p){let a=p.fecha_nacimiento||p.datos_resumen||'',d=p.fecha_defuncion||'';let ya=(String(a).match(/(?:17|18|19|20)\d{2}/)||['?'])[0],yd=(String(d).match(/(?:17|18|19|20)\d{2}/)||[''])[0];return yd?`${ya} – ${yd}`:`${ya} –`}
 function photo(p){let fp=p.fotografia_principal||'';return fp&&(p.fotografias||[]).some(f=>f&&f.src===fp)?fp:''}
@@ -9,8 +9,8 @@ function branch(r){let core=new Set(),q=[r];while(q.length){let x=q.shift();if(!
 function compute(){B=Object.fromEntries(A.map(x=>[x.id,x]));for(const x of A){const ps=(x.padres&&x.padres.length)?x.padres:[x.padre,x.madre].filter(Boolean);for(const p of ps){add(P,x.id,p);add(C,p,x.id)}for(const c of(x.hijos||[])){add(C,x.id,c);add(P,c,x.id)}for(const s of(x.conyuges||[])){add(S,x.id,s);add(S,s,x.id)}}Z=branch(ROOT);G=new Map([[ROOT,0]]);let q=[ROOT];while(q.length){let x=q.shift(),g=G.get(x);for(const p of vals(P,x))if(Z.has(p)&&!G.has(p)){G.set(p,g-1);q.push(p)}for(const c of vals(C,x))if(Z.has(c)&&!G.has(c)){G.set(c,g+1);q.push(c)}}let ch=true;while(ch){ch=false;for(const x of Z)if(!G.has(x)){let s=vals(S,x).find(y=>G.has(y));if(s){G.set(x,G.get(s));ch=true}}}for(const x of Z)if(!G.has(x))G.set(x,0);layout();render()}
 function layout(){
  const min=Math.min(...G.values()),max=Math.max(...G.values());pos={};
- const rows=new Map();
- // Cada fila se divide en unidades de pareja/persona. La clave familiar son sus padres.
+ const rows=new Map(),unitOf=new Map();
+ // Una unidad es una pareja (si existe en esta generación) o una persona sola.
  for(let g=min;g<=max;g++){
   const ids=[...Z].filter(id=>G.get(id)===g),used=new Set(),units=[];
   for(const id of ids){
@@ -19,82 +19,45 @@ function layout(){
    let mate=mates.find(m=>vals(C,id).some(c=>vals(P,c).includes(m)))||mates[0];
    const members=mate?[id,mate]:[id];members.forEach(x=>used.add(x));
    const parents=[...new Set(members.flatMap(x=>vals(P,x)).filter(x=>Z.has(x)))];
-   units.push({members,parents,key:parents.slice().sort().join('+')||'~'+id,w:members.length*CW+(members.length-1)*GAP,cx:0});
+   const u={members,parents,w:members.length*CW+(members.length-1)*GAP,cx:0,order:0};
+   units.push(u);members.forEach(x=>unitOf.set(x,u));
   }
   rows.set(g,units);
  }
- // Arranque estable: familias separadas, sin intentar encajarlas bajo una barra global.
- for(let g=min;g<=max;g++){
-  let x=PAD; const units=rows.get(g);
-  units.sort((a,b)=>a.key.localeCompare(b.key)||a.members.join().localeCompare(b.members.join()));
-  for(const u of units){u.cx=x+u.w/2;x+=u.w+FAMILYGAP}
+ function parentUnits(u){return [...new Set(u.parents.map(p=>unitOf.get(p)).filter(Boolean))]}
+ function childUnits(u){let a=[];for(const id of u.members)for(const c of vals(C,id)){let q=unitOf.get(c);if(q&&!a.includes(q))a.push(q)}return a}
+ // Orden inicial determinista: los hermanos comparten clave de padres y quedan juntos.
+ for(const [g,us] of rows){us.sort((a,b)=>{
+   let ak=a.parents.slice().sort().join('+')||a.members.join('+'),bk=b.parents.slice().sort().join('+')||b.members.join('+');
+   return ak.localeCompare(bk)||a.members.join('+').localeCompare(b.members.join('+'));
+  });us.forEach((u,i)=>u.order=i)}
+ function bary(list){return list.length?list.reduce((s,u)=>s+u.order,0)/list.length:null}
+ // Cruce descendente/ascendente: solo decide ORDEN. Nunca crea distancias gigantes.
+ for(let pass=0;pass<10;pass++){
+  for(let g=min+1;g<=max;g++){let us=rows.get(g);us.sort((a,b)=>{let aa=bary(parentUnits(a)),bb=bary(parentUnits(b));if(aa==null)aa=a.order;if(bb==null)bb=b.order;return aa-bb||a.order-b.order});us.forEach((u,i)=>u.order=i)}
+  for(let g=max-1;g>=min;g--){let us=rows.get(g);us.sort((a,b)=>{let aa=bary(childUnits(a)),bb=bary(childUnits(b));if(aa==null)aa=a.order;if(bb==null)bb=b.order;return aa-bb||a.order-b.order});us.forEach((u,i)=>u.order=i)}
  }
- const unitOf=new Map();for(const [g,us] of rows)for(const u of us)for(const id of u.members)unitOf.set(id,u);
- function pcenter(u){const pp=u.parents.map(p=>unitOf.get(p)).filter(Boolean);return pp.length?pp.reduce((s,v)=>s+v.cx,0)/pp.length:null}
- function childrenCenter(u){let cs=[];for(const id of u.members)for(const c of vals(C,id)){let cu=unitOf.get(c);if(cu&&!cs.includes(cu))cs.push(cu)}return cs.length?cs.reduce((s,v)=>s+v.cx,0)/cs.length:null}
- function solveRow(units,desired){
-  // Orden por centro deseado y resolución simétrica de colisiones. No existe un cursor
-  // que empuje todas las familias posteriores hacia la derecha.
-  const arr=units.map((u,i)=>({u,d:desired(u,i)})).sort((a,b)=>a.d-b.d||a.u.key.localeCompare(b.u.key));
-  if(!arr.length)return;
-  arr[0].u.cx=arr[0].d;
-  for(let i=1;i<arr.length;i++){
-   const a=arr[i-1].u,b=arr[i].u,minsep=a.w/2+b.w/2+FAMILYGAP;
-   b.cx=Math.max(arr[i].d,a.cx+minsep);
+ // Empaquetado compacto: cada fila usa únicamente el ancho real de sus tarjetas.
+ const rowWidth=new Map();
+ for(let g=min;g<=max;g++){let x=0,us=rows.get(g);for(const u of us){u.local=x+u.w/2;x+=u.w+FAMILYGAP}rowWidth.set(g,Math.max(0,x-FAMILYGAP))}
+ const maxW=Math.max(...rowWidth.values());
+ // Centrado de filas y pequeños ajustes globales para aproximar padres/hijos SIN abrir huecos.
+ const offsets=new Map();for(let g=min;g<=max;g++)offsets.set(g,(maxW-rowWidth.get(g))/2);
+ for(let pass=0;pass<8;pass++){
+  for(let g=min+1;g<=max;g++){
+   let dif=[];for(const u of rows.get(g)){let ps=parentUnits(u);if(ps.length){let pc=ps.reduce((s,p)=>s+p.local+offsets.get(g-1),0)/ps.length;dif.push(pc-(u.local+offsets.get(g)))}}
+   if(dif.length){let d=dif.reduce((a,b)=>a+b,0)/dif.length;offsets.set(g,offsets.get(g)+Math.max(-120,Math.min(120,d*.35)))}
   }
-  // Repartimos el desplazamiento acumulado a izquierda y derecha para conservar los centros familiares.
-  let err=arr.reduce((s,a)=>s+(a.u.cx-a.d),0)/arr.length;
-  for(const a of arr)a.u.cx-=err;
-  for(let i=arr.length-2;i>=0;i--){const a=arr[i].u,b=arr[i+1].u,minsep=a.w/2+b.w/2+FAMILYGAP;if(b.cx-a.cx<minsep)a.cx=b.cx-minsep}
-  err=arr.reduce((s,a)=>s+(a.u.cx-a.d),0)/arr.length;for(const a of arr)a.u.cx-=err;
  }
- // Relajación bidireccional: hijos bajo sus padres y padres sobre sus hijos.
- // Al mover ambos lados evitamos sacrificar una familia concreta por las que estén antes en la fila.
- for(let pass=0;pass<18;pass++){
-  for(let g=min+1;g<=max;g++)solveRow(rows.get(g),u=>{let p=pcenter(u);return p==null?u.cx:(u.cx*.15+p*.85)});
-  for(let g=max-1;g>=min;g--)solveRow(rows.get(g),u=>{let c=childrenCenter(u);return c==null?u.cx:(u.cx*.35+c*.65)});
- }
- // Normalizamos coordenadas y materializamos las tarjetas.
  let left=Infinity,right=-Infinity;
- for(const us of rows.values())for(const u of us){left=Math.min(left,u.cx-u.w/2);right=Math.max(right,u.cx+u.w/2)}
- const shift=PAD-left;
- for(let g=min;g<=max;g++){
-  const y=PAD+(g-min)*ROWGAP;
-  for(const u of rows.get(g)){
-   let x=u.cx-u.w/2+shift;
-   for(const id of u.members){pos[id]={x,y};x+=CW+GAP}
-  }
- }
- // Compactación final: elimina únicamente franjas verticales completamente vacías.
- // Se desplazan ramas enteras a izquierda/derecha; no se altera quién está bajo quién.
- compactEmptyColumns();
- let xs=Object.values(pos).map(p=>p.x);
- let finalLeft=Math.min(...xs),finalRight=Math.max(...xs.map(x=>x+CW));
- if(finalLeft!==PAD){const d=PAD-finalLeft;for(const p of Object.values(pos))p.x+=d;finalRight+=d;finalLeft=PAD}
- window.treeW=(finalRight-finalLeft)+PAD*2;window.treeH=PAD*2+(max-min)*ROWGAP+CH;
-}
-function compactEmptyColumns(){
- const KEEP=58; // espacio máximo que dejamos en una franja sin ninguna tarjeta
- let intervals=Object.values(pos).map(p=>[p.x,p.x+CW]).sort((a,b)=>a[0]-b[0]);
- if(!intervals.length)return;
- let merged=[];
- for(const it of intervals){
-  let last=merged[merged.length-1];
-  if(!last||it[0]>last[1])merged.push(it.slice());else last[1]=Math.max(last[1],it[1]);
- }
- let cuts=[],saved=0;
- for(let i=1;i<merged.length;i++){
-  const gap=merged[i][0]-merged[i-1][1];
-  if(gap>KEEP){saved+=gap-KEEP;cuts.push({from:merged[i][0],delta:saved})}
- }
- if(!cuts.length)return;
- for(const p of Object.values(pos)){
-  let d=0;for(const c of cuts){if(p.x>=c.from)d=c.delta;else break}p.x-=d;
- }
+ for(let g=min;g<=max;g++){const y=PAD+(g-min)*ROWGAP,off=offsets.get(g)+PAD;for(const u of rows.get(g)){let x=off+u.local-u.w/2;for(const id of u.members){pos[id]={x,y};left=Math.min(left,x);right=Math.max(right,x+CW);x+=CW+GAP}}}
+ // Normaliza para que no haya coordenadas negativas ni márgenes absurdos.
+ const shift=PAD-left;for(const id of Object.keys(pos))pos[id].x+=shift;right+=shift;left+=shift;
+ window.treeW=(right-left)+PAD*2;window.treeH=PAD*2+(max-min)*ROWGAP+CH;
 }
 function parentKey(id){let ps=vals(P,id).filter(x=>Z.has(x)).sort();return ps.length?ps.join('+'):'~'+id}
 function center(id){return {x:pos[id].x+CW/2,y:pos[id].y+CH/2}}
-function render(){const stage=document.getElementById('stage'),lines=document.getElementById('lines');stage.style.width=treeW+'px';stage.style.height=treeH+'px';lines.setAttribute('viewBox',`0 0 ${treeW} ${treeH}`);document.getElementById('routeLines').setAttribute('viewBox',`0 0 ${treeW} ${treeH}`);for(const id of Z){let p=B[id],q=pos[id];if(!q)continue;let e=document.createElement('div');e.className='card'+(id===ROOT?' root':'');e.dataset.id=id;e.style.left=q.x+'px';e.style.top=q.y+'px';let fp=photo(p);e.innerHTML=`<div class="photo">${fp?`<img src="${fp}" alt="">`:'♧'}</div><div class="name"></div><div class="dates"></div>`;e.querySelector('.name').textContent=p.nombre||id;e.querySelector('.dates').textContent=years(p);e.onclick=()=>selectPerson(id);stage.appendChild(e)}drawBase();document.getElementById('status').textContent=`${Z.size} personas · ${new Set(G.values()).size} generaciones`;applyScale();setTimeout(()=>{let v=document.getElementById('viewport');let f=Math.min(v.clientWidth/treeW,v.clientHeight/treeH,.9);setScale(Math.max(.42,f));centerOn(ROOT)},50)}
+function render(){const stage=document.getElementById('stage'),lines=document.getElementById('lines');stage.style.width=treeW+'px';stage.style.height=treeH+'px';lines.setAttribute('viewBox',`0 0 ${treeW} ${treeH}`);document.getElementById('routeLines').setAttribute('viewBox',`0 0 ${treeW} ${treeH}`);for(const id of Z){let p=B[id],q=pos[id];if(!q)continue;let e=document.createElement('div');e.className='card'+(id===ROOT?' root':'');e.dataset.id=id;e.style.left=q.x+'px';e.style.top=q.y+'px';let fp=photo(p);e.innerHTML=`<div class="photo">${fp?`<img src="${fp}" alt="">`:'♧'}</div><div class="name"></div><div class="dates"></div>`;e.querySelector('.name').textContent=p.nombre||id;e.querySelector('.dates').textContent=years(p);e.onclick=()=>selectPerson(id);stage.appendChild(e)}drawBase();document.getElementById('status').textContent=`${Z.size} personas · ${new Set(G.values()).size} generaciones`;applyScale();setTimeout(()=>centerOn(ROOT),50)}
 function pathEl(svg,d,cls){let e=document.createElementNS('http://www.w3.org/2000/svg','path');e.setAttribute('d',d);e.setAttribute('class',cls);svg.appendChild(e)}
 function drawBase(){const svg=document.getElementById('lines');for(const id of Z)for(const s of vals(S,id))if(Z.has(s)&&id<s&&pos[id]&&pos[s]){let a=center(id),b=center(s);pathEl(svg,`M${a.x},${a.y} L${b.x},${b.y}`,'couple-line')}let fam=new Map;for(const c of Z){let ps=vals(P,c).filter(p=>Z.has(p)&&pos[p]).sort();if(!ps.length||!pos[c])continue;let k=ps.join('+');if(!fam.has(k))fam.set(k,{ps,kids:[]});fam.get(k).kids.push(c)}for(const f of fam.values()){let px=f.ps.reduce((s,p)=>s+center(p).x,0)/f.ps.length,py=Math.max(...f.ps.map(p=>pos[p].y+CH)),ky=Math.min(...f.kids.map(c=>pos[c].y)),bus=(py+ky)/2,xs=f.kids.map(c=>center(c).x);pathEl(svg,`M${px},${py} L${px},${bus} M${Math.min(px,...xs)},${bus} L${Math.max(px,...xs)},${bus}`,'family-line');for(const c of f.kids){let x=center(c).x;pathEl(svg,`M${x},${bus} L${x},${pos[c].y}`,'family-line')}}}
 function neighbors(id){return [...new Set([...vals(P,id),...vals(C,id),...vals(S,id)].filter(x=>Z.has(x)))]}
