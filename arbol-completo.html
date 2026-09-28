@@ -1,7 +1,7 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes"><title>Vista completa · Árbol Familiar · Raíces · alpha35</title><style>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes"><title>Vista completa · Árbol Familiar · Raíces · alpha36</title><style>
 *{box-sizing:border-box}html,body{margin:0;height:100%;font-family:Arial,sans-serif;background:#5f5e59;color:#fff;overflow:hidden}.top{height:58px;background:#183c35;display:flex;align-items:center;gap:10px;padding:8px 12px;box-shadow:0 2px 10px #0005;position:relative;z-index:20}.title{font:700 18px Georgia;white-space:nowrap}.status{font-size:12px;opacity:.8;margin-right:auto}.top button{border:1px solid #ffffff42;background:#fff;color:#183c35;border-radius:7px;padding:8px 11px;font-weight:700;cursor:pointer}.top button:hover{background:#edf4f0}.route{font-size:12px;max-width:380px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.viewport{position:absolute;inset:58px 0 0;overflow:auto;overscroll-behavior:contain;background:#66645f}.canvas{position:relative;transform-origin:0 0;background:#77746e;min-width:100%;min-height:100%}.stage{position:absolute}.lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.card{position:absolute;width:176px;height:84px;background:#343b39;border:1px solid #8d9995;border-radius:7px;color:#fff;padding:9px 8px 7px 58px;box-shadow:0 2px 5px #0003;cursor:pointer;overflow:hidden;transition:opacity .18s,border .18s,box-shadow .18s}.card:hover{border-color:#dbe7e1;box-shadow:0 3px 10px #0006}.card.root{border:2px solid #8bc2ae}.photo{position:absolute;left:10px;top:13px;width:38px;height:38px;border-radius:50%;background:#dce6e1;color:#385248;display:grid;place-items:center;overflow:hidden;font:700 16px Georgia}.photo img{width:100%;height:100%;object-fit:cover}.name{font:700 12px/1.15 Georgia;max-height:42px;overflow:hidden}.dates{font-size:9px;color:#d0d6d3;margin-top:5px}.card.selected{outline:3px solid #f0c45b;outline-offset:2px}.card.onroute{border:2px solid #f0c45b;background:#3e443f;box-shadow:0 0 0 2px #f0c45b33,0 4px 12px #0006}.dim{opacity:.18}.family-line{stroke:#a9b4af;stroke-width:1.6;fill:none}.couple-line{stroke:#d2b4bc;stroke-width:1.7;fill:none}.route-line{stroke:#f0c45b;stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px #0008)}.gen{position:absolute;left:0;color:#e7e5df;font:700 12px Georgia;opacity:.75;transform:translateY(-22px)}.help{position:fixed;left:12px;bottom:10px;background:#1e2926e8;padding:8px 11px;border-radius:7px;font-size:11px;z-index:30;box-shadow:0 2px 8px #0004}.badge{display:inline-block;border:1px solid #ffffff55;border-radius:10px;padding:1px 6px;margin-right:5px}.back{color:white;text-decoration:none;font-size:13px;font-weight:700}@media(max-width:760px){.top{height:104px;align-content:center;flex-wrap:wrap}.viewport{inset:104px 0 0}.title{font-size:15px}.status{display:none}.route{order:5;width:100%;max-width:none}.top button{padding:6px 9px}.help{font-size:10px;max-width:92%}}
 </style></head><body><div class="top"><a class="back" href="index.html">← Raíces</a><span class="title">Vista completa</span><span id="status" class="status"></span><button id="minus">−</button><button id="center">Centrar</button><button id="fit">Ver todo</button><button id="plus">+</button><button id="clear">Limpiar ruta</button><span id="route" class="route">Selecciona dos personas para ver cómo se conectan.</span></div><div id="viewport" class="viewport"><div id="canvas" class="canvas"><div id="stage" class="stage"><svg id="lines" class="lines"></svg><svg id="routeLines" class="lines"></svg></div></div></div><div class="help"><span class="badge">Clic</span> selecciona dos personas · <span class="badge">Scroll</span> recorre el árbol · <span class="badge">Ctrl + rueda</span> zoom</div><script>
-let A=[],B={},P=new Map(),C=new Map(),S=new Map(),Z=new Set(),G=new Map(),pos={},scale=1,selected=[];const ROOT='P0015',CW=176,CH=84,GAP=20,FAMILYGAP=70,ROWGAP=150,PAD=100;
+let A=[],B={},P=new Map(),C=new Map(),S=new Map(),Z=new Set(),G=new Map(),pos={},scale=1,selected=[];const ROOT='P0015',CW=176,CH=84,GAP=20,FAMILYGAP=46,ROWGAP=150,PAD=80;
 const vals=(m,k)=>[...(m.get(k)||[])];function add(m,a,b){if(!a||!b||!B[a]||!B[b])return;if(!m.has(a))m.set(a,new Set);m.get(a).add(b)}
 function years(p){let a=p.fecha_nacimiento||p.datos_resumen||'',d=p.fecha_defuncion||'';let ya=(String(a).match(/(?:17|18|19|20)\d{2}/)||['?'])[0],yd=(String(d).match(/(?:17|18|19|20)\d{2}/)||[''])[0];return yd?`${ya} – ${yd}`:`${ya} –`}
 function photo(p){let fp=p.fotografia_principal||'';return fp&&(p.fotografias||[]).some(f=>f&&f.src===fp)?fp:''}
@@ -65,11 +65,36 @@ function layout(){
    for(const id of u.members){pos[id]={x,y};x+=CW+GAP}
   }
  }
- window.treeW=(right-left)+PAD*2;window.treeH=PAD*2+(max-min)*ROWGAP+CH;
+ // Compactación final: elimina únicamente franjas verticales completamente vacías.
+ // Se desplazan ramas enteras a izquierda/derecha; no se altera quién está bajo quién.
+ compactEmptyColumns();
+ let xs=Object.values(pos).map(p=>p.x);
+ let finalLeft=Math.min(...xs),finalRight=Math.max(...xs.map(x=>x+CW));
+ if(finalLeft!==PAD){const d=PAD-finalLeft;for(const p of Object.values(pos))p.x+=d;finalRight+=d;finalLeft=PAD}
+ window.treeW=(finalRight-finalLeft)+PAD*2;window.treeH=PAD*2+(max-min)*ROWGAP+CH;
+}
+function compactEmptyColumns(){
+ const KEEP=58; // espacio máximo que dejamos en una franja sin ninguna tarjeta
+ let intervals=Object.values(pos).map(p=>[p.x,p.x+CW]).sort((a,b)=>a[0]-b[0]);
+ if(!intervals.length)return;
+ let merged=[];
+ for(const it of intervals){
+  let last=merged[merged.length-1];
+  if(!last||it[0]>last[1])merged.push(it.slice());else last[1]=Math.max(last[1],it[1]);
+ }
+ let cuts=[],saved=0;
+ for(let i=1;i<merged.length;i++){
+  const gap=merged[i][0]-merged[i-1][1];
+  if(gap>KEEP){saved+=gap-KEEP;cuts.push({from:merged[i][0],delta:saved})}
+ }
+ if(!cuts.length)return;
+ for(const p of Object.values(pos)){
+  let d=0;for(const c of cuts){if(p.x>=c.from)d=c.delta;else break}p.x-=d;
+ }
 }
 function parentKey(id){let ps=vals(P,id).filter(x=>Z.has(x)).sort();return ps.length?ps.join('+'):'~'+id}
 function center(id){return {x:pos[id].x+CW/2,y:pos[id].y+CH/2}}
-function render(){const stage=document.getElementById('stage'),lines=document.getElementById('lines');stage.style.width=treeW+'px';stage.style.height=treeH+'px';lines.setAttribute('viewBox',`0 0 ${treeW} ${treeH}`);document.getElementById('routeLines').setAttribute('viewBox',`0 0 ${treeW} ${treeH}`);for(const id of Z){let p=B[id],q=pos[id];if(!q)continue;let e=document.createElement('div');e.className='card'+(id===ROOT?' root':'');e.dataset.id=id;e.style.left=q.x+'px';e.style.top=q.y+'px';let fp=photo(p);e.innerHTML=`<div class="photo">${fp?`<img src="${fp}" alt="">`:'♧'}</div><div class="name"></div><div class="dates"></div>`;e.querySelector('.name').textContent=p.nombre||id;e.querySelector('.dates').textContent=years(p);e.onclick=()=>selectPerson(id);stage.appendChild(e)}drawBase();document.getElementById('status').textContent=`${Z.size} personas · ${new Set(G.values()).size} generaciones`;applyScale();setTimeout(()=>centerOn(ROOT),50)}
+function render(){const stage=document.getElementById('stage'),lines=document.getElementById('lines');stage.style.width=treeW+'px';stage.style.height=treeH+'px';lines.setAttribute('viewBox',`0 0 ${treeW} ${treeH}`);document.getElementById('routeLines').setAttribute('viewBox',`0 0 ${treeW} ${treeH}`);for(const id of Z){let p=B[id],q=pos[id];if(!q)continue;let e=document.createElement('div');e.className='card'+(id===ROOT?' root':'');e.dataset.id=id;e.style.left=q.x+'px';e.style.top=q.y+'px';let fp=photo(p);e.innerHTML=`<div class="photo">${fp?`<img src="${fp}" alt="">`:'♧'}</div><div class="name"></div><div class="dates"></div>`;e.querySelector('.name').textContent=p.nombre||id;e.querySelector('.dates').textContent=years(p);e.onclick=()=>selectPerson(id);stage.appendChild(e)}drawBase();document.getElementById('status').textContent=`${Z.size} personas · ${new Set(G.values()).size} generaciones`;applyScale();setTimeout(()=>{let v=document.getElementById('viewport');let f=Math.min(v.clientWidth/treeW,v.clientHeight/treeH,.9);setScale(Math.max(.42,f));centerOn(ROOT)},50)}
 function pathEl(svg,d,cls){let e=document.createElementNS('http://www.w3.org/2000/svg','path');e.setAttribute('d',d);e.setAttribute('class',cls);svg.appendChild(e)}
 function drawBase(){const svg=document.getElementById('lines');for(const id of Z)for(const s of vals(S,id))if(Z.has(s)&&id<s&&pos[id]&&pos[s]){let a=center(id),b=center(s);pathEl(svg,`M${a.x},${a.y} L${b.x},${b.y}`,'couple-line')}let fam=new Map;for(const c of Z){let ps=vals(P,c).filter(p=>Z.has(p)&&pos[p]).sort();if(!ps.length||!pos[c])continue;let k=ps.join('+');if(!fam.has(k))fam.set(k,{ps,kids:[]});fam.get(k).kids.push(c)}for(const f of fam.values()){let px=f.ps.reduce((s,p)=>s+center(p).x,0)/f.ps.length,py=Math.max(...f.ps.map(p=>pos[p].y+CH)),ky=Math.min(...f.kids.map(c=>pos[c].y)),bus=(py+ky)/2,xs=f.kids.map(c=>center(c).x);pathEl(svg,`M${px},${py} L${px},${bus} M${Math.min(px,...xs)},${bus} L${Math.max(px,...xs)},${bus}`,'family-line');for(const c of f.kids){let x=center(c).x;pathEl(svg,`M${x},${bus} L${x},${pos[c].y}`,'family-line')}}}
 function neighbors(id){return [...new Set([...vals(P,id),...vals(C,id),...vals(S,id)].filter(x=>Z.has(x)))]}

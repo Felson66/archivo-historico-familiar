@@ -1,0 +1,13 @@
+RAÍCES 4.2.0-alpha36 — actualización de Vista completa
+
+Objetivo de esta versión: conservar la colocación genealógica correcta de alpha35 y reducir el ancho excesivo del árbol.
+
+Cambios:
+- Compactación de franjas verticales completamente vacías sin recolocar individuos dentro de sus familias.
+- Menor separación base entre bloques familiares.
+- Márgenes exteriores reducidos.
+- Al abrir, calcula un zoom inicial razonable y centra la persona raíz.
+- No se modifica el árbol de impresión/PDF.
+
+Instalación:
+Copiar estos 3 archivos en la carpeta principal de Raíces y aceptar reemplazar los existentes.
