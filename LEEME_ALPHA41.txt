@@ -1,0 +1,11 @@
+Raíces 4.2.0-alpha41 — Vista completa, motor v2
+
+Sustituye los 3 archivos en la carpeta principal.
+
+Cambios:
+- Parte de alpha39.
+- Conectores familiares rehechos: cada hijo tiene un camino independiente desde el nodo de sus progenitores reales.
+- Se eliminan las barras horizontales compartidas entre familias.
+- Más separación vertical para seguir las ramas.
+- Validación interna de conectores padre/madre -> hijo.
+- No modifica el árbol/PDF de impresión.
