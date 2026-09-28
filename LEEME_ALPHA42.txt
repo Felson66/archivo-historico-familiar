@@ -1,0 +1,7 @@
+Raíces 4.2.0-alpha42 — Vista completa, motor familiar v2
+
+- Parte de alpha39.
+- Elimina las barras horizontales compartidas.
+- Cada hijo se conecta directamente al nodo de sus progenitores registrados.
+- Más separación vertical para seguir las relaciones sin ambigüedad.
+- No modifica el árbol/PDF de impresión.
