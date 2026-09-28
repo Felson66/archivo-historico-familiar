@@ -1,0 +1,10 @@
+RAÍCES 4.2.0-alpha43 — Vista completa
+
+Cambios respecto a alpha42:
+- Conserva el motor visual, conectores y resaltado de rutas de alpha42.
+- Añade optimización explícita del orden horizontal para reducir cruces evitables.
+- El optimizador mueve unidades familiares completas; no separa parejas ni hermanos individualmente.
+- Prioriza primero eliminar cruces y después acortar conexiones.
+
+Instalación: copiar estos 3 archivos sobre los existentes.
+El árbol/PDF de impresión no se modifica.
