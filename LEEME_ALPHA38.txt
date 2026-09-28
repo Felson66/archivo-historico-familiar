@@ -1,0 +1,5 @@
+Raíces 4.2.0-alpha38
+
+Cambio: conectores familiares independientes por carriles para evitar barras de descendencia superpuestas.
+Base: alpha37.
+Pruebas: Elena/Eneko -> Eder/Peio y las familias marcadas en la captura del usuario.
