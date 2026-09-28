@@ -1,4 +1,4 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes"><title>Vista completa · Árbol Familiar · Raíces · alpha34</title><style>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes"><title>Vista completa · Árbol Familiar · Raíces · alpha35</title><style>
 *{box-sizing:border-box}html,body{margin:0;height:100%;font-family:Arial,sans-serif;background:#5f5e59;color:#fff;overflow:hidden}.top{height:58px;background:#183c35;display:flex;align-items:center;gap:10px;padding:8px 12px;box-shadow:0 2px 10px #0005;position:relative;z-index:20}.title{font:700 18px Georgia;white-space:nowrap}.status{font-size:12px;opacity:.8;margin-right:auto}.top button{border:1px solid #ffffff42;background:#fff;color:#183c35;border-radius:7px;padding:8px 11px;font-weight:700;cursor:pointer}.top button:hover{background:#edf4f0}.route{font-size:12px;max-width:380px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.viewport{position:absolute;inset:58px 0 0;overflow:auto;overscroll-behavior:contain;background:#66645f}.canvas{position:relative;transform-origin:0 0;background:#77746e;min-width:100%;min-height:100%}.stage{position:absolute}.lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.card{position:absolute;width:176px;height:84px;background:#343b39;border:1px solid #8d9995;border-radius:7px;color:#fff;padding:9px 8px 7px 58px;box-shadow:0 2px 5px #0003;cursor:pointer;overflow:hidden;transition:opacity .18s,border .18s,box-shadow .18s}.card:hover{border-color:#dbe7e1;box-shadow:0 3px 10px #0006}.card.root{border:2px solid #8bc2ae}.photo{position:absolute;left:10px;top:13px;width:38px;height:38px;border-radius:50%;background:#dce6e1;color:#385248;display:grid;place-items:center;overflow:hidden;font:700 16px Georgia}.photo img{width:100%;height:100%;object-fit:cover}.name{font:700 12px/1.15 Georgia;max-height:42px;overflow:hidden}.dates{font-size:9px;color:#d0d6d3;margin-top:5px}.card.selected{outline:3px solid #f0c45b;outline-offset:2px}.card.onroute{border:2px solid #f0c45b;background:#3e443f;box-shadow:0 0 0 2px #f0c45b33,0 4px 12px #0006}.dim{opacity:.18}.family-line{stroke:#a9b4af;stroke-width:1.6;fill:none}.couple-line{stroke:#d2b4bc;stroke-width:1.7;fill:none}.route-line{stroke:#f0c45b;stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px #0008)}.gen{position:absolute;left:0;color:#e7e5df;font:700 12px Georgia;opacity:.75;transform:translateY(-22px)}.help{position:fixed;left:12px;bottom:10px;background:#1e2926e8;padding:8px 11px;border-radius:7px;font-size:11px;z-index:30;box-shadow:0 2px 8px #0004}.badge{display:inline-block;border:1px solid #ffffff55;border-radius:10px;padding:1px 6px;margin-right:5px}.back{color:white;text-decoration:none;font-size:13px;font-weight:700}@media(max-width:760px){.top{height:104px;align-content:center;flex-wrap:wrap}.viewport{inset:104px 0 0}.title{font-size:15px}.status{display:none}.route{order:5;width:100%;max-width:none}.top button{padding:6px 9px}.help{font-size:10px;max-width:92%}}
 </style></head><body><div class="top"><a class="back" href="index.html">← Raíces</a><span class="title">Vista completa</span><span id="status" class="status"></span><button id="minus">−</button><button id="center">Centrar</button><button id="fit">Ver todo</button><button id="plus">+</button><button id="clear">Limpiar ruta</button><span id="route" class="route">Selecciona dos personas para ver cómo se conectan.</span></div><div id="viewport" class="viewport"><div id="canvas" class="canvas"><div id="stage" class="stage"><svg id="lines" class="lines"></svg><svg id="routeLines" class="lines"></svg></div></div></div><div class="help"><span class="badge">Clic</span> selecciona dos personas · <span class="badge">Scroll</span> recorre el árbol · <span class="badge">Ctrl + rueda</span> zoom</div><script>
 let A=[],B={},P=new Map(),C=new Map(),S=new Map(),Z=new Set(),G=new Map(),pos={},scale=1,selected=[];const ROOT='P0015',CW=176,CH=84,GAP=20,FAMILYGAP=70,ROWGAP=150,PAD=100;
@@ -10,60 +10,62 @@ function compute(){B=Object.fromEntries(A.map(x=>[x.id,x]));for(const x of A){co
 function layout(){
  const min=Math.min(...G.values()),max=Math.max(...G.values());pos={};
  const rows=new Map();
- // Una unidad es una persona o una pareja. Los hijos de los mismos padres permanecen juntos.
+ // Cada fila se divide en unidades de pareja/persona. La clave familiar son sus padres.
  for(let g=min;g<=max;g++){
   const ids=[...Z].filter(id=>G.get(id)===g),used=new Set(),units=[];
   for(const id of ids){
    if(used.has(id))continue;
    const mates=vals(S,id).filter(x=>Z.has(x)&&G.get(x)===g&&!used.has(x));
-   // Preferimos como pareja al cónyuge con quien comparte hijos registrados.
    let mate=mates.find(m=>vals(C,id).some(c=>vals(P,c).includes(m)))||mates[0];
    const members=mate?[id,mate]:[id];members.forEach(x=>used.add(x));
-   const pset=[...new Set(members.flatMap(x=>vals(P,x)).filter(x=>Z.has(x)))];
-   units.push({members,parents:pset,key:pset.slice().sort().join('+')||'~'+id,w:members.length*CW+(members.length-1)*GAP});
+   const parents=[...new Set(members.flatMap(x=>vals(P,x)).filter(x=>Z.has(x)))];
+   units.push({members,parents,key:parents.slice().sort().join('+')||'~'+id,w:members.length*CW+(members.length-1)*GAP,cx:0});
   }
   rows.set(g,units);
  }
- // De arriba abajo: cada familia se coloca debajo de sus progenitores. No se compacta a costa de mezclar familias.
- let maxRight=0;
+ // Arranque estable: familias separadas, sin intentar encajarlas bajo una barra global.
  for(let g=min;g<=max;g++){
-  const units=rows.get(g), y=PAD+(g-min)*ROWGAP;
-  for(const u of units){
-   const pp=u.parents.filter(x=>pos[x]);
-   u.target=pp.length?pp.reduce((a,x)=>a+pos[x].x+CW/2,0)/pp.length:null;
+  let x=PAD; const units=rows.get(g);
+  units.sort((a,b)=>a.key.localeCompare(b.key)||a.members.join().localeCompare(b.members.join()));
+  for(const u of units){u.cx=x+u.w/2;x+=u.w+FAMILYGAP}
+ }
+ const unitOf=new Map();for(const [g,us] of rows)for(const u of us)for(const id of u.members)unitOf.set(id,u);
+ function pcenter(u){const pp=u.parents.map(p=>unitOf.get(p)).filter(Boolean);return pp.length?pp.reduce((s,v)=>s+v.cx,0)/pp.length:null}
+ function childrenCenter(u){let cs=[];for(const id of u.members)for(const c of vals(C,id)){let cu=unitOf.get(c);if(cu&&!cs.includes(cu))cs.push(cu)}return cs.length?cs.reduce((s,v)=>s+v.cx,0)/cs.length:null}
+ function solveRow(units,desired){
+  // Orden por centro deseado y resolución simétrica de colisiones. No existe un cursor
+  // que empuje todas las familias posteriores hacia la derecha.
+  const arr=units.map((u,i)=>({u,d:desired(u,i)})).sort((a,b)=>a.d-b.d||a.u.key.localeCompare(b.u.key));
+  if(!arr.length)return;
+  arr[0].u.cx=arr[0].d;
+  for(let i=1;i<arr.length;i++){
+   const a=arr[i-1].u,b=arr[i].u,minsep=a.w/2+b.w/2+FAMILYGAP;
+   b.cx=Math.max(arr[i].d,a.cx+minsep);
   }
-  units.sort((a,b)=>{
-   if(a.target!=null&&b.target!=null&&a.target!==b.target)return a.target-b.target;
-   if(a.target!=null&&b.target==null)return -1;if(a.target==null&&b.target!=null)return 1;
-   return a.key.localeCompare(b.key)||a.members.map(x=>B[x].nombre||'').join('').localeCompare(b.members.map(x=>B[x].nombre||'').join('','es'));
-  });
-  let cursor=PAD,prevKey=null;
-  for(const u of units){
-   const desired=u.target==null?cursor:u.target-u.w/2;
-   const sep=(prevKey!==null&&prevKey!==u.key)?FAMILYGAP:GAP;
-   let x=Math.max(cursor+(prevKey===null?0:sep),desired);
+  // Repartimos el desplazamiento acumulado a izquierda y derecha para conservar los centros familiares.
+  let err=arr.reduce((s,a)=>s+(a.u.cx-a.d),0)/arr.length;
+  for(const a of arr)a.u.cx-=err;
+  for(let i=arr.length-2;i>=0;i--){const a=arr[i].u,b=arr[i+1].u,minsep=a.w/2+b.w/2+FAMILYGAP;if(b.cx-a.cx<minsep)a.cx=b.cx-minsep}
+  err=arr.reduce((s,a)=>s+(a.u.cx-a.d),0)/arr.length;for(const a of arr)a.u.cx-=err;
+ }
+ // Relajación bidireccional: hijos bajo sus padres y padres sobre sus hijos.
+ // Al mover ambos lados evitamos sacrificar una familia concreta por las que estén antes en la fila.
+ for(let pass=0;pass<18;pass++){
+  for(let g=min+1;g<=max;g++)solveRow(rows.get(g),u=>{let p=pcenter(u);return p==null?u.cx:(u.cx*.15+p*.85)});
+  for(let g=max-1;g>=min;g--)solveRow(rows.get(g),u=>{let c=childrenCenter(u);return c==null?u.cx:(u.cx*.35+c*.65)});
+ }
+ // Normalizamos coordenadas y materializamos las tarjetas.
+ let left=Infinity,right=-Infinity;
+ for(const us of rows.values())for(const u of us){left=Math.min(left,u.cx-u.w/2);right=Math.max(right,u.cx+u.w/2)}
+ const shift=PAD-left;
+ for(let g=min;g<=max;g++){
+  const y=PAD+(g-min)*ROWGAP;
+  for(const u of rows.get(g)){
+   let x=u.cx-u.w/2+shift;
    for(const id of u.members){pos[id]={x,y};x+=CW+GAP}
-   const right=x-GAP;cursor=right;prevKey=u.key;maxRight=Math.max(maxRight,right);
   }
  }
- // Segunda pasada: centra cada grupo de hermanos bajo la pareja, sin permitir solapes con el grupo anterior.
- for(let g=min+1;g<=max;g++){
-  const units=rows.get(g),groups=[];let cur=null;
-  for(const u of units){if(!cur||cur.key!==u.key){cur={key:u.key,units:[],parents:u.parents};groups.push(cur)}cur.units.push(u)}
-  let cursor=PAD;
-  for(const gr of groups){
-   const pp=gr.parents.filter(x=>pos[x]);
-   const target=pp.length?pp.reduce((a,x)=>a+pos[x].x+CW/2,0)/pp.length:null;
-   const first=gr.units[0],last=gr.units[gr.units.length-1];
-   const left=Math.min(...gr.units.flatMap(u=>u.members.map(id=>pos[id].x)));
-   const right=Math.max(...gr.units.flatMap(u=>u.members.map(id=>pos[id].x+CW)));
-   let shift=target==null?0:target-(left+right)/2;
-   if(left+shift<cursor)shift=cursor-left;
-   for(const u of gr.units)for(const id of u.members)pos[id].x+=shift;
-   const nr=right+shift;cursor=nr+FAMILYGAP;maxRight=Math.max(maxRight,nr);
-  }
- }
- window.treeW=maxRight+PAD;window.treeH=PAD*2+(max-min)*ROWGAP+CH;
+ window.treeW=(right-left)+PAD*2;window.treeH=PAD*2+(max-min)*ROWGAP+CH;
 }
 function parentKey(id){let ps=vals(P,id).filter(x=>Z.has(x)).sort();return ps.length?ps.join('+'):'~'+id}
 function center(id){return {x:pos[id].x+CW/2,y:pos[id].y+CH/2}}

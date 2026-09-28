@@ -1,0 +1,7 @@
+Raíces 4.2.0-alpha35 PRUEBA
+
+Sustituye estos archivos en la carpeta principal de Raíces.
+
+Cambio principal: nuevo layout bidireccional por unidades familiares. Los grupos de hijos se mantienen centrados respecto a sus progenitores y las colisiones se reparten a ambos lados, evitando la barra/cursor global que desplazaba familias completas.
+
+Prueba de control: Elena de la Dehesa Liz + Eneko Quintana deben quedar visualmente asociados con Eder y Peio debajo.
