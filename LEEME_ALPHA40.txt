@@ -1,0 +1,11 @@
+Raíces 4.2.0-alpha40
+
+Base: alpha39.
+Cambios de Vista completa:
+- Más separación vertical entre generaciones.
+- Cada familia usa un carril propio entre generaciones.
+- Las barras que se solapan horizontalmente se escalonan en alturas distintas.
+- Vertical central clara desde la pareja/progenitor hasta el nodo familiar.
+- No se modifica el orden ni la colocación horizontal de personas de alpha39.
+
+Copiar estos archivos sobre los existentes.
