@@ -45,7 +45,7 @@
         <span>Árbol navegable</span>
       </div>
       <div style="margin:0 0 12px 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-        <a class="soft" href="arbol-completo.html" target="_blank" rel="noopener" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:7px">🔎 Vista completa</a>
+        <a class="soft" href="arbol-completo.html" id="fullTreeLink" target="_blank" rel="noopener" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:7px">🔎 Vista completa</a>
         <!-- Opción Imprimir/PDF oculta temporalmente en alpha44; se conserva arbol-familiar.html -->
         <small style="color:#6b7772">Vista completa con desplazamiento y zoom · PDF panorámico independiente</small>
       </div>
@@ -114,6 +114,13 @@
 
 <div class="birthday-toast-host" id="birthdayToastHost" aria-live="polite" aria-atomic="true"></div>
 <div class="loading" id="loading">Cargando archivo…</div>
-<script src="js/app.js?v=4.2.0-alpha45"></script>
-</body>
+<script src="js/app.js?v=4.2.0-alpha47"></script>
+<script>
+if(new URLSearchParams(location.search).get('vista')==='cesar'){
+  document.title='Raíces · Familia de César de la Dehesa';
+  const h=document.querySelector('.brand h1');if(h)h.textContent='Familia de César de la Dehesa';
+  const a=document.getElementById('fullTreeLink');
+  if(a)a.href='arbol-completo.html?vista=cesar';
+}
+</script></body>
 </html>

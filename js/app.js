@@ -6,7 +6,10 @@ let currentView = "people";
  * Para restaurar el selector basta con volver a mostrar su bloque en index.html
  * y establecer PUBLIC_FIXED_BRANCH = null.
  */
-const PUBLIC_FIXED_BRANCH = "eduardo";
+// Enlace de cortesía para César: vista visual, NO control de acceso.
+const CESAR_VIEW = new URLSearchParams(location.search).get('vista') === 'cesar';
+const CESAR_ID = 'P00149';
+const PUBLIC_FIXED_BRANCH = 'eduardo';
 let currentFamilyBranch = PUBLIC_FIXED_BRANCH || localStorage.getItem("raicesFamilyBranch") || "conjunta";
 
 const $ = id => document.getElementById(id);
@@ -37,7 +40,31 @@ function isPublicPerson(person){
 }
 
 function publicPeople(){
-  return PEOPLE.filter(isPublicPerson);
+  if(!CESAR_VIEW) return PEOPLE.filter(isPublicPerson);
+  const allowed=cesarAllowedIds();
+  return PEOPLE.filter(p=>isPublicPerson(p)&&allowed.has(p.id));
+}
+// Solo descendientes de antepasados de la línea paterna de Eduardo,
+// sus parejas directas y la madre de Eduardo como excepción.
+// Nunca sigue los ascendientes de las parejas añadidas.
+function cesarAllowedIds(){
+  const allowed=new Set(),ancestors=new Set(),queue=['P0007'];
+  while(queue.length){
+    const id=queue.shift();
+    if(!id||ancestors.has(id)||!byId[id])continue;
+    ancestors.add(id);
+    parentIdsFor(byId[id]).forEach(p=>queue.push(p));
+  }
+  const descendants=[...ancestors];
+  while(descendants.length){
+    const id=descendants.shift();
+    if(allowed.has(id)||!byId[id])continue;
+    allowed.add(id);
+    childIdsFor(byId[id]).forEach(c=>descendants.push(c));
+  }
+  [...allowed].forEach(id=>spouseIdsFor(byId[id]).forEach(sp=>allowed.add(sp)));
+  allowed.add('P0010'); // Mercedes Liz Gómez: madre de Eduardo.
+  return allowed;
 }
 
 function cleanText(value){
@@ -435,7 +462,7 @@ function setFamilyBranch(branchName,{centerTree=true}={}){
     return;
   }
 
-  const rootId=FAMILY_BRANCH_ROOTS[currentFamilyBranch];
+  const rootId=CESAR_VIEW ? CESAR_ID : FAMILY_BRANCH_ROOTS[currentFamilyBranch];
   if(centerTree && rootId && byId[rootId]){
     treeFocusId=rootId;
   }
@@ -1063,7 +1090,7 @@ function closeDrawer(){
 }
 
 
-let treeFocusId = "P0015";
+let treeFocusId = CESAR_VIEW ? CESAR_ID : "P0015";
 let treeShowSiblings = true;
 let treeFullMode = false;
 let currentTreeLayout = {};
@@ -1585,7 +1612,7 @@ function buildTree(focusId=treeFocusId){
   const allowedIds=treeIdsForSelectedBranch();
   let focus=byId[focusId];
   if(!focus || !allowedIds.has(focus.id)){
-    const branchRoot=currentFamilyBranch!=="conjunta" ? FAMILY_BRANCH_ROOTS[currentFamilyBranch] : null;
+    const branchRoot=CESAR_VIEW ? CESAR_ID : (currentFamilyBranch!=="conjunta" ? FAMILY_BRANCH_ROOTS[currentFamilyBranch] : null);
     focus=(branchRoot && byId[branchRoot] && allowedIds.has(branchRoot)) ? byId[branchRoot] : treePeopleForSelectedBranch()[0];
   }
   if(!focus)return;
