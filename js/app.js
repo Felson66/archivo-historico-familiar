@@ -55,8 +55,16 @@ function parseBirthDateForBirthday(value){
   if(m){const day=+m[1],month=MONTH_NAMES_ES[m[2]],year=+m[3];if(day>=1&&day<=31&&month)return{day,month,year};}
   return null;
 }
+// alpha45: cumpleaños de la rama de Eduardo, incluida Esther.
+function birthdayEligibleIds(){
+  const ids=branchIds(FAMILY_BRANCH_ROOTS.eduardo);
+  ids.add(FAMILY_BRANCH_ROOTS.esther);
+  return ids;
+}
 function livingBirthdayPeople(today=new Date()){
-  return publicPeople().filter(p=>String(p?.situacion_vital||p?.situacionVital||"").toLowerCase()==="vivo")
+  const eligible=birthdayEligibleIds();
+  return publicPeople().filter(p=>eligible.has(p.id))
+    .filter(p=>String(p?.situacion_vital||p?.situacionVital||"").toLowerCase()==="vivo")
     .map(person=>({person,birth:parseBirthDateForBirthday(person?.fecha_nacimiento)}))
     .filter(x=>x.birth&&x.birth.day===today.getDate()&&x.birth.month===today.getMonth()+1)
     .sort((a,b)=>a.person.nombre.localeCompare(b.person.nombre,"es"));
