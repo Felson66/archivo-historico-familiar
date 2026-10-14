@@ -12419,7 +12419,7 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "fecha_nacimiento": "",
+    "fecha_nacimiento": "17/04/1804",
     "lugar_nacimiento": "San Cebrián de Castro",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
@@ -12433,7 +12433,20 @@
     ],
     "hechos": [],
     "fotografias": [],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000093",
+        "src": "assets/documentos/P00122/bautismo-de-la-desa-rodriguez-victoriano.jpeg",
+        "nombre_archivo": "bautismo-de-la-desa-rodriguez-victoriano.jpeg",
+        "formato": "image/jpeg",
+        "titulo": "Bautismo DE LA DESA RODRÍGUEZ Victoriano",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00122"
+        ]
+      }
+    ],
     "fecha_creacion": "2026-09-07T19:16:24.524Z",
     "ultima_modificacion": "2026-09-07T19:16:24.524Z",
     "padre": "P00140",
@@ -12964,12 +12977,12 @@
   },
   {
     "id": "P00141",
-    "nombre": "Eulalia Rodriguez",
+    "nombre": "Eugenia Rodriguez",
     "nombre_conocido": "",
     "sexo": "mujer",
     "situacion_vital": "fallecido",
     "fecha_nacimiento": "",
-    "lugar_nacimiento": "Sejas de Aliste (Zamora)",
+    "lugar_nacimiento": "San Cebrián de Castro (Zamora)",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "",
