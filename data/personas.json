@@ -13825,6 +13825,14 @@
       {
         "tipo": "documentado",
         "texto": "https://www.noticiasdegipuzkoa.eus/sociedad/2018/01/10/adios-julius-libre-irundarras-3952983.html"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "https://www.diariovasco.com/20130523/local/bidasoa/exposicion-arqueologia-contemporanea-inaugura-201305231406.html"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "https://www.diariovasco.com/v/20130526/bidasoa/toque-americano-20130526.html"
       }
     ],
     "fotografias": [
@@ -13844,6 +13852,66 @@
         "id": "F000278",
         "src": "assets/fotos/P00164/robert-con-javier-san-martin.jpg",
         "titulo": "Robert con Javier San Martin",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00164"
+        ]
+      },
+      {
+        "id": "F000279",
+        "src": "assets/fotos/P00164/documental-rober-julius-la-selva-creativa.webp",
+        "titulo": "Documental rober julius la selva creativa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00164"
+        ]
+      },
+      {
+        "id": "F000280",
+        "src": "assets/fotos/P00164/museo-oiasso-la-selva-creativa.webp",
+        "titulo": "Museo oiasso la selva creativa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00164"
+        ]
+      },
+      {
+        "id": "F000281",
+        "src": "assets/fotos/P00164/shaf-escultura-robert-julius-la-selva-creativa.webp",
+        "titulo": "Shaf escultura robert julius la selva creativa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00164"
+        ]
+      },
+      {
+        "id": "F000282",
+        "src": "assets/fotos/P00164/arquitectura-contemporanea-new-york-la-selva-creativa.webp",
+        "titulo": "Arquitectura contemporanea new york la selva creativa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00164"
+        ]
+      },
+      {
+        "id": "F000283",
+        "src": "assets/fotos/P00164/arquitectura-contemporanea-k57-la-selva-creativa1.webp",
+        "titulo": "Arquitectura contemporanea k57 la selva creativa1",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
