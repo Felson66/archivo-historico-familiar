@@ -9501,6 +9501,18 @@
       {
         "tipo": "documentado",
         "texto": "Bautizada el 8 de enero de 1896 en Irún."
+      },
+      {
+        "tipo": "memoria familiar",
+        "texto": "Emigró en principio a Sudamérica con la familia Iruretagoyena que eran de un caserío próximo. Según detalla su hijo fueron esclavizados hasta su liberación"
+      },
+      {
+        "tipo": "memoria familiar",
+        "texto": "Posteriormente llega a  Estados Unidos (Boston) mientas está al servicio de una familia de diplomáticos argentina"
+      },
+      {
+        "tipo": "memoria familiar",
+        "texto": "Por mediación de una mujer polaca María Pullberg que vivía en NY (Central Park West) conoce al que sería su marido (de apellido Torío y original de Valladolid). Se casaron en City Hall en 1936"
       }
     ],
     "nombre": "Micaela Múgica Ybarburu",
@@ -9511,8 +9523,21 @@
     ],
     "lugar_descanso": "",
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0051/bandera-eeuu.png",
+    "fotografias": [
+      {
+        "id": "F000276",
+        "src": "assets/fotos/P0051/bandera-eeuu.png",
+        "titulo": "Bandera EEUU",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0051"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000012",
@@ -9543,7 +9568,8 @@
     "situacion_vital": "fallecido",
     "visible": true,
     "padre": "P0003",
-    "madre": "P0004"
+    "madre": "P0004",
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "",
@@ -13761,5 +13787,49 @@
     "madre": "",
     "fotografia_principal": "assets/fotos/P00163/david-hernandez.jpg",
     "fotoPosicion": "50% 92%"
+  },
+  {
+    "id": "P00164",
+    "nombre": "Robert Julius Torio Mugica",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "28/12/1937",
+    "lugar_nacimiento": "Nueva York",
+    "fecha_defuncion": "Enero 2018",
+    "lugar_defuncion": "Irun",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Un personaje local que todo el mundo conocía en la zona de Irun.\n\nNació en Estados Unidos el 28 de diciembre de 1937.\n\nVivió en Manhattan.\n\nDe padre vallisoletano, su madre nació en un caserío de las laderas de Peñas de Aia con la que llegó a Irun en 1954. Robert Julius estudió en el colegio La Salle.\n\nEn 1956 regresó a Estados Unidos donde trabajó de cartero. Allí tuvo relación con el conocido escultor Alexander Calder.\n\nEn 1972 regresó a Irun donde se asentó definitivamente dedicándose a la recolección de metales. Vestía siempre de uniforme y gorra militar, botas de monte, mochila e inseparable bastón en mano.\n\nSu vida y andanzas a lo largo de Francia y América están recogidas en el documental, que durante tres años, realizó Javier San Martín \"Shaf\", del que hemos entresacado estos datos.\n\nEl propio Javier San Martín realizó en 2013, en el museo Oiasso, una sugerente exposición antológica sobre este personaje.\n\nRobert Julius Torío falleció en enero de 2018.\n\n \n\nPara ver el documental, hacer click en este enlace ----> https://www.youtube.com/watch?v=3yNMM4iVgRo"
+      }
+    ],
+    "fotografias": [
+      {
+        "id": "F000277",
+        "src": "assets/fotos/P00164/robert-torio-mugica.jpg",
+        "titulo": "Robert Torio Mugica",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00164"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-10-14T07:36:55.334Z",
+    "ultima_modificacion": "2026-10-14T07:36:55.335Z",
+    "fotografia_principal": "assets/fotos/P00164/robert-torio-mugica.jpg",
+    "fotoPosicion": "50% 50%",
+    "padre": "",
+    "madre": "P0051"
   }
 ]
