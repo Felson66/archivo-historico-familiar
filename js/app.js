@@ -584,6 +584,7 @@ function photoCaption(photo, person, index){
 }
 
 function renderGallery(person){
+  if(CESAR_VIEW) return "";
   const photos = person.fotografias || [];
   if(!photos.length) return `<div class="placeholder">Todavía no hay fotografías asociadas.</div>`;
   return `
@@ -602,6 +603,7 @@ function documentExtension(doc){ const path=documentPath(doc); return (doc.nombr
 function documentIcon(doc){ return documentExtension(doc)==="pdf" ? "PDF" : "IMG"; }
 
 function renderDocuments(person){
+  if(CESAR_VIEW) return "";
   const docs=person.documentos||[];
   if(!docs.length) return `<div class="placeholder">Todavía no hay documentos asociados.</div>`;
   return `<div class="document-list">${docs.map(doc=>{
@@ -741,6 +743,7 @@ function showDocumentPage(){
 }
 
 function openDocumentViewer(documentId, personId){
+  if(CESAR_VIEW) return;
   const person=byId[personId];
   const doc=(person?.documentos||[]).find(item=>item.id===documentId);
   if(doc&&isTextDocument(doc)){
@@ -994,17 +997,14 @@ function openPerson(id){
           ${renderTimeline(person)}
         </section>
 
-        <section class="profile-section">
+        ${CESAR_VIEW ? "" : `<section class="profile-section">
           <h3>Documentos</h3>
           ${renderDocuments(person)}
         </section>
-
         <section class="profile-section">
-          <div class="section-heading-row">
-            <h3>Fotografías</h3>
-          </div>
+          <div class="section-heading-row"><h3>Fotografías</h3></div>
           ${renderGallery(person)}
-        </section>
+        </section>`}
       </div>
 
       <div>
@@ -1040,6 +1040,7 @@ function openPerson(id){
 }
 
 function openLightbox(personId, index){
+  if(CESAR_VIEW) return;
   const person = byId[personId];
   const photos = person?.fotografias || [];
   if(!photos.length) return;
@@ -1140,8 +1141,8 @@ function personLifeLine(person){
 }
 
 function treeDocumentationLevel(person){
-  const photos=Array.isArray(person.fotografias)?person.fotografias.length:0;
-  const documents=Array.isArray(person.documentos)?person.documentos.length:0;
+  const photos=CESAR_VIEW?0:(Array.isArray(person.fotografias)?person.fotografias.length:0);
+  const documents=CESAR_VIEW?0:(Array.isArray(person.documentos)?person.documentos.length:0);
   const facts=Array.isArray(person.hechos)?person.hechos.length:0;
   const score=(photos>0?1:0)+(documents>0?1:0)+(facts>0?1:0);
   if(score>=3)return"high";
@@ -1153,8 +1154,8 @@ function treeNodeLabel(person){
   const photo=validPrincipalPhoto(person);
   const years=personLifeLine(person);
   const profession=String(person.profesion||"").trim();
-  const photos=Array.isArray(person.fotografias)?person.fotografias.length:0;
-  const documents=Array.isArray(person.documentos)?person.documentos.length:0;
+  const photos=CESAR_VIEW?0:(Array.isArray(person.fotografias)?person.fotografias.length:0);
+  const documents=CESAR_VIEW?0:(Array.isArray(person.documentos)?person.documentos.length:0);
   const state=treeDocumentationLevel(person);
 
   const avatar=personAvatarMarkup(person,{size:"small",className:"tree-card-avatar-unified"});
