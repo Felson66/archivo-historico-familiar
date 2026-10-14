@@ -13722,5 +13722,44 @@
     "ultima_modificacion": "2026-09-23T10:15:25.906Z",
     "padre": "P00112",
     "madre": "P00156"
+  },
+  {
+    "id": "P00163",
+    "nombre": "David Hernandez",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000275",
+        "src": "assets/fotos/P00163/david-hernandez.jpg",
+        "titulo": "David Hernandez",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00163"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-10-14T07:03:10.286Z",
+    "ultima_modificacion": "2026-10-14T07:03:10.286Z",
+    "padre": "P00130",
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00163/david-hernandez.jpg",
+    "fotoPosicion": "50% 92%"
   }
 ]
