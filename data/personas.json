@@ -14028,5 +14028,29 @@
     "documentos": [],
     "fecha_creacion": "2026-10-14T11:02:05.955Z",
     "ultima_modificacion": "2026-10-14T11:02:05.955Z"
+  },
+  {
+    "id": "P00169",
+    "nombre": "Maria Luisa de la Dehesa",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-14T11:27:06.882Z",
+    "ultima_modificacion": "2026-10-14T11:27:06.882Z",
+    "padre": "P00155",
+    "madre": ""
   }
 ]
