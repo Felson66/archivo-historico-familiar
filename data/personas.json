@@ -493,7 +493,7 @@
       "P0002"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0005/carabineros.jpg",
+    "fotografia_principal": "assets/fotos/P0005/manuel-de-la-dehesa-martin.png",
     "fotografias": [
       {
         "id": "F000106",
@@ -502,6 +502,18 @@
         "fecha": "",
         "lugar": "",
         "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0005"
+        ]
+      },
+      {
+        "id": "F000292",
+        "src": "assets/fotos/P0005/manuel-de-la-dehesa-martin.png",
+        "titulo": "Manuel de la Dehesa Martin",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "Creemos que es él, aún por confirmar",
         "etiquetas": [],
         "personas": [
           "P0005"
@@ -572,7 +584,7 @@
     "visible": true,
     "padre": "P0001",
     "madre": "P0002",
-    "fotoPosicion": "50% 50%"
+    "fotoPosicion": "50% 25%"
   },
   {
     "datos_resumen": "",
