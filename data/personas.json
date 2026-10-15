@@ -20,7 +20,7 @@
     "id_legacy": "p1",
     "id": "P0001",
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0001/carabineros.jpg",
+    "fotografia_principal": "assets/fotos/P0001/francisco-principal.png",
     "fotografias": [
       {
         "id": "F000105",
@@ -32,6 +32,32 @@
         "etiquetas": [],
         "personas": [
           "P0001"
+        ]
+      },
+      {
+        "id": "F000289",
+        "src": "assets/fotos/P0001/francisco-principal.png",
+        "titulo": "Francisco Principal",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0001"
+        ]
+      },
+      {
+        "id": "F000290",
+        "src": "assets/fotos/P0001/bisabuelos-y-mariaangeles.jpg",
+        "titulo": "Francisco, Josefa  y Maria Angeles",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0001",
+          "P0002",
+          "P00119"
         ]
       }
     ],
@@ -178,8 +204,61 @@
     "id": "P0002",
     "padres": [],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0002/josefa-principal.png",
+    "fotografias": [
+      {
+        "id": "F000284",
+        "src": "assets/fotos/P0002/josefa-principal.png",
+        "titulo": "Josefa Principal",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0002"
+        ]
+      },
+      {
+        "id": "F000285",
+        "src": "assets/fotos/P0002/josefa-martin-calles.jpg",
+        "titulo": "Josefa Martin Calles",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0002"
+        ]
+      },
+      {
+        "id": "F000286",
+        "src": "assets/fotos/P0002/cayetano-andres-y-josefa.jpg",
+        "titulo": "Cayetano, Andres y Josefa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0002",
+          "P0036",
+          "P0037"
+        ]
+      },
+      {
+        "id": "F000290",
+        "src": "assets/fotos/P0001/bisabuelos-y-mariaangeles.jpg",
+        "titulo": "Francisco, Josefa  y Maria Angeles",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0001",
+          "P0002",
+          "P00119"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000003",
@@ -233,7 +312,8 @@
     "situacion_vital": "fallecido",
     "visible": true,
     "padre": "",
-    "madre": ""
+    "madre": "",
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "",
@@ -8582,12 +8662,38 @@
       "P0002"
     ],
     "biografia": "",
-    "fotografia_principal": "assets/fotos/P0036/carabineros.jpg",
+    "fotografia_principal": "assets/fotos/P0036/cayetano-principal.png",
     "fotografias": [
       {
         "id": "F000104",
         "src": "assets/fotos/P0036/carabineros.jpg",
         "titulo": "Carabineros",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0036"
+        ]
+      },
+      {
+        "id": "F000286",
+        "src": "assets/fotos/P0002/cayetano-andres-y-josefa.jpg",
+        "titulo": "Cayetano, Andres y Josefa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0002",
+          "P0036",
+          "P0037"
+        ]
+      },
+      {
+        "id": "F000287",
+        "src": "assets/fotos/P0036/cayetano-principal.png",
+        "titulo": "Cayetano Principal",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
@@ -8738,8 +8844,35 @@
       "P0002"
     ],
     "biografia": "",
-    "fotografia_principal": "",
-    "fotografias": [],
+    "fotografia_principal": "assets/fotos/P0037/andres-pricipal.png",
+    "fotografias": [
+      {
+        "id": "F000286",
+        "src": "assets/fotos/P0002/cayetano-andres-y-josefa.jpg",
+        "titulo": "Cayetano, Andres y Josefa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0002",
+          "P0036",
+          "P0037"
+        ]
+      },
+      {
+        "id": "F000288",
+        "src": "assets/fotos/P0037/andres-pricipal.png",
+        "titulo": "Andres Pricipal",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0037"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000003",
@@ -8879,7 +9012,8 @@
     "situacion_vital": "fallecido",
     "visible": true,
     "padre": "P0001",
-    "madre": "P0002"
+    "madre": "P0002",
+    "fotoPosicion": "50% 50%"
   },
   {
     "datos_resumen": "",
@@ -12354,12 +12488,41 @@
       "P00120"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000290",
+        "src": "assets/fotos/P0001/bisabuelos-y-mariaangeles.jpg",
+        "titulo": "Francisco, Josefa  y Maria Angeles",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P0001",
+          "P0002",
+          "P00119"
+        ]
+      },
+      {
+        "id": "F000291",
+        "src": "assets/fotos/P00119/maria-angeles-principal.png",
+        "titulo": "Maria Angeles Principal",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00119"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-09-07T17:15:53.225Z",
     "ultima_modificacion": "2026-09-07T17:15:53.225Z",
     "padre": "P0001",
-    "madre": "P0002"
+    "madre": "P0002",
+    "fotografia_principal": "assets/fotos/P00119/maria-angeles-principal.png",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00120",
