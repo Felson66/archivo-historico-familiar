@@ -13805,7 +13805,7 @@
     "documentos": [],
     "fecha_creacion": "2026-09-22T10:53:27.795Z",
     "ultima_modificacion": "2026-09-22T10:53:27.795Z",
-    "padre": "P00157",
+    "padre": "P00170",
     "madre": "",
     "fotografia_principal": "assets/fotos/P00159/fernando-obituario.jpg",
     "fotoPosicion": "50% 50%"
@@ -13846,7 +13846,7 @@
     "ultima_modificacion": "2026-09-22T11:19:57.778Z",
     "fotografia_principal": "assets/fotos/P00160/martin-santiago-de-la-dehesa.jpg",
     "fotoPosicion": "50% 50%",
-    "padre": "P00157",
+    "padre": "P00170",
     "madre": ""
   },
   {
@@ -13885,7 +13885,7 @@
     "ultima_modificacion": "2026-09-22T11:22:18.823Z",
     "fotografia_principal": "assets/fotos/P00161/silvina-de-la-dehesa.png",
     "fotoPosicion": "50% 26%",
-    "padre": "P00157",
+    "padre": "P00170",
     "madre": ""
   },
   {
@@ -14218,6 +14218,30 @@
     "fecha_creacion": "2026-10-14T11:27:06.882Z",
     "ultima_modificacion": "2026-10-14T11:27:06.882Z",
     "padre": "P00155",
+    "madre": ""
+  },
+  {
+    "id": "P00170",
+    "nombre": "Esteban de la Dehesa",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Bahia Blanca",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-15T10:25:25.575Z",
+    "ultima_modificacion": "2026-10-15T10:25:25.576Z",
+    "padre": "P00157",
     "madre": ""
   }
 ]
