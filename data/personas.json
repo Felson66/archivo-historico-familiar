@@ -378,7 +378,7 @@
     "cronologia": [],
     "lugares": [],
     "notas": "",
-    "fecha_nacimiento": "Bautizado el 2 oct 1856",
+    "fecha_nacimiento": "02/10/1856",
     "lugar_nacimiento": "Irún",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
@@ -453,7 +453,7 @@
     "cronologia": [],
     "lugares": [],
     "notas": "",
-    "fecha_nacimiento": "Bautizada el 25 abr 1862",
+    "fecha_nacimiento": "25/04/1962",
     "lugar_nacimiento": "Irún",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
@@ -9343,9 +9343,6 @@
   },
   {
     "datos_resumen": "",
-    "hijos": [
-      "P0004"
-    ],
     "estado": "documentado",
     "conyuges": [
       "P0045"
@@ -9358,7 +9355,6 @@
     ],
     "nombre": "Joaquín Ybarburu Arbide",
     "id": "P0044",
-    "padres": [],
     "lugar_descanso": "",
     "biografia": "",
     "fotografia_principal": "",
@@ -9376,8 +9372,8 @@
     "sexo": "hombre",
     "situacion_vital": "fallecido",
     "visible": true,
-    "padre": "",
-    "madre": ""
+    "padre": "P00171",
+    "madre": "P00172"
   },
   {
     "datos_resumen": "",
@@ -9394,7 +9390,7 @@
         "texto": "Madre de María Dolores Ybarburu Lasalde, según el índice de bautismo de 1862."
       }
     ],
-    "nombre": "Francisca Lasalde Echeluce",
+    "nombre": "Francisca Lasalde Echaluce",
     "id": "P0045",
     "padres": [],
     "lugar_descanso": "",
@@ -14358,6 +14354,58 @@
     "fecha_creacion": "2026-10-15T10:25:25.575Z",
     "ultima_modificacion": "2026-10-15T10:25:25.576Z",
     "padre": "P00157",
+    "madre": ""
+  },
+  {
+    "id": "P00171",
+    "nombre": "Pedro Ygnacio Ventura Ybarburu Zamora",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "desconocido",
+    "fecha_nacimiento": "20/10/1777",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00172"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-16T21:21:21.772Z",
+    "ultima_modificacion": "2026-10-16T21:21:21.772Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00172",
+    "nombre": "Maria Gabriela Arbide Gaztelumendi",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "25/03/1792",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "15/09/1831",
+    "lugar_defuncion": "Irun",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00171"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-16T21:23:42.421Z",
+    "ultima_modificacion": "2026-10-16T21:23:42.421Z",
+    "padre": "",
     "madre": ""
   }
 ]
