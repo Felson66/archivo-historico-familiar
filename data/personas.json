@@ -14174,6 +14174,30 @@
         "personas": [
           "P00164"
         ]
+      },
+      {
+        "id": "F000296",
+        "src": "assets/fotos/P00164/robert-color.jpg",
+        "titulo": "Robert Color",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00164"
+        ]
+      },
+      {
+        "id": "F000297",
+        "src": "assets/fotos/P00164/robert-espaldas.jpg",
+        "titulo": "Robert Espaldas",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00164"
+        ]
       }
     ],
     "documentos": [],
