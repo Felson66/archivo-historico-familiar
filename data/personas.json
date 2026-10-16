@@ -14379,8 +14379,8 @@
     "documentos": [],
     "fecha_creacion": "2026-10-16T21:21:21.772Z",
     "ultima_modificacion": "2026-10-16T21:21:21.772Z",
-    "padre": "",
-    "madre": ""
+    "padre": "P00173",
+    "madre": "P00174"
   },
   {
     "id": "P00172",
@@ -14405,6 +14405,58 @@
     "documentos": [],
     "fecha_creacion": "2026-10-16T21:23:42.421Z",
     "ultima_modificacion": "2026-10-16T21:23:42.421Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00173",
+    "nombre": "Agustin Ybarburu Arburu",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "20/03/1747",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00174"
+    ],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-16T21:53:05.041Z",
+    "ultima_modificacion": "2026-10-16T21:53:05.042Z"
+  },
+  {
+    "id": "P00174",
+    "nombre": "Maria Antonia Zamora Olazaval",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "05/03/1755",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "14/01/1831",
+    "lugar_defuncion": "Irun",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00173"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-16T21:54:06.573Z",
+    "ultima_modificacion": "2026-10-16T21:54:06.573Z",
     "padre": "",
     "madre": ""
   }
