@@ -14196,7 +14196,23 @@
         ]
       }
     ],
-    "documentos": [],
+    "documentos": [
+      {
+        "id": "D000095",
+        "src": "assets/documentos/P00164/mailelena-a-shaf.pdf",
+        "nombre_archivo": "mailelena-a-shaf.pdf",
+        "formato": "application/pdf",
+        "titulo": "MailElena a Shaf",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00164"
+        ],
+        "paginas": [
+          "assets/documentos/P00164/d000095-paginas/pagina-001.webp"
+        ]
+      }
+    ],
     "fecha_creacion": "2026-10-14T07:36:55.334Z",
     "ultima_modificacion": "2026-10-14T07:36:55.335Z",
     "fotografia_principal": "assets/fotos/P00164/robert-torio-mugica.jpg",
