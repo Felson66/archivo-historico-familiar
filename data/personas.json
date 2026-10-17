@@ -14491,9 +14491,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
-    "conyuges": [],
-    "hijos": [],
+    "conyuges": [
+      "P00176"
+    ],
     "hechos": [],
     "fotografias": [
       {
@@ -14513,7 +14513,9 @@
     "fecha_creacion": "2026-10-17T09:17:46.754Z",
     "ultima_modificacion": "2026-10-17T09:17:46.754Z",
     "fotografia_principal": "assets/fotos/P00175/casa-solar-zamora.jpeg",
-    "fotoPosicion": "50% 50%"
+    "fotoPosicion": "50% 50%",
+    "padre": "",
+    "madre": ""
   },
   {
     "id": "P00176",
@@ -14530,7 +14532,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "conyuges": [],
+    "conyuges": [
+      "P00175"
+    ],
     "hechos": [],
     "fotografias": [],
     "documentos": [],
