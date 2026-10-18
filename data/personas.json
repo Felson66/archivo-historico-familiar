@@ -14542,5 +14542,50 @@
     "ultima_modificacion": "2026-10-17T09:19:47.923Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00177",
+    "nombre": "Joseph Juachin Galarza Ynsausti",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "12/02/1763",
+    "lugar_nacimiento": "Amezketa",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 2 de mar. de 1806\ncon Jossefa Ygnacia Elizondo Bengoechea\nAlegría de Oria, Guipúzcoa, España"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [
+      {
+        "id": "D000096",
+        "src": "assets/documentos/P00177/bautismo-joseph-juachin-galarza-ynsausti.pdf",
+        "nombre_archivo": "bautismo-joseph-juachin-galarza-ynsausti.pdf",
+        "formato": "application/pdf",
+        "titulo": "Bautismo Joseph Juachin, Galarza, Ynsausti",
+        "fecha": "",
+        "descripcion": "",
+        "personas": [
+          "P00177"
+        ],
+        "paginas": [
+          "assets/documentos/P00177/d000096-paginas/pagina-001.webp"
+        ]
+      }
+    ],
+    "fecha_creacion": "2026-10-18T12:28:39.986Z",
+    "ultima_modificacion": "2026-10-18T12:28:39.986Z"
   }
 ]
