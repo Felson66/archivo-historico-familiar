@@ -9921,11 +9921,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00054"
     ],
-    "hijos": [],
     "hechos": [],
     "fotografias": [],
     "documentos": [
@@ -9962,7 +9960,9 @@
       }
     ],
     "fecha_creacion": "2026-08-05T10:59:46.767Z",
-    "ultima_modificacion": "2026-08-05T10:59:46.767Z"
+    "ultima_modificacion": "2026-08-05T10:59:46.767Z",
+    "padre": "P00177",
+    "madre": "P00178"
   },
   {
     "id": "P00056",
@@ -14559,7 +14559,9 @@
     "datos_resumen": "",
     "visible": true,
     "padres": [],
-    "conyuges": [],
+    "conyuges": [
+      "P00178"
+    ],
     "hijos": [],
     "hechos": [
       {
@@ -14587,5 +14589,36 @@
     ],
     "fecha_creacion": "2026-10-18T12:28:39.986Z",
     "ultima_modificacion": "2026-10-18T12:28:39.986Z"
+  },
+  {
+    "id": "P00178",
+    "nombre": "Jossefa Ygnacia Elizondo Bengoechea",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "09/02/1773",
+    "lugar_nacimiento": "Aduna (Gipuzkoa)",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00177"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 2 de mar. de 1806\ncon Joseph Galarza Ynsausti"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-18T12:38:43.513Z",
+    "ultima_modificacion": "2026-10-18T12:38:43.514Z",
+    "padre": "",
+    "madre": ""
   }
 ]
