@@ -14514,8 +14514,8 @@
     "ultima_modificacion": "2026-10-17T09:17:46.754Z",
     "fotografia_principal": "assets/fotos/P00175/casa-solar-zamora.jpeg",
     "fotoPosicion": "50% 50%",
-    "padre": "",
-    "madre": ""
+    "padre": "P00179",
+    "madre": "P00180"
   },
   {
     "id": "P00176",
@@ -14620,5 +14620,119 @@
     "ultima_modificacion": "2026-10-18T12:38:43.514Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00179",
+    "nombre": "Juan Anttonio Zamora Arano",
+    "nombre_conocido": "",
+    "sexo": "",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "07/01/1674",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00180"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-18T17:11:40.066Z",
+    "ultima_modificacion": "2026-10-18T17:11:40.067Z",
+    "padre": "P00181",
+    "madre": "P00182"
+  },
+  {
+    "id": "P00180",
+    "nombre": "Cattalina Francisca Echartte",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Alza",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00179"
+    ],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-18T17:12:25.768Z",
+    "ultima_modificacion": "2026-10-18T17:12:25.768Z"
+  },
+  {
+    "id": "P00181",
+    "nombre": "Marttin Zamora",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00182"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 25 de abr. de 1671\ncon Maria Arano\nIrún, 7407, Guipúzcoa, País Vasco, España"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-18T17:14:47.530Z",
+    "ultima_modificacion": "2026-10-18T17:14:47.530Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00182",
+    "nombre": "Maria Arano",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00181"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 25 de abr. de 1671\ncon Marttin Zamora\nIrun, 7407, Guipuzcoa, País Vasco, España"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-18T17:16:24.021Z",
+    "ultima_modificacion": "2026-10-18T17:16:24.021Z"
   }
 ]
