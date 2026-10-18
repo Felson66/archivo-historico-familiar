@@ -10,7 +10,7 @@ if(new URLSearchParams(location.search).get('vista')==='cesar'){
 }
 let A=[],B={},P=new Map(),C=new Map(),S=new Map(),Z=new Set(),G=new Map(),pos={},scale=1,selected=[];const CESAR_VIEW=new URLSearchParams(location.search).get('vista')==='cesar';const ROOT=CESAR_VIEW?'P00149':'P0015',CW=176,CH=84,GAP=20,FAMILYGAP=70,ROWGAP=190,PAD=100;
 const vals=(m,k)=>[...(m.get(k)||[])];function add(m,a,b){if(!a||!b||!B[a]||!B[b])return;if(!m.has(a))m.set(a,new Set);m.get(a).add(b)}
-function years(p){let a=p.fecha_nacimiento||p.datos_resumen||'',d=p.fecha_defuncion||'';let ya=(String(a).match(/(?:17|18|19|20)\d{2}/)||['?'])[0],yd=(String(d).match(/(?:17|18|19|20)\d{2}/)||[''])[0];return yd?`${ya} – ${yd}`:`${ya} –`}
+function years(p){let a=p.fecha_nacimiento||p.datos_resumen||'',d=p.fecha_defuncion||'';let ya=(String(a).match(/(?:1[0-9]{3}|20\d{2})/)||['?'])[0],yd=(String(d).match(/(?:1[0-9]{3}|20\d{2})/)||[''])[0];return yd?`${ya} – ${yd}`:`${ya} –`}
 function photo(p){let fp=p.fotografia_principal||'';return fp&&(p.fotografias||[]).some(f=>f&&f.src===fp)?fp:''}
 function branch(r){let core=new Set(),q=[r];while(q.length){let x=q.shift();if(!B[x]||core.has(x))continue;core.add(x);q.push(...vals(P,x),...vals(C,x))}let z=new Set(core);for(const x of core)for(const p of vals(P,x))for(const y of vals(C,p))z.add(y);for(const x of [...z])for(const y of vals(S,x))z.add(y);return z}
 function compute(){B=Object.fromEntries(A.map(x=>[x.id,x]));for(const x of A){const ps=(x.padres&&x.padres.length)?x.padres:[x.padre,x.madre].filter(Boolean);for(const p of ps){add(P,x.id,p);add(C,p,x.id)}for(const c of(x.hijos||[])){add(C,x.id,c);add(P,c,x.id)}for(const s of(x.conyuges||[])){add(S,x.id,s);add(S,s,x.id)}}Z=branch(ROOT);
