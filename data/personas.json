@@ -14874,11 +14874,9 @@
     "notas": "Bautizo : MH:S2512 - 1773 Hidalguia de Joseph Ygnacio Muxica Lazcano - MH:R2",
     "datos_resumen": "Bautizo : MH:S2512 - 1773 Hidalguia de Joseph Ygnacio Muxica Lazcano - MH:R2",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00188"
     ],
-    "hijos": [],
     "hechos": [
       {
         "tipo": "documentado",
@@ -14888,7 +14886,9 @@
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-10-19T12:43:39.608Z",
-    "ultima_modificacion": "2026-10-19T12:43:39.608Z"
+    "ultima_modificacion": "2026-10-19T12:43:39.608Z",
+    "padre": "P00189",
+    "madre": "P00190"
   },
   {
     "id": "P00188",
@@ -14922,6 +14922,68 @@
     "documentos": [],
     "fecha_creacion": "2026-10-19T12:46:23.059Z",
     "ultima_modificacion": "2026-10-19T12:46:23.059Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00189",
+    "nombre": "Juan Bauptista MUXICA CHINCHURRETA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "13/04/1733",
+    "lugar_nacimiento": "Itsasondo",
+    "fecha_defuncion": "24/06/1794",
+    "lugar_defuncion": "Itsasondo",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Bautizo : MH:S2512 - 1773 Hidalguia de Joseph Ygnacio Muxica Lazcano - MH:R2",
+    "datos_resumen": "Bautizo : MH:S2512 - 1773 Hidalguia de Joseph Ygnacio Muxica Lazcano - MH:R2",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00190"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio6 de ene. de 1760\nItsasondo, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-19T13:01:07.782Z",
+    "ultima_modificacion": "2026-10-19T13:01:07.782Z"
+  },
+  {
+    "id": "P00190",
+    "nombre": "Maria Magdalena MACHAIN LAZCANO",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "13/08/1741",
+    "lugar_nacimiento": "Itsasondo",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Nacimiento : MH:S2513 - 1784 Hidalguia de Jose Muxica Salsamendi - MH:R2\n\nBautizo : MH:S2512 - 1773 Hidalguia de Joseph Ygnacio Muxica Lazcano - MH:R2",
+    "datos_resumen": "Nacimiento : MH:S2513 - 1784 Hidalguia de Jose Muxica Salsamendi - MH:R2\n\nBautizo : MH:S2512 - 1773 Hidalguia de Joseph Ygnacio Muxica Lazcano - MH:R2",
+    "visible": true,
+    "conyuges": [
+      "P00189"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio6 de ene. de 1760\nItsasondo, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-19T13:03:34.859Z",
+    "ultima_modificacion": "2026-10-19T13:03:34.859Z",
     "padre": "",
     "madre": ""
   }
