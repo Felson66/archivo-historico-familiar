@@ -14750,11 +14750,9 @@
     "notas": "en cuyos padrones figura como vecino concejante en 1714 y 1715, alf. en 1732 y diputado en 1749; y donde casó en 1721 con Isabel Francisca de Espilla Echevarria (n. Irun 1691; hija de Domingo de Espilla, n. en Plasencia, hidalgo en 1695, jur. de Irun en 1707; y de María Tomasa de Echevarria y Echevarria, n. Irun 1663 e hija de Juanes y María).",
     "datos_resumen": "en cuyos padrones figura como vecino concejante en 1714 y 1715, alf. en 1732 y diputado en 1749; y donde casó en 1721 con Isabel Francisca de Espilla Echevarria (n. Irun 1691; hija de Domingo de Espilla, n. en Plasencia, hidalgo en 1695, jur. de Irun en 1707; y de María Tomasa de Echevarria y Echevarria, n. Irun 1663 e hija de Juanes y María).",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00184"
     ],
-    "hijos": [],
     "hechos": [
       {
         "tipo": "documentado",
@@ -14764,7 +14762,9 @@
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-10-18T20:34:56.094Z",
-    "ultima_modificacion": "2026-10-18T20:34:56.095Z"
+    "ultima_modificacion": "2026-10-18T20:34:56.095Z",
+    "padre": "P00185",
+    "madre": "P00186"
   },
   {
     "id": "P00184",
@@ -14794,6 +14794,68 @@
     "documentos": [],
     "fecha_creacion": "2026-10-18T20:37:05.684Z",
     "ultima_modificacion": "2026-10-18T20:37:05.684Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00185",
+    "nombre": "Francisco Olaçaval Berroa",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "12/10/1653",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "1709",
+    "lugar_defuncion": "Irun",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00186"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 28 de may. de 1690\ncon Ana Maria Çamora Berroa"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-19T05:14:13.551Z",
+    "ultima_modificacion": "2026-10-19T05:14:13.551Z"
+  },
+  {
+    "id": "P00186",
+    "nombre": "Ana Maria Çamora Berroa",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "23/03/1654",
+    "lugar_nacimiento": "Irun",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00185"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 28 de may. de 1690\ncon Francisco Olaçaval Berroa"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-19T05:16:53.023Z",
+    "ultima_modificacion": "2026-10-19T05:16:53.023Z",
     "padre": "",
     "madre": ""
   }
