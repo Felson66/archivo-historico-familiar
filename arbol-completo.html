@@ -23,6 +23,18 @@ if(CESAR_VIEW){
   for(const id of [...allowed])for(const spouse of vals(S,id))allowed.add(spouse);
   allowed.add('P0010');
   Z=new Set([...Z].filter(id=>allowed.has(id)));
+  // Vista de César: Manuela Josefa Múgica Ybarburu aparece como
+  // cónyuge y madre, pero se oculta toda su rama familiar de origen.
+  // El recorrido no atraviesa a Manuela, por lo que conserva sus descendientes.
+  const MANUELA='P0006',maternalExcluded=new Set(),maternalQueue=vals(P,MANUELA);
+  while(maternalQueue.length){
+    const id=maternalQueue.shift();
+    if(!B[id]||id===MANUELA||maternalExcluded.has(id))continue;
+    maternalExcluded.add(id);
+    maternalQueue.push(...vals(P,id),...vals(C,id),...vals(S,id));
+  }
+  for(const id of maternalExcluded)Z.delete(id);
+  Z.add(MANUELA);
 }
 G=new Map([[ROOT,0]]);let q=[ROOT];while(q.length){let x=q.shift(),g=G.get(x);for(const p of vals(P,x))if(Z.has(p)&&!G.has(p)){G.set(p,g-1);q.push(p)}for(const c of vals(C,x))if(Z.has(c)&&!G.has(c)){G.set(c,g+1);q.push(c)}}let ch=true;while(ch){ch=false;for(const x of Z)if(!G.has(x)){let s=vals(S,x).find(y=>G.has(y));if(s){G.set(x,G.get(s));ch=true}}}for(const x of Z)if(!G.has(x))G.set(x,0);layout();render()}
 function layout(){
