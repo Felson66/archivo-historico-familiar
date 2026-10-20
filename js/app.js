@@ -209,7 +209,7 @@ async function ensureCurrentApplicationVersion(){
 
 async function init(){
   try{
-    const response = await fetch("data/personas.json", {cache:"no-store"});
+    const response = await fetch(`data/personas.json?ts=${Date.now()}`, {cache:"no-store"});
     if(!response.ok) throw new Error("No se pudo cargar personas.json");
     PEOPLE = await response.json();
     byId = Object.fromEntries(PEOPLE.map(person => [person.id, person]));
@@ -232,7 +232,26 @@ async function init(){
     // El archivo ya está cargado. Las interacciones globales se registran
     // en wireEvents(), antes de init(), para que nunca dependan del árbol.
     $("loading").classList.add("hidden");
-    showBirthdayToast();
+      // Entrada desde Vista completa: abrir directamente la ficha solicitada.
+      const incoming=new URLSearchParams(location.search);
+      const requested=incoming.get("persona");
+      if(requested && byId[requested] && publicPeople().some(p=>p.id===requested)){
+        openPerson(requested);
+        if(incoming.get("origen")==="completo"){
+          const back=document.createElement("button");
+          back.type="button";back.className="soft";back.textContent="← Volver a Vista completa";
+          back.style.margin="10px 0";
+          back.addEventListener("click",()=>{
+            // La vista completa conserva estado mediante sessionStorage.
+            const target=new URL("arbol-completo.html",location.href);
+            if(CESAR_VIEW)target.searchParams.set("vista","cesar");
+            target.searchParams.set("restaurar","1");
+            location.href=target.href;
+          });
+          $("drawerContent").prepend(back);
+        }
+      }
+      showBirthdayToast();
   }catch(error){
     $("loading").textContent = "No se han podido cargar los datos. Publica todos los archivos y carpetas en GitHub.";
     console.error(error);
@@ -1853,6 +1872,15 @@ function wireEvents(){
       closeLightbox();
       closeDrawer();
     }
+  });
+  // El enlace abre la vista completa centrada en la persona elegida en el árbol.
+  $("fullTreeLink")?.addEventListener("click",event=>{
+    const link=event.currentTarget;
+    const target=new URL("arbol-completo.html",location.href);
+    if(CESAR_VIEW)target.searchParams.set("vista","cesar");
+    const id=$("treePersonSelect")?.value || treeFocusId;
+    if(id && byId[id])target.searchParams.set("persona",id);
+    link.href=target.pathname+target.search;
   });
   $("treePersonSelect").addEventListener("change",event => {
     if(treeFullMode)setFullTreeMode(false);
