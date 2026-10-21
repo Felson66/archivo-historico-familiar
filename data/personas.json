@@ -9981,12 +9981,27 @@
     "visible": true,
     "conyuges": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000299",
+        "src": "assets/fotos/P00056/oiartzabalekoborda.png",
+        "titulo": "Oiartzabalekoborda",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "Foto del caserío",
+        "etiquetas": [],
+        "personas": [
+          "P00056"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-08-05T13:18:59.102Z",
     "ultima_modificacion": "2026-08-05T13:18:59.102Z",
     "padre": "P0003",
-    "madre": "P0004"
+    "madre": "P0004",
+    "fotografia_principal": "assets/fotos/P00056/oiartzabalekoborda.png",
+    "fotoPosicion": "50% 100%"
   },
   {
     "id": "P00057",
