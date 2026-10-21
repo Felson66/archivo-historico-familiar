@@ -15020,8 +15020,8 @@
     "documentos": [],
     "fecha_creacion": "2026-10-21T08:31:59.058Z",
     "ultima_modificacion": "2026-10-21T08:31:59.058Z",
-    "padre": "",
-    "madre": ""
+    "padre": "P00194",
+    "madre": "P00195"
   },
   {
     "id": "P00192",
@@ -15074,5 +15074,62 @@
     "documentos": [],
     "fecha_creacion": "2026-10-21T08:39:40.635Z",
     "ultima_modificacion": "2026-10-21T08:39:40.635Z"
+  },
+  {
+    "id": "P00194",
+    "nombre": "Francisco MUXICA SARRIEGUI",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "15/08/1671",
+    "lugar_nacimiento": "Ordizia",
+    "fecha_defuncion": "13/01/1747",
+    "lugar_defuncion": "Itsasondo",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Bautizo : MH:S2512 - 1773 Hidalguia de Joseph Ygnacio Muxica Lazcano - MH:R2",
+    "datos_resumen": "Bautizo : MH:S2512 - 1773 Hidalguia de Joseph Ygnacio Muxica Lazcano - MH:R2",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00195"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio13 de jul. de 1692\ncon Francisca CEBERIO SARASOLA\nItsasondo, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-21T09:32:55.842Z",
+    "ultima_modificacion": "2026-10-21T09:32:55.842Z"
+  },
+  {
+    "id": "P00195",
+    "nombre": "Francisca CEBERIO SARASOLA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "13/07/1692",
+    "lugar_nacimiento": "Itsasondo",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00194"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-21T09:34:54.585Z",
+    "ultima_modificacion": "2026-10-21T09:34:54.585Z",
+    "padre": "",
+    "madre": ""
   }
 ]
