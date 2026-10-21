@@ -3,7 +3,7 @@
 
 .relationship{position:relative;z-index:19;background:#244a41;padding:8px 14px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:13px;box-shadow:0 2px 5px #0003}.relationship button{background:#fff;color:#183c35;border:0;border-radius:7px;padding:6px 9px;font-weight:bold;cursor:pointer}.relationship #fullPath{flex-basis:100%;line-height:1.6;max-height:160px;overflow-y:auto;overflow-wrap:anywhere;padding:8px 0}.touch-help{display:none}.open-profile{display:none}.open-profile.visible{display:inline-block}.card{touch-action:manipulation}.back{font-size:23px;line-height:1;padding:4px 9px}.viewport{top:var(--header-height,96px);bottom:0}.top{height:auto;min-height:58px;flex-wrap:wrap}.status{margin-right:auto}
 @media(max-width:760px){.top{height:auto;min-height:0;padding:7px 9px;gap:6px}.top button{padding:7px 9px}.title{font-size:17px}.relationship{padding:7px 10px;font-size:12px}.help{bottom:7px;left:7px;padding:6px 8px}.desktop-help{display:none}.touch-help{display:inline}}
-.surname-overlay{position:fixed;inset:0;background:#000a;z-index:100;display:none;align-items:center;justify-content:center;padding:18px}.surname-overlay.visible{display:flex}.surname-dialog{background:#f8f6ef;color:#183c35;border-radius:12px;width:min(720px,100%);max-height:88vh;overflow:auto;padding:22px;box-shadow:0 15px 45px #0008}.surname-dialog h2{font:700 22px Georgia;margin:0 0 12px}.surname-dialog p{line-height:1.6}.surname-dialog button{background:#183c35;color:white;border:0;border-radius:7px;padding:9px 15px;cursor:pointer}.surname-sequence{font:600 17px/1.9 Georgia;overflow-wrap:anywhere}.surname-sequence .unknown{color:#9c613a}.surname-note{font-size:12px;color:#52655d}.surname-generation{padding:11px 0;border-top:1px solid #d9ddd4}.surname-generation h3{font:700 14px Arial;margin:0 0 9px;color:#49655b}.surname-items{display:flex;flex-wrap:wrap;gap:7px}.surname-item{display:inline-block;background:#edf0e9;border-radius:6px;padding:7px 10px;font:600 15px Georgia}.surname-num{font:12px Arial;color:#61736b}.surname-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+.surname-overlay{position:fixed;inset:0;background:#000a;z-index:100;display:none;align-items:center;justify-content:center;padding:18px}.surname-overlay.visible{display:flex}.surname-dialog{background:#f8f6ef;color:#183c35;border-radius:12px;width:min(720px,100%);max-height:88vh;overflow:auto;padding:22px;box-shadow:0 15px 45px #0008}.surname-dialog h2{font:700 22px Georgia;margin:0 0 12px}.surname-dialog p{line-height:1.6}.surname-dialog button{background:#183c35;color:white;border:0;border-radius:7px;padding:9px 15px;cursor:pointer}.surname-sequence{font:600 17px/1.9 Georgia;overflow-wrap:anywhere}.surname-sequence .unknown{color:#9c613a}.surname-note{font-size:12px;color:#52655d}.surname-generation{padding:11px 0;border-top:1px solid #d9ddd4}.surname-generation h3{font:700 14px Arial;margin:0 0 9px;color:#49655b}.surname-items{display:flex;flex-wrap:wrap;gap:7px}.surname-linear{align-items:flex-start}.surname-linear .surname-item{font:600 16px/1.45 Georgia;padding:5px 8px}.surname-item{display:inline-block;background:#edf0e9;border-radius:6px;padding:7px 10px;font:600 15px Georgia}.surname-num{font:12px Arial;color:#61736b}.surname-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
 </style></head><body><div class="top"><a class="back" href="index.html" id="returnHome">←</a><span class="title">Vista completa</span><span id="status" class="status"></span><button id="minus">−</button><button id="center">Centrar</button><button id="fit">Ver todo</button><button id="plus">+</button><button id="clear">Limpiar ruta</button><button id="openProfile" class="open-profile" type="button">Ver ficha</button><button id="showSurnames" class="open-profile" type="button">Ver apellidos</button></div><div id="relationship" class="relationship"><span id="kinship">Selecciona dos personas para ver cómo se conectan.</span><button id="togglePath" hidden aria-expanded="false">Ver recorrido completo ▾</button><div id="fullPath" hidden></div></div><div id="viewport" class="viewport"><div id="canvas" class="canvas"><div id="stage" class="stage"><svg id="lines" class="lines"></svg><svg id="routeLines" class="lines"></svg></div></div></div><div id="surnameOverlay" class="surname-overlay" role="dialog" aria-modal="true" aria-labelledby="surnameTitle"><section class="surname-dialog"><div class="surname-head"><h2 id="surnameTitle">Apellidos</h2><button id="closeSurnames" type="button">Cerrar ×</button></div><div id="surnameResult"></div></section></div><div class="help"><span class="desktop-help">Clic para seleccionar · Rueda para desplazarte · Ctrl + rueda para zoom</span><span class="touch-help">Toca dos personas · Desliza para recorrer · Pellizca para zoom</span></div><script>
 if(new URLSearchParams(location.search).get('vista')==='cesar'){
   document.title='Vista completa · César de la Dehesa';
@@ -215,22 +215,28 @@ function surnameGenerations(id){
 function showSurnames(id){
   if(!B[id]||!Z.has(id))return;
   const escapeText=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const person=B[id], own=surnameParts(person), tokens=String(person.nombre||'').trim().split(/\s+/);
+  const given=tokens.slice(0,Math.max(1,tokens.length-own.reduce((n,x)=>n+x.split(/\s+/).length,0))).join(' ');
   const generations=surnameGenerations(id);
-  const labels=['','Padres','Abuelos','Bisabuelos','Tatarabuelos','5.ª generación','6.ª generación'];
-  const sections=generations.map(({depth,names})=>{
+  // Mostrar una sola cadena ordenada: nombre, sus dos apellidos y después los apellidos conocidos de sus antepasados.
+  // No repetir los dos apellidos propios cuando vuelven a aparecer en la primera generación de ascendientes.
+  const entries=[];
+  own.forEach(x=>entries.push(x));
+  for(const gen of generations){
+    if(gen.depth===1)continue;
+    const names=gen.names;
     const first=names.findIndex(Boolean),last=names.findLastIndex(Boolean);
-    if(first<0)return '';
-    const start=2**depth-1;
-    const entries=[];
+    if(first<0)continue;
     for(let i=first;i<=last;i++){
       const name=names[i];
-      entries.push('<span class="surname-item"><span class="surname-num">'+(start+i)+'.</span> '+(name?escapeText(name):'<span class="unknown">XXXXX</span>')+'</span>');
+      if(name)entries.push(name);
+      else entries.push('XXXXX');
     }
-    return '<div class="surname-generation"><h3>'+labels[depth]+'</h3><div class="surname-items">'+entries.join('')+'</div></div>';
-  }).join('');
-  document.getElementById('surnameResult').innerHTML='<p><strong>'+escapeText(B[id].nombre)+'</strong></p>'+
-    (sections||'<p>No hay suficientes datos para reconstruir sus apellidos.</p>')+
-    '<p class="surname-note">Los números indican la posición tradicional de cada apellido (1.º y 2.º ya figuran en el nombre). XXXXX solo marca huecos entre apellidos conocidos de la misma generación. La separación de apellidos compuestos debe revisarse.</p>';
+  }
+  const items=entries.map((name,i)=>'<span class="surname-item">'+(i+1)+'. '+escapeText(name)+'</span>').join('');
+  document.getElementById('surnameResult').innerHTML='<p><strong>'+escapeText(given)+'</strong></p>'+ 
+    '<div class="surname-items surname-linear">'+items+'</div>'+ 
+    '<p class="surname-note">Orden: primero tus apellidos y después los apellidos registrados de tus antepasados, por generaciones y siguiendo las ramas paterna y materna. XXXXX señala un hueco entre datos conocidos; no es un apellido real. Los apellidos compuestos pueden requerir revisión.</p>';
   document.getElementById('surnameOverlay').classList.add('visible');
 }
 document.getElementById('showSurnames').onclick=()=>{if(selected.length===1)showSurnames(selected[0])};
