@@ -14940,21 +14940,25 @@
     "notas": "Bautizo : MH:S2512 - 1773 Hidalguia de Joseph Ygnacio Muxica Lazcano - MH:R2",
     "datos_resumen": "Bautizo : MH:S2512 - 1773 Hidalguia de Joseph Ygnacio Muxica Lazcano - MH:R2",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00190"
     ],
-    "hijos": [],
     "hechos": [
       {
         "tipo": "documentado",
         "texto": "Matrimonio6 de ene. de 1760\nItsasondo, Gipuzkoa, Euskadi"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Se hace referencia a su hidalguía y ascendencia en el siguiente apunte del ENSAYO DE UN PADRÓN HISTÓRICO DE GUIPUZCOA según el orden de sus familias pobladoras 1928:\n\nMUGICA (o MUXICA), Juan Bautista, Miguel y José Ignacio por sí y por sus hijos, naturales de Isasondo, E. con la H. de Ventura de Mugica y sus hermanos (ya citada), Isasondo, 1773.- Miguel José yJosé Ciriaco, hijos de José María de Mugica y María Josefa de Echaide, nietos primeros de Miguel y Manuela de Ibarguren, segundos de Juan Bautista y Magdalena de Machain, terceros de Miguel y María Bautista de Chinchurreta, cuartos de Francisco y Francisca de Ceberio y quintos de Felipe y María de Sarriegui por línea recta de varón y descendientes por la misma del solar de Mugica en Gudugarreta, E. con el E. anterior en el estirpe de Juan Bautista de Mugica, bisabuelo de los litigantes, Cestona, 1832 (Nota: en el documento habla de la casa de Astigarreta, en vez de Gudugarreta (ambas localidades son barrios de Beasain en la actualidad http://dokuklik.snae.org/badator_zoom.php?cdc=080&cdd=49003# )\n\nFigura asimismo en la hidalguía de su hermanastro Jose Ignacio de Mujica y Lazcano, Ceberio y Olasagasti y otros parientes, con cita de diversos entroncamientos (Itsasondo, 1773) https://dokuklik.euskadi.eus/badator/visor/305813 . En ella se dice que él y su mujer eran habitantes de la casería Lizardi de arriba."
       }
     ],
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-10-19T13:01:07.782Z",
-    "ultima_modificacion": "2026-10-19T13:01:07.782Z"
+    "ultima_modificacion": "2026-10-19T13:01:07.782Z",
+    "padre": "P00191",
+    "madre": "P00193"
   },
   {
     "id": "P00190",
@@ -14986,5 +14990,89 @@
     "ultima_modificacion": "2026-10-19T13:03:34.859Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00191",
+    "nombre": "Miguel MUXICA  ZEBERIO El mayor",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "28/09/1695",
+    "lugar_nacimiento": "Itsasondo",
+    "fecha_defuncion": "13/05/1784",
+    "lugar_defuncion": "Itsasondo",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Aparece su ascendencia, descendencia y matrimonios en la hidalguía de su hijo Jose Ignacio de Mujica y Lazcano, Ceberio y Olasagasti y otros parientes, con cita de diversos entroncamientos de Itsasondo 1773 . https://dokuklik.euskadi.eus/badator/visor/305813\n\nDescendiente de la casa de Muxica de Astigarreta.",
+    "datos_resumen": "Aparece su ascendencia, descendencia y matrimonios en la hidalguía de su hijo Jose Ignacio de Mujica y Lazcano, Ceberio y Olasagasti y otros parientes, con cita de diversos entroncamientos de Itsasondo 1773 . https://dokuklik.euskadi.eus/badator/visor/305813\n\nDescendiente de la casa de Muxica de Astigarreta.",
+    "visible": true,
+    "conyuges": [
+      "P00192",
+      "P00193"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio12 de jul. de 1750\nMaria Antonia LAZCANO OLASAGASTI\nItsasondo, Guipuzcoa, País Vasco, España"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-21T08:31:59.058Z",
+    "ultima_modificacion": "2026-10-21T08:31:59.058Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00192",
+    "nombre": "Maria Antonia LAZCANO  OLASAGASTI",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "07/06/1708",
+    "lugar_nacimiento": "Itsasondo",
+    "fecha_defuncion": "09/06/1773",
+    "lugar_defuncion": "Itsasondo",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "El segundo apellido se obtiene de la partida de su hijo Joseph Ygnacio, Muxica, Lazcano (Itsasondo,1755-04-08) y de su segundo marido Miguel, Muxica, Zeverio.\n\nSegún la hidalgúia de este (Itsasondo, 1773: Jose Ignacio de Mujica y Lazcano, Ceberio y Olasagasti y otros parientes, con cita de diversos entroncamientos ) https://dokuklik.euskadi.eus/badator/visor/305813 era hija de Juan Lazcano Rodrigotegui, natural de Legorreta, y de su mujer Maria Olasagasti, natural de Itsasondo.",
+    "datos_resumen": "El segundo apellido se obtiene de la partida de su hijo Joseph Ygnacio, Muxica, Lazcano (Itsasondo,1755-04-08) y de su segundo marido Miguel, Muxica, Zeverio.\n\nSegún la hidalgúia de este (Itsasondo, 1773: Jose Ignacio de Mujica y Lazcano, Ceberio y Olasagasti y otros parientes, con cita de diversos entroncamientos ) https://dokuklik.euskadi.eus/badator/visor/305813 era hija de Juan Lazcano Rodrigotegui, natural de Legorreta, y de su mujer Maria Olasagasti, natural de Itsasondo.",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00191"
+    ],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-21T08:35:00.592Z",
+    "ultima_modificacion": "2026-10-21T08:35:00.592Z"
+  },
+  {
+    "id": "P00193",
+    "nombre": "Maria Bauptista CHINCHURRETA  LIZARAZU",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "30/10/1698",
+    "lugar_nacimiento": "Itsasondo",
+    "fecha_defuncion": "16/09/1742",
+    "lugar_defuncion": "Itsasondo",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Desciende de la casa Chinchurreta en Beasain, según la hidalguía de su hijastro Jose Ignacio de Mujica y Lazcano, Ceberio y Olasagasti y otros parientes, con cita de diversos entroncamientos. https://dokuklik.euskadi.eus/badator/visor/305813",
+    "datos_resumen": "Desciende de la casa Chinchurreta en Beasain, según la hidalguía de su hijastro Jose Ignacio de Mujica y Lazcano, Ceberio y Olasagasti y otros parientes, con cita de diversos entroncamientos. https://dokuklik.euskadi.eus/badator/visor/305813",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00191"
+    ],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-10-21T08:39:40.635Z",
+    "ultima_modificacion": "2026-10-21T08:39:40.635Z"
   }
 ]
