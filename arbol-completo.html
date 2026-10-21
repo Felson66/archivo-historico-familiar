@@ -3,7 +3,8 @@
 
 .relationship{position:relative;z-index:19;background:#244a41;padding:8px 14px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:13px;box-shadow:0 2px 5px #0003}.relationship button{background:#fff;color:#183c35;border:0;border-radius:7px;padding:6px 9px;font-weight:bold;cursor:pointer}.relationship #fullPath{flex-basis:100%;line-height:1.6;max-height:160px;overflow-y:auto;overflow-wrap:anywhere;padding:8px 0}.touch-help{display:none}.open-profile{display:none}.open-profile.visible{display:inline-block}.card{touch-action:manipulation}.back{font-size:23px;line-height:1;padding:4px 9px}.viewport{top:var(--header-height,96px);bottom:0}.top{height:auto;min-height:58px;flex-wrap:wrap}.status{margin-right:auto}
 @media(max-width:760px){.top{height:auto;min-height:0;padding:7px 9px;gap:6px}.top button{padding:7px 9px}.title{font-size:17px}.relationship{padding:7px 10px;font-size:12px}.help{bottom:7px;left:7px;padding:6px 8px}.desktop-help{display:none}.touch-help{display:inline}}
-</style></head><body><div class="top"><a class="back" href="index.html" id="returnHome">←</a><span class="title">Vista completa</span><span id="status" class="status"></span><button id="minus">−</button><button id="center">Centrar</button><button id="fit">Ver todo</button><button id="plus">+</button><button id="clear">Limpiar ruta</button><button id="openProfile" class="open-profile" type="button">Ver ficha</button></div><div id="relationship" class="relationship"><span id="kinship">Selecciona dos personas para ver cómo se conectan.</span><button id="togglePath" hidden aria-expanded="false">Ver recorrido completo ▾</button><div id="fullPath" hidden></div></div><div id="viewport" class="viewport"><div id="canvas" class="canvas"><div id="stage" class="stage"><svg id="lines" class="lines"></svg><svg id="routeLines" class="lines"></svg></div></div></div><div class="help"><span class="desktop-help">Clic para seleccionar · Rueda para desplazarte · Ctrl + rueda para zoom</span><span class="touch-help">Toca dos personas · Desliza para recorrer · Pellizca para zoom</span></div><script>
+.surname-overlay{position:fixed;inset:0;background:#000a;z-index:100;display:none;align-items:center;justify-content:center;padding:18px}.surname-overlay.visible{display:flex}.surname-dialog{background:#f8f6ef;color:#183c35;border-radius:12px;width:min(720px,100%);max-height:88vh;overflow:auto;padding:22px;box-shadow:0 15px 45px #0008}.surname-dialog h2{font:700 22px Georgia;margin:0 0 12px}.surname-dialog p{line-height:1.6}.surname-dialog button{background:#183c35;color:white;border:0;border-radius:7px;padding:9px 15px;cursor:pointer}.surname-sequence{font:600 17px/1.9 Georgia;overflow-wrap:anywhere}.surname-sequence .unknown{color:#9c613a}.surname-note{font-size:12px;color:#52655d}.surname-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+</style></head><body><div class="top"><a class="back" href="index.html" id="returnHome">←</a><span class="title">Vista completa</span><span id="status" class="status"></span><button id="minus">−</button><button id="center">Centrar</button><button id="fit">Ver todo</button><button id="plus">+</button><button id="clear">Limpiar ruta</button><button id="openProfile" class="open-profile" type="button">Ver ficha</button><button id="showSurnames" class="open-profile" type="button">Ver apellidos</button></div><div id="relationship" class="relationship"><span id="kinship">Selecciona dos personas para ver cómo se conectan.</span><button id="togglePath" hidden aria-expanded="false">Ver recorrido completo ▾</button><div id="fullPath" hidden></div></div><div id="viewport" class="viewport"><div id="canvas" class="canvas"><div id="stage" class="stage"><svg id="lines" class="lines"></svg><svg id="routeLines" class="lines"></svg></div></div></div><div id="surnameOverlay" class="surname-overlay" role="dialog" aria-modal="true" aria-labelledby="surnameTitle"><section class="surname-dialog"><div class="surname-head"><h2 id="surnameTitle">Apellidos</h2><button id="closeSurnames" type="button">Cerrar ×</button></div><div id="surnameResult"></div></section></div><div class="help"><span class="desktop-help">Clic para seleccionar · Rueda para desplazarte · Ctrl + rueda para zoom</span><span class="touch-help">Toca dos personas · Desliza para recorrer · Pellizca para zoom</span></div><script>
 if(new URLSearchParams(location.search).get('vista')==='cesar'){
   document.title='Vista completa · César de la Dehesa';
   document.getElementById('returnHome').href='index.html?vista=cesar';
@@ -170,11 +171,70 @@ function drawBase(){
 function neighbors(id){return [...new Set([...vals(P,id),...vals(C,id),...vals(S,id)].filter(x=>Z.has(x)))]}
 function shortest(a,b){let q=[a],prev=new Map([[a,null]]);while(q.length){let x=q.shift();if(x===b)break;for(const n of neighbors(x))if(!prev.has(n)){prev.set(n,x);q.push(n)}}if(!prev.has(b))return[];let out=[];for(let x=b;x!=null;x=prev.get(x))out.push(x);return out.reverse()}
 function selectPerson(id){if(selected.length===2)selected=[];if(!selected.includes(id))selected.push(id);updateRoute();updateProfileButton()}
-function updateProfileButton(){const b=document.getElementById('openProfile');b.classList.toggle('visible',selected.length>0);b.textContent=selected.length?'Ver ficha de '+(B[selected[selected.length-1]]?.nombre||'persona'):'Ver ficha'}
+function updateProfileButton(){const sb=document.getElementById('showSurnames');sb.classList.toggle('visible',selected.length===1);const b=document.getElementById('openProfile');b.classList.toggle('visible',selected.length>0);b.textContent=selected.length?'Ver ficha de '+(B[selected[selected.length-1]]?.nombre||'persona'):'Ver ficha'}
 function saveTreeState(){const v=document.getElementById('viewport');try{sessionStorage.setItem('raicesFullTreeState'+(CESAR_VIEW?'Cesar':''),JSON.stringify({scale,left:v.scrollLeft,top:v.scrollTop,selected}))}catch(_){}}
 function openProfile(id){if(!B[id])return;saveTreeState();const u=new URL('index.html',location.href);if(CESAR_VIEW)u.searchParams.set('vista','cesar');u.searchParams.set('persona',id);u.searchParams.set('origen','completo');location.href=u.href}
 function restoreOrFocus(){const qs=new URLSearchParams(location.search),id=qs.get('persona'),key='raicesFullTreeState'+(CESAR_VIEW?'Cesar':'');if(qs.get('restaurar')==='1'){try{const state=JSON.parse(sessionStorage.getItem(key)||'null');if(state){setScale(state.scale);selected=(state.selected||[]).filter(x=>Z.has(x)).slice(0,2);updateRoute();updateProfileButton();const v=document.getElementById('viewport');v.scrollLeft=state.left;v.scrollTop=state.top;sessionStorage.removeItem(key);return}}catch(_){}}if(id&&Z.has(id)){selected=[id];updateRoute();updateProfileButton();centerOn(id)}else centerOn(ROOT)}
 document.getElementById('openProfile').onclick=()=>{if(selected.length)openProfile(selected[selected.length-1])};
+// Apellidos genealógicos por generaciones: padre, madre, abuelos, bisabuelos...
+// Solo se usan personas visibles en esta vista; nunca se revelan ramas ocultas de César.
+function surnameParts(person){
+  const raw=String(person?.nombre||'').trim();
+  const tokens=raw.split(/\s+/).filter(Boolean);
+  if(tokens.length<3)return [];
+  const take=(end)=>{
+    let start=end-1;
+    while(start>0&&/^(?:de|del|la|las|los|y|da|do)$/i.test(tokens[start-1]))start--;
+    return {value:tokens.slice(start,end).join(' '),start};
+  };
+  const second=take(tokens.length),first=take(second.start);
+  // Heurística: los dos últimos grupos del nombre, respetando partículas.
+  if(first.start<1)return [];
+  return [first.value,second.value];
+}
+function parentPair(id){
+  const p=B[id];if(!p)return [null,null];
+  const explicit=[p.padre,p.madre].map(x=>x&&B[x]&&Z.has(x)?x:null);
+  if(explicit.some(Boolean))return explicit;
+  const legacy=Array.isArray(p.padres)?p.padres.filter(x=>B[x]&&Z.has(x)):[];
+  return [legacy.find(x=>String(B[x].sexo||'').toLowerCase()==='hombre')||null,
+          legacy.find(x=>String(B[x].sexo||'').toLowerCase()==='mujer')||null];
+}
+function surnameSequence(id){
+  const own=surnameParts(B[id]);
+  let row=[id],values=[],knownLast=-1;
+  // Hasta 5 generaciones: máximo 62 apellidos, sin fabricar ascendientes.
+  for(let depth=1;depth<=5;depth++){
+    const next=[];
+    for(const ancestorId of row){
+      const pair=ancestorId?parentPair(ancestorId):[null,null];
+      next.push(...pair);
+    }
+    const surnames=next.map((ancestorId,i)=>{
+      if(ancestorId)return surnameParts(B[ancestorId])[0]||null;
+      return depth===1?(own[i]||null):null;
+    });
+    for(const name of surnames){values.push(name);if(name)knownLast=values.length-1;}
+    if(!next.some(Boolean))break;
+    row=next;
+  }
+  return values.slice(0,knownLast+1);
+}
+function showSurnames(id){
+  if(!B[id]||!Z.has(id))return;
+  const names=surnameSequence(id);
+  const escapeText=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const result=document.getElementById('surnameResult');
+  result.innerHTML='<p><strong>'+escapeText(B[id].nombre)+'</strong></p>'+
+    (names.length?'<p class="surname-sequence">'+names.map(x=>x?escapeText(x):'<span class="unknown">XXXXX</span>').join(' · ')+'</p>':'<p>No hay suficientes datos para reconstruir sus apellidos.</p>')+
+    '<p class="surname-note">Orden genealógico: línea paterna y materna por generaciones. XXXXX indica una posición desconocida anterior a otro apellido conocido. Los apellidos se extraen de los nombres registrados y pueden requerir revisión cuando hay nombres o apellidos compuestos.</p>';
+  document.getElementById('surnameOverlay').classList.add('visible');
+}
+document.getElementById('showSurnames').onclick=()=>{if(selected.length===1)showSurnames(selected[0])};
+document.getElementById('closeSurnames').onclick=()=>document.getElementById('surnameOverlay').classList.remove('visible');
+document.getElementById('surnameOverlay').addEventListener('click',e=>{if(e.target.id==='surnameOverlay')e.currentTarget.classList.remove('visible')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('surnameOverlay').classList.remove('visible')});
+
 function showRelation(message,route){
  document.getElementById('kinship').textContent=message;
  const toggle=document.getElementById('togglePath'),full=document.getElementById('fullPath');
