@@ -220,23 +220,32 @@ function showSurnames(id){
   const generations=surnameGenerations(id);
   // Mostrar una sola cadena ordenada: nombre, sus dos apellidos y después los apellidos conocidos de sus antepasados.
   // No repetir los dos apellidos propios cuando vuelven a aparecer en la primera generación de ascendientes.
-  const entries=[];
-  own.forEach(x=>entries.push(x));
+  // Recorrer los antepasados en orden genealógico, sin volver a mostrar
+  // apellidos ya encontrados en generaciones anteriores.
+  const entries=[],seen=new Set();
+  const key=v=>String(v).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('es').replace(/\s+/g,' ').trim();
+  const append=name=>{if(!name)return;const k=key(name);if(!seen.has(k)){seen.add(k);entries.push(name)}};
+  own.forEach(append);
+  // La primera generación representa los apellidos propios y se omite.
+  // Cada generación posterior contiene los primeros apellidos de sus antepasados.
+  // No generar casillas vacías por ramas que terminan: solo una marca por
+  // tramo desconocido entre apellidos conocidos de la misma generación.
   for(const gen of generations){
-    if(gen.depth===1)continue;
+    if(gen.depth===1||entries.length>=30)continue;
     const names=gen.names;
-    const first=names.findIndex(Boolean),last=names.findLastIndex(Boolean);
+    const novel=names.map(name=>name&&!seen.has(key(name))?name:null);
+    const first=novel.findIndex(Boolean),last=novel.findLastIndex(Boolean);
     if(first<0)continue;
-    for(let i=first;i<=last;i++){
-      const name=names[i];
-      if(name)entries.push(name);
-      else entries.push('XXXXX');
+    let gap=false;
+    for(let i=first;i<=last&&entries.length<30;i++){
+      if(novel[i]){if(gap){entries.push('XXXXX');gap=false}append(novel[i])}
+      else if(!names[i])gap=true;
     }
   }
   const items=entries.map((name,i)=>'<span class="surname-item">'+(i+1)+'. '+escapeText(name)+'</span>').join('');
   document.getElementById('surnameResult').innerHTML='<p><strong>'+escapeText(given)+'</strong></p>'+ 
     '<div class="surname-items surname-linear">'+items+'</div>'+ 
-    '<p class="surname-note">Orden: primero tus apellidos y después los apellidos registrados de tus antepasados, por generaciones y siguiendo las ramas paterna y materna. XXXXX señala un hueco entre datos conocidos; no es un apellido real. Los apellidos compuestos pueden requerir revisión.</p>';
+    '<p class="surname-note">Apellidos distintos identificados en orden de ascendencia. XXXXX indica un tramo sin datos entre apellidos conocidos. La interpretación de apellidos compuestos requiere revisión.</p>';
   document.getElementById('surnameOverlay').classList.add('visible');
 }
 document.getElementById('showSurnames').onclick=()=>{if(selected.length===1)showSurnames(selected[0])};
