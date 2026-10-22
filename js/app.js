@@ -1006,7 +1006,7 @@ function openPerson(id){
     ? `<img src="${esc(principalPhoto)}" alt="${esc(person.nombre)}"${photoPositionStyle(person)}>`
     : `<div class="profile-monogram">${esc(initials(person.nombre))}</div>`;
 
-  const albumPreview = (id === "P0007" || id === "P0015") && !CESAR_VIEW;
+  const albumPreview = true; // Diseño editorial para todas las fichas, incluida la vista César.
   $("personDrawer").classList.toggle("album-preview", albumPreview);
   if(albumPreview){
     $("drawerContent").innerHTML = `
