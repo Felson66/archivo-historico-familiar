@@ -174,6 +174,16 @@ function card(person,mode="standard"){
     : `<div class="card-monogram">${esc(initials(person.nombre))}</div>`;
 
   const compact = mode === "compact";
+  if(compact){
+    return `<button class="card card-compact archive-portrait ${hasPhoto ? "has-photo" : "no-photo"}" data-person="${esc(person.id)}" aria-label="Abrir ficha de ${esc(person.nombre)}">
+      <div class="card-media">${thumb}<span class="portrait-open">Abrir ficha →</span></div>
+      <div class="card-body">
+        <h4>${esc(person.nombre)}</h4>
+        <p>${esc(personLifeSummary(person))}</p>
+        <span class="tag">${esc(stateLabel(person.estado))}</span>
+      </div>
+    </button>`;
+  }
   return `<button class="card ${hasPhoto ? "has-photo" : ""} ${compact ? "card-compact" : ""}" data-person="${esc(person.id)}">
     <div class="card-media">${thumb}</div>
     <div class="card-body">
