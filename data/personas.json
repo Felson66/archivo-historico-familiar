@@ -11867,7 +11867,20 @@
       "P00095"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000308",
+        "src": "assets/fotos/P00094/san-cebrian-de-castro.jpg",
+        "titulo": "San Cebrian de Castro",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00094"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000070",
@@ -11885,7 +11898,9 @@
     "fecha_creacion": "2026-08-17T12:44:37.045Z",
     "ultima_modificacion": "2026-08-17T12:44:37.045Z",
     "padre": "P00122",
-    "madre": "P00123"
+    "madre": "P00123",
+    "fotografia_principal": "assets/fotos/P00094/san-cebrian-de-castro.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00095",
@@ -13172,12 +13187,27 @@
     "visible": true,
     "conyuges": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000309",
+        "src": "assets/fotos/P00139/san-cebrian-de-castro.jpg",
+        "titulo": "San Cebrian de Castro",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00139"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-09-08T14:50:19.203Z",
     "ultima_modificacion": "2026-09-08T14:50:19.203Z",
     "padre": "P00122",
-    "madre": "P00123"
+    "madre": "P00123",
+    "fotografia_principal": "assets/fotos/P00139/san-cebrian-de-castro.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00140",
