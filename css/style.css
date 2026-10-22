@@ -1845,47 +1845,41 @@ body.document-viewer-open{overflow:hidden}
   #tree .tree-option{grid-column:auto}
 }
 
-/* Prototipo de álbum familiar — únicamente ficha P0007, vista normal. */
-.person-drawer.eduardo-album{width:min(1040px,100%);background:#ede8dd;padding:58px 22px 35px}
-.eduardo-album #drawerContent{max-width:980px;margin:auto}
-.eduardo-album .album-page{background:#fffcf5;box-shadow:0 24px 70px rgba(32,40,32,.16);border:1px solid #d9d0bd}
-.eduardo-album .album-cover{display:grid;grid-template-columns:46% 54%;min-height:450px;background:#203e35;color:#f9f3e6}
-.eduardo-album .album-cover-image{overflow:hidden;background:#a8aa9c;min-height:450px;display:grid;place-items:center}
-.eduardo-album .album-cover-image img{width:100%;height:100%;object-fit:cover;display:block}
-.eduardo-album .album-cover-image .profile-monogram{color:white}
-.eduardo-album .album-cover-copy{padding:clamp(28px,5vw,62px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
-.eduardo-album .album-overline{font-size:10px;letter-spacing:.17em;font-weight:800;color:#d7c59b}
-.eduardo-album .album-overline span{padding:0 8px}
-.eduardo-album .album-ornament{font:30px Georgia,serif;color:#c5aa6d;margin:30px 0 8px}
-.eduardo-album .album-kicker{font:italic 19px Georgia,serif;color:#d6c8a6;margin:0 0 12px}
-.eduardo-album .album-cover h2{font:400 clamp(36px,5vw,62px)/1.08 Georgia,serif;letter-spacing:-.025em;margin:0}
-.eduardo-album .album-rule{width:65px;height:2px;background:#bea66f;margin:25px 0}
-.eduardo-album .album-life{font-size:14px;line-height:1.8;color:#e0e3d9;margin:0 0 24px}
-.eduardo-album .profile-tree-button{background:transparent;color:#fff9e8;border:1px solid #b3ab91;border-radius:3px;padding:12px 17px;font-size:13px}
-.eduardo-album .album-body{padding:clamp(20px,4vw,52px)}
-.eduardo-album .album-chapter-label{display:flex;align-items:center;gap:13px;font-size:10px;letter-spacing:.22em;font-weight:800;color:#866f45;margin:30px 0 18px}
-.eduardo-album .album-chapter-label span{font:italic 26px Georgia,serif;color:#ac9461;letter-spacing:0}
-.eduardo-album .album-chapter-label:after{content:"";height:1px;background:#d7cdb9;flex:1}
-.eduardo-album .album-story,.eduardo-album .album-family{display:grid;grid-template-columns:32% minmax(0,1fr);gap:34px;margin-bottom:46px}
-.eduardo-album .album-section-intro h3{font:400 32px/1.15 Georgia,serif;margin:0 0 13px;color:#193e35}
-.eduardo-album .album-section-intro p{font:italic 15px/1.65 Georgia,serif;color:#857b68;margin:0}
-.eduardo-album .album-story-content .fact{padding:16px 0;border-color:#e4ddcf;font-size:15px;line-height:1.8}
-.eduardo-album .album-story-content .badge{border-radius:2px;background:#e8eee7;color:#285b4b;font-size:10px}
-.eduardo-album .album-family-content .relation-button{background:#fff;border-radius:3px;border:1px solid #ddd8ca;padding:15px 17px}
-.eduardo-album .album-family-content .relation-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-.eduardo-album .album-family-content h4{font-size:11px;letter-spacing:.14em}
-.eduardo-album .album-archive,.eduardo-album .album-extras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-bottom:44px}
-.eduardo-album .album-archive-panel{min-width:0;background:#f8f5ed;border:1px solid #e5dfd3;padding:23px}
-.eduardo-album .album-archive-panel h3{font:400 26px Georgia,serif;margin:0 0 20px;color:#193e35}
-.eduardo-album .album-archive-panel .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.eduardo-album .album-footer{text-align:center;font-size:10px;letter-spacing:.25em;color:#9a8c73;padding:24px 0 5px;border-top:1px solid #ddd4c3}
+/* Prototipo editorial real: sólo ficha de P0007, fuera de vista César */
+.person-drawer.album-preview{width:min(1020px,100%);background:#e9e4d8;padding:55px 20px 30px}
+.album-preview #drawerContent{max-width:970px;margin:auto}
+.raices-album{background:#fffcf5;border:1px solid #d9ceba;box-shadow:0 20px 60px #142d2630}
+.raices-album-cover{display:grid;grid-template-columns:45% 55%;min-height:430px;background:#183c35;color:#fff9e9}
+.raices-album-portrait{min-height:430px;overflow:hidden;background:#acb6ab;display:grid;place-items:center}
+.raices-album-portrait img{width:100%;height:100%;object-fit:cover;max-height:none}
+.raices-album-cover-copy{padding:clamp(26px,5vw,62px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.raices-album-edition{font-size:10px;letter-spacing:.17em;color:#d9cba6;font-weight:800}
+.raices-album-flourish{font:34px Georgia,serif;color:#d2b779;margin:25px 0}
+.raices-album-cover-copy h2{font:400 clamp(36px,4.5vw,58px)/1.06 Georgia,serif;letter-spacing:-.025em;margin:17px 0}
+.raices-album-cover-copy p{font-size:14px;line-height:1.8;color:#e1e8e1}
+.raices-album-cover-copy .profile-tree-button{margin-top:20px}
+.raices-album-content{padding:clamp(22px,5vw,55px)}
+.raices-album-chapter{border-bottom:1px solid #d6c8ad;padding:0 0 14px;margin:25px 0 27px}
+.raices-album-chapter span{font-size:10px;font-weight:800;letter-spacing:.2em;color:#9b7b40}
+.raices-album-chapter h3{font:400 clamp(28px,3vw,38px)/1.18 Georgia,serif;margin:10px 0 0;color:#173c32}
+.raices-album-story{display:grid;grid-template-columns:32% 1fr;gap:30px;margin-bottom:54px}
+.raices-album-side-note{font:italic 20px Georgia,serif;color:#254e40}
+.raices-album-side-note p{font:14px/1.7 Georgia,serif;color:#847b6a}
+.raices-album-facts .fact{font-size:16px;line-height:1.85;border-top-color:#e3d9c9;padding:18px 0}
+.raices-album-facts .badge{border-radius:3px}
+.raices-album-relatives{margin-bottom:54px}
+.raices-album-relatives .family-block{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.raices-album-relatives .family-group{min-width:0}
+.raices-album-relatives .relation-button{background:#fff;border-radius:4px;border-color:#dcd5c6;padding:15px}
+.raices-album-archive{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px;margin-bottom:50px}
+.raices-album-archive>div{min-width:0;background:#f8f4e9;border:1px solid #e5dac5;padding:22px}
+.raices-album-archive h4{font:400 25px Georgia,serif;color:#173c32;margin:0 0 18px}
+.raices-album-archive .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.raices-album-footer{text-align:center;border-top:1px solid #d9cdb9;padding-top:25px;color:#9b8b6b;letter-spacing:.22em;font-size:10px}
 @media(max-width:700px){
-.person-drawer.eduardo-album{padding:45px 10px 20px}
-.eduardo-album .album-cover{grid-template-columns:1fr}
-.eduardo-album .album-cover-image{min-height:230px;max-height:300px}
-.eduardo-album .album-cover-copy{padding:30px 24px 36px}
-.eduardo-album .album-ornament{margin:16px 0 8px}
-.eduardo-album .album-story,.eduardo-album .album-family{grid-template-columns:1fr;gap:18px}
-.eduardo-album .album-archive,.eduardo-album .album-extras{grid-template-columns:1fr}
-.eduardo-album .album-family-content .relation-list{grid-template-columns:1fr}
+.person-drawer.album-preview{padding:48px 10px 20px}
+.raices-album-cover{grid-template-columns:1fr}
+.raices-album-portrait{min-height:240px;max-height:340px}
+.raices-album-cover-copy{padding:28px 25px 35px}
+.raices-album-story,.raices-album-archive,.raices-album-relatives .family-block{grid-template-columns:1fr}
 }
