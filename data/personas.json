@@ -6876,7 +6876,7 @@
     "datos_resumen": "",
     "lugar_descanso": null,
     "hijos": [],
-    "estado": "memoria familiar",
+    "estado": "documentado",
     "conyuges": [],
     "hechos": [
       {
@@ -13198,12 +13198,27 @@
       "P00141"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000304",
+        "src": "assets/fotos/P00140/fontanillas-de-castro.jpg",
+        "titulo": "Fontanillas de Castro",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00140"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-09-08T14:54:09.333Z",
     "ultima_modificacion": "2026-09-08T14:54:09.333Z",
     "padre": "P00165",
-    "madre": "P00166"
+    "madre": "P00166",
+    "fotografia_principal": "assets/fotos/P00140/fontanillas-de-castro.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00141",
@@ -13758,12 +13773,27 @@
       "P00112"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000305",
+        "src": "assets/fotos/P00156/canizo-zamora.png",
+        "titulo": "Cañizo Zamora",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00156"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-09-22T10:41:07.998Z",
     "ultima_modificacion": "2026-09-22T10:41:07.998Z",
     "padre": "",
-    "madre": ""
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00156/canizo-zamora.png",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00157",
@@ -14254,12 +14284,27 @@
       "P00166"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000301",
+        "src": "assets/fotos/P00165/perilla-de-castro.png",
+        "titulo": "Perilla de Castro",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00165"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-10-14T10:59:46.416Z",
     "ultima_modificacion": "2026-10-14T10:59:46.417Z",
     "padre": "",
-    "madre": ""
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00165/perilla-de-castro.png",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00166",
@@ -14282,10 +14327,25 @@
     ],
     "hijos": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000302",
+        "src": "assets/fotos/P00166/fontanillas-de-castro.jpg",
+        "titulo": "Fontanillas de Castro",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00166"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-10-14T11:00:21.936Z",
-    "ultima_modificacion": "2026-10-14T11:00:21.936Z"
+    "ultima_modificacion": "2026-10-14T11:00:21.936Z",
+    "fotografia_principal": "assets/fotos/P00166/fontanillas-de-castro.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00167",
@@ -14306,12 +14366,27 @@
       "P00168"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000300",
+        "src": "assets/fotos/P00167/sejas-de-aliste.png",
+        "titulo": "Sejas de Aliste",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00167"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-10-14T11:01:29.781Z",
     "ultima_modificacion": "2026-10-14T11:01:29.781Z",
     "padre": "",
-    "madre": ""
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00167/sejas-de-aliste.png",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00168",
@@ -14334,10 +14409,25 @@
     ],
     "hijos": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000303",
+        "src": "assets/fotos/P00168/sejas-de-aliste.png",
+        "titulo": "Sejas de Aliste",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00168"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-10-14T11:02:05.955Z",
-    "ultima_modificacion": "2026-10-14T11:02:05.955Z"
+    "ultima_modificacion": "2026-10-14T11:02:05.955Z",
+    "fotografia_principal": "assets/fotos/P00168/sejas-de-aliste.png",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00169",
