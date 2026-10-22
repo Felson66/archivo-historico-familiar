@@ -13812,12 +13812,27 @@
     "visible": true,
     "conyuges": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000307",
+        "src": "assets/fotos/P00157/valderas-leon.png",
+        "titulo": "Valderas Leon",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00157"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-09-22T10:44:34.955Z",
     "ultima_modificacion": "2026-09-22T10:44:34.955Z",
     "padre": "P00112",
-    "madre": "P00156"
+    "madre": "P00156",
+    "fotografia_principal": "assets/fotos/P00157/valderas-leon.png",
+    "fotoPosicion": "50% 36%"
   },
   {
     "id": "P00158",
@@ -14470,12 +14485,27 @@
     "visible": true,
     "conyuges": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000306",
+        "src": "assets/fotos/P00170/bahia-blanca-argentina.png",
+        "titulo": "Bahia Blanca Argentina",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00170"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-10-15T10:25:25.575Z",
     "ultima_modificacion": "2026-10-15T10:25:25.576Z",
     "padre": "P00157",
-    "madre": ""
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00170/bahia-blanca-argentina.png",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00171",
