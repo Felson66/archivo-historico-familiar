@@ -1844,3 +1844,102 @@ body.document-viewer-open{overflow:hidden}
   #tree .tree-toolbar{grid-template-columns:56px minmax(105px,1fr) 56px auto}
   #tree .tree-option{grid-column:auto}
 }
+
+/* Raíces · Prototipo editorial exclusivo de Eduardo (P0007).
+   Sin cambios de datos, eventos, árbol ni versión de César. */
+.person-drawer.eduardo-design-preview {
+  background:#f4f0e7;
+}
+.eduardo-design-preview #drawerContent {
+  max-width:1040px;
+  margin:0 auto;
+}
+.eduardo-design-preview .profile-hero {
+  display:grid;
+  grid-template-columns:minmax(0, 43%) minmax(0, 57%);
+  background:#fffdf8;
+  color:#173b32;
+  border:1px solid #ded6c5;
+  border-radius:18px;
+  box-shadow:0 12px 32px rgba(24,60,53,.10);
+  min-height:300px;
+  margin-bottom:22px;
+}
+.eduardo-design-preview .profile-photo {
+  min-height:320px;
+  background:#e3e2d8;
+  overflow:hidden;
+}
+.eduardo-design-preview .profile-photo img {
+  width:100%;
+  height:100%;
+  max-height:none;
+  min-height:320px;
+  object-fit:cover;
+}
+.eduardo-design-preview .profile-intro {
+  padding:clamp(24px,4vw,44px);
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+}
+.eduardo-design-preview .profile-intro::before {
+  content:"RAÍCES  /  ARCHIVO FAMILIAR";
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.19em;
+  color:#a17f42;
+  margin-bottom:20px;
+}
+.eduardo-design-preview .profile-intro h2 {
+  font:500 clamp(32px,4vw,51px)/1.08 Georgia,serif;
+  letter-spacing:-.025em;
+  margin:15px 0 17px;
+}
+.eduardo-design-preview .profile-summary {
+  color:#52665d;
+  opacity:1;
+  line-height:1.7;
+  font-size:14px;
+}
+.eduardo-design-preview .profile-hero .badge {
+  background:#e8efe9;
+  color:#24584d;
+  border:1px solid #d5e2d8;
+}
+.eduardo-design-preview .profile-tree-button {
+  margin-top:22px;
+}
+.eduardo-design-preview .profile-grid {
+  grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);
+  gap:20px;
+}
+.eduardo-design-preview .profile-section {
+  border:1px solid #e4dfd3;
+  border-radius:15px;
+  box-shadow:0 4px 14px rgba(24,60,53,.045);
+  padding:clamp(18px,3vw,27px);
+  margin-bottom:20px;
+}
+.eduardo-design-preview .profile-section h3 {
+  font:500 25px/1.2 Georgia,serif;
+  color:#183c35;
+  padding-bottom:13px;
+  border-bottom:1px solid #e6e0d4;
+  margin-bottom:18px;
+}
+.eduardo-design-preview .fact {line-height:1.75;}
+.eduardo-design-preview .relation-button {
+  background:#fcfaf5;
+  border-color:#e2e3da;
+  border-radius:9px;
+}
+.eduardo-design-preview .timeline-item {line-height:1.6;}
+@media(max-width:700px) {
+  .eduardo-design-preview .profile-hero {grid-template-columns:1fr;}
+  .eduardo-design-preview .profile-photo,
+  .eduardo-design-preview .profile-photo img {min-height:240px;max-height:340px;}
+  .eduardo-design-preview .profile-intro {padding:25px 23px 28px;}
+  .eduardo-design-preview .profile-grid {grid-template-columns:1fr;}
+}

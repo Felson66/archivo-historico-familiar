@@ -1000,6 +1000,8 @@ function openPerson(id){
   $("personDrawer").classList.remove("tree-quick-mode");
   const person = byId[id];
   if(!person) return;
+  // Prototipo visual limitado a la ficha de Eduardo, sin afectar a César.
+  $("personDrawer").classList.toggle("eduardo-design-preview", id === "P0007" && !CESAR_VIEW);
 
   const principalPhoto = validPrincipalPhoto(person);
   const photo = principalPhoto
