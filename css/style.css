@@ -1887,36 +1887,3 @@ body.document-viewer-open{overflow:hidden}
 /* Capítulo 01: biografía a todo el ancho, sin subtítulo duplicado */
 .raices-album-story{display:block}
 .raices-album-facts{max-width:760px}
-
-/* Raíces · Catálogo de retratos. Sólo resultados del buscador de personas. */
-#people .section-title{margin:32px 0 16px;align-items:baseline}
-#people .section-title h3{font:400 clamp(29px,3vw,39px)/1.2 Georgia,serif;letter-spacing:-.02em}
-#people .section-title span{font-size:13px;color:#64736b}
-#people .toolbar{background:#fffcf6;border:1px solid #e1d8c8;padding:10px;border-radius:12px;box-shadow:0 5px 18px #183c3508;margin-bottom:24px}
-#people .toolbar input{background:transparent;border:0;box-shadow:none;border-radius:5px;padding:13px 15px;font-size:15px}
-#people .toolbar input:focus{outline:2px solid #a1b6a9;outline-offset:-2px}
-#people .toolbar .soft{background:#e8eee8;border-color:#d8e0d8;font-size:13px;font-weight:700}
-#peopleGrid.cards{grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:20px}
-#peopleGrid .archive-portrait{position:relative;border:1px solid #dfd8ca;border-radius:8px;background:#fffcf5;overflow:hidden;box-shadow:0 5px 18px #183c350c;transition:transform .18s ease,box-shadow .18s ease;text-align:left}
-#peopleGrid .archive-portrait:hover{transform:translateY(-4px);box-shadow:0 16px 34px #183c3523}
-#peopleGrid .archive-portrait:focus-visible{outline:3px solid #2d6558;outline-offset:3px}
-#peopleGrid .archive-portrait .card-media{height:auto;aspect-ratio:4/4.7;position:relative;background:linear-gradient(145deg,#d9e2d8,#eee8da);overflow:hidden}
-#peopleGrid .archive-portrait .card-photo{width:100%;height:100%;object-fit:cover;transition:transform .28s ease}
-#peopleGrid .archive-portrait:hover .card-photo{transform:scale(1.035)}
-#peopleGrid .archive-portrait .card-monogram{width:100px;height:100px;background:#285448;border:1px solid #c5d4c6;font:400 35px Georgia,serif}
-#peopleGrid .archive-portrait .card-body{padding:19px 18px 18px;min-height:150px;display:flex;flex-direction:column;align-items:flex-start}
-#peopleGrid .archive-portrait h4{font:400 22px/1.18 Georgia,serif;color:#193c32;margin:0 0 10px;overflow-wrap:anywhere}
-#peopleGrid .archive-portrait p{font-size:12px;line-height:1.55;color:#66716a;margin:0 0 15px}
-#peopleGrid .archive-portrait .tag{font-size:9px;letter-spacing:.09em;color:#4c7162;background:#e9efe8;padding:5px 8px;border-radius:3px;margin-top:auto}
-#peopleGrid .portrait-open{position:absolute;bottom:0;left:0;right:0;padding:15px 14px;background:linear-gradient(transparent,#14372fdd);color:white;font-size:12px;font-weight:700;text-align:right;opacity:0;transition:opacity .18s ease}
-#peopleGrid .archive-portrait:hover .portrait-open,#peopleGrid .archive-portrait:focus-visible .portrait-open{opacity:1}
-@media(max-width:620px){
-#peopleGrid.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-#peopleGrid .archive-portrait .card-body{padding:13px;min-height:145px}
-#peopleGrid .archive-portrait h4{font-size:17px}
-#peopleGrid .archive-portrait .card-media{aspect-ratio:4/4.5}
-#people .toolbar{padding:6px}
-}
-@media(max-width:360px){#peopleGrid.cards{grid-template-columns:1fr}}
-@media(hover:none){#peopleGrid .portrait-open{display:none}}
-@media(prefers-reduced-motion:reduce){#peopleGrid .archive-portrait,#peopleGrid .archive-portrait .card-photo,#peopleGrid .portrait-open{transition:none}}
