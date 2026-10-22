@@ -1845,101 +1845,47 @@ body.document-viewer-open{overflow:hidden}
   #tree .tree-option{grid-column:auto}
 }
 
-/* Raíces · Prototipo editorial exclusivo de Eduardo (P0007).
-   Sin cambios de datos, eventos, árbol ni versión de César. */
-.person-drawer.eduardo-design-preview {
-  background:#f4f0e7;
-}
-.eduardo-design-preview #drawerContent {
-  max-width:1040px;
-  margin:0 auto;
-}
-.eduardo-design-preview .profile-hero {
-  display:grid;
-  grid-template-columns:minmax(0, 43%) minmax(0, 57%);
-  background:#fffdf8;
-  color:#173b32;
-  border:1px solid #ded6c5;
-  border-radius:18px;
-  box-shadow:0 12px 32px rgba(24,60,53,.10);
-  min-height:300px;
-  margin-bottom:22px;
-}
-.eduardo-design-preview .profile-photo {
-  min-height:320px;
-  background:#e3e2d8;
-  overflow:hidden;
-}
-.eduardo-design-preview .profile-photo img {
-  width:100%;
-  height:100%;
-  max-height:none;
-  min-height:320px;
-  object-fit:cover;
-}
-.eduardo-design-preview .profile-intro {
-  padding:clamp(24px,4vw,44px);
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  justify-content:center;
-}
-.eduardo-design-preview .profile-intro::before {
-  content:"RAÍCES  /  ARCHIVO FAMILIAR";
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.19em;
-  color:#a17f42;
-  margin-bottom:20px;
-}
-.eduardo-design-preview .profile-intro h2 {
-  font:500 clamp(32px,4vw,51px)/1.08 Georgia,serif;
-  letter-spacing:-.025em;
-  margin:15px 0 17px;
-}
-.eduardo-design-preview .profile-summary {
-  color:#52665d;
-  opacity:1;
-  line-height:1.7;
-  font-size:14px;
-}
-.eduardo-design-preview .profile-hero .badge {
-  background:#e8efe9;
-  color:#24584d;
-  border:1px solid #d5e2d8;
-}
-.eduardo-design-preview .profile-tree-button {
-  margin-top:22px;
-}
-.eduardo-design-preview .profile-grid {
-  grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);
-  gap:20px;
-}
-.eduardo-design-preview .profile-section {
-  border:1px solid #e4dfd3;
-  border-radius:15px;
-  box-shadow:0 4px 14px rgba(24,60,53,.045);
-  padding:clamp(18px,3vw,27px);
-  margin-bottom:20px;
-}
-.eduardo-design-preview .profile-section h3 {
-  font:500 25px/1.2 Georgia,serif;
-  color:#183c35;
-  padding-bottom:13px;
-  border-bottom:1px solid #e6e0d4;
-  margin-bottom:18px;
-}
-.eduardo-design-preview .fact {line-height:1.75;}
-.eduardo-design-preview .relation-button {
-  background:#fcfaf5;
-  border-color:#e2e3da;
-  border-radius:9px;
-}
-.eduardo-design-preview .timeline-item {line-height:1.6;}
-@media(max-width:700px) {
-  .eduardo-design-preview .profile-hero {grid-template-columns:1fr;}
-  .eduardo-design-preview .profile-photo,
-  .eduardo-design-preview .profile-photo img {min-height:240px;max-height:340px;}
-  .eduardo-design-preview .profile-intro {padding:25px 23px 28px;}
-  .eduardo-design-preview .profile-grid {grid-template-columns:1fr;}
+/* Prototipo de álbum familiar — únicamente ficha P0007, vista normal. */
+.person-drawer.eduardo-album{width:min(1040px,100%);background:#ede8dd;padding:58px 22px 35px}
+.eduardo-album #drawerContent{max-width:980px;margin:auto}
+.eduardo-album .album-page{background:#fffcf5;box-shadow:0 24px 70px rgba(32,40,32,.16);border:1px solid #d9d0bd}
+.eduardo-album .album-cover{display:grid;grid-template-columns:46% 54%;min-height:450px;background:#203e35;color:#f9f3e6}
+.eduardo-album .album-cover-image{overflow:hidden;background:#a8aa9c;min-height:450px;display:grid;place-items:center}
+.eduardo-album .album-cover-image img{width:100%;height:100%;object-fit:cover;display:block}
+.eduardo-album .album-cover-image .profile-monogram{color:white}
+.eduardo-album .album-cover-copy{padding:clamp(28px,5vw,62px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.eduardo-album .album-overline{font-size:10px;letter-spacing:.17em;font-weight:800;color:#d7c59b}
+.eduardo-album .album-overline span{padding:0 8px}
+.eduardo-album .album-ornament{font:30px Georgia,serif;color:#c5aa6d;margin:30px 0 8px}
+.eduardo-album .album-kicker{font:italic 19px Georgia,serif;color:#d6c8a6;margin:0 0 12px}
+.eduardo-album .album-cover h2{font:400 clamp(36px,5vw,62px)/1.08 Georgia,serif;letter-spacing:-.025em;margin:0}
+.eduardo-album .album-rule{width:65px;height:2px;background:#bea66f;margin:25px 0}
+.eduardo-album .album-life{font-size:14px;line-height:1.8;color:#e0e3d9;margin:0 0 24px}
+.eduardo-album .profile-tree-button{background:transparent;color:#fff9e8;border:1px solid #b3ab91;border-radius:3px;padding:12px 17px;font-size:13px}
+.eduardo-album .album-body{padding:clamp(20px,4vw,52px)}
+.eduardo-album .album-chapter-label{display:flex;align-items:center;gap:13px;font-size:10px;letter-spacing:.22em;font-weight:800;color:#866f45;margin:30px 0 18px}
+.eduardo-album .album-chapter-label span{font:italic 26px Georgia,serif;color:#ac9461;letter-spacing:0}
+.eduardo-album .album-chapter-label:after{content:"";height:1px;background:#d7cdb9;flex:1}
+.eduardo-album .album-story,.eduardo-album .album-family{display:grid;grid-template-columns:32% minmax(0,1fr);gap:34px;margin-bottom:46px}
+.eduardo-album .album-section-intro h3{font:400 32px/1.15 Georgia,serif;margin:0 0 13px;color:#193e35}
+.eduardo-album .album-section-intro p{font:italic 15px/1.65 Georgia,serif;color:#857b68;margin:0}
+.eduardo-album .album-story-content .fact{padding:16px 0;border-color:#e4ddcf;font-size:15px;line-height:1.8}
+.eduardo-album .album-story-content .badge{border-radius:2px;background:#e8eee7;color:#285b4b;font-size:10px}
+.eduardo-album .album-family-content .relation-button{background:#fff;border-radius:3px;border:1px solid #ddd8ca;padding:15px 17px}
+.eduardo-album .album-family-content .relation-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.eduardo-album .album-family-content h4{font-size:11px;letter-spacing:.14em}
+.eduardo-album .album-archive,.eduardo-album .album-extras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-bottom:44px}
+.eduardo-album .album-archive-panel{min-width:0;background:#f8f5ed;border:1px solid #e5dfd3;padding:23px}
+.eduardo-album .album-archive-panel h3{font:400 26px Georgia,serif;margin:0 0 20px;color:#193e35}
+.eduardo-album .album-archive-panel .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.eduardo-album .album-footer{text-align:center;font-size:10px;letter-spacing:.25em;color:#9a8c73;padding:24px 0 5px;border-top:1px solid #ddd4c3}
+@media(max-width:700px){
+.person-drawer.eduardo-album{padding:45px 10px 20px}
+.eduardo-album .album-cover{grid-template-columns:1fr}
+.eduardo-album .album-cover-image{min-height:230px;max-height:300px}
+.eduardo-album .album-cover-copy{padding:30px 24px 36px}
+.eduardo-album .album-ornament{margin:16px 0 8px}
+.eduardo-album .album-story,.eduardo-album .album-family{grid-template-columns:1fr;gap:18px}
+.eduardo-album .album-archive,.eduardo-album .album-extras{grid-template-columns:1fr}
+.eduardo-album .album-family-content .relation-list{grid-template-columns:1fr}
 }

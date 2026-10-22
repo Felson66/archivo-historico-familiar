@@ -1000,15 +1000,61 @@ function openPerson(id){
   $("personDrawer").classList.remove("tree-quick-mode");
   const person = byId[id];
   if(!person) return;
-  // Prototipo visual limitado a la ficha de Eduardo, sin afectar a César.
-  $("personDrawer").classList.toggle("eduardo-design-preview", id === "P0007" && !CESAR_VIEW);
 
   const principalPhoto = validPrincipalPhoto(person);
   const photo = principalPhoto
     ? `<img src="${esc(principalPhoto)}" alt="${esc(person.nombre)}"${photoPositionStyle(person)}>`
     : `<div class="profile-monogram">${esc(initials(person.nombre))}</div>`;
 
-  $("drawerContent").innerHTML = `
+  const eduardoAlbum = id === "P0007" && !CESAR_VIEW;
+  $("personDrawer").classList.toggle("eduardo-album", eduardoAlbum);
+  $("drawerContent").innerHTML = eduardoAlbum ? `
+    <article class="album-page">
+      <header class="album-cover">
+        <div class="album-cover-image">${photo}</div>
+        <div class="album-cover-copy">
+          <div class="album-overline">RAÍCES <span>·</span> ARCHIVO HISTÓRICO FAMILIAR</div>
+          <div class="album-ornament" aria-hidden="true">✦</div>
+          <p class="album-kicker">Una historia familiar</p>
+          <h2>${esc(person.nombre)}</h2>
+          <div class="album-rule"></div>
+          <p class="album-life">${esc(personProfileSummary(person))}</p>
+          <button class="profile-tree-button" type="button" data-tree-center="${esc(person.id)}">Ver en el árbol familiar ↗</button>
+        </div>
+      </header>
+      <div class="album-body">
+        <div class="album-chapter-label"><span>01</span> SU HISTORIA</div>
+        <section class="album-story">
+          <div class="album-section-intro">
+            <h3>Biografía y evidencias</h3>
+            <p>Los acontecimientos y testimonios que forman parte de su historia.</p>
+          </div>
+          <div class="album-story-content">${renderFacts(person)}</div>
+        </section>
+        <div class="album-chapter-label"><span>02</span> VÍNCULOS</div>
+        <section class="album-family">
+          <div class="album-section-intro">
+            <h3>La familia</h3>
+            <p>Personas que forman parte de su historia familiar.</p>
+          </div>
+          <div class="album-family-content">${renderFamily(person)}</div>
+        </section>
+        <div class="album-chapter-label"><span>03</span> EL ARCHIVO</div>
+        <div class="album-archive">
+          <section class="album-archive-panel"><h3>Documentos</h3>${renderDocuments(person)}</section>
+          <section class="album-archive-panel"><h3>Fotografías</h3>${renderGallery(person)}</section>
+        </div>
+        <div class="album-chapter-label"><span>04</span> MÁS INFORMACIÓN</div>
+        <div class="album-extras">
+          <section class="album-archive-panel"><h3>Cronología</h3>${renderTimeline(person)}</section>
+          <section class="album-archive-panel"><h3>Lugares</h3>${(person.lugares || []).length
+            ? `<div class="relation-list">${person.lugares.map(lugar => `<div class="relation-button">${esc(lugar.nombre || lugar)}</div>`).join("")}</div>`
+            : `<div class="placeholder">Lugares pendientes de organizar.</div>`}</section>
+          <section class="album-archive-panel"><h3>Observaciones</h3>${renderPersonNotes(person)}</section>
+        </div>
+        <footer class="album-footer">RAÍCES · MEMORIA FAMILIAR</footer>
+      </div>
+    </article>` : `
     <section class="profile-hero">
       <div class="profile-photo">${photo}</div>
       <div class="profile-intro">
