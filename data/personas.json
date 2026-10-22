@@ -12677,7 +12677,20 @@
       "P00123"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000310",
+        "src": "assets/fotos/P00122/san-cebrian-de-castro.jpg",
+        "titulo": "San Cebrian de Castro",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00122"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000093",
@@ -12695,7 +12708,9 @@
     "fecha_creacion": "2026-09-07T19:16:24.524Z",
     "ultima_modificacion": "2026-09-07T19:16:24.524Z",
     "padre": "P00140",
-    "madre": "P00141"
+    "madre": "P00141",
+    "fotografia_principal": "assets/fotos/P00122/san-cebrian-de-castro.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00123",
