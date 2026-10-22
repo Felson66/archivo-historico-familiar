@@ -1883,3 +1883,7 @@ body.document-viewer-open{overflow:hidden}
 .raices-album-cover-copy{padding:28px 25px 35px}
 .raices-album-story,.raices-album-archive,.raices-album-relatives .family-block{grid-template-columns:1fr}
 }
+
+/* Capítulo 01: biografía a todo el ancho, sin subtítulo duplicado */
+.raices-album-story{display:block}
+.raices-album-facts{max-width:760px}

@@ -1006,7 +1006,7 @@ function openPerson(id){
     ? `<img src="${esc(principalPhoto)}" alt="${esc(person.nombre)}"${photoPositionStyle(person)}>`
     : `<div class="profile-monogram">${esc(initials(person.nombre))}</div>`;
 
-  const albumPreview = id === "P0007" && !CESAR_VIEW;
+  const albumPreview = (id === "P0007" || id === "P0015") && !CESAR_VIEW;
   $("personDrawer").classList.toggle("album-preview", albumPreview);
   if(albumPreview){
     $("drawerContent").innerHTML = `
@@ -1014,8 +1014,6 @@ function openPerson(id){
         <header class="raices-album-cover">
           <div class="raices-album-portrait">${photo}</div>
           <div class="raices-album-cover-copy">
-            <span class="raices-album-edition">RAÍCES · ARCHIVO HISTÓRICO FAMILIAR</span>
-            <span class="raices-album-flourish">✦</span>
             <span class="badge">${esc(stateLabel(person.estado))}</span>
             <h2>${esc(person.nombre)}</h2>
             <p>${esc(personProfileSummary(person))}</p>
@@ -1023,12 +1021,12 @@ function openPerson(id){
           </div>
         </header>
         <div class="raices-album-content">
-          <div class="raices-album-chapter"><span>CAPÍTULO 01</span><h3>Una vida, una historia</h3></div>
+          <div class="raices-album-chapter"><span>CAPÍTULO 01</span><h3>Biografía y evidencias</h3></div>
           <section class="raices-album-story">
-            <div class="raices-album-side-note">Biografía y evidencias<p>Los recuerdos y acontecimientos conservados en el archivo.</p></div>
+            
             <div class="raices-album-facts">${renderFacts(person)}</div>
           </section>
-          <div class="raices-album-chapter"><span>CAPÍTULO 02</span><h3>Sus vínculos familiares</h3></div>
+          <div class="raices-album-chapter"><span>CAPÍTULO 02</span><h3>Vínculos familiares</h3></div>
           <section class="raices-album-relatives">${renderFamily(person)}</section>
           <div class="raices-album-chapter"><span>CAPÍTULO 03</span><h3>Fotografías y documentos</h3></div>
           <section class="raices-album-archive">
