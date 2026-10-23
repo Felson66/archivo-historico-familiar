@@ -15120,12 +15120,27 @@
         "texto": "Matrimonio31 de may. de 1796\ncon Maria Ygnacia SORARRAIN MUGICA"
       }
     ],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000316",
+        "src": "assets/fotos/P00187/itsasondo.jpg",
+        "titulo": "Itsasondo",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00187"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-10-19T12:43:39.608Z",
     "ultima_modificacion": "2026-10-19T12:43:39.608Z",
     "padre": "P00189",
-    "madre": "P00190"
+    "madre": "P00190",
+    "fotografia_principal": "assets/fotos/P00187/itsasondo.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00188",
@@ -15190,12 +15205,27 @@
         "texto": "Se hace referencia a su hidalguía y ascendencia en el siguiente apunte del ENSAYO DE UN PADRÓN HISTÓRICO DE GUIPUZCOA según el orden de sus familias pobladoras 1928:\n\nMUGICA (o MUXICA), Juan Bautista, Miguel y José Ignacio por sí y por sus hijos, naturales de Isasondo, E. con la H. de Ventura de Mugica y sus hermanos (ya citada), Isasondo, 1773.- Miguel José yJosé Ciriaco, hijos de José María de Mugica y María Josefa de Echaide, nietos primeros de Miguel y Manuela de Ibarguren, segundos de Juan Bautista y Magdalena de Machain, terceros de Miguel y María Bautista de Chinchurreta, cuartos de Francisco y Francisca de Ceberio y quintos de Felipe y María de Sarriegui por línea recta de varón y descendientes por la misma del solar de Mugica en Gudugarreta, E. con el E. anterior en el estirpe de Juan Bautista de Mugica, bisabuelo de los litigantes, Cestona, 1832 (Nota: en el documento habla de la casa de Astigarreta, en vez de Gudugarreta (ambas localidades son barrios de Beasain en la actualidad http://dokuklik.snae.org/badator_zoom.php?cdc=080&cdd=49003# )\n\nFigura asimismo en la hidalguía de su hermanastro Jose Ignacio de Mujica y Lazcano, Ceberio y Olasagasti y otros parientes, con cita de diversos entroncamientos (Itsasondo, 1773) https://dokuklik.euskadi.eus/badator/visor/305813 . En ella se dice que él y su mujer eran habitantes de la casería Lizardi de arriba."
       }
     ],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000315",
+        "src": "assets/fotos/P00189/itsasondo.jpg",
+        "titulo": "Itsasondo",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00189"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-10-19T13:01:07.782Z",
     "ultima_modificacion": "2026-10-19T13:01:07.782Z",
     "padre": "P00191",
-    "madre": "P00193"
+    "madre": "P00193",
+    "fotografia_principal": "assets/fotos/P00189/itsasondo.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00190",
