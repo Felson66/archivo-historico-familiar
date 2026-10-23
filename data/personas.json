@@ -15367,10 +15367,25 @@
     ],
     "hijos": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000319",
+        "src": "assets/fotos/P00193/itsasondo.jpg",
+        "titulo": "Itsasondo",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00193"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-10-21T08:39:40.635Z",
-    "ultima_modificacion": "2026-10-21T08:39:40.635Z"
+    "ultima_modificacion": "2026-10-21T08:39:40.635Z",
+    "fotografia_principal": "assets/fotos/P00193/itsasondo.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00194",
