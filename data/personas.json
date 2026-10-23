@@ -9937,7 +9937,20 @@
       "P00054"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000317",
+        "src": "assets/fotos/P00055/alegia.jpg",
+        "titulo": "Alegia",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00055"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000031",
@@ -9974,7 +9987,9 @@
     "fecha_creacion": "2026-08-05T10:59:46.767Z",
     "ultima_modificacion": "2026-08-05T10:59:46.767Z",
     "padre": "P00177",
-    "madre": "P00178"
+    "madre": "P00178",
+    "fotografia_principal": "assets/fotos/P00055/alegia.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00056",
@@ -15170,12 +15185,27 @@
         "texto": "Matrimonio7 de oct. de 1800\ncon Francisco Javier MUXICA ZUFIRIA\nAlkiza, Gipuzkoa, Euskadi"
       }
     ],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000318",
+        "src": "assets/fotos/P00188/alkiza.jpg",
+        "titulo": "Alkiza",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00188"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-10-19T12:46:23.059Z",
     "ultima_modificacion": "2026-10-19T12:46:23.059Z",
     "padre": "",
-    "madre": ""
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00188/alkiza.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00189",
