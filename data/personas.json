@@ -13284,12 +13284,27 @@
       "P00140"
     ],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000313",
+        "src": "assets/fotos/P00141/san-cebrian-de-castro.jpg",
+        "titulo": "San Cebrian de Castro",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00141"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-09-08T14:54:57.665Z",
     "ultima_modificacion": "2026-09-08T14:54:57.665Z",
     "padre": "P00167",
-    "madre": "P00168"
+    "madre": "P00168",
+    "fotografia_principal": "assets/fotos/P00141/san-cebrian-de-castro.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00142",
@@ -13896,7 +13911,20 @@
     "visible": true,
     "conyuges": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000312",
+        "src": "assets/fotos/P00158/bahia-blanca-argentina.png",
+        "titulo": "Bahia Blanca Argentina",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00158"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000091",
@@ -13914,7 +13942,9 @@
     "fecha_creacion": "2026-09-22T10:46:25.344Z",
     "ultima_modificacion": "2026-09-22T10:46:25.344Z",
     "padre": "P00112",
-    "madre": "P00156"
+    "madre": "P00156",
+    "fotografia_principal": "assets/fotos/P00158/bahia-blanca-argentina.png",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00159",
@@ -14749,7 +14779,20 @@
         "texto": "Matrimonio 2 de mar. de 1806\ncon Jossefa Ygnacia Elizondo Bengoechea\nAlegría de Oria, Guipúzcoa, España"
       }
     ],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000311",
+        "src": "assets/fotos/P00177/amezketa.jpg",
+        "titulo": "Amezketa",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00177"
+        ]
+      }
+    ],
     "documentos": [
       {
         "id": "D000096",
@@ -14768,7 +14811,9 @@
       }
     ],
     "fecha_creacion": "2026-10-18T12:28:39.986Z",
-    "ultima_modificacion": "2026-10-18T12:28:39.986Z"
+    "ultima_modificacion": "2026-10-18T12:28:39.986Z",
+    "fotografia_principal": "assets/fotos/P00177/amezketa.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00178",
