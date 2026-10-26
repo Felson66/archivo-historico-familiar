@@ -617,7 +617,7 @@
     "cronologia": [],
     "lugares": [],
     "notas": "",
-    "fecha_nacimiento": "",
+    "fecha_nacimiento": "1896",
     "lugar_nacimiento": "Algeciras",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
@@ -6992,16 +6992,11 @@
       "P0020",
       "P0021"
     ],
-    "estado": "memoria familiar",
+    "estado": "documentado",
     "conyuges": [
       "P0013"
     ],
-    "hechos": [
-      {
-        "tipo": "memoria_familiar",
-        "texto": "Se casó con Mercedes de la Dehesa Liz y posteriormente se separaron."
-      }
-    ],
+    "hechos": [],
     "nombre": "Federico Hoya Gómez",
     "id_legacy": "p19",
     "id": "P0019",
