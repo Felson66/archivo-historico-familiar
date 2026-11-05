@@ -15568,11 +15568,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00201"
     ],
-    "hijos": [],
     "hechos": [
       {
         "tipo": "documentado",
@@ -15582,7 +15580,9 @@
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-11-05T09:30:19.588Z",
-    "ultima_modificacion": "2026-11-05T09:30:19.589Z"
+    "ultima_modificacion": "2026-11-05T09:30:19.589Z",
+    "padre": "P00202",
+    "madre": "P00203"
   },
   {
     "id": "P00201",
@@ -15607,6 +15607,229 @@
     "documentos": [],
     "fecha_creacion": "2026-11-05T09:32:02.558Z",
     "ultima_modificacion": "2026-11-05T09:32:02.558Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00202",
+    "nombre": "Pasqual MUXICA GOICOECHEA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1566",
+    "lugar_nacimiento": "Beasain",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Defunción : MH:S2524 - 1782 Hidalguia Josef Muxica de Araoz - MH:R2",
+    "datos_resumen": "Defunción : MH:S2524 - 1782 Hidalguia Josef Muxica de Araoz - MH:R2",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00203"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 3 de dic. de 1586\ncon Marina ARREGUI\nBeasain- Astigarreta, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T11:23:18.953Z",
+    "ultima_modificacion": "2026-11-05T11:23:18.953Z"
+  },
+  {
+    "id": "P00203",
+    "nombre": "Marina ARREGUI",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1566",
+    "lugar_nacimiento": "Beasain-Astigarreta, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "10/03/1597",
+    "lugar_defuncion": "Beasain-Astigarreta, Gipuzkoa, Euskadi",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00202"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T11:25:10.635Z",
+    "ultima_modificacion": "2026-11-05T11:25:10.635Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00204",
+    "nombre": "Joanico MUXICA ARREGUI",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "20/02/1593",
+    "lugar_nacimiento": "Beasain-Astigarreta, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "29/10/1669",
+    "lugar_defuncion": "Beasain-Astigarreta, Gipuzkoa, Euskadi",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Bautizo : MH:S1360 - Acta de bautismo - Other\n\nDefunción : MH:S616 - Acta civil de defuncion - Other - Acta de defuncion - MH:R2",
+    "datos_resumen": "Bautizo : MH:S1360 - Acta de bautismo - Other\n\nDefunción : MH:S616 - Acta civil de defuncion - Other - Acta de defuncion - MH:R2",
+    "visible": true,
+    "conyuges": [
+      "P00205"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T11:28:32.775Z",
+    "ultima_modificacion": "2026-11-05T11:28:32.775Z",
+    "padre": "P00202",
+    "madre": "P00203"
+  },
+  {
+    "id": "P00205",
+    "nombre": "Maria CHINCHURRETA ERAUSCAIN",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "19/11/1593",
+    "lugar_nacimiento": "Beasain, Gipuzkoa, Euskadi, Euskadi",
+    "fecha_defuncion": "04/11/1669",
+    "lugar_defuncion": "Beasain, Gipuzkoa, Euskadi, Euskadi",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00204"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio entre 1613 y 1615\ncon Joanico MUXICA ARREGUI"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T11:31:21.093Z",
+    "ultima_modificacion": "2026-11-05T11:31:21.093Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00206",
+    "nombre": "Joanes MUXICA CHINCHURRETA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "22/06/1616",
+    "lugar_nacimiento": "Beasain-Astigarreta, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00207"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T11:34:35.465Z",
+    "ultima_modificacion": "2026-11-05T11:34:35.465Z",
+    "padre": "P00204",
+    "madre": "P00205"
+  },
+  {
+    "id": "P00207",
+    "nombre": "Ursula LASA YNSAUSTI",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "03/10/1625",
+    "lugar_nacimiento": "Beasain-Astigarreta, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00206"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T11:36:56.942Z",
+    "ultima_modificacion": "2026-11-05T11:36:56.942Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00208",
+    "nombre": "Francisco MUXICA LASA (LASSA)",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "10/03/1651",
+    "lugar_nacimiento": "Beasain-Astigarreta, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00209"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 28 de oct. de 1679\ncon Madalena ARREGUI URANGA\n\nBeasain-Astigarreta, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T11:38:32.174Z",
+    "ultima_modificacion": "2026-11-05T11:38:32.174Z",
+    "padre": "P00206",
+    "madre": "P00207"
+  },
+  {
+    "id": "P00209",
+    "nombre": "Madalena ARREGUI URANGA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "01/11/1658",
+    "lugar_nacimiento": "Goiaz-Bidegoian- Gipuzkoa- Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00208"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T11:40:18.427Z",
+    "ultima_modificacion": "2026-11-05T11:40:18.427Z",
     "padre": "",
     "madre": ""
   }
