@@ -15454,11 +15454,9 @@
     "notas": "Bautizo : MH:S2485 - 1752 Hidalguia Bentura Lorenzo Muxica - MH:R2",
     "datos_resumen": "Bautizo : MH:S2485 - 1752 Hidalguia Bentura Lorenzo Muxica - MH:R2",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00197"
     ],
-    "hijos": [],
     "hechos": [
       {
         "tipo": "documentado",
@@ -15468,7 +15466,9 @@
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-11-05T08:38:45.458Z",
-    "ultima_modificacion": "2026-11-05T08:38:45.458Z"
+    "ultima_modificacion": "2026-11-05T08:38:45.458Z",
+    "padre": "P00198",
+    "madre": "P00199"
   },
   {
     "id": "P00197",
@@ -15493,6 +15493,63 @@
     "documentos": [],
     "fecha_creacion": "2026-11-05T08:41:16.667Z",
     "ultima_modificacion": "2026-11-05T08:41:16.667Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00198",
+    "nombre": "Joannes MUXICA GASTAÑAGA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "15/06/1610",
+    "lugar_nacimiento": "Itsasondo",
+    "fecha_defuncion": "26/06/1685",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Bautizo : MH:S1360 - Acta de bautismo - Other\n\nDefunción : MH:S2411 - Acta religiosa de defuncion",
+    "datos_resumen": "Bautizo : MH:S1360 - Acta de bautismo - Other\n\nDefunción : MH:S2411 - Acta religiosa de defuncion",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00199"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio1 de jun. 1642\ncon Laurença PORTAL GOROSTORÇU\nOrdizia, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T08:59:21.830Z",
+    "ultima_modificacion": "2026-11-05T08:59:21.830Z"
+  },
+  {
+    "id": "P00199",
+    "nombre": "Laurença PORTAL GOROSTORÇU",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "19/02/1623",
+    "lugar_nacimiento": "Ordizia",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Bautizo : MH:S1360 - Acta de bautismo - Other",
+    "datos_resumen": "Bautizo : MH:S1360 - Acta de bautismo - Other",
+    "visible": true,
+    "conyuges": [
+      "P00198"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T09:01:15.216Z",
+    "ultima_modificacion": "2026-11-05T09:01:15.216Z",
     "padre": "",
     "madre": ""
   }
