@@ -15397,11 +15397,9 @@
     "notas": "Bautizo : MH:S2512 - 1773 Hidalguia de Joseph Ygnacio Muxica Lazcano - MH:R2",
     "datos_resumen": "Bautizo : MH:S2512 - 1773 Hidalguia de Joseph Ygnacio Muxica Lazcano - MH:R2",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00195"
     ],
-    "hijos": [],
     "hechos": [
       {
         "tipo": "documentado",
@@ -15411,7 +15409,9 @@
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-10-21T09:32:55.842Z",
-    "ultima_modificacion": "2026-10-21T09:32:55.842Z"
+    "ultima_modificacion": "2026-10-21T09:32:55.842Z",
+    "padre": "P00196",
+    "madre": "P00197"
   },
   {
     "id": "P00195",
@@ -15436,6 +15436,63 @@
     "documentos": [],
     "fecha_creacion": "2026-10-21T09:34:54.585Z",
     "ultima_modificacion": "2026-10-21T09:34:54.585Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00196",
+    "nombre": "Phelipe MUXICA PORTAL",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "21/03/1648",
+    "lugar_nacimiento": "Ordizia",
+    "fecha_defuncion": "1752",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Bautizo : MH:S2485 - 1752 Hidalguia Bentura Lorenzo Muxica - MH:R2",
+    "datos_resumen": "Bautizo : MH:S2485 - 1752 Hidalguia Bentura Lorenzo Muxica - MH:R2",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00197"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 8 de jun. de 1669\nMaria SARRIEGUI ARAMBURU\nBeasain, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T08:38:45.458Z",
+    "ultima_modificacion": "2026-11-05T08:38:45.458Z"
+  },
+  {
+    "id": "P00197",
+    "nombre": "Maria SARRIEGUI ARAMBURU",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "11/05/1641",
+    "lugar_nacimiento": "Beasain",
+    "fecha_defuncion": "06/05/1689",
+    "lugar_defuncion": "Ordizia",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00196"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T08:41:16.667Z",
+    "ultima_modificacion": "2026-11-05T08:41:16.667Z",
     "padre": "",
     "madre": ""
   }
