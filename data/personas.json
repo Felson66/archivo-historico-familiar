@@ -15832,5 +15832,67 @@
     "ultima_modificacion": "2026-11-05T11:40:18.427Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00210",
+    "nombre": "Juan MUXICA ARREGUI",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "13/01/1696",
+    "lugar_nacimiento": "Beasain-Astigarreta, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00211"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 23 de dic. de 1722\ncon Domenja AIZPURU LIZARALDE\nEzkio-Itsaso, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T11:46:11.256Z",
+    "ultima_modificacion": "2026-11-05T11:46:11.256Z",
+    "padre": "P00208",
+    "madre": "P00209"
+  },
+  {
+    "id": "P00211",
+    "nombre": "Domenja AIZPURU LIZARALDE",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00210"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 23 de dic. de 1722\ncon Juan MUXICA ARREGUI\nEzkio-Itsaso, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T11:53:19.714Z",
+    "ultima_modificacion": "2026-11-05T11:53:19.714Z",
+    "padre": "",
+    "madre": ""
   }
 ]
