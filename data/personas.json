@@ -15511,11 +15511,9 @@
     "notas": "Bautizo : MH:S1360 - Acta de bautismo - Other\n\nDefunción : MH:S2411 - Acta religiosa de defuncion",
     "datos_resumen": "Bautizo : MH:S1360 - Acta de bautismo - Other\n\nDefunción : MH:S2411 - Acta religiosa de defuncion",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00199"
     ],
-    "hijos": [],
     "hechos": [
       {
         "tipo": "documentado",
@@ -15525,7 +15523,9 @@
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-11-05T08:59:21.830Z",
-    "ultima_modificacion": "2026-11-05T08:59:21.830Z"
+    "ultima_modificacion": "2026-11-05T08:59:21.830Z",
+    "padre": "P00200",
+    "madre": "P00201"
   },
   {
     "id": "P00199",
@@ -15550,6 +15550,63 @@
     "documentos": [],
     "fecha_creacion": "2026-11-05T09:01:15.216Z",
     "ultima_modificacion": "2026-11-05T09:01:15.216Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00200",
+    "nombre": "Juan MUXICA ARREGUI",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1591",
+    "lugar_nacimiento": "Beasain-Astigarreta",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00201"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio alrededor de 1609\ncon Maria GASTAÑAGA ARRAMENDI (ARRANOMENDI)"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T09:30:19.588Z",
+    "ultima_modificacion": "2026-11-05T09:30:19.589Z"
+  },
+  {
+    "id": "P00201",
+    "nombre": "Maria GASTAÑAGA ARRAMENDI (ARRANOMENDI)",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "25/03/1594",
+    "lugar_nacimiento": "Beizama, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "Ordizia",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00200"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T09:32:02.558Z",
+    "ultima_modificacion": "2026-11-05T09:32:02.558Z",
     "padre": "",
     "madre": ""
   }
