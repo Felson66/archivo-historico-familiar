@@ -15894,5 +15894,416 @@
     "ultima_modificacion": "2026-11-05T11:53:19.714Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00212",
+    "nombre": "Martin Ygnacio MUJICA AIZPURU",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "31/08/1734",
+    "lugar_nacimiento": "Beasain-Astigarreta, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00213"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 18 de dic. de 1758\ncon Marina AROZENA ECHEBERRIA\nAzpeitia, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T11:58:21.130Z",
+    "ultima_modificacion": "2026-11-05T11:58:21.131Z",
+    "padre": "P00210",
+    "madre": "P00211"
+  },
+  {
+    "id": "P00213",
+    "nombre": "Marina AROZENA ECHEBERRIA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00212"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 18 de dic. de 1758\ncon Martin Ygnacio MUJICA AIZPURU\nAzpeitia, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T12:04:43.144Z",
+    "ultima_modificacion": "2026-11-05T12:04:43.144Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00214",
+    "nombre": "Miguel Joaquin MUXICA AROZENA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "22/09/1762",
+    "lugar_nacimiento": "Azpeitia",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00215"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 7 de ene. de 1788\ncon Maria Josepha Ygnacia YRIGORAS ARANA\nTolosa, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T12:07:42.560Z",
+    "ultima_modificacion": "2026-11-05T12:07:42.560Z",
+    "padre": "P00212",
+    "madre": "P00213"
+  },
+  {
+    "id": "P00215",
+    "nombre": "Maria Josepha Ygnacia YRIGORAS ARANA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "24/03/1766",
+    "lugar_nacimiento": "Ibarra",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00214"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 7 de ene. de 1788\ncon Miguel Joaquin MUXICA AROZENA\nTolosa, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T12:10:50.363Z",
+    "ultima_modificacion": "2026-11-05T12:10:50.363Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00216",
+    "nombre": "Juan Bautista MUXICA YRIGORAS",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "24/06/1788",
+    "lugar_nacimiento": "Tolosa",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00217"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 17 de sept. de 1815\ncon Josefa YEREGUI IZAGUIRRE\nTolosa, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T12:16:09.167Z",
+    "ultima_modificacion": "2026-11-05T12:16:09.167Z",
+    "padre": "P00214",
+    "madre": "P00215"
+  },
+  {
+    "id": "P00217",
+    "nombre": "Josefa YEREGUI IZAGUIRRE",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00216"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 17 de sept. de 1815\ncon Juan Bautista MUXICA YRIGORAS\nTolosa, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T12:18:18.461Z",
+    "ultima_modificacion": "2026-11-05T12:18:18.461Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00218",
+    "nombre": "Manuel Francisco MUXICA YEREGUI",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "09/01/1818",
+    "lugar_nacimiento": "Tolosa",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00219"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 20 de jun. de 1840\ncon Catalina Josefa CHIPRIANI ESNAOLA\nDonostia-San Sebastian, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T12:21:17.089Z",
+    "ultima_modificacion": "2026-11-05T12:21:17.089Z",
+    "padre": "P00216",
+    "madre": "P00217"
+  },
+  {
+    "id": "P00219",
+    "nombre": "Catalina Josefa CHIPRIANI ESNAOLA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "25/11/1820",
+    "lugar_nacimiento": "Donostia",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00218"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 20 de jun. de 1840\ncon Manuel Francisco MUXICA YEREGUI\nDonostia-San Sebastian, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T12:23:34.784Z",
+    "ultima_modificacion": "2026-11-05T12:23:34.784Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00220",
+    "nombre": "José Cruz MUJICA CIPRIANI",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "12/10/1846",
+    "lugar_nacimiento": "Montevideo, URUGUAY",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00221"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 21 de oct. de 1882\ncon Eudoxia Zoa TERRA TERRA"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T12:25:49.929Z",
+    "ultima_modificacion": "2026-11-05T12:25:49.929Z",
+    "padre": "P00218",
+    "madre": "P00219"
+  },
+  {
+    "id": "P00221",
+    "nombre": "Eudoxia Zoa TERRA TERRA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00220"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 21 de oct. de 1882\ncon José Cruz MUJICA CIPRIANI"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T12:27:18.433Z",
+    "ultima_modificacion": "2026-11-05T12:27:18.433Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00222",
+    "nombre": "Demetrio MUJICA TERRA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "20/12/1894",
+    "lugar_nacimiento": "Sauce del Yi, Florida, Uruguay",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00223"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio\ncon Lucy Isabel CORDANO GIORELLO"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T12:29:12.098Z",
+    "ultima_modificacion": "2026-11-05T12:29:12.098Z",
+    "padre": "P00220",
+    "madre": "P00221"
+  },
+  {
+    "id": "P00223",
+    "nombre": "Lucy Isabel CORDANO GIORELLO",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1906",
+    "lugar_nacimiento": "Colonia, Urugay",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00222"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio\ncon Demetrio MUJICA TERRA"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T12:30:48.015Z",
+    "ultima_modificacion": "2026-11-05T12:30:48.015Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00224",
+    "nombre": "José Alberto Mujica Cordano",
+    "nombre_conocido": "Pepe Mujica",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "20/05/1935",
+    "lugar_nacimiento": "Montevideo",
+    "fecha_defuncion": "13/05/2025",
+    "lugar_defuncion": "Montevideo",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000320",
+        "src": "assets/fotos/P00224/pepe-mujica.png",
+        "titulo": "Pepe Mujica",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00224"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-05T12:34:47.784Z",
+    "ultima_modificacion": "2026-11-05T12:34:47.784Z",
+    "padre": "P00222",
+    "madre": "P00223",
+    "fotografia_principal": "assets/fotos/P00224/pepe-mujica.png",
+    "fotoPosicion": "50% 50%"
   }
 ]
