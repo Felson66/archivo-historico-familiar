@@ -16826,7 +16826,9 @@
     "notas": "Fernando Múgica Herzog (San Sebastián, 13 de abril de 1933 – id., 6 de febrero de 1996[1]) fue un abogado español y dirigente histórico del Partido Socialista de Euskadi asesinado por la banda terrorista ETA en su ciudad natal.[2]\n\nBiografía\nSu padre era un violinista vasco que falleció tras la Guerra Civil en el destierro en Francia y su madre era una francesa de origen judeopolaco.[3] Tras licenciarse como abogado, defendió a opositores al régimen, ante el Tribunal de Orden Público, incluidos miembros de ETA.[4]\n\nMilitante del Partido Socialista Obrero Español (PSOE) desde la dictadura del general Franco, participó en el XXVI Congreso del partido que se celebró en 1974 en Suresnes (Francia), donde apoyó la elección de Felipe González como nuevo secretario general. A partir del XXVII Congreso, primero celebrado en España desde 1932, formó parte del Comité Federal del partido. Entre 1978 y 1980 fue miembro del Consejo General Vasco presidido por el también socialista Ramón Rubial, órgano que preparó la creación del País Vasco.[5]\n\nOcupó la presidencia del PSE-PSOE de Guipúzcoa hasta 1993 y, pese a que no quiso desempeñar cargos públicos importantes, salvo un breve paso por la concejalía de su ciudad, fue una de las personas más influyentes del socialismo vasco. Era hermano del ex ministro de Justicia y ex Defensor del Pueblo español, Enrique Múgica.[6]\n\nFue también socio fundador de la Asociación de Amistad España-Israel e impulsó junto a su hermano el establecimiento de relaciones diplomáticas con Israel en 1986. Cuando fue asesinado estaba prácticamente retirado de la política, como había anunciado en 1993, en una fiesta celebrada con motivo de la elección del primer alcalde socialista en la historia de San Sebastián, Odón Elorza: «Se han cumplido todas mis pasiones políticas. Que acabara el franquismo y en España hubiera libertades, que gobernara el PSOE, que España reconociera al Estado de Israel y que haya alcalde socialista en San Sebastián».\n\nFue asesinado por ETA de un tiro en la nuca en plena calle en 1996 y delante de su propio hijo José María.[7] En 1998, el etarra Valentín Lasarte fue condenado a 82 años de cárcel por su participación en el asesinato;[8] en 2006, el etarra Txapote también fue condenado a 82 años de cárcel por considerarse probada su participación en dicho crimen, que fue ordenado por el dirigente de ETA Kantauri.[9]\n\nMúgica fue uno de los primeros en recibir, a título póstumo, la Gran Cruz de la Real Orden de Reconocimiento Civil a las Víctimas del Terrorismo tras su creación.",
     "datos_resumen": "Fernando Múgica Herzog (San Sebastián, 13 de abril de 1933 – id., 6 de febrero de 1996[1]) fue un abogado español y dirigente histórico del Partido Socialista de Euskadi asesinado por la banda terrorista ETA en su ciudad natal.[2]\n\nBiografía\nSu padre era un violinista vasco que falleció tras la Guerra Civil en el destierro en Francia y su madre era una francesa de origen judeopolaco.[3] Tras licenciarse como abogado, defendió a opositores al régimen, ante el Tribunal de Orden Público, incluidos miembros de ETA.[4]\n\nMilitante del Partido Socialista Obrero Español (PSOE) desde la dictadura del general Franco, participó en el XXVI Congreso del partido que se celebró en 1974 en Suresnes (Francia), donde apoyó la elección de Felipe González como nuevo secretario general. A partir del XXVII Congreso, primero celebrado en España desde 1932, formó parte del Comité Federal del partido. Entre 1978 y 1980 fue miembro del Consejo General Vasco presidido por el también socialista Ramón Rubial, órgano que preparó la creación del País Vasco.[5]\n\nOcupó la presidencia del PSE-PSOE de Guipúzcoa hasta 1993 y, pese a que no quiso desempeñar cargos públicos importantes, salvo un breve paso por la concejalía de su ciudad, fue una de las personas más influyentes del socialismo vasco. Era hermano del ex ministro de Justicia y ex Defensor del Pueblo español, Enrique Múgica.[6]\n\nFue también socio fundador de la Asociación de Amistad España-Israel e impulsó junto a su hermano el establecimiento de relaciones diplomáticas con Israel en 1986. Cuando fue asesinado estaba prácticamente retirado de la política, como había anunciado en 1993, en una fiesta celebrada con motivo de la elección del primer alcalde socialista en la historia de San Sebastián, Odón Elorza: «Se han cumplido todas mis pasiones políticas. Que acabara el franquismo y en España hubiera libertades, que gobernara el PSOE, que España reconociera al Estado de Israel y que haya alcalde socialista en San Sebastián».\n\nFue asesinado por ETA de un tiro en la nuca en plena calle en 1996 y delante de su propio hijo José María.[7] En 1998, el etarra Valentín Lasarte fue condenado a 82 años de cárcel por su participación en el asesinato;[8] en 2006, el etarra Txapote también fue condenado a 82 años de cárcel por considerarse probada su participación en dicho crimen, que fue ordenado por el dirigente de ETA Kantauri.[9]\n\nMúgica fue uno de los primeros en recibir, a título póstumo, la Gran Cruz de la Real Orden de Reconocimiento Civil a las Víctimas del Terrorismo tras su creación.",
     "visible": true,
-    "conyuges": [],
+    "conyuges": [
+      "P00242"
+    ],
     "hechos": [],
     "fotografias": [
       {
@@ -16848,6 +16850,164 @@
     "padre": "P00238",
     "madre": "P00239",
     "fotografia_principal": "assets/fotos/P00241/fernando-mugica-herzog.jpg",
+    "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00242",
+    "nombre": "Mapi de las Heras",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00241"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000323",
+        "src": "assets/fotos/P00242/mapi-de-las-heras.jpg",
+        "titulo": "Mapi de las Heras",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00242"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T11:32:09.579Z",
+    "ultima_modificacion": "2026-11-06T11:32:09.580Z",
+    "padre": "",
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00242/mapi-de-las-heras.jpg",
+    "fotoPosicion": "50% 41%"
+  },
+  {
+    "id": "P00243",
+    "nombre": "Jose Maria Mugica de las Heras",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000325",
+        "src": "assets/fotos/P00243/jose-maria-mugica-de-las-heras.jpg",
+        "titulo": "Jose Maria Mugica de las Heras",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00243"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T11:33:59.580Z",
+    "ultima_modificacion": "2026-11-06T11:33:59.580Z",
+    "padre": "P00241",
+    "madre": "P00242",
+    "fotografia_principal": "assets/fotos/P00243/jose-maria-mugica-de-las-heras.jpg",
+    "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00244",
+    "nombre": "Fernando Mugica de las Heras",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000326",
+        "src": "assets/fotos/P00244/fernando-mugica-de-las-heras.jpg",
+        "titulo": "Fernando Mugica de las Heras",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00244"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T11:34:56.940Z",
+    "ultima_modificacion": "2026-11-06T11:34:56.940Z",
+    "padre": "P00241",
+    "madre": "P00242",
+    "fotografia_principal": "assets/fotos/P00244/fernando-mugica-de-las-heras.jpg",
+    "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00245",
+    "nombre": "Ruben Mugica de las Heras",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000324",
+        "src": "assets/fotos/P00245/ruben-mugica-de-las-heras.jpg",
+        "titulo": "Ruben Mugica de las Heras",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00245"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T11:35:42.301Z",
+    "ultima_modificacion": "2026-11-06T11:35:42.301Z",
+    "padre": "P00241",
+    "madre": "P00242",
+    "fotografia_principal": "assets/fotos/P00245/ruben-mugica-de-las-heras.jpg",
     "fotoPosicion": "50% 50%"
   }
 ]
