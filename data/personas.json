@@ -17009,5 +17009,44 @@
     "madre": "P00242",
     "fotografia_principal": "assets/fotos/P00245/ruben-mugica-de-las-heras.jpg",
     "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00246",
+    "nombre": "Claudia Mugica Soto",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "01/11/1996",
+    "lugar_nacimiento": "Donostia",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000327",
+        "src": "assets/fotos/P00246/claudia-mugica.jpg",
+        "titulo": "Claudia Mugica",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00246"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T11:47:34.982Z",
+    "ultima_modificacion": "2026-11-06T11:47:34.982Z",
+    "padre": "P00243",
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00246/claudia-mugica.jpg",
+    "fotoPosicion": "50% 50%"
   }
 ]
