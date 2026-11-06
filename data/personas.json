@@ -16461,5 +16461,315 @@
     "ultima_modificacion": "2026-11-06T09:54:24.500Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00230",
+    "nombre": "Joseph Ygnacio MUXICA AGUIRRE",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "13/12/1751",
+    "lugar_nacimiento": "Itsasondo",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00231"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 10 de abr. de 1780\ncon Maria Vicenta ECHEVERRIA LUJAMBIO\nHernani, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T10:18:18.210Z",
+    "ultima_modificacion": "2026-11-06T10:18:18.211Z",
+    "padre": "P00228",
+    "madre": "P00229"
+  },
+  {
+    "id": "P00231",
+    "nombre": "Maria Vicenta ECHEVERRIA LUJAMBIO",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00230"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 10 de abr. de 1780\ncon Joseph Ygnacio MUXICA AGUIRRE\nHernani, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T10:20:09.557Z",
+    "ultima_modificacion": "2026-11-06T10:20:09.557Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00232",
+    "nombre": "Juan Maria MUXICA ECHEVERRIA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "12/06/1790",
+    "lugar_nacimiento": "Hernani",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00233"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 2 de feb. de 1818\ncon Maria Felipa YMAZ ZUBILLAGA\nHernani, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T10:21:51.230Z",
+    "ultima_modificacion": "2026-11-06T10:21:51.230Z",
+    "padre": "P00230",
+    "madre": "P00231"
+  },
+  {
+    "id": "P00233",
+    "nombre": "Maria Felipa YMAZ ZUBILLAGA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00232"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 2 de feb. de 1818\ncon Juan Maria MUXICA ECHEVERRIA\nHernani, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T10:23:29.546Z",
+    "ultima_modificacion": "2026-11-06T10:23:29.546Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00234",
+    "nombre": "Jose Agustin MUGICA YMAZ",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "28/08/1830",
+    "lugar_nacimiento": "Hernani",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00235"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 8 de mar. de 1859\ncon Francisca OTEGUI ECHAVEGUREN\nHernani, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T10:25:13.425Z",
+    "ultima_modificacion": "2026-11-06T10:25:13.425Z",
+    "padre": "P00232",
+    "madre": "P00233"
+  },
+  {
+    "id": "P00235",
+    "nombre": "Francisca OTEGUI ECHAVEGUREN",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "22/09/1831",
+    "lugar_nacimiento": "Asteasu",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00234"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 8 de mar. de 1859\ncon Jose Agustin MUGICA YMAZ\nHernani, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T10:26:56.779Z",
+    "ultima_modificacion": "2026-11-06T10:26:56.779Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00236",
+    "nombre": "Toribio Salustiano MUGICA OTEGUI",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "08/06/1866",
+    "lugar_nacimiento": "Hernani",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00237"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 18 de may. de 1900\ncon Petra Daria Maria Rosa OTEIZA MACAZAGA\nDonostia-San Sebastian, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T10:28:53.542Z",
+    "ultima_modificacion": "2026-11-06T10:28:53.542Z",
+    "padre": "P00234",
+    "madre": "P00235"
+  },
+  {
+    "id": "P00237",
+    "nombre": "Petra Daria Maria Rosa OTEIZA MACAZAGA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00236"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 18 de may. de 1900\ncon Toribio Salustiano MUGICA OTEGUI\nDonostia-San Sebastian, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T10:30:17.841Z",
+    "ultima_modificacion": "2026-11-06T10:30:17.841Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00238",
+    "nombre": "Jose Maria MUGICA OTEIZA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "06/02/1907",
+    "lugar_nacimiento": "Donostia",
+    "fecha_defuncion": "01/10/1937",
+    "lugar_defuncion": "Bayonne, Pyrénées Atlantiques, France",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00239"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 1930\ncon Paulette HERZOG DREVÉS\nDonostia-San Sebastian, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T10:32:18.940Z",
+    "ultima_modificacion": "2026-11-06T10:32:18.940Z",
+    "padre": "P00236",
+    "madre": "P00237"
+  },
+  {
+    "id": "P00239",
+    "nombre": "Paulette HERZOG DREVÉS",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "01/12/1911",
+    "lugar_nacimiento": "Paris, France",
+    "fecha_defuncion": "11/10/2003",
+    "lugar_defuncion": "Madrid",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00238"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 1930\ncon Jose Maria MUGICA OTEIZA\nDonostia-San Sebastian, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T10:34:20.262Z",
+    "ultima_modificacion": "2026-11-06T10:34:20.262Z",
+    "padre": "",
+    "madre": ""
   }
 ]
