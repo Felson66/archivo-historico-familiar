@@ -16353,7 +16353,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "conyuges": [],
+    "conyuges": [
+      "P00227"
+    ],
     "hechos": [
       {
         "tipo": "documentado",
@@ -16366,5 +16368,98 @@
     "ultima_modificacion": "2026-11-06T08:57:51.899Z",
     "padre": "P00194",
     "madre": "P00225"
+  },
+  {
+    "id": "P00227",
+    "nombre": "Maria Josepha MENDIZABAL ECHEVERRIA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00226"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 1 de jul. 1726\ncon Juan Ygnacio MUXICA ULANGA\nLegorreta, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T09:35:27.122Z",
+    "ultima_modificacion": "2026-11-06T09:35:27.122Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00228",
+    "nombre": "Juan MUXICA MENDIZABAL",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "10/01/1728",
+    "lugar_nacimiento": "Legorreta",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00229"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 11 de ene. de 1751\ncon Maria Josepha AGUIRRE CHINCHURETA\nItsasondo, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T09:49:27.492Z",
+    "ultima_modificacion": "2026-11-06T09:49:27.492Z",
+    "padre": "P00226",
+    "madre": "P00227"
+  },
+  {
+    "id": "P00229",
+    "nombre": "Maria Josepha AGUIRRE CHINCHURETA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "30/03/1729",
+    "lugar_nacimiento": "Itsasondo",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00228"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 11 de ene. de 1751\ncon Juan MUXICA MENDIZABAL\nItsasondo, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T09:54:24.500Z",
+    "ultima_modificacion": "2026-11-06T09:54:24.500Z",
+    "padre": "",
+    "madre": ""
   }
 ]
