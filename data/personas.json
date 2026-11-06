@@ -15626,11 +15626,9 @@
     "notas": "Defunción : MH:S2524 - 1782 Hidalguia Josef Muxica de Araoz - MH:R2",
     "datos_resumen": "Defunción : MH:S2524 - 1782 Hidalguia Josef Muxica de Araoz - MH:R2",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00203"
     ],
-    "hijos": [],
     "hechos": [
       {
         "tipo": "documentado",
@@ -15640,7 +15638,9 @@
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-11-05T11:23:18.953Z",
-    "ultima_modificacion": "2026-11-05T11:23:18.953Z"
+    "ultima_modificacion": "2026-11-05T11:23:18.953Z",
+    "padre": "P00247",
+    "madre": "P00248"
   },
   {
     "id": "P00203",
@@ -17048,5 +17048,119 @@
     "madre": "",
     "fotografia_principal": "assets/fotos/P00246/claudia-mugica.jpg",
     "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00247",
+    "nombre": "Juan MUXICA (YSASAGA?) DUEÑO DE LA CASA SOLAR DE ASTIGARRETA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1515",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "1593",
+    "lugar_defuncion": "Beasain-Astigarreta, Gipuzkoa, Euskadi",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Defunción : MH:S791 - 1621 Hidalguia de Pasqual y de 1782 de Josef Muxica - Other",
+    "datos_resumen": "Defunción : MH:S791 - 1621 Hidalguia de Pasqual y de 1782 de Josef Muxica - Other",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00248"
+    ],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T12:14:59.844Z",
+    "ultima_modificacion": "2026-11-06T12:14:59.844Z"
+  },
+  {
+    "id": "P00248",
+    "nombre": "Maria Juana GOICOECHEA ALVISU",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1515",
+    "lugar_nacimiento": "Beasain-Astigarreta, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "Beasain-Astigarreta, Gipuzkoa, Euskadi",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Defunción : MH:S791 - 1621 Hidalguia de Pasqual y de 1782 de Josef Muxica - Other",
+    "datos_resumen": "Defunción : MH:S791 - 1621 Hidalguia de Pasqual y de 1782 de Josef Muxica - Other",
+    "visible": true,
+    "conyuges": [
+      "P00247"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T12:16:18.946Z",
+    "ultima_modificacion": "2026-11-06T12:16:18.946Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00249",
+    "nombre": "Domingo De MUXICA GOICOECHEA DUEÑO DE LA CASA SOLAR DE ASTIGARRETA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1562",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "1621",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Defunción : MH:S791 - 1621 Hidalguia de Pasqual y de 1782 de Josef Muxica - Other",
+    "datos_resumen": "Defunción : MH:S791 - 1621 Hidalguia de Pasqual y de 1782 de Josef Muxica - Other",
+    "visible": true,
+    "conyuges": [
+      "P00250"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio alrededor de 1581\ncon Francisca VAZTERRICA\nBergara-Elosua, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T12:18:24.541Z",
+    "ultima_modificacion": "2026-11-06T12:18:24.541Z",
+    "padre": "P00247",
+    "madre": "P00248"
+  },
+  {
+    "id": "P00250",
+    "nombre": "Francisca VAZTERRICA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "1621",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Defunción : MH:S791 - 1621 Hidalguia de Pasqual y de 1782 de Josef Muxica - Other",
+    "datos_resumen": "Defunción : MH:S791 - 1621 Hidalguia de Pasqual y de 1782 de Josef Muxica - Other",
+    "visible": true,
+    "conyuges": [
+      "P00249"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio alrededor de 1581\ncon Domingo De MUXICA GOICOECHEA DUEÑO DE LA CASA SOLAR DE ASTIGARRETA\nBergara-Elosua, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-06T12:20:33.790Z",
+    "ultima_modificacion": "2026-11-06T12:20:33.790Z",
+    "padre": "",
+    "madre": ""
   }
 ]
