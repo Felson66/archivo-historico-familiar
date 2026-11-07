@@ -1,4 +1,4 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes"><title>Vista completa · Árbol Familiar · Raíces · alpha44</title><style>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes"><title>Vista completa · Árbol Familiar · Raíces · matrimonios</title><style>
 *{box-sizing:border-box}html,body{margin:0;height:100%;font-family:Arial,sans-serif;background:#5f5e59;color:#fff;overflow:hidden}.top{height:58px;background:#183c35;display:flex;align-items:center;gap:10px;padding:8px 12px;box-shadow:0 2px 10px #0005;position:relative;z-index:20}.title{font:700 18px Georgia;white-space:nowrap}.status{font-size:12px;opacity:.8;margin-right:auto}.top button{border:1px solid #ffffff42;background:#fff;color:#183c35;border-radius:7px;padding:8px 11px;font-weight:700;cursor:pointer}.top button:hover{background:#edf4f0}.route{font-size:12px;max-width:380px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.viewport{position:absolute;inset:58px 0 0;overflow:auto;overscroll-behavior:contain;background:#66645f}.canvas{position:relative;transform-origin:0 0;background:#77746e;min-width:100%;min-height:100%}.stage{position:absolute}.lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.card{position:absolute;width:176px;height:84px;background:#343b39;border:1px solid #8d9995;border-radius:7px;color:#fff;padding:9px 8px 7px 58px;box-shadow:0 2px 5px #0003;cursor:pointer;overflow:hidden;transition:opacity .18s,border .18s,box-shadow .18s}.card:hover{border-color:#dbe7e1;box-shadow:0 3px 10px #0006}.card.root{border:2px solid #8bc2ae}.photo{position:absolute;left:10px;top:13px;width:38px;height:38px;border-radius:50%;background:#f5f3e8;color:#666b4b;display:grid;place-items:center;overflow:hidden;font:700 16px Georgia}.photo img{width:100%;height:100%;object-fit:cover}.tree-placeholder{width:30px;height:30px;display:block}.name{font:700 12px/1.15 Georgia;max-height:42px;overflow:hidden}.dates{font-size:9px;color:#d0d6d3;margin-top:5px}.card.selected{outline:3px solid #f0c45b;outline-offset:2px}.card.onroute{border:2px solid #f0c45b;background:#3e443f;box-shadow:0 0 0 2px #f0c45b33,0 4px 12px #0006}.dim{opacity:.18}.family-line{stroke:#d3d9d6;stroke-width:1.9;fill:none;stroke-linecap:round}.family-junction{fill:#f1f4f2;stroke:#40504a;stroke-width:1.2}.couple-line{stroke:#d2b4bc;stroke-width:1.7;fill:none}.route-line{stroke:#f0c45b;stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px #0008)}.gen{position:absolute;left:0;color:#e7e5df;font:700 12px Georgia;opacity:.75;transform:translateY(-22px)}.help{position:fixed;left:12px;bottom:10px;background:#1e2926e8;padding:8px 11px;border-radius:7px;font-size:11px;z-index:30;box-shadow:0 2px 8px #0004}.badge{display:inline-block;border:1px solid #ffffff55;border-radius:10px;padding:1px 6px;margin-right:5px}.back{color:white;text-decoration:none;font-size:13px;font-weight:700}@media(max-width:760px){.top{height:104px;align-content:center;flex-wrap:wrap}.viewport{inset:104px 0 0}.title{font-size:15px}.status{display:none}.route{order:5;width:100%;max-width:none}.top button{padding:6px 9px}.help{font-size:10px;max-width:92%}}
 
 .relationship{position:relative;z-index:19;background:#244a41;padding:8px 14px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:13px;box-shadow:0 2px 5px #0003}.relationship button{background:#fff;color:#183c35;border:0;border-radius:7px;padding:6px 9px;font-weight:bold;cursor:pointer}.relationship #fullPath{flex-basis:100%;line-height:1.6;max-height:160px;overflow-y:auto;overflow-wrap:anywhere;padding:8px 0}.touch-help{display:none}.open-profile{display:none}.open-profile.visible{display:inline-block}.card{touch-action:manipulation}.back{font-size:23px;line-height:1;padding:4px 9px}.viewport{top:var(--header-height,96px);bottom:0}.top{height:auto;min-height:58px;flex-wrap:wrap}.status{margin-right:auto}
@@ -164,23 +164,59 @@ function circleEl(svg,x,y,r,cls){let e=document.createElementNS('http://www.w3.o
    if(!fam.has(key))fam.set(key,{ps:[...ps],kids:[]});
    fam.get(key).kids.push(child);
   }
+  // Cada unión tiene su propio carril y su propia identificación visual.
+  // Los carriles se calculan por fila, evitando que dos matrimonios
+  // compartan exactamente la misma barra horizontal.
+  const familyRows=new Map();
+  for(const f of fam.values()){
+   const row=Math.max(...f.ps.map(p=>pos[p].y));
+   if(!familyRows.has(row))familyRows.set(row,[]);
+   familyRows.get(row).push(f);
+  }
+  for(const families of familyRows.values()){
+   families.sort((a,b)=>{
+    const ax=a.ps.reduce((n,p)=>n+center(p).x,0)/a.ps.length;
+    const bx=b.ps.reduce((n,p)=>n+center(p).x,0)/b.ps.length;
+    return ax-bx;
+   });
+   families.forEach((f,i)=>{f.lane=i;f.laneCount=families.length});
+  }
+  const parentFamilies=new Map();
+  for(const f of fam.values())for(const p of f.ps){
+   if(!parentFamilies.has(p))parentFamilies.set(p,[]);
+   parentFamilies.get(p).push(f);
+  }
   for(const f of fam.values()){
    f.kids.sort((a,b)=>center(a).x-center(b).x);
    const px=f.ps.reduce((s,p)=>s+center(p).x,0)/f.ps.length;
    const py=Math.max(...f.ps.map(p=>pos[p].y+CH));
-   const jy=py+24;
+   const jy=py+20+f.lane*12;
+   const multiple=f.ps.some(p=>(parentFamilies.get(p)||[]).length>1);
+   // Identifica visualmente cada matrimonio cuando comparten progenitor.
+   const familyIndex=multiple?f.lane%3:-1;
+   const familyColors=['#8bd7c5','#f4cb83','#c5b5f1'];
+   const stroke=familyIndex<0?null:familyColors[familyIndex];
+   const drawFamily=d=>{
+    const before=svg.lastElementChild;
+    pathEl(svg,d,'family-line');
+    if(stroke)svg.lastElementChild.style.stroke=stroke;
+   };
    // Ambos progenitores confluyen explícitamente en el nodo de SU familia.
    for(const parent of f.ps){
-    const x=center(parent).x,y=pos[parent].y+CH;
-    pathEl(svg,`M${x},${y} L${x},${jy} L${px},${jy}`,'family-line');
+    const siblings=parentFamilies.get(parent)||[];
+    const slot=siblings.indexOf(f);
+    const x=center(parent).x+(siblings.length>1?(slot-(siblings.length-1)/2)*22:0);
+    const y=pos[parent].y+CH;
+    drawFamily(`M${x},${y} L${x},${jy} L${px},${jy}`);
    }
    circleEl(svg,px,jy,4,'family-junction');
+   if(stroke)svg.lastElementChild.style.fill=stroke;
    for(const child of f.kids){
     const cx=center(child).x,cy=pos[child].y;
     const room=Math.max(34,cy-jy);
     const c1y=jy+Math.min(48,room*.32);
     const c2y=cy-Math.min(48,room*.32);
-    pathEl(svg,`M${px},${jy} C${px},${c1y} ${cx},${c2y} ${cx},${cy}`,'family-line');
+    drawFamily(`M${px},${jy} C${px},${c1y} ${cx},${c2y} ${cx},${cy}`);
    }
   }
  }
