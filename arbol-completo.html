@@ -81,17 +81,37 @@ function layout(){
  }
  // alpha43: optimizador explícito de cruces. Mueve UNIDADES familiares completas, nunca personas.
  // Penaliza con mucha fuerza los cruces y, a igualdad, la longitud horizontal de las conexiones.
- function edgeList(){let e=[];for(let g=min+1;g<=max;g++)for(const u of rows.get(g))for(const p of parentUnits(u))e.push([p,u]);return e}
- function objective(){
-  const e=edgeList();let cross=0,span=0;
-  for(const [a,b] of e)span+=Math.abs(a.order-b.order);
-  for(let i=0;i<e.length;i++)for(let j=i+1;j<e.length;j++){
-   const [a,b]=e[i],[c,d]=e[j];
-   if(G.get(a.members[0])!==G.get(c.members[0])||G.get(b.members[0])!==G.get(d.members[0]))continue;
-   if(a===c||b===d)continue;
-   if((a.order-c.order)*(b.order-d.order)<0)cross++;
+ // Comparar las conexiones REALES entre progenitores e hijos, no solo
+ // las unidades matrimoniales. Dos hijos de un mismo padre pueden pertenecer
+ // a matrimonios distintos y deben ordenarse por la posición de su madre.
+ function memberX(id){
+  const u=unitOf.get(id);if(!u)return null;
+  const i=u.members.indexOf(id);
+  return u.order*10000+(i-(u.members.length-1)/2)*(CW+GAP);
+ }
+ function familyEdges(){
+  const edges=[];
+  for(const id of Z){
+   const ps=vals(P,id).filter(p=>Z.has(p)&&unitOf.has(p));
+   if(!ps.length||!unitOf.has(id))continue;
+   const pg=G.get(ps[0]),cg=G.get(id);
+   if(pg===cg)continue;
+   edges.push({from:ps.reduce((sum,p)=>sum+memberX(p),0)/ps.length,
+               to:memberX(id),pg,cg,parents:ps,child:id});
   }
-  return cross*10000+span*8;
+  return edges;
+ }
+ function objective(){
+  const edges=familyEdges();let cross=0,span=0;
+  for(const e of edges)span+=Math.abs(e.from-e.to)/10000;
+  for(let i=0;i<edges.length;i++)for(let j=i+1;j<edges.length;j++){
+   const a=edges[i],b=edges[j];
+   if(a.pg!==b.pg||a.cg!==b.cg||a.child===b.child)continue;
+   // Las conexiones que parten de matrimonios distintos de una misma
+   // persona también cuentan: antes se ignoraban por compartir unidad.
+   if((a.from-b.from)*(a.to-b.to)<0)cross++;
+  }
+  return cross*100000+span*8;
  }
  let best=objective();
  // Intercambios adyacentes repetidos: suficientes para eliminar cruces evitables sin deshacer grupos familiares.
