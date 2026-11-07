@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#183c35">
   <title>Archivo Histórico Familiar</title>
-  <link rel="stylesheet" href="css/style.css?v=album-titulos-2">
+  <link rel="stylesheet" href="css/style.css?v=4.2.0-alpha33">
 </head>
 <body>
 <div class="app">
@@ -34,6 +34,10 @@
       </div>
       <div class="toolbar">
         <input id="peopleSearch" type="search" placeholder="Buscar por nombre…" autocomplete="off">
+        <select id="peopleSort" aria-label="Ordenar personas" title="Ordenar personas">
+          <option value="alpha">Orden alfabético</option>
+          <option value="recent">Últimas altas primero</option>
+        </select>
         <button class="soft" id="clearSearch">Limpiar</button>
       </div>
       <div id="peopleGrid" class="cards"></div>
@@ -114,7 +118,7 @@
 
 <div class="birthday-toast-host" id="birthdayToastHost" aria-live="polite" aria-atomic="true"></div>
 <div class="loading" id="loading">Cargando archivo…</div>
-<script src="js/app.js?v=album-titulos-2"></script>
+<script src="js/app.js?v=4.2.0-alpha49-cesar3"></script>
 <script>
 if(new URLSearchParams(location.search).get('vista')==='cesar'){
   document.title='Raíces · Familia de César de la Dehesa';

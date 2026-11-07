@@ -1887,3 +1887,19 @@ body.document-viewer-open{overflow:hidden}
 /* Capítulo 01: biografía a todo el ancho, sin subtítulo duplicado */
 .raices-album-story{display:block}
 .raices-album-facts{max-width:760px}
+
+/* Ordenación del buscador, compatible con la barra existente */
+.toolbar #peopleSort{border:1px solid #cbd4cf;background:#fff;color:#183c35;border-radius:12px;padding:10px 12px;min-width:190px;max-width:100%;font:inherit;cursor:pointer}
+@media(max-width:600px){.toolbar #peopleSort{width:100%;min-width:0}}
+
+/* Corrección: los resúmenes extensos nunca agrandan las tarjetas del buscador. */
+#peopleGrid .card.card-compact .card-body{min-width:0;overflow:hidden}
+#peopleGrid .card.card-compact p{
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3;
+  line-clamp:3;
+  overflow:hidden;
+  overflow-wrap:anywhere;
+  max-height:calc(1.35em * 3);
+}

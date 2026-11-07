@@ -284,7 +284,14 @@ function renderPeople(){
     // alpha22: el buscador público filtra exclusivamente por el nombre.
     // Se mantiene búsqueda parcial: «Eder» encuentra «Eder» y «Federico».
     .filter(person => normalizeSearchText(person.nombre).includes(query))
-    .sort((a,b) => a.nombre.localeCompare(b.nombre,"es"));
+    .sort((a,b) => {
+      if($("peopleSort")?.value === "recent"){
+        const da=Date.parse(a.fecha_creacion||"")||0;
+        const db=Date.parse(b.fecha_creacion||"")||0;
+        return db-da || a.nombre.localeCompare(b.nombre,"es");
+      }
+      return a.nombre.localeCompare(b.nombre,"es");
+    });
   $("peopleCount").textContent = `${filtered.length} ${filtered.length === 1 ? "persona" : "personas"}`;
   $("peopleGrid").innerHTML = filtered.length ? filtered.map(person => card(person,"compact")).join("") : `<div class="empty">No se han encontrado coincidencias.</div>`;
 }
@@ -1899,6 +1906,7 @@ function wireEvents(){
   document.querySelectorAll("[data-branch]").forEach(button => button.addEventListener("click",()=>setFamilyBranch(button.dataset.branch)));
   document.querySelectorAll(".bottom-nav button").forEach(button => button.addEventListener("click", () => showView(button.dataset.view)));
   $("peopleSearch").addEventListener("input",renderPeople);
+  $("peopleSort").addEventListener("change",renderPeople);
   $("clearSearch").addEventListener("click",() => { $("peopleSearch").value=""; renderPeople(); });
   $("drawerClose").addEventListener("click",closeDrawer);
   $("drawerBackdrop").addEventListener("click",closeDrawer);

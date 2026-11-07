@@ -41,20 +41,31 @@ G=new Map([[ROOT,0]]);let q=[ROOT];while(q.length){let x=q.shift(),g=G.get(x);fo
 function layout(){
  const min=Math.min(...G.values()),max=Math.max(...G.values());pos={};
  const rows=new Map(),unitOf=new Map();
- // Una unidad es una pareja (si existe en esta generación) o una persona sola.
- for(let g=min;g<=max;g++){
-  const ids=[...Z].filter(id=>G.get(id)===g),used=new Set(),units=[];
-  for(const id of ids){
-   if(used.has(id))continue;
-   const mates=vals(S,id).filter(x=>Z.has(x)&&G.get(x)===g&&!used.has(x));
-   let mate=mates.find(m=>vals(C,id).some(c=>vals(P,c).includes(m)))||mates[0];
-   const members=mate?[id,mate]:[id];members.forEach(x=>used.add(x));
-   const parents=[...new Set(members.flatMap(x=>vals(P,x)).filter(x=>Z.has(x)))];
-   const u={members,parents,w:members.length*CW+(members.length-1)*GAP,cx:0,order:0};
-   units.push(u);members.forEach(x=>unitOf.set(x,u));
+  // Agrupar matrimonios conectados en una misma generación, sin duplicar personas.
+  // En matrimonios múltiples, la persona común queda entre sus cónyuges.
+  for(let g=min;g<=max;g++){
+   const ids=[...Z].filter(id=>G.get(id)===g),remaining=new Set(ids),units=[];
+   for(const id of ids){
+    if(!remaining.has(id))continue;
+    const component=[],queue=[id];remaining.delete(id);
+    while(queue.length){
+     const x=queue.shift();component.push(x);
+     for(const mate of vals(S,x))if(remaining.has(mate)){
+      remaining.delete(mate);queue.push(mate);
+     }
+    }
+    const degree=x=>vals(S,x).filter(y=>component.includes(y)).length;
+    const hub=[...component].sort((a,b)=>degree(b)-degree(a)||a.localeCompare(b))[0];
+    const others=component.filter(x=>x!==hub).sort((a,b)=>a.localeCompare(b));
+    // Colocar el cónyuge compartido en el centro; ningún enlace atraviesa otra tarjeta.
+    const middle=Math.floor(others.length/2);
+    const members=[...others.slice(0,middle),hub,...others.slice(middle)];
+    const parents=[...new Set(members.flatMap(x=>vals(P,x)).filter(x=>Z.has(x)))];
+    const u={members,parents,w:members.length*CW+(members.length-1)*GAP,cx:0,order:0};
+    units.push(u);members.forEach(x=>unitOf.set(x,u));
+   }
+   rows.set(g,units);
   }
-  rows.set(g,units);
- }
  function parentUnits(u){return [...new Set(u.parents.map(p=>unitOf.get(p)).filter(Boolean))]}
  function childUnits(u){let a=[];for(const id of u.members)for(const c of vals(C,id)){let q=unitOf.get(c);if(q&&!a.includes(q))a.push(q)}return a}
  // Orden inicial determinista: los hermanos comparten clave de padres y quedan juntos.
@@ -129,45 +140,50 @@ function center(id){return {x:pos[id].x+CW/2,y:pos[id].y+CH/2}}
 function render(){const stage=document.getElementById('stage'),lines=document.getElementById('lines');stage.style.width=treeW+'px';stage.style.height=treeH+'px';lines.setAttribute('viewBox',`0 0 ${treeW} ${treeH}`);document.getElementById('routeLines').setAttribute('viewBox',`0 0 ${treeW} ${treeH}`);for(const id of Z){let p=B[id],q=pos[id];if(!q)continue;let e=document.createElement('div');e.className='card'+(id===ROOT?' root':'');e.dataset.id=id;e.style.left=q.x+'px';e.style.top=q.y+'px';let fp=photo(p);e.innerHTML=`<div class="photo">${fp?`<img src="${fp}" alt="">`:`<svg class="tree-placeholder" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 30V18 M20 24L13 18 M20 22L27 16" stroke="#666b4b" stroke-width="3.2" stroke-linecap="round" fill="none"/><path d="M20 8c-4-4-11 0-10 6-6 1-6 10 0 12 2 3 6 3 9 1 4 3 9 1 10-3 7-1 7-10 1-12-1-5-7-7-10-4Z" fill="#697354"/><path d="M15 31h10" stroke="#666b4b" stroke-width="3" stroke-linecap="round"/></svg>`}</div><div class="name"></div><div class="dates"></div>`;e.querySelector('.name').textContent=p.nombre||id;e.querySelector('.dates').textContent=years(p);e.onclick=()=>selectPerson(id);e.ondblclick=()=>openProfile(id);stage.appendChild(e)}drawBase();document.getElementById('status').textContent=`${Z.size} personas · ${new Set(G.values()).size} generaciones`;applyScale();setTimeout(()=>restoreOrFocus(),70)}
 function pathEl(svg,d,cls){let e=document.createElementNS('http://www.w3.org/2000/svg','path');e.setAttribute('d',d);e.setAttribute('class',cls);svg.appendChild(e)}
 function circleEl(svg,x,y,r,cls){let e=document.createElementNS('http://www.w3.org/2000/svg','circle');e.setAttribute('cx',x);e.setAttribute('cy',y);e.setAttribute('r',r);e.setAttribute('class',cls);svg.appendChild(e)}
-function drawBase(){
- const svg=document.getElementById('lines');svg.innerHTML='';
- // MOTOR V2: las líneas nacen siempre de una familia concreta.
- // No hay barras horizontales compartidas ni carriles por generación.
- for(const id of Z)for(const s of vals(S,id))if(Z.has(s)&&id<s&&pos[id]&&pos[s]){
-   let a=center(id),b=center(s);
-   // Conectar los bordes de las tarjetas, no sus centros ocultos.
-   const left=pos[id].x<=pos[s].x?id:s,right=left===id?s:id;
-   const x1=pos[left].x+CW,x2=pos[right].x,y=pos[left].y+CH/2;
-   pathEl(svg,`M${x1},${y} L${x2},${pos[right].y+CH/2}`,'couple-line');
- }
- const fam=new Map();
- for(const child of Z){
+ function drawBase(){
+  const svg=document.getElementById('lines');svg.innerHTML='';
+  // Cada matrimonio es una relación independiente. Las líneas de pareja
+  // discurren por encima de las tarjetas y nunca unen a dos cónyuges entre sí.
+  const spousePairs=[];
+  for(const id of Z)for(const s of vals(S,id))if(Z.has(s)&&id<s&&pos[id]&&pos[s])spousePairs.push([id,s]);
+  const topLane=new Map();
+  for(const [id,s] of spousePairs){
+   const a=center(id),b=center(s);
+   const row=Math.min(pos[id].y,pos[s].y);
+   const lane=topLane.get(row)||0;topLane.set(row,lane+1);
+   const rail=row-12-(lane%3)*7;
+   // Tramo superior: nunca atraviesa el cuerpo de una tarjeta.
+   pathEl(svg,`M${a.x},${pos[id].y} L${a.x},${rail} L${b.x},${rail} L${b.x},${pos[s].y}`,'couple-line');
+  }
+  const fam=new Map();
+  for(const child of Z){
    if(!pos[child])continue;
    const ps=vals(P,child).filter(p=>Z.has(p)&&pos[p]).sort();
    if(!ps.length)continue;
    const key=ps.join('+');
    if(!fam.has(key))fam.set(key,{ps:[...ps],kids:[]});
    fam.get(key).kids.push(child);
- }
- for(const f of fam.values()){
+  }
+  for(const f of fam.values()){
    f.kids.sort((a,b)=>center(a).x-center(b).x);
-   // El nodo familiar está bajo el centro REAL de los progenitores registrados.
    const px=f.ps.reduce((s,p)=>s+center(p).x,0)/f.ps.length;
    const py=Math.max(...f.ps.map(p=>pos[p].y+CH));
-   const jy=py+18;
-   pathEl(svg,`M${px},${py} L${px},${jy}`,'family-line');
-   circleEl(svg,px,jy,3.5,'family-junction');
-   // Cada hijo recibe SU conexión directa desde ese nodo familiar.
-   // Las curvas se abren enseguida desde la familia y terminan verticales sobre el hijo.
-   for(const child of f.kids){
-     const cx=center(child).x, cy=pos[child].y;
-     const room=Math.max(34,cy-jy);
-     const c1y=jy+Math.min(48,room*.32);
-     const c2y=cy-Math.min(48,room*.32);
-     pathEl(svg,`M${px},${jy} C${px},${c1y} ${cx},${c2y} ${cx},${cy}`,'family-line');
+   const jy=py+24;
+   // Ambos progenitores confluyen explícitamente en el nodo de SU familia.
+   for(const parent of f.ps){
+    const x=center(parent).x,y=pos[parent].y+CH;
+    pathEl(svg,`M${x},${y} L${x},${jy} L${px},${jy}`,'family-line');
    }
+   circleEl(svg,px,jy,4,'family-junction');
+   for(const child of f.kids){
+    const cx=center(child).x,cy=pos[child].y;
+    const room=Math.max(34,cy-jy);
+    const c1y=jy+Math.min(48,room*.32);
+    const c2y=cy-Math.min(48,room*.32);
+    pathEl(svg,`M${px},${jy} C${px},${c1y} ${cx},${c2y} ${cx},${cy}`,'family-line');
+   }
+  }
  }
-}
 function neighbors(id){return [...new Set([...vals(P,id),...vals(C,id),...vals(S,id)].filter(x=>Z.has(x)))]}
 function shortest(a,b){let q=[a],prev=new Map([[a,null]]);while(q.length){let x=q.shift();if(x===b)break;for(const n of neighbors(x))if(!prev.has(n)){prev.set(n,x);q.push(n)}}if(!prev.has(b))return[];let out=[];for(let x=b;x!=null;x=prev.get(x))out.push(x);return out.reverse()}
 function selectPerson(id){if(selected.length===2)selected=[];if(!selected.includes(id))selected.push(id);updateRoute();updateProfileButton()}
