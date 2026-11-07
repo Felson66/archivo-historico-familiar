@@ -16787,7 +16787,9 @@
     "notas": "Enrique Múgica Herzog (San Sebastián, 20 de febrero de 1932-Madrid, 11 de abril de 2020)[1] fue un político y abogado español. Miembro del Partido Socialista Obrero Español, fue diputado en las Cortes y llegó a ocupar los cargos de ministro de Justicia y defensor del Pueblo.[2]\n\nBiografía\nOrígenes y juventud\nNacido en San Sebastián el 20 de febrero de 1932,[3] su padre era un violinista vasco que falleció durante la Guerra Civil y su madre era una francesa de origen judeopolaco. Estudió, al igual que su hermano Fernando, en el colegio católico marianista Santa María de San Sebastián. Se licenció en Derecho en la Universidad de Madrid,[4] donde inició su actividad política participando en las revueltas contra de la dictadura franquista. Fue el impulsor del Congreso Universitario de Escritores Jóvenes, decisivo en los sucesos de febrero de 1956, y por esto fue encarcelado durante tres meses aquel mismo año.\n\nFue militante clandestino del PCE durante diez años y por ello estuvo varias veces en prisión (cuatro meses y medio en 1959 y 22 meses entre 1962 y 1967).[5] En su última estancia en la cárcel, en la que pasó tres años en total, abandonó el PCE e ingresó en el PSOE.[5] Fue defensor de opositores en juicios celebrados en el Tribunal de Orden Público.[6] En 1973, en el XII Congreso de UGT en el exilio, fue elegido Secretario de Organización, formando parte de su Ejecutiva hasta 1976.[7]",
     "datos_resumen": "Enrique Múgica Herzog (San Sebastián, 20 de febrero de 1932-Madrid, 11 de abril de 2020)[1] fue un político y abogado español. Miembro del Partido Socialista Obrero Español, fue diputado en las Cortes y llegó a ocupar los cargos de ministro de Justicia y defensor del Pueblo.[2]\n\nBiografía\nOrígenes y juventud\nNacido en San Sebastián el 20 de febrero de 1932,[3] su padre era un violinista vasco que falleció durante la Guerra Civil y su madre era una francesa de origen judeopolaco. Estudió, al igual que su hermano Fernando, en el colegio católico marianista Santa María de San Sebastián. Se licenció en Derecho en la Universidad de Madrid,[4] donde inició su actividad política participando en las revueltas contra de la dictadura franquista. Fue el impulsor del Congreso Universitario de Escritores Jóvenes, decisivo en los sucesos de febrero de 1956, y por esto fue encarcelado durante tres meses aquel mismo año.\n\nFue militante clandestino del PCE durante diez años y por ello estuvo varias veces en prisión (cuatro meses y medio en 1959 y 22 meses entre 1962 y 1967).[5] En su última estancia en la cárcel, en la que pasó tres años en total, abandonó el PCE e ingresó en el PSOE.[5] Fue defensor de opositores en juicios celebrados en el Tribunal de Orden Público.[6] En 1973, en el XII Congreso de UGT en el exilio, fue elegido Secretario de Organización, formando parte de su Ejecutiva hasta 1976.[7]",
     "visible": true,
-    "conyuges": [],
+    "conyuges": [
+      "P00251"
+    ],
     "hechos": [],
     "fotografias": [
       {
@@ -17162,5 +17164,85 @@
     "ultima_modificacion": "2026-11-06T12:20:33.790Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00251",
+    "nombre": "Faustina Díaz Azcona",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "09/11/1942",
+    "lugar_nacimiento": "Logroño",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "Escritora",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00240"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000329",
+        "src": "assets/fotos/P00251/diaz-azcona-faustina-tina-rep-13648.jpg",
+        "titulo": "Diaz Azcona Faustina Tina",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00251"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T11:33:10.910Z",
+    "ultima_modificacion": "2026-11-07T11:33:10.910Z",
+    "padre": "",
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00251/diaz-azcona-faustina-tina-rep-13648.jpg",
+    "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00252",
+    "nombre": "Daniel Múgica Díaz",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "04/04/1967",
+    "lugar_nacimiento": "San Sebastián",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "Escritor",
+    "estado": "pendiente",
+    "notas": "Es hijo del político socialista Enrique Múgica (1932-2020),[1] quien fuera diputado (1977-2000), ministro de Justicia (1988-1991) y Defensor del Pueblo (2000-2010), y de la novelista Faustina Díaz Azcona.\n\nSu novela La dulzura ganó el Premio Jaén en 2017[2] y fue publicada ese año por la editorial Almuzara. Trata sobre una joven con esquizofrenia paranoide, de quien se cree que salió de un sanatorio mental madrileño con la intención de tomar un tren la misma mañana de los atentados del 11 de marzo. La investigación sobre su desaparición (no apareció en la lista de víctimas) es el motor de la intriga de la novela.",
+    "datos_resumen": "Es hijo del político socialista Enrique Múgica (1932-2020),[1] quien fuera diputado (1977-2000), ministro de Justicia (1988-1991) y Defensor del Pueblo (2000-2010), y de la novelista Faustina Díaz Azcona.\n\nSu novela La dulzura ganó el Premio Jaén en 2017[2] y fue publicada ese año por la editorial Almuzara. Trata sobre una joven con esquizofrenia paranoide, de quien se cree que salió de un sanatorio mental madrileño con la intención de tomar un tren la misma mañana de los atentados del 11 de marzo. La investigación sobre su desaparición (no apareció en la lista de víctimas) es el motor de la intriga de la novela.",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000328",
+        "src": "assets/fotos/P00252/daniel-mugica.jpg",
+        "titulo": "Daniel Múgica",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00252"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T11:37:05.701Z",
+    "ultima_modificacion": "2026-11-07T11:37:05.701Z",
+    "padre": "P00240",
+    "madre": "P00251",
+    "fotografia_principal": "assets/fotos/P00252/daniel-mugica.jpg",
+    "fotoPosicion": "50% 54%"
   }
 ]
