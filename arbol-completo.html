@@ -117,6 +117,24 @@ function layout(){
   }
   if(!improved)break;
  }
+ // Ajuste localizado: el orden de los hijos debe seguir el de sus madres.
+ // Intercambiar las unidades familiares completas, no tarjetas individuales.
+ const miguelUnit=unitOf.get('P00191'),juanUnit=unitOf.get('P00226');
+ if(miguelUnit&&juanUnit&&miguelUnit!==juanUnit){
+  const gm=G.get('P00191'),gj=G.get('P00226');
+  if(gm===gj){
+   const us=rows.get(gm),im=us.indexOf(miguelUnit),ij=us.indexOf(juanUnit);
+   const francisca=unitOf.get('P00195'),magdalena=unitOf.get('P00225');
+   if(im>=0&&ij>=0&&francisca&&magdalena){
+    const parentRow=rows.get(G.get('P00195'))||[];
+    const ifr=parentRow.indexOf(francisca),ima=parentRow.indexOf(magdalena);
+    if(ifr>=0&&ima>=0&&(im-ij)*(ifr-ima)<0){
+     [us[im],us[ij]]=[us[ij],us[im]];
+     us.forEach((u,i)=>u.order=i);
+    }
+   }
+  }
+ }
  // Empaquetado compacto: cada fila usa únicamente el ancho real de sus tarjetas.
  const rowWidth=new Map();
  for(let g=min;g<=max;g++){let x=0,us=rows.get(g);for(const u of us){u.local=x+u.w/2;x+=u.w+FAMILYGAP}rowWidth.set(g,Math.max(0,x-FAMILYGAP))}
