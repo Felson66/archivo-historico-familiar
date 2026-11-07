@@ -17244,5 +17244,666 @@
     "madre": "P00251",
     "fotografia_principal": "assets/fotos/P00252/daniel-mugica.jpg",
     "fotoPosicion": "50% 54%"
+  },
+  {
+    "id": "P00253",
+    "nombre": "Andres MUXICA VAZTERRICA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "20/06/1596",
+    "lugar_nacimiento": "Bergara",
+    "fecha_defuncion": "1666",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Bautizo : MH:S1360 - Acta de bautismo - Other\n\nDefunción : MH:S791 - 1621 Hidalguia de Pasqual y de 1782 de Josef Muxica - Other",
+    "datos_resumen": "Bautizo : MH:S1360 - Acta de bautismo - Other\n\nDefunción : MH:S791 - 1621 Hidalguia de Pasqual y de 1782 de Josef Muxica - Other",
+    "visible": true,
+    "conyuges": [
+      "P00254"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio alrededor de 1618\ncon Maria LARRINAGA MOYUA"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 6 de jun. de 1642\ncon Ana GARIBAY ECHABARRIA\nBergara, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:02:40.969Z",
+    "ultima_modificacion": "2026-11-07T12:02:40.969Z",
+    "padre": "P00249",
+    "madre": "P00250"
+  },
+  {
+    "id": "P00254",
+    "nombre": "Maria LARRINAGA MOYUA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "13/04/1658",
+    "lugar_defuncion": "Bergara",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00253"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:07:30.640Z",
+    "ultima_modificacion": "2026-11-07T12:07:30.640Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00255",
+    "nombre": "Juan MUXICA LARRINAGA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "28/01/1620",
+    "lugar_nacimiento": "Bergara",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00256"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 6 de feb. de 1661\ncon Maria OYARBIDE LEMYSQUETA\n\nOñati, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:08:45.424Z",
+    "ultima_modificacion": "2026-11-07T12:08:45.424Z",
+    "padre": "P00253",
+    "madre": "P00254"
+  },
+  {
+    "id": "P00256",
+    "nombre": "Maria OYARBIDE LEMYSQUETA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00255"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 6 de feb. de 1661\ncon Juan MUXICA LARRINAGA\n\nOñati, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:10:53.481Z",
+    "ultima_modificacion": "2026-11-07T12:10:53.481Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00257",
+    "nombre": "Andres MUXICA OYARBIDE",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "20/11/1662",
+    "lugar_nacimiento": "Oñati",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Bautizo : MH:S1360 - Acta de bautismo - Other",
+    "datos_resumen": "Bautizo : MH:S1360 - Acta de bautismo - Other",
+    "visible": true,
+    "conyuges": [
+      "P00258"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 21 de sept. de 1683\ncon Maria Ygnacia BARRUNDIA GAZTANETA\n\nAntzuola, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:12:49.911Z",
+    "ultima_modificacion": "2026-11-07T12:12:49.911Z",
+    "padre": "P00255",
+    "madre": "P00256"
+  },
+  {
+    "id": "P00258",
+    "nombre": "Maria Ygnacia BARRUNDIA GAZTANETA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00257"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 21 de sept. de 1683\ncon Andres MUXICA OYARBIDE\n\nAntzuola, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:14:19.475Z",
+    "ultima_modificacion": "2026-11-07T12:14:19.475Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00259",
+    "nombre": "Martin MUXICA BARRUNDIA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "05/07/1685",
+    "lugar_nacimiento": "Antzuola, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00260"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 2 de sept. de 1711\ncon Maria Josepha YRALA YRALA\n\nAntzuola, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:20:54.195Z",
+    "ultima_modificacion": "2026-11-07T12:20:54.195Z",
+    "padre": "P00257",
+    "madre": "P00258"
+  },
+  {
+    "id": "P00260",
+    "nombre": "Maria Josepha YRALA YRALA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00259"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 2 de sept. de 1711\ncon Martin MUXICA BARRUNDIA\n\nAntzuola, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:22:12.097Z",
+    "ultima_modificacion": "2026-11-07T12:22:12.097Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00261",
+    "nombre": "Diego MUXICA YRALA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "25/07/1718",
+    "lugar_nacimiento": "Antzuola, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00262"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 2 de dic. de 1742\ncon Ysabel ANCHIETA SARRAO\n\nAntzuola, Gipuzkoa, Euskadi"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 3 de may. de 1779\ncon Maria Angela ECHEVARRIA CORCOSTEGUI\n\nBergara, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:23:39.167Z",
+    "ultima_modificacion": "2026-11-07T12:23:39.167Z",
+    "padre": "P00259",
+    "madre": "P00260"
+  },
+  {
+    "id": "P00262",
+    "nombre": "Maria Angela ECHEVARRIA CORCOSTEGUI",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00261"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 3 de may. de 1779\ncon Diego MUXICA YRALA\n\nBergara, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:25:37.977Z",
+    "ultima_modificacion": "2026-11-07T12:25:37.977Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00263",
+    "nombre": "Pedro Juan MUXICA ECHEVARRIA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "29/04/1783",
+    "lugar_nacimiento": "Antzuola, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 12 de dic. de 1803\ncon Francisca Michaela YTURBE LEGORBURU\n\nBergara, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:26:51.334Z",
+    "ultima_modificacion": "2026-11-07T12:26:51.334Z",
+    "padre": "P00261",
+    "madre": "P00262"
+  },
+  {
+    "id": "P00264",
+    "nombre": "Francisca Michaela YTURBE LEGORBURU",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "18/10/1778",
+    "lugar_nacimiento": "Bergara, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 12 de dic. de 1803\ncon Pedro Juan MUXICA ECHEVARRIA\n\nBergara, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:28:24.809Z",
+    "ultima_modificacion": "2026-11-07T12:28:24.809Z"
+  },
+  {
+    "id": "P00265",
+    "nombre": "Jose Maria MUXICA YTURBE",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1806",
+    "lugar_nacimiento": "Bergara",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00266"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 28 de jul. de 1828\ncon Manuela Gregoria MUGURUZA OSORO\n\nBergara, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:29:58.186Z",
+    "ultima_modificacion": "2026-11-07T12:29:58.186Z",
+    "padre": "P00263",
+    "madre": "P00264"
+  },
+  {
+    "id": "P00266",
+    "nombre": "Manuela Gregoria MUGURUZA OSORO",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "03/06/1809",
+    "lugar_nacimiento": "Elgoibar",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00265"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 28 de jul. de 1828\ncon Jose Maria MUXICA YTURBE\n\nBergara, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:31:44.074Z",
+    "ultima_modificacion": "2026-11-07T12:31:44.074Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00267",
+    "nombre": "Antero MUXICA MUGURUZA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "03/01/1838",
+    "lugar_nacimiento": "Bergara, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00268"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 27 de jul. de 1861\ncon Maria Juana MUGICA LOMVIDE\n\nBergara, Gipuzkoa, Euskadi"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Cerificado de proclamas 27 de jul. de 1861\ncon Maria Juana MUGICA LOMVIDE\n\nOñati, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:33:09.387Z",
+    "ultima_modificacion": "2026-11-07T12:33:09.387Z",
+    "padre": "P00265",
+    "madre": "P00266"
+  },
+  {
+    "id": "P00268",
+    "nombre": "Maria Juana MUGICA LOMVIDE",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "21/05/1840",
+    "lugar_nacimiento": "Oñati, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00267"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 27 de jul. de 1861\ncon Antero MUXICA MUGURUZA\n\nBergara, Gipuzkoa, Euskadi"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Cerificado de proclamas 27 de jul. de 1861\ncon Antero MUXICA MUGURUZA\n\nOñati, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:35:05.181Z",
+    "ultima_modificacion": "2026-11-07T12:35:05.181Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00269",
+    "nombre": "Remigio MUGICA MUJICA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "Músico",
+    "estado": "documentado",
+    "notas": "Cursó estudios de canto y tenía una hermosa voz de tenor.\n\nEn 1888, a través de un diario de Pamplona se informó en Vergara sobre la convocatoria oposiciones para proveer una plaza de tenor en la Catedral de Pamplona. Se personó, junto a su hermano Isidro, presbítero y canónigo, para opositar en la capital de Navarra, se alojó en casa de Cipriano Olaso, y las obtuvo, el 3 de junio de 1888, por unanimidad del jurado, el puesto.[1][2]\n\nDe carácter sencillo y afable, pronto fue conocido y apreciado; actuó en el Casino Principal de Pamplona, de la mano de Serafín Mata Oneca, formó un pequeño orfeón que cantaba en el Centro Dominical de Obreros de la calle Calderería y apreciándose sus valiosas dotes directorial.[1]\n\nEl Orfeón Pamplonés\nEl 27 de marzo de 1891 lo nombraron director del Orfeón Pamplonés, fundado en 1865 por Conrado García Pastor, al que consagró su actividad profesional «y le proporcionó la época más brillante del coro»[3] aunque la compaginó como cantor de la Capilla de Música de la catedral.[2]\n\nEl 16 de junio de 1892 realiza la presentación en el Casino Principal de Pamplona. Tras el éxito reiterado Ese mismo año, los días 27 y 28 de agosto, en el Concurso Internacional de Orfeones que se celebró en Bilbao, alcanzándose los tres primeros premios. Fue el inicio de la carrera triunfal del conjunto de Múgica,[4] el cual quedó al frente del Orfeón Pamplonés durante cincuenta cuatro años. De 1897 a 1906 actúa en numerosas ocasiones junto con la Sinfónica de Madrid.[5",
+    "datos_resumen": "Cursó estudios de canto y tenía una hermosa voz de tenor.\n\nEn 1888, a través de un diario de Pamplona se informó en Vergara sobre la convocatoria oposiciones para proveer una plaza de tenor en la Catedral de Pamplona. Se personó, junto a su hermano Isidro, presbítero y canónigo, para opositar en la capital de Navarra, se alojó en casa de Cipriano Olaso, y las obtuvo, el 3 de junio de 1888, por unanimidad del jurado, el puesto.[1][2]\n\nDe carácter sencillo y afable, pronto fue conocido y apreciado; actuó en el Casino Principal de Pamplona, de la mano de Serafín Mata Oneca, formó un pequeño orfeón que cantaba en el Centro Dominical de Obreros de la calle Calderería y apreciándose sus valiosas dotes directorial.[1]\n\nEl Orfeón Pamplonés\nEl 27 de marzo de 1891 lo nombraron director del Orfeón Pamplonés, fundado en 1865 por Conrado García Pastor, al que consagró su actividad profesional «y le proporcionó la época más brillante del coro»[3] aunque la compaginó como cantor de la Capilla de Música de la catedral.[2]\n\nEl 16 de junio de 1892 realiza la presentación en el Casino Principal de Pamplona. Tras el éxito reiterado Ese mismo año, los días 27 y 28 de agosto, en el Concurso Internacional de Orfeones que se celebró en Bilbao, alcanzándose los tres primeros premios. Fue el inicio de la carrera triunfal del conjunto de Múgica,[4] el cual quedó al frente del Orfeón Pamplonés durante cincuenta cuatro años. De 1897 a 1906 actúa en numerosas ocasiones junto con la Sinfónica de Madrid.[5",
+    "visible": true,
+    "conyuges": [
+      "P00270"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000330",
+        "src": "assets/fotos/P00269/250px-retrato-de-remigio-mugica-ca-1892.jpg",
+        "titulo": "Retrato de Remigio Múgica (ca.1892)",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00269"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:37:09.067Z",
+    "ultima_modificacion": "2026-11-07T12:37:09.067Z",
+    "padre": "P00267",
+    "madre": "P00268",
+    "fotografia_principal": "assets/fotos/P00269/250px-retrato-de-remigio-mugica-ca-1892.jpg",
+    "fotoPosicion": "50% 30%"
+  },
+  {
+    "id": "P00270",
+    "nombre": "Juana GORRICHO LORCA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "30/03/1877",
+    "lugar_nacimiento": "Vidaurreta, Navarra",
+    "fecha_defuncion": "02/09/1943",
+    "lugar_defuncion": "Pamplona",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00269"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:39:25.295Z",
+    "ultima_modificacion": "2026-11-07T12:39:25.295Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00271",
+    "nombre": "Jose Mugica Gorricho",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "1962",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00272"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:41:13.623Z",
+    "ultima_modificacion": "2026-11-07T12:41:13.623Z",
+    "padre": "P00269",
+    "madre": "P00270"
+  },
+  {
+    "id": "P00272",
+    "nombre": "María Jesús Goñi Arregui",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00271"
+    ],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:42:46.351Z",
+    "ultima_modificacion": "2026-11-07T12:42:46.351Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00273",
+    "nombre": "Fernando Múgica Goñi",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "07/06/1946",
+    "lugar_nacimiento": "Pamplona",
+    "fecha_defuncion": "12/05/2016",
+    "lugar_defuncion": "Madrid",
+    "profesion": "Periodista de investigación, reportero de guerra y fotógrafo",
+    "estado": "documentado",
+    "notas": "Múgica recorrió el mundo durante el último cuarto del siglo XX, dejando una huella imborrable en el periodismo de campo:\n• Evacuación de Saigón (1975): Fue uno de los pocos reporteros que logró subirse a uno de los últimos helicópteros estadounidenses que abandonaron Vietnam.\n• Sáhara Occidental (1975): Cubrió el conflicto y ejerció como mentor de la célebre fotógrafa Christine Spengler.\n• Conflictos globales: Cubrió sobre el terreno acontecimientos históricos de máxima tensión como la revolución de Irán (1979), la guerra de Camboya (1979), la guerra del Golfo (1991) y las guerras bálticas.\n\n🔍 Investigación del 11-M\n\nEn su etapa final, su carrera quedó profundamente marcada por la investigación de los atentados del 11 de marzo de 2004 en Madrid:\n• Fue el autor de la extensa serie de investigación titulada \"Los agujeros negros del 11-M\", compuesta por más de treinta capítulos y publicada en El Mundo.\n• Defendió un enfoque profundamente crítico frente a las versiones oficiales, sosteniendo que existían severas contradicciones e irregularidades en las pruebas y testimonios del caso.\n\n✍️ Distinciones y Obra\n\n• Libros publicados: Destacan títulos como A tumba abierta (2006), El Orfeón Pamplonés (2015) y Pamplona concreta (2016).\n• Reconocimiento: Tras su fallecimiento a causa de un cáncer a los 69 años, recibió homenajes de sus compañeros de profesión y distinciones póstumas por parte de asociaciones de ayuda a las víctimas.",
+    "datos_resumen": "Múgica recorrió el mundo durante el último cuarto del siglo XX, dejando una huella imborrable en el periodismo de campo:\n• Evacuación de Saigón (1975): Fue uno de los pocos reporteros que logró subirse a uno de los últimos helicópteros estadounidenses que abandonaron Vietnam.\n• Sáhara Occidental (1975): Cubrió el conflicto y ejerció como mentor de la célebre fotógrafa Christine Spengler.\n• Conflictos globales: Cubrió sobre el terreno acontecimientos históricos de máxima tensión como la revolución de Irán (1979), la guerra de Camboya (1979), la guerra del Golfo (1991) y las guerras bálticas.\n\n🔍 Investigación del 11-M\n\nEn su etapa final, su carrera quedó profundamente marcada por la investigación de los atentados del 11 de marzo de 2004 en Madrid:\n• Fue el autor de la extensa serie de investigación titulada \"Los agujeros negros del 11-M\", compuesta por más de treinta capítulos y publicada en El Mundo.\n• Defendió un enfoque profundamente crítico frente a las versiones oficiales, sosteniendo que existían severas contradicciones e irregularidades en las pruebas y testimonios del caso.\n\n✍️ Distinciones y Obra\n\n• Libros publicados: Destacan títulos como A tumba abierta (2006), El Orfeón Pamplonés (2015) y Pamplona concreta (2016).\n• Reconocimiento: Tras su fallecimiento a causa de un cáncer a los 69 años, recibió homenajes de sus compañeros de profesión y distinciones póstumas por parte de asociaciones de ayuda a las víctimas.",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000331",
+        "src": "assets/fotos/P00273/fernando-mugica-goni.jpg",
+        "titulo": "Fernando Mugica Goñi",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00273"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-07T12:45:34.540Z",
+    "ultima_modificacion": "2026-11-07T12:45:34.540Z",
+    "padre": "P00271",
+    "madre": "P00272",
+    "fotografia_principal": "assets/fotos/P00273/fernando-mugica-goni.jpg",
+    "fotoPosicion": "50% 11%"
   }
 ]
