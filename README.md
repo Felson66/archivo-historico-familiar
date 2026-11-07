@@ -33,3 +33,5 @@ La administración debe realizarse con Chrome o Edge en un equipo que permita se
 ## Estado
 
 **v4.1.1 estable**, validada con incorporación real de personas, relaciones, fotografías y documentos.
+
+Actualización de publicación de Raíces
