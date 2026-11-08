@@ -17754,14 +17754,14 @@
     "nombre_conocido": "",
     "sexo": "hombre",
     "situacion_vital": "fallecido",
-    "fecha_nacimiento": "Cursó estudios de canto y tenía una hermosa voz de tenor.En 1888, a través de un diario de Pamplona se informó en Vergara sobre la convocatoria oposiciones para proveer una plaza de tenor en la Catedral de Pamplona. Se personó, junto a su hermano Isidro, presbítero y canónigo, para opositar en la capital de Navarra, se alojó en casa de Cipriano Olaso, y las obtuvo, el 3 de junio de 1888, por unanimidad del jurado, el puesto.[1][2]De carácter sencillo y afable, pronto fue conocido y apreciado; actuó en el Casino Principal de Pamplona, de la mano de Serafín Mata Oneca, formó un pequeño orfeón que cantaba en el Centro Dominical de Obreros de la calle Calderería y apreciándose sus valiosas dotes directorial.[1]El Orfeón PamplonésEl 27 de marzo de 1891 lo nombraron director del Orfeón Pamplonés, fundado en 1865 por Conrado García Pastor, al que consagró su actividad profesional «y le proporcionó la época más brillante del coro»[3] aunque la compaginó como cantor de la Capilla de Música de la catedral.[2]El 16 de junio de 1892 realiza la presentación en el Casino Principal de Pamplona. Tras el éxito reiterado Ese mismo año, los días 27 y 28 de agosto, en el Concurso Internacional de Orfeones que se celebró en Bilbao, alcanzándose los tres primeros premios. Fue el inicio de la carrera triunfal del conjunto de Múgica,[4] el cual quedó al frente del Orfeón Pamplonés durante cincuenta cuatro años. De 1897 a 1906 actúa en numerosas ocasiones junto con la Sinfónica de Madrid.[5",
-    "lugar_nacimiento": "",
-    "fecha_defuncion": "",
-    "lugar_defuncion": "",
+    "fecha_nacimiento": "29/09/1866",
+    "lugar_nacimiento": "Bergara",
+    "fecha_defuncion": "01/05/1958",
+    "lugar_defuncion": "Pamplona",
     "profesion": "Músico",
     "estado": "documentado",
-    "notas": "",
-    "datos_resumen": "",
+    "notas": "Cursó estudios de canto y tenía una hermosa voz de tenor.En 1888, a través de un diario de Pamplona se informó en Vergara sobre la convocatoria oposiciones para proveer una plaza de tenor en la Catedral de Pamplona. Se personó, junto a su hermano Isidro, presbítero y canónigo, para opositar en la capital de Navarra, se alojó en casa de Cipriano Olaso, y las obtuvo, el 3 de junio de 1888, por unanimidad del jurado, el puesto.[1][2]De carácter sencillo y afable, pronto fue conocido y apreciado; actuó en el Casino Principal de Pamplona, de la mano de Serafín Mata Oneca, formó un pequeño orfeón que cantaba en el Centro Dominical de Obreros de la calle Calderería y apreciándose sus valiosas dotes directorial.[1]El Orfeón PamplonésEl 27 de marzo de 1891 lo nombraron director del Orfeón Pamplonés, fundado en 1865 por Conrado García Pastor, al que consagró su actividad profesional «y le proporcionó la época más brillante del coro»[3] aunque la compaginó como cantor de la Capilla de Música de la catedral.[2]El 16 de junio de 1892 realiza la presentación en el Casino Principal de Pamplona. Tras el éxito reiterado Ese mismo año, los días 27 y 28 de agosto, en el Concurso Internacional de Orfeones que se celebró en Bilbao, alcanzándose los tres primeros premios. Fue el inicio de la carrera triunfal del conjunto de Múgica,[4] el cual quedó al frente del Orfeón Pamplonés durante cincuenta cuatro años. De 1897 a 1906 actúa en numerosas ocasiones junto con la Sinfónica de Madrid",
+    "datos_resumen": "Cursó estudios de canto y tenía una hermosa voz de tenor.En 1888, a través de un diario de Pamplona se informó en Vergara sobre la convocatoria oposiciones para proveer una plaza de tenor en la Catedral de Pamplona. Se personó, junto a su hermano Isidro, presbítero y canónigo, para opositar en la capital de Navarra, se alojó en casa de Cipriano Olaso, y las obtuvo, el 3 de junio de 1888, por unanimidad del jurado, el puesto.[1][2]De carácter sencillo y afable, pronto fue conocido y apreciado; actuó en el Casino Principal de Pamplona, de la mano de Serafín Mata Oneca, formó un pequeño orfeón que cantaba en el Centro Dominical de Obreros de la calle Calderería y apreciándose sus valiosas dotes directorial.[1]El Orfeón PamplonésEl 27 de marzo de 1891 lo nombraron director del Orfeón Pamplonés, fundado en 1865 por Conrado García Pastor, al que consagró su actividad profesional «y le proporcionó la época más brillante del coro»[3] aunque la compaginó como cantor de la Capilla de Música de la catedral.[2]El 16 de junio de 1892 realiza la presentación en el Casino Principal de Pamplona. Tras el éxito reiterado Ese mismo año, los días 27 y 28 de agosto, en el Concurso Internacional de Orfeones que se celebró en Bilbao, alcanzándose los tres primeros premios. Fue el inicio de la carrera triunfal del conjunto de Múgica,[4] el cual quedó al frente del Orfeón Pamplonés durante cincuenta cuatro años. De 1897 a 1906 actúa en numerosas ocasiones junto con la Sinfónica de Madrid",
     "visible": true,
     "conyuges": [
       "P00270"
@@ -17910,5 +17910,44 @@
     "madre": "P00272",
     "fotografia_principal": "assets/fotos/P00273/fernando-mugica-goni.jpg",
     "fotoPosicion": "50% 11%"
+  },
+  {
+    "id": "P00274",
+    "nombre": "Fernando Mugica Soto",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "vivo",
+    "fecha_nacimiento": "1998",
+    "lugar_nacimiento": "Donostia",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000333",
+        "src": "assets/fotos/P00274/fernando-mugica-soto.jpg",
+        "titulo": "Fernando Mugica Soto",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00274"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-08T11:06:03.735Z",
+    "ultima_modificacion": "2026-11-08T11:06:03.736Z",
+    "fotografia_principal": "assets/fotos/P00274/fernando-mugica-soto.jpg",
+    "fotoPosicion": "50% 50%",
+    "padre": "P00243",
+    "madre": ""
   }
 ]
