@@ -17063,19 +17063,51 @@
     "lugar_defuncion": "Beasain-Astigarreta, Gipuzkoa, Euskadi",
     "profesion": "",
     "estado": "documentado",
-    "notas": "Defunción : MH:S791 - 1621 Hidalguia de Pasqual y de 1782 de Josef Muxica - Other",
-    "datos_resumen": "Defunción : MH:S791 - 1621 Hidalguia de Pasqual y de 1782 de Josef Muxica - Other",
+    "notas": "El Caserío Solar de Muxika en Astigarreta\n\nLa investigación histórica confirma que tu antepasado Joan Muxica aparece firmando y representado formalmente como vecino y dueño legítimo de la casa solar de Muxica en Astigarreta en escrituras que datan de 1555 y 1565.\n• El Caserío: El caserío original Muxika (Mugica) en el barrio de Astigarreta (Beasain) todavía existe. Es una joya de la arquitectura vasca tradicional; los peritos arquitectónicos han constatado que la estructura de su desván cuenta con ensambles de \"cola de golondrina\" y pasadores de madera característicos y exclusivos de las construcciones guipuzcoanas del siglo XVI, coincidiendo exactamente con la época en la que vivió Juan.\n\nLinaje y Matrimonios Documentados\n\nLos registros parroquiales y los pleitos de hidalguía de la época (como uno muy célebre de 1587) aportan luz sobre sus vínculos familiares directos:\n• Padres: Según los árboles de la zona recopilados en Geneanet, Juan era hijo de Juan Muxica (de Aya) y de Magdalena Ysasaga.\n• Matrimonios: Tu antepasado estuvo casado dos veces. Su primera esposa fue Mari Juana de Goicoechea (con quien tuvo a sus primeros hijos: Domingo, Martín, Pedro y María). Al enviudar, contrajo segundas nupcias con Catalina de Lasa (hija de Martín de Lassa y María de Ynsausti), unión de la cual nacieron Joanes, María Joaniz, Catalina y Domingo.\n\nUna curiosidad histórica compartida\n\nEl linaje de la casa solar de Muxika en Astigarreta saltó a la escena pública internacional hace unos años. Diversos historiadores vascos realizaron una exhaustiva investigación para rastrear los orígenes de José \"Pepe\" Mujica (expresidente de Uruguay). Los análisis documentales demostraron que el expresidente no descendía de la rama vizcaína de Muxika como se creía erróneamente, sino exactamente del mismo caserío de Astigarreta de donde proviene tu árbol familiar. Su antepasado directo (Astigarreta, 1842) comparte la misma raíz y el mismo solar que tu ancestro Juan.",
+    "datos_resumen": "El Caserío Solar de Muxika en Astigarreta\n\nLa investigación histórica confirma que tu antepasado Joan Muxica aparece firmando y representado formalmente como vecino y dueño legítimo de la casa solar de Muxica en Astigarreta en escrituras que datan de 1555 y 1565.\n• El Caserío: El caserío original Muxika (Mugica) en el barrio de Astigarreta (Beasain) todavía existe. Es una joya de la arquitectura vasca tradicional; los peritos arquitectónicos han constatado que la estructura de su desván cuenta con ensambles de \"cola de golondrina\" y pasadores de madera característicos y exclusivos de las construcciones guipuzcoanas del siglo XVI, coincidiendo exactamente con la época en la que vivió Juan.\n\nLinaje y Matrimonios Documentados\n\nLos registros parroquiales y los pleitos de hidalguía de la época (como uno muy célebre de 1587) aportan luz sobre sus vínculos familiares directos:\n• Padres: Según los árboles de la zona recopilados en Geneanet, Juan era hijo de Juan Muxica (de Aya) y de Magdalena Ysasaga.\n• Matrimonios: Tu antepasado estuvo casado dos veces. Su primera esposa fue Mari Juana de Goicoechea (con quien tuvo a sus primeros hijos: Domingo, Martín, Pedro y María). Al enviudar, contrajo segundas nupcias con Catalina de Lasa (hija de Martín de Lassa y María de Ynsausti), unión de la cual nacieron Joanes, María Joaniz, Catalina y Domingo.\n\nUna curiosidad histórica compartida\n\nEl linaje de la casa solar de Muxika en Astigarreta saltó a la escena pública internacional hace unos años. Diversos historiadores vascos realizaron una exhaustiva investigación para rastrear los orígenes de José \"Pepe\" Mujica (expresidente de Uruguay). Los análisis documentales demostraron que el expresidente no descendía de la rama vizcaína de Muxika como se creía erróneamente, sino exactamente del mismo caserío de Astigarreta de donde proviene tu árbol familiar. Su antepasado directo (Astigarreta, 1842) comparte la misma raíz y el mismo solar que tu ancestro Juan.",
     "visible": true,
     "padres": [],
     "conyuges": [
       "P00248"
     ],
     "hijos": [],
-    "hechos": [],
-    "fotografias": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Defunción : MH:S791 - 1621 Hidalguia de Pasqual y de 1782 de Josef Muxica - Other"
+      }
+    ],
+    "fotografias": [
+      {
+        "id": "F000334",
+        "src": "assets/fotos/P00247/caserio-1980.jpg",
+        "titulo": "El Caserío Solar de Muxika en Astigarreta en 1980",
+        "fecha": "",
+        "lugar": "Beasain",
+        "descripcion": "El caserío original Muxika (Mugica) en el barrio de Astigarreta (Beasain) todavía existe. Es una joya de la arquitectura vasca tradicional; los peritos arquitectónicos han constatado que la estructura de su desván cuenta con ensambles de \"cola de golondrina\" y pasadores de madera característicos y exclusivos de las construcciones guipuzcoanas del siglo XVI",
+        "etiquetas": [],
+        "personas": [
+          "P00247"
+        ]
+      },
+      {
+        "id": "F000335",
+        "src": "assets/fotos/P00247/caserio-actual.jpg",
+        "titulo": "Caserio Foto mas actual",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00247"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-11-06T12:14:59.844Z",
-    "ultima_modificacion": "2026-11-06T12:14:59.844Z"
+    "ultima_modificacion": "2026-11-06T12:14:59.844Z",
+    "fotografia_principal": "assets/fotos/P00247/caserio-1980.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00248",
