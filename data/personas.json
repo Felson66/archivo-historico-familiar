@@ -18239,16 +18239,14 @@
     "lugar_nacimiento": "Gatika, Torre Butón",
     "fecha_defuncion": "1435",
     "lugar_defuncion": "San Vicente",
-    "profesion": "",
+    "profesion": "VI Señor de la casa Butron.",
     "estado": "documentado",
     "notas": "1. El padre: Gonzalo Gómez de Butrón\n\n• Señor de la Casa de Butrón: Fue el jefe supremo del linaje de Butrón (cuyo imponente castillo sigue en pie en Gatika, Vizcaya).\n• Líder del bando Oñacino: En las sangrientas guerras de bandos que asolaron el País Vasco en la Baja Edad Media, Gonzalo Gómez de Butrón fue la cabeza visible y el caudillo militar de los Oñacinos en Vizcaya, enfrentándose constantemente al linaje de los Avendaño (líderes del bando Gamboíno).\n\n2. La madre: María Alonso de Múxica\n\n• Heredera del solar de Múxica: Era hija de Juan Alonso de Múxica (Señor de Múxica y Aramayona) y de Juana González de Agüero.\n• El origen del apellido: Al no tener hermanos varones que heredaran el mayorazgo, María Alonso aportó al matrimonio el señorío de la Casa de Múxica y el valle de Aramayona.\n\n3. El acuerdo familiar (Por qué el fraile se llamaba Múxica y no Butrón)\n\nEl matrimonio entre Gonzalo Gómez de Butrón y María Alonso de Múxica unió dos fortunas inmensas, pero pactaron que los títulos no se fundieran en una sola persona para mantener ambas casas vivas:\n• El primogénito (Fray Clímaco): Nació como Juan Alonso y recibió el apellido y la herencia materna, convirtiéndose en Señor de Múxica y Aramayona. Como ya sabes, tras participar en las guerras de bandos y tener sus hijos naturales antes de profesar, renunció al mundo en 1425 y entró de franciscano en Bermeo.\n• El segundo hijo (Gómez González): Heredó originalmente la Casa paterna de Butrón, pero cuando su hermano mayor se metió a fraile, acabó reuniendo ambos señoríos (Butrón y Múxica) bajo su mando.",
     "datos_resumen": "1. El padre: Gonzalo Gómez de Butrón\n\n• Señor de la Casa de Butrón: Fue el jefe supremo del linaje de Butrón (cuyo imponente castillo sigue en pie en Gatika, Vizcaya).\n• Líder del bando Oñacino: En las sangrientas guerras de bandos que asolaron el País Vasco en la Baja Edad Media, Gonzalo Gómez de Butrón fue la cabeza visible y el caudillo militar de los Oñacinos en Vizcaya, enfrentándose constantemente al linaje de los Avendaño (líderes del bando Gamboíno).\n\n2. La madre: María Alonso de Múxica\n\n• Heredera del solar de Múxica: Era hija de Juan Alonso de Múxica (Señor de Múxica y Aramayona) y de Juana González de Agüero.\n• El origen del apellido: Al no tener hermanos varones que heredaran el mayorazgo, María Alonso aportó al matrimonio el señorío de la Casa de Múxica y el valle de Aramayona.\n\n3. El acuerdo familiar (Por qué el fraile se llamaba Múxica y no Butrón)\n\nEl matrimonio entre Gonzalo Gómez de Butrón y María Alonso de Múxica unió dos fortunas inmensas, pero pactaron que los títulos no se fundieran en una sola persona para mantener ambas casas vivas:\n• El primogénito (Fray Clímaco): Nació como Juan Alonso y recibió el apellido y la herencia materna, convirtiéndose en Señor de Múxica y Aramayona. Como ya sabes, tras participar en las guerras de bandos y tener sus hijos naturales antes de profesar, renunció al mundo en 1425 y entró de franciscano en Bermeo.\n• El segundo hijo (Gómez González): Heredó originalmente la Casa paterna de Butrón, pero cuando su hermano mayor se metió a fraile, acabó reuniendo ambos señoríos (Butrón y Múxica) bajo su mando.",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00285"
     ],
-    "hijos": [],
     "hechos": [
       {
         "tipo": "documentado",
@@ -18273,7 +18271,9 @@
     "fecha_creacion": "2026-11-09T17:46:58.447Z",
     "ultima_modificacion": "2026-11-09T17:46:58.447Z",
     "fotografia_principal": "assets/fotos/P00284/gl-castillobutron.jpg",
-    "fotoPosicion": "50% 50%"
+    "fotoPosicion": "50% 50%",
+    "padre": "P00290",
+    "madre": "P00291"
   },
   {
     "id": "P00285",
@@ -18311,8 +18311,8 @@
     "documentos": [],
     "fecha_creacion": "2026-11-09T17:53:42.751Z",
     "ultima_modificacion": "2026-11-09T17:53:42.751Z",
-    "padre": "",
-    "madre": "",
+    "padre": "P00288",
+    "madre": "P00289",
     "fotografia_principal": "assets/fotos/P00285/torre-muxica.jpg",
     "fotoPosicion": "50% 50%"
   },
@@ -18370,6 +18370,134 @@
     "documentos": [],
     "fecha_creacion": "2026-11-09T18:15:04.422Z",
     "ultima_modificacion": "2026-11-09T18:15:04.422Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00288",
+    "nombre": "Juan Alonso I \"El Viejo\" De MUXICA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1335",
+    "lugar_nacimiento": "Torre Muxica- Muxica- Bizkaia",
+    "fecha_defuncion": "1415",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00289"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Nacimiento : MH:S2447 - Diccionario Geografico-Historico de España\n\nDefunción : MH:S2422 - Linajes urbanos y Parientes Mayores en Guipuzcoa de Alvaro Aragon Ruano"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-09T20:09:16.394Z",
+    "ultima_modificacion": "2026-11-09T20:09:16.394Z"
+  },
+  {
+    "id": "P00289",
+    "nombre": "Juana GONZALEZ DE AGÜERO",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Agüero, Marina de Cudeyo, Cantabria",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00288"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "MH:S2515 - Bienandanzas e fortunas de Lope Garcia Salazar libro 21 - MH:R2"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-09T20:10:48.784Z",
+    "ultima_modificacion": "2026-11-09T20:10:48.784Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00290",
+    "nombre": "Gonzalo Gomez I De BUTRON \" EL VIEJO \" V SEÑOR DE LA CASA BUTRON",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1340",
+    "lugar_nacimiento": "Butron",
+    "fecha_defuncion": "1429",
+    "lugar_defuncion": "",
+    "profesion": "Don V Señor de la casa Butron.",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00291"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Nacimiento : MH:S2439 - Revista Hidalguia n°124, (Los Señores de Ercilla)\n\nDefunción : MH:S2440 - Historia genealogica de la casa de Lara"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 1375\ncon Elvira Sánchez De ZAMUDIO RIVAS SEÑORA DE YBARGÜEN"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-09T20:14:40.714Z",
+    "ultima_modificacion": "2026-11-09T20:14:40.714Z"
+  },
+  {
+    "id": "P00291",
+    "nombre": "Elvira Sánchez De ZAMUDIO RIVAS SEÑORA DE YBARGÜEN",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Zamudio",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00290"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio1375\ncon Gonzalo Gomez I De BUTRON \" EL VIEJO \" V SEÑOR DE LA CASA BUTRON"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-09T20:17:25.818Z",
+    "ultima_modificacion": "2026-11-09T20:17:25.818Z",
     "padre": "",
     "madre": ""
   }
