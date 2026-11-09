@@ -18331,7 +18331,9 @@
     "notas": "Heredó originalmente la Casa paterna de Butrón, pero cuando su hermano mayor se metió a fraile, acabó reuniendo ambos señoríos (Butrón y Múxica) bajo su mando.",
     "datos_resumen": "Heredó originalmente la Casa paterna de Butrón, pero cuando su hermano mayor se metió a fraile, acabó reuniendo ambos señoríos (Butrón y Múxica) bajo su mando.",
     "visible": true,
-    "conyuges": [],
+    "conyuges": [
+      "P00287"
+    ],
     "hechos": [
       {
         "tipo": "documentado",
@@ -18360,13 +18362,15 @@
     "notas": "De su matrimonio con Elvira Sánchez de Leyva, nacieron cuatro hijos, entre los cuales se encuentran: Juan Alonso, VIII señor de la Casa de Butrón, Gonzalo Gómez, Ochoa Gómez y Juana de Butrón que contrajo matrimonio el 18 de enero de 1450 con Martín Ruiz de Gamboa y Olaso, señor de la Casa de Olaso de quienes, entre otros, descienden en línea de parentesco directa los señores de la Casa de Emparan, de las nobles villas de Azpeitia y Ermua.",
     "datos_resumen": "De su matrimonio con Elvira Sánchez de Leyva, nacieron cuatro hijos, entre los cuales se encuentran: Juan Alonso, VIII señor de la Casa de Butrón, Gonzalo Gómez, Ochoa Gómez y Juana de Butrón que contrajo matrimonio el 18 de enero de 1450 con Martín Ruiz de Gamboa y Olaso, señor de la Casa de Olaso de quienes, entre otros, descienden en línea de parentesco directa los señores de la Casa de Emparan, de las nobles villas de Azpeitia y Ermua.",
     "visible": true,
-    "padres": [],
-    "conyuges": [],
-    "hijos": [],
+    "conyuges": [
+      "P00286"
+    ],
     "hechos": [],
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-11-09T18:15:04.422Z",
-    "ultima_modificacion": "2026-11-09T18:15:04.422Z"
+    "ultima_modificacion": "2026-11-09T18:15:04.422Z",
+    "padre": "",
+    "madre": ""
   }
 ]
