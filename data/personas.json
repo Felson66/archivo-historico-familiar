@@ -18315,5 +18315,58 @@
     "madre": "",
     "fotografia_principal": "assets/fotos/P00285/torre-muxica.jpg",
     "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00286",
+    "nombre": "Gomez Gonzalez III MUXICA Y BUTRON VII SR. DE LA CASA BUTRON",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Butrón",
+    "fecha_defuncion": "22/06/1448",
+    "lugar_defuncion": "Monasterio San Francisco en Bermeo",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Heredó originalmente la Casa paterna de Butrón, pero cuando su hermano mayor se metió a fraile, acabó reuniendo ambos señoríos (Butrón y Múxica) bajo su mando.",
+    "datos_resumen": "Heredó originalmente la Casa paterna de Butrón, pero cuando su hermano mayor se metió a fraile, acabó reuniendo ambos señoríos (Butrón y Múxica) bajo su mando.",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Gomez Gonzalez III MUXICA Y BUTRON VII SR. DE LA CASA BUTRON"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-09T18:11:23.234Z",
+    "ultima_modificacion": "2026-11-09T18:11:23.234Z",
+    "padre": "P00284",
+    "madre": "P00285"
+  },
+  {
+    "id": "P00287",
+    "nombre": "Elvira Sanchez De LEIBA Y GUEVARA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "De su matrimonio con Elvira Sánchez de Leyva, nacieron cuatro hijos, entre los cuales se encuentran: Juan Alonso, VIII señor de la Casa de Butrón, Gonzalo Gómez, Ochoa Gómez y Juana de Butrón que contrajo matrimonio el 18 de enero de 1450 con Martín Ruiz de Gamboa y Olaso, señor de la Casa de Olaso de quienes, entre otros, descienden en línea de parentesco directa los señores de la Casa de Emparan, de las nobles villas de Azpeitia y Ermua.",
+    "datos_resumen": "De su matrimonio con Elvira Sánchez de Leyva, nacieron cuatro hijos, entre los cuales se encuentran: Juan Alonso, VIII señor de la Casa de Butrón, Gonzalo Gómez, Ochoa Gómez y Juana de Butrón que contrajo matrimonio el 18 de enero de 1450 con Martín Ruiz de Gamboa y Olaso, señor de la Casa de Olaso de quienes, entre otros, descienden en línea de parentesco directa los señores de la Casa de Emparan, de las nobles villas de Azpeitia y Ermua.",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-09T18:15:04.422Z",
+    "ultima_modificacion": "2026-11-09T18:15:04.422Z"
   }
 ]
