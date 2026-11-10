@@ -18912,11 +18912,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00300"
     ],
-    "hijos": [],
     "hechos": [
       {
         "tipo": "documentado",
@@ -18941,7 +18939,9 @@
     "fecha_creacion": "2026-11-10T13:39:11.781Z",
     "ultima_modificacion": "2026-11-10T13:39:11.781Z",
     "fotografia_principal": "assets/fotos/P00299/casa-butron.jpg",
-    "fotoPosicion": "50% 50%"
+    "fotoPosicion": "50% 50%",
+    "padre": "P00307",
+    "madre": "P00308"
   },
   {
     "id": "P00300",
@@ -19238,6 +19238,87 @@
     "ultima_modificacion": "2026-11-10T14:44:38.943Z",
     "fotografia_principal": "assets/fotos/P00306/escultura-de-beatriz-de-suabia.jpg",
     "fotoPosicion": "50% 50%",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00307",
+    "nombre": "Juan Perez O Juan Lopez De BUTRON I SEÑOR DE LA CASA BUTRON",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1210",
+    "lugar_nacimiento": "Ajangiz, Bizkaia, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "Primer Señor de la casa Butron",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00308"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Nacimiento : MH:S2484 - La Torre de Villela (Revista Hidalguia n° 6) - MH:R2"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio\ncon Emilia De ESTRADA"
+      }
+    ],
+    "fotografias": [
+      {
+        "id": "F000359",
+        "src": "assets/fotos/P00307/casa-butron.jpg",
+        "titulo": "Casa Butron",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00307"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T19:34:38.228Z",
+    "ultima_modificacion": "2026-11-10T19:34:38.228Z",
+    "fotografia_principal": "assets/fotos/P00307/casa-butron.jpg",
+    "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00308",
+    "nombre": "Emilia De ESTRADA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Asturias",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00307"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio\ncon Juan Perez O Juan Lopez De BUTRON I SEÑOR DE LA CASA BUTRON"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T19:36:30.762Z",
+    "ultima_modificacion": "2026-11-10T19:36:30.762Z",
     "padre": "",
     "madre": ""
   }
