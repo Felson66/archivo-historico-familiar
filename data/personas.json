@@ -18610,7 +18610,9 @@
     "datos_resumen": "Don Juan Manuel (1282-1348)\nBiografía\nEra sobrino de Alfonso X el Sabio y nieto de Fernando III el Santo. Fue instruido en el conocimiento de las artes marciales, del latín y de la historia e intervino activamente en las luchas nobiliarias durante la minoría de edad de Fernando IV y Alfonso XI.\n\nEntre lo que expresa en su obra literaria y las intrigas políticas que vivió intensamente se manifiesta una fuerte contradicción. Contrasta a su vez el orgullo que sentía por su linaje y de su poderío social y económico con la humildad que, como escritor, manifiesta en algunas ocasiones. Participa valientemente en batallas contra los moros y en 1348 muere y es enterrado en el monasterio de Peñafiel (Valladolid).",
     "visible": true,
     "padres": [],
-    "conyuges": [],
+    "conyuges": [
+      "P00295"
+    ],
     "hijos": [],
     "hechos": [
       {
@@ -18669,9 +18671,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
-    "conyuges": [],
-    "hijos": [],
+    "conyuges": [
+      "P00294"
+    ],
     "hechos": [
       {
         "tipo": "documentado",
@@ -18681,6 +18683,8 @@
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-11-10T08:13:50.076Z",
-    "ultima_modificacion": "2026-11-10T08:13:50.076Z"
+    "ultima_modificacion": "2026-11-10T08:13:50.076Z",
+    "padre": "",
+    "madre": ""
   }
 ]
