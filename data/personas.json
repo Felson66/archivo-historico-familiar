@@ -18623,10 +18623,25 @@
         "texto": "MH:S2438 - Historia General del Señorio de Bizcaya de Jaime de Labayru"
       }
     ],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000349",
+        "src": "assets/fotos/P00292/escudo-heraldico-de-avendano.png",
+        "titulo": "Escudo heráldico de Avendaño",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00292"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-11-10T08:00:47.334Z",
-    "ultima_modificacion": "2026-11-10T08:00:47.334Z"
+    "ultima_modificacion": "2026-11-10T08:00:47.334Z",
+    "fotografia_principal": "assets/fotos/P00292/escudo-heraldico-de-avendano.png",
+    "fotoPosicion": "50% 8%"
   },
   {
     "id": "P00293",
@@ -18860,11 +18875,26 @@
         "texto": "Matrimonio\ncon Gomez Gonzalez De BUTRON Y BALMASEDA III SEÑOR DE LA CASA BUTRON"
       }
     ],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000350",
+        "src": "assets/fotos/P00298/escudo-heraldico-de-avendano.png",
+        "titulo": "Escudo heráldico de Avendaño",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00298"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-11-10T10:30:16.281Z",
     "ultima_modificacion": "2026-11-10T10:30:16.281Z",
     "padre": "",
-    "madre": ""
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00298/escudo-heraldico-de-avendano.png",
+    "fotoPosicion": "50% 4%"
   }
 ]
