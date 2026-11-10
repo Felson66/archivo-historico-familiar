@@ -18606,8 +18606,8 @@
     "lugar_defuncion": "España, Cordoba",
     "profesion": "Autor de \"El Conde Lucanor\"",
     "estado": "pendiente",
-    "notas": "",
-    "datos_resumen": "",
+    "notas": "Don Juan Manuel (1282-1348)\nBiografía\nEra sobrino de Alfonso X el Sabio y nieto de Fernando III el Santo. Fue instruido en el conocimiento de las artes marciales, del latín y de la historia e intervino activamente en las luchas nobiliarias durante la minoría de edad de Fernando IV y Alfonso XI.\n\nEntre lo que expresa en su obra literaria y las intrigas políticas que vivió intensamente se manifiesta una fuerte contradicción. Contrasta a su vez el orgullo que sentía por su linaje y de su poderío social y económico con la humildad que, como escritor, manifiesta en algunas ocasiones. Participa valientemente en batallas contra los moros y en 1348 muere y es enterrado en el monasterio de Peñafiel (Valladolid).",
+    "datos_resumen": "Don Juan Manuel (1282-1348)\nBiografía\nEra sobrino de Alfonso X el Sabio y nieto de Fernando III el Santo. Fue instruido en el conocimiento de las artes marciales, del latín y de la historia e intervino activamente en las luchas nobiliarias durante la minoría de edad de Fernando IV y Alfonso XI.\n\nEntre lo que expresa en su obra literaria y las intrigas políticas que vivió intensamente se manifiesta una fuerte contradicción. Contrasta a su vez el orgullo que sentía por su linaje y de su poderío social y económico con la humildad que, como escritor, manifiesta en algunas ocasiones. Participa valientemente en batallas contra los moros y en 1348 muere y es enterrado en el monasterio de Peñafiel (Valladolid).",
     "visible": true,
     "padres": [],
     "conyuges": [],
@@ -18636,9 +18636,9 @@
     ],
     "fotografias": [
       {
-        "id": "F000340",
-        "src": "assets/fotos/P00294/don-juan-manuel.jpg",
-        "titulo": "Don Juan Manuel",
+        "id": "F000341",
+        "src": "assets/fotos/P00294/juan-manuel.jpg",
+        "titulo": "Juan Manuel",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
@@ -18651,8 +18651,8 @@
     "documentos": [],
     "fecha_creacion": "2026-11-10T08:06:33.037Z",
     "ultima_modificacion": "2026-11-10T08:06:33.037Z",
-    "fotografia_principal": "assets/fotos/P00294/don-juan-manuel.jpg",
-    "fotoPosicion": "50% 50%"
+    "fotografia_principal": "assets/fotos/P00294/juan-manuel.jpg",
+    "fotoPosicion": "50% 25%"
   },
   {
     "id": "P00295",
