@@ -18415,11 +18415,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00289"
     ],
-    "hijos": [],
     "hechos": [
       {
         "tipo": "documentado",
@@ -18429,7 +18427,9 @@
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-11-09T20:09:16.394Z",
-    "ultima_modificacion": "2026-11-09T20:09:16.394Z"
+    "ultima_modificacion": "2026-11-09T20:09:16.394Z",
+    "padre": "P00292",
+    "madre": "P00293"
   },
   {
     "id": "P00289",
@@ -18527,5 +18527,160 @@
     "ultima_modificacion": "2026-11-09T20:17:25.818Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00292",
+    "nombre": "Juan Galindez AVENDAÑO I SEÑOR DE MUXICA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1310",
+    "lugar_nacimiento": "Urkizu, Bizkaia, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00293"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "MH:S2438 - Historia General del Señorio de Bizcaya de Jaime de Labayru"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T08:00:47.334Z",
+    "ultima_modificacion": "2026-11-10T08:00:47.334Z"
+  },
+  {
+    "id": "P00293",
+    "nombre": "Juana Manuel Ibañez VILLENA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1315",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00292"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio\ncon Juan Galindez AVENDAÑO I SEÑOR DE MUXICA"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Nacimiento : MH:S2471 - WIKIPEDIA - MH:R2"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T08:01:56.935Z",
+    "ultima_modificacion": "2026-11-10T08:01:56.935Z",
+    "padre": "P00294",
+    "madre": "P00295"
+  },
+  {
+    "id": "P00294",
+    "nombre": "Juan Manuel SEÑOR DE ESCALONA Y DE VILLENA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "05/05/1282",
+    "lugar_nacimiento": "Escalona, España, Toledo",
+    "fecha_defuncion": "01/07/1348",
+    "lugar_defuncion": "España, Cordoba",
+    "profesion": "Autor de \"El Conde Lucanor\"",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 29 de nov. de 1299\ncon Isabel De MALLORCA Y DE FOIX\nPerpiñan, France"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 2 de abr. de 1312\ncon Constanza De ARAGON Y DE ANJOU\n\nJativa, España"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio ene. de 1329\ncon Blanca Nuñez De LA CERDA Y DE LARA"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio \nCatalina Avilés"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Entierro\nConvento de Predicadoresde Peñafiel, Valladolid"
+      }
+    ],
+    "fotografias": [
+      {
+        "id": "F000340",
+        "src": "assets/fotos/P00294/don-juan-manuel.jpg",
+        "titulo": "Don Juan Manuel",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00294"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T08:06:33.037Z",
+    "ultima_modificacion": "2026-11-10T08:06:33.037Z",
+    "fotografia_principal": "assets/fotos/P00294/don-juan-manuel.jpg",
+    "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00295",
+    "nombre": "Catalina AVILES",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Nacimiento : MH:S2471 - WIKIPEDIA - MH:R2"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T08:13:50.076Z",
+    "ultima_modificacion": "2026-11-10T08:13:50.076Z"
   }
 ]
