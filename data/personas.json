@@ -18222,12 +18222,39 @@
     "visible": true,
     "conyuges": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000338",
+        "src": "assets/fotos/P00283/mugica-y-butron.jpg",
+        "titulo": "Escudo partido heráldico de la unión familiar (Butrón-Muxica)",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00283"
+        ]
+      },
+      {
+        "id": "F000339",
+        "src": "assets/fotos/P00283/claustro-san-francisco-de-bermeo.jpg",
+        "titulo": "Claustro San Francisco de Bermeo",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "Definió sus últimos 55 años de vida (su conversión en Fray Juan Clímaco), imagen del claustro gótico del convento donde profesó sus votos, fue guardián y donde reposaron sus restos.",
+        "etiquetas": [],
+        "personas": [
+          "P00283"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-11-09T06:33:52.500Z",
     "ultima_modificacion": "2026-11-09T06:33:52.500Z",
     "padre": "P00284",
-    "madre": "P00285"
+    "madre": "P00285",
+    "fotografia_principal": "assets/fotos/P00283/mugica-y-butron.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00284",
