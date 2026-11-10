@@ -19066,11 +19066,9 @@
     "notas": "El infante Manuel nació en la ciudad palentina de Carrión de los Condes en 1234, y fue el más joven de los hijos varones habidos entre Fernando y Beatriz de Suabia. En 1252 obtiene de su padre, en calidad de \"apanage\", el Señorío de Villena. En 1259 viajó a Italia, formando parte de la embajada enviada por Alfonso el Sabio al papa Alejandro IV, quien aconsejó al rey Sabio que no fuese él personalmente. El propósito de la embajada era obtener el apoyo del pontífice para el Fecho del Imperio.[1] Estuvo presente en las Cortes de Sevilla de 1261. El 25 de abril de 1262 Alfonso X le hizo entrega de las villas de Elche, Crevillente, Aspe, y del Valle de Elda, al tiempo que le nombraba Adelantado mayor de Murcia,[2] que, unidos al Señorío, le convertirían en uno de los mayores señores de la península.\n\nEl 12 de marzo de 1266 se firmaron en Sevilla las capitulaciones matrimoniales del infante Manuel, viudo de su primera esposa, con Constanza de Bearne, al tiempo que se firmaban la de su hijo Alfonso Manuel con Guillerma de Montcada, hermana de Constanza de Bearne, e hijas ambas de Gastón VII de Bearne, vizconde de Bearne. Sin embargo, ninguno de los dos matrimonios llegaron a celebrarse.[3] Durante la revuelta nobiliaria de 1272-1273 contra su hermano Alfonso X el Sabio, ayudó al monarca a negociar con los rebeldes, aconsejándole a su hermano que pactase con ellos.[4] En 1275 falleció en Montpellier su hijo primogénito, Alfonso Manuel, cuando regresaba de un viaje en el que había acompañado a Europa a su tío Alfonso el Sabio.",
     "datos_resumen": "El infante Manuel nació en la ciudad palentina de Carrión de los Condes en 1234, y fue el más joven de los hijos varones habidos entre Fernando y Beatriz de Suabia. En 1252 obtiene de su padre, en calidad de \"apanage\", el Señorío de Villena. En 1259 viajó a Italia, formando parte de la embajada enviada por Alfonso el Sabio al papa Alejandro IV, quien aconsejó al rey Sabio que no fuese él personalmente. El propósito de la embajada era obtener el apoyo del pontífice para el Fecho del Imperio.[1] Estuvo presente en las Cortes de Sevilla de 1261. El 25 de abril de 1262 Alfonso X le hizo entrega de las villas de Elche, Crevillente, Aspe, y del Valle de Elda, al tiempo que le nombraba Adelantado mayor de Murcia,[2] que, unidos al Señorío, le convertirían en uno de los mayores señores de la península.\n\nEl 12 de marzo de 1266 se firmaron en Sevilla las capitulaciones matrimoniales del infante Manuel, viudo de su primera esposa, con Constanza de Bearne, al tiempo que se firmaban la de su hijo Alfonso Manuel con Guillerma de Montcada, hermana de Constanza de Bearne, e hijas ambas de Gastón VII de Bearne, vizconde de Bearne. Sin embargo, ninguno de los dos matrimonios llegaron a celebrarse.[3] Durante la revuelta nobiliaria de 1272-1273 contra su hermano Alfonso X el Sabio, ayudó al monarca a negociar con los rebeldes, aconsejándole a su hermano que pactase con ellos.[4] En 1275 falleció en Montpellier su hijo primogénito, Alfonso Manuel, cuando regresaba de un viaje en el que había acompañado a Europa a su tío Alfonso el Sabio.",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00304"
     ],
-    "hijos": [],
     "hechos": [],
     "fotografias": [
       {
@@ -19094,8 +19092,8 @@
         "descripcion": "Manuel de Castilla y Beatriz de Saboya (de una serie de pinturas portuguesas del s. XVII de los antepasados de la familia Manuel (Palacio Ficalho, Serpa, Portugal)",
         "etiquetas": [],
         "personas": [
-          "P00304",
-          "P00303"
+          "P00303",
+          "P00304"
         ]
       }
     ],
@@ -19103,7 +19101,9 @@
     "fecha_creacion": "2026-11-10T14:23:16.984Z",
     "ultima_modificacion": "2026-11-10T14:23:16.984Z",
     "fotografia_principal": "assets/fotos/P00303/250px-arms-of-infante-juan-manuel-of-castile-lo.jpg",
-    "fotoPosicion": "50% 50%"
+    "fotoPosicion": "50% 50%",
+    "padre": "P00305",
+    "madre": "P00306"
   },
   {
     "id": "P00304",
@@ -19146,8 +19146,8 @@
         "descripcion": "Manuel de Castilla y Beatriz de Saboya (de una serie de pinturas portuguesas del s. XVII de los antepasados de la familia Manuel (Palacio Ficalho, Serpa, Portugal)",
         "etiquetas": [],
         "personas": [
-          "P00304",
-          "P00303"
+          "P00303",
+          "P00304"
         ]
       }
     ],
@@ -19158,5 +19158,87 @@
     "madre": "",
     "fotografia_principal": "assets/fotos/P00304/casa-saboya.jpg",
     "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00305",
+    "nombre": "Fernando III de Castilla \"El Santo\"",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "05/08/1199",
+    "lugar_nacimiento": "Peleas de Arriba",
+    "fecha_defuncion": "30/05/1252",
+    "lugar_defuncion": "Sevilla",
+    "profesion": "Rey de Castilla y León",
+    "estado": "documentado",
+    "notas": "Fernando III de Castilla, llamado «el Santo» (Peleas de Arriba, 1199 o 24 de junio de 1201[1]-Sevilla, 30 de mayo de 1252), fue rey de Castilla desde 1217 hasta 1252 y de León[a] del 1230 al 1252. Hijo de Berenguela, reina de Castilla, y de Alfonso IX, rey de León, unificó dinásticamente los reinos castellano y leonés, que permanecían divididos desde 1157 cuando Alfonso VII el Emperador, a su muerte, los repartió entre sus hijos: los infantes Sancho y Fernando.\n\nDurante su reinado fueron conquistados, en el marco de la Reconquista, los reinos de Taifa de Baeza, Taifa de Córdoba, Taifa de Sevilla y lo que quedaba del de Badajoz, cuya anexión había empezado Alfonso IX, lo que redujo el territorio ibérico en poder de los reinos musulmanes. Al finalizar el reinado de Fernando III, estos únicamente poseían en la Andalucía el reino de Niebla, Tejada (ocupadas por Alfonso X en 1262 y 1253)[4] y el reino de Granada, este último como feudo castellano. El infante Alfonso, futuro Alfonso X, fue enviado por Fernando a la conquista del reino de Murcia; los musulmanes capitularon y la región quedó como señorío castellano, tras lo cual Alfonso conquistó las plazas de Mula y Cartagena. Cuando Fernando accedió al trono, en 1217, su reino no rebasaba apenas los ciento cincuenta mil kilómetros cuadrados; en 1230, al heredar León, obtuvo otros cien mil y, a base de conquistas ininterrumpidas, logró hacerse con ciento veinte mil más.[5]\n\nFue canonizado en 1671, siendo papa Clemente X y reinando en España Carlos II.",
+    "datos_resumen": "Fernando III de Castilla, llamado «el Santo» (Peleas de Arriba, 1199 o 24 de junio de 1201[1]-Sevilla, 30 de mayo de 1252), fue rey de Castilla desde 1217 hasta 1252 y de León[a] del 1230 al 1252. Hijo de Berenguela, reina de Castilla, y de Alfonso IX, rey de León, unificó dinásticamente los reinos castellano y leonés, que permanecían divididos desde 1157 cuando Alfonso VII el Emperador, a su muerte, los repartió entre sus hijos: los infantes Sancho y Fernando.\n\nDurante su reinado fueron conquistados, en el marco de la Reconquista, los reinos de Taifa de Baeza, Taifa de Córdoba, Taifa de Sevilla y lo que quedaba del de Badajoz, cuya anexión había empezado Alfonso IX, lo que redujo el territorio ibérico en poder de los reinos musulmanes. Al finalizar el reinado de Fernando III, estos únicamente poseían en la Andalucía el reino de Niebla, Tejada (ocupadas por Alfonso X en 1262 y 1253)[4] y el reino de Granada, este último como feudo castellano. El infante Alfonso, futuro Alfonso X, fue enviado por Fernando a la conquista del reino de Murcia; los musulmanes capitularon y la región quedó como señorío castellano, tras lo cual Alfonso conquistó las plazas de Mula y Cartagena. Cuando Fernando accedió al trono, en 1217, su reino no rebasaba apenas los ciento cincuenta mil kilómetros cuadrados; en 1230, al heredar León, obtuvo otros cien mil y, a base de conquistas ininterrumpidas, logró hacerse con ciento veinte mil más.[5]\n\nFue canonizado en 1671, siendo papa Clemente X y reinando en España Carlos II.",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00306"
+    ],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000357",
+        "src": "assets/fotos/P00305/fernando-iii-de-castilla.jpg",
+        "titulo": "Fernando III de Castilla",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00305"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T14:41:47.095Z",
+    "ultima_modificacion": "2026-11-10T14:41:47.095Z",
+    "fotografia_principal": "assets/fotos/P00305/fernando-iii-de-castilla.jpg",
+    "fotoPosicion": "50% 13%"
+  },
+  {
+    "id": "P00306",
+    "nombre": "Beatriz de Suabia",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1205",
+    "lugar_nacimiento": "Toro",
+    "fecha_defuncion": "1235",
+    "lugar_defuncion": "",
+    "profesion": "Reina de Castilla",
+    "estado": "documentado",
+    "notas": "Beatriz de Suabia (bautizada como Isabel) (1205-Toro, 1235) fue una noble alemana, reina consorte de Castilla y de León entre 1220 y 1235 por su matrimonio con Fernando III de Castilla.\n\nEra la cuarta hija de Felipe, duque de Suabia y Rey de romanos, y de Irene Ángelo, nacida esta de Isaac II Ángelo, emperador de Constantinopla.\nA la muerte de sus padres permaneció bajo la tutela de su primo Federico II, Sacro Emperador Romano Germánico, un hombre excepcional, muy amante y protector de la cultura y muy culto él mismo, que le inculcó ese mismo amor que trasmitiría a sus hijos; este dio su autorización para su matrimonio con Fernando III, en esos momentos rey de Castilla y años más tarde también rey de León. La boda se celebró el 30 de noviembre de 1219 en la Catedral de Burgos. El cronista Rodrigo Ximénez de Rada, nada proclive a los epítetos, la describe como optima, pulchra, sapiens et pudica («buenísima, bella, sabia y modesta»). Su hijo Alfonso X el Sabio le dedicó un elogio en una de sus Cantigas (la 256, en la que es curada milagrosamente por la Virgen) y en la catedral de Burgos se conserva una escultura del siglo XIII que la representa.\nLa reina Beatriz de Suabia murió en Toro el 5 de noviembre de 1235 a los 30 años. Su muerte estuvo relacionada probablemente con su último parto, el de su hija María, o incluso murió después de dar a luz. A su muerte, su cadáver recibió sepultura en el monasterio de Santa María la Real de Las Huelgas en Burgos, en un sepulcro colocado junto al del rey Enrique I de Castilla. Su hijo, Alfonso X el Sabio, ordenó que sus restos mortales fueran trasladados a la Catedral de Sevilla en 1279, donde reposaban los restos mortales de Fernando III.[1]\n\nEn 1948, con motivo del séptimo centenario de la conquista de la ciudad de Sevilla por Fernando III, que capituló en 1248, se construyó el sepulcro actual de la reina Beatriz de Suabia, que se encuentra situado en el lado de la Epístola de la Capilla Real de la Catedral de Sevilla.\n\nLa estatua orante de la reina Beatriz de Suabia, realizada en piedra y alabastro, representa a la reina en su juventud, llevando toca y corona. En su manto aparecen esculpidos castillos y leones. El resto del mausoleo de la reina es idéntico al de su hijo Alfonso X el Sabio, situado enfrente de él. El mausoleo está formado por dos cuerpos superpuestos, que se encuentran flanqueados por columnas en los extremos. El primer cuerpo contiene la urna donde reposan los restos mortales de la reina Beatriz de Suabia, en cuyo frontal hay una cartela donde se lee \"Beatriz de Suabia\". El segundo cuerpo del mausoleo, rematado por un frontón, lo ocupa un medallón circular en el que aparece colocado el escudo del reino de Castilla y León.[2]\n\nEn la primitiva Capilla Real de la Catedral de Sevilla había una estatua que representaba a la reina en posición sedente, que se hallaba situada ante la imagen de la Virgen de los Reyes, y a su lado izquierdo. También estaban presentes en la capilla las imágenes sedentes de Fernando III, rey de Castilla, y de Alfonso X, sepultados allí. En 1356, Pedro I de Castilla, tataranieto de Alfonso X el Sabio, despojó las imágenes de Alfonso X y de su madre, la reina Beatriz de Suabia, de todos los metales preciosos y piedras preciosas que las adornaban.",
+    "datos_resumen": "Beatriz de Suabia (bautizada como Isabel) (1205-Toro, 1235) fue una noble alemana, reina consorte de Castilla y de León entre 1220 y 1235 por su matrimonio con Fernando III de Castilla.\n\nEra la cuarta hija de Felipe, duque de Suabia y Rey de romanos, y de Irene Ángelo, nacida esta de Isaac II Ángelo, emperador de Constantinopla.\nA la muerte de sus padres permaneció bajo la tutela de su primo Federico II, Sacro Emperador Romano Germánico, un hombre excepcional, muy amante y protector de la cultura y muy culto él mismo, que le inculcó ese mismo amor que trasmitiría a sus hijos; este dio su autorización para su matrimonio con Fernando III, en esos momentos rey de Castilla y años más tarde también rey de León. La boda se celebró el 30 de noviembre de 1219 en la Catedral de Burgos. El cronista Rodrigo Ximénez de Rada, nada proclive a los epítetos, la describe como optima, pulchra, sapiens et pudica («buenísima, bella, sabia y modesta»). Su hijo Alfonso X el Sabio le dedicó un elogio en una de sus Cantigas (la 256, en la que es curada milagrosamente por la Virgen) y en la catedral de Burgos se conserva una escultura del siglo XIII que la representa.\nLa reina Beatriz de Suabia murió en Toro el 5 de noviembre de 1235 a los 30 años. Su muerte estuvo relacionada probablemente con su último parto, el de su hija María, o incluso murió después de dar a luz. A su muerte, su cadáver recibió sepultura en el monasterio de Santa María la Real de Las Huelgas en Burgos, en un sepulcro colocado junto al del rey Enrique I de Castilla. Su hijo, Alfonso X el Sabio, ordenó que sus restos mortales fueran trasladados a la Catedral de Sevilla en 1279, donde reposaban los restos mortales de Fernando III.[1]\n\nEn 1948, con motivo del séptimo centenario de la conquista de la ciudad de Sevilla por Fernando III, que capituló en 1248, se construyó el sepulcro actual de la reina Beatriz de Suabia, que se encuentra situado en el lado de la Epístola de la Capilla Real de la Catedral de Sevilla.\n\nLa estatua orante de la reina Beatriz de Suabia, realizada en piedra y alabastro, representa a la reina en su juventud, llevando toca y corona. En su manto aparecen esculpidos castillos y leones. El resto del mausoleo de la reina es idéntico al de su hijo Alfonso X el Sabio, situado enfrente de él. El mausoleo está formado por dos cuerpos superpuestos, que se encuentran flanqueados por columnas en los extremos. El primer cuerpo contiene la urna donde reposan los restos mortales de la reina Beatriz de Suabia, en cuyo frontal hay una cartela donde se lee \"Beatriz de Suabia\". El segundo cuerpo del mausoleo, rematado por un frontón, lo ocupa un medallón circular en el que aparece colocado el escudo del reino de Castilla y León.[2]\n\nEn la primitiva Capilla Real de la Catedral de Sevilla había una estatua que representaba a la reina en posición sedente, que se hallaba situada ante la imagen de la Virgen de los Reyes, y a su lado izquierdo. También estaban presentes en la capilla las imágenes sedentes de Fernando III, rey de Castilla, y de Alfonso X, sepultados allí. En 1356, Pedro I de Castilla, tataranieto de Alfonso X el Sabio, despojó las imágenes de Alfonso X y de su madre, la reina Beatriz de Suabia, de todos los metales preciosos y piedras preciosas que las adornaban.",
+    "visible": true,
+    "conyuges": [
+      "P00305"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000358",
+        "src": "assets/fotos/P00306/escultura-de-beatriz-de-suabia.jpg",
+        "titulo": "Escultura de Beatriz de Suabia",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00306"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T14:44:38.943Z",
+    "ultima_modificacion": "2026-11-10T14:44:38.943Z",
+    "fotografia_principal": "assets/fotos/P00306/escultura-de-beatriz-de-suabia.jpg",
+    "fotoPosicion": "50% 50%",
+    "padre": "",
+    "madre": ""
   }
 ]
