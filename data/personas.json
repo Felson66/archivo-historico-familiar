@@ -18892,8 +18892,8 @@
     "documentos": [],
     "fecha_creacion": "2026-11-10T10:30:16.281Z",
     "ultima_modificacion": "2026-11-10T10:30:16.281Z",
-    "padre": "",
-    "madre": "",
+    "padre": "P00301",
+    "madre": "P00302",
     "fotografia_principal": "assets/fotos/P00298/escudo-heraldico-de-avendano.png",
     "fotoPosicion": "50% 4%"
   },
@@ -18971,6 +18971,83 @@
     "documentos": [],
     "fecha_creacion": "2026-11-10T13:40:56.863Z",
     "ultima_modificacion": "2026-11-10T13:40:56.863Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00301",
+    "nombre": "Juan Perez De AVENDAÑO I SEÑOR DE URQUIZU",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1220",
+    "lugar_nacimiento": "Arratia, Bizkaia, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00302"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio\ncon Maria ORTIZ DE ARAMAYONA"
+      }
+    ],
+    "fotografias": [
+      {
+        "id": "F000353",
+        "src": "assets/fotos/P00301/escudo-heraldico-de-avendano.png",
+        "titulo": "Escudo heráldico de Avendaño",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00301"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T13:45:55.753Z",
+    "ultima_modificacion": "2026-11-10T13:45:55.753Z",
+    "fotografia_principal": "assets/fotos/P00301/escudo-heraldico-de-avendano.png",
+    "fotoPosicion": "50% 10%"
+  },
+  {
+    "id": "P00302",
+    "nombre": "Maria ORTIZ DE ARAMAYONA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00301"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio\ncon Juan Perez De AVENDAÑO I SEÑOR DE URQUIZU"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T13:47:31.265Z",
+    "ultima_modificacion": "2026-11-10T13:47:31.265Z",
     "padre": "",
     "madre": ""
   }
