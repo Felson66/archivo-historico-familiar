@@ -18345,6 +18345,18 @@
         "personas": [
           "P00285"
         ]
+      },
+      {
+        "id": "F000347",
+        "src": "assets/fotos/P00285/mugica.jpg",
+        "titulo": "Mugica",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00285"
+        ]
       }
     ],
     "documentos": [],
@@ -18352,7 +18364,7 @@
     "ultima_modificacion": "2026-11-09T17:53:42.751Z",
     "padre": "P00288",
     "madre": "P00289",
-    "fotografia_principal": "assets/fotos/P00285/torre-muxica.jpg",
+    "fotografia_principal": "assets/fotos/P00285/mugica.jpg",
     "fotoPosicion": "50% 50%"
   },
   {
@@ -18482,12 +18494,27 @@
         "texto": "MH:S2515 - Bienandanzas e fortunas de Lope Garcia Salazar libro 21 - MH:R2"
       }
     ],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000348",
+        "src": "assets/fotos/P00289/escudo-aguero.jpg",
+        "titulo": "Escudo Aguero",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00289"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-11-09T20:10:48.784Z",
     "ultima_modificacion": "2026-11-09T20:10:48.784Z",
     "padre": "",
-    "madre": ""
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00289/escudo-aguero.jpg",
+    "fotoPosicion": "50% 10%"
   },
   {
     "id": "P00290",
