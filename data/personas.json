@@ -18702,13 +18702,70 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
     "conyuges": [],
-    "hijos": [],
     "hechos": [],
     "fotografias": [],
     "documentos": [],
     "fecha_creacion": "2026-11-10T10:26:21.774Z",
-    "ultima_modificacion": "2026-11-10T10:26:21.774Z"
+    "ultima_modificacion": "2026-11-10T10:26:21.774Z",
+    "padre": "P00297",
+    "madre": "P00298"
+  },
+  {
+    "id": "P00297",
+    "nombre": "Gomez Gonzalez De BUTRON Y BALMASEDA III SEÑOR DE LA CASA BUTRON",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1260",
+    "lugar_nacimiento": "Butrón",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "III Señor de la casa Butron",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00298"
+    ],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T10:29:44.660Z",
+    "ultima_modificacion": "2026-11-10T10:29:44.660Z"
+  },
+  {
+    "id": "P00298",
+    "nombre": "Mayor De AVENDAÑO",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00297"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio\ncon Gomez Gonzalez De BUTRON Y BALMASEDA III SEÑOR DE LA CASA BUTRON"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T10:30:16.281Z",
+    "ultima_modificacion": "2026-11-10T10:30:16.281Z",
+    "padre": "",
+    "madre": ""
   }
 ]
