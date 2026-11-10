@@ -18292,12 +18292,24 @@
         "personas": [
           "P00284"
         ]
+      },
+      {
+        "id": "F000345",
+        "src": "assets/fotos/P00284/casa-butron.jpg",
+        "titulo": "Casa Butron",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00284"
+        ]
       }
     ],
     "documentos": [],
     "fecha_creacion": "2026-11-09T17:46:58.447Z",
     "ultima_modificacion": "2026-11-09T17:46:58.447Z",
-    "fotografia_principal": "assets/fotos/P00284/gl-castillobutron.jpg",
+    "fotografia_principal": "assets/fotos/P00284/casa-butron.jpg",
     "fotoPosicion": "50% 50%",
     "padre": "P00290",
     "madre": "P00291"
@@ -18367,12 +18379,27 @@
         "texto": "Gomez Gonzalez III MUXICA Y BUTRON VII SR. DE LA CASA BUTRON"
       }
     ],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000343",
+        "src": "assets/fotos/P00286/casa-butron.jpg",
+        "titulo": "Casa Butron",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00286"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-11-09T18:11:23.234Z",
     "ultima_modificacion": "2026-11-09T18:11:23.234Z",
     "padre": "P00284",
-    "madre": "P00285"
+    "madre": "P00285",
+    "fotografia_principal": "assets/fotos/P00286/casa-butron.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00287",
@@ -18490,12 +18517,27 @@
         "texto": "Matrimonio 1375\ncon Elvira Sánchez De ZAMUDIO RIVAS SEÑORA DE YBARGÜEN"
       }
     ],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000344",
+        "src": "assets/fotos/P00290/casa-butron.jpg",
+        "titulo": "Casa Butron",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00290"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-11-09T20:14:40.714Z",
     "ultima_modificacion": "2026-11-09T20:14:40.714Z",
     "padre": "P00296",
-    "madre": ""
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00290/casa-butron.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00291",
@@ -18704,12 +18746,27 @@
     "visible": true,
     "conyuges": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000346",
+        "src": "assets/fotos/P00296/casa-butron.jpg",
+        "titulo": "Casa Butron",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00296"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-11-10T10:26:21.774Z",
     "ultima_modificacion": "2026-11-10T10:26:21.774Z",
     "padre": "P00297",
-    "madre": "P00298"
+    "madre": "P00298",
+    "fotografia_principal": "assets/fotos/P00296/casa-butron.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00297",
@@ -18732,10 +18789,25 @@
     ],
     "hijos": [],
     "hechos": [],
-    "fotografias": [],
+    "fotografias": [
+      {
+        "id": "F000342",
+        "src": "assets/fotos/P00297/casa-butron.jpg",
+        "titulo": "Casa Butron",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00297"
+        ]
+      }
+    ],
     "documentos": [],
     "fecha_creacion": "2026-11-10T10:29:44.660Z",
-    "ultima_modificacion": "2026-11-10T10:29:44.660Z"
+    "ultima_modificacion": "2026-11-10T10:29:44.660Z",
+    "fotografia_principal": "assets/fotos/P00297/casa-butron.jpg",
+    "fotoPosicion": "50% 50%"
   },
   {
     "id": "P00298",
