@@ -18693,11 +18693,9 @@
     "notas": "Don Juan Manuel (1282-1348)\nBiografía\nEra sobrino de Alfonso X el Sabio y nieto de Fernando III el Santo. Fue instruido en el conocimiento de las artes marciales, del latín y de la historia e intervino activamente en las luchas nobiliarias durante la minoría de edad de Fernando IV y Alfonso XI.\n\nEntre lo que expresa en su obra literaria y las intrigas políticas que vivió intensamente se manifiesta una fuerte contradicción. Contrasta a su vez el orgullo que sentía por su linaje y de su poderío social y económico con la humildad que, como escritor, manifiesta en algunas ocasiones. Participa valientemente en batallas contra los moros y en 1348 muere y es enterrado en el monasterio de Peñafiel (Valladolid).",
     "datos_resumen": "Don Juan Manuel (1282-1348)\nBiografía\nEra sobrino de Alfonso X el Sabio y nieto de Fernando III el Santo. Fue instruido en el conocimiento de las artes marciales, del latín y de la historia e intervino activamente en las luchas nobiliarias durante la minoría de edad de Fernando IV y Alfonso XI.\n\nEntre lo que expresa en su obra literaria y las intrigas políticas que vivió intensamente se manifiesta una fuerte contradicción. Contrasta a su vez el orgullo que sentía por su linaje y de su poderío social y económico con la humildad que, como escritor, manifiesta en algunas ocasiones. Participa valientemente en batallas contra los moros y en 1348 muere y es enterrado en el monasterio de Peñafiel (Valladolid).",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00295"
     ],
-    "hijos": [],
     "hechos": [
       {
         "tipo": "documentado",
@@ -18738,7 +18736,9 @@
     "fecha_creacion": "2026-11-10T08:06:33.037Z",
     "ultima_modificacion": "2026-11-10T08:06:33.037Z",
     "fotografia_principal": "assets/fotos/P00294/juan-manuel.jpg",
-    "fotoPosicion": "50% 25%"
+    "fotoPosicion": "50% 25%",
+    "padre": "P00303",
+    "madre": "P00304"
   },
   {
     "id": "P00295",
@@ -19050,5 +19050,113 @@
     "ultima_modificacion": "2026-11-10T13:47:31.265Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00303",
+    "nombre": "Infante Manuel de Castilla",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1234",
+    "lugar_nacimiento": "Carrión de los Condes",
+    "fecha_defuncion": "25/12/1283",
+    "lugar_defuncion": "Peñafiel",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "El infante Manuel nació en la ciudad palentina de Carrión de los Condes en 1234, y fue el más joven de los hijos varones habidos entre Fernando y Beatriz de Suabia. En 1252 obtiene de su padre, en calidad de \"apanage\", el Señorío de Villena. En 1259 viajó a Italia, formando parte de la embajada enviada por Alfonso el Sabio al papa Alejandro IV, quien aconsejó al rey Sabio que no fuese él personalmente. El propósito de la embajada era obtener el apoyo del pontífice para el Fecho del Imperio.[1] Estuvo presente en las Cortes de Sevilla de 1261. El 25 de abril de 1262 Alfonso X le hizo entrega de las villas de Elche, Crevillente, Aspe, y del Valle de Elda, al tiempo que le nombraba Adelantado mayor de Murcia,[2] que, unidos al Señorío, le convertirían en uno de los mayores señores de la península.\n\nEl 12 de marzo de 1266 se firmaron en Sevilla las capitulaciones matrimoniales del infante Manuel, viudo de su primera esposa, con Constanza de Bearne, al tiempo que se firmaban la de su hijo Alfonso Manuel con Guillerma de Montcada, hermana de Constanza de Bearne, e hijas ambas de Gastón VII de Bearne, vizconde de Bearne. Sin embargo, ninguno de los dos matrimonios llegaron a celebrarse.[3] Durante la revuelta nobiliaria de 1272-1273 contra su hermano Alfonso X el Sabio, ayudó al monarca a negociar con los rebeldes, aconsejándole a su hermano que pactase con ellos.[4] En 1275 falleció en Montpellier su hijo primogénito, Alfonso Manuel, cuando regresaba de un viaje en el que había acompañado a Europa a su tío Alfonso el Sabio.",
+    "datos_resumen": "El infante Manuel nació en la ciudad palentina de Carrión de los Condes en 1234, y fue el más joven de los hijos varones habidos entre Fernando y Beatriz de Suabia. En 1252 obtiene de su padre, en calidad de \"apanage\", el Señorío de Villena. En 1259 viajó a Italia, formando parte de la embajada enviada por Alfonso el Sabio al papa Alejandro IV, quien aconsejó al rey Sabio que no fuese él personalmente. El propósito de la embajada era obtener el apoyo del pontífice para el Fecho del Imperio.[1] Estuvo presente en las Cortes de Sevilla de 1261. El 25 de abril de 1262 Alfonso X le hizo entrega de las villas de Elche, Crevillente, Aspe, y del Valle de Elda, al tiempo que le nombraba Adelantado mayor de Murcia,[2] que, unidos al Señorío, le convertirían en uno de los mayores señores de la península.\n\nEl 12 de marzo de 1266 se firmaron en Sevilla las capitulaciones matrimoniales del infante Manuel, viudo de su primera esposa, con Constanza de Bearne, al tiempo que se firmaban la de su hijo Alfonso Manuel con Guillerma de Montcada, hermana de Constanza de Bearne, e hijas ambas de Gastón VII de Bearne, vizconde de Bearne. Sin embargo, ninguno de los dos matrimonios llegaron a celebrarse.[3] Durante la revuelta nobiliaria de 1272-1273 contra su hermano Alfonso X el Sabio, ayudó al monarca a negociar con los rebeldes, aconsejándole a su hermano que pactase con ellos.[4] En 1275 falleció en Montpellier su hijo primogénito, Alfonso Manuel, cuando regresaba de un viaje en el que había acompañado a Europa a su tío Alfonso el Sabio.",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00304"
+    ],
+    "hijos": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000354",
+        "src": "assets/fotos/P00303/250px-arms-of-infante-juan-manuel-of-castile-lo.jpg",
+        "titulo": "Arms of Infante Juan Manuel of Castile",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00303"
+        ]
+      },
+      {
+        "id": "F000356",
+        "src": "assets/fotos/P00304/250px-retratos-de-d-manuel-infante-de-castela.jpg",
+        "titulo": "250px Retratos de D. Manuel, infante de Castela,",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "Manuel de Castilla y Beatriz de Saboya (de una serie de pinturas portuguesas del s. XVII de los antepasados de la familia Manuel (Palacio Ficalho, Serpa, Portugal)",
+        "etiquetas": [],
+        "personas": [
+          "P00304",
+          "P00303"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T14:23:16.984Z",
+    "ultima_modificacion": "2026-11-10T14:23:16.984Z",
+    "fotografia_principal": "assets/fotos/P00303/250px-arms-of-infante-juan-manuel-of-castile-lo.jpg",
+    "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00304",
+    "nombre": "Beatriz de Saboya (señora de Villena)",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1250",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "1292",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "Beatriz de Saboya (1250-1292) era la hija de Amadeo IV el conde de Saboya y su segunda esposa, Cecilia de Baux. Era miembro de la casa de Saboya por nacimiento, por su segundo matrimonio pasó a ser conocida como señora de Villena.\n\nBeatriz era hermana de doble vínculo de Bonifacio, conde de Saboya, así como dos hermanas Leonor y Constanza. Tenía dos medio hermanas de mayor edad del primer matrimonio de su padre, la mayor Beatriz y Margarita.\n\nA la muerte de su padre en 1253, Beatriz recibió una cantidad de dinero como herencia.[1] A la muerte de su hermano de diez años, el conde Bonifacio, le sucedió su tío como Pedro II, conde de Saboya. Cuando Pedro murió, Betriz había renunciado a su pretensión a Saboya junto con el consentimiento de su madre en favor de la sucesión de su otro tío como Felipe I, conde de Saboya, en el artículo (datado 21 de octubre de 1268) se refieren a ella como Contesson [2] posiblemente para distinguirla de su medio hermana mayor del mismo nombre. En un acta datada el 11 de agosto de 1266 del papa Clemente IV presumiblemente habla de que el conde Felipe donó propiedad a su sobrina «B» más probablemente refiriéndose a Beatriz.[3]\n\nBeatriz fue comprometida primero a Jaime, segundo hijo de Jaime I de Aragón sin embargo, el contrato se rompió el 11 de agosto de 1266.[4] Diez años después de la ruptura del compromiso, Jaime se convirtió en rey de Mallorca.\n\nBeatriz se casó por vez primera el 21 de octubre de 1268 a Pedro de Chalon, señor de Châtelbelin, hijo de Jean l'Antique. Pedro otorgó propiedades a su esposa en 1269.[5] La pareja estuvo casada durante no más de seis años antes de que Pedro muriera, no tuvieron hijos.\n\nSe celebró un segundo matrimonio en 1274, con Manuel de Castilla; este era el segundo matrimonio de los dos, la primera esposa de Manuel Constanza (hermana de Jaime el antiguo prometido de Beatriz) había muerto dejándole con dos hijos. Manuel y Beatriz tuvieron un hijo, Juan Manuel quien nació en Escalona el 5 de mayo de 1282. Manuel murió un año después del nacimiento de su hijo y por lo tanto le sucedió pues el otro hijo de Manuel, el que había tenido con Constanza, había muerto joven. Beatriz cuidó de su hijo hasta su propia muerte nueve años más tarde, momento en el cual Juan Manuel quedó a cargo de su tío, el rey Sancho IV de Castilla.",
+    "datos_resumen": "Beatriz de Saboya (1250-1292) era la hija de Amadeo IV el conde de Saboya y su segunda esposa, Cecilia de Baux. Era miembro de la casa de Saboya por nacimiento, por su segundo matrimonio pasó a ser conocida como señora de Villena.\n\nBeatriz era hermana de doble vínculo de Bonifacio, conde de Saboya, así como dos hermanas Leonor y Constanza. Tenía dos medio hermanas de mayor edad del primer matrimonio de su padre, la mayor Beatriz y Margarita.\n\nA la muerte de su padre en 1253, Beatriz recibió una cantidad de dinero como herencia.[1] A la muerte de su hermano de diez años, el conde Bonifacio, le sucedió su tío como Pedro II, conde de Saboya. Cuando Pedro murió, Betriz había renunciado a su pretensión a Saboya junto con el consentimiento de su madre en favor de la sucesión de su otro tío como Felipe I, conde de Saboya, en el artículo (datado 21 de octubre de 1268) se refieren a ella como Contesson [2] posiblemente para distinguirla de su medio hermana mayor del mismo nombre. En un acta datada el 11 de agosto de 1266 del papa Clemente IV presumiblemente habla de que el conde Felipe donó propiedad a su sobrina «B» más probablemente refiriéndose a Beatriz.[3]\n\nBeatriz fue comprometida primero a Jaime, segundo hijo de Jaime I de Aragón sin embargo, el contrato se rompió el 11 de agosto de 1266.[4] Diez años después de la ruptura del compromiso, Jaime se convirtió en rey de Mallorca.\n\nBeatriz se casó por vez primera el 21 de octubre de 1268 a Pedro de Chalon, señor de Châtelbelin, hijo de Jean l'Antique. Pedro otorgó propiedades a su esposa en 1269.[5] La pareja estuvo casada durante no más de seis años antes de que Pedro muriera, no tuvieron hijos.\n\nSe celebró un segundo matrimonio en 1274, con Manuel de Castilla; este era el segundo matrimonio de los dos, la primera esposa de Manuel Constanza (hermana de Jaime el antiguo prometido de Beatriz) había muerto dejándole con dos hijos. Manuel y Beatriz tuvieron un hijo, Juan Manuel quien nació en Escalona el 5 de mayo de 1282. Manuel murió un año después del nacimiento de su hijo y por lo tanto le sucedió pues el otro hijo de Manuel, el que había tenido con Constanza, había muerto joven. Beatriz cuidó de su hijo hasta su propia muerte nueve años más tarde, momento en el cual Juan Manuel quedó a cargo de su tío, el rey Sancho IV de Castilla.",
+    "visible": true,
+    "conyuges": [
+      "P00303"
+    ],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000355",
+        "src": "assets/fotos/P00304/casa-saboya.jpg",
+        "titulo": "Casa Saboya",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00304"
+        ]
+      },
+      {
+        "id": "F000356",
+        "src": "assets/fotos/P00304/250px-retratos-de-d-manuel-infante-de-castela.jpg",
+        "titulo": "250px Retratos de D. Manuel, infante de Castela,",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "Manuel de Castilla y Beatriz de Saboya (de una serie de pinturas portuguesas del s. XVII de los antepasados de la familia Manuel (Palacio Ficalho, Serpa, Portugal)",
+        "etiquetas": [],
+        "personas": [
+          "P00304",
+          "P00303"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T14:26:00.351Z",
+    "ultima_modificacion": "2026-11-10T14:26:00.351Z",
+    "padre": "",
+    "madre": "",
+    "fotografia_principal": "assets/fotos/P00304/casa-saboya.jpg",
+    "fotoPosicion": "50% 50%"
   }
 ]
