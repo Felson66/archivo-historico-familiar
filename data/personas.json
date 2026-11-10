@@ -18393,9 +18393,9 @@
     ],
     "fotografias": [
       {
-        "id": "F000343",
-        "src": "assets/fotos/P00286/casa-butron.jpg",
-        "titulo": "Casa Butron",
+        "id": "F000352",
+        "src": "assets/fotos/P00286/mugica-y-butron.jpg",
+        "titulo": "Mugica y Butron",
         "fecha": "",
         "lugar": "",
         "descripcion": "",
@@ -18410,8 +18410,8 @@
     "ultima_modificacion": "2026-11-09T18:11:23.234Z",
     "padre": "P00284",
     "madre": "P00285",
-    "fotografia_principal": "assets/fotos/P00286/casa-butron.jpg",
-    "fotoPosicion": "50% 50%"
+    "fotografia_principal": "assets/fotos/P00286/mugica-y-butron.jpg",
+    "fotoPosicion": "50% 31%"
   },
   {
     "id": "P00287",
@@ -18825,11 +18825,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00298"
     ],
-    "hijos": [],
     "hechos": [],
     "fotografias": [
       {
@@ -18849,7 +18847,9 @@
     "fecha_creacion": "2026-11-10T10:29:44.660Z",
     "ultima_modificacion": "2026-11-10T10:29:44.660Z",
     "fotografia_principal": "assets/fotos/P00297/casa-butron.jpg",
-    "fotoPosicion": "50% 50%"
+    "fotoPosicion": "50% 50%",
+    "padre": "P00299",
+    "madre": "P00300"
   },
   {
     "id": "P00298",
@@ -18896,5 +18896,82 @@
     "madre": "",
     "fotografia_principal": "assets/fotos/P00298/escudo-heraldico-de-avendano.png",
     "fotoPosicion": "50% 4%"
+  },
+  {
+    "id": "P00299",
+    "nombre": "Ochoa I Ibañez De BUTRON Y ESTRADA II SEÑOR DE LA CASA BUTRON",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1230",
+    "lugar_nacimiento": "Butron- Bizkaia- Euskadi",
+    "fecha_defuncion": "1275",
+    "lugar_defuncion": "Altamira, Cantabria, España",
+    "profesion": "II Señor de la casa Butron",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00300"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio\ncon Toda Ibañez De BALMASEDA SEÑORA DE CORTEZUBI"
+      }
+    ],
+    "fotografias": [
+      {
+        "id": "F000351",
+        "src": "assets/fotos/P00299/casa-butron.jpg",
+        "titulo": "Casa Butron",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00299"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T13:39:11.781Z",
+    "ultima_modificacion": "2026-11-10T13:39:11.781Z",
+    "fotografia_principal": "assets/fotos/P00299/casa-butron.jpg",
+    "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00300",
+    "nombre": "Toda Ibañez De BALMASEDA SEÑORA DE CORTEZUBI",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00299"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio\ncon Ochoa I Ibañez De BUTRON Y ESTRADA II SEÑOR DE LA CASA BUTRON"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-10T13:40:56.863Z",
+    "ultima_modificacion": "2026-11-10T13:40:56.863Z",
+    "padre": "",
+    "madre": ""
   }
 ]
