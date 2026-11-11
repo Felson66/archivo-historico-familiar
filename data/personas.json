@@ -18989,11 +18989,9 @@
     "notas": "",
     "datos_resumen": "",
     "visible": true,
-    "padres": [],
     "conyuges": [
       "P00302"
     ],
-    "hijos": [],
     "hechos": [
       {
         "tipo": "documentado",
@@ -19018,7 +19016,9 @@
     "fecha_creacion": "2026-11-10T13:45:55.753Z",
     "ultima_modificacion": "2026-11-10T13:45:55.753Z",
     "fotografia_principal": "assets/fotos/P00301/escudo-heraldico-de-avendano.png",
-    "fotoPosicion": "50% 10%"
+    "fotoPosicion": "50% 10%",
+    "padre": "P00309",
+    "madre": "P00310"
   },
   {
     "id": "P00302",
@@ -19319,6 +19319,87 @@
     "documentos": [],
     "fecha_creacion": "2026-11-10T19:36:30.762Z",
     "ultima_modificacion": "2026-11-10T19:36:30.762Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00309",
+    "nombre": "Pedro Ortiz O Martinez De AVENDAÑO",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1190",
+    "lugar_nacimiento": "Solar de Abendaño en Alava",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [
+      "P00310"
+    ],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Nacimiento : MH:S2448 - Ilustraciones Genealogicas de los Linajes Bascongados en las Grandezas de España"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio\ncon Pascuala Sanchez De ZURBANO"
+      }
+    ],
+    "fotografias": [
+      {
+        "id": "F000360",
+        "src": "assets/fotos/P00309/escudo-heraldico-de-avendano.png",
+        "titulo": "Escudo heráldico de Avendaño",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00309"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-11T09:09:49.417Z",
+    "ultima_modificacion": "2026-11-11T09:09:49.417Z",
+    "fotografia_principal": "assets/fotos/P00309/escudo-heraldico-de-avendano.png",
+    "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00310",
+    "nombre": "Pascuala Sanchez De ZURBANO",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00309"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio\ncon Pedro Ortiz O Martinez De AVENDAÑO"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-11T09:11:15.998Z",
+    "ultima_modificacion": "2026-11-11T09:11:15.998Z",
     "padre": "",
     "madre": ""
   }
