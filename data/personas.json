@@ -18676,7 +18676,8 @@
     "fecha_creacion": "2026-11-10T08:01:56.935Z",
     "ultima_modificacion": "2026-11-10T08:01:56.935Z",
     "padre": "P00294",
-    "madre": "P00295"
+    "madre": "",
+    "madreEstado": "incognito"
   },
   {
     "id": "P00294",
