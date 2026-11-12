@@ -1,16 +1,17 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes"><title>Vista completa · Árbol Familiar · Raíces · alpha44</title><style>
-*{box-sizing:border-box}html,body{margin:0;height:100%;font-family:Arial,sans-serif;background:#5f5e59;color:#fff;overflow:hidden}.top{height:58px;background:#183c35;display:flex;align-items:center;gap:10px;padding:8px 12px;box-shadow:0 2px 10px #0005;position:relative;z-index:20}.title{font:700 18px Georgia;white-space:nowrap}.status{font-size:12px;opacity:.8;margin-right:auto}.top button{border:1px solid #ffffff42;background:#fff;color:#183c35;border-radius:7px;padding:8px 11px;font-weight:700;cursor:pointer}.top button:hover{background:#edf4f0}.route{font-size:12px;max-width:380px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.viewport{position:absolute;inset:58px 0 0;overflow:auto;overscroll-behavior:contain;background:#66645f}.canvas{position:relative;transform-origin:0 0;background:#77746e;min-width:100%;min-height:100%}.stage{position:absolute}.lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.card{position:absolute;width:176px;height:84px;background:#343b39;border:1px solid #8d9995;border-radius:7px;color:#fff;padding:9px 8px 7px 58px;box-shadow:0 2px 5px #0003;cursor:pointer;overflow:hidden;transition:opacity .18s,border .18s,box-shadow .18s}.card:hover{border-color:#dbe7e1;box-shadow:0 3px 10px #0006}.card.root{border:2px solid #8bc2ae}.photo{position:absolute;left:10px;top:13px;width:38px;height:38px;border-radius:50%;background:#dce6e1;color:#385248;display:grid;place-items:center;overflow:hidden;font:700 16px Georgia}.photo img{width:100%;height:100%;object-fit:cover}.name{font:700 12px/1.15 Georgia;max-height:42px;overflow:hidden}.dates{font-size:9px;color:#d0d6d3;margin-top:5px}.card.selected{outline:3px solid #f0c45b;outline-offset:2px}.card.onroute{border:2px solid #f0c45b;background:#3e443f;box-shadow:0 0 0 2px #f0c45b33,0 4px 12px #0006}.dim{opacity:.18}.family-line{stroke:#d3d9d6;stroke-width:1.9;fill:none;stroke-linecap:round}.family-junction{fill:#f1f4f2;stroke:#40504a;stroke-width:1.2}.couple-line{stroke:#d2b4bc;stroke-width:1.7;fill:none}.route-line{stroke:#f0c45b;stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px #0008)}.gen{position:absolute;left:0;color:#e7e5df;font:700 12px Georgia;opacity:.75;transform:translateY(-22px)}.help{position:fixed;left:12px;bottom:10px;background:#1e2926e8;padding:8px 11px;border-radius:7px;font-size:11px;z-index:30;box-shadow:0 2px 8px #0004}.badge{display:inline-block;border:1px solid #ffffff55;border-radius:10px;padding:1px 6px;margin-right:5px}.back{color:white;text-decoration:none;font-size:13px;font-weight:700}@media(max-width:760px){.top{height:104px;align-content:center;flex-wrap:wrap}.viewport{inset:104px 0 0}.title{font-size:15px}.status{display:none}.route{order:5;width:100%;max-width:none}.top button{padding:6px 9px}.help{font-size:10px;max-width:92%}}
+*{box-sizing:border-box}html,body{margin:0;height:100%;font-family:Arial,sans-serif;background:#5f5e59;color:#fff;overflow:hidden}.top{height:58px;background:#183c35;display:flex;align-items:center;gap:10px;padding:8px 12px;box-shadow:0 2px 10px #0005;position:relative;z-index:20}.title{font:700 18px Georgia;white-space:nowrap}.status{font-size:12px;opacity:.8;margin-right:auto}.top button{border:1px solid #ffffff42;background:#fff;color:#183c35;border-radius:7px;padding:8px 11px;font-weight:700;cursor:pointer}.top button:hover{background:#edf4f0}.route{font-size:12px;max-width:380px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.viewport{position:absolute;inset:58px 0 0;overflow:auto;overscroll-behavior:contain;background:#66645f}.canvas{position:relative;transform-origin:0 0;background:#77746e;min-width:100%;min-height:100%}.stage{position:absolute}.lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.card{position:absolute;width:176px;height:84px;background:#343b39;border:1px solid #8d9995;border-radius:7px;color:#fff;padding:9px 8px 7px 58px;box-shadow:0 2px 5px #0003;cursor:pointer;overflow:hidden;transition:opacity .18s,border .18s,box-shadow .18s}.card:hover{border-color:#dbe7e1;box-shadow:0 3px 10px #0006}.card.root{border:2px solid #8bc2ae}.photo{position:absolute;left:10px;top:13px;width:38px;height:38px;border-radius:50%;background:#f5f3e8;color:#666b4b;display:grid;place-items:center;overflow:hidden;font:700 16px Georgia}.photo img{width:100%;height:100%;object-fit:cover}.tree-placeholder{width:30px;height:30px;display:block}.name{font:700 12px/1.15 Georgia;max-height:42px;overflow:hidden}.dates{font-size:9px;color:#d0d6d3;margin-top:5px}.card.selected{outline:3px solid #f0c45b;outline-offset:2px}.card.onroute{border:2px solid #f0c45b;background:#3e443f;box-shadow:0 0 0 2px #f0c45b33,0 4px 12px #0006}.dim{opacity:.18}.family-line{stroke:#d3d9d6;stroke-width:1.9;fill:none;stroke-linecap:round}.family-junction{fill:#f1f4f2;stroke:#40504a;stroke-width:1.2}.couple-line{stroke:#d2b4bc;stroke-width:1.7;fill:none}.route-line{stroke:#f0c45b;stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px #0008)}.gen{position:absolute;left:0;color:#e7e5df;font:700 12px Georgia;opacity:.75;transform:translateY(-22px)}.help{position:fixed;left:12px;bottom:10px;background:#1e2926e8;padding:8px 11px;border-radius:7px;font-size:11px;z-index:30;box-shadow:0 2px 8px #0004}.badge{display:inline-block;border:1px solid #ffffff55;border-radius:10px;padding:1px 6px;margin-right:5px}.back{color:white;text-decoration:none;font-size:13px;font-weight:700}@media(max-width:760px){.top{height:104px;align-content:center;flex-wrap:wrap}.viewport{inset:104px 0 0}.title{font-size:15px}.status{display:none}.route{order:5;width:100%;max-width:none}.top button{padding:6px 9px}.help{font-size:10px;max-width:92%}}
 
-.relationship{position:relative;z-index:19;background:#244a41;padding:8px 14px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:13px;box-shadow:0 2px 5px #0003}.relationship button{background:#fff;color:#183c35;border:0;border-radius:7px;padding:6px 9px;font-weight:bold;cursor:pointer}.relationship #fullPath{flex-basis:100%;line-height:1.6;max-height:160px;overflow-y:auto;overflow-wrap:anywhere;padding:8px 0}.touch-help{display:none}.back{font-size:23px;line-height:1;padding:4px 9px}.viewport{top:var(--header-height,96px);bottom:0}.top{height:auto;min-height:58px;flex-wrap:wrap}.status{margin-right:auto}
+.relationship{position:relative;z-index:19;background:#244a41;padding:8px 14px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:13px;box-shadow:0 2px 5px #0003}.relationship button{background:#fff;color:#183c35;border:0;border-radius:7px;padding:6px 9px;font-weight:bold;cursor:pointer}.relationship #fullPath{flex-basis:100%;line-height:1.6;max-height:160px;overflow-y:auto;overflow-wrap:anywhere;padding:8px 0}.touch-help{display:none}.open-profile{display:none}.open-profile.visible{display:inline-block}.card{touch-action:manipulation}.back{font-size:23px;line-height:1;padding:4px 9px}.viewport{top:var(--header-height,96px);bottom:0}.top{height:auto;min-height:58px;flex-wrap:wrap}.status{margin-right:auto}
 @media(max-width:760px){.top{height:auto;min-height:0;padding:7px 9px;gap:6px}.top button{padding:7px 9px}.title{font-size:17px}.relationship{padding:7px 10px;font-size:12px}.help{bottom:7px;left:7px;padding:6px 8px}.desktop-help{display:none}.touch-help{display:inline}}
-</style></head><body><div class="top"><a class="back" href="index.html" id="returnHome">←</a><span class="title">Vista completa</span><span id="status" class="status"></span><button id="minus">−</button><button id="center">Centrar</button><button id="fit">Ver todo</button><button id="plus">+</button><button id="clear">Limpiar ruta</button></div><div id="relationship" class="relationship"><span id="kinship">Selecciona dos personas para ver cómo se conectan.</span><button id="togglePath" hidden aria-expanded="false">Ver recorrido completo ▾</button><div id="fullPath" hidden></div></div><div id="viewport" class="viewport"><div id="canvas" class="canvas"><div id="stage" class="stage"><svg id="lines" class="lines"></svg><svg id="routeLines" class="lines"></svg></div></div></div><div class="help"><span class="desktop-help">Clic para seleccionar · Rueda para desplazarte · Ctrl + rueda para zoom</span><span class="touch-help">Toca dos personas · Desliza para recorrer · Pellizca para zoom</span></div><script>
+.surname-overlay{position:fixed;inset:0;background:#000a;z-index:100;display:none;align-items:center;justify-content:center;padding:18px}.surname-overlay.visible{display:flex}.surname-dialog{background:#f8f6ef;color:#183c35;border-radius:12px;width:min(720px,100%);max-height:88vh;overflow:auto;padding:22px;box-shadow:0 15px 45px #0008}.surname-dialog h2{font:700 22px Georgia;margin:0 0 12px}.surname-dialog p{line-height:1.6}.surname-dialog button{background:#183c35;color:white;border:0;border-radius:7px;padding:9px 15px;cursor:pointer}.surname-sequence{font:600 17px/1.9 Georgia;overflow-wrap:anywhere}.surname-sequence .unknown{color:#9c613a}.surname-note{font-size:12px;color:#52655d}.surname-generation{padding:11px 0;border-top:1px solid #d9ddd4}.surname-generation h3{font:700 14px Arial;margin:0 0 9px;color:#49655b}.surname-items{display:flex;flex-wrap:wrap;gap:7px}.surname-linear{align-items:flex-start}.surname-linear .surname-item{font:600 16px/1.45 Georgia;padding:5px 8px}.surname-item{display:inline-block;background:#edf0e9;border-radius:6px;padding:7px 10px;font:600 15px Georgia}.surname-num{font:12px Arial;color:#61736b}.surname-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+</style></head><body><div class="top"><a class="back" href="index.html" id="returnHome">←</a><span class="title">Vista completa</span><span id="status" class="status"></span><button id="minus">−</button><button id="center">Centrar</button><button id="fit">Ver todo</button><button id="plus">+</button><button id="clear">Limpiar ruta</button><button id="openProfile" class="open-profile" type="button">Ver ficha</button></div><div id="relationship" class="relationship"><span id="kinship">Selecciona dos personas para ver cómo se conectan.</span><button id="togglePath" hidden aria-expanded="false">Ver recorrido completo ▾</button><div id="fullPath" hidden></div></div><div id="viewport" class="viewport"><div id="canvas" class="canvas"><div id="stage" class="stage"><svg id="lines" class="lines"></svg><svg id="routeLines" class="lines"></svg></div></div></div><div id="surnameOverlay" class="surname-overlay" role="dialog" aria-modal="true" aria-labelledby="surnameTitle"><section class="surname-dialog"><div class="surname-head"><h2 id="surnameTitle">Apellidos</h2><button id="closeSurnames" type="button">Cerrar ×</button></div><div id="surnameResult"></div></section></div><div class="help"><span class="desktop-help">Clic para seleccionar · Rueda para desplazarte · Ctrl + rueda para zoom</span><span class="touch-help">Toca dos personas · Desliza para recorrer · Pellizca para zoom</span></div><script>
 if(new URLSearchParams(location.search).get('vista')==='cesar'){
   document.title='Vista completa · César de la Dehesa';
   document.getElementById('returnHome').href='index.html?vista=cesar';
 }
 let A=[],B={},P=new Map(),C=new Map(),S=new Map(),Z=new Set(),G=new Map(),pos={},scale=1,selected=[];const CESAR_VIEW=new URLSearchParams(location.search).get('vista')==='cesar';const ROOT=CESAR_VIEW?'P00149':'P0015',CW=176,CH=84,GAP=20,FAMILYGAP=70,ROWGAP=190,PAD=100;
 const vals=(m,k)=>[...(m.get(k)||[])];function add(m,a,b){if(!a||!b||!B[a]||!B[b])return;if(!m.has(a))m.set(a,new Set);m.get(a).add(b)}
-function years(p){let a=p.fecha_nacimiento||p.datos_resumen||'',d=p.fecha_defuncion||'';let ya=(String(a).match(/(?:17|18|19|20)\d{2}/)||['?'])[0],yd=(String(d).match(/(?:17|18|19|20)\d{2}/)||[''])[0];return yd?`${ya} – ${yd}`:`${ya} –`}
+function years(p){let a=p.fecha_nacimiento||p.datos_resumen||'',d=p.fecha_defuncion||'';let ya=(String(a).match(/(?:1[0-9]{3}|20\d{2})/)||['?'])[0],yd=(String(d).match(/(?:1[0-9]{3}|20\d{2})/)||[''])[0];return yd?`${ya} – ${yd}`:`${ya} –`}
 function photo(p){let fp=p.fotografia_principal||'';return fp&&(p.fotografias||[]).some(f=>f&&f.src===fp)?fp:''}
 function branch(r){let core=new Set(),q=[r];while(q.length){let x=q.shift();if(!B[x]||core.has(x))continue;core.add(x);q.push(...vals(P,x),...vals(C,x))}let z=new Set(core);for(const x of core)for(const p of vals(P,x))for(const y of vals(C,p))z.add(y);for(const x of [...z])for(const y of vals(S,x))z.add(y);return z}
 function compute(){B=Object.fromEntries(A.map(x=>[x.id,x]));for(const x of A){const ps=(x.padres&&x.padres.length)?x.padres:[x.padre,x.madre].filter(Boolean);for(const p of ps){add(P,x.id,p);add(C,p,x.id)}for(const c of(x.hijos||[])){add(C,x.id,c);add(P,c,x.id)}for(const s of(x.conyuges||[])){add(S,x.id,s);add(S,s,x.id)}}Z=branch(ROOT);
@@ -23,25 +24,48 @@ if(CESAR_VIEW){
   for(const id of [...allowed])for(const spouse of vals(S,id))allowed.add(spouse);
   allowed.add('P0010');
   Z=new Set([...Z].filter(id=>allowed.has(id)));
+  // Vista de César: Manuela Josefa Múgica Ybarburu aparece como
+  // cónyuge y madre, pero se oculta toda su rama familiar de origen.
+  // El recorrido no atraviesa a Manuela, por lo que conserva sus descendientes.
+  const MANUELA='P0006',maternalExcluded=new Set(),maternalQueue=vals(P,MANUELA);
+  while(maternalQueue.length){
+    const id=maternalQueue.shift();
+    if(!B[id]||id===MANUELA||maternalExcluded.has(id))continue;
+    maternalExcluded.add(id);
+    maternalQueue.push(...vals(P,id),...vals(C,id),...vals(S,id));
+  }
+  for(const id of maternalExcluded)Z.delete(id);
+  Z.add(MANUELA);
 }
 G=new Map([[ROOT,0]]);let q=[ROOT];while(q.length){let x=q.shift(),g=G.get(x);for(const p of vals(P,x))if(Z.has(p)&&!G.has(p)){G.set(p,g-1);q.push(p)}for(const c of vals(C,x))if(Z.has(c)&&!G.has(c)){G.set(c,g+1);q.push(c)}}let ch=true;while(ch){ch=false;for(const x of Z)if(!G.has(x)){let s=vals(S,x).find(y=>G.has(y));if(s){G.set(x,G.get(s));ch=true}}}for(const x of Z)if(!G.has(x))G.set(x,0);layout();render()}
 function layout(){
  const min=Math.min(...G.values()),max=Math.max(...G.values());pos={};
  const rows=new Map(),unitOf=new Map();
- // Una unidad es una pareja (si existe en esta generación) o una persona sola.
- for(let g=min;g<=max;g++){
-  const ids=[...Z].filter(id=>G.get(id)===g),used=new Set(),units=[];
-  for(const id of ids){
-   if(used.has(id))continue;
-   const mates=vals(S,id).filter(x=>Z.has(x)&&G.get(x)===g&&!used.has(x));
-   let mate=mates.find(m=>vals(C,id).some(c=>vals(P,c).includes(m)))||mates[0];
-   const members=mate?[id,mate]:[id];members.forEach(x=>used.add(x));
-   const parents=[...new Set(members.flatMap(x=>vals(P,x)).filter(x=>Z.has(x)))];
-   const u={members,parents,w:members.length*CW+(members.length-1)*GAP,cx:0,order:0};
-   units.push(u);members.forEach(x=>unitOf.set(x,u));
+  // Agrupar matrimonios conectados en una misma generación, sin duplicar personas.
+  // En matrimonios múltiples, la persona común queda entre sus cónyuges.
+  for(let g=min;g<=max;g++){
+   const ids=[...Z].filter(id=>G.get(id)===g),remaining=new Set(ids),units=[];
+   for(const id of ids){
+    if(!remaining.has(id))continue;
+    const component=[],queue=[id];remaining.delete(id);
+    while(queue.length){
+     const x=queue.shift();component.push(x);
+     for(const mate of vals(S,x))if(remaining.has(mate)){
+      remaining.delete(mate);queue.push(mate);
+     }
+    }
+    const degree=x=>vals(S,x).filter(y=>component.includes(y)).length;
+    const hub=[...component].sort((a,b)=>degree(b)-degree(a)||a.localeCompare(b))[0];
+    const others=component.filter(x=>x!==hub).sort((a,b)=>a.localeCompare(b));
+    // Colocar el cónyuge compartido en el centro; ningún enlace atraviesa otra tarjeta.
+    const middle=Math.floor(others.length/2);
+    const members=[...others.slice(0,middle),hub,...others.slice(middle)];
+    const parents=[...new Set(members.flatMap(x=>vals(P,x)).filter(x=>Z.has(x)))];
+    const u={members,parents,w:members.length*CW+(members.length-1)*GAP,cx:0,order:0};
+    units.push(u);members.forEach(x=>unitOf.set(x,u));
+   }
+   rows.set(g,units);
   }
-  rows.set(g,units);
- }
  function parentUnits(u){return [...new Set(u.parents.map(p=>unitOf.get(p)).filter(Boolean))]}
  function childUnits(u){let a=[];for(const id of u.members)for(const c of vals(C,id)){let q=unitOf.get(c);if(q&&!a.includes(q))a.push(q)}return a}
  // Orden inicial determinista: los hermanos comparten clave de padres y quedan juntos.
@@ -93,6 +117,24 @@ function layout(){
   }
   if(!improved)break;
  }
+ // Ajuste localizado: el orden de los hijos debe seguir el de sus madres.
+ // Intercambiar las unidades familiares completas, no tarjetas individuales.
+ const miguelUnit=unitOf.get('P00191'),juanUnit=unitOf.get('P00226');
+ if(miguelUnit&&juanUnit&&miguelUnit!==juanUnit){
+  const gm=G.get('P00191'),gj=G.get('P00226');
+  if(gm===gj){
+   const us=rows.get(gm),im=us.indexOf(miguelUnit),ij=us.indexOf(juanUnit);
+   const francisca=unitOf.get('P00195'),magdalena=unitOf.get('P00225');
+   if(im>=0&&ij>=0&&francisca&&magdalena){
+    const parentRow=rows.get(G.get('P00195'))||[];
+    const ifr=parentRow.indexOf(francisca),ima=parentRow.indexOf(magdalena);
+    if(ifr>=0&&ima>=0&&(im-ij)*(ifr-ima)<0){
+     [us[im],us[ij]]=[us[ij],us[im]];
+     us.forEach((u,i)=>u.order=i);
+    }
+   }
+  }
+ }
  // Empaquetado compacto: cada fila usa únicamente el ancho real de sus tarjetas.
  const rowWidth=new Map();
  for(let g=min;g<=max;g++){let x=0,us=rows.get(g);for(const u of us){u.local=x+u.w/2;x+=u.w+FAMILYGAP}rowWidth.set(g,Math.max(0,x-FAMILYGAP))}
@@ -113,48 +155,137 @@ function layout(){
 }
 function parentKey(id){let ps=vals(P,id).filter(x=>Z.has(x)).sort();return ps.length?ps.join('+'):'~'+id}
 function center(id){return {x:pos[id].x+CW/2,y:pos[id].y+CH/2}}
-function render(){const stage=document.getElementById('stage'),lines=document.getElementById('lines');stage.style.width=treeW+'px';stage.style.height=treeH+'px';lines.setAttribute('viewBox',`0 0 ${treeW} ${treeH}`);document.getElementById('routeLines').setAttribute('viewBox',`0 0 ${treeW} ${treeH}`);for(const id of Z){let p=B[id],q=pos[id];if(!q)continue;let e=document.createElement('div');e.className='card'+(id===ROOT?' root':'');e.dataset.id=id;e.style.left=q.x+'px';e.style.top=q.y+'px';let fp=photo(p);e.innerHTML=`<div class="photo">${fp?`<img src="${fp}" alt="">`:'♧'}</div><div class="name"></div><div class="dates"></div>`;e.querySelector('.name').textContent=p.nombre||id;e.querySelector('.dates').textContent=years(p);e.onclick=()=>selectPerson(id);stage.appendChild(e)}drawBase();document.getElementById('status').textContent=`${Z.size} personas · ${new Set(G.values()).size} generaciones`;applyScale();setTimeout(()=>centerOn(ROOT),50)}
+function render(){const stage=document.getElementById('stage'),lines=document.getElementById('lines');stage.style.width=treeW+'px';stage.style.height=treeH+'px';lines.setAttribute('viewBox',`0 0 ${treeW} ${treeH}`);document.getElementById('routeLines').setAttribute('viewBox',`0 0 ${treeW} ${treeH}`);for(const id of Z){let p=B[id],q=pos[id];if(!q)continue;let e=document.createElement('div');e.className='card'+(id===ROOT?' root':'');e.dataset.id=id;e.style.left=q.x+'px';e.style.top=q.y+'px';let fp=photo(p);e.innerHTML=`<div class="photo">${fp?`<img src="${fp}" alt="">`:`<svg class="tree-placeholder" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 30V18 M20 24L13 18 M20 22L27 16" stroke="#666b4b" stroke-width="3.2" stroke-linecap="round" fill="none"/><path d="M20 8c-4-4-11 0-10 6-6 1-6 10 0 12 2 3 6 3 9 1 4 3 9 1 10-3 7-1 7-10 1-12-1-5-7-7-10-4Z" fill="#697354"/><path d="M15 31h10" stroke="#666b4b" stroke-width="3" stroke-linecap="round"/></svg>`}</div><div class="name"></div><div class="dates"></div>`;e.querySelector('.name').textContent=p.nombre||id;e.querySelector('.dates').textContent=years(p);e.onclick=()=>selectPerson(id);e.ondblclick=()=>openProfile(id);stage.appendChild(e)}drawBase();document.getElementById('status').textContent=`${Z.size} personas · ${new Set(G.values()).size} generaciones`;applyScale();setTimeout(()=>restoreOrFocus(),70)}
 function pathEl(svg,d,cls){let e=document.createElementNS('http://www.w3.org/2000/svg','path');e.setAttribute('d',d);e.setAttribute('class',cls);svg.appendChild(e)}
 function circleEl(svg,x,y,r,cls){let e=document.createElementNS('http://www.w3.org/2000/svg','circle');e.setAttribute('cx',x);e.setAttribute('cy',y);e.setAttribute('r',r);e.setAttribute('class',cls);svg.appendChild(e)}
-function drawBase(){
- const svg=document.getElementById('lines');svg.innerHTML='';
- // MOTOR V2: las líneas nacen siempre de una familia concreta.
- // No hay barras horizontales compartidas ni carriles por generación.
- for(const id of Z)for(const s of vals(S,id))if(Z.has(s)&&id<s&&pos[id]&&pos[s]){
-   let a=center(id),b=center(s);
-   pathEl(svg,`M${a.x},${a.y} L${b.x},${b.y}`,'couple-line');
- }
- const fam=new Map();
- for(const child of Z){
+ function drawBase(){
+  const svg=document.getElementById('lines');svg.innerHTML='';
+  // Cada matrimonio es una relación independiente. Las líneas de pareja
+  // discurren por encima de las tarjetas y nunca unen a dos cónyuges entre sí.
+  const spousePairs=[];
+  for(const id of Z)for(const s of vals(S,id))if(Z.has(s)&&id<s&&pos[id]&&pos[s])spousePairs.push([id,s]);
+  const topLane=new Map();
+  for(const [id,s] of spousePairs){
+   const a=center(id),b=center(s);
+   const row=Math.min(pos[id].y,pos[s].y);
+   const lane=topLane.get(row)||0;topLane.set(row,lane+1);
+   const rail=row-12-(lane%3)*7;
+   // Tramo superior: nunca atraviesa el cuerpo de una tarjeta.
+   pathEl(svg,`M${a.x},${pos[id].y} L${a.x},${rail} L${b.x},${rail} L${b.x},${pos[s].y}`,'couple-line');
+  }
+  const fam=new Map();
+  for(const child of Z){
    if(!pos[child])continue;
    const ps=vals(P,child).filter(p=>Z.has(p)&&pos[p]).sort();
    if(!ps.length)continue;
    const key=ps.join('+');
    if(!fam.has(key))fam.set(key,{ps:[...ps],kids:[]});
    fam.get(key).kids.push(child);
- }
- for(const f of fam.values()){
+  }
+  for(const f of fam.values()){
    f.kids.sort((a,b)=>center(a).x-center(b).x);
-   // El nodo familiar está bajo el centro REAL de los progenitores registrados.
    const px=f.ps.reduce((s,p)=>s+center(p).x,0)/f.ps.length;
    const py=Math.max(...f.ps.map(p=>pos[p].y+CH));
-   const jy=py+18;
-   pathEl(svg,`M${px},${py} L${px},${jy}`,'family-line');
-   circleEl(svg,px,jy,3.5,'family-junction');
-   // Cada hijo recibe SU conexión directa desde ese nodo familiar.
-   // Las curvas se abren enseguida desde la familia y terminan verticales sobre el hijo.
-   for(const child of f.kids){
-     const cx=center(child).x, cy=pos[child].y;
-     const room=Math.max(34,cy-jy);
-     const c1y=jy+Math.min(48,room*.32);
-     const c2y=cy-Math.min(48,room*.32);
-     pathEl(svg,`M${px},${jy} C${px},${c1y} ${cx},${c2y} ${cx},${cy}`,'family-line');
+   const jy=py+24;
+   // Ambos progenitores confluyen explícitamente en el nodo de SU familia.
+   for(const parent of f.ps){
+    const x=center(parent).x,y=pos[parent].y+CH;
+    pathEl(svg,`M${x},${y} L${x},${jy} L${px},${jy}`,'family-line');
    }
+   circleEl(svg,px,jy,4,'family-junction');
+   for(const child of f.kids){
+    const cx=center(child).x,cy=pos[child].y;
+    const room=Math.max(34,cy-jy);
+    const c1y=jy+Math.min(48,room*.32);
+    const c2y=cy-Math.min(48,room*.32);
+    pathEl(svg,`M${px},${jy} C${px},${c1y} ${cx},${c2y} ${cx},${cy}`,'family-line');
+   }
+  }
  }
-}
 function neighbors(id){return [...new Set([...vals(P,id),...vals(C,id),...vals(S,id)].filter(x=>Z.has(x)))]}
 function shortest(a,b){let q=[a],prev=new Map([[a,null]]);while(q.length){let x=q.shift();if(x===b)break;for(const n of neighbors(x))if(!prev.has(n)){prev.set(n,x);q.push(n)}}if(!prev.has(b))return[];let out=[];for(let x=b;x!=null;x=prev.get(x))out.push(x);return out.reverse()}
-function selectPerson(id){if(selected.length===2)selected=[];if(!selected.includes(id))selected.push(id);updateRoute()}
+function selectPerson(id){if(selected.length===2)selected=[];if(!selected.includes(id))selected.push(id);updateRoute();updateProfileButton()}
+function updateProfileButton(){const b=document.getElementById('openProfile');b.classList.toggle('visible',selected.length>0);b.textContent=selected.length?'Ver ficha de '+(B[selected[selected.length-1]]?.nombre||'persona'):'Ver ficha'}
+function saveTreeState(){const v=document.getElementById('viewport');try{sessionStorage.setItem('raicesFullTreeState'+(CESAR_VIEW?'Cesar':''),JSON.stringify({scale,left:v.scrollLeft,top:v.scrollTop,selected}))}catch(_){}}
+function openProfile(id){if(!B[id])return;saveTreeState();const u=new URL('index.html',location.href);if(CESAR_VIEW)u.searchParams.set('vista','cesar');u.searchParams.set('persona',id);u.searchParams.set('origen','completo');location.href=u.href}
+function restoreOrFocus(){const qs=new URLSearchParams(location.search),id=qs.get('persona'),key='raicesFullTreeState'+(CESAR_VIEW?'Cesar':'');if(qs.get('restaurar')==='1'){try{const state=JSON.parse(sessionStorage.getItem(key)||'null');if(state){setScale(state.scale);selected=(state.selected||[]).filter(x=>Z.has(x)).slice(0,2);updateRoute();updateProfileButton();const v=document.getElementById('viewport');v.scrollLeft=state.left;v.scrollTop=state.top;sessionStorage.removeItem(key);return}}catch(_){}}if(id&&Z.has(id)){selected=[id];updateRoute();updateProfileButton();centerOn(id)}else centerOn(ROOT)}
+document.getElementById('openProfile').onclick=()=>{if(selected.length)openProfile(selected[selected.length-1])};
+// Cadena de apellidos por generaciones, mostrando solo posiciones con datos útiles.
+// Se respetan las personas visibles en cada versión del árbol.
+function surnameParts(person){
+  const raw=String(person?.nombre||'').trim().replace(/\s+\d+[ºª]\s*$/u,'');
+  const tokens=raw.split(/\s+/).filter(Boolean);
+  if(tokens.length<3)return [];
+  const take=end=>{
+    let start=end-1;
+    while(start>0&&/^(?:de|del|la|las|los|y|da|do)$/i.test(tokens[start-1]))start--;
+    return {value:tokens.slice(start,end).join(' '),start};
+  };
+  const second=take(tokens.length),first=take(second.start);
+  return first.start>=1?[first.value,second.value]:[];
+}
+function parentPair(id){
+  const p=B[id];if(!p)return [null,null];
+  const explicit=[p.padre,p.madre].map(x=>x&&B[x]&&Z.has(x)?x:null);
+  if(explicit.some(Boolean))return explicit;
+  const legacy=Array.isArray(p.padres)?p.padres.filter(x=>B[x]&&Z.has(x)):[...vals(P,id)].filter(x=>Z.has(x));
+  const male=x=>/^(?:hombre|masculino|m)$/i.test(String(B[x].sexo||''));
+  const female=x=>/^(?:mujer|femenino|f)$/i.test(String(B[x].sexo||''));
+  return [legacy.find(male)||null,legacy.find(female)||null];
+}
+function surnameGenerations(id){
+  const own=surnameParts(B[id]);let row=[id],out=[];
+  for(let depth=1;depth<=6;depth++){
+    const next=[];
+    for(const ancestor of row)next.push(...(ancestor?parentPair(ancestor):[null,null]));
+    const names=next.map((ancestor,i)=>ancestor?(surnameParts(B[ancestor])[0]||null):(depth===1?own[i]||null:null));
+    if(!names.some(Boolean))break;
+    out.push({depth,names});
+    if(!next.some(Boolean))break;
+    row=next;
+  }
+  return out;
+}
+function showSurnames(id){
+  if(!B[id]||!Z.has(id))return;
+  const escapeText=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const person=B[id], own=surnameParts(person), tokens=String(person.nombre||'').trim().split(/\s+/);
+  const given=tokens.slice(0,Math.max(1,tokens.length-own.reduce((n,x)=>n+x.split(/\s+/).length,0))).join(' ');
+  const generations=surnameGenerations(id);
+  // Mostrar una sola cadena ordenada: nombre, sus dos apellidos y después los apellidos conocidos de sus antepasados.
+  // No repetir los dos apellidos propios cuando vuelven a aparecer en la primera generación de ascendientes.
+  // Recorrer los antepasados en orden genealógico, sin volver a mostrar
+  // apellidos ya encontrados en generaciones anteriores.
+  const entries=[],seen=new Set();
+  const key=v=>String(v).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('es').replace(/\s+/g,' ').trim();
+  const append=name=>{if(!name)return;const k=key(name);if(!seen.has(k)){seen.add(k);entries.push(name)}};
+  own.forEach(append);
+  // La primera generación representa los apellidos propios y se omite.
+  // Cada generación posterior contiene los primeros apellidos de sus antepasados.
+  // No generar casillas vacías por ramas que terminan: solo una marca por
+  // tramo desconocido entre apellidos conocidos de la misma generación.
+  for(const gen of generations){
+    if(gen.depth===1||entries.length>=30)continue;
+    const names=gen.names;
+    const novel=names.map(name=>name&&!seen.has(key(name))?name:null);
+    const first=novel.findIndex(Boolean),last=novel.findLastIndex(Boolean);
+    if(first<0)continue;
+    let gap=false;
+    for(let i=first;i<=last&&entries.length<30;i++){
+      if(novel[i]){if(gap){entries.push('XXXXX');gap=false}append(novel[i])}
+      else if(!names[i])gap=true;
+    }
+  }
+  const items=entries.map((name,i)=>'<span class="surname-item">'+(i+1)+'. '+escapeText(name)+'</span>').join('');
+  document.getElementById('surnameResult').innerHTML='<p><strong>'+escapeText(given)+'</strong></p>'+ 
+    '<div class="surname-items surname-linear">'+items+'</div>'+ 
+    '<p class="surname-note">Apellidos distintos identificados en orden de ascendencia. XXXXX indica un tramo sin datos entre apellidos conocidos. La interpretación de apellidos compuestos requiere revisión.</p>';
+  document.getElementById('surnameOverlay').classList.add('visible');
+}
+document.getElementById('closeSurnames').onclick=()=>document.getElementById('surnameOverlay').classList.remove('visible');
+document.getElementById('surnameOverlay').addEventListener('click',e=>{if(e.target.id==='surnameOverlay')e.currentTarget.classList.remove('visible')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('surnameOverlay').classList.remove('visible')});
+
 function showRelation(message,route){
  document.getElementById('kinship').textContent=message;
  const toggle=document.getElementById('togglePath'),full=document.getElementById('fullPath');
@@ -204,7 +335,7 @@ document.getElementById('togglePath').onclick=()=>{const p=document.getElementBy
 function applyScale(){let canvas=document.getElementById('canvas'),stage=document.getElementById('stage');stage.style.transform=`scale(${scale})`;stage.style.transformOrigin='0 0';canvas.style.width=Math.max(innerWidth,treeW*scale)+'px';canvas.style.height=Math.max(document.getElementById('viewport').clientHeight,treeH*scale)+'px'}
 function setScale(v){scale=Math.max(.3,Math.min(1.8,v));applyScale()}
 function centerOn(id){let v=document.getElementById('viewport'),p=center(id);v.scrollLeft=Math.max(0,p.x*scale-v.clientWidth/2);v.scrollTop=Math.max(0,p.y*scale-v.clientHeight/2)}
-document.getElementById('plus').onclick=()=>setScale(scale+.15);document.getElementById('minus').onclick=()=>setScale(scale-.15);document.getElementById('center').onclick=()=>centerOn(selected[0]||ROOT);document.getElementById('fit').onclick=()=>{let v=document.getElementById('viewport');setScale(Math.min(v.clientWidth/treeW,v.clientHeight/treeH,.9));v.scrollTo(0,0)};document.getElementById('clear').onclick=()=>{selected=[];updateRoute()};document.getElementById('viewport').addEventListener('wheel',e=>{if(e.ctrlKey){e.preventDefault();setScale(scale+(e.deltaY<0?.1:-.1))}},{passive:false});
+document.getElementById('plus').onclick=()=>setScale(scale+.15);document.getElementById('minus').onclick=()=>setScale(scale-.15);document.getElementById('center').onclick=()=>centerOn(selected[0]||ROOT);document.getElementById('fit').onclick=()=>{let v=document.getElementById('viewport');setScale(Math.min(v.clientWidth/treeW,v.clientHeight/treeH,.9));v.scrollTo(0,0)};document.getElementById('clear').onclick=()=>{selected=[];updateRoute();updateProfileButton()};document.getElementById('viewport').addEventListener('wheel',e=>{if(e.ctrlKey){e.preventDefault();setScale(scale+(e.deltaY<0?.1:-.1))}},{passive:false});
 // Zoom táctil centrado en el punto medio de los dedos.
 const viewport=document.getElementById('viewport');let pinch=null;
 function touchDistance(a,b){return Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)}
