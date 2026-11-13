@@ -19819,5 +19819,484 @@
     "ultima_modificacion": "2026-11-13T11:31:42.002Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00324",
+    "nombre": "Juan MUXICA TELLERIA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "07/05/1683",
+    "lugar_nacimiento": "Zerain, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "22/01/1743",
+    "lugar_defuncion": "Mutiloa, Gipuzkoa, Euskadi",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00325"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 13 de abr. de 1705\ncon Maria Conçeption ARREGUI MAZQUIARAN\n\nZegama, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:43:35.718Z",
+    "ultima_modificacion": "2026-11-13T11:43:35.718Z",
+    "padre": "P00322",
+    "madre": "P00323"
+  },
+  {
+    "id": "P00325",
+    "nombre": "Maria Conçeption ARREGUI MAZQUIARAN",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "26/03/1679",
+    "lugar_nacimiento": "Zegama, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00324"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 13 de abr. de 1705\ncon Juan MUXICA TELLERIA\n\nZegama, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:45:34.728Z",
+    "ultima_modificacion": "2026-11-13T11:45:34.728Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00326",
+    "nombre": "Juan Antonio MUXICA ARREGUI",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "15/06/1709",
+    "lugar_nacimiento": "Segura, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00327"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 23 de sept. de 1737\ncon Maria Agada GOYCOECHEA ARRESE\n\nIdiazabal, Gipuzkoa, Euskadi"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 19 de mar. de 1770\ncon Magdalena ARRIZABALAGA AGUIRRE\n\nZerain, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:47:38.253Z",
+    "ultima_modificacion": "2026-11-13T11:47:38.253Z",
+    "padre": "P00324",
+    "madre": "P00325"
+  },
+  {
+    "id": "P00327",
+    "nombre": "Maria Agada GOYCOECHEA ARRESE",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "12/02/1718",
+    "lugar_nacimiento": "Idiazabal, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "25/04/1769",
+    "lugar_defuncion": "Mutiloa, Gipuzkoa, Euskadi",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00326"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 23 de sept. de 1737\ncon Juan Antonio MUXICA ARREGUI\n\nIdiazabal, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:50:15.095Z",
+    "ultima_modificacion": "2026-11-13T11:50:15.095Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00328",
+    "nombre": "Joseph Antonio MUXICA GOYCOECHEA",
+    "nombre_conocido": "",
+    "sexo": "",
+    "situacion_vital": "desconocido",
+    "fecha_nacimiento": "05/07/1749",
+    "lugar_nacimiento": "Mutiloa, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "pendiente",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00329"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 22 de sept. de 1785\ncon Maria Luisa ARRIZABALAGA LACHA\n\nAraia-Asparrena, Alaba, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:54:03.386Z",
+    "ultima_modificacion": "2026-11-13T11:54:03.386Z",
+    "padre": "P00326",
+    "madre": "P00327"
+  },
+  {
+    "id": "P00329",
+    "nombre": "Maria Luisa ARRIZABALAGA LACHA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00328"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 22 de sept. de 1785\ncon Joseph Antonio MUXICA GOYCOECHEA\n\nAraia-Asparrena, Alaba, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:55:27.088Z",
+    "ultima_modificacion": "2026-11-13T11:55:27.088Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00330",
+    "nombre": "Simon MUJICA ARRIZABALAGA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "28/09/1788",
+    "lugar_nacimiento": "Araia-Asparrena, Alaba, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00331"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 2 de oct. de 1815\ncon Maria Ygnacia BOLINAGA ALEIZA\n\nBergara, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:57:26.900Z",
+    "ultima_modificacion": "2026-11-13T11:57:26.900Z",
+    "padre": "P00328",
+    "madre": "P00329"
+  },
+  {
+    "id": "P00331",
+    "nombre": "Maria Ygnacia BOLINAGA ALEIZA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00330"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 2 de oct. de 1815\ncon Simon MUJICA ARRIZABALAGA\n\nBergara, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:58:42.439Z",
+    "ultima_modificacion": "2026-11-13T11:58:42.439Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00332",
+    "nombre": "Miguel Maria MUXICA BOLINAGA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "10/02/1827",
+    "lugar_nacimiento": "Andoain, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "Farmaceutico",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00333"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 22 de mar. de 1862\ncon Dolores RODRIGUEZ\n\nSan Antonio de Gualeguay, Argentina"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T12:00:47.395Z",
+    "ultima_modificacion": "2026-11-13T12:00:47.395Z",
+    "padre": "P00330",
+    "madre": "P00331"
+  },
+  {
+    "id": "P00333",
+    "nombre": "Dolores RODRIGUEZ",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1838",
+    "lugar_nacimiento": "Uruguay",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00332"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 22 de mar. de 1862\ncon Miguel Maria MUXICA BOLINAGA\n\nSan Antonio de Gualeguay, Argentina"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T12:02:48.859Z",
+    "ultima_modificacion": "2026-11-13T12:02:48.859Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00334",
+    "nombre": "Adolfo MUGICA RODRIGUEZ",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "11/06/1867",
+    "lugar_nacimiento": "San Antonio de Gualeguay, Argentina",
+    "fecha_defuncion": "21/01/1922",
+    "lugar_defuncion": "Santiago del Estero, Argentina",
+    "profesion": "Farmaceutico, Ministro de agricultura",
+    "estado": "documentado",
+    "notas": "Hijo del farmacéutico Miguel Mujica, siguió su misma carrera, recibiendo el título en 1889. En su juventud editó, junto a su amigo Gregorio de Laferrère, el periódico satírico El Fígaro.[1]\n\nDurante los años siguientes fue titular de botánica médica en la Escuela de Medicina y luego fue el primer titular de esa materia en la Escuela de Farmacia, actual Facultad de Farmacia y Bioquímica de la Universidad de Buenos Aires.[2]\n\nEn 1901 se recibió de abogado y comenzó a dictar cursos en la Facultad de Filosofía y Letras. Afiliado al Partido Conservador, fue concejal de la Capital Federal, diputado provincial en la Provincia de Buenos Aires; luego fue diputado nacional por la Provincia de Buenos Aires entre 1902 y 1906, y por la de Entre Ríos entre ese año y 1911, reelección mediante, y ese año presentó su renuncia.[2]\n\nEl presidente Roque Sáenz Peña lo nombró ministro de Agricultura, cargo que ocupó hasta que el vicepresidente Victorino de la Plaza reorganizó el gabinete, en febrero de 1914.[2]\n\nReanudó su actividad política durante la presidencia de Hipólito Yrigoyen, como destacado dirigente conservador.[2]\n\nFalleció en Santiago del Estero en 1922. Su hijo, también llamado Adolfo Mugica, fue un dirigente conservador que ejerció brevemente como ministro de Relaciones Exteriores y Culto durante la presidencia de Arturo Frondizi.[3] y que sería además padre del sacerdote Carlos Mugica.",
+    "datos_resumen": "Hijo del farmacéutico Miguel Mujica, siguió su misma carrera, recibiendo el título en 1889. En su juventud editó, junto a su amigo Gregorio de Laferrère, el periódico satírico El Fígaro.[1]\n\nDurante los años siguientes fue titular de botánica médica en la Escuela de Medicina y luego fue el primer titular de esa materia en la Escuela de Farmacia, actual Facultad de Farmacia y Bioquímica de la Universidad de Buenos Aires.[2]\n\nEn 1901 se recibió de abogado y comenzó a dictar cursos en la Facultad de Filosofía y Letras. Afiliado al Partido Conservador, fue concejal de la Capital Federal, diputado provincial en la Provincia de Buenos Aires; luego fue diputado nacional por la Provincia de Buenos Aires entre 1902 y 1906, y por la de Entre Ríos entre ese año y 1911, reelección mediante, y ese año presentó su renuncia.[2]\n\nEl presidente Roque Sáenz Peña lo nombró ministro de Agricultura, cargo que ocupó hasta que el vicepresidente Victorino de la Plaza reorganizó el gabinete, en febrero de 1914.[2]\n\nReanudó su actividad política durante la presidencia de Hipólito Yrigoyen, como destacado dirigente conservador.[2]\n\nFalleció en Santiago del Estero en 1922. Su hijo, también llamado Adolfo Mugica, fue un dirigente conservador que ejerció brevemente como ministro de Relaciones Exteriores y Culto durante la presidencia de Arturo Frondizi.[3] y que sería además padre del sacerdote Carlos Mugica.",
+    "visible": true,
+    "conyuges": [
+      "P00335"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 6 de ene. de 1896\ncon Juana ELIZALDE LAURENCENA\nSan Antonio de Gualeguay, Argentina"
+      }
+    ],
+    "fotografias": [
+      {
+        "id": "F000361",
+        "src": "assets/fotos/P00334/adolfo-mugica-ministro-agricultura.jpg",
+        "titulo": "Adolfo Mugica  - Ministro Agricultura",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00334"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T12:09:51.372Z",
+    "ultima_modificacion": "2026-11-13T12:09:51.372Z",
+    "padre": "P00332",
+    "madre": "P00333",
+    "fotografia_principal": "assets/fotos/P00334/adolfo-mugica-ministro-agricultura.jpg",
+    "fotoPosicion": "50% 38%"
+  },
+  {
+    "id": "P00335",
+    "nombre": "Juana ELIZALDE LAURENCENA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "24/11/1869",
+    "lugar_nacimiento": "San Antonio de Gualeguay, Argentina",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00334"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 6 de ene. de 1896\ncon Adolfo MUGICA RODRIGUEZ\n\nSan Antonio de Gualeguay, Argentina"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T12:12:12.470Z",
+    "ultima_modificacion": "2026-11-13T12:12:12.470Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00336",
+    "nombre": "Adolfo Miguel MUGICA ELIZALDE",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "14/11/1896",
+    "lugar_nacimiento": "Buenos Aires, Argentina",
+    "fecha_defuncion": "25/02/1979",
+    "lugar_defuncion": "Santiago del Estero, Argentina",
+    "profesion": "Ingeniero, abogado, ministro de asuntos exteriores",
+    "estado": "documentado",
+    "notas": "Era hijo de Juana Elizalde y de Adolfo Mugica, quien ejerció como ministro de Agricultura de su país durante la presidencia de Roque Sáenz Peña. Casado con Carmen Echagüe, tuvo siete hijos, entre ellos el padre Carlos Mugica, un sacerdote vinculado al Movimiento de Sacerdotes para el Tercer Mundo y reconocido como uno de los más destacados curas villeros.\n\nSe recibió de ingeniero civil en 1920 y de abogado en 1927. Fue docente en la Facultad de Ingeniería de la Universidad de Buenos Aires.[1]\n\nFue miembro del Concejo Deliberante de la Capital Federal entre 1925 y 1928. Tras el golpe de Estado de 1930 fue secretario de Obras Públicas de la Municipalidad de la Ciudad de Buenos Aires durante la dictadura de José Félix Uriburu, y fue también secretario interino de Hacienda. En 1931 ejerció interinamente como intendente de la misma ciudad. Entre 1938 y 1942 fue diputado nacional por el Partido Demócrata Nacional.[2]\n\nDurante los años siguientes trabajó en grandes empresas y fue director en varias empresas privadas, entre ellas de la Droguería Beretervide, de la Forestal Puerto Guaraní, y de Palmas Negras S. A. En ese último año fue nombrado presidente de la Cámara Argentino-Uruguaya de Productores de Extracto de Quebracho. Dirigió la revista Interamérica, dedicada a la difusión del comercio exterior de su país.[2]\n\nAlejado durante todo el período peronista de la administración pública, ejerció algunos cargos menores durante la presidencia de Arturo Frondizi. En abril de 1961, este presidente lo nombró ministro de Relaciones Exteriores. Su principal gestión fue la organización de la postura argentina ante el reunión del Consejo Interamericano Económico y Social, que realizó una reunión en Punta del Este, Uruguay, en agosto de ese año, donde se promocionó una versión ligeramente más industrialista de la Alianza para el Progreso propugnada por el presidente estadounidense John F. Kennedy. Durante el transcurso de la reunión se produjo la última visita de Ernesto Guevara a la Argentina, por iniciativa del presidente, con quien el líder revolucionario se reunió en secreto. La visita y el secreto en que se produjo llevó a una crisis militar que debilitó la posición del presidente; Mugica, quien no había participado en la organización de la reunión, presentó su renuncia.[3]\n\nAlejado definitivamente de la política, apoyó los primeros pasos de su hijo Carlos como sacerdote, aunque su relación se hizo más distante cuando éste se identificó con las vertientes izquierdistas del peronismo. Tras el asesinato de su hijo, se recluyó por completo. Falleció en el año 1979.",
+    "datos_resumen": "Era hijo de Juana Elizalde y de Adolfo Mugica, quien ejerció como ministro de Agricultura de su país durante la presidencia de Roque Sáenz Peña. Casado con Carmen Echagüe, tuvo siete hijos, entre ellos el padre Carlos Mugica, un sacerdote vinculado al Movimiento de Sacerdotes para el Tercer Mundo y reconocido como uno de los más destacados curas villeros.\n\nSe recibió de ingeniero civil en 1920 y de abogado en 1927. Fue docente en la Facultad de Ingeniería de la Universidad de Buenos Aires.[1]\n\nFue miembro del Concejo Deliberante de la Capital Federal entre 1925 y 1928. Tras el golpe de Estado de 1930 fue secretario de Obras Públicas de la Municipalidad de la Ciudad de Buenos Aires durante la dictadura de José Félix Uriburu, y fue también secretario interino de Hacienda. En 1931 ejerció interinamente como intendente de la misma ciudad. Entre 1938 y 1942 fue diputado nacional por el Partido Demócrata Nacional.[2]\n\nDurante los años siguientes trabajó en grandes empresas y fue director en varias empresas privadas, entre ellas de la Droguería Beretervide, de la Forestal Puerto Guaraní, y de Palmas Negras S. A. En ese último año fue nombrado presidente de la Cámara Argentino-Uruguaya de Productores de Extracto de Quebracho. Dirigió la revista Interamérica, dedicada a la difusión del comercio exterior de su país.[2]\n\nAlejado durante todo el período peronista de la administración pública, ejerció algunos cargos menores durante la presidencia de Arturo Frondizi. En abril de 1961, este presidente lo nombró ministro de Relaciones Exteriores. Su principal gestión fue la organización de la postura argentina ante el reunión del Consejo Interamericano Económico y Social, que realizó una reunión en Punta del Este, Uruguay, en agosto de ese año, donde se promocionó una versión ligeramente más industrialista de la Alianza para el Progreso propugnada por el presidente estadounidense John F. Kennedy. Durante el transcurso de la reunión se produjo la última visita de Ernesto Guevara a la Argentina, por iniciativa del presidente, con quien el líder revolucionario se reunió en secreto. La visita y el secreto en que se produjo llevó a una crisis militar que debilitó la posición del presidente; Mugica, quien no había participado en la organización de la reunión, presentó su renuncia.[3]\n\nAlejado definitivamente de la política, apoyó los primeros pasos de su hijo Carlos como sacerdote, aunque su relación se hizo más distante cuando éste se identificó con las vertientes izquierdistas del peronismo. Tras el asesinato de su hijo, se recluyó por completo. Falleció en el año 1979.",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio\ncon Carmen Erlinda ECHAGÜE LLOBET"
+      }
+    ],
+    "fotografias": [
+      {
+        "id": "F000362",
+        "src": "assets/fotos/P00336/adolfo-mugica-hijo.jpg",
+        "titulo": "Adolfo Mugica Elizalde",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00336"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T12:14:37.857Z",
+    "ultima_modificacion": "2026-11-13T12:14:37.857Z",
+    "padre": "P00334",
+    "madre": "P00335",
+    "fotografia_principal": "assets/fotos/P00336/adolfo-mugica-hijo.jpg",
+    "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00337",
+    "nombre": "Carmen Erlinda ECHAGÜE LLOBET",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "15/01/1894",
+    "lugar_nacimiento": "Buenos Aires, Argentina",
+    "fecha_defuncion": "07/05/1984",
+    "lugar_defuncion": "Buenos Aires, Argentina",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "padres": [],
+    "conyuges": [],
+    "hijos": [],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio\ncon Adolfo Miguel MUGICA ELIZALDE"
+      }
+    ],
+    "fotografias": [
+      {
+        "id": "F000363",
+        "src": "assets/fotos/P00337/carmen-erlinda-echague.jpg",
+        "titulo": "Carmen Erlinda Echague",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00337"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T12:18:29.330Z",
+    "ultima_modificacion": "2026-11-13T12:18:29.330Z",
+    "fotografia_principal": "assets/fotos/P00337/carmen-erlinda-echague.jpg",
+    "fotoPosicion": "50% 50%"
   }
 ]
