@@ -19625,5 +19625,199 @@
     "ultima_modificacion": "2026-11-13T11:12:13.107Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00318",
+    "nombre": "Joan Garcia MUXICA MAIZPIDE",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "05/02/1589",
+    "lugar_nacimiento": "Lazkao, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "25/03/1673",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00319"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 25 de may. de 1620\ncon Catalina MUÑOA ZULOAGA\n\nIdiazabal, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:19:20.554Z",
+    "ultima_modificacion": "2026-11-13T11:19:20.554Z",
+    "padre": "P00316",
+    "madre": "P00317"
+  },
+  {
+    "id": "P00319",
+    "nombre": "Catalina MUÑOA ZULOAGA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Idiazabal, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "12/04/1677",
+    "lugar_defuncion": "Segura, Gipuzkoa, Euskadi",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00318"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 25 de may. de 1620\ncon Joan Garcia MUXICA MAIZPIDE\n\nIdiazabal, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:20:53.767Z",
+    "ultima_modificacion": "2026-11-13T11:20:53.767Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00320",
+    "nombre": "Domingo De MUXICA MUÑOA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "11/07/1627",
+    "lugar_nacimiento": "Segura, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "30/08/1672",
+    "lugar_defuncion": "Zerain, Gipuzkoa, Euskadi",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00321"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Nacimiento : MH:S1360 - Acta de bautismo - Other\n\nBautizo : MH:S1360 - Acta de bautismo - Other\n\nDefunción : MH:S2411 - Acta religiosa de defuncion"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 10 de mar. de 1647\ncon Madalena GORROCHATEGUI\n\nSegura, Euskadi, Guipuzcoa"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 30 de ag. de 1648\ncon Maria ZELAYA\n\nSegura, Euskadi, Guipuzcoa"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:24:29.725Z",
+    "ultima_modificacion": "2026-11-13T11:24:29.725Z",
+    "padre": "P00318",
+    "madre": "P00319"
+  },
+  {
+    "id": "P00321",
+    "nombre": "Maria ZELAYA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "",
+    "lugar_nacimiento": "Alsasua, Navarra",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00320"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 30 de ag. de 1648\ncon Domingo De MUXICA MUÑOA\n\nSegura, Euskadi, Guipuzcoa"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:27:35.945Z",
+    "ultima_modificacion": "2026-11-13T11:27:35.945Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00322",
+    "nombre": "Domingo De MUXICA ZELAYA",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "22/07/1650",
+    "lugar_nacimiento": "Zerain, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00323"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 29 de ene. de 1673\ncon Antonia TELLERIA VICUÑA\n\nZerain, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:29:48.060Z",
+    "ultima_modificacion": "2026-11-13T11:29:48.060Z",
+    "padre": "P00320",
+    "madre": "P00321"
+  },
+  {
+    "id": "P00323",
+    "nombre": "Antonia TELLERIA VICUÑA",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "31/12/1656",
+    "lugar_nacimiento": "Zerain, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "16/07/1696",
+    "lugar_defuncion": "Segura, Gipuzkoa, Euskadi",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00322"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 29 de ene. de 1673\ncon Domingo De MUXICA ZELAYA\n\nZerain, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:31:42.002Z",
+    "ultima_modificacion": "2026-11-13T11:31:42.002Z",
+    "padre": "",
+    "madre": ""
   }
 ]
