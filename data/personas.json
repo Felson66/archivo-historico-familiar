@@ -19403,5 +19403,227 @@
     "ultima_modificacion": "2026-11-11T09:11:15.998Z",
     "padre": "",
     "madre": ""
+  },
+  {
+    "id": "P00311",
+    "nombre": "Joaquin Antonio MUXICA (DUEÑO DE GUDUGARRETA)",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1450",
+    "lugar_nacimiento": "Beasain-Arriaran, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "1520",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T10:52:48.241Z",
+    "ultima_modificacion": "2026-11-13T10:52:48.241Z",
+    "padre": "P00279",
+    "madre": "P00280"
+  },
+  {
+    "id": "P00312",
+    "nombre": "Juan MUXICA MAYOR (DUEÑO DE GUDUGARRETA)",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1484",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00313"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "MH:S2424 - 1617 Hidalguia Muxica\n\nNacimiento : MH:S2424 - 1617 Hidalguia Muxica"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio alrededor de 1510\ncon Marina AGUIRRE"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T10:55:18.544Z",
+    "ultima_modificacion": "2026-11-13T10:55:18.544Z",
+    "padre": "P00311",
+    "madre": ""
+  },
+  {
+    "id": "P00313",
+    "nombre": "Marina AGUIRRE",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1485",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "",
+    "lugar_defuncion": "",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00312"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio alrededor de 1510\ncon Juan MUXICA MAYOR (DUEÑO DE GUDUGARRETA)"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:00:18.136Z",
+    "ultima_modificacion": "2026-11-13T11:00:18.136Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00314",
+    "nombre": "Lope (El Viejo) MUXICA AGUIRRE",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1510",
+    "lugar_nacimiento": "Beasain-Gudugarreta, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "1572",
+    "lugar_defuncion": "Beasain-Arriaran, Gipuzkoa, Euskadi",
+    "profesion": "AFINCADO CASA SALSAMENDI DE SUSO",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00315"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio alrededor de 1530\ncon Maria Martina SALSAMENDI ( DE SUSO)\nBeasain-Gudugarreta, Gipuzkoa, Euskadi"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Entierro\nYglesia de Arriaran en la Sepultura de la Casa Salsamendi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:03:09.954Z",
+    "ultima_modificacion": "2026-11-13T11:03:09.954Z",
+    "padre": "P00312",
+    "madre": "P00313"
+  },
+  {
+    "id": "P00315",
+    "nombre": "Maria Martina SALSAMENDI ( DE SUSO)",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1512",
+    "lugar_nacimiento": "Beasain-Gudugarreta, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "03/03/1572",
+    "lugar_defuncion": "Beasain-Gudugarreta, Gipuzkoa, Euskadi",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00314"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio alrededor de 1530\ncon Lope (El Viejo) MUXICA AGUIRRE (AFINCADO CASA SALSAMENDI DE SUSO)\n\nBeasain-Gudugarreta, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:06:35.052Z",
+    "ultima_modificacion": "2026-11-13T11:06:35.052Z",
+    "padre": "",
+    "madre": ""
+  },
+  {
+    "id": "P00316",
+    "nombre": "Lope (El Mozo) MUXICA SALSAMENDI",
+    "nombre_conocido": "",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1545",
+    "lugar_nacimiento": "Beasain-Gudugarreta, Gipuzkoa, Euskadi",
+    "fecha_defuncion": "30/04/1601",
+    "lugar_defuncion": "Lazkao, Gipuzkoa, Euskadi",
+    "profesion": "Entallador",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00317"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonioantes de 1586\ncon Adriana MAIZPIDE ( MAIZ) SALSAMENDI"
+      },
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio 17 de dic. de 1597\ncon Maria ARANGUREN\n\nLazkao, Gipuzkoa, Euskadi"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:09:16.871Z",
+    "ultima_modificacion": "2026-11-13T11:09:16.871Z",
+    "padre": "P00314",
+    "madre": "P00315"
+  },
+  {
+    "id": "P00317",
+    "nombre": "Adriana MAIZPIDE ( MAIZ) SALSAMENDI",
+    "nombre_conocido": "",
+    "sexo": "mujer",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "1569",
+    "lugar_nacimiento": "",
+    "fecha_defuncion": "19/08/1597",
+    "lugar_defuncion": "Lazkao, Gipuzkoa, Euskadi",
+    "profesion": "",
+    "estado": "documentado",
+    "notas": "",
+    "datos_resumen": "",
+    "visible": true,
+    "conyuges": [
+      "P00316"
+    ],
+    "hechos": [
+      {
+        "tipo": "documentado",
+        "texto": "Matrimonio antes de 1586\ncon Lope (El Mozo) MUXICA SALSAMENDI"
+      }
+    ],
+    "fotografias": [],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T11:12:13.107Z",
+    "ultima_modificacion": "2026-11-13T11:12:13.107Z",
+    "padre": "",
+    "madre": ""
   }
 ]
