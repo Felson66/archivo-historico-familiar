@@ -20298,5 +20298,44 @@
     "ultima_modificacion": "2026-11-13T12:18:29.330Z",
     "fotografia_principal": "assets/fotos/P00337/carmen-erlinda-echague.jpg",
     "fotoPosicion": "50% 50%"
+  },
+  {
+    "id": "P00338",
+    "nombre": "Carlos Francisco Sergio Mugica Echagüe",
+    "nombre_conocido": "Padre Mugica",
+    "sexo": "hombre",
+    "situacion_vital": "fallecido",
+    "fecha_nacimiento": "07/10/1930",
+    "lugar_nacimiento": "Buenos Aires (Argentina)",
+    "fecha_defuncion": "11/05/1974",
+    "lugar_defuncion": "Villa Luro (Buenos Aires, Argentina)",
+    "profesion": "Sacerdote",
+    "estado": "documentado",
+    "notas": "Carlos Francisco Sergio Mugica Echagüe, más conocido como el Padre Mugica (Buenos Aires, 7 de octubre de 1930 - Villa Luro, 11 de mayo de 1974),[1] fue un sacerdote argentino fundador del Movimiento de Sacerdotes para el Tercer Mundo y del movimiento de Curas villeros, así como partícipe de las luchas populares de la Argentina de las décadas de 1960 y 1970. El apostolado de Mugica se caracterizó por su «opción preferencial por los pobres» como principio fundamental de la Teología del pueblo, al igual que su adhesión política al peronismo.\n\nLa mayor parte de su labor comunitaria tuvo lugar en la Villa 31 de Retiro -que actualmente lleva su nombre-, en Buenos Aires, donde fundó la parroquia Cristo Obrero. Fue desaparecido y asesinado por el grupo parapolicial anticomunista llamado Triple A, después de celebrar una misa en la Iglesia de San Francisco Solano en Villa Luro. La orden habría sido impartida por el Comisario Juan Ramón Morales, Jefe operativo de la Triple A y mano derecha de López Rega [2][3]\n\nSus restos fueron trasladados en 1999 a la Villa 31 para ser sepultados en la parroquia Cristo Obrero que Mugica fundó, luego de una ceremonia encabezada por el entonces Arzobispo de Buenos Aires Jorge Bergoglio, el futuro Papa Francisco,[4] quien lo definió como \"un gran sacerdote que luchaba por la justicia\".[5] Varios sectores lo consideran mártir.",
+    "datos_resumen": "Carlos Francisco Sergio Mugica Echagüe, más conocido como el Padre Mugica (Buenos Aires, 7 de octubre de 1930 - Villa Luro, 11 de mayo de 1974),[1] fue un sacerdote argentino fundador del Movimiento de Sacerdotes para el Tercer Mundo y del movimiento de Curas villeros, así como partícipe de las luchas populares de la Argentina de las décadas de 1960 y 1970. El apostolado de Mugica se caracterizó por su «opción preferencial por los pobres» como principio fundamental de la Teología del pueblo, al igual que su adhesión política al peronismo.\n\nLa mayor parte de su labor comunitaria tuvo lugar en la Villa 31 de Retiro -que actualmente lleva su nombre-, en Buenos Aires, donde fundó la parroquia Cristo Obrero. Fue desaparecido y asesinado por el grupo parapolicial anticomunista llamado Triple A, después de celebrar una misa en la Iglesia de San Francisco Solano en Villa Luro. La orden habría sido impartida por el Comisario Juan Ramón Morales, Jefe operativo de la Triple A y mano derecha de López Rega [2][3]\n\nSus restos fueron trasladados en 1999 a la Villa 31 para ser sepultados en la parroquia Cristo Obrero que Mugica fundó, luego de una ceremonia encabezada por el entonces Arzobispo de Buenos Aires Jorge Bergoglio, el futuro Papa Francisco,[4] quien lo definió como \"un gran sacerdote que luchaba por la justicia\".[5] Varios sectores lo consideran mártir.",
+    "visible": true,
+    "conyuges": [],
+    "hechos": [],
+    "fotografias": [
+      {
+        "id": "F000364",
+        "src": "assets/fotos/P00338/carlos-mugica.jpg",
+        "titulo": "Carlos Mugica",
+        "fecha": "",
+        "lugar": "",
+        "descripcion": "",
+        "etiquetas": [],
+        "personas": [
+          "P00338"
+        ]
+      }
+    ],
+    "documentos": [],
+    "fecha_creacion": "2026-11-13T12:25:34.161Z",
+    "ultima_modificacion": "2026-11-13T12:25:34.162Z",
+    "fotografia_principal": "assets/fotos/P00338/carlos-mugica.jpg",
+    "fotoPosicion": "50% 50%",
+    "padre": "P00336",
+    "madre": "P00337"
   }
 ]
