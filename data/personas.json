@@ -7516,13 +7516,13 @@
       "P0025",
       "P0026"
     ],
-    "estado": "memoria familiar",
+    "estado": "documentado",
     "conyuges": [
       "P0014"
     ],
     "hechos": [
       {
-        "tipo": "memoria_familiar",
+        "tipo": "documentado",
         "texto": "Está casado con Lourdes de la Dehesa Liz."
       }
     ],
@@ -7551,8 +7551,8 @@
     "lugares": [],
     "notas": "",
     "fotoPosicion": "50% 50%",
-    "fecha_nacimiento": "",
-    "lugar_nacimiento": "",
+    "fecha_nacimiento": "18/02/1965",
+    "lugar_nacimiento": "Turín",
     "fecha_defuncion": "",
     "lugar_defuncion": "",
     "profesion": "",
